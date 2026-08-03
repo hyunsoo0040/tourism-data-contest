@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT-DA 데모 콘솔 | 맞춤 관광 추천</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./기타.css">
+  <script src="./기타.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./메인페이지.html">
+      <span>잇</span>
+      <strong>IT-DA</strong>
+    </a>
+    <nav>
+      <a href="#recommend">추천 실행</a>
+      <a href="#api">API 상태</a>
+      <a href="#route">코스 보기</a>
+    </nav>
+    <div class="server-pill" id="serverStatus">API 확인 중</div>
+  </header>
+
+  <main>
+    <section class="overview">
+      <div class="overview-copy">
+        <p class="eyebrow">Tourism Data Recommendation Backend</p>
+        <h1>관광데이터를 이용해<br>기대와 장소를 매칭하는 데모</h1>
+        <p>
+          제안서의 핵심 아이디어인 여행 기대 분석, 관광지 유형 분류, 추천 사유 제공,
+          기대 불일치 안내를 한 화면에서 확인할 수 있도록 구성했습니다.
+        </p>
+      </div>
+      <div class="metric-strip" aria-label="서비스 핵심 지표">
+        <div>
+          <b id="metricPlaces">6</b>
+          <span>샘플 관광지</span>
+        </div>
+        <div>
+          <b>4</b>
+          <span>데이터 소스</span>
+        </div>
+        <div>
+          <b id="metricScore">84%</b>
+          <span>현재 적합도</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="workbench" id="recommend">
+      <aside class="panel input-panel">
+        <div class="panel-head">
+          <p class="eyebrow">User Signal</p>
+          <h2>여행 기대 입력</h2>
+        </div>
+
+        <label>
+          여행 유형
+          <select id="travelStyle">
+            <option value="rest">휴식·몰입형</option>
+            <option value="history">역사·전통형</option>
+            <option value="image">감성·이미지형</option>
+          </select>
+        </label>
+
+        <label>
+          선호 지역
+          <input id="region" type="text" value="서울" placeholder="예: 서울, 부산, 전주">
+        </label>
+
+        <label>
+          동행 형태
+          <select id="companion">
+            <option value="solo">혼자</option>
+            <option value="family">가족</option>
+            <option value="friends">친구</option>
+          </select>
+        </label>
+
+        <div class="choice-group" aria-label="기대 키워드">
+          <span>기대 키워드</span>
+          <button type="button" class="chip active" data-keyword="산책">산책</button>
+          <button type="button" class="chip active" data-keyword="조용함">조용함</button>
+          <button type="button" class="chip" data-keyword="전통">전통</button>
+          <button type="button" class="chip" data-keyword="사진">사진</button>
+          <button type="button" class="chip" data-keyword="야경">야경</button>
+          <button type="button" class="chip" data-keyword="음식">음식</button>
+        </div>
+
+        <button class="run-button" id="runRecommend" type="button">추천 API 실행</button>
+      </aside>
+
+      <section class="panel result-panel">
+        <div class="panel-head row">
+          <div>
+            <p class="eyebrow">Recommendation Result</p>
+            <h2 id="profileName">휴식·몰입형 추천 결과</h2>
+          </div>
+          <span class="api-badge">POST /api/recommendations</span>
+        </div>
+        <div id="recommendationList" class="recommendation-list"></div>
+      </section>
+    </section>
+
+    <section class="split-section" id="api">
+      <div class="panel">
+        <div class="panel-head">
+          <p class="eyebrow">Data Pipeline</p>
+          <h2>추가로 필요한 기능</h2>
+        </div>
+        <div class="pipeline">
+          <div><strong>OpenAPI 수집기</strong><span>관광지 기본정보, 이미지, 오디오 해설을 정기 수집</span></div>
+          <div><strong>경험 유형 분류기</strong><span>설명·태그·이미지 신호를 세 유형 점수로 변환</span></div>
+          <div><strong>추천 사유 생성</strong><span>왜 추천됐는지 사용자 언어로 설명</span></div>
+          <div><strong>불일치 경고</strong><span>혼잡, 날씨, 시간대에 따른 기대 차이를 안내</span></div>
+        </div>
+      </div>
+
+      <div class="panel api-panel">
+        <div class="panel-head row">
+          <div>
+            <p class="eyebrow">Backend Health</p>
+            <h2>API 응답</h2>
+          </div>
+          <button id="refreshHealth" type="button">새로고침</button>
+        </div>
+        <pre id="healthOutput">{ "status": "loading" }</pre>
+      </div>
+    </section>
+
+    <section class="panel route-panel" id="route">
+      <div class="panel-head row">
+        <div>
+          <p class="eyebrow">Itinerary</p>
+          <h2 id="routeTitle">휴식·몰입형 하루 코스</h2>
+        </div>
+        <span class="api-badge">GET /api/itinerary</span>
+      </div>
+      <div id="routeList" class="route-list"></div>
+    </section>
+  </main>
+
+  <nav class="mobile-tabs" aria-label="모바일 데모 이동">
+    <a href="#recommend">추천</a>
+    <a href="#api">상태</a>
+    <a href="#route">코스</a>
+    <a href="./메인페이지.html">홈</a>
+  </nav>
+</body>
+</html>

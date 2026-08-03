@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT-DA | 사진 기반 분위기 입력</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#667085;
+      --line:#dfe5ef;
+      --page:#f6f8fb;
+      --panel:#ffffff;
+      --orange:#ff6b35;
+      --accent-soft:#f4e2d3;
+      --accent-ink:#403630;
+      --blue:#2f80ed;
+      --green:#12b886;
+      --shadow:0 18px 45px rgba(23,32,51,.09);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Noto Sans KR", Inter, system-ui, sans-serif;
+      color:var(--ink);
+      background:
+        linear-gradient(120deg, rgba(255,107,53,.13), transparent 30%),
+        linear-gradient(240deg, rgba(47,128,237,.12), transparent 32%),
+        var(--page);
+    }
+
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    .mobile-tabs{display:none}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:10;
+      height:68px;
+      padding:0 28px;
+      display:flex;
+      align-items:center;
+      gap:24px;
+      border-bottom:1px solid rgba(223,229,239,.86);
+      background:rgba(246,248,251,.84);
+      backdrop-filter:blur(16px);
+    }
+
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
+    .brand span{
+      width:36px;
+      height:36px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      color:white;
+      background:linear-gradient(135deg,var(--orange),#ffb703);
+    }
+
+    .topbar nav{display:flex;gap:18px;font-weight:800;color:#3d4658;font-size:14px}
+    .source-pill{
+      margin-left:auto;
+      padding:9px 13px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      color:#536072;
+      font-weight:900;
+      font-size:13px;
+    }
+
+    main{width:min(1220px, calc(100% - 40px));margin:0 auto;padding:42px 0 80px}
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:28px;
+      align-items:end;
+      padding:36px 0 34px;
+    }
+
+    .eyebrow{margin:0 0 8px;color:var(--orange);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:900}
+    h1{margin:8px 0 16px;font-size:clamp(40px, 6vw, 70px);line-height:1.05;letter-spacing:-.05em}
+    .hero p{max-width:760px;margin:0;color:#596579;line-height:1.78;font-size:18px;word-break:keep-all}
+
+    .notice{
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      color:#536072;
+      line-height:1.62;
+      word-break:keep-all;
+    }
+
+    .notice b{display:block;color:#172033;margin-bottom:8px;font-size:18px}
+
+    .workspace{
+      display:grid;
+      grid-template-columns:390px 1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .panel{
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:rgba(255,255,255,.92);
+      box-shadow:var(--shadow);
+      padding:24px;
+    }
+
+    .panel h2{margin:0;font-size:28px;letter-spacing:-.04em}
+    .panel-head{margin-bottom:18px}
+
+    .dropzone{
+      min-height:300px;
+      display:grid;
+      place-items:center;
+      padding:18px;
+      border:2px dashed #c8d2e0;
+      border-radius:8px;
+      background:#fbfcff;
+      text-align:center;
+      cursor:pointer;
+      transition:.2s border-color, .2s background;
+      overflow:hidden;
+    }
+
+    .dropzone.dragging{border-color:var(--orange);background:#fff7f1}
+    .dropzone input{display:none}
+    .upload-copy strong{display:block;font-size:22px;margin-bottom:8px}
+    .upload-copy span{display:block;color:var(--muted);line-height:1.55}
+    .preview-image{width:100%;height:300px;object-fit:cover;border-radius:8px;display:none}
+
+    .mood-controls{display:grid;gap:12px;margin-top:18px}
+    .mood-controls label{font-size:14px;font-weight:900;color:#3d4658}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{
+      border:1px solid var(--line);
+      background:white;
+      color:#3d4658;
+      border-radius:999px;
+      padding:9px 12px;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .chip.active{background:var(--accent-soft);color:var(--accent-ink);border-color:#d9bca8}
+
+    .analyze-button{
+      width:100%;
+      margin-top:18px;
+      border:0;
+      border-radius:8px;
+      padding:15px 18px;
+      background:linear-gradient(135deg,var(--orange),#ff9f1c);
+      color:white;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    .analysis-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-bottom:16px;
+    }
+
+    .metric{
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#fbfcff;
+    }
+
+    .metric b{display:block;font-size:24px;letter-spacing:-.04em}
+    .metric span{display:block;margin-top:5px;color:var(--muted);font-size:13px;font-weight:800}
+
+    .result-list{display:grid;gap:12px}
+    .place-card{
+      display:grid;
+      grid-template-columns:150px 1fr;
+      gap:16px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#fbfcff;
+    }
+
+    .place-photo{
+      min-height:132px;
+      border-radius:8px;
+      background:linear-gradient(135deg,#ffafcc,#bde0fe,#a2d2ff);
+    }
+
+    .place-card h3{margin:8px 0;font-size:22px;letter-spacing:-.03em}
+    .place-card p{margin:0;color:#647084;line-height:1.62;word-break:keep-all}
+    .tag{display:inline-flex;padding:6px 9px;border-radius:999px;background:#e9fbf4;color:#087f5b;font-size:12px;font-weight:900}
+    .reason{margin-top:10px;color:#263044;font-weight:800;font-size:14px}
+
+    .explain{
+      margin-top:18px;
+      padding:18px;
+      border-radius:8px;
+      background:var(--accent-soft);
+      color:#625047;
+      line-height:1.68;
+      word-break:keep-all;
+    }
+    .explain b{color:var(--accent-ink)}
+
+    @media(max-width:940px){
+      .hero,.workspace{grid-template-columns:1fr}
+      .analysis-grid{grid-template-columns:1fr 1fr}
+      .topbar nav{display:none}
+    }
+
+    @media(max-width:560px){
+      html{scroll-snap-type:y proximity}
+      body{
+        background:#f7f9fc;
+        padding-bottom:78px;
+      }
+      .topbar{padding:0 14px}
+      .topbar{height:62px}
+      .brand span{width:34px;height:34px;border-radius:12px}
+      .source-pill{display:none}
+      main{width:min(100% - 24px, 1220px);padding:16px 0 88px}
+      .hero,.workspace{
+        min-height:calc(100svh - 78px);
+        scroll-snap-align:start;
+      }
+      .hero{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        gap:16px;
+        padding:12px 0 80px;
+      }
+      h1{font-size:34px;line-height:1.1;margin:8px 0 12px}
+      .hero p{font-size:14px;line-height:1.66}
+      .notice,.panel{border-radius:14px;box-shadow:0 10px 24px rgba(23,32,51,.08)}
+      .notice{padding:18px}
+      .workspace{
+        display:flex;
+        gap:12px;
+        overflow-x:auto;
+        scroll-snap-type:x mandatory;
+        padding-bottom:14px;
+        scrollbar-width:none;
+      }
+      .workspace::-webkit-scrollbar{display:none}
+      .workspace > .panel{
+        flex:0 0 88%;
+        scroll-snap-align:start;
+        padding:20px;
+      }
+      .panel h2{font-size:24px}
+      .dropzone{min-height:260px}
+      .analysis-grid,.place-card{grid-template-columns:1fr}
+      .analysis-grid{
+        display:grid;
+        grid-auto-flow:column;
+        grid-auto-columns:minmax(130px, 46%);
+        grid-template-columns:none;
+        overflow-x:auto;
+        scroll-snap-type:x mandatory;
+        padding-bottom:8px;
+        scrollbar-width:none;
+      }
+      .analysis-grid::-webkit-scrollbar{display:none}
+      .metric{scroll-snap-align:start}
+      .preview-image{height:240px}
+      .place-card{border-radius:14px;padding:14px}
+      .place-photo{min-height:120px}
+      .explain{border-radius:14px;font-size:14px}
+      .mobile-tabs{
+        position:fixed;
+        left:12px;
+        right:12px;
+        bottom:12px;
+        z-index:30;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:6px;
+        padding:8px;
+        border:1px solid rgba(23,32,51,.1);
+        border-radius:18px;
+        background:rgba(255,255,255,.94);
+        box-shadow:0 14px 34px rgba(23,32,51,.16);
+        backdrop-filter:blur(14px);
+      }
+      .mobile-tabs a{
+        min-height:42px;
+        display:grid;
+        place-items:center;
+        border-radius:12px;
+        color:#4b5563;
+        font-size:13px;
+        font-weight:900;
+      }
+      .mobile-tabs a:first-child{background:var(--accent-soft);color:var(--accent-ink)}
+    }
+
+    @media(max-width:560px){
+      html{scroll-snap-type:none}
+      .hero,
+      .workspace{
+        min-height:auto;
+        scroll-snap-align:none;
+      }
+      .hero{
+        padding:28px 0 18px;
+        justify-content:initial;
+      }
+      .workspace{
+        display:grid;
+        grid-template-columns:1fr;
+        overflow:visible;
+        padding-bottom:0;
+      }
+      .workspace > .panel{
+        flex:auto;
+      }
+      .analysis-grid{
+        grid-auto-flow:row;
+        grid-auto-columns:auto;
+        grid-template-columns:1fr 1fr;
+        overflow:visible;
+        padding-bottom:0;
+      }
+      .place-card{
+        display:grid;
+        grid-template-columns:1fr;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./메인페이지.html"><span>잇</span><strong>IT-DA</strong></a>
+    <nav>
+      <a href="#upload">사진 업로드</a>
+      <a href="#recommend">유사 분위기 추천</a>
+      <a href="./메인페이지.html">메인으로</a>
+    </nav>
+    <div class="source-pill">KTO 관광사진·공모전 수상작 활용</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Photo Mood Input</p>
+        <h1>좋아했던 여행 사진으로<br>분위기를 입력하세요</h1>
+        <p>
+          취향 테스트만으로 표현하기 어려운 색감, 밝기, 여백, 자연감, 도시감 같은 감각을 사진으로 보완합니다.
+          사진은 경험 유형을 판정하는 기준이 아니라, 원하는 분위기를 더 쉽게 알려주는 보조 입력입니다.
+        </p>
+      </div>
+      <div class="notice">
+        <b>추천 방식</b>
+        업로드한 이미지는 화면 안에서 미리보기와 분위기 신호로만 사용됩니다. 실제 서비스에서는 한국관광공사 관광사진 및 공모전 수상작 자료와 비교해 유사한 분위기의 장소를 제안하는 구조로 확장할 수 있습니다.
+      </div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel" id="upload">
+        <div class="panel-head">
+          <p class="eyebrow">User Image</p>
+          <h2>분위기 사진 입력</h2>
+        </div>
+
+        <label class="dropzone" id="dropzone">
+          <input id="photoInput" type="file" accept="image/*">
+          <img class="preview-image" id="previewImage" alt="업로드한 여행 분위기 사진 미리보기">
+          <span class="upload-copy" id="uploadCopy">
+            <strong>이미지를 업로드하세요</strong>
+            <span>좋아했던 여행 사진이나 원하는 분위기의 이미지를 선택할 수 있습니다.</span>
+          </span>
+        </label>
+
+        <div class="mood-controls" aria-label="사진 분위기 보정 선택">
+          <label>사진에서 더 중요하게 볼 분위기</label>
+          <div class="chips">
+            <button class="chip active" type="button" data-mood="calm">차분함</button>
+            <button class="chip active" type="button" data-mood="nature">자연감</button>
+            <button class="chip" type="button" data-mood="warm">따뜻한 색감</button>
+            <button class="chip" type="button" data-mood="urban">도시적 장면</button>
+            <button class="chip" type="button" data-mood="open">넓은 여백</button>
+          </div>
+        </div>
+
+        <button class="analyze-button" id="analyzeButton" type="button">유사 분위기 장소 찾기</button>
+      </aside>
+
+      <section class="panel" id="recommend">
+        <div class="panel-head">
+          <p class="eyebrow">Mood Match Result</p>
+          <h2 id="resultTitle">사진 분위기 기반 추천</h2>
+        </div>
+
+        <div class="analysis-grid" aria-label="사진 분위기 분석 지표">
+          <div class="metric"><b id="toneScore">82</b><span>색감 유사도</span></div>
+          <div class="metric"><b id="spaceScore">76</b><span>공간감</span></div>
+          <div class="metric"><b id="natureScore">88</b><span>자연·풍경감</span></div>
+          <div class="metric"><b id="calmScore">84</b><span>차분함</span></div>
+        </div>
+
+        <div class="result-list" id="resultList"></div>
+
+        <div class="explain">
+          <b>중요:</b> 이 기능은 “이 사진을 좋아하니 당신은 어떤 여행자다”라고 판단하지 않습니다.
+          사진은 사용자가 말로 설명하기 어려운 분위기를 입력하는 보조 수단이며, 취향 테스트나 지역 조건과 결합해 최종 추천 품질을 높입니다.
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <nav class="mobile-tabs" aria-label="모바일 사진 입력 이동">
+    <a href="#upload">입력</a>
+    <a href="#recommend">추천</a>
+    <a href="./취향테스트.html">테스트</a>
+    <a href="./메인페이지.html">홈</a>
+  </nav>
+
+  <script>
+    const places = [
+      {
+        title: "순천만 국가정원",
+        tag: "자연감 91%",
+        desc: "넓은 여백, 부드러운 녹지, 산책 중심의 장면과 잘 맞습니다.",
+        reason: "관광사진 속 초록 계열·수평 구도·여유로운 동선이 업로드 이미지의 차분한 분위기와 유사합니다.",
+        moods: ["calm", "nature", "open"],
+        color: "linear-gradient(135deg,#b7e4c7,#52b788,#1b4332)"
+      },
+      {
+        title: "전주 한옥마을 골목",
+        tag: "따뜻한 색감 87%",
+        desc: "전통 건축의 질감과 따뜻한 거리 분위기를 선호할 때 어울립니다.",
+        reason: "관광사진 공모전 수상작에서 자주 보이는 목재·기와·노을 톤과 감성적 기록 욕구가 연결됩니다.",
+        moods: ["warm", "calm"],
+        color: "linear-gradient(135deg,#f4a261,#e9c46a,#7f5539)"
+      },
+      {
+        title: "부산 흰여울문화마을",
+        tag: "바다·도시감 85%",
+        desc: "푸른 배경, 골목, 전망이 함께 있는 이미지형 여행에 잘 맞습니다.",
+        reason: "밝은 하늘과 건물 레이어, 바다 조망이 섞인 사진 분위기와 유사한 장소입니다.",
+        moods: ["urban", "open"],
+        color: "linear-gradient(135deg,#90dbf4,#219ebc,#023047)"
+      },
+      {
+        title: "담양 메타세쿼이아길",
+        tag: "차분함 89%",
+        desc: "반복되는 나무길과 깊은 원근감이 있는 몰입형 산책지입니다.",
+        reason: "긴 산책로, 반복 구도, 낮은 채도의 자연색이 조용히 걷는 분위기를 강화합니다.",
+        moods: ["calm", "nature"],
+        color: "linear-gradient(135deg,#d8f3dc,#74c69d,#2d6a4f)"
+      }
+    ];
+
+    const dropzone = document.querySelector("#dropzone");
+    const photoInput = document.querySelector("#photoInput");
+    const previewImage = document.querySelector("#previewImage");
+    const uploadCopy = document.querySelector("#uploadCopy");
+    const chips = document.querySelectorAll(".chip");
+    const analyzeButton = document.querySelector("#analyzeButton");
+    const resultList = document.querySelector("#resultList");
+    const resultTitle = document.querySelector("#resultTitle");
+    const toneScore = document.querySelector("#toneScore");
+    const spaceScore = document.querySelector("#spaceScore");
+    const natureScore = document.querySelector("#natureScore");
+    const calmScore = document.querySelector("#calmScore");
+
+    function activeMoods() {
+      return [...chips].filter((chip) => chip.classList.contains("active")).map((chip) => chip.dataset.mood);
+    }
+
+    function renderResults() {
+      const moods = activeMoods();
+      const rankedPlaces = [...places].sort((a, b) => {
+        const scoreA = a.moods.filter((mood) => moods.includes(mood)).length;
+        const scoreB = b.moods.filter((mood) => moods.includes(mood)).length;
+        return scoreB - scoreA;
+      });
+
+      const base = 72 + moods.length * 3;
+      toneScore.textContent = Math.min(base + (moods.includes("warm") ? 9 : 4), 96);
+      spaceScore.textContent = Math.min(base + (moods.includes("open") ? 10 : 1), 95);
+      natureScore.textContent = Math.min(base + (moods.includes("nature") ? 12 : 2), 97);
+      calmScore.textContent = Math.min(base + (moods.includes("calm") ? 11 : 3), 97);
+      resultTitle.textContent = previewImage.src ? "업로드 사진과 유사한 분위기" : "예시 분위기 기반 추천";
+
+      resultList.innerHTML = rankedPlaces.map((place) => `
+        <article class="place-card">
+          <div class="place-photo" style="background:${place.color}"></div>
+          <div>
+            <span class="tag">${place.tag}</span>
+            <h3>${place.title}</h3>
+            <p>${place.desc}</p>
+            <div class="reason">${place.reason}</div>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function showPreview(file) {
+      if (!file || !file.type.startsWith("image/")) return;
+
+      const reader = new FileReader();
+      reader.addEventListener("load", () => {
+        previewImage.src = reader.result;
+        previewImage.style.display = "block";
+        uploadCopy.style.display = "none";
+        renderResults();
+      });
+      reader.readAsDataURL(file);
+    }
+
+    photoInput.addEventListener("change", (event) => showPreview(event.target.files[0]));
+
+    ["dragenter", "dragover"].forEach((eventName) => {
+      dropzone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropzone.classList.add("dragging");
+      });
+    });
+
+    ["dragleave", "drop"].forEach((eventName) => {
+      dropzone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        dropzone.classList.remove("dragging");
+      });
+    });
+
+    dropzone.addEventListener("drop", (event) => {
+      showPreview(event.dataTransfer.files[0]);
+    });
+
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        chip.classList.toggle("active");
+        if (!activeMoods().length) chip.classList.add("active");
+        renderResults();
+      });
+    });
+
+    analyzeButton.addEventListener("click", renderResults);
+    renderResults();
+  </script>
+</body>
+</html>
