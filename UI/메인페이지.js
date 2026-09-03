@@ -72,7 +72,6 @@ const recommendationsTarget = document.querySelector("#recommendations");
 const phoneType = document.querySelector("#phoneType");
 const phoneDesc = document.querySelector("#phoneDesc");
 const phoneMatch = document.querySelector("#phoneMatch");
-const matchScore = document.querySelector("#matchScore");
 const matchBar = document.querySelector("#matchBar");
 const matchText = document.querySelector("#matchText");
 const sectionLinks = document.querySelectorAll('.nav-menu a[href^="#"], .mobile-tabs a[href^="#"]');
@@ -94,7 +93,6 @@ function renderRecommendations(type) {
   phoneType.innerHTML = data.phoneType;
   phoneDesc.textContent = data.phoneDesc;
   phoneMatch.textContent = `${data.match}% match`;
-  matchScore.textContent = `${data.match}%`;
   matchBar.style.width = `${data.match}%`;
   matchText.textContent = data.text;
 
