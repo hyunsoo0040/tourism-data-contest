@@ -187,12 +187,16 @@
     .result.visible{display:block}
     .result-hero{
       display:grid;
-      grid-template-columns:minmax(0, 1fr) minmax(220px, 320px) 220px;
+      grid-template-columns:minmax(0, 1fr) minmax(240px, 280px);
+      grid-template-areas:
+        "character match"
+        "type type";
       gap:18px;
       margin-top:18px;
       align-items:stretch;
     }
     .type-badge{
+      grid-area:type;
       padding:24px;
       border-radius:8px;
       color:#fff;
@@ -202,10 +206,11 @@
     .type-badge.image{background:linear-gradient(135deg,#ff8fab,var(--blue))}
     .type-badge b{display:block;font-size:34px;letter-spacing:-.05em;margin-bottom:8px}
     .type-badge p{margin:0;color:rgba(255,255,255,.88);line-height:1.62;word-break:keep-all}
-    .match-card{padding:22px;border:1px solid var(--line);border-radius:8px;background:#fbfcff}
+    .match-card{grid-area:match;padding:22px;border:1px solid var(--line);border-radius:8px;background:#fbfcff;word-break:keep-all}
     .match-card b{display:block;font-size:42px;letter-spacing:-.05em}
     .match-card span{display:block;color:var(--muted);font-weight:900}
     .character-stage{
+      grid-area:character;
       min-height:100%;
       display:grid;
       place-items:center;
@@ -236,8 +241,23 @@
     .recommend-box{margin-top:18px;padding:18px;border-radius:8px;background:#fff7f1;color:#4b5563;line-height:1.68;word-break:keep-all}
     .result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 
+    @media(min-width:1280px) and (max-width:1600px){
+      body{font-size:17px}
+      .topbar,main{width:min(1210px, calc(100% - 40px))}
+      .test-shell{grid-template-columns:320px 1fr}
+      .topbar nav a,.privacy-note,.score-row strong{font-size:15px}
+      .eyebrow,.count,.character-card span,.keyword-list span{font-size:14px}
+      .intro p{font-size:19px}
+      .summary-card b{font-size:21px}
+      .status h2,.question h2,.result h2{font-size:30px}
+      .type-badge b{font-size:36px}
+      .match-card b{font-size:46px}
+      .character-card b{font-size:26px}
+    }
+
     @media(max-width:900px){
-      .intro,.test-shell,.result-hero{grid-template-columns:1fr}
+      .intro,.test-shell{grid-template-columns:1fr}
+      .result-hero{grid-template-columns:minmax(0,1fr) minmax(200px,240px)}
       .status{position:static}
     }
 
@@ -295,7 +315,13 @@
       .option b{width:36px;height:36px}
       .controls{display:grid}
       .control{width:100%}
-      .result-hero{grid-template-columns:1fr}
+      .result-hero{
+        grid-template-columns:1fr;
+        grid-template-areas:
+          "character"
+          "match"
+          "type";
+      }
       .type-badge,.match-card,.recommend-box{border-radius:14px}
       .type-badge b{font-size:28px}
       .mobile-tabs{

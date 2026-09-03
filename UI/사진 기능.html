@@ -78,7 +78,7 @@
 
     .hero{
       display:grid;
-      grid-template-columns:1fr 420px;
+      grid-template-columns:1fr;
       gap:28px;
       align-items:end;
       padding:36px 0 34px;
@@ -86,6 +86,7 @@
 
     .eyebrow{margin:0 0 8px;color:var(--orange);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:900}
     h1{margin:8px 0 16px;font-size:clamp(40px, 6vw, 70px);line-height:1.05;letter-spacing:-.05em}
+    .photo-hero-line{display:block;white-space:nowrap}
     .hero p{max-width:760px;margin:0;color:#596579;line-height:1.78;font-size:18px;word-break:keep-all}
 
     .notice{
@@ -215,6 +216,20 @@
     }
     .explain b{color:var(--accent-ink)}
 
+    @media(min-width:1280px) and (max-width:1600px){
+      body{font-size:17px}
+      main{width:min(1300px, calc(100% - 40px))}
+      .topbar nav{font-size:15px}
+      .source-pill,.eyebrow,.metric span{font-size:14px}
+      .hero p{font-size:19px}
+      .notice b{font-size:19px}
+      .panel h2{font-size:30px}
+      .mood-controls label,.reason{font-size:15px}
+      .upload-copy strong{font-size:23px}
+      .place-card p{font-size:17px}
+      .tag{font-size:13px}
+    }
+
     @media(max-width:940px){
       .hero,.workspace{grid-template-columns:1fr}
       .analysis-grid{grid-template-columns:1fr 1fr}
@@ -243,7 +258,7 @@
         gap:16px;
         padding:12px 0 80px;
       }
-      h1{font-size:34px;line-height:1.1;margin:8px 0 12px}
+      h1{font-size:clamp(18px,6vw,34px);line-height:1.1;margin:8px 0 12px}
       .hero p{font-size:14px;line-height:1.66}
       .notice,.panel{border-radius:14px;box-shadow:0 10px 24px rgba(23,32,51,.08)}
       .notice{padding:18px}
@@ -348,7 +363,7 @@
     <a class="brand" href="./메인페이지.html"><span>잇</span><strong>IT-DA</strong></a>
     <nav>
       <a href="#upload">사진 업로드</a>
-      <a href="#recommend">유사 분위기 추천</a>
+  
       <a href="./메인페이지.html">메인으로</a>
     </nav>
     <div class="source-pill">KTO 관광사진·공모전 수상작 활용</div>
@@ -358,15 +373,10 @@
     <section class="hero">
       <div>
         <p class="eyebrow">Photo Mood Input</p>
-        <h1>좋아했던 여행 사진으로<br>분위기를 입력하세요</h1>
-        <p>
-          취향 테스트만으로 표현하기 어려운 색감, 밝기, 여백, 자연감, 도시감 같은 감각을 사진으로 보완합니다.
-          사진은 경험 유형을 판정하는 기준이 아니라, 원하는 분위기를 더 쉽게 알려주는 보조 입력입니다.
-        </p>
-      </div>
-      <div class="notice">
-        <b>추천 방식</b>
-        업로드한 이미지는 화면 안에서 미리보기와 분위기 신호로만 사용됩니다. 실제 서비스에서는 한국관광공사 관광사진 및 공모전 수상작 자료와 비교해 유사한 분위기의 장소를 제안하는 구조로 확장할 수 있습니다.
+        <h1>
+          <span class="photo-hero-line">좋아했던 여행 사진 한 장으로</span>
+          <span class="photo-hero-line">원하는 여행 분위기를 알려주세요.</span>
+        </h1>
       </div>
     </section>
 

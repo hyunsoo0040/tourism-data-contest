@@ -158,9 +158,14 @@ button,input{font-family:inherit}
 
 h1{
   margin:22px 0 20px;
-  font-size:clamp(44px, 6vw, 78px);
+  font-size:clamp(42px, 5.2vw, 64px);
   line-height:1.04;
   letter-spacing:-.05em;
+}
+
+.hero-title-line{
+  display:block;
+  white-space:nowrap;
 }
 
 .gradient-text{
@@ -229,7 +234,14 @@ h1{
 .match{margin-top:14px; padding:16px; border-radius:24px; background:var(--accent-soft); color:var(--accent-ink)}
 .bar{height:9px; background:rgba(255,255,255,.18); border-radius:999px; margin-top:12px; overflow:hidden}
 .bar i{display:block; width:84%; height:100%; background:#12b886; border-radius:999px; transition:.3s width}
-.match p{margin:10px 0 0; color:#625047; font-size:13px}
+.match p{
+  min-height:3em;
+  margin:10px 0 0;
+  color:#625047;
+  font-size:13px;
+  line-height:1.5;
+  word-break:keep-all;
+}
 .mobile-tabs{display:none}
 
 section{padding:72px 0}
@@ -365,6 +377,20 @@ footer{padding:30px 0; border-top:1px solid var(--line); color:#6b7280; font-siz
 .reveal{opacity:0; transform:translateY(20px); transition:.55s opacity, .55s transform}
 .reveal.visible{opacity:1; transform:translateY(0)}
 
+@media(min-width:1280px) and (max-width:1600px){
+  .wrap{width:min(1270px, calc(100% - 40px))}
+  .nav-menu{font-size:16px}
+  .badge{font-size:15px}
+  .hero p{font-size:20px}
+  .btn{font-size:17px}
+  .phone{font-size:16px}
+  .section-head p,.card p{font-size:17px}
+  .step p,.place p,.data-item span{font-size:15px}
+  .step strong{font-size:20px}
+  .data-item b{font-size:19px}
+  footer{font-size:15px}
+}
+
 @media(max-width:920px){
   .hero-grid,.demo{grid-template-columns:1fr}
   .photo-feature{grid-template-columns:1fr}
@@ -430,7 +456,7 @@ footer{padding:30px 0; border-top:1px solid var(--line); color:#6b7280; font-siz
   .logo{font-size:20px}
   .logo-mark{width:34px;height:34px;border-radius:12px}
   .nav-menu{top:64px;left:12px;right:12px}
-  h1{font-size:36px;line-height:1.1;margin:16px 0 14px}
+  h1{font-size:clamp(28px,9vw,34px);line-height:1.1;margin:16px 0 14px}
   h2{font-size:28px;line-height:1.22}
   .hero p,.photo-feature p{font-size:14px;line-height:1.66}
   .btn{width:100%}

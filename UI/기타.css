@@ -225,6 +225,17 @@ pre{
 .route-stop h3{margin:0 0 8px;font-size:20px}
 .route-stop p{margin:0;color:var(--muted);line-height:1.58}
 
+@media(min-width:1280px) and (max-width:1600px){
+  body{font-size:17px}
+  main{width:min(1300px, calc(100% - 40px))}
+  .topbar nav{font-size:15px}
+  .server-pill,.eyebrow{font-size:14px}
+  .overview-copy p:last-child{font-size:19px}
+  .metric-strip span,.input-panel label,.choice-group > span{font-size:15px}
+  .panel-head h2{font-size:30px}
+  .api-badge{font-size:13px}
+}
+
 @media(max-width:960px){
   .overview,.workbench,.split-section{grid-template-columns:1fr}
   .route-list{grid-template-columns:1fr}
