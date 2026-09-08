@@ -1,0 +1,133 @@
+{
+  "schema_version": "phase3-text-evidence-v1",
+  "normalization_version": "ko-source-span-v1",
+  "sources": {
+    "description": {
+      "lane": "DESCRIPTION",
+      "source_id": "synthetic-description-alpha",
+      "source_url": "https://example.invalid/synthetic/description-alpha",
+      "raw_response_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source_text_sha256": "724be873222c93940b48bf34bfc3e83fdba688dbe8ee88c21fa132defac4d924",
+      "raw_text": "고요한 정원\r\n- 달빛 산책\r\n연못에 별빛이 비친다.\n",
+      "expected_spans": [
+        {
+          "kind": "TITLE",
+          "text": "고요한 정원",
+          "start_char": 0,
+          "end_char": 6,
+          "start_byte": 0,
+          "end_byte": 16
+        },
+        {
+          "kind": "LIST_ITEM",
+          "text": "- 달빛 산책",
+          "start_char": 8,
+          "end_char": 15,
+          "start_byte": 18,
+          "end_byte": 33
+        },
+        {
+          "kind": "SENTENCE",
+          "text": "연못에 별빛이 비친다.",
+          "start_char": 17,
+          "end_char": 29,
+          "start_byte": 35,
+          "end_byte": 65
+        }
+      ]
+    },
+    "odii": {
+      "lane": "ODII",
+      "source_id": "synthetic-odii-alpha",
+      "source_url": "https://example.invalid/synthetic/odii-alpha",
+      "raw_response_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "source_text_sha256": "b0c50d4ac030100290a26ed00ef4a71276a57c2cba5c9ec291d5e5200bcb47ff",
+      "raw_text": "해설 1\n바람이 잔잔하게 분다.\n해설 2\n별빛 아래 이야기가 이어진다.\n",
+      "selected_odii_story": {
+        "tid": "synthetic-theme-alpha",
+        "tlid": "synthetic-theme-location-alpha",
+        "stid": "synthetic-story-alpha",
+        "stlid": "synthetic-story-location-alpha",
+        "title": "합성 이야기",
+        "raw_response_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "expected_spans": [
+        {
+          "kind": "ODII_SECTION_TITLE",
+          "text": "해설 1",
+          "start_char": 0,
+          "end_char": 4,
+          "start_byte": 0,
+          "end_byte": 8
+        },
+        {
+          "kind": "SENTENCE",
+          "text": "바람이 잔잔하게 분다.",
+          "start_char": 5,
+          "end_char": 17,
+          "start_byte": 9,
+          "end_byte": 39
+        },
+        {
+          "kind": "ODII_SECTION_TITLE",
+          "text": "해설 2",
+          "start_char": 18,
+          "end_char": 22,
+          "start_byte": 40,
+          "end_byte": 48
+        },
+        {
+          "kind": "SENTENCE",
+          "text": "별빛 아래 이야기가 이어진다.",
+          "start_char": 23,
+          "end_char": 39,
+          "start_byte": 49,
+          "end_byte": 89
+        }
+      ]
+    }
+  },
+  "dedup": {
+    "policy": {
+      "version": "ko-conservative-dedup-v1",
+      "char_trigram_jaccard": 0.92,
+      "length_ratio": 0.85
+    },
+    "items": [
+      {
+        "span_id": "synthetic-span-exact-a",
+        "lane": "DESCRIPTION",
+        "source_id": "synthetic-description-alpha",
+        "text": "달빛 산책은 아주 고요하고 아름답다. 연못과 돌담을 따라 천천히 걷는 길에는 은은한 바람과 잔잔한 물결이 이어져 오래 머물고 싶은 정원의 분위기를 전한다. 계절마다 달라지는 나무와 하늘의 빛도 차분한 산책의 흐름을 오래도록 지켜 준다."
+      },
+      {
+        "span_id": "synthetic-span-exact-b",
+        "lane": "DESCRIPTION",
+        "source_id": "synthetic-description-beta",
+        "text": "  달빛   산책은 아주 고요하고 아름답다. 연못과 돌담을 따라 천천히 걷는 길에는 은은한 바람과 잔잔한 물결이 이어져 오래 머물고 싶은 정원의 분위기를 전한다. 계절마다 달라지는 나무와 하늘의 빛도 차분한 산책의 흐름을 오래도록 지켜 준다.  "
+      },
+      {
+        "span_id": "synthetic-span-near",
+        "lane": "DESCRIPTION",
+        "source_id": "synthetic-description-gamma",
+        "text": "달빛 산책은 매우 고요하고 아름답다. 연못과 돌담을 따라 천천히 걷는 길에는 은은한 바람과 잔잔한 물결이 이어져 오래 머물고 싶은 정원의 분위기를 전한다. 계절마다 달라지는 나무와 하늘의 빛도 차분한 산책의 흐름을 오래도록 지켜 준다."
+      },
+      {
+        "span_id": "synthetic-span-distinct",
+        "lane": "DESCRIPTION",
+        "source_id": "synthetic-description-delta",
+        "text": "활기찬 시장에서 공연이 이어진다."
+      },
+      {
+        "span_id": "synthetic-span-odii",
+        "lane": "ODII",
+        "source_id": "synthetic-odii-alpha",
+        "text": "달빛 산책은 아주 고요하고 아름답다. 연못과 돌담을 따라 천천히 걷는 길에는 은은한 바람과 잔잔한 물결이 이어져 오래 머물고 싶은 정원의 분위기를 전한다. 계절마다 달라지는 나무와 하늘의 빛도 차분한 산책의 흐름을 오래도록 지켜 준다."
+      }
+    ],
+    "expected_edges": [
+      ["synthetic-span-exact-a", "synthetic-span-exact-b", "EXACT"],
+      ["synthetic-span-exact-a", "synthetic-span-near", "NEAR"]
+    ]
+  }
+}

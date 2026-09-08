@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("/fonts/NotoSansKR-wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-opsz-wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/*
+ * IT-DA global stylesheet (07-02 Next.js App Router).
+ *
+ * Two isolated style worlds share this app:
+ * 1. The retained internal UI (styles/internal.css) keeps the previous
+ *    journey/evaluator presentation, imported after Tailwind preflight.
+ * 2. The ported upstream pages (styles/upstream.css) import the scoped
+ *    upstream stylesheets generated from the immutable originals by
+ *    scripts/namespace_upstream_css.py. Every upstream selector lives under
+ *    a `.up-*` scope class, so upstream presentation never leaks into the
+ *    internal UI and vice versa (upstream rules only apply inside a
+ *    `.up-<scope>` root element).
+ */
+@import "./styles/internal.css";
+@import "./styles/upstream.css";
+
+:root {
+  --font-itda: "Noto Sans KR", Inter, system-ui, sans-serif;
+}
+
+/* Keep public pages, internal tools, native controls, and generated content
+ * on the same self-hosted font, even when a page declares its own family.
+ * Override only the family so each component retains its size and weight. */
+html,
+body,
+body *,
+body *::before,
+body *::after,
+body *::placeholder,
+body *::file-selector-button {
+  font-family: var(--font-itda) !important;
+}

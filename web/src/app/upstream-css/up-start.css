@@ -1,0 +1,54 @@
+.up-start{--bg:#fffaf3;--ink:#182033;--muted:#657085;--line:rgba(24,32,51,.12);--orange:#ff6b35;--blue:#2f80ed;--green:#12b886;--shadow:0 24px 70px rgba(24,32,51,.12)}
+.up-start, .up-start *{box-sizing:border-box}
+.up-start{margin:0;min-height:100vh;font-family:"Noto Sans KR",Inter,system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 8% 10%,rgba(255,107,53,.17),transparent 28%),radial-gradient(circle at 90% 14%,rgba(47,128,237,.15),transparent 30%),radial-gradient(circle at 78% 88%,rgba(18,184,134,.12),transparent 32%),var(--bg)}
+.up-start a{color:inherit;text-decoration:none}
+.up-start .topbar{height:74px;width:min(1120px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.up-start .brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:900;letter-spacing:-.04em}
+.up-start .brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:14px;color:#fff;background:linear-gradient(135deg,var(--orange),#ffb703);box-shadow:0 12px 30px rgba(255,107,53,.25)}
+.up-start .back-link{padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.76);font-size:14px;font-weight:900}
+.up-start main{width:min(1120px,calc(100% - 40px));margin:0 auto;padding:56px 0 88px}
+.up-start .intro{max-width:none;margin-bottom:36px}
+.up-start .eyebrow{margin:0 0 10px;color:var(--orange);font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.up-start h1{margin:0;font-size:clamp(38px,6vw,68px);line-height:1.06;letter-spacing:-.055em}
+.up-start .function-title-line{display:block;white-space:nowrap}
+.up-start .intro p{margin:18px 0 0;color:#566075;font-size:18px;line-height:1.72;word-break:keep-all}
+.up-start .choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.up-start .choice{display:flex;flex-direction:column;min-height:390px;padding:30px;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.9);box-shadow:var(--shadow)}
+.up-start .choice-mark{width:62px;height:62px;display:grid;place-items:center;margin-bottom:22px;border-radius:22px;font-size:28px;font-weight:900}
+.up-start .choice.test .choice-mark{background:#fff1e8;color:var(--orange)}
+.up-start .choice.photo .choice-mark{background:#eaf3ff;color:var(--blue)}
+.up-start .choice h2{margin:0;font-size:30px;letter-spacing:-.05em}
+.up-start .choice .lead{margin:12px 0 0;color:#3e485c;font-size:17px;font-weight:800;line-height:1.55;word-break:keep-all}
+.up-start .choice ul{display:grid;gap:8px;margin:22px 0 0;padding:0;list-style:none;color:var(--muted);line-height:1.55;word-break:keep-all}
+.up-start .choice li{position:relative;padding-left:18px}
+.up-start .choice li::before{content:"";position:absolute;left:0;top:.65em;width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.up-start .choice.photo li::before{background:var(--blue)}
+.up-start .choice-action{display:flex;align-items:center;justify-content:center;margin-top:auto;padding:15px 18px;border-radius:16px;color:#fff;font-size:16px;font-weight:900}
+.up-start .choice.test .choice-action{background:linear-gradient(135deg,var(--orange),#ff9f1c)}
+.up-start .choice.photo .choice-action{background:linear-gradient(135deg,#2f80ed,#5f7ee6)}
+.up-start .privacy{margin:24px 0 0;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.7);color:#657085;font-size:14px;line-height:1.6;word-break:keep-all}
+@media(min-width:721px){
+  .up-start .topbar{height:86px}
+  .up-start .brand{font-size:25px}
+  .up-start .brand-mark{width:46px;height:46px;border-radius:16px}
+  .up-start .back-link{padding:12px 18px;font-size:15px}
+}
+@media(min-width:1280px) and (max-width:1600px){
+  .up-start{font-size:17px}
+  .up-start .topbar, .up-start main{width:min(1210px,calc(100% - 40px))}
+  .up-start .back-link, .up-start .privacy{font-size:15px}
+  .up-start .eyebrow{font-size:14px}
+  .up-start .intro p{font-size:19px}
+  .up-start .choice .lead{font-size:18px}
+  .up-start .choice-action{font-size:17px}
+}
+@media(max-width:720px){
+  .up-start .topbar{height:64px;width:min(100% - 24px,1120px)}
+  .up-start main{width:min(100% - 24px,1120px);padding:36px 0 64px}
+  .up-start h1{font-size:clamp(20px,5vw,36px)}
+  .up-start .intro p{font-size:15px}
+  .up-start .choices{grid-template-columns:1fr}
+  .up-start .choice{min-height:0;padding:24px;border-radius:20px}
+  .up-start .choice-action{margin-top:26px}
+  .up-start .back-link{font-size:13px;padding:9px 12px}
+}

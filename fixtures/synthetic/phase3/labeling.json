@@ -1,0 +1,53 @@
+{
+  "schema_version": "phase3-labeling-fixture-v1",
+  "synthetic_only": true,
+  "assignment": {
+    "assignment_id": "synthetic-assignment-alpha",
+    "place_id": "synthetic-place-alpha",
+    "evaluator_id": "synthetic-evaluator-alpha",
+    "partition": "SYNTHETIC_ONLY",
+    "rubric_version": "synthetic-rubric-v1",
+    "source_snapshot_version": "synthetic-source-v1"
+  },
+  "sources": [
+    {
+      "source_id": "synthetic-description-alpha",
+      "lane": "DESCRIPTION",
+      "text_ko": "가상의 기록관은 오래된 생활 도구를 설명하고 조용한 안뜰을 함께 소개한다."
+    },
+    {
+      "source_id": "synthetic-odii-alpha",
+      "lane": "ODII",
+      "text_ko": "가상의 해설은 기록의 쓰임과 안뜰을 천천히 둘러보는 방법을 들려준다."
+    }
+  ],
+  "rubric": {
+    "ordered_attribute_ids": ["H1", "H2", "H3", "H4", "I1", "I2", "I3", "I4", "R1", "R2", "R3", "R4"],
+    "subattributes": [
+      {"attribute_id": "H1", "axis": "HISTORY_TRADITION", "label_ko": "역사 서사 밀도", "examples_ko": ["시대와 유래를 직접 설명한다"], "counterexamples_ko": ["유래 설명 없이 시설만 나열한다"]},
+      {"attribute_id": "H2", "axis": "HISTORY_TRADITION", "label_ko": "문화유산·원형 기반성", "examples_ko": ["보존 흔적이 경험의 중심이다"], "counterexamples_ko": ["원형과 무관한 임시 장식뿐이다"]},
+      {"attribute_id": "H3", "axis": "HISTORY_TRADITION", "label_ko": "전통의 지속성", "examples_ko": ["전통생활이 현재 경험과 이어진다"], "counterexamples_ko": ["현재와의 연결 근거가 없다"]},
+      {"attribute_id": "H4", "axis": "HISTORY_TRADITION", "label_ko": "학습·해설 깊이", "examples_ko": ["해설과 교육 탐색이 구체적이다"], "counterexamples_ko": ["학습 가능한 설명이 없다"]},
+      {"attribute_id": "I1", "axis": "EMOTION_IMAGE", "label_ko": "시각적 상징성", "examples_ko": ["기억되는 형태가 직접 묘사된다"], "counterexamples_ko": ["구별되는 장면 근거가 없다"]},
+      {"attribute_id": "I2", "axis": "EMOTION_IMAGE", "label_ko": "사진·경관 매력", "examples_ko": ["경관의 구도와 계절감이 설명된다"], "counterexamples_ko": ["경관 정보가 전혀 없다"]},
+      {"attribute_id": "I3", "axis": "EMOTION_IMAGE", "label_ko": "현대적 재해석", "examples_ko": ["전통 요소를 현재 방식으로 잇는다"], "counterexamples_ko": ["재해석 근거가 없다"]},
+      {"attribute_id": "I4", "axis": "EMOTION_IMAGE", "label_ko": "분위기·감각 경험", "examples_ko": ["빛과 공간 분위기가 구체적이다"], "counterexamples_ko": ["감각 경험 설명이 없다"]},
+      {"attribute_id": "R1", "axis": "REST_IMMERSION", "label_ko": "자연·회복 환경", "examples_ko": ["회복을 돕는 자연 요소가 있다"], "counterexamples_ko": ["자연 요소를 확인할 수 없다"]},
+      {"attribute_id": "R2", "axis": "REST_IMMERSION", "label_ko": "산책·체류 적합성", "examples_ko": ["천천히 걷고 머무는 동선이 있다"], "counterexamples_ko": ["체류 가능성을 뒷받침하지 않는다"]},
+      {"attribute_id": "R3", "axis": "REST_IMMERSION", "label_ko": "정적·저자극 가능성", "examples_ko": ["조용히 머무를 수 있다고 설명한다"], "counterexamples_ko": ["정적 환경 근거가 없다"]},
+      {"attribute_id": "R4", "axis": "REST_IMMERSION", "label_ko": "참여·몰입 경험", "examples_ko": ["탐방과 이야기 몰입이 연결된다"], "counterexamples_ko": ["참여 또는 몰입 근거가 없다"]}
+    ]
+  },
+  "evidence_items": [
+    {"evidence_id": "synthetic-desc-direct-a", "source_id": "synthetic-description-alpha", "lane": "DESCRIPTION", "dedup_cluster_id": "synthetic-cluster-a", "direct": true, "concordance_key": "synthetic-theme-a"},
+    {"evidence_id": "synthetic-desc-direct-a-copy", "source_id": "synthetic-description-alpha", "lane": "DESCRIPTION", "dedup_cluster_id": "synthetic-cluster-a", "direct": true, "concordance_key": "synthetic-theme-a"},
+    {"evidence_id": "synthetic-desc-direct-b", "source_id": "synthetic-description-alpha", "lane": "DESCRIPTION", "dedup_cluster_id": "synthetic-cluster-b", "direct": true, "concordance_key": "synthetic-theme-b"},
+    {"evidence_id": "synthetic-odii-direct-a", "source_id": "synthetic-odii-alpha", "lane": "ODII", "dedup_cluster_id": "synthetic-cluster-c", "direct": true, "concordance_key": "synthetic-theme-a"},
+    {"evidence_id": "synthetic-odii-discordant", "source_id": "synthetic-odii-alpha", "lane": "ODII", "dedup_cluster_id": "synthetic-cluster-d", "direct": true, "concordance_key": "synthetic-theme-z"}
+  ],
+  "forbidden_canaries": [
+    "synthetic-peer-output-canary",
+    "synthetic-model-output-canary",
+    "synthetic-protected-partition-canary"
+  ]
+}

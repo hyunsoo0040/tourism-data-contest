@@ -1,0 +1,79 @@
+{
+  "fixture_schema_version": "phase3-evaluation-fixture-v1",
+  "synthetic_only": true,
+  "base_manifest": {
+    "schema_version": "phase3-evaluation-manifest-v1",
+    "synthetic_only": true,
+    "case_id": "synthetic-evaluation-base",
+    "evidence_status": "EXTERNAL_EVIDENCE_PENDING",
+    "approved_protected_evidence": null,
+    "versions": {
+      "data_version": "synthetic-phase3-data-v1",
+      "model_id": "synthetic/deterministic-fake-encoder",
+      "model_revision": "1111111111111111111111111111111111111111",
+      "prompt_anchor_version": "synthetic-anchor-v1",
+      "preprocessing_version": "synthetic-source-span-v1",
+      "scoring_version": "synthetic-cosine-v1",
+      "code_git_sha": "5555555555555555555555555555555555555555",
+      "config_sha256": "6666666666666666666666666666666666666666666666666666666666666666"
+    },
+    "thresholds": {
+      "macro_mae_max": 0.75,
+      "plus_minus_one_accuracy_min": 0.8,
+      "precision_at_3_min": 0.8,
+      "recall_at_8_min": 0.9,
+      "manifest_completeness_min": 1.0
+    },
+    "metrics": {
+      "macro_mae": 0.5,
+      "plus_minus_one_accuracy": 0.9,
+      "precision_at_3": 0.85,
+      "recall_at_8": 0.95,
+      "manifest_completeness": 1.0
+    },
+    "generated_at": "2026-08-03T12:30:00Z",
+    "claim_scope": "SYNTHETIC_SOFTWARE_CONTRACT_ONLY"
+  },
+  "projections": {
+    "passing": {
+      "case_id": "synthetic-thresholds-passing"
+    },
+    "failing": {
+      "case_id": "synthetic-thresholds-failing",
+      "metrics": {
+        "macro_mae": 0.9,
+        "plus_minus_one_accuracy": 0.9,
+        "precision_at_3": 0.85,
+        "recall_at_8": 0.95,
+        "manifest_completeness": 1.0
+      }
+    },
+    "pending": {
+      "case_id": "synthetic-evidence-pending",
+      "evidence_status": "EXTERNAL_EVIDENCE_PENDING",
+      "approved_protected_evidence": null
+    },
+    "malformed_missing_version": {
+      "case_id": "synthetic-malformed-missing-version",
+      "remove_paths": ["versions.model_revision"]
+    },
+    "malformed_non_finite": {
+      "case_id": "synthetic-malformed-non-finite",
+      "replace_paths": {
+        "metrics.macro_mae": "NON_FINITE"
+      }
+    },
+    "malformed_out_of_contract": {
+      "case_id": "synthetic-malformed-out-of-contract",
+      "replace_paths": {
+        "metrics.precision_at_3": 1.01
+      }
+    }
+  },
+  "forbidden_canaries": [
+    "synthetic-individual-label-canary",
+    "synthetic-evaluator-identity-canary",
+    "synthetic-membership-canary",
+    "synthetic-restricted-location-canary"
+  ]
+}

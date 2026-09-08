@@ -1,0 +1,155 @@
+name: itda
+
+services:
+  postgres:
+    image: docker.io/library/postgres:17.10-bookworm@sha256:4f736ae292687621d4dbe0d499ffd024a36bd2ee7d8ca6f2ccd4c800f047b394
+    environment:
+      POSTGRES_DB: ${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required}
+      POSTGRES_USER: ${ITDA_POSTGRES_ADMIN_USER:?ITDA_POSTGRES_ADMIN_USER is required}
+      POSTGRES_PASSWORD: ${ITDA_POSTGRES_ADMIN_PASSWORD:?ITDA_POSTGRES_ADMIN_PASSWORD is required}
+      TZ: UTC
+      PGTZ: UTC
+    command: ["postgres", "-c", "timezone=UTC"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+    restart: unless-stopped
+    stop_grace_period: 15s
+    volumes:
+      - itda_postgres_data:/var/lib/postgresql/data
+    networks:
+      - data
+
+  migrate:
+    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    command: ["python", "-m", "itda.cli.deploy_database"]
+    environment:
+      ITDA_POSTGRES_ADMIN_DSN: "dbname=${ITDA_POSTGRES_DB:?} user=${ITDA_POSTGRES_ADMIN_USER:?} password=${ITDA_POSTGRES_ADMIN_PASSWORD:?} host=postgres port=5432 sslmode=disable"
+      ITDA_POSTGRES_DB: ${ITDA_POSTGRES_DB:?}
+      ITDA_RUNTIME_ROLE: ${ITDA_RUNTIME_ROLE:?}
+      ITDA_RUNTIME_PASSWORD: ${ITDA_RUNTIME_PASSWORD:?}
+      ITDA_LABEL_BUILDER_ROLE: ${ITDA_LABEL_BUILDER_ROLE:?}
+      ITDA_LABEL_BUILDER_PASSWORD: ${ITDA_LABEL_BUILDER_PASSWORD:?}
+      ITDA_LABEL_APPROVER_ROLE: ${ITDA_LABEL_APPROVER_ROLE:?}
+      ITDA_LABEL_APPROVER_PASSWORD: ${ITDA_LABEL_APPROVER_PASSWORD:?}
+      ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD: ${ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD:?}
+      ITDA_PHOTO_SERVICE_PASSWORD: ${ITDA_PHOTO_SERVICE_PASSWORD:?}
+      ITDA_PROFILE_SESSION_SERVICE_PASSWORD: ${ITDA_PROFILE_SESSION_SERVICE_PASSWORD:?}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+    networks:
+      - data
+
+  quarantine-init:
+    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    user: "0:0"
+    command:
+      - python
+      - -c
+      - |
+        import os
+        root = "/var/lib/itda/photo-quarantine"
+        os.makedirs(root, mode=0o700, exist_ok=True)
+        os.chown(root, 10001, 10001)
+        os.chmod(root, 0o700)
+    restart: "no"
+    network_mode: none
+    volumes:
+      - itda_photo_quarantine:/var/lib/itda/photo-quarantine
+
+  backend:
+    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    environment:
+      ITDA_DATABASE_URL: "dbname=${ITDA_POSTGRES_DB:?} user=${ITDA_RUNTIME_ROLE:?} password=${ITDA_RUNTIME_PASSWORD:?} host=postgres port=5432 sslmode=disable"
+      ITDA_PROFILE_SESSION_DATABASE_URL: "dbname=${ITDA_POSTGRES_DB:?} user=itda_current_profile_session_service password=${ITDA_PROFILE_SESSION_SERVICE_PASSWORD:?} host=postgres port=5432 sslmode=disable"
+      ITDA_PHOTO_SERVICE_DATABASE_URL: "dbname=${ITDA_POSTGRES_DB:?} user=itda_photo_service password=${ITDA_PHOTO_SERVICE_PASSWORD:?} host=postgres port=5432 sslmode=disable"
+      ITDA_PHOTO_QUARANTINE_ROOT: /var/lib/itda/photo-quarantine
+      ITDA_RUNTIME_ROLE: ${ITDA_RUNTIME_ROLE:?}
+      ITDA_LABEL_BUILDER_ROLE: ${ITDA_LABEL_BUILDER_ROLE:?}
+      ITDA_CANONICAL_APP_ORIGIN: https://${APP_DOMAIN:?APP_DOMAIN is required}
+      ITDA_PROFILE_SESSION_KEYRING: ${ITDA_PROFILE_SESSION_KEYRING:?}
+      ITDA_PROFILE_SESSION_CURRENT_KID: ${ITDA_PROFILE_SESSION_CURRENT_KID:?}
+      ITDA_API_BIND_HOST: 0.0.0.0
+      TZ: UTC
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      quarantine-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/v1/questionnaires/current', timeout=3).read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    restart: unless-stopped
+    stop_grace_period: 15s
+    volumes:
+      - itda_photo_quarantine:/var/lib/itda/photo-quarantine
+    networks:
+      - app
+      - data
+
+  web:
+    image: ${WEB_IMAGE:?WEB_IMAGE is required}
+    environment:
+      HOSTNAME: 0.0.0.0
+      PORT: "3000"
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/start').then(r => { if (!r.ok) process.exit(1) }).catch(() => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    restart: unless-stopped
+    networks:
+      - frontend
+
+  caddy:
+    image: docker.io/library/caddy:2.10.2-alpine@sha256:d8c17a862962def15cde69863a3a463f25a2664942eafd7bdbf050e9c3116b83
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?APP_DOMAIN is required}
+    depends_on:
+      backend:
+        condition: service_healthy
+      web:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    restart: unless-stopped
+    stop_grace_period: 15s
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - itda_caddy_data:/data
+      - itda_caddy_config:/config
+    networks:
+      - edge
+      - frontend
+      - app
+
+volumes:
+  itda_postgres_data:
+  itda_photo_quarantine:
+  itda_caddy_data:
+  itda_caddy_config:
+
+networks:
+  edge:
+  frontend:
+    internal: true
+  app:
+    internal: true
+  data:
+    internal: true

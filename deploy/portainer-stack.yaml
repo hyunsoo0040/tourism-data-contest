@@ -1,0 +1,287 @@
+services:
+  postgres:
+    image: docker.io/library/postgres:17.10-bookworm@sha256:4f736ae292687621d4dbe0d499ffd024a36bd2ee7d8ca6f2ccd4c800f047b394
+    environment:
+      POSTGRES_DB: ${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required}
+      POSTGRES_USER: ${ITDA_POSTGRES_ADMIN_USER:?ITDA_POSTGRES_ADMIN_USER is required}
+      POSTGRES_PASSWORD: ${ITDA_POSTGRES_ADMIN_PASSWORD:?ITDA_POSTGRES_ADMIN_PASSWORD is required}
+      TZ: UTC
+      PGTZ: UTC
+    command: ["postgres", "-c", "timezone=UTC"]
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - database
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == ${ITDA_DATA_NODE_HOSTNAME:?ITDA_DATA_NODE_HOSTNAME is required}
+          - node.platform.arch == x86_64
+      restart_policy:
+        condition: any
+        delay: 5s
+      update_config:
+        order: stop-first
+
+  migrate:
+    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    environment:
+      ITDA_POSTGRES_DB: ${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required}
+      ITDA_POSTGRES_ADMIN_USER: ${ITDA_POSTGRES_ADMIN_USER:?ITDA_POSTGRES_ADMIN_USER is required}
+      ITDA_POSTGRES_ADMIN_PASSWORD: ${ITDA_POSTGRES_ADMIN_PASSWORD:?ITDA_POSTGRES_ADMIN_PASSWORD is required}
+      ITDA_RUNTIME_ROLE: ${ITDA_RUNTIME_ROLE:?ITDA_RUNTIME_ROLE is required}
+      ITDA_RUNTIME_PASSWORD: ${ITDA_RUNTIME_PASSWORD:?ITDA_RUNTIME_PASSWORD is required}
+      ITDA_LABEL_BUILDER_ROLE: ${ITDA_LABEL_BUILDER_ROLE:?ITDA_LABEL_BUILDER_ROLE is required}
+      ITDA_LABEL_BUILDER_PASSWORD: ${ITDA_LABEL_BUILDER_PASSWORD:?ITDA_LABEL_BUILDER_PASSWORD is required}
+      ITDA_LABEL_APPROVER_ROLE: ${ITDA_LABEL_APPROVER_ROLE:?ITDA_LABEL_APPROVER_ROLE is required}
+      ITDA_LABEL_APPROVER_PASSWORD: ${ITDA_LABEL_APPROVER_PASSWORD:?ITDA_LABEL_APPROVER_PASSWORD is required}
+      ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD: ${ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD:?ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD is required}
+      ITDA_PHOTO_SERVICE_PASSWORD: ${ITDA_PHOTO_SERVICE_PASSWORD:?ITDA_PHOTO_SERVICE_PASSWORD is required}
+      ITDA_PROFILE_SESSION_SERVICE_PASSWORD: ${ITDA_PROFILE_SESSION_SERVICE_PASSWORD:?ITDA_PROFILE_SESSION_SERVICE_PASSWORD is required}
+      ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD: ${ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD:?ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD is required}
+    command:
+      - sh
+      - -c
+      - |
+        set -eu
+        export ITDA_POSTGRES_ADMIN_DSN="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=$${ITDA_POSTGRES_ADMIN_USER:?ITDA_POSTGRES_ADMIN_USER is required} password=$${ITDA_POSTGRES_ADMIN_PASSWORD:?ITDA_POSTGRES_ADMIN_PASSWORD is required} host=postgres port=5432 sslmode=disable"
+        exec python -m itda.cli.deploy_database
+    networks:
+      - database
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == ${ITDA_DATA_NODE_HOSTNAME:?ITDA_DATA_NODE_HOSTNAME is required}
+          - node.platform.arch == x86_64
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+
+  photo-volume-init:
+    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    user: "0:0"
+    command:
+      - python
+      - -c
+      - |
+        import os
+        path = "/var/lib/itda/photo-quarantine"
+        os.makedirs(path, mode=0o700, exist_ok=True)
+        os.chown(path, 10001, 10001)
+        os.chmod(path, 0o700)
+    volumes:
+      - photo-quarantine:/var/lib/itda/photo-quarantine
+    networks:
+      - database
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == ${ITDA_DATA_NODE_HOSTNAME:?ITDA_DATA_NODE_HOSTNAME is required}
+          - node.platform.arch == x86_64
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+
+  backend:
+    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    environment:
+      ITDA_POSTGRES_DB: ${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required}
+      ITDA_RUNTIME_ROLE: ${ITDA_RUNTIME_ROLE:?ITDA_RUNTIME_ROLE is required}
+      ITDA_RUNTIME_PASSWORD: ${ITDA_RUNTIME_PASSWORD:?ITDA_RUNTIME_PASSWORD is required}
+      ITDA_LABEL_BUILDER_ROLE: ${ITDA_LABEL_BUILDER_ROLE:?ITDA_LABEL_BUILDER_ROLE is required}
+      ITDA_PHOTO_SERVICE_PASSWORD: ${ITDA_PHOTO_SERVICE_PASSWORD:?ITDA_PHOTO_SERVICE_PASSWORD is required}
+      ITDA_PROFILE_SESSION_SERVICE_PASSWORD: ${ITDA_PROFILE_SESSION_SERVICE_PASSWORD:?ITDA_PROFILE_SESSION_SERVICE_PASSWORD is required}
+      ITDA_PROFILE_SESSION_CURRENT_KID: ${ITDA_PROFILE_SESSION_CURRENT_KID:-current}
+      ITDA_PROFILE_SESSION_KEYRING: ${ITDA_PROFILE_SESSION_KEYRING:?ITDA_PROFILE_SESSION_KEYRING is required}
+      ITDA_CANONICAL_APP_ORIGIN: https://${APP_DOMAIN:?APP_DOMAIN is required}
+      ITDA_PHOTO_QUARANTINE_ROOT: /var/lib/itda/photo-quarantine
+      ITDA_OPERATING_INFORMATION_ENABLED: ${ITDA_OPERATING_INFORMATION_ENABLED:-0}
+      TOUR_API_SERVICE_KEY: ${TOUR_API_SERVICE_KEY:-}
+      ITDA_PUBLIC_PLACE_CATALOG_PATH: /app/artifacts/public/catalog/public-place-catalog-v1.json
+      ITDA_OPERATING_INFORMATION_TIMEOUT_SECONDS: ${ITDA_OPERATING_INFORMATION_TIMEOUT_SECONDS:-1.5}
+      ITDA_OPERATING_INFORMATION_TTL_SECONDS: ${ITDA_OPERATING_INFORMATION_TTL_SECONDS:-900}
+      ITDA_OPERATING_INFORMATION_NEGATIVE_TTL_SECONDS: ${ITDA_OPERATING_INFORMATION_NEGATIVE_TTL_SECONDS:-120}
+      TZ: UTC
+    command:
+      - sh
+      - -c
+      - |
+        set -eu
+        export ITDA_DATABASE_URL="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=$${ITDA_RUNTIME_ROLE:?ITDA_RUNTIME_ROLE is required} password=$${ITDA_RUNTIME_PASSWORD:?ITDA_RUNTIME_PASSWORD is required} host=postgres port=5432 sslmode=disable"
+        export ITDA_PROFILE_SESSION_DATABASE_URL="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=itda_current_profile_session_service password=$${ITDA_PROFILE_SESSION_SERVICE_PASSWORD:?ITDA_PROFILE_SESSION_SERVICE_PASSWORD is required} host=postgres port=5432 sslmode=disable"
+        export ITDA_PHOTO_SERVICE_DATABASE_URL="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=itda_photo_service password=$${ITDA_PHOTO_SERVICE_PASSWORD:?ITDA_PHOTO_SERVICE_PASSWORD is required} host=postgres port=5432 sslmode=disable"
+        until [ -w /var/lib/itda/photo-quarantine ]; do sleep 3; done
+        until python -c "import os, psycopg; psycopg.connect(os.environ['ITDA_DATABASE_URL']).close()" >/dev/null 2>&1; do sleep 3; done
+        exec python -m uvicorn itda.api.main:app --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips=*
+    volumes:
+      - photo-quarantine:/var/lib/itda/photo-quarantine
+    networks:
+      proxy:
+      application:
+        aliases:
+          - backend
+      database:
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/v1/questionnaires/current', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == ${ITDA_DATA_NODE_HOSTNAME:?ITDA_DATA_NODE_HOSTNAME is required}
+          - node.platform.arch == x86_64
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+      update_config:
+        order: stop-first
+        failure_action: rollback
+      rollback_config:
+        order: stop-first
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=${TRAEFIK_NETWORK:-proxy}"
+        - "traefik.http.routers.itda-api.rule=Host(`${APP_DOMAIN:?APP_DOMAIN is required}`) && (Path(`/v1`) || PathPrefix(`/v1/`))"
+        - "traefik.http.routers.itda-api.entrypoints=websecure"
+        - "traefik.http.routers.itda-api.tls=true"
+        - "traefik.http.routers.itda-api.tls.certresolver=${TRAEFIK_CERT_RESOLVER:-le}"
+        - "traefik.http.routers.itda-api.priority=200"
+        - "traefik.http.routers.itda-api.service=itda-api"
+        - "traefik.http.routers.itda-daily-glm-api.rule=Host(`${APP_DOMAIN:?APP_DOMAIN is required}`) && PathPrefix(`/internal/operations/daily-glm/api`)"
+        - "traefik.http.routers.itda-daily-glm-api.entrypoints=websecure"
+        - "traefik.http.routers.itda-daily-glm-api.tls=true"
+        - "traefik.http.routers.itda-daily-glm-api.tls.certresolver=${TRAEFIK_CERT_RESOLVER:-le}"
+        - "traefik.http.routers.itda-daily-glm-api.priority=420"
+        - "traefik.http.routers.itda-daily-glm-api.middlewares=itda-daily-glm-auth@swarm"
+        - "traefik.http.routers.itda-daily-glm-api.service=itda-api"
+        - "traefik.http.services.itda-api.loadbalancer.server.port=8000"
+
+  daily-glm-refresh:
+    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    environment:
+      ITDA_POSTGRES_DB: ${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required}
+      ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD: ${ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD:?ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD is required}
+      ITDA_DAILY_GLM_REFRESH_ENABLED: ${ITDA_DAILY_GLM_REFRESH_ENABLED:?ITDA_DAILY_GLM_REFRESH_ENABLED is required}
+      ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256: ${ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256:?ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256 is required}
+      TOUR_API_SERVICE_KEY: ${TOUR_API_SERVICE_KEY:?TOUR_API_SERVICE_KEY is required}
+      ZHIPUAI_API_KEY: ${ZHIPUAI_API_KEY:?ZHIPUAI_API_KEY is required}
+      ITDA_PUBLIC_PLACE_CATALOG_PATH: /app/artifacts/public/catalog/public-place-catalog-v1.json
+      ITDA_PUBLIC_EVIDENCE_INVENTORY_PATH: /app/artifacts/public/catalog/public-evidence-inventory-v1.json
+      ITDA_PUBLIC_PLACE_RELATIONS_PATH: /app/artifacts/public/catalog/public-place-relations-v1.json
+      ITDA_DAILY_TOUR_API_TIMEOUT_SECONDS: ${ITDA_DAILY_TOUR_API_TIMEOUT_SECONDS:-15}
+      TZ: UTC
+    command:
+      - sh
+      - -c
+      - |
+        set -eu
+        export ITDA_DAILY_GLM_REFRESH_DATABASE_URL="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=itda_daily_glm_refresh_service password=$${ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD:?ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD is required} host=postgres port=5432 sslmode=disable"
+        attempts=0
+        until python -c "import os, psycopg; psycopg.connect(os.environ['ITDA_DAILY_GLM_REFRESH_DATABASE_URL']).close()" >/dev/null 2>&1; do
+          attempts=$$((attempts + 1))
+          [ "$${attempts}" -lt 60 ] || exit 1
+          sleep 3
+        done
+        exec python -m itda.cli.run_daily_glm_refresh
+    networks:
+      - database
+      - scheduler-egress
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == ${ITDA_DATA_NODE_HOSTNAME:?ITDA_DATA_NODE_HOSTNAME is required}
+          - node.platform.arch == x86_64
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+      update_config:
+        order: stop-first
+        failure_action: rollback
+
+  web:
+    image: pengginregistry.pengbot.app/itda/web:latest
+    environment:
+      HOSTNAME: 0.0.0.0
+      PORT: "3000"
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      ITDA_BACKEND_ORIGIN: http://backend:8000
+    networks:
+      - proxy
+      - application
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/start').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.arch == x86_64
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+      update_config:
+        order: start-first
+        failure_action: rollback
+      rollback_config:
+        order: stop-first
+      labels:
+        - "traefik.enable=true"
+        - "traefik.docker.network=${TRAEFIK_NETWORK:-proxy}"
+        - "traefik.http.middlewares.itda-internal-not-found.replacepath.path=/__itda_external_not_found__"
+        - "traefik.http.middlewares.itda-daily-glm-auth.basicauth.users=${ITDA_GLM_DASHBOARD_BASIC_AUTH_USERS:?ITDA_GLM_DASHBOARD_BASIC_AUTH_USERS is required}"
+        - "traefik.http.middlewares.itda-daily-glm-auth.basicauth.removeheader=true"
+        - "traefik.http.routers.itda-daily-glm-ui.rule=Host(`${APP_DOMAIN:?APP_DOMAIN is required}`) && (Path(`/internal/operations/daily-glm`) || PathPrefix(`/internal/operations/daily-glm/`))"
+        - "traefik.http.routers.itda-daily-glm-ui.entrypoints=websecure"
+        - "traefik.http.routers.itda-daily-glm-ui.tls=true"
+        - "traefik.http.routers.itda-daily-glm-ui.tls.certresolver=${TRAEFIK_CERT_RESOLVER:-le}"
+        - "traefik.http.routers.itda-daily-glm-ui.priority=410"
+        - "traefik.http.routers.itda-daily-glm-ui.middlewares=itda-daily-glm-auth@swarm"
+        - "traefik.http.routers.itda-daily-glm-ui.service=itda-web"
+        - "traefik.http.routers.itda-internal.rule=Host(`${APP_DOMAIN:?APP_DOMAIN is required}`) && (Path(`/internal`) || PathPrefix(`/internal/`))"
+        - "traefik.http.routers.itda-internal.entrypoints=websecure"
+        - "traefik.http.routers.itda-internal.tls=true"
+        - "traefik.http.routers.itda-internal.tls.certresolver=${TRAEFIK_CERT_RESOLVER:-le}"
+        - "traefik.http.routers.itda-internal.priority=300"
+        - "traefik.http.routers.itda-internal.middlewares=itda-internal-not-found@swarm"
+        - "traefik.http.routers.itda-internal.service=itda-web"
+        - "traefik.http.routers.itda-web.rule=Host(`${APP_DOMAIN:?APP_DOMAIN is required}`)"
+        - "traefik.http.routers.itda-web.entrypoints=websecure"
+        - "traefik.http.routers.itda-web.tls=true"
+        - "traefik.http.routers.itda-web.tls.certresolver=${TRAEFIK_CERT_RESOLVER:-le}"
+        - "traefik.http.routers.itda-web.priority=10"
+        - "traefik.http.routers.itda-web.service=itda-web"
+        - "traefik.http.services.itda-web.loadbalancer.server.port=3000"
+
+volumes:
+  postgres-data:
+  photo-quarantine:
+
+networks:
+  proxy:
+    external: true
+    name: ${TRAEFIK_NETWORK:-proxy}
+  application:
+    driver: overlay
+    internal: true
+  database:
+    driver: overlay
+    internal: true
+  scheduler-egress:
+    driver: overlay

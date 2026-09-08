@@ -1,0 +1,253 @@
+{
+  "terraform": {
+    "required_providers": {
+      "google": {
+        "source": "hashicorp/google",
+        "version": "~> 7.0"
+      }
+    }
+  },
+  "variable": {
+    "project_id": { "type": "string" },
+    "region": { "type": "string", "default": "asia-northeast3" },
+    "backend_image": { "type": "string" },
+    "retention_job_service_account": { "type": "string" },
+    "scheduler_service_account": { "type": "string" },
+    "alert_notification_channels": { "type": "list(string)", "default": [] },
+    "phase3_capability_secret": { "type": "string" },
+    "phase3_builder_capability_sha256_secret": { "type": "string" },
+    "phase3_builder_database_url_secret": { "type": "string" }
+  },
+  "resource": {
+    "google_cloud_run_v2_job": {
+      "profile_release_draft_retention": {
+        "name": "itda-profile-release-draft-retention",
+        "location": "${var.region}",
+        "project": "${var.project_id}",
+        "deletion_protection": true,
+        "lifecycle": {
+          "precondition": [
+            {
+              "condition": "${var.scheduler_service_account != var.retention_job_service_account}",
+              "error_message": "The profile release retention scheduler and runtime service accounts must be distinct."
+            }
+          ]
+        },
+        "depends_on": [
+          "google_secret_manager_secret_iam_member.profile_release_draft_retention_capability",
+          "google_secret_manager_secret_iam_member.profile_release_draft_retention_builder_capability_sha256",
+          "google_secret_manager_secret_iam_member.profile_release_draft_retention_builder_database_url"
+        ],
+        "template": {
+          "task_count": 1,
+          "parallelism": 1,
+          "template": {
+            "service_account": "${var.retention_job_service_account}",
+            "max_retries": 2,
+            "timeout": "300s",
+            "containers": [
+              {
+                "image": "${var.backend_image}",
+                "command": ["python"],
+                "args": [
+                  "-m",
+                  "itda.cli.manage_profile_release",
+                  "--purge-expired-build-drafts"
+                ],
+                "env": [
+                  {
+                    "name": "ITDA_PHASE3_CAPABILITY",
+                    "value_source": {
+                      "secret_key_ref": {
+                        "secret": "${var.phase3_capability_secret}",
+                        "version": "latest"
+                      }
+                    }
+                  },
+                  {
+                    "name": "ITDA_PHASE3_BUILDER_CAPABILITY_SHA256",
+                    "value_source": {
+                      "secret_key_ref": {
+                        "secret": "${var.phase3_builder_capability_sha256_secret}",
+                        "version": "latest"
+                      }
+                    }
+                  },
+                  {
+                    "name": "ITDA_PHASE3_BUILDER_DATABASE_URL",
+                    "value_source": {
+                      "secret_key_ref": {
+                        "secret": "${var.phase3_builder_database_url_secret}",
+                        "version": "latest"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "google_secret_manager_secret_iam_member": {
+      "profile_release_draft_retention_capability": {
+        "project": "${var.project_id}",
+        "secret_id": "${var.phase3_capability_secret}",
+        "role": "roles/secretmanager.secretAccessor",
+        "member": "serviceAccount:${var.retention_job_service_account}"
+      },
+      "profile_release_draft_retention_builder_capability_sha256": {
+        "project": "${var.project_id}",
+        "secret_id": "${var.phase3_builder_capability_sha256_secret}",
+        "role": "roles/secretmanager.secretAccessor",
+        "member": "serviceAccount:${var.retention_job_service_account}"
+      },
+      "profile_release_draft_retention_builder_database_url": {
+        "project": "${var.project_id}",
+        "secret_id": "${var.phase3_builder_database_url_secret}",
+        "role": "roles/secretmanager.secretAccessor",
+        "member": "serviceAccount:${var.retention_job_service_account}"
+      }
+    },
+    "google_cloud_run_v2_job_iam_member": {
+      "profile_release_draft_retention_scheduler_invoker": {
+        "project": "${var.project_id}",
+        "location": "${var.region}",
+        "name": "${google_cloud_run_v2_job.profile_release_draft_retention.name}",
+        "role": "roles/run.invoker",
+        "member": "serviceAccount:${var.scheduler_service_account}"
+      }
+    },
+    "google_cloud_scheduler_job": {
+      "profile_release_draft_retention": {
+        "name": "itda-profile-release-draft-retention-every-five-minutes",
+        "project": "${var.project_id}",
+        "region": "${var.region}",
+        "schedule": "*/5 * * * *",
+        "time_zone": "Etc/UTC",
+        "attempt_deadline": "320s",
+        "depends_on": [
+          "google_cloud_run_v2_job_iam_member.profile_release_draft_retention_scheduler_invoker"
+        ],
+        "retry_config": {
+          "retry_count": 2,
+          "max_retry_duration": "600s",
+          "min_backoff_duration": "30s",
+          "max_backoff_duration": "120s"
+        },
+        "http_target": {
+          "http_method": "POST",
+          "uri": "https://run.googleapis.com/v2/projects/${var.project_id}/locations/${var.region}/jobs/${google_cloud_run_v2_job.profile_release_draft_retention.name}:run",
+          "oauth_token": {
+            "service_account_email": "${var.scheduler_service_account}",
+            "scope": "https://www.googleapis.com/auth/cloud-platform"
+          }
+        }
+      }
+    },
+    "google_logging_metric": {
+      "profile_release_draft_retention_success": {
+        "name": "itda/profile_release_draft_retention/success",
+        "project": "${var.project_id}",
+        "depends_on": [
+          "google_cloud_scheduler_job.profile_release_draft_retention",
+          "google_cloud_run_v2_job_iam_member.profile_release_draft_retention_scheduler_invoker"
+        ],
+        "filter": "resource.type=\"cloud_run_job\" AND resource.labels.job_name=\"itda-profile-release-draft-retention\" AND jsonPayload.event=\"profile_release_build_draft_purge\" AND jsonPayload.status=\"SUCCEEDED\" AND jsonPayload.remaining_expired_count=0",
+        "metric_descriptor": {
+          "metric_kind": "DELTA",
+          "value_type": "INT64",
+          "unit": "1"
+        }
+      },
+      "profile_release_draft_retention_deleted_count": {
+        "name": "itda/profile_release_draft_retention/deleted_count",
+        "project": "${var.project_id}",
+        "depends_on": [
+          "google_cloud_scheduler_job.profile_release_draft_retention",
+          "google_cloud_run_v2_job_iam_member.profile_release_draft_retention_scheduler_invoker"
+        ],
+        "filter": "resource.type=\"cloud_run_job\" AND resource.labels.job_name=\"itda-profile-release-draft-retention\" AND jsonPayload.event=\"profile_release_build_draft_purge\" AND jsonPayload.status=\"SUCCEEDED\" AND jsonPayload.remaining_expired_count=0",
+        "metric_descriptor": {
+          "metric_kind": "DELTA",
+          "value_type": "DISTRIBUTION",
+          "unit": "1"
+        },
+        "bucket_options": {
+          "exponential_buckets": {
+            "num_finite_buckets": 10,
+            "growth_factor": 2,
+            "scale": 1
+          }
+        },
+        "value_extractor": "EXTRACT(jsonPayload.deleted_count)"
+      },
+      "profile_release_draft_retention_failure": {
+        "name": "itda/profile_release_draft_retention/failure",
+        "project": "${var.project_id}",
+        "depends_on": [
+          "google_cloud_scheduler_job.profile_release_draft_retention",
+          "google_cloud_run_v2_job_iam_member.profile_release_draft_retention_scheduler_invoker"
+        ],
+        "filter": "resource.type=\"cloud_run_job\" AND resource.labels.job_name=\"itda-profile-release-draft-retention\" AND jsonPayload.event=\"profile_release_build_draft_purge\" AND jsonPayload.status=\"FAILED\"",
+        "metric_descriptor": {
+          "metric_kind": "DELTA",
+          "value_type": "INT64",
+          "unit": "1"
+        }
+      }
+    },
+    "google_monitoring_alert_policy": {
+      "profile_release_draft_retention_failure": {
+        "display_name": "IT-DA profile release draft retention failed",
+        "project": "${var.project_id}",
+        "combiner": "OR",
+        "notification_channels": "${var.alert_notification_channels}",
+        "depends_on": [
+          "google_logging_metric.profile_release_draft_retention_failure"
+        ],
+        "conditions": [
+          {
+            "display_name": "A retention execution reported failure",
+            "condition_threshold": {
+              "filter": "metric.type=\"logging.googleapis.com/user/itda/profile_release_draft_retention/failure\" AND resource.type=\"cloud_run_job\"",
+              "comparison": "COMPARISON_GT",
+              "threshold_value": 0,
+              "duration": "0s",
+              "aggregations": [
+                {
+                  "alignment_period": "300s",
+                  "per_series_aligner": "ALIGN_SUM"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "profile_release_draft_retention_missing_success": {
+        "display_name": "IT-DA profile release draft retention has no success signal",
+        "project": "${var.project_id}",
+        "combiner": "OR",
+        "notification_channels": "${var.alert_notification_channels}",
+        "depends_on": [
+          "google_logging_metric.profile_release_draft_retention_success"
+        ],
+        "conditions": [
+          {
+            "display_name": "No successful purge for fifteen minutes",
+            "condition_absent": {
+              "filter": "metric.type=\"logging.googleapis.com/user/itda/profile_release_draft_retention/success\" AND resource.type=\"cloud_run_job\"",
+              "duration": "900s",
+              "aggregations": [
+                {
+                  "alignment_period": "300s",
+                  "per_series_aligner": "ALIGN_SUM"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

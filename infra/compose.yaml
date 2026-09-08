@@ -1,0 +1,26 @@
+name: itda
+
+services:
+  postgres:
+    image: docker.io/library/postgres:17.10-bookworm@sha256:4f736ae292687621d4dbe0d499ffd024a36bd2ee7d8ca6f2ccd4c800f047b394
+    environment:
+      POSTGRES_DB: ${ITDA_POSTGRES_DB:-itda}
+      POSTGRES_USER: ${ITDA_POSTGRES_ADMIN_USER:-itda_admin}
+      POSTGRES_PASSWORD: ${ITDA_POSTGRES_ADMIN_PASSWORD:-}
+      TZ: UTC
+      PGTZ: UTC
+    command: ["postgres", "-c", "timezone=UTC"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+      start_period: 5s
+    ports:
+      - "127.0.0.1:${ITDA_POSTGRES_PORT:-54327}:5432"
+    volumes:
+      - itda_postgres_data:/var/lib/postgresql/data
+    stop_grace_period: 10s
+
+volumes:
+  itda_postgres_data:

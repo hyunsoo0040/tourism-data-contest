@@ -1,0 +1,78 @@
+{
+  "accessed_at": "2026-08-24T00:00:00Z",
+  "attribution_headers_sent": false,
+  "authority_id": "phase5-openrouter-stealth-ox-alpha-recovery-r2-20260824",
+  "captured_offline": true,
+  "data_policy": {
+    "completions_retained": true,
+    "prompts_retained": true,
+    "retention_duration_known": false,
+    "used_for_training": false
+  },
+  "endpoint": {
+    "auth_scheme": "Bearer",
+    "method": "POST",
+    "url": "https://openrouter.ai/api/v1/chat/completions"
+  },
+  "expiration_date": "2098-12-31",
+  "model": {
+    "architecture": {
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "lane_input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ]
+    },
+    "canonical_slug": "stealth/ox-alpha",
+    "context_length": 1048576,
+    "max_completion_tokens": 131072,
+    "pricing": {
+      "completion_per_million_tokens": "0",
+      "currency": "USD",
+      "prompt_per_million_tokens": "0"
+    },
+    "reasoning": {
+      "allowed_efforts": [
+        "high",
+        "low",
+        "max"
+      ],
+      "default_effort": "max",
+      "default_enabled": true,
+      "required": true,
+      "selected_effort": "high"
+    },
+    "slug": "stealth/ox-alpha",
+    "supported_parameters": [
+      "include_reasoning",
+      "max_tokens",
+      "reasoning",
+      "reasoning_effort",
+      "response_format",
+      "temperature",
+      "tool_choice",
+      "tools",
+      "top_k",
+      "top_p"
+    ]
+  },
+  "optional_attribution_headers": [
+    "HTTP-Referer",
+    "X-OpenRouter-Title"
+  ],
+  "provenance_urls": {
+    "api_reference": "https://openrouter.ai/docs/api-reference/overview",
+    "data_policies": "https://openrouter.ai/docs/policies/data-policies",
+    "models_api": "https://openrouter.ai/api/v1/models"
+  },
+  "provider_lane": "OPENROUTER_API",
+  "runtime_metadata_fetch_forbidden": true,
+  "schema_version": "itda.phase5-openrouter-api-snapshot.v2",
+  "snapshot_sha256": "2bf9555f21dd906b317af08c278edc523ec447ed296e2786a5842667b93893ad"
+}

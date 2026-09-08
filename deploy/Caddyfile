@@ -1,0 +1,9 @@
+{$APP_DOMAIN} {
+	@internal path /internal /internal/*
+	respond @internal 404
+
+	@api path /v1 /v1/*
+	reverse_proxy @api backend:8000
+
+	reverse_proxy web:3000
+}

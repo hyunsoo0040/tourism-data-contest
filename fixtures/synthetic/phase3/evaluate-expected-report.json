@@ -1,0 +1,36 @@
+{
+  "schema_version": "phase3-evaluation-report-v1",
+  "synthetic_only": true,
+  "case_id": "synthetic-thresholds-passing",
+  "status": "THRESHOLDS_PASSED",
+  "evidence_status": "EXTERNAL_EVIDENCE_PENDING",
+  "claim_scope": "SYNTHETIC_SOFTWARE_CONTRACT_ONLY",
+  "input_manifest_sha256": "274d380d0a44c5f9a9eb555160623607c436c31c53f4abd66345e04019284029",
+  "versions": {
+    "data_version": "synthetic-phase3-data-v1",
+    "model_id": "synthetic/deterministic-fake-encoder",
+    "model_revision": "1111111111111111111111111111111111111111",
+    "prompt_anchor_version": "synthetic-anchor-v1",
+    "preprocessing_version": "synthetic-source-span-v1",
+    "scoring_version": "synthetic-cosine-v1",
+    "code_git_sha": "5555555555555555555555555555555555555555",
+    "config_sha256": "6666666666666666666666666666666666666666666666666666666666666666"
+  },
+  "thresholds": {
+    "macro_mae_max": 0.75,
+    "plus_minus_one_accuracy_min": 0.8,
+    "precision_at_3_min": 0.8,
+    "recall_at_8_min": 0.9,
+    "manifest_completeness_min": 1.0
+  },
+  "metrics": {
+    "macro_mae": 0.5,
+    "plus_minus_one_accuracy": 0.9,
+    "precision_at_3": 0.85,
+    "recall_at_8": 0.95,
+    "manifest_completeness": 1.0
+  },
+  "failed_dimensions": [],
+  "generated_at": "2026-08-03T12:30:00Z",
+  "report_sha256": "c390621995295b118415d07ffc21b5392de8ff7ae6f03d737e864530d1edaf05"
+}

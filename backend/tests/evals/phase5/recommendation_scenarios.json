@@ -1,0 +1,51 @@
+{
+  "schema_version": "phase5-recommendation-scenarios.v2",
+  "kernel_version": "recommendation-kernel-v3",
+  "config_sha256": "f94bcaa2b895f9a19e94a5f54ba6af640e9a1226fce03b942ba023e0bd2e9c19",
+  "dataset_sha256": "7e2a088fe60dae23fd565db71fd6b3a7edeeece629fc644d4ac746eb9df07f8d",
+  "policy_trace": {
+    "experience_fit_bp": 8000,
+    "travel_condition_fit_bp": 2000,
+    "condition_weights": [400, 350, 350, 350, 300, 250],
+    "mismatch_axis_bp": 6500,
+    "mismatch_trait_bp": 3500,
+    "important_trait_difference_threshold": 70,
+    "important_trait_floor": 50,
+    "mismatch_guidance_thresholds": [30, 45, 60],
+    "mismatch_warning_confidence_min": 65,
+    "rerank_weights": [8500, 1500],
+    "top_k": 5
+  },
+  "ndcg_at_5": {
+    "status": "NOT_EVALUATED_MISSING_HUMAN_RELEVANCE_LABELS",
+    "denominator": 0
+  },
+  "scenarios": [
+    {"scenario_id": "critical-01-history-morning-solo", "category": "critical", "parameters": {"axis_targets": [90, 35, 25], "condition_variant": "MORNING_SOLO"}, "oracle": {"status": "SUCCESS", "top_k": 5, "ranking": [["place:dev:02", 98, 98, 100], ["place:dev:01", 94, 94, 8], ["place:dev:07", 76, 76, 18], ["place:dev:04", 70, 70, 18], ["place:dev:06", 68, 68, 18]]}},
+    {"scenario_id": "critical-02-image-sunset-partner", "category": "critical", "parameters": {"axis_targets": [25, 90, 35], "condition_variant": "SUNSET_PARTNER"}, "oracle": {"status": "SUCCESS", "top_k": 5, "ranking": [["place:dev:03", 94, 94, 100], ["place:dev:04", 94, 94, 8], ["place:dev:07", 76, 76, 18], ["place:dev:06", 70, 70, 18], ["place:dev:02", 68, 68, 18]]}},
+    {"scenario_id": "critical-03-rest-daytime-seniors", "category": "critical", "parameters": {"axis_targets": [30, 35, 90], "condition_variant": "DAYTIME_SENIORS"}, "oracle": {"status": "SUCCESS", "top_k": 5, "ranking": [["place:dev:06", 98, 98, 100], ["place:dev:05", 92, 92, 8], ["place:dev:07", 78, 78, 18], ["place:dev:02", 70, 70, 18], ["place:dev:04", 70, 70, 18]]}},
+    {"scenario_id": "critical-04-balanced-family-car", "category": "critical", "parameters": {"axis_targets": [60, 60, 60], "condition_variant": "FAMILY_CAR"}, "oracle": {"status": "SUCCESS", "top_k": 5, "ranking": [["place:dev:07", 100, 100, 100], ["place:dev:02", 78, 78, 18], ["place:dev:04", 78, 78, 18], ["place:dev:06", 78, 78, 18], ["place:dev:01", 70, 70, 8]]}},
+    {"scenario_id": "critical-05-history-evening-walk", "category": "critical", "parameters": {"axis_targets": [85, 45, 40], "condition_variant": "EVENING_WALK"}, "oracle": {"status": "SUCCESS", "top_k": 5, "ranking": [["place:dev:02", 94, 94, 100], ["place:dev:01", 86, 86, 8], ["place:dev:07", 84, 84, 18], ["place:dev:04", 74, 74, 18], ["place:dev:06", 70, 70, 18]]}},
+    {"scenario_id": "critical-06-image-group-transit", "category": "critical", "parameters": {"axis_targets": [35, 85, 45], "condition_variant": "GROUP_TRANSIT"}, "oracle": {"status": "SUCCESS", "top_k": 5, "ranking": [["place:dev:04", 96, 96, 100], ["place:dev:03", 86, 86, 8], ["place:dev:07", 82, 82, 18], ["place:dev:06", 74, 74, 18], ["place:dev:02", 70, 70, 18]]}},
+    {"scenario_id": "critical-07-rest-outdoor-low-crowd", "category": "critical", "parameters": {"axis_targets": [35, 45, 85], "condition_variant": "OUTDOOR_LOW_CROWD"}, "oracle": {"status": "SUCCESS", "top_k": 5, "ranking": [["place:dev:06", 96, 96, 100], ["place:dev:05", 86, 86, 8], ["place:dev:07", 82, 82, 18], ["place:dev:04", 74, 74, 18], ["place:dev:02", 70, 70, 18]]}},
+    {"scenario_id": "critical-08-balanced-undecided", "category": "critical", "parameters": {"axis_targets": [55, 55, 55], "condition_variant": "UNDECIDED"}, "oracle": {"status": "SUCCESS", "top_k": 5, "ranking": [["place:dev:07", 96, 96, 100], ["place:dev:02", 80, 80, 18], ["place:dev:04", 80, 80, 18], ["place:dev:06", 80, 80, 18], ["place:dev:01", 70, 70, 8]]}},
+
+    {"scenario_id": "boundary-01-mismatch-29-30", "category": "boundary", "parameters": {"mismatch_values": [29, 30]}, "oracle": {"status": "SUCCESS", "top_k": 5, "guidance_states": ["NO_GUIDANCE", "GENTLE_DIFFERENCE"]}},
+    {"scenario_id": "boundary-02-mismatch-44-45", "category": "boundary", "parameters": {"mismatch_values": [44, 45]}, "oracle": {"status": "SUCCESS", "top_k": 5, "guidance_states": ["GENTLE_DIFFERENCE", "MATERIAL_DIFFERENCE"]}},
+    {"scenario_id": "boundary-03-mismatch-59-60", "category": "boundary", "parameters": {"mismatch_values": [59, 60]}, "oracle": {"status": "SUCCESS", "top_k": 5, "guidance_states": ["MATERIAL_DIFFERENCE", "STRONG_DIFFERENCE"]}},
+    {"scenario_id": "boundary-04-confidence-64-65", "category": "boundary", "parameters": {"confidence_values": [64, 65]}, "oracle": {"status": "SUCCESS", "top_k": 5, "guidance_states": ["SUPPRESSED_LOW_CONFIDENCE", "STRONG_DIFFERENCE"]}},
+    {"scenario_id": "boundary-05-important-difference-69-70", "category": "boundary", "parameters": {"important_difference_values": [69, 70]}, "oracle": {"status": "SUCCESS", "top_k": 5, "floor_applied": [false, true], "effective_scores": [4, 50]}},
+    {"scenario_id": "boundary-06-exactly-five", "category": "boundary", "parameters": {"eligible_candidates": 5}, "oracle": {"status": "SUCCESS", "top_k": 5}},
+    {"scenario_id": "boundary-07-four-eligible", "category": "boundary", "parameters": {"eligible_candidates": 4}, "oracle": {"status": "INSUFFICIENT_ELIGIBLE_CANDIDATES", "reason_code": "INSUFFICIENT_ELIGIBLE_CANDIDATES"}},
+    {"scenario_id": "boundary-08-explicit-unknown-states", "category": "boundary", "parameters": {"states": ["OPERATING_UNVERIFIED", "IMAGE_ABSENT", "IMAGE_RIGHTS_RESTRICTED"]}, "oracle": {"status": "SUCCESS", "top_k": 5}},
+
+    {"scenario_id": "adversarial-01-input-permutation", "category": "adversarial", "parameters": {"mutation": "INPUT_ORDER"}, "oracle": {"status": "SUCCESS", "top_k": 5, "invariant": "RANK_ORDER"}},
+    {"scenario_id": "adversarial-02-popularity-mutation", "category": "adversarial", "parameters": {"mutation": "POPULARITY"}, "oracle": {"status": "SUCCESS", "top_k": 5, "invariant": "RANK_ORDER"}},
+    {"scenario_id": "adversarial-03-confidence-mutation", "category": "adversarial", "parameters": {"mutation": "CONFIDENCE_WITHIN_ELIGIBLE"}, "oracle": {"status": "SUCCESS", "top_k": 5, "invariant": "RANK_ORDER"}},
+    {"scenario_id": "adversarial-04-source-volume-mutation", "category": "adversarial", "parameters": {"mutation": "SOURCE_VOLUME"}, "oracle": {"status": "SUCCESS", "top_k": 5, "invariant": "RANK_ORDER"}},
+    {"scenario_id": "adversarial-05-image-presence-mutation", "category": "adversarial", "parameters": {"mutation": "IMAGE_PRESENCE"}, "oracle": {"status": "SUCCESS", "top_k": 5, "invariant": "RANK_ORDER"}},
+    {"scenario_id": "adversarial-06-hard-duplicate", "category": "adversarial", "parameters": {"mutation": "DUPLICATE_GROUP"}, "oracle": {"status": "SUCCESS", "top_k": 5, "invariant": "LOWEST_CANONICAL_ID_KEPT"}},
+    {"scenario_id": "adversarial-07-blind-member-excluded", "category": "adversarial", "parameters": {"mutation": "BLIND_MEMBER", "eligible_candidates_after_gate": 4}, "oracle": {"status": "INSUFFICIENT_ELIGIBLE_CANDIDATES", "reason_code": "INSUFFICIENT_ELIGIBLE_CANDIDATES"}},
+    {"scenario_id": "adversarial-08-owned-contribution-counterfactuals", "category": "adversarial", "parameters": {"mutation": "OWNED_CONTRIBUTIONS", "condition_counterfactuals": [{"condition_id": "VISIT_DATE_TIME", "weight_bp": 400}, {"condition_id": "COMPANIONS", "weight_bp": 350}, {"condition_id": "TRANSPORT", "weight_bp": 350}, {"condition_id": "WALKING", "weight_bp": 350}, {"condition_id": "INDOOR_OUTDOOR", "weight_bp": 300}, {"condition_id": "CROWD", "weight_bp": 250}], "trait_counterfactuals": [{"trait_id": "M1"}, {"trait_id": "M2"}, {"trait_id": "M3"}, {"trait_id": "M4"}, {"trait_id": "M5"}, {"trait_id": "M6"}]}, "oracle": {"status": "SUCCESS", "top_k": 5, "invariant": "ONLY_OWNED_CONTRIBUTION_CHANGES"}}
+  ]
+}

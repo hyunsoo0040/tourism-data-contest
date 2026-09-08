@@ -1,0 +1,45 @@
+{
+  "schema_version": "itda.synthetic-provider-profile-replay.v1",
+  "fixture_scope": "SYNTHETIC_REPLAY_ONLY",
+  "place_ids": [
+    "canonical-dev-01",
+    "canonical-dev-02",
+    "canonical-dev-03",
+    "canonical-dev-04",
+    "canonical-dev-05",
+    "canonical-dev-06",
+    "canonical-dev-07",
+    "canonical-dev-08",
+    "canonical-dev-09",
+    "canonical-dev-10",
+    "canonical-dev-11",
+    "canonical-dev-12",
+    "canonical-dev-13",
+    "canonical-dev-14",
+    "canonical-dev-15",
+    "canonical-dev-16",
+    "canonical-dev-17",
+    "canonical-dev-18",
+    "canonical-dev-19",
+    "canonical-dev-20",
+    "canonical-dev-21",
+    "canonical-dev-22",
+    "canonical-dev-23",
+    "canonical-dev-24"
+  ],
+  "response_template": {
+    "model": "glm-5v-turbo",
+    "finish_reason": "stop",
+    "axis_scores": {"H": 76, "E": 61, "R": 84},
+    "subattributes": {
+      "H1": 3, "H2": 3, "H3": 3, "H4": 3,
+      "I1": 2, "I2": 2, "I3": 2, "I4": 2,
+      "R1": 4, "R2": 4, "R3": 4, "R4": 4
+    },
+    "mismatch_traits": {"M1": 10, "M2": 20, "M3": 30, "M4": 40, "M5": 50, "M6": 60},
+    "evidence_ids": ["tour-description-01", "odii-transcript-01"],
+    "confidence": 78,
+    "publishable": true,
+    "usage": {"prompt_tokens": 1000, "completion_tokens": 100, "cached_tokens": 200}
+  }
+}

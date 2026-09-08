@@ -1,0 +1,67 @@
+stages:
+  select:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage select --params params.yaml --input fixtures/synthetic/phase4/challenge-pack.json --input fixtures/synthetic/phase4/dag-seed.json --output artifacts/synthetic/phase4/selection.json
+    deps:
+      - backend/src/itda/cli/phase4_artifact_dag.py
+      - fixtures/synthetic/phase4/challenge-pack.json
+      - fixtures/synthetic/phase4/dag-seed.json
+    params:
+      - phase4
+    outs:
+      - artifacts/synthetic/phase4/selection.json
+  observe:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage observe --params params.yaml --input fixtures/synthetic/phase4/challenge-pack.json --input artifacts/synthetic/phase4/selection.json --input fixtures/synthetic/phase4/provider-replay.json --input fixtures/synthetic/phase4/dag-seed.json --output artifacts/synthetic/phase4/observations.json
+    deps:
+      - backend/src/itda/cli/phase4_artifact_dag.py
+      - artifacts/synthetic/phase4/selection.json
+      - fixtures/synthetic/phase4/challenge-pack.json
+      - fixtures/synthetic/phase4/provider-replay.json
+      - fixtures/synthetic/phase4/dag-seed.json
+    params:
+      - phase4
+    outs:
+      - artifacts/synthetic/phase4/observations.json
+  evaluate:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage evaluate --params params.yaml --input artifacts/synthetic/phase4/observations.json --input artifacts/synthetic/phase4/selection.json --input fixtures/synthetic/phase4/challenge-pack.json --input fixtures/synthetic/phase4/provider-replay.json --input fixtures/synthetic/phase4/dag-seed.json --output artifacts/synthetic/phase4/benchmark.json
+    deps:
+      - backend/src/itda/cli/evaluate_phase4.py
+      - backend/src/itda/cli/phase4_artifact_dag.py
+      - artifacts/synthetic/phase4/observations.json
+      - artifacts/synthetic/phase4/selection.json
+      - fixtures/synthetic/phase4/challenge-pack.json
+      - fixtures/synthetic/phase4/provider-replay.json
+      - fixtures/synthetic/phase4/dag-seed.json
+    params:
+      - phase4
+    outs:
+      - artifacts/synthetic/phase4/benchmark.json
+  fuse:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage fuse --params params.yaml --input artifacts/synthetic/phase4/benchmark.json --input artifacts/synthetic/phase4/observations.json --input artifacts/synthetic/phase4/selection.json --input fixtures/synthetic/phase4/challenge-pack.json --input fixtures/synthetic/phase4/provider-replay.json --input fixtures/synthetic/phase4/dag-seed.json --output artifacts/synthetic/phase4/fusion.json
+    deps:
+      - backend/src/itda/cli/phase4_artifact_dag.py
+      - backend/src/itda/domain/profile_fusion.py
+      - artifacts/synthetic/phase4/benchmark.json
+      - artifacts/synthetic/phase4/observations.json
+      - artifacts/synthetic/phase4/selection.json
+      - fixtures/synthetic/phase4/challenge-pack.json
+      - fixtures/synthetic/phase4/provider-replay.json
+      - fixtures/synthetic/phase4/dag-seed.json
+    params:
+      - phase4
+    outs:
+      - artifacts/synthetic/phase4/fusion.json
+  export:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage export --params params.yaml --input artifacts/synthetic/phase4/fusion.json --input artifacts/synthetic/phase4/benchmark.json --input artifacts/synthetic/phase4/observations.json --input artifacts/synthetic/phase4/selection.json --input fixtures/synthetic/phase4/challenge-pack.json --input fixtures/synthetic/phase4/provider-replay.json --input fixtures/synthetic/phase4/dag-seed.json --output artifacts/synthetic/phase4/export.json
+    deps:
+      - backend/src/itda/cli/phase4_artifact_dag.py
+      - artifacts/synthetic/phase4/fusion.json
+      - artifacts/synthetic/phase4/benchmark.json
+      - artifacts/synthetic/phase4/observations.json
+      - artifacts/synthetic/phase4/selection.json
+      - fixtures/synthetic/phase4/challenge-pack.json
+      - fixtures/synthetic/phase4/provider-replay.json
+      - fixtures/synthetic/phase4/dag-seed.json
+    params:
+      - phase4
+    outs:
+      - artifacts/synthetic/phase4/export.json

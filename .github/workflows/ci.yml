@@ -1,0 +1,116 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CI: "true"
+  ITDA_NO_NETWORK: "1"
+  PYTHONPATH: backend/src
+
+jobs:
+  backend-fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        with:
+          cache: true
+      - run: make bootstrap
+      - run: mise exec -- uv run --project backend ruff check backend/src backend/tests
+      - run: mise exec -- uv run --project backend ruff format --check backend/src backend/tests
+      - run: mise exec -- uv run --project backend mypy --strict backend/src
+      - run: >-
+          mise exec -- uv run --project backend pytest backend/tests
+          --ignore=backend/tests/integration
+          --ignore=backend/tests/contract/phase5_openrouter_recovery_v3_cases.py
+          --ignore=backend/tests/contract/phase5_openrouter_recovery_v4_cases.py
+          --ignore=backend/tests/contract/test_demo_profile_materialization.py
+          --ignore=backend/tests/contract/test_nvidia_attempt5_retaining_authority.py
+          --ignore=backend/tests/contract/test_nvidia_minimax_profile.py
+          --ignore=backend/tests/contract/test_phase5_fresh24.py
+          --ignore=backend/tests/contract/test_phase5_fresh_cohort_authority.py
+          --ignore=backend/tests/contract/test_phase5_fresh_live.py
+          --ignore=backend/tests/contract/test_phase5_gate_receipts.py
+          --ignore=backend/tests/contract/test_phase5_nvidia_recovery.py
+          --ignore=backend/tests/contract/test_phase5_openrouter_recovery.py
+          --ignore=backend/tests/domain/test_demo_profile_eligibility.py
+          --ignore=backend/tests/security/test_phase5_provider_boundary.py
+          --ignore=backend/tests/security/test_phase5_release_authority.py
+          --ignore=backend/tests/security/test_phase5_release_security.py -q
+
+  contract-web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        with:
+          cache: true
+      - run: make bootstrap
+      - run: make contract
+      - run: mise exec -- pnpm --dir web test
+      - run: mise exec -- pnpm --dir web build
+
+  postgres-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        with:
+          cache: true
+      - run: make bootstrap
+      - run: >-
+          mise exec -- uv run --project backend pytest backend/tests/integration
+          --ignore=backend/tests/integration/test_demo_scored_release.py
+          --ignore=backend/tests/integration/test_phase5_demo_source_collection.py -q
+
+  pipeline-demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        with:
+          cache: true
+      - run: make bootstrap
+      - name: Validate approved offline PREVIEW boundary
+        run: >-
+          mise exec -- uv run --project backend python -m itda.cli.pipeline_demo
+          --check-stage-manifest fixtures/preview/v1/stage-manifest.json
+          --source-lock fixtures/preview/source-locks/preview-v1-source-lock.json
+
+  browser-e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        with:
+          cache: true
+      - run: make bootstrap
+      - run: mise exec -- pnpm --dir web exec playwright install --with-deps chromium
+      - run: mise exec -- pnpm --dir web e2e -- --grep-invert @real-demo
+
+  phase5-clean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        with:
+          cache: true
+      - run: make bootstrap
+      - run: mise exec -- pnpm --dir web exec playwright install --with-deps chromium
+      - run: env -u OPENROUTER_API_KEY -u NVIDIA_KEY -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY make phase-05-clean-suite

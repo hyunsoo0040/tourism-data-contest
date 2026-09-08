@@ -1,0 +1,269 @@
+schema: '2.0'
+stages:
+  select:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1
+      HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project
+      backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage
+      select --params params.yaml --input
+      fixtures/synthetic/phase4/challenge-pack.json --input
+      fixtures/synthetic/phase4/dag-seed.json --output
+      artifacts/synthetic/phase4/selection.json
+    deps:
+    - path: backend/src/itda/cli/phase4_artifact_dag.py
+      hash: md5
+      md5: 994cccd8d1796c60637a935b630ab667
+      size: 16269
+    - path: fixtures/synthetic/phase4/challenge-pack.json
+      hash: md5
+      md5: 108e56988592109c85681df95406871e
+      size: 40606
+    - path: fixtures/synthetic/phase4/dag-seed.json
+      hash: md5
+      md5: 66c1f06b113edf784d3bc29563da4d53
+      size: 486
+    params:
+      params.yaml:
+        phase4:
+          challenge_pack_sha256:
+            73890d9f9ed8f23a94d7eb9fb1ceaec9c7b9b81b28ea68ab60b44aef968d3623
+          config_revision: phase4-synthetic-dag-v1
+          fusion_policy_sha256:
+            301e8f953af5f606ce332fbc1c1bf1f8346e86dee97bad8caac33e4c64ed2d7a
+          output_schema_version: itda.phase4-dag-artifact.v1
+          provider_replay_sha256:
+            3d61cc58f1fbc24f067a778a8edabcd2c74bb5b9f7fc1cf6dcb62f78bf7410db
+          random_seed: 413
+    outs:
+    - path: artifacts/synthetic/phase4/selection.json
+      hash: md5
+      md5: 27a5b0cec88e461f4ff91d0b8d7b34c8
+      size: 721
+  observe:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1
+      HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project
+      backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage
+      observe --params params.yaml --input
+      fixtures/synthetic/phase4/challenge-pack.json --input
+      artifacts/synthetic/phase4/selection.json --input
+      fixtures/synthetic/phase4/provider-replay.json --input
+      fixtures/synthetic/phase4/dag-seed.json --output
+      artifacts/synthetic/phase4/observations.json
+    deps:
+    - path: artifacts/synthetic/phase4/selection.json
+      hash: md5
+      md5: 27a5b0cec88e461f4ff91d0b8d7b34c8
+      size: 721
+    - path: backend/src/itda/cli/phase4_artifact_dag.py
+      hash: md5
+      md5: 994cccd8d1796c60637a935b630ab667
+      size: 16269
+    - path: fixtures/synthetic/phase4/challenge-pack.json
+      hash: md5
+      md5: 108e56988592109c85681df95406871e
+      size: 40606
+    - path: fixtures/synthetic/phase4/dag-seed.json
+      hash: md5
+      md5: 66c1f06b113edf784d3bc29563da4d53
+      size: 486
+    - path: fixtures/synthetic/phase4/provider-replay.json
+      hash: md5
+      md5: 5abb0ffd29d18648c17d3ffdb73c00d8
+      size: 423
+    params:
+      params.yaml:
+        phase4:
+          challenge_pack_sha256:
+            73890d9f9ed8f23a94d7eb9fb1ceaec9c7b9b81b28ea68ab60b44aef968d3623
+          config_revision: phase4-synthetic-dag-v1
+          fusion_policy_sha256:
+            301e8f953af5f606ce332fbc1c1bf1f8346e86dee97bad8caac33e4c64ed2d7a
+          output_schema_version: itda.phase4-dag-artifact.v1
+          provider_replay_sha256:
+            3d61cc58f1fbc24f067a778a8edabcd2c74bb5b9f7fc1cf6dcb62f78bf7410db
+          random_seed: 413
+    outs:
+    - path: artifacts/synthetic/phase4/observations.json
+      hash: md5
+      md5: f58fd4b77d4062b3c895638009c161c5
+      size: 965
+  evaluate:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1
+      HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project
+      backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage
+      evaluate --params params.yaml --input
+      artifacts/synthetic/phase4/observations.json --input
+      artifacts/synthetic/phase4/selection.json --input
+      fixtures/synthetic/phase4/challenge-pack.json --input
+      fixtures/synthetic/phase4/provider-replay.json --input
+      fixtures/synthetic/phase4/dag-seed.json --output
+      artifacts/synthetic/phase4/benchmark.json
+    deps:
+    - path: artifacts/synthetic/phase4/observations.json
+      hash: md5
+      md5: f58fd4b77d4062b3c895638009c161c5
+      size: 965
+    - path: artifacts/synthetic/phase4/selection.json
+      hash: md5
+      md5: 27a5b0cec88e461f4ff91d0b8d7b34c8
+      size: 721
+    - path: backend/src/itda/cli/evaluate_phase4.py
+      hash: md5
+      md5: 96558e22c295cdf0dd82589ceb22baeb
+      size: 5693
+    - path: backend/src/itda/cli/phase4_artifact_dag.py
+      hash: md5
+      md5: 994cccd8d1796c60637a935b630ab667
+      size: 16269
+    - path: fixtures/synthetic/phase4/challenge-pack.json
+      hash: md5
+      md5: 108e56988592109c85681df95406871e
+      size: 40606
+    - path: fixtures/synthetic/phase4/dag-seed.json
+      hash: md5
+      md5: 66c1f06b113edf784d3bc29563da4d53
+      size: 486
+    - path: fixtures/synthetic/phase4/provider-replay.json
+      hash: md5
+      md5: 5abb0ffd29d18648c17d3ffdb73c00d8
+      size: 423
+    params:
+      params.yaml:
+        phase4:
+          challenge_pack_sha256:
+            73890d9f9ed8f23a94d7eb9fb1ceaec9c7b9b81b28ea68ab60b44aef968d3623
+          config_revision: phase4-synthetic-dag-v1
+          fusion_policy_sha256:
+            301e8f953af5f606ce332fbc1c1bf1f8346e86dee97bad8caac33e4c64ed2d7a
+          output_schema_version: itda.phase4-dag-artifact.v1
+          provider_replay_sha256:
+            3d61cc58f1fbc24f067a778a8edabcd2c74bb5b9f7fc1cf6dcb62f78bf7410db
+          random_seed: 413
+    outs:
+    - path: artifacts/synthetic/phase4/benchmark.json
+      hash: md5
+      md5: 67736418a59bc8e4b5d339706b890f31
+      size: 1108
+  fuse:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1
+      HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project
+      backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage
+      fuse --params params.yaml --input
+      artifacts/synthetic/phase4/benchmark.json --input
+      artifacts/synthetic/phase4/observations.json --input
+      artifacts/synthetic/phase4/selection.json --input
+      fixtures/synthetic/phase4/challenge-pack.json --input
+      fixtures/synthetic/phase4/provider-replay.json --input
+      fixtures/synthetic/phase4/dag-seed.json --output
+      artifacts/synthetic/phase4/fusion.json
+    deps:
+    - path: artifacts/synthetic/phase4/benchmark.json
+      hash: md5
+      md5: 67736418a59bc8e4b5d339706b890f31
+      size: 1108
+    - path: artifacts/synthetic/phase4/observations.json
+      hash: md5
+      md5: f58fd4b77d4062b3c895638009c161c5
+      size: 965
+    - path: artifacts/synthetic/phase4/selection.json
+      hash: md5
+      md5: 27a5b0cec88e461f4ff91d0b8d7b34c8
+      size: 721
+    - path: backend/src/itda/cli/phase4_artifact_dag.py
+      hash: md5
+      md5: 994cccd8d1796c60637a935b630ab667
+      size: 16269
+    - path: backend/src/itda/domain/profile_fusion.py
+      hash: md5
+      md5: edc18d41956fc72d97f2952cb34684d6
+      size: 23421
+    - path: fixtures/synthetic/phase4/challenge-pack.json
+      hash: md5
+      md5: 108e56988592109c85681df95406871e
+      size: 40606
+    - path: fixtures/synthetic/phase4/dag-seed.json
+      hash: md5
+      md5: 66c1f06b113edf784d3bc29563da4d53
+      size: 486
+    - path: fixtures/synthetic/phase4/provider-replay.json
+      hash: md5
+      md5: 5abb0ffd29d18648c17d3ffdb73c00d8
+      size: 423
+    params:
+      params.yaml:
+        phase4:
+          challenge_pack_sha256:
+            73890d9f9ed8f23a94d7eb9fb1ceaec9c7b9b81b28ea68ab60b44aef968d3623
+          config_revision: phase4-synthetic-dag-v1
+          fusion_policy_sha256:
+            301e8f953af5f606ce332fbc1c1bf1f8346e86dee97bad8caac33e4c64ed2d7a
+          output_schema_version: itda.phase4-dag-artifact.v1
+          provider_replay_sha256:
+            3d61cc58f1fbc24f067a778a8edabcd2c74bb5b9f7fc1cf6dcb62f78bf7410db
+          random_seed: 413
+    outs:
+    - path: artifacts/synthetic/phase4/fusion.json
+      hash: md5
+      md5: b5432ff01c700e2a98cca5c79795cea4
+      size: 1134
+  export:
+    cmd: rtk proxy env -u ZHIPUAI_API_KEY -u BIGMODEL_API_KEY ITDA_OFFLINE=1
+      HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 mise exec -- uv run --project
+      backend --frozen --no-sync python -m itda.cli.phase4_artifact_dag --stage
+      export --params params.yaml --input artifacts/synthetic/phase4/fusion.json
+      --input artifacts/synthetic/phase4/benchmark.json --input
+      artifacts/synthetic/phase4/observations.json --input
+      artifacts/synthetic/phase4/selection.json --input
+      fixtures/synthetic/phase4/challenge-pack.json --input
+      fixtures/synthetic/phase4/provider-replay.json --input
+      fixtures/synthetic/phase4/dag-seed.json --output
+      artifacts/synthetic/phase4/export.json
+    deps:
+    - path: artifacts/synthetic/phase4/benchmark.json
+      hash: md5
+      md5: 67736418a59bc8e4b5d339706b890f31
+      size: 1108
+    - path: artifacts/synthetic/phase4/fusion.json
+      hash: md5
+      md5: b5432ff01c700e2a98cca5c79795cea4
+      size: 1134
+    - path: artifacts/synthetic/phase4/observations.json
+      hash: md5
+      md5: f58fd4b77d4062b3c895638009c161c5
+      size: 965
+    - path: artifacts/synthetic/phase4/selection.json
+      hash: md5
+      md5: 27a5b0cec88e461f4ff91d0b8d7b34c8
+      size: 721
+    - path: backend/src/itda/cli/phase4_artifact_dag.py
+      hash: md5
+      md5: 994cccd8d1796c60637a935b630ab667
+      size: 16269
+    - path: fixtures/synthetic/phase4/challenge-pack.json
+      hash: md5
+      md5: 108e56988592109c85681df95406871e
+      size: 40606
+    - path: fixtures/synthetic/phase4/dag-seed.json
+      hash: md5
+      md5: 66c1f06b113edf784d3bc29563da4d53
+      size: 486
+    - path: fixtures/synthetic/phase4/provider-replay.json
+      hash: md5
+      md5: 5abb0ffd29d18648c17d3ffdb73c00d8
+      size: 423
+    params:
+      params.yaml:
+        phase4:
+          challenge_pack_sha256:
+            73890d9f9ed8f23a94d7eb9fb1ceaec9c7b9b81b28ea68ab60b44aef968d3623
+          config_revision: phase4-synthetic-dag-v1
+          fusion_policy_sha256:
+            301e8f953af5f606ce332fbc1c1bf1f8346e86dee97bad8caac33e4c64ed2d7a
+          output_schema_version: itda.phase4-dag-artifact.v1
+          provider_replay_sha256:
+            3d61cc58f1fbc24f067a778a8edabcd2c74bb5b9f7fc1cf6dcb62f78bf7410db
+          random_seed: 413
+    outs:
+    - path: artifacts/synthetic/phase4/export.json
+      hash: md5
+      md5: 601eba98c9fcc6ae1603bf8882d7849a
+      size: 1367

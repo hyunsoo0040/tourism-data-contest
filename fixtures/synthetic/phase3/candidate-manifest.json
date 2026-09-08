@@ -1,0 +1,102 @@
+{
+  "schema_version": "phase3-candidate-input-v1",
+  "synthetic_only": true,
+  "partition": "SYNTHETIC_ONLY",
+  "run": {
+    "run_id": "synthetic-candidate-run-alpha",
+    "started_at": "2026-08-03T12:00:00Z",
+    "completed_at": "2026-08-03T12:00:01Z"
+  },
+  "versions": {
+    "data_version": "synthetic-phase3-data-v1",
+    "model_id": "synthetic/deterministic-fake-encoder",
+    "model_revision": "1111111111111111111111111111111111111111",
+    "model_config_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "tokenizer_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+    "weight_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+    "prompt_anchor_version": "synthetic-anchor-v1",
+    "preprocessing_version": "synthetic-source-span-v1",
+    "scoring_version": "synthetic-cosine-v1",
+    "code_git_sha": "5555555555555555555555555555555555555555",
+    "config_sha256": "6666666666666666666666666666666666666666666666666666666666666666"
+  },
+  "attributes": [
+    {
+      "attribute_id": "H1",
+      "query_ko": "시대와 생활의 기록이 직접 설명되는 경험"
+    },
+    {
+      "attribute_id": "R2",
+      "query_ko": "천천히 산책하고 머물 수 있는 경험"
+    }
+  ],
+  "sources": [
+    {
+      "lane": "DESCRIPTION",
+      "source_id": "synthetic-description-candidate-alpha",
+      "source_sha256": "0ebce105e428fe6539bdc3bcbf80bc323f38c7153832d81adb38db236050ff58",
+      "raw_text": "가상의 정원은 달빛 아래 조용한 산책길을 제공한다.\n가상의 정원은 달빛 아래 조용한 산책길을 제공한다.\n작은 전시실은 생활 기록을 설명한다.",
+      "spans": [
+        {
+          "span_id": "synthetic-description-span-a",
+          "start_char": 0,
+          "end_char": 28,
+          "start_byte": 0,
+          "end_byte": 70,
+          "slice_sha256": "ec32ed28dbd1fd9c3879226d96d30a028084a0950bfc7612db250a56a1d564ad",
+          "dedup_cluster_id": "synthetic-cluster-a",
+          "dedup_edges": ["synthetic-description-span-b"],
+          "original_order": 0
+        },
+        {
+          "span_id": "synthetic-description-span-b",
+          "start_char": 29,
+          "end_char": 57,
+          "start_byte": 71,
+          "end_byte": 141,
+          "slice_sha256": "ec32ed28dbd1fd9c3879226d96d30a028084a0950bfc7612db250a56a1d564ad",
+          "dedup_cluster_id": "synthetic-cluster-a",
+          "dedup_edges": ["synthetic-description-span-a"],
+          "original_order": 1
+        },
+        {
+          "span_id": "synthetic-description-span-c",
+          "start_char": 58,
+          "end_char": 78,
+          "start_byte": 142,
+          "end_byte": 192,
+          "slice_sha256": "5387454b6a18fa60fa3e7edd2ee7655aeae5b94c8ee9954085e753a0e8923714",
+          "dedup_cluster_id": "synthetic-cluster-c",
+          "dedup_edges": [],
+          "original_order": 2
+        }
+      ]
+    },
+    {
+      "lane": "ODII",
+      "source_id": "synthetic-odii-candidate-missing",
+      "source_sha256": null,
+      "status": "MISSING",
+      "spans": []
+    }
+  ],
+  "expected": {
+    "stable_tie_order": [
+      "synthetic-description-span-a",
+      "synthetic-description-span-b"
+    ],
+    "published_evidence_limit": 3,
+    "missing_lanes": ["ODII"]
+  },
+  "forbidden_input_keys": [
+    "expert_score",
+    "peer_score",
+    "model_target",
+    "protected_partition_member"
+  ],
+  "forbidden_canaries": [
+    "synthetic-peer-score-canary",
+    "synthetic-protected-partition-canary",
+    "synthetic-sensitive-output-canary"
+  ]
+}

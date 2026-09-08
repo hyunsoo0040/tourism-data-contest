@@ -1,0 +1,43 @@
+{
+  "schema_version": "phase3-e2e-runtime-v1",
+  "synthetic_only": true,
+  "assignment": {
+    "assignment_id": "synthetic-runtime-assignment-alpha",
+    "rubric_version": "synthetic-rubric-v1",
+    "source_snapshot_version": "synthetic-runtime-source-v1"
+  },
+  "rubric_reference": {
+    "schema_version": "phase3-rubric-v1"
+  },
+  "sources": [
+    {
+      "source_id": "synthetic-runtime-description-alpha",
+      "lane": "DESCRIPTION",
+      "text_ko": "가상의 기록관은 오래된 생활 도구의 쓰임과 조용한 안뜰을 설명한다."
+    },
+    {
+      "source_id": "synthetic-runtime-odii-alpha",
+      "lane": "ODII",
+      "text_ko": "가상의 해설은 기록의 쓰임과 안뜰을 천천히 둘러보는 방법을 들려준다."
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "synthetic-runtime-desc-a",
+      "source_id": "synthetic-runtime-description-alpha",
+      "lane": "DESCRIPTION",
+      "dedup_cluster_id": "synthetic-runtime-cluster-a"
+    },
+    {
+      "evidence_id": "synthetic-runtime-odii-a",
+      "source_id": "synthetic-runtime-odii-alpha",
+      "lane": "ODII",
+      "dedup_cluster_id": "synthetic-runtime-cluster-b"
+    }
+  ],
+  "release": {
+    "candidate_release_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "active_release_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "status": "SYNTHETIC_PREREQUISITE_ONLY"
+  }
+}

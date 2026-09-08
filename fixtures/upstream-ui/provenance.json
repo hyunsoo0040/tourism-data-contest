@@ -1,0 +1,116 @@
+{
+  "manifest_version": "upstream-ui-provenance-v1",
+  "purpose": "Provenance record for authorized upstream UI sources intended for the Phase 7 Next.js UI port. Hashes freeze the exact upstream bytes so any later vendoring in 07-02 can be verified against this manifest.",
+  "upstream": {
+    "repository": "hyunsoo0040/tourism-data-contest",
+    "commit": "d3f2ac2aa7ed866a753b4916b6f9544b22ae0611",
+    "frozen_at": "2026-09-03",
+    "method": "Read-only GitHub contents API fetch of each listed blob at the frozen commit; SHA-256 computed over the exact bytes."
+  },
+  "authorization": {
+    "status": "user-confirmed-authorization",
+    "upstream_license": null,
+    "license_note": "The upstream repository carries no LICENSE file. User confirmed they hold authorization to copy, modify, and distribute the listed UI files. This is a recorded provenance fact, not a legal opinion.",
+    "authorized_by": "Recorded authorization held by the IT-DA project owner.",
+    "scope": "Only the UI files listed under files[] may be ported. No other upstream content is authorized."
+  },
+  "files": [
+    {
+      "upstream_path": "UI/메인페이지.html",
+      "sha256": "f4201cc4ec68ca95a4d3258ae5eb5633369bc867b52741d4d262b4e78f5bdb17",
+      "bytes": 9337,
+      "role": "main page markup"
+    },
+    {
+      "upstream_path": "UI/메인페이지.css",
+      "sha256": "2a36a69fecd73d9826fdfe081b94c4dff6ef173e313fea28dbab90e64c2f0e99",
+      "bytes": 16366,
+      "role": "main page styles"
+    },
+    {
+      "upstream_path": "UI/메인페이지.js",
+      "sha256": "fb473b6da8d3fcf53d8fdb5a0cbe8bfd141de90f6887f95e59c71e6253b074f7",
+      "bytes": 6879,
+      "role": "main page behavior"
+    },
+    {
+      "upstream_path": "UI/기능.html",
+      "sha256": "a98fa99f621f8229cab960e02dc5407776ed24088872a25e5655bb037538cd09",
+      "bytes": 6821,
+      "role": "feature page markup"
+    },
+    {
+      "upstream_path": "UI/기타.html",
+      "sha256": "e3e3213bdafcbeed133a610c26a0b2e47c666603cd0f80ebb509cd19e0cb9741",
+      "bytes": 5741,
+      "role": "etc page markup"
+    },
+    {
+      "upstream_path": "UI/기타.css",
+      "sha256": "d896d37d2254232336dbacf42f05e2a8f9ac2d30cb4369d9e78f1cd63735e27a",
+      "bytes": 10355,
+      "role": "etc page styles"
+    },
+    {
+      "upstream_path": "UI/기타.js",
+      "sha256": "5280cb6d35cd763b356280b24eeea2ef0a3b5ebebabd2769c10225f41380b787",
+      "bytes": 5169,
+      "role": "etc page behavior"
+    },
+    {
+      "upstream_path": "UI/취향테스트.html",
+      "sha256": "d9cce215a5b9f47dfd4443c2025f12349833a4e7b749956d4350900a28b5ddce",
+      "bytes": 33055,
+      "role": "taste questionnaire page markup and scenario copy (canonical v2 questionnaire source)"
+    },
+    {
+      "upstream_path": "UI/사진 기능.html",
+      "sha256": "15b0bf268d8dce5de48499873987ffdb9aafc5f06ba3b7771a0c5064303d0441",
+      "bytes": 19029,
+      "role": "photo feature page markup"
+    },
+    {
+      "upstream_path": "index.html",
+      "sha256": "2e127b8664627187060790836c1e9b3fafaadec4ccf3416505ef3edb9760f311",
+      "bytes": 345,
+      "role": "upstream root landing redirect"
+    },
+    {
+      "upstream_path": "UI/assets/characters/original-seeker.jpg",
+      "sha256": "5e884d8312581a6c43a2ae6b411523dd50975451492c4fc5e0efd96cae713a29",
+      "bytes": 421855,
+      "role": "character image (HISTORY_TRADITION result)"
+    },
+    {
+      "upstream_path": "UI/assets/characters/mood-weaver.jpg",
+      "sha256": "f99adcc105f3db33484ab0731576c59ba18081c3828ff259a91340c7dc3d2d15",
+      "bytes": 400459,
+      "role": "character image (EMOTION_IMAGE result)"
+    },
+    {
+      "upstream_path": "UI/assets/characters/flow-walker.jpg",
+      "sha256": "81de0cad744061621f5d70882cb92ac78ff3a1483c9bd2ada081b45625fdee80",
+      "bytes": 481754,
+      "role": "character image (REST_IMMERSION result)"
+    }
+  ],
+  "excluded": [
+    {
+      "upstream_path": "Backend/ItDaServer.java",
+      "reason": "Upstream Java backend is not authorized for import; IT-DA's own backend remains the sole production authority."
+    },
+    {
+      "upstream_path": "『2026 관광데이터 활용 공모전』 제안서_connector(김현수).pdf",
+      "reason": "Proposal document; not UI."
+    },
+    {
+      "upstream_path": "README.md",
+      "reason": "Upstream documentation; not ported."
+    },
+    {
+      "upstream_path": "tmp/",
+      "reason": "Temporary artifacts; not UI."
+    }
+  ],
+  "constraint": "Upstream JS/HTML must not execute as production recommendation, questionnaire scoring, or photo authority. Local backend re-derives all semantics (see 07-01 canonical v2 questionnaire and scoring matrix)."
+}
