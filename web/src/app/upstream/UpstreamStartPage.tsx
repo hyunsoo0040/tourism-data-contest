@@ -53,7 +53,7 @@ export function UpstreamStartPage() {
                 <p className="eyebrow">Travel Conditions</p>
                 <h1 id="start-heading">이번 경주, 어떤 시간을 보내고 싶나요?</h1>
                 <p>
-                  취향 테스트를 시작하기 전에 이번 여행의 조건을 고르면, 추천이 일정과 상황에 맞아집니다.
+                  <br/>취향 테스트를 시작하기 전에 이번 여행의 조건을 고르면, 추천이 일정과 상황에 맞아집니다.
                 </p>
               </div>
               <TripConditionForm
