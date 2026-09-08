@@ -199,13 +199,13 @@ export function UpstreamMainPage() {
               <div>
                 <div className="badge"><span></span> 관광데이터 기반 개인 맞춤 여행 큐레이션</div>
                 <h1>
-                  <span className="hero-title-line">내가 기대한 여행과</span>
+                  <span className="hero-title-line">가장 나다운 여행과</span>
                   <span className="hero-title-line">
                     <span className="gradient-text">진짜 맞는 장소</span>를 잇다
                   </span>
                 </h1>
                 <p>
-                  질문과 간단한 사진으로, 지금 떠나고 싶은 여행의 분위기를 알려주세요. 그 감각에 어울리는 관광지를 추천해 드립니다.
+                  테스트와 사진으로, 지금 떠나고 싶은 여행의 분위기를 알려주세요.<br/> 그 감각에 어울리는 관광지를 추천해 드립니다.
                 </p>
                 <div className="hero-actions">
                   <a className="btn primary" href="/start">여행 취향 찾기</a>
@@ -258,12 +258,19 @@ export function UpstreamMainPage() {
                 <div>
                   <div className="eyebrow">Experience Type</div>
                   <h2>같은 여행도,<br />끌리는 이유는 다릅니다</h2>
-                  <p>
-                    어떤 사람은 장소에 담긴 이야기에, 어떤 사람은 분위기와 이미지에, 또 어떤 사람은 조용히 머무는 시간에 끌립니다. IT-DA는 이러한 차이를 세 가지 여행 경험 유형으로 나누어 살펴봅니다.
-                  </p>
                 </div>
                 <p></p>
               </div>
+              <div className="type-visual" aria-label="어떤 사람은 장소에 담긴 이야기, 분위기와 이미지, 조용히 머무는 시간에 끌립니다">
+                <strong className="type-visual__word type-visual__word--start">어떤 사람은</strong>
+                <div className="type-visual__reasons">
+                  <span>장소에 담긴 이야기에</span>
+                  <span>분위기와 이미지에</span>
+                  <span>또는 조용히 머무는 시간에</span>
+                </div>
+                <strong className="type-visual__word type-visual__word--end">끌립니다.</strong>
+              </div>
+              <p className="type-summary">IT-DA는 이러한 차이를 세 가지 여행 경험 유형으로 나누어 살펴봅니다.</p>
               <div className="cards">
                 <article className="card"><div className="icon orange">古</div><h3>역사·전통형</h3><p>오랜 시간 보존되어 온 문화유산과 전통 공간이 지닌 역사적 가치와 고유한 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
                 <article className="card"><div className="icon blue">景</div><h3>감성·이미지형</h3><p>장소가 가진 분위기와 이미지, 미디어와 콘텐츠를 통해 형성된 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
@@ -284,8 +291,7 @@ export function UpstreamMainPage() {
                 <div className="step"><div className="num">01</div><strong>취향 입력</strong><p>테스트 또는 사진 업로드로 원하는 여행 분위기를 표현합니다.</p></div>
                 <div className="step"><div className="num">02</div><strong>데이터 수집</strong><p>관광지 설명, 위치, 사진, 오디오 가이드 정보를 불러옵니다.</p></div>
                 <div className="step"><div className="num">03</div><strong>분위기 분석</strong><p>사진은 경험 유형 판정이 아닌 감각적 분위기 신호로만 활용합니다.</p></div>
-                <div className="step"><div className="num">04</div><strong>매칭 계산</strong><p>한국관광공사 관광사진 및 공모전 수상작의 시각 분위기와 비교합니다.</p></div>
-                <div className="step"><div className="num">05</div><strong>추천 제공</strong><p>유사한 분위기의 관광지와 추천 이유를 함께 안내합니다.</p></div>
+                <div className="step"><div className="num">04</div><strong>추천 제공</strong><p>유사한 분위기의 관광지와 추천 이유를 함께 안내합니다.</p></div>
               </div>
             </div>
           </section>
@@ -293,17 +299,17 @@ export function UpstreamMainPage() {
           <section id="photo" className="reveal">
             <div className="wrap photo-feature">
               <div>
-                <div className="eyebrow">Photo Mood Input</div>
-                <h2>좋아했던 여행 사진으로<br />원하는 분위기를 입력하세요</h2>
+                <div className="eyebrow">find your type</div>
+                <h2>간단한 테스트로<br />나의 취향을 발견하세요</h2>
                 <p>
-                  사진은 사용자의 경험 유형을 단정하는 기준이 아닙니다. 색감, 밝기, 여백, 자연·도시감 같은 분위기 단서를 읽어
+                  테스트는 사용자의 경험 유형을 단정하는 기준이 아닙니다. 여행 중에 마주할 수 있는 우연들로
                   사용자가 감각적으로 끌리는 여행 장면을 더 쉽게 표현하도록 돕는 보조 입력입니다.
                 </p>
               </div>
               <a className="photo-link" href="/start">
                 <span>선택적 사진 입력</span>
                 <strong>취향 테스트 후 사진 분위기 더하기</strong>
-                <em>결과 화면에서 사진 없이 바로 추천을 보거나 선택적으로 보강</em>
+                <em>결과 화면에서 원하는 분위기 사진 추가 입력 가능</em>
               </a>
             </div>
           </section>
@@ -311,7 +317,7 @@ export function UpstreamMainPage() {
           <section id="demo" className="reveal">
             <div className="wrap demo">
               <div className="quiz">
-                <div className="eyebrow">Type Test</div>
+                <div className="eyebrow">type test</div>
                 <h3>간단 선택으로 추천 미리보기</h3>
                 <button
                   className={selectedType === "history" ? "choice active" : "choice"}
