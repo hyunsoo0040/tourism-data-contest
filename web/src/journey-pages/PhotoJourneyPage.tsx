@@ -7,13 +7,15 @@ import { PhotoPreferenceFlow } from "../features/photo/PhotoPreferenceFlow";
 import { PHOTO_FALLBACK_COPY } from "../features/photo/PhotoJobStatus";
 import {
   clearConfirmedPhotoReference,
-  writeConfirmedPhotoReference,
+  writeConfirmedMoodReference,
 } from "../features/photo/photoProjection";
 import {
   confirmPhotoJobTraitsRequest,
+  confirmPhotoJobMoodsRequest,
   createPhotoJobRequest,
   getPhotoJobRequest,
   getPhotoJobTraitsRequest,
+  getPhotoJobMoodsRequest,
   putPhotoJobImageRequest,
   requestPhotoDeletionRequest,
   submitPhotoJobRequest,
@@ -107,6 +109,7 @@ export function PhotoPage({ baseRoute = true }: { baseRoute?: boolean }) {
   return (
     <UpstreamPhotoShell>
       <PhotoPreferenceFlow
+      key={profileId}
       profileId={profileId}
       startAtConsent={routeJobId === null}
       consentHeadingLevel={2}
@@ -117,6 +120,8 @@ export function PhotoPage({ baseRoute = true }: { baseRoute?: boolean }) {
         }) => Promise<{ job_id: string; state: string }>,
         getPhotoJob: getPhotoJobRequest,
         getPhotoJobTraits: getPhotoJobTraitsRequest,
+        getPhotoJobMoods: getPhotoJobMoodsRequest,
+        confirmPhotoJobMoods: confirmPhotoJobMoodsRequest,
         requestPhotoDeletion: requestPhotoDeletionRequest as never,
         putPhotoJobImage: putPhotoJobImageRequest,
         submitPhotoJob: submitPhotoJobRequest,
@@ -129,11 +134,13 @@ export function PhotoPage({ baseRoute = true }: { baseRoute?: boolean }) {
       onJobCreated={(jobId) => {
         window.history.replaceState(null, "", `/photo/jobs/${encodeURIComponent(jobId)}`);
       }}
-      onConfirmed={(confirmed, jobId) => {
-        if (
-          confirmed.length === 0 ||
-          !writeConfirmedPhotoReference(profileId, jobId)
-        ) return;
+      onConfirmed={() => {
+        clearConfirmedPhotoReference(profileId);
+        clearPhotoDraft();
+        goNoPhoto();
+      }}
+      onMoodConfirmed={(confirmed, jobId) => {
+        if (!writeConfirmedMoodReference(profileId, jobId, confirmed.receipt_id)) return;
         clearPhotoDraft();
         goNoPhoto();
       }}

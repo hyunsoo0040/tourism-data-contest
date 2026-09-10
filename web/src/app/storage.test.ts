@@ -410,7 +410,7 @@ test("profile reference records accept both valid version combinations and rejec
       ...base,
       profile_schema_version: "preference-profile-v2",
       questionnaire_version: "questionnaire-v2",
-      scoring_version: "choice-bp-v2",
+      scoring_version: "choice-distribution-v3",
       description_template_version: "current-trip-expectation-v1",
     }),
   ).toBe("valid");
@@ -431,7 +431,7 @@ test("profile reference records accept both valid version combinations and rejec
       ...base,
       profile_schema_version: "preference-profile-v1",
       questionnaire_version: "questionnaire-v1",
-      scoring_version: "choice-bp-v2",
+      scoring_version: "choice-distribution-v3",
       description_template_version: "current-trip-expectation-v1",
     },
     // current profile pinned to the legacy scoring version
@@ -447,7 +447,7 @@ test("profile reference records accept both valid version combinations and rejec
       ...base,
       profile_schema_version: "preference-profile-v2",
       questionnaire_version: "questionnaire-v1",
-      scoring_version: "choice-bp-v2",
+      scoring_version: "choice-distribution-v3",
       description_template_version: "current-trip-expectation-v1",
     },
   ];

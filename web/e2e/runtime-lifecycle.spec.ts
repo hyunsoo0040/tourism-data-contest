@@ -32,7 +32,7 @@ test("success probe readies both Playwright-owned servers", async ({ page }) => 
   expect(response.status()).toBe(200);
   expect(response.headers()["content-type"]).toContain("application/json");
   await expect(
-    page.getByRole("heading", { name: "이번 경주, 어떤 시간을 보내고 싶나요?" }),
+    page.getByRole("heading", { name: "이번 여행, 어떤 시간을 보내고 싶나요?" }),
   ).toBeVisible();
 });
 
@@ -51,7 +51,7 @@ test("interruption probe waits with both servers ready", async ({ page }) => {
 
   await page.goto("/start");
   await expect(
-    page.getByRole("heading", { name: "이번 경주, 어떤 시간을 보내고 싶나요?" }),
+    page.getByRole("heading", { name: "이번 여행, 어떤 시간을 보내고 싶나요?" }),
   ).toBeVisible();
   console.log("ITDA_E2E_READY_FOR_INTERRUPTION");
   await new Promise(() => undefined);

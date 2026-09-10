@@ -1,17 +1,6 @@
+import { FRONTEND_QUESTIONNAIRE as QUESTIONNAIRE } from "../src/content/questionnaire";
 import { expect, type Page, type Response, test } from "@playwright/test";
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
-import { fileURLToPath } from "node:url";
 
-const QUESTION_ROUTES = Array.from({ length: 12 }, (_, index) => `/quiz?q=${index + 1}`);
-const QUESTIONNAIRE = JSON.parse(
-  readFileSync(
-    resolve(fileURLToPath(new URL(".", import.meta.url)), "../../contracts/questionnaire-v2.json"),
-    "utf8",
-  ),
-) as {
-  questions: Array<{ title_ko: string; options: Array<{ text_ko: string }> }>;
-};
 const CANONICAL_TITLES = QUESTIONNAIRE.questions.map(({ title_ko }) => title_ko);
 const CANONICAL_Q1 = CANONICAL_TITLES[0];
 
@@ -33,7 +22,11 @@ async function guardLoopbackTraffic(page: Page) {
 }
 
 async function fillTripContext(page: Page) {
-  await page.getByLabel("방문 날짜 (선택)").fill("2026-10-09");
+  const today = await page.evaluate(() => {
+    const now = new Date();
+    return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  });
+  await page.getByLabel("방문 날짜 (선택)").fill(today);
   for (const label of [
     "해질녘",
     "친구·연인",
@@ -75,10 +68,11 @@ async function assertProfileEcho(response: Response) {
 
 async function answerFreshQuiz(page: Page) {
   let profileResponse: Promise<Response> | null = null;
-  for (const [index, route] of QUESTION_ROUTES.entries()) {
-    await expect(page).toHaveURL(new RegExp(`${route.replace("?", "\\?")}$`));
+  for (const [index] of QUESTIONNAIRE.questions.entries()) {
+    await expect(page).toHaveURL(/\/quiz$/);
+    await expect(page.getByText(`${index + 1} / 12`, { exact: true })).toBeVisible();
     await expect(page.getByText(CANONICAL_TITLES[index], { exact: true })).toBeVisible();
-    if (index === QUESTION_ROUTES.length - 1) {
+    if (index === QUESTIONNAIRE.questions.length - 1) {
       profileResponse = waitForProfile(page);
     }
     await page
@@ -92,15 +86,16 @@ async function answerFreshQuiz(page: Page) {
 
 async function submitEditedAnswers(page: Page) {
   let profileResponse: Promise<Response> | null = null;
-  for (const [index, route] of QUESTION_ROUTES.entries()) {
-    await expect(page).toHaveURL(new RegExp(`${route.replace("?", "\\?")}$`));
+  for (const [index] of QUESTIONNAIRE.questions.entries()) {
+    await expect(page).toHaveURL(/\/quiz$/);
+    await expect(page.getByText(`${index + 1} / 12`, { exact: true })).toBeVisible();
     await expect(page.getByText(CANONICAL_TITLES[index], { exact: true })).toBeVisible();
     const option = QUESTIONNAIRE.questions[index]!.options[index === 0 ? 2 : 0]!;
     const radio = page.getByRole("radio", { name: option.text_ko, exact: true });
     if (index > 0) {
       await expect(radio).toBeChecked();
     }
-    if (index === QUESTION_ROUTES.length - 1) {
+    if (index === QUESTIONNAIRE.questions.length - 1) {
       profileResponse = waitForProfile(page);
     }
     await radio.click();
@@ -113,15 +108,15 @@ async function submitEditedAnswers(page: Page) {
 async function expectInitialProfile(page: Page) {
   await expect(page).toHaveURL(/\/profile$/);
   await expect(
-    page.getByRole("meter", { name: "역사·전통 33점 / 100점" }),
+    page.getByRole("meter", { name: "역사·전통 29점 / 100점" }),
   ).toBeVisible();
   await expect(
-    page.getByRole("meter", { name: "감성·이미지 40점 / 100점" }),
+    page.getByRole("meter", { name: "감성·이미지 36점 / 100점" }),
   ).toBeVisible();
   await expect(
     page.getByRole("meter", { name: "휴식·몰입 36점 / 100점" }),
   ).toBeVisible();
-  await expect(page.getByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeVisible();
   await expect(
     page.getByText(
       "이번 여행에서는 감성·이미지와 휴식·몰입 경험을 더 기대하고 있어요.",
@@ -129,13 +124,16 @@ async function expectInitialProfile(page: Page) {
     ),
   ).toBeVisible();
 
+  await expect(page.getByText("대표 유형 점수", { exact: true })).toBeVisible();
+  await expect(page.locator(".type-badge b")).toHaveText("구성적 진정성");
+  await expect(page.locator(".match-card > b")).toHaveText("36점");
   await page.getByText("프로필 계산 정보", { exact: true }).click();
   for (const version of [
     "preference-profile-v2",
     "questionnaire-v2",
-    "choice-bp-v2",
+    "choice-distribution-v3",
     "current-trip-expectation-v1",
-    "3531142763d7…7563",
+    "de3b691fee11…6d2f",
   ]) {
     await expect(page.getByText(version, { exact: true })).toBeVisible();
   }
@@ -148,35 +146,36 @@ test("fresh loopback topology completes the canonical journey and both edits", a
   await page.goto("/start");
   await expect(
     page.getByRole("heading", {
-      name: "이번 경주, 어떤 시간을 보내고 싶나요?",
+      name: "이번 여행, 어떤 시간을 보내고 싶나요?",
     }),
   ).toBeVisible();
   await fillTripContext(page);
 
-  const questionnaireResponse = waitForQuestionnaire(page);
   await page.getByRole("button", { name: "취향 테스트 시작하기" }).click();
-  const questionnaire = await questionnaireResponse;
-  expect(questionnaire.status()).toBe(200);
-  expect(questionnaire.headers()["content-type"]).toContain("application/json");
-  expect(JSON.stringify(await questionnaire.json())).toContain(CANONICAL_Q1);
   await expect(page.getByText(CANONICAL_Q1, { exact: true })).toBeVisible();
 
+  // The backend contract is checked at submission; visible questions are local.
+  const questionnaireResponse = waitForQuestionnaire(page);
   const initial = await answerFreshQuiz(page);
+  const questionnaire = await questionnaireResponse;
+  expect(questionnaire.status()).toBe(200);
+  expect((await questionnaire.json()).config_hash).toBe(QUESTIONNAIRE.config_hash);
   expect(initial.request.answers.q1).toBe(1);
   expect(initial.request.trip_conditions.crowd_avoidance).toBe("MEDIUM");
   await expectInitialProfile(page);
 
   await page.getByRole("button", { name: "답변 수정하기" }).click();
-  await expect(page).toHaveURL(/\/quiz\?q=1$/);
+  await expect(page).toHaveURL(/\/quiz$/);
+  await expect(page.getByText("1 / 12", { exact: true })).toBeVisible();
   const answerEdit = await submitEditedAnswers(page);
   expect(answerEdit.request.request_id).not.toBe(initial.request.request_id);
   expect(answerEdit.request.answers.q1).toBe(3);
   await expect(
-    page.getByRole("meter", { name: "역사·전통 42점 / 100점" }),
+    page.getByRole("meter", { name: "역사·전통 36점 / 100점" }),
   ).toBeVisible();
   await expect(
     page.getByText(
-      "이번 여행에서는 역사·전통과 감성·이미지 경험을 더 기대하고 있어요.",
+      "이번 여행에서는 감성·이미지와 역사·전통 경험을 더 기대하고 있어요.",
       { exact: true },
     ),
   ).toBeVisible();
@@ -199,6 +198,6 @@ test("fresh loopback topology completes the canonical journey and both edits", a
   expect(tripEdit.profile.trip_conditions.crowd_avoidance).toBe("HIGH");
   await expect(page).toHaveURL(/\/profile$/);
   await expect(
-    page.getByRole("meter", { name: "역사·전통 42점 / 100점" }),
+    page.getByRole("meter", { name: "역사·전통 36점 / 100점" }),
   ).toBeVisible();
 });

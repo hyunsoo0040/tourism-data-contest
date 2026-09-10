@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import type { ComponentType } from "react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeEach, expect, test, vi } from "vitest";
@@ -29,6 +29,14 @@ type CompareTrayComponent = ComponentType<{
 
 type ComparisonTableComponent = ComponentType<{
   placeNames: string[];
+  placeIds?: string[];
+  items?: Array<{
+    place_id: string;
+    contribution: {
+      experience_fit_score: number;
+      axis_components: Array<{ axis: string; fit_score: number }>;
+    };
+  }>;
   rows: Array<{
     row_id: string;
     label_ko: string;
@@ -187,6 +195,8 @@ test("comparison table uses scoped fixed rows and reasoned missing values", asyn
   );
   const rows = [
     { row_id: "fit-score", label_ko: "추천 적합도", values_ko: ["90", "88", "86"], missing_reasons: [null, null, null] },
+    { row_id: "axis-history_tradition", label_ko: "역사·전통", values_ko: ["80점", "70점", "60점"], missing_reasons: [null, null, null] },
+    { row_id: "trait-m1", label_ko: "공간 성격", values_ko: ["75점", "75점", "75점"], missing_reasons: [null, null, null] },
     {
       row_id: "operating-state",
       label_ko: "운영 정보",
@@ -198,15 +208,38 @@ test("comparison table uses scoped fixed rows and reasoned missing values", asyn
       ],
     },
   ];
-  render(<ComparisonTable placeNames={["동궁과 월지", "대릉원", "첨성대"]} rows={rows} />);
+  const items = [
+    { place_id: "place-a", contribution: { experience_fit_score: 87, axis_components: [{ axis: "HISTORY_TRADITION", fit_score: 91 }] } },
+    { place_id: "place-b", contribution: { experience_fit_score: 93, axis_components: [{ axis: "HISTORY_TRADITION", fit_score: 96 }] } },
+  ];
+  render(<ComparisonTable placeNames={["동궁과 월지", "대릉원", "첨성대"]} rows={rows}
+    placeIds={["place-b", "place-a", "place-missing"]} items={items} />);
 
   expect(screen.getByText("선택한 장소 2~3곳 비교", { selector: "caption" })).toBeTruthy();
   expect(screen.getByRole("region", { name: "장소 비교표" }).getAttribute("tabindex")).toBe("0");
   expect(screen.getByRole("columnheader", { name: "동궁과 월지" }).getAttribute("scope")).toBe("col");
   expect(screen.getByRole("columnheader", { name: "첨성대" }).getAttribute("scope")).toBe("col");
-  expect(screen.getByRole("rowheader", { name: "추천 적합도" }).getAttribute("scope")).toBe("row");
+  expect(screen.getByRole("rowheader", { name: "내 취향과의 유사도" }).getAttribute("scope")).toBe("row");
+  const overallRow = screen.getByRole("row", { name: "내 취향과의 유사도 93% 87% 비교 어려움" });
+  expect(within(overallRow).getAllByRole("cell").map((cell) => cell.textContent)).toEqual(["93%", "87%", "비교 어려움"]);
+  expect(screen.getByRole("row", { name: "역사·전통 유사도 96% 91% 비교 어려움" })).toBeTruthy();
+  expect(screen.queryByText("추천 적합도")).toBeNull();
+  expect(screen.queryByText(/\d+점/)).toBeNull();
+  expect(rows[0]!.values_ko).toEqual(["90", "88", "86"]);
   expect(screen.getAllByText("정보 없음 — 운영 정보가 확인되지 않았어요.")).toHaveLength(3);
   expect(screen.queryByText(/^-$|^N\/A$|^0$/)).toBeNull();
+});
+
+test("comparison never substitutes raw destination scores when matching result items are missing", async () => {
+  const { ComparisonTable } = await importRuntime<{ ComparisonTable: ComparisonTableComponent }>(
+    "./ComparisonTable",
+  );
+  render(<ComparisonTable placeNames={["동궁과 월지", "대릉원"]} rows={[
+    { row_id: "fit-score", label_ko: "추천 적합도", values_ko: ["99", "98"], missing_reasons: [null, null] },
+    { row_id: "axis-history_tradition", label_ko: "역사·전통", values_ko: ["90점", "80점"], missing_reasons: [null, null] },
+  ]} />);
+  expect(screen.getAllByText("비교 어려움")).toHaveLength(8);
+  expect(screen.queryByText(/^99$|^98$|점|0%/)).toBeNull();
 });
 
 test("compare route rejects an absent or invalid same-run selection with focused recovery", async () => {

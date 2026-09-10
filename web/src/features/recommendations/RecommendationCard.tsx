@@ -9,6 +9,9 @@ import { MismatchGuidance } from "./MismatchGuidance";
 import { mediaStateFromImageState, TextFirstMediaState } from "./TextFirstMediaState";
 import { CompareToggle } from "./CompareToggle";
 import { SaveToggle } from "./SaveToggle";
+import { TripContext } from "./TripContext";
+import type { TripContextPlace } from "../../api/trip-context";
+import { SimilaritySummary, similarityLabel } from "./PreferenceSimilarity";
 
 type RecommendationItem = RecommendationResultsResponse["run"]["items"][number];
 type OperatingState = RecommendationResultsResponse["operating_states"][number]["state"];
@@ -25,6 +28,15 @@ const AXIS_COPY = {
   HISTORY_TRADITION: { label: "역사·전통", className: "recommendation-axis--history" },
   EMOTION_IMAGE: { label: "감성·이미지", className: "recommendation-axis--emotion" },
   REST_IMMERSION: { label: "휴식·몰입", className: "recommendation-axis--rest" },
+} as const;
+
+const CONDITION_LABEL = {
+  VISIT_DATE_TIME: "방문 시간",
+  COMPANIONS: "동행 편의",
+  TRANSPORT: "교통 접근",
+  WALKING: "보행 환경",
+  INDOOR_OUTDOOR: "실내·실외",
+  CROWD: "혼잡도",
 } as const;
 
 function formatReferenceDate(value: string) {
@@ -44,6 +56,11 @@ export function RecommendationCard({
   onCompareToggle,
   saveSelected = false,
   onSaveToggle,
+  tripContext,
+  tripContextLoading = false,
+  tripContextEnabled = false,
+  tripContextCheckedAt,
+  tripContextMode,
 }: {
   item: RecommendationItem;
   operatingState: OperatingState;
@@ -57,8 +74,16 @@ export function RecommendationCard({
   onCompareToggle?: (placeId: string) => void;
   saveSelected?: boolean;
   onSaveToggle?: (placeId: string) => void;
+  tripContext?: TripContextPlace;
+  tripContextLoading?: boolean;
+  tripContextEnabled?: boolean;
+  tripContextCheckedAt?: string;
+  tripContextMode?: "PINNED" | "REFRESHED";
 }) {
   const mediaState = mediaStateFromImageState(item.image_state);
+  const unknownConditions = item.contribution.condition_components
+    .filter((condition) => condition.place_value === null)
+    .map((condition) => CONDITION_LABEL[condition.condition_id]);
   return (
     <article
       className="recommendation-card"
@@ -71,7 +96,7 @@ export function RecommendationCard({
           <p className="recommendation-rank">{item.rank}위</p>
           <h2>{item.rank}위 {item.place_name_ko}</h2>
         </div>
-        <p className="recommendation-fit">적합도 {item.fit_score}점 / 100점</p>
+        <SimilaritySummary value={item.contribution.experience_fit_score} />
       </header>
 
       <div
@@ -110,24 +135,24 @@ export function RecommendationCard({
 
       <TextFirstMediaState state={mediaState} />
 
-      <section className="recommendation-axes" aria-label={`${item.place_name_ko} 경험 점수`}>
-        {item.axis_scores.map((axis) => {
+      <section className="recommendation-axes" aria-label={`${item.place_name_ko} 내 취향과의 유사도`}>
+        {item.contribution.axis_components.map((axis) => {
           const copy = AXIS_COPY[axis.axis];
           return (
             <div className={`recommendation-axis ${copy.className}`} key={axis.axis}>
               <div className="recommendation-axis__label">
                 <span>{copy.label}</span>
-                <span>{axis.value}점</span>
+                <span>{similarityLabel(axis.fit_score)}</span>
               </div>
               <div
                 className="axis-meter"
                 role="meter"
-                aria-label={`${copy.label} ${axis.value}점 / 100점`}
+                aria-label={`${copy.label} 취향 유사도 ${similarityLabel(axis.fit_score)}`}
                 aria-valuemin={0}
                 aria-valuemax={100}
-                aria-valuenow={axis.value}
+                aria-valuenow={axis.fit_score}
               >
-                <span className="axis-meter__fill" style={{ width: `${axis.value}%` }} />
+                <span className="axis-meter__fill" style={{ width: `${axis.fit_score}%` }} />
               </div>
             </div>
           );
@@ -150,6 +175,14 @@ export function RecommendationCard({
 
       <MismatchGuidance mismatch={item.mismatch} />
 
+      {unknownConditions.length === 0 ? null : (
+        <section className="recommendation-copy-section" aria-label="확인되지 않은 여행 조건">
+          <p className="recommendation-copy-section__title">여행 조건 정보 없음</p>
+          <p>{unknownConditions.join(" · ")}: 확인되지 않음</p>
+          <p>확인되지 않은 조건은 추천 순서에 반영하지 않았어요.</p>
+        </section>
+      )}
+
       <section className="recommendation-copy-section recommendation-operating-summary">
         <p className="recommendation-copy-section__title">최신 운영 정보</p>
         <OperatingInformation
@@ -158,6 +191,9 @@ export function RecommendationCard({
           compact
         />
       </section>
+
+      {tripContextEnabled && <TripContext place={tripContext} loading={tripContextLoading}
+        checkedAt={tripContextCheckedAt} mode={tripContextMode} />}
 
       <footer className="recommendation-card__footer">
         <span>{formatReferenceDate(item.reference_date)}</span>

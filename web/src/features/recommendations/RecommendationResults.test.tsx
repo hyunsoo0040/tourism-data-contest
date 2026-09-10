@@ -1,6 +1,7 @@
 import { render, screen, waitFor, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { describe, expect, it, vi } from "vitest";
+import qualityFixture from "../../../../fixtures/quality-integration-v4.json";
 
 const RED_SENTINEL = "PHASE5_RED_RECOMMENDATION_RESULTS_NOT_IMPLEMENTED";
 const SHA = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef";
@@ -574,6 +575,31 @@ if (controlledRedOnly) {
 
 if (!controlledRedOnly) {
 describe("generated recommendation decoding", () => {
+  it("renders unverified v4 travel conditions as unknown without zero-score claims", async () => {
+    const payload = qualityFixture.no_photo;
+    await renderResults(vi.fn().mockImplementation(() => Promise.resolve(jsonResponse(payload))), payload.run.run_id);
+    const unknownSections = await screen.findAllByRole("region", { name: "확인되지 않은 여행 조건" });
+    expect(unknownSections).toHaveLength(5);
+    for (const section of unknownSections) {
+      expect(section.textContent).toContain("여행 조건 정보 없음");
+      expect(section.textContent).toContain("확인되지 않음");
+      expect(section.textContent).not.toContain("0점");
+    }
+  });
+
+  it("accepts independently versioned semantic photos on an integer-only legacy kernel", async () => {
+    const apiPath = "../../api/api";
+    const api = await import(/* @vite-ignore */ apiPath);
+    const payload = await photoRecommendationResults();
+    const run = payload.run as JsonRecord;
+    (run.authority as JsonRecord).photo_projection_version = "photo-projection-v2";
+    for (const score of run.photo_scores as JsonRecord[]) score.observed_traits = ["M1", "M2", "M3", "M4", "M5", "M6"];
+    await sealMvpRecommendationResults(payload);
+    await expect(api.fetchRecommendationResults(String(run.run_id), {
+      fetchImpl: vi.fn().mockResolvedValue(jsonResponse(payload)),
+    })).resolves.toMatchObject({ run: { schema_version: "recommendation-run.v3" } });
+  });
+
   it("accepts only generated exact-five DEMO_MODEL_DERIVED results", async () => {
     const apiPath = "../../api/api";
     const api = await import(/* @vite-ignore */ apiPath);
@@ -621,9 +647,9 @@ describe("generated recommendation decoding", () => {
     ).resolves.toMatchObject({ run: { schema_version: "recommendation-run.v3" } });
     await renderResults(fetchImpl, runId);
 
-    expect(await screen.findByText("사진 취향을 반영한 경주 여행지")).toBeTruthy();
+    expect(await screen.findByText("사진 취향을 반영한 여행지")).toBeTruthy();
     expect(
-      screen.getByText("직접 확인한 사진 취향을 기대 프로필에 반영해 고른 경주 여행지예요."),
+      screen.getByText("직접 확인한 사진 취향을 기대 프로필에 반영해 고른 여행지예요."),
     ).toBeTruthy();
     expect(screen.getAllByText(/사진에서 확인한 분위기가 경주 장소/)).toHaveLength(5);
   });
@@ -694,6 +720,10 @@ describe("generated recommendation decoding", () => {
     expect(explanations[0]?.textContent).toContain("사진에서 확인한 분위기가 경주 장소 1과 이어져요.");
     expect(explanations[1]?.textContent).toContain("경주 장소 2");
     expect(explanations[1]?.textContent).toContain("사진에서 확인한 분위기가 경주 장소 2과 이어져요.");
+    const similarityRow = screen.getByRole("row", { name: "내 취향과의 유사도 88% 89%" });
+    expect(within(similarityRow).getAllByRole("cell").map((cell) => cell.textContent)).toEqual(["88%", "89%"]);
+    expect(screen.queryByText("80점 / 100점")).toBeNull();
+    expect(screen.queryByRole("rowheader", { name: "공간 성격" })).toBeNull();
   });
 
   it.each([
@@ -1183,19 +1213,23 @@ describe("results and recovery", () => {
     const fetchImpl = vi.fn().mockResolvedValue(jsonResponse(results));
     await renderResults(fetchImpl);
 
-    const heading = await screen.findByRole("heading", { name: "이번 경주에 맞는 5곳" });
+    const heading = await screen.findByRole("heading", { name: "이번 여행에 맞는 5곳" });
     await waitFor(() => expect(heading).toBe(document.activeElement));
     const list = screen.getByRole("list", { name: "추천 5곳" });
     const cards = within(list).getAllByRole("listitem");
     expect(cards).toHaveLength(5);
-    expect(cards.map((card) => within(card).getByRole("heading").textContent)).toEqual([
+    expect(cards.map((card) => within(card).getByRole("heading", { level: 2 }).textContent)).toEqual([
       "1위 경주 장소 1",
       "2위 경주 장소 2",
       "3위 경주 장소 3",
       "4위 경주 장소 4",
       "5위 경주 장소 5",
     ]);
-    expect(within(cards[0]!).getByText("적합도 90점 / 100점")).toBeTruthy();
+    expect(cards[0]!.querySelector("[data-preference-similarity]")?.textContent).toBe("내 취향과 88% 유사");
+    expect(within(cards[0]!).queryByText("적합도 90점 / 100점")).toBeNull();
+    expect(within(cards[0]!).getByRole("meter", { name: "역사·전통 취향 유사도 91%" }).getAttribute("aria-valuenow")).toBe("91");
+    expect(within(cards[0]!).getByRole("meter", { name: "감성·이미지 취향 유사도 86%" }).getAttribute("aria-valuenow")).toBe("86");
+    expect(within(cards[0]!).queryByText("71점")).toBeNull();
     expect(within(cards[0]!).getAllByRole("meter")).toHaveLength(3);
     expect(within(cards[0]!).getByText("역사 근거 1이 이번 기대와 이어져요.")).toBeTruthy();
     expect(within(cards[0]!).getByText("감성 근거 1이 이번 기대와 이어져요.")).toBeTruthy();
@@ -1204,9 +1238,10 @@ describe("results and recovery", () => {
     expect(within(cards[0]!).getByText("2026.08.10 기준")).toBeTruthy();
     expect(screen.getByText("추천 5곳을 준비했어요.").getAttribute("role")).toBe("status");
     const resultItems = (results.run as JsonRecord).items as JsonRecord[];
-    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(fetchImpl).toHaveBeenCalledTimes(3);
     expect(fetchImpl.mock.calls.map((call) => String(call[0]))).toEqual([
       `/v1/recommendation-runs/${encodeURIComponent(RECOMMENDATION_RUN_ID)}`,
+      `/v1/recommendation-runs/${encodeURIComponent(RECOMMENDATION_RUN_ID)}/trip-context`,
       `/v1/recommendation-runs/${encodeURIComponent(RECOMMENDATION_RUN_ID)}/operating-information?${resultItems
         .map((item) => `place_id=${encodeURIComponent(String(item.place_id))}`)
         .join("&")}`,

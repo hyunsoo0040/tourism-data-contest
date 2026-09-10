@@ -641,7 +641,7 @@ if (!controlledRedOnly) {
     );
 
     it.each(boundaries)(
-      "renders the exact pinned number and matching state/reason on detail at confidence %s",
+      "renders the matching evidence state/reason without destination confidence numbers at %s",
       async (confidence, state, label, reason) => {
         const { results, detail } = await recommendationBoundaryPayload(confidence);
         const runId = String((results.run as JsonRecord).run_id);
@@ -656,7 +656,8 @@ if (!controlledRedOnly) {
           `[data-evidence-confidence-state="${state}"]`,
         );
         expect(confidenceSection).toBeTruthy();
-        expect(screen.getByText(`분석 신뢰도 ${confidence}점 / 100점`, { exact: true })).toBeTruthy();
+        expect(screen.queryByText(`분석 신뢰도 ${confidence}점 / 100점`, { exact: true })).toBeNull();
+        expect(screen.getByRole("heading", { name: "근거 상태" })).toBeTruthy();
         expect(screen.getByText(label, { exact: true })).toBeTruthy();
         expect(screen.getByText(reason, { exact: true })).toBeTruthy();
         expect(confidenceSection?.textContent).toContain(reason);
@@ -810,14 +811,16 @@ if (!controlledRedOnly) {
 
       const heading = await screen.findByRole("heading", { name: "경주 장소 1" });
       await waitFor(() => expect(heading).toBe(document.activeElement));
-      expect(screen.getByText(/1위 · 적합도 88점 \/ 100점/)).toBeTruthy();
+      expect(document.querySelector("[data-preference-similarity]")?.textContent).toBe("내 취향과 88% 유사");
+      expect(screen.getByRole("meter", { name: "역사·전통 취향 유사도 91%" }).getAttribute("aria-valuenow")).toBe("91");
+      expect(screen.queryByText(/\d+점 \/ 100점/)).toBeNull();
       expect(screen.getAllByRole("meter")).toHaveLength(3);
       expect(screen.getByText("역사 근거 1이 이번 기대와 이어져요.")).toBeTruthy();
       expect(screen.getByText("감성 근거 1이 이번 기대와 이어져요.")).toBeTruthy();
       expect(screen.getByText("대표 이미지 없음")).toBeTruthy();
       expect(screen.getByText("한 가지 차이를 확인해 보세요.")).toBeTruthy();
-      expect(screen.getByRole("list", { name: "여섯 가지 기대 차이 특성" }).children).toHaveLength(6);
-      expect(screen.getByText("시간·계절 맥락")).toBeTruthy();
+      expect(screen.queryByRole("list", { name: "여섯 가지 기대 차이 특성" })).toBeNull();
+      expect(screen.queryByText("시간·계절 맥락")).toBeNull();
       expect(screen.getByText("운영 정보 미확인 — 방문 전 공식 안내를 확인해 주세요.")).toBeTruthy();
       expect(screen.getByText("신라 시대 유산의 구조와 역사적 맥락을 설명하는 저장 근거예요.")).toBeTruthy();
       expect(screen.getByText("공모전 데모용 모델 분석")).toBeTruthy();
@@ -830,10 +833,11 @@ if (!controlledRedOnly) {
       ).toBe(
         `/recommendations/${encodeURIComponent(RECOMMENDATION_RUN_ID)}/places/place-2`,
       );
-      expect(fetchImpl).toHaveBeenCalledTimes(3);
+      expect(fetchImpl).toHaveBeenCalledTimes(4);
       expect(fetchImpl.mock.calls.map((call) => String(call[0]))).toEqual([
         `/v1/recommendation-runs/${encodeURIComponent(RECOMMENDATION_RUN_ID)}`,
         `/v1/recommendation-runs/${encodeURIComponent(RECOMMENDATION_RUN_ID)}/places/place-1`,
+        `/v1/recommendation-runs/${encodeURIComponent(RECOMMENDATION_RUN_ID)}/trip-context`,
         `/v1/recommendation-runs/${encodeURIComponent(RECOMMENDATION_RUN_ID)}/operating-information?place_id=place-1`,
       ]);
       expect(fetchImpl.mock.calls.every((call) => (call[1]?.method ?? "GET") === "GET")).toBe(true);

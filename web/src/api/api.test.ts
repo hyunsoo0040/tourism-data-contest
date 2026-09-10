@@ -1,3 +1,4 @@
+import previousCopyArtifact from "../../../contracts/questionnaire-v2-20260908.json";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import {
@@ -8,12 +9,13 @@ import {
   type PreferenceProfile,
   type QuestionnaireSubmission,
 } from "../api/api";
+import legacyChoiceArtifact from "../../../contracts/questionnaire-v2-legacy.json";
 import questionnaireV2Artifact from "../../../contracts/questionnaire-v2.json";
 
 const V2_COUPLING = {
   schema_version: "preference-profile-v2",
   questionnaire_version: "questionnaire-v2",
-  scoring_version: "choice-bp-v2",
+  scoring_version: "choice-distribution-v3",
   config_hash: questionnaireV2Artifact.config_hash,
   description_template_version: "current-trip-expectation-v1",
 };
@@ -180,6 +182,22 @@ describe("version-coupled preference profile validators", () => {
     expect(profile.scoring_version).toBe("integer-bp-v1");
   });
 
+  it.each([legacyChoiceArtifact, previousCopyArtifact])("reads historical scores with their original version/hash ($config_hash)", async (artifact) => {
+    const stored = v2Profile({
+      scoring_version: artifact.scoring_version,
+      config_hash: artifact.config_hash,
+    });
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse(stored)));
+    expect(await fetchPreferenceProfile(stored.profile_id)).toEqual(stored);
+  });
+
+  it("rejects historical scoring paired with a new calibration hash", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse(v2Profile({
+      scoring_version: legacyChoiceArtifact.scoring_version,
+    }))));
+    await expect(fetchPreferenceProfile("profile-v2-get")).rejects.toBeInstanceOf(ApiRequestError);
+  });
+
   it("accepts a current questionnaire-v2 profile through GET", async () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse(v2Profile())));
 
@@ -191,7 +209,7 @@ describe("version-coupled preference profile validators", () => {
   it("rejects a mixed-coupling GET payload (v1 profile wearing v2 scoring)", async () => {
     const mixed = {
       ...legacyV1Profile,
-      scoring_version: "choice-bp-v2",
+      scoring_version: "choice-distribution-v3",
       config_hash: V2_COUPLING.config_hash,
     };
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse(mixed)));

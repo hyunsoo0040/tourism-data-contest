@@ -47,6 +47,7 @@ export type LocationShape = {
 };
 
 type HistoryEntry = { path: string; state: unknown; key: string };
+type InitialEntry = string | Partial<Pick<LocationShape, "pathname" | "search" | "state">>;
 
 export function joinPaths(base: string, path: string | undefined): string {
   if (path === undefined || path === "") return base === "" ? "/" : base;
@@ -154,7 +155,7 @@ function buildEntry(path: string, state: unknown): HistoryEntry {
   };
 }
 
-function createRouterInternals(routes: RouteObject[], initialEntries: string[], initialIndex: number): RouterInternals {
+function createRouterInternals(routes: RouteObject[], initialEntries: InitialEntry[], initialIndex: number): RouterInternals {
   const entries = (initialEntries.length > 0 ? initialEntries : ["/"]).map((entry) => {
     if (typeof entry === "object" && entry !== null) {
       const record = entry as Partial<{ pathname: string; search: string; state: unknown }>;
@@ -265,14 +266,14 @@ export function MemoryRouter({
   children,
   routes = [],
 }: {
-  initialEntries?: Array<string | Partial<{ pathname: string; search: string; state: unknown }>>;
+  initialEntries?: InitialEntry[];
   initialIndex?: number;
   children?: ReactNode;
   routes?: RouteObject[];
 }) {
   const routerRef = useRef<ItdaRouter | null>(null);
   if (routerRef.current === null) {
-    const internals = createRouterInternals(routes, initialEntries as string[], initialIndex);
+    const internals = createRouterInternals(routes, initialEntries, initialIndex);
     const router = createItdaRouter(internals);
     (router as unknown as { __internals: RouterInternals }).__internals = internals;
     routerRef.current = router;
@@ -298,7 +299,7 @@ export function MemoryRouter({
 /** createMemoryRouter(routes, opts): test-compatible memory router factory. */
 export function createMemoryRouter(
   routes: RouteObject[],
-  options: { initialEntries?: string[]; initialIndex?: number } = {},
+  options: { initialEntries?: InitialEntry[]; initialIndex?: number } = {},
 ): ItdaRouter {
   const initialEntries = options.initialEntries ?? ["/"];
   const internals = createRouterInternals(routes, initialEntries, options.initialIndex ?? initialEntries.length - 1);

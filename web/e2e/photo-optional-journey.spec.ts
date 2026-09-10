@@ -1,7 +1,5 @@
+import { FRONTEND_QUESTIONNAIRE as QUESTIONNAIRE } from "../src/content/questionnaire";
 import { expect, type Page, type Response, type Route, test } from "@playwright/test";
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
-import { fileURLToPath } from "node:url";
 
 /**
  * Controlled-RED Phase 6 Chromium contract (Wave 0).
@@ -61,20 +59,12 @@ const PROVIDER_UNAVAILABLE =
 const CONFIRM_ERROR = "확정한 사진 취향을 저장하지 못했어요. 다시 시도해 주세요.";
 const POLL_ERROR_COPY =
   "사진 진행 상태를 확인하지 못했어요. 연결을 확인하거나 사진 없이 추천을 계속해 주세요.";
-const RESULTS_HEADING = "이번 경주에 맞는 5곳";
+const RESULTS_HEADING = "이번 여행에 맞는 5곳";
 const PROVENANCE_PHOTO =
-  "직접 확인한 사진 취향을 기대 프로필에 반영해 고른 경주 여행지예요.";
+  "직접 확인한 사진 취향을 기대 프로필에 반영해 고른 여행지예요.";
 const PROVENANCE_NO_PHOTO =
-  "사진 없이 만든 기대 프로필로 고른 경주 여행지예요.";
+  "사진 없이 만든 기대 프로필로 고른 여행지예요.";
 
-const QUESTIONNAIRE = JSON.parse(
-  readFileSync(
-    resolve(fileURLToPath(new URL(".", import.meta.url)), "../../contracts/questionnaire-v2.json"),
-    "utf8",
-  ),
-) as {
-  questions: Array<{ title_ko: string; options: Array<{ text_ko: string }> }>;
-};
 const CANONICAL_TITLES = QUESTIONNAIRE.questions.map(({ title_ko }) => title_ko);
 
 type PhotoJobState = "queued" | "running" | "succeeded" | "failed" | "expired" | "deleted";
@@ -268,7 +258,8 @@ async function createProfileJourney(page: Page) {
   await page.getByRole("button", { name: "취향 테스트 시작하기" }).click();
   let profileResponse: Promise<Response> | null = null;
   for (let question = 1; question <= 12; question += 1) {
-    await expect(page).toHaveURL(new RegExp(`/quiz\\?q=${question}$`));
+    await expect(page).toHaveURL(/\/quiz$/);
+    await expect(page.getByText(`${question} / 12`, { exact: true })).toBeVisible();
     await expect(page.getByText(CANONICAL_TITLES[question - 1]!, { exact: true })).toBeVisible();
     if (question === 12) {
       profileResponse = page.waitForResponse(

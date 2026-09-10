@@ -21,6 +21,7 @@ export type PhotoJobSnapshotLike = {
   trait_candidates?: unknown;
   deletion?: { residue_verified: boolean; ledger_recorded: boolean } | null;
   cleanup_pending?: boolean;
+  analysis_family?: "photo-mood-v1";
 };
 
 const FIRST_INTERVAL_MS = 1_500;

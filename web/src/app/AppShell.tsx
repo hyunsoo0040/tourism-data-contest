@@ -4,6 +4,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -18,6 +19,7 @@ import {
   writeDraft,
 } from "./storage";
 import type { DraftContents, DraftRecord } from "./schemas";
+import { resetGroundedTripInput } from "../features/journey/groundedTrip";
 
 export type DraftUiState =
   | "hydrating"
@@ -59,6 +61,8 @@ export function useJourneyDraft(): JourneyDraftContextValue {
   return context;
 }
 
+const RESET_NOTICE_DURATION_MS = 4_000;
+
 function noticeForState(state: DraftUiState): string | null {
   if (state === "corrupt" || state === "expired") return STORAGE_MESSAGES.invalid;
   if (state === "unavailable") return STORAGE_MESSAGES.unavailable;
@@ -69,10 +73,12 @@ function noticeForState(state: DraftUiState): string | null {
 export function AppShell({ children }: { children?: ReactNode }) {
   const location = useLocation();
   const [state, setState] = useState<DraftUiState>("hydrating");
+  const [resetNotice, setResetNotice] = useState<{ expiresAt: number } | null>(null);
   const [draft, setDraft] = useState<DraftRecord | null>(null);
   const [externalDraft, setExternalDraft] = useState<DraftRecord | null>(null);
   const [pageAnnouncement, setPageAnnouncement] = useState("");
   const [interactionAnnouncement, setInteractionAnnouncement] = useState("");
+  const initialDraft = useRef<ReturnType<typeof readDraft> | null>(null);
   const hydrated = state !== "hydrating";
   // Quiz query changes advance a question within the same page.
   const focusLocation = location.pathname === "/quiz"
@@ -80,7 +86,8 @@ export function AppShell({ children }: { children?: ReactNode }) {
     : `${location.pathname}${location.search}`;
 
   useEffect(() => {
-    const result = readDraft();
+    initialDraft.current ??= readDraft();
+    const result = initialDraft.current;
     setDraft(result.draft);
     setState(result.state === "empty" ? "normal" : result.state);
   }, []);
@@ -144,12 +151,33 @@ export function AppShell({ children }: { children?: ReactNode }) {
     [draft],
   );
 
+  useEffect(() => {
+    if (state !== "reset" || resetNotice === null) return;
+    const dismissExpired = () => {
+      if (Date.now() >= resetNotice.expiresAt) {
+        setState((current) => current === "reset" ? "normal" : current);
+      }
+    };
+    const onVisible = () => {
+      if (document.visibilityState === "visible") dismissExpired();
+    };
+    const timer = window.setTimeout(dismissExpired, Math.max(0, resetNotice.expiresAt - Date.now()));
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      window.clearTimeout(timer);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [resetNotice, state]);
+
   const resetDraft = useCallback(() => {
     const result = resetJourneyStorage();
+    const groundedReset = resetGroundedTripInput();
+    const nextState = result.state === "reset" && groundedReset ? "reset" : "unavailable";
     setDraft(null);
     setExternalDraft(null);
-    setState(result.state);
-    return result.state === "reset";
+    setResetNotice(nextState === "reset" ? { expiresAt: Date.now() + RESET_NOTICE_DURATION_MS } : null);
+    setState(nextState);
+    return nextState === "reset";
   }, []);
 
   const dismissNotice = useCallback(() => {

@@ -694,6 +694,40 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/v1/photo-jobs/{job_id}/moods": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Photo Moods */
+        get: operations["getPhotoJobMoods"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/photo-jobs/{job_id}/moods/confirm": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Confirm Photo Moods */
+        post: operations["confirmPhotoJobMoods"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/v1/photo-jobs/{job_id}/submit": {
         parameters: {
             query?: never;
@@ -796,6 +830,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/v1/recommendation-regions": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Recommendation Regions */
+        get: operations["getRecommendationRegions"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/v1/recommendation-runs": {
         parameters: {
             query?: never;
@@ -873,6 +924,40 @@ export interface paths {
         };
         /** Get Recommendation Place Detail */
         get: operations["getRecommendationPlaceDetail"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/recommendation-runs/{run_id}/tourism-context": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Tourism Context */
+        get: operations["getRecommendationTourismContext"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/recommendation-runs/{run_id}/trip-context": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Trip Context */
+        get: operations["getRecommendationTripContext"];
         put?: never;
         post?: never;
         delete?: never;
@@ -1168,6 +1253,42 @@ export interface components {
              */
             adjudications: components["schemas"]["AttributeAdjudicationRequest"][];
         };
+        /** AssessmentBundle */
+        AssessmentBundle: {
+            /**
+             * Assessed At
+             * Format: date-time
+             */
+            assessed_at: string;
+            /** Bundle Sha256 */
+            bundle_sha256: string;
+            /** Dimensions */
+            dimensions: {
+                [key: string]: components["schemas"]["SourceObservation"];
+            };
+            /** Facts */
+            facts: {
+                [key: string]: components["schemas"]["SourceObservation"];
+            };
+            /** Place Id */
+            place_id: string;
+            /**
+             * Policy Version
+             * @default source-assessment-v1
+             * @constant
+             */
+            policy_version: "source-assessment-v1";
+            /** Raw Profile Sha256 */
+            raw_profile_sha256: string;
+            /**
+             * Schema Version
+             * @default place-assessment.v1
+             * @constant
+             */
+            schema_version: "place-assessment.v1";
+            /** Source Release Sha256 */
+            source_release_sha256: string;
+        };
         /** AttributeAdjudicationRequest */
         AttributeAdjudicationRequest: {
             /** Adjudicated At */
@@ -1213,6 +1334,54 @@ export interface components {
             /** Display Score */
             display_score: number;
         };
+        /** CampingContext */
+        CampingContext: {
+            /** Booking Url */
+            booking_url: string | null;
+            /** Context Sha256 */
+            context_sha256: string;
+            /**
+             * Expires At
+             * Format: date-time
+             */
+            expires_at: string;
+            /** Facts */
+            facts: {
+                [key: string]: components["schemas"]["SourceObservation"];
+            };
+            match: components["schemas"]["PlaceMatch"];
+            /** Place Id */
+            place_id: string;
+            /** Reason */
+            reason: string;
+            /** Receipts */
+            receipts: components["schemas"]["SourceReceipt"][];
+            /**
+             * Retrieved At
+             * Format: date-time
+             */
+            retrieved_at: string;
+            /**
+             * Schema Version
+             * @default camping-context.v1
+             * @constant
+             */
+            schema_version: "camping-context.v1";
+            /** Source Modified Date */
+            source_modified_date: string | null;
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string[];
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "UNKNOWN";
+            /**
+             * Warning Ko
+             * @default 공식 등록 정보입니다. 예약 가능 수량이나 현재 입장·운영 여부를 실시간으로 확인한 정보가 아닙니다.
+             */
+            warning_ko: string;
+        };
         /**
          * CandidateAttributeScore
          * @description One immutable candidate score retained only for reviewer inspection.
@@ -1248,6 +1417,11 @@ export interface components {
             travel_condition_fit_score: number;
         };
         /**
+         * ClaimKind
+         * @enum {string}
+         */
+        ClaimKind: "EXPERIENCE" | "NARRATIVE" | "HERITAGE" | "FACILITY" | "OPERATING" | "WALKING_ROUTE" | "CROWD" | "VISUAL_MOOD" | "CONCENTRATION_FORECAST" | "REGIONAL_VISITORS" | "REGIONAL_DEMAND" | "RELATED_PLACE";
+        /**
          * CompanionType
          * @enum {string}
          */
@@ -1266,20 +1440,51 @@ export interface components {
         /** ConditionContribution */
         ConditionContribution: {
             /** Absolute Difference */
-            absolute_difference: number;
+            absolute_difference: number | null;
             condition_id: components["schemas"]["TravelConditionId"];
             /** Contribution Id */
             contribution_id: string;
             /** Expected Value */
-            expected_value: number;
+            expected_value: number | null;
             /** Fit Score */
-            fit_score: number;
+            fit_score: number | null;
             /** Place Value */
-            place_value: number;
+            place_value: number | null;
             /** Total Score Weight Bp */
             total_score_weight_bp: number;
             /** Weighted Numerator */
             weighted_numerator: number;
+        };
+        /** ConfirmedMoodProjection */
+        ConfirmedMoodProjection: {
+            /** Candidate Set Sha256 */
+            candidate_set_sha256: string[];
+            /** Choices */
+            choices: components["schemas"]["MoodChoice"][];
+            /** Draft Sha256 */
+            draft_sha256: string;
+            /**
+             * Family
+             * @default photo-mood-v1
+             * @constant
+             */
+            family: "photo-mood-v1";
+            /** Job Id */
+            job_id: string;
+            /** Moods */
+            moods: components["schemas"]["ProjectedMood"][];
+            /** Policy Sha256 */
+            policy_sha256: string;
+            /** Preference Profile Id */
+            preference_profile_id: string;
+            /** Receipt Id */
+            receipt_id: string;
+            /**
+             * Schema Version
+             * @default photo-mood-projection.v1
+             * @constant
+             */
+            schema_version: "photo-mood-projection.v1";
         };
         /**
          * CrowdAvoidance
@@ -1573,6 +1778,143 @@ export interface components {
              */
             schema_version: "mvp-daily-refresh-status.v1";
             status: components["schemas"]["DailyRefreshRunStatus"] | null;
+        };
+        /** DestinationImageDecision */
+        DestinationImageDecision: {
+            /** Asset Id */
+            asset_id: string;
+            /** Capture Date */
+            capture_date?: string | null;
+            /** Capture Month */
+            capture_month?: string | null;
+            /**
+             * Decision
+             * @enum {string}
+             */
+            decision: "ANALYZED" | "RIGHTS_EXCLUDED" | "SOURCE_UNAVAILABLE" | "MATCH_REJECTED" | "TEMPORARY_EVENT_EXCLUDED" | "PREPROCESSING_FAILED" | "LOW_QUALITY" | "EXACT_DUPLICATE" | "PERCEPTUAL_DUPLICATE" | "SCENE_ALTERNATE" | "CAPACITY_EXCLUDED" | "MODEL_UNAVAILABLE" | "MODEL_REJECTED";
+            /** Duplicate Of Asset Id */
+            duplicate_of_asset_id?: string | null;
+            /**
+             * License
+             * @enum {string}
+             */
+            license: "KOGL_TYPE_1" | "KOGL_TYPE_3" | "UNKNOWN";
+            /**
+             * Light Context
+             * @default UNKNOWN
+             * @enum {string}
+             */
+            light_context: "DAY" | "NIGHT" | "UNKNOWN";
+            match: components["schemas"]["PlaceMatch"];
+            /** Original Sha256 */
+            original_sha256: string;
+            /** Perceptual Hash */
+            perceptual_hash?: string | null;
+            /** Quality Score Milli */
+            quality_score_milli?: number | null;
+            /** Reason */
+            reason: string;
+            receipt: components["schemas"]["SourceReceipt"];
+            /** Sanitized Sha256 */
+            sanitized_sha256?: string | null;
+            /**
+             * Season
+             * @default UNKNOWN
+             * @enum {string}
+             */
+            season: "SPRING" | "SUMMER" | "AUTUMN" | "WINTER" | "UNKNOWN";
+        };
+        /** DestinationMoodBundle */
+        DestinationMoodBundle: {
+            /**
+             * Assessed At
+             * Format: date-time
+             */
+            assessed_at: string;
+            /**
+             * Authority Scope
+             * @default VISUAL_MOOD_ONLY
+             * @constant
+             */
+            authority_scope: "VISUAL_MOOD_ONLY";
+            /** Bundle Sha256 */
+            bundle_sha256: string;
+            /** Decisions */
+            decisions: components["schemas"]["DestinationImageDecision"][];
+            /** Images */
+            images: components["schemas"]["DestinationMoodImage"][];
+            /** Limit Ko */
+            limit_ko: string;
+            /** Mood Policy Sha256 */
+            mood_policy_sha256: string;
+            /** Place Id */
+            place_id: string;
+            /** Raw Profile Sha256 */
+            raw_profile_sha256: string;
+            /**
+             * Schema Version
+             * @default destination-mood.v1
+             * @constant
+             */
+            schema_version: "destination-mood.v1";
+            /** Selection Policy Sha256 */
+            selection_policy_sha256: string;
+            /** Source Release Sha256 */
+            source_release_sha256: string;
+            /** Strata */
+            strata: components["schemas"]["DestinationMoodStratum"][];
+        };
+        /** DestinationMoodImage */
+        DestinationMoodImage: {
+            /** Asset Id */
+            asset_id: string;
+            /** Attribution Ko */
+            attribution_ko: string;
+            candidate_set: components["schemas"]["PhotoMoodCandidateSet"];
+            /** Capture Date */
+            capture_date?: string | null;
+            /** Capture Month */
+            capture_month?: string | null;
+            evidence: components["schemas"]["SourceEvidence"];
+            /**
+             * Light Context
+             * @default UNKNOWN
+             * @enum {string}
+             */
+            light_context: "DAY" | "NIGHT" | "UNKNOWN";
+            /** Original Sha256 */
+            original_sha256: string;
+            /** Preprocessing Audit Sha256 */
+            preprocessing_audit_sha256: string;
+            /** Preprocessing Policy Sha256 */
+            preprocessing_policy_sha256: string;
+            /** Sanitized Sha256 */
+            sanitized_sha256: string;
+            /** Scene Group */
+            scene_group: string;
+            /**
+             * Season
+             * @default UNKNOWN
+             * @enum {string}
+             */
+            season: "SPRING" | "SUMMER" | "AUTUMN" | "WINTER" | "UNKNOWN";
+        };
+        /** DestinationMoodStratum */
+        DestinationMoodStratum: {
+            /** Asset Ids */
+            asset_ids: string[];
+            /**
+             * Light Context
+             * @enum {string}
+             */
+            light_context: "DAY" | "NIGHT" | "UNKNOWN";
+            /** Moods */
+            moods: components["schemas"]["ProjectedMood"][];
+            /**
+             * Season
+             * @enum {string}
+             */
+            season: "SPRING" | "SUMMER" | "AUTUMN" | "WINTER" | "UNKNOWN";
         };
         /** DiversityCandidateScore */
         DiversityCandidateScore: {
@@ -1941,6 +2283,412 @@ export interface components {
             /** Template Id */
             template_id: string;
         };
+        /** ForecastAlternative */
+        ForecastAlternative: {
+            /**
+             * Target Date
+             * Format: date
+             */
+            target_date: string;
+            /** Value */
+            value: string;
+        };
+        /** GroundedAuthority */
+        GroundedAuthority: {
+            /** Assessment Manifest Sha256 */
+            assessment_manifest_sha256: string;
+            /** Candidate Assessment Sha256 */
+            candidate_assessment_sha256: string;
+            /** Candidate Sha256 */
+            candidate_sha256: string;
+            /** Config Sha256 */
+            config_sha256: string;
+            /** Contextual Snapshot Sha256 */
+            contextual_snapshot_sha256: string[];
+            /**
+             * Kernel Version
+             * @default recommendation-kernel-v5
+             * @constant
+             */
+            kernel_version: "recommendation-kernel-v5";
+            /** Membership Sha256 */
+            membership_sha256: string;
+            /** Photo Input Sha256 */
+            photo_input_sha256: string | null;
+            /** Relation Sha256 */
+            relation_sha256: string;
+            /** Release Sha256 */
+            release_sha256: string;
+            /** Source Release Sha256 */
+            source_release_sha256: string;
+        };
+        /** GroundedCandidateBinding */
+        GroundedCandidateBinding: {
+            /** Assessment Bundle Sha256 */
+            assessment_bundle_sha256: string;
+            /** Place Id */
+            place_id: string;
+            /** Raw Profile Sha256 */
+            raw_profile_sha256: string;
+        };
+        /** GroundedComparisonResponse */
+        GroundedComparisonResponse: {
+            /** Places */
+            places: components["schemas"]["GroundedDetailResponse"][];
+            /** Recommendation Run Id */
+            recommendation_run_id: string;
+            /** Release Sha256 */
+            release_sha256: string;
+            /**
+             * Schema Version
+             * @default itda.grounded-recommendation-comparison.v1
+             * @constant
+             */
+            schema_version: "itda.grounded-recommendation-comparison.v1";
+        };
+        /** GroundedDetailResponse */
+        GroundedDetailResponse: {
+            assessment: components["schemas"]["AssessmentBundle"];
+            item: components["schemas"]["GroundedRecommendationItem"];
+            mood: components["schemas"]["DestinationMoodBundle"];
+            /** Recommendation Run Id */
+            recommendation_run_id: string;
+            /** Release Sha256 */
+            release_sha256: string;
+            /**
+             * Schema Version
+             * @default itda.grounded-recommendation-detail.v1
+             * @constant
+             */
+            schema_version: "itda.grounded-recommendation-detail.v1";
+        };
+        /** GroundedDimension */
+        GroundedDimension: {
+            /** Evidence Ids */
+            evidence_ids: string[];
+            /** Key */
+            key: string;
+            /** Reason */
+            reason: string;
+            /** Reference Date */
+            reference_date: string | null;
+            state: components["schemas"]["SupportState"];
+            /** Value */
+            value: number | null;
+        };
+        /** GroundedExclusion */
+        GroundedExclusion: {
+            /** Place Id */
+            place_id: string;
+            /**
+             * Reason
+             * @enum {string}
+             */
+            reason: "PURPOSE" | "REGION" | "INSUFFICIENT_SUPPORTED_AXES" | "EXPLICIT_FACILITY_ABSENT" | "SUPPORT_GATE";
+        };
+        /** GroundedExplanation */
+        GroundedExplanation: {
+            /**
+             * Dimension
+             * @enum {string}
+             */
+            dimension: "H" | "E" | "R";
+            /** Evidence Ids */
+            evidence_ids: string[];
+            /** Message Ko */
+            message_ko: string;
+            /**
+             * Reference Date
+             * Format: date
+             */
+            reference_date: string;
+        };
+        /** GroundedFitComponent */
+        GroundedFitComponent: {
+            /** Actual */
+            actual: number | null;
+            /** Compared */
+            compared: boolean;
+            /** Difference */
+            difference: number | null;
+            /** Evidence Ids */
+            evidence_ids: string[];
+            /** Exclusion Reason */
+            exclusion_reason: ("USER_UNSPECIFIED" | "PLACE_UNSUPPORTED") | null;
+            /** Expected */
+            expected: number | null;
+            /** Fit */
+            fit: number | null;
+            /** Key */
+            key: string;
+            /** Weight */
+            weight: number;
+        };
+        /** GroundedFitTrace */
+        GroundedFitTrace: {
+            /** Compared Keys */
+            compared_keys: string[];
+            /** Components */
+            components: components["schemas"]["GroundedFitComponent"][];
+            /** Denominator */
+            denominator: number;
+            /** Numerator */
+            numerator: number;
+            /** Score */
+            score: number | null;
+        };
+        /**
+         * GroundedInputAuthority
+         * @description Small digest in the run receipt; full source content is pinned separately.
+         */
+        GroundedInputAuthority: {
+            /**
+             * Assessment Bundle Sha256
+             * @default []
+             */
+            assessment_bundle_sha256: string[];
+            /**
+             * Schema Version
+             * @default grounded-input-authority.v1
+             * @constant
+             */
+            schema_version: "grounded-input-authority.v1";
+            /** Source Release Sha256 */
+            source_release_sha256: string;
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string[];
+            /** Trip Input Sha256 */
+            trip_input_sha256: string;
+        };
+        /** GroundedMismatchTrace */
+        GroundedMismatchTrace: {
+            /** Axis Distance */
+            axis_distance: number | null;
+            /** Compared Traits */
+            compared_traits: string[];
+            /** Effective Score */
+            effective_score: number | null;
+            /** Important Floor Applied */
+            important_floor_applied: boolean;
+            /** Message Ko */
+            message_ko: string | null;
+            /** Raw Score */
+            raw_score: number | null;
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "INSUFFICIENT_EVIDENCE" | "SUPPRESSED_LOW_CONFIDENCE" | "NO_GUIDANCE" | "GENTLE_DIFFERENCE" | "MATERIAL_DIFFERENCE" | "STRONG_DIFFERENCE";
+            /** Trait Distance */
+            trait_distance: number | null;
+        };
+        /** GroundedNoveltyPair */
+        GroundedNoveltyPair: {
+            /** Place Id */
+            place_id: string;
+            /** Score */
+            score: number;
+            /** Shared Axes */
+            shared_axes: string[];
+            /** Shared Traits */
+            shared_traits: string[];
+        };
+        /** GroundedPreference */
+        GroundedPreference: {
+            /** Axis Targets */
+            axis_targets: {
+                [key: string]: number;
+            };
+            /** Condition Targets */
+            condition_targets: {
+                [key: string]: number | null;
+            };
+            /** Important Traits */
+            important_traits: string[];
+            /** Input Sha256 */
+            input_sha256: string;
+            /** Mood Targets */
+            mood_targets: {
+                [key: string]: number | null;
+            };
+            /** Photo Input Sha256 */
+            photo_input_sha256?: string | null;
+            /** Profile Id */
+            profile_id: string;
+            /**
+             * Projection Version
+             * @default grounded-preference-v1
+             * @constant
+             */
+            projection_version: "grounded-preference-v1";
+            /**
+             * Purpose
+             * @enum {string}
+             */
+            purpose: "SIGHTSEEING" | "FOOD" | "LODGING" | "MIXED";
+            /** Trait Targets */
+            trait_targets: {
+                [key: string]: number | null;
+            };
+            trip_input: components["schemas"]["GroundedTripInput"];
+        };
+        /** GroundedRecommendationItem */
+        GroundedRecommendationItem: {
+            /** Address Ko */
+            address_ko?: string | null;
+            /** Assessment Bundle Sha256 */
+            assessment_bundle_sha256: string;
+            /** Axis Scores */
+            axis_scores: components["schemas"]["GroundedDimension"][];
+            contribution: components["schemas"]["GroundedScoreTrace"];
+            /** Evidence */
+            evidence: components["schemas"]["SourceEvidence"][];
+            /** Explanations */
+            explanations: components["schemas"]["GroundedExplanation"][];
+            /** Fit Score */
+            fit_score: number;
+            /**
+             * Image State
+             * @default ABSENT
+             * @constant
+             */
+            image_state: "ABSENT";
+            /**
+             * Information State
+             * @enum {string}
+             */
+            information_state: "SUPPORTED" | "LIMITED";
+            mismatch: components["schemas"]["GroundedMismatchTrace"];
+            /** Mismatch Traits */
+            mismatch_traits: components["schemas"]["GroundedDimension"][];
+            /** Overall Confidence */
+            overall_confidence: number | null;
+            /** Place Id */
+            place_id: string;
+            /** Place Name Ko */
+            place_name_ko: string;
+            /** Rank */
+            rank: number;
+            /** Raw Profile Sha256 */
+            raw_profile_sha256: string;
+            /** Reference Date */
+            reference_date: string | null;
+            /** Region Code */
+            region_code?: string | null;
+            /** Region Name */
+            region_name?: string | null;
+            /** Supported Axes */
+            supported_axes: number;
+        };
+        /** GroundedRecommendationRun */
+        GroundedRecommendationRun: {
+            authority: components["schemas"]["GroundedAuthority"];
+            /** Candidate Bindings */
+            candidate_bindings: components["schemas"]["GroundedCandidateBinding"][];
+            /** Canonical Sha256 */
+            canonical_sha256: string;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /** Eligible Place Ids */
+            eligible_place_ids: string[];
+            /** Exclusions */
+            exclusions: components["schemas"]["GroundedExclusion"][];
+            /** Input Digest */
+            input_digest: string;
+            /** Items */
+            items: components["schemas"]["GroundedRecommendationItem"][];
+            preference: components["schemas"]["GroundedPreference"];
+            /** Run Id */
+            run_id: string;
+            /**
+             * Schema Version
+             * @default itda.grounded-recommendation-run.v1
+             * @constant
+             */
+            schema_version: "itda.grounded-recommendation-run.v1";
+        };
+        /** GroundedReleaseDisclosure */
+        GroundedReleaseDisclosure: {
+            /** Assessment Manifest Sha256 */
+            assessment_manifest_sha256: string;
+            /** Candidate Sha256 */
+            candidate_sha256: string;
+            /** Config Sha256 */
+            config_sha256: string;
+            /**
+             * Image Policy
+             * @default VISUAL_MOOD_ONLY
+             * @constant
+             */
+            image_policy: "VISUAL_MOOD_ONLY";
+            /**
+             * Model
+             * @default glm-5.3-flash
+             * @constant
+             */
+            model: "glm-5.3-flash";
+            /** Raw Release Sha256 */
+            raw_release_sha256: string;
+            /**
+             * Scoring Policy
+             * @default SUPPORTED_SUBORDINATE_AGGREGATION
+             * @constant
+             */
+            scoring_policy: "SUPPORTED_SUBORDINATE_AGGREGATION";
+            /** Source Release Sha256 */
+            source_release_sha256: string;
+        };
+        /** GroundedResultsResponse */
+        GroundedResultsResponse: {
+            /** Preference Profile Id */
+            preference_profile_id: string;
+            release_disclosure: components["schemas"]["GroundedReleaseDisclosure"];
+            run: components["schemas"]["GroundedRecommendationRun"];
+            /**
+             * Schema Version
+             * @default itda.grounded-recommendation-results.v1
+             * @constant
+             */
+            schema_version: "itda.grounded-recommendation-results.v1";
+        };
+        /** GroundedScoreTrace */
+        GroundedScoreTrace: {
+            /** Base Relevance */
+            base_relevance: number;
+            conditions: components["schemas"]["GroundedFitTrace"];
+            /** Effective Relevance */
+            effective_relevance: number;
+            experience: components["schemas"]["GroundedFitTrace"];
+            mood: components["schemas"]["GroundedFitTrace"];
+            /** Mood Weight */
+            mood_weight: number;
+            /** Novelty Pairs */
+            novelty_pairs: components["schemas"]["GroundedNoveltyPair"][];
+            /** Novelty Score */
+            novelty_score: number;
+            /** Rerank Numerator */
+            rerank_numerator: number;
+            /** Rerank Score */
+            rerank_score: number;
+            traits: components["schemas"]["GroundedFitTrace"];
+        };
+        /** GroundedTripInput */
+        GroundedTripInput: {
+            /** Region Code */
+            region_code?: string | null;
+            /**
+             * Required Facilities
+             * @default []
+             */
+            required_facilities: components["schemas"]["RequiredFacility"][];
+            /** Visit Date */
+            visit_date?: string | null;
+            /** Visit Time */
+            visit_time?: string | null;
+        };
         /** HTTPValidationError */
         HTTPValidationError: {
             /** Detail */
@@ -2094,6 +2842,29 @@ export interface components {
          * @enum {string}
          */
         MismatchTraitId: "M1" | "M2" | "M3" | "M4" | "M5" | "M6";
+        /** MoodChoice */
+        MoodChoice: {
+            /** Candidate Id */
+            candidate_id: string;
+            /** Included */
+            included: boolean;
+        };
+        /** MoodObservation */
+        MoodObservation: {
+            /**
+             * Certainty
+             * @enum {string}
+             */
+            certainty: "HIGH" | "LOW";
+            dimension: components["schemas"]["VisualMoodDimension"];
+            /** Level */
+            level: number | null;
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "OBSERVED" | "UNKNOWN";
+        };
         /** MvpEvidenceSnippet */
         MvpEvidenceSnippet: {
             /** Attribution Ko */
@@ -2458,18 +3229,8 @@ export interface components {
             /** Consent Version */
             consent_version: string;
         };
-        /**
-         * PhotoJobCreatedResponse
-         * @description One owned queued job bound to the requesting principal.
-         */
         PhotoJobCreatedResponse: {
-            /** Consent Version */
-            consent_version: string;
-            /** Job Id */
-            job_id: string;
-            /** Preference Profile Id */
-            preference_profile_id: string;
-            state: components["schemas"]["PhotoJobPublicState"];
+            [key: string]: unknown;
         };
         /**
          * PhotoJobDeletedResponse
@@ -2502,19 +3263,8 @@ export interface components {
          * @enum {string}
          */
         PhotoJobPublicState: "queued" | "running" | "succeeded" | "failed" | "expired" | "deleted";
-        /**
-         * PhotoJobStateResponse
-         * @description Owned six-state job projection with separately derived cleanup truth.
-         */
         PhotoJobStateResponse: {
-            /** Cleanup Pending */
-            cleanup_pending: boolean;
-            /** Job Id */
-            job_id: string;
-            /** Preference Profile Id */
-            preference_profile_id: string;
-            state: components["schemas"]["PhotoJobPublicState"];
-            terminal_cause: components["schemas"]["PhotoTerminalCause"] | null;
+            [key: string]: unknown;
         };
         /**
          * PhotoJobTraitsResponse
@@ -2530,6 +3280,91 @@ export interface components {
             /** Preference Profile Id */
             preference_profile_id: string;
             state: components["schemas"]["PhotoJobPublicState"];
+        };
+        /** PhotoMoodCandidate */
+        PhotoMoodCandidate: {
+            /** Candidate Id */
+            candidate_id: string;
+            observation: components["schemas"]["MoodObservation"];
+        };
+        /** PhotoMoodCandidateSet */
+        PhotoMoodCandidateSet: {
+            /**
+             * Analysis Kind
+             * @enum {string}
+             */
+            analysis_kind: "MODEL" | "SYNTHETIC";
+            /**
+             * Authority Scope
+             * @default VISUAL_MOOD_ONLY
+             * @constant
+             */
+            authority_scope: "VISUAL_MOOD_ONLY";
+            /** Candidate Set Sha256 */
+            candidate_set_sha256: string;
+            /** Candidates */
+            candidates: components["schemas"]["PhotoMoodCandidate"][];
+            /**
+             * Family
+             * @default photo-mood-v1
+             * @constant
+             */
+            family: "photo-mood-v1";
+            /** Image Index */
+            image_index: number;
+            /** Job Id */
+            job_id: string;
+            /** Model */
+            model: "glm-5.3-flash" | null;
+            /**
+             * Mood Version
+             * @default visual-mood-v1
+             * @constant
+             */
+            mood_version: "visual-mood-v1";
+            /** Payload Sha256 */
+            payload_sha256: string;
+            /** Policy Sha256 */
+            policy_sha256: string;
+            /** Provider Id */
+            provider_id: string;
+            /**
+             * Schema Version
+             * @default photo-mood-candidates.v1
+             * @constant
+             */
+            schema_version: "photo-mood-candidates.v1";
+        };
+        /** PhotoMoodConfirmRequest */
+        PhotoMoodConfirmRequest: {
+            /** Choices */
+            choices: components["schemas"]["MoodChoice"][];
+            /** Draft Sha256 */
+            draft_sha256: string;
+        };
+        /** PhotoMoodReview */
+        PhotoMoodReview: {
+            /** Batches */
+            batches: components["schemas"]["PhotoMoodCandidateSet"][];
+            confirmation?: components["schemas"]["ConfirmedMoodProjection"] | null;
+            /** Draft Sha256 */
+            draft_sha256: string;
+            /**
+             * Family
+             * @default photo-mood-v1
+             * @constant
+             */
+            family: "photo-mood-v1";
+            /** Job Id */
+            job_id: string;
+            /** Preference Profile Id */
+            preference_profile_id: string;
+            /**
+             * Schema Version
+             * @default photo-mood-review.v1
+             * @constant
+             */
+            schema_version: "photo-mood-review.v1";
         };
         /** PhotoMvpRecommendationRun */
         PhotoMvpRecommendationRun: {
@@ -2595,9 +3430,9 @@ export interface components {
             photo_projection_policy_sha256: string;
             /**
              * Photo Projection Version
-             * @constant
+             * @enum {string}
              */
-            photo_projection_version: "photo-projection-v1";
+            photo_projection_version: "photo-projection-v1" | "photo-projection-v2";
             /** Relation Sha256 */
             relation_sha256: string;
             /** Release Sha256 */
@@ -2611,6 +3446,8 @@ export interface components {
             effective_relevance: number;
             /** Explanation Ko */
             explanation_ko: string;
+            /** Observed Traits */
+            observed_traits?: components["schemas"]["MismatchTraitId"][] | null;
             /** Photo Trait Fit */
             photo_trait_fit: number;
             /** Trait Components */
@@ -2634,12 +3471,21 @@ export interface components {
          * @description One immutable model candidate proposed for review.
          */
         PhotoTraitCandidateView: {
+            /**
+             * Analysis Kind
+             * @default legacy
+             */
+            analysis_kind: string;
             /** Candidate Id */
             candidate_id: string;
             /** Edited Text Ko */
             edited_text_ko: string | null;
             /** Excluded */
             excluded: boolean;
+            /** Semantic Id */
+            semantic_id?: string | null;
+            /** Semantic Version */
+            semantic_version?: string | null;
             /** Text Ko */
             text_ko: string;
             /** Trait Id */
@@ -2662,6 +3508,103 @@ export interface components {
             evidence_ids: string[];
             /** Value */
             value: number;
+        };
+        /** PlaceConcentrationForecast */
+        PlaceConcentrationForecast: {
+            /**
+             * Alternatives
+             * @default []
+             */
+            alternatives: components["schemas"]["ForecastAlternative"][];
+            /** Expires At */
+            expires_at: string | null;
+            /**
+             * Issue Date Status
+             * @default NOT_PROVIDED_BY_API
+             * @constant
+             */
+            issue_date_status: "NOT_PROVIDED_BY_API";
+            /** Match Method */
+            match_method: ("EXACT_NAME_AND_REGION" | "CURATED_NAME_AND_REGION") | null;
+            /** Place Id */
+            place_id: string;
+            /** Provider Issue Date */
+            provider_issue_date?: null;
+            /** Provider Name */
+            provider_name: string | null;
+            /**
+             * Reason
+             * @enum {string}
+             */
+            reason: "NONE" | "NOT_REQUESTED" | "EMPTY" | "SOURCE_UNAVAILABLE" | "AUTHORIZATION_UNAVAILABLE" | "PARTIAL_SERIES" | "STALE" | "OUT_OF_WINDOW" | "PLACE_NOT_MATCHED" | "AMBIGUOUS_MATCH" | "INVALID_VALUE" | "UNIT_UNVERIFIED" | "FUTURE_OBSERVATION" | "UNSUPPORTED_REGION";
+            /**
+             * Receipts
+             * @default []
+             */
+            receipts: components["schemas"]["SourceReceipt"][];
+            /**
+             * Region Code
+             * @default 47130
+             */
+            region_code: string;
+            /** Retrieved At */
+            retrieved_at: string | null;
+            /**
+             * Scope
+             * @default PLACE_RELATIVE_FORECAST
+             * @constant
+             */
+            scope: "PLACE_RELATIVE_FORECAST";
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string | null;
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "UNKNOWN";
+            /**
+             * Target Date
+             * Format: date
+             */
+            target_date: string;
+            /**
+             * Unit
+             * @default WITHIN_PLACE_RELATIVE_INDEX_0_100
+             * @constant
+             */
+            unit: "WITHIN_PLACE_RELATIVE_INDEX_0_100";
+            /** Value */
+            value: string | null;
+            /**
+             * Warning Ko
+             * @default 장소 자체의 붐비는 시기를 기준으로 한 방문 집중 예측입니다. 실시간 인원이나 장소 간 혼잡 비교 수치가 아닙니다.
+             */
+            warning_ko: string;
+            /** Window End */
+            window_end: string | null;
+            /** Window Start */
+            window_start: string | null;
+        };
+        /** PlaceMatch */
+        PlaceMatch: {
+            /** Distance Meters */
+            distance_meters?: number | null;
+            /** Evidence */
+            evidence: string[];
+            /** Method */
+            method: ("EXACT_ID_AND_LOCATION" | "EXACT_NAME_AND_LOCATION" | "EXACT_NAME_AND_OFFICIAL_LOCATION" | "CURATED_CROSSWALK") | null;
+            /** Place Id */
+            place_id: string;
+            /** Provider Entity Id */
+            provider_entity_id: string | null;
+            /** Region Code */
+            region_code: string;
+            service: components["schemas"]["SourceService"];
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "MATCHED" | "NOT_MATCHED" | "AMBIGUOUS";
         };
         /** PlaceOperatingInformation */
         PlaceOperatingInformation: {
@@ -3118,6 +4061,16 @@ export interface components {
         ProfileReleaseUnknownOutcomeResponse: {
             detail: components["schemas"]["ProfileReleaseUnknownOutcomeDetail"];
         };
+        /** ProjectedMood */
+        ProjectedMood: {
+            /** Candidate Ids */
+            candidate_ids: string[];
+            dimension: components["schemas"]["VisualMoodDimension"];
+            /** Distinct Images */
+            distinct_images: number;
+            /** Value */
+            value: number | null;
+        };
         /**
          * QuestionnaireAnswersV1
          * @description Legacy nine-question Likert answers (values 1..5); retained for replay.
@@ -3452,6 +4405,7 @@ export interface components {
             input_sha256: string;
             /** Profile Id */
             profile_id: string;
+            quality_context?: components["schemas"]["RecommendationQualityContext"] | null;
             /** Trait Targets */
             trait_targets: [
                 components["schemas"]["PreferenceTraitTarget"],
@@ -3468,6 +4422,44 @@ export interface components {
          * @enum {string}
          */
         RecommendationPublicReason: "NO_ACTIVE_SCORED_RELEASE" | "INSUFFICIENT_ELIGIBLE_CANDIDATES" | "RECOMMENDATION_REQUEST_CONFLICT" | "INVALID_RECOMMENDATION_OUTPUT" | "PREFERENCE_PROFILE_UNAVAILABLE" | "RECOMMENDATION_RUN_NOT_FOUND" | "RECOMMENDATION_PIN_INVALID" | "RECOMMENDATION_PLACE_UNAVAILABLE" | "INVALID_RECOMMENDATION_REQUEST";
+        /**
+         * RecommendationPurpose
+         * @enum {string}
+         */
+        RecommendationPurpose: "SIGHTSEEING" | "FOOD" | "LODGING" | "MIXED";
+        /** RecommendationQualityContext */
+        RecommendationQualityContext: {
+            /**
+             * Companion
+             * @enum {string}
+             */
+            companion: "SOLO" | "FRIEND_OR_PARTNER" | "FAMILY_WITH_CHILDREN" | "WITH_SENIORS" | "GROUP";
+            /** Eligible Place Ids */
+            eligible_place_ids: string[];
+            grounding?: components["schemas"]["GroundedInputAuthority"] | null;
+            purpose: components["schemas"]["RecommendationPurpose"];
+            /**
+             * Transport
+             * @enum {string}
+             */
+            transport: "WALK_OR_TRANSIT" | "CAR_OR_TAXI" | "MIXED";
+        };
+        /** RecommendationRegion */
+        RecommendationRegion: {
+            /** Place Count */
+            place_count: number;
+            /** Region Code */
+            region_code: string;
+            /** Region Name */
+            region_name: string;
+        };
+        /** RecommendationRegionsResponse */
+        RecommendationRegionsResponse: {
+            /** Candidate Sha256 */
+            candidate_sha256: string | null;
+            /** Regions */
+            regions: components["schemas"]["RecommendationRegion"][];
+        };
         /**
          * RecommendationReleaseDisclosure
          * @description Allowlisted release identity safe for the public result banner.
@@ -3510,10 +4502,12 @@ export interface components {
          * @description Create request with optional server-owned confirmed-photo authority.
          */
         RecommendationRequest: {
+            grounded_input?: components["schemas"]["GroundedTripInput"] | null;
             /** Photo Job Id */
             photo_job_id?: string | null;
             /** Preference Profile Id */
             preference_profile_id: string;
+            purpose?: components["schemas"]["RecommendationPurpose"] | null;
             /** Request Id */
             request_id: string;
         };
@@ -3631,6 +4625,272 @@ export interface components {
              */
             schema_version: "itda.recommendation-run-created.v1";
         };
+        /** RegionalDemandContext */
+        RegionalDemandContext: {
+            /** Base Month */
+            base_month: string | null;
+            /** Expires At */
+            expires_at: string | null;
+            /**
+             * Measure Kind
+             * @enum {string}
+             */
+            measure_kind: "REGIONAL_STAY_INTENSITY" | "REGIONAL_SPENDING_INTENSITY";
+            /**
+             * Measures
+             * @default []
+             */
+            measures: components["schemas"]["RegionalDemandMeasure"][];
+            /** Provider Issue Date */
+            provider_issue_date?: null;
+            /** Provider Result Code */
+            provider_result_code: string | null;
+            /**
+             * Reason
+             * @enum {string}
+             */
+            reason: "NONE" | "NOT_REQUESTED" | "EMPTY" | "SOURCE_UNAVAILABLE" | "AUTHORIZATION_UNAVAILABLE" | "PARTIAL_SERIES" | "STALE" | "OUT_OF_WINDOW" | "PLACE_NOT_MATCHED" | "AMBIGUOUS_MATCH" | "INVALID_VALUE" | "UNIT_UNVERIFIED" | "FUTURE_OBSERVATION" | "UNSUPPORTED_REGION";
+            /**
+             * Receipts
+             * @default []
+             */
+            receipts: components["schemas"]["SourceReceipt"][];
+            /**
+             * Region Code
+             * @default 47130
+             */
+            region_code: string;
+            /**
+             * Region Name
+             * @default 경주시
+             */
+            region_name: string;
+            /** Retrieved At */
+            retrieved_at: string | null;
+            /**
+             * Scope
+             * @default REGION
+             * @constant
+             */
+            scope: "REGION";
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string | null;
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "UNKNOWN";
+            /**
+             * Warning Ko
+             * @default 지역·월별 지표입니다. 개별 장소의 체류시간·혼잡·인기도로 환산하지 않습니다. 단위가 확인되지 않은 수치는 공식 원문으로만 제공합니다.
+             */
+            warning_ko: string;
+        };
+        /** RegionalDemandMeasure */
+        RegionalDemandMeasure: {
+            /** Indicator Code */
+            indicator_code: string;
+            /** Indicator Name */
+            indicator_name: string;
+            /** Raw Value */
+            raw_value: string;
+            /**
+             * Reason
+             * @default UNIT_UNVERIFIED
+             * @enum {string}
+             */
+            reason: "NONE" | "UNIT_UNVERIFIED";
+            /**
+             * State
+             * @default UNKNOWN
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "UNKNOWN";
+            /**
+             * Unit
+             * @default UNVERIFIED_PROVIDER_UNIT
+             * @enum {string}
+             */
+            unit: "TOURISM_DEMAND_INDEX" | "UNVERIFIED_PROVIDER_UNIT";
+            /** Value */
+            value?: string | null;
+        };
+        /** RegionalVisitorPoint */
+        RegionalVisitorPoint: {
+            /**
+             * Category Code
+             * @enum {string}
+             */
+            category_code: "1" | "2" | "3";
+            /** Category Name */
+            category_name: string;
+            /**
+             * Measurement Date
+             * Format: date
+             */
+            measurement_date: string;
+            /** Raw Value */
+            raw_value: string | null;
+            /**
+             * Reason
+             * @enum {string}
+             */
+            reason: "NONE" | "NOT_REQUESTED" | "EMPTY" | "SOURCE_UNAVAILABLE" | "AUTHORIZATION_UNAVAILABLE" | "PARTIAL_SERIES" | "STALE" | "OUT_OF_WINDOW" | "PLACE_NOT_MATCHED" | "AMBIGUOUS_MATCH" | "INVALID_VALUE" | "UNIT_UNVERIFIED" | "FUTURE_OBSERVATION" | "UNSUPPORTED_REGION";
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "UNKNOWN";
+            /** Value */
+            value: string | null;
+        };
+        /** RegionalVisitorsContext */
+        RegionalVisitorsContext: {
+            /** Expires At */
+            expires_at: string | null;
+            /** Period End */
+            period_end: string | null;
+            /** Period Start */
+            period_start: string | null;
+            /**
+             * Points
+             * @default []
+             */
+            points: components["schemas"]["RegionalVisitorPoint"][];
+            /** Provider Issue Date */
+            provider_issue_date?: null;
+            /**
+             * Reason
+             * @enum {string}
+             */
+            reason: "NONE" | "NOT_REQUESTED" | "EMPTY" | "SOURCE_UNAVAILABLE" | "AUTHORIZATION_UNAVAILABLE" | "PARTIAL_SERIES" | "STALE" | "OUT_OF_WINDOW" | "PLACE_NOT_MATCHED" | "AMBIGUOUS_MATCH" | "INVALID_VALUE" | "UNIT_UNVERIFIED" | "FUTURE_OBSERVATION" | "UNSUPPORTED_REGION";
+            /**
+             * Receipts
+             * @default []
+             */
+            receipts: components["schemas"]["SourceReceipt"][];
+            /**
+             * Region Code
+             * @default 47130
+             */
+            region_code: string;
+            /**
+             * Region Name
+             * @default 경주시
+             */
+            region_name: string;
+            /** Retrieved At */
+            retrieved_at: string | null;
+            /**
+             * Scope
+             * @default REGION
+             * @constant
+             */
+            scope: "REGION";
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string | null;
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "UNKNOWN";
+            /**
+             * Unit
+             * @default ESTIMATED_VISITOR_COUNT
+             * @constant
+             */
+            unit: "ESTIMATED_VISITOR_COUNT";
+            /**
+             * Warning Ko
+             * @default 이동통신 기반 해당 시군구 전체 방문 추정치입니다. 개별 관광지 인원이나 입장객 수가 아니며 구분별 값을 합산하지 않습니다.
+             */
+            warning_ko: string;
+        };
+        /** RelatedContext */
+        RelatedContext: {
+            /** Base Month */
+            base_month: string;
+            /** Context Sha256 */
+            context_sha256: string;
+            /** Eligibility Sha256 */
+            eligibility_sha256: string;
+            /**
+             * Expires At
+             * Format: date-time
+             */
+            expires_at: string;
+            /** Filtered Count */
+            filtered_count: number;
+            /** Place Id */
+            place_id: string;
+            /** Provider Result Code */
+            provider_result_code: string | null;
+            /** Reason */
+            reason: string;
+            /** Receipts */
+            receipts: components["schemas"]["SourceReceipt"][];
+            /**
+             * Retrieved At
+             * Format: date-time
+             */
+            retrieved_at: string;
+            /**
+             * Schema Version
+             * @default related-destinations-context.v1
+             * @constant
+             */
+            schema_version: "related-destinations-context.v1";
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string[];
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "UNKNOWN";
+            /** Suggestions */
+            suggestions: components["schemas"]["RelatedSuggestion"][];
+            /**
+             * Warning Ko
+             * @default 내비게이션 이용에 기반한 연관 방문 후보입니다. 이 관계는 장소의 취향 점수나 인기도 가산점으로 사용하지 않습니다.
+             */
+            warning_ko: string;
+        };
+        /** RelatedSuggestion */
+        RelatedSuggestion: {
+            /**
+             * Affinity Effect
+             * @default NONE
+             * @constant
+             */
+            affinity_effect: "NONE";
+            /**
+             * Match Method
+             * @default EXACT_NAME_AND_REGION
+             * @constant
+             */
+            match_method: "EXACT_NAME_AND_REGION";
+            /** Place Id */
+            place_id: string;
+            /** Place Name Ko */
+            place_name_ko: string;
+            /** Provider Entity Id */
+            provider_entity_id: string;
+            /** Provider Rank */
+            provider_rank: number;
+            /**
+             * Relation Kind
+             * @default NAVIGATION_ASSOCIATION
+             * @constant
+             */
+            relation_kind: "NAVIGATION_ASSOCIATION";
+            /** Source Provider Entity Id */
+            source_provider_entity_id: string;
+        };
+        /**
+         * RequiredFacility
+         * @enum {string}
+         */
+        RequiredFacility: "wheelchair_rental" | "stroller_rental" | "accessible_toilet" | "accessible_parking" | "step_free_entry";
         /**
          * ReviewReason
          * @enum {string}
@@ -3756,10 +5016,16 @@ export interface components {
         };
         /** SavedPlaceProjection */
         SavedPlaceProjection: {
+            /** Address Ko */
+            address_ko?: string | null;
             /** Place Id */
             place_id: string;
             /** Place Name Ko */
             place_name_ko: string;
+            /** Region Code */
+            region_code?: string | null;
+            /** Region Name */
+            region_name?: string | null;
             /** Resolved Release Sha256 */
             resolved_release_sha256: string | null;
             /** Saved Release Sha256 */
@@ -3805,6 +5071,91 @@ export interface components {
             /** Travel Condition Fit Score */
             travel_condition_fit_score: number;
         };
+        /** SourceEvidence */
+        SourceEvidence: {
+            /** Evidence Id */
+            evidence_id: string;
+            /** Excerpt */
+            excerpt: string;
+            /** Image License */
+            image_license?: "KOGL_TYPE_1" | null;
+            /** Image Sha256 */
+            image_sha256?: string | null;
+            /**
+             * Modality
+             * @enum {string}
+             */
+            modality: "STRUCTURED" | "TEXT" | "IMAGE_PIXELS";
+            place_match?: components["schemas"]["PlaceMatch"] | null;
+            /** Quote */
+            quote: string;
+            receipt: components["schemas"]["SourceReceipt"];
+            /**
+             * Scope
+             * @enum {string}
+             */
+            scope: "PLACE" | "ROUTE" | "REGION";
+            /** Source Field */
+            source_field: string;
+        };
+        /** SourceObservation */
+        SourceObservation: {
+            claim: components["schemas"]["ClaimKind"];
+            /** Evidence */
+            evidence: components["schemas"]["SourceEvidence"][];
+            /** Key */
+            key: string;
+            /** Reason */
+            reason: string;
+            /** Reference Date */
+            reference_date: string | null;
+            state: components["schemas"]["SupportState"];
+            /** Value */
+            value: boolean | number | string | null;
+        };
+        /** SourceReceipt */
+        SourceReceipt: {
+            /** Dataset Id */
+            dataset_id: string;
+            /** Http Status */
+            http_status: number | null;
+            /** Operation */
+            operation: string;
+            /** Reason */
+            reason: string;
+            /** Reference Date */
+            reference_date?: string | null;
+            /** Request Scope */
+            request_scope: {
+                [key: string]: string;
+            };
+            /** Response Sha256 */
+            response_sha256: string | null;
+            /**
+             * Retrieved At
+             * Format: date-time
+             */
+            retrieved_at: string;
+            /**
+             * Schema Version
+             * @default source-receipt.v1
+             * @constant
+             */
+            schema_version: "source-receipt.v1";
+            service: components["schemas"]["SourceService"];
+            /** Source Modified At */
+            source_modified_at?: string | null;
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "AVAILABLE" | "EMPTY" | "UNAVAILABLE";
+        };
+        /**
+         * SourceService
+         * @enum {string}
+         */
+        SourceService: "KorService2" | "Odii" | "PhotoGalleryService1" | "KorWithService2" | "GoCamping" | "Durunubi" | "TatsCnctrRateService" | "DataLabService" | "TarRlteTarService1" | "AreaTarDemDsService";
         /** StoredLabelRevision */
         StoredLabelRevision: {
             /**
@@ -3826,6 +5177,111 @@ export interface components {
          */
         SubattributeId: "H1" | "H2" | "H3" | "H4" | "I1" | "I2" | "I3" | "I4" | "R1" | "R2" | "R3" | "R4";
         /**
+         * SupportState
+         * @enum {string}
+         */
+        SupportState: "SUPPORTED_FACT" | "SUPPORTED_INFERENCE" | "UNKNOWN";
+        /** TourismContextResponse */
+        TourismContextResponse: {
+            /**
+             * Checked At
+             * Format: date-time
+             */
+            checked_at: string;
+            /** Context Sha256 */
+            context_sha256: string;
+            /**
+             * Mode
+             * @enum {string}
+             */
+            mode: "REFRESHED" | "PINNED";
+            /** Places */
+            places: components["schemas"]["TourismPlaceContext"][];
+            /** Recommendation Run Id */
+            recommendation_run_id: string;
+            reference_periods: components["schemas"]["TourismReferencePeriods"];
+            /**
+             * Schema Version
+             * @default itda.tourism-context.v2
+             * @constant
+             */
+            schema_version: "itda.tourism-context.v2";
+            /** Source Health */
+            source_health: components["schemas"]["TourismSourceHealth"][];
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string[];
+            temporal: components["schemas"]["TripTemporalContext"];
+            trip_input: components["schemas"]["GroundedTripInput"];
+        };
+        /** TourismPlaceContext */
+        TourismPlaceContext: {
+            accessibility: components["schemas"]["TripContextPlace"];
+            camping: components["schemas"]["CampingContext"];
+            /** Place Id */
+            place_id: string;
+            /** Place Name Ko */
+            place_name_ko: string;
+            related: components["schemas"]["RelatedContext"];
+            walking: components["schemas"]["WalkingContext"];
+        };
+        /** TourismReferencePeriods */
+        TourismReferencePeriods: {
+            /**
+             * Availability Claim
+             * @default REQUESTED_PERIOD_NOT_LATEST_GUARANTEE
+             * @constant
+             */
+            availability_claim: "REQUESTED_PERIOD_NOT_LATEST_GUARANTEE";
+            /** Demand Month */
+            demand_month: string;
+            /** Lag Months */
+            lag_months: number;
+            /**
+             * Policy
+             * @default EXPLICIT_OR_LAGGED_CALENDAR_PERIOD_V1
+             * @constant
+             */
+            policy: "EXPLICIT_OR_LAGGED_CALENDAR_PERIOD_V1";
+            /** Related Month */
+            related_month: string;
+            /**
+             * Visitor End
+             * Format: date
+             */
+            visitor_end: string;
+            /**
+             * Visitor Start
+             * Format: date
+             */
+            visitor_start: string;
+        };
+        /** TourismSourceHealth */
+        TourismSourceHealth: {
+            /** Consumer */
+            consumer: string;
+            /** Http Attempt Count */
+            http_attempt_count: number;
+            /** Http Latency Ms */
+            http_latency_ms: number;
+            /**
+             * Provider Result Codes
+             * @default []
+             */
+            provider_result_codes: string[];
+            /** Reason */
+            reason: string;
+            /** Receipt Count */
+            receipt_count: number;
+            /** Retrieved At */
+            retrieved_at: string | null;
+            service: components["schemas"]["SourceService"];
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "EMPTY" | "UNAVAILABLE";
+        };
+        /**
          * TransportType
          * @enum {string}
          */
@@ -3839,7 +5295,7 @@ export interface components {
         TravelConditionTarget: {
             condition_id: components["schemas"]["TravelConditionId"];
             /** Value */
-            value: number;
+            value: number | null;
         };
         /** TripConditions */
         TripConditions: {
@@ -3851,6 +5307,107 @@ export interface components {
             visit_date: string | null;
             visit_time: components["schemas"]["VisitTime"];
             walking_tolerance: components["schemas"]["WalkingTolerance"];
+        };
+        /** TripContextPlace */
+        TripContextPlace: {
+            /** Facts */
+            facts: components["schemas"]["SourceObservation"][];
+            /** Place Id */
+            place_id: string;
+            /** Place Name Ko */
+            place_name_ko: string;
+            /** Reason Ko */
+            reason_ko: string;
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string | null;
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "UNAVAILABLE";
+        };
+        /** TripContextResponse */
+        TripContextResponse: {
+            /**
+             * Checked At
+             * Format: date-time
+             */
+            checked_at: string;
+            /**
+             * Mode
+             * @enum {string}
+             */
+            mode: "PINNED" | "REFRESHED";
+            /** Places */
+            places: components["schemas"]["TripContextPlace"][];
+            /** Recommendation Run Id */
+            recommendation_run_id: string;
+            /**
+             * Schema Version
+             * @default itda.trip-context.v1
+             * @constant
+             */
+            schema_version: "itda.trip-context.v1";
+            trip_input: components["schemas"]["GroundedTripInput"];
+        };
+        /** TripTemporalContext */
+        TripTemporalContext: {
+            /**
+             * Checked At
+             * Format: date-time
+             */
+            checked_at: string;
+            /** Context Sha256 */
+            context_sha256: string;
+            /** Demand */
+            demand: [
+                components["schemas"]["RegionalDemandContext"],
+                components["schemas"]["RegionalDemandContext"]
+            ];
+            /** Forecasts */
+            forecasts: components["schemas"]["PlaceConcentrationForecast"][];
+            /**
+             * Policy Version
+             * @default temporal-context-v1
+             * @constant
+             */
+            policy_version: "temporal-context-v1";
+            /**
+             * Ranking Effect
+             * @default NONE
+             * @constant
+             */
+            ranking_effect: "NONE";
+            /**
+             * Regional Demand
+             * @default []
+             */
+            regional_demand: components["schemas"]["RegionalDemandContext"][];
+            /**
+             * Regional Visitors
+             * @default []
+             */
+            regional_visitors: components["schemas"]["RegionalVisitorsContext"][];
+            /**
+             * Schema Version
+             * @default trip-temporal-context.v1
+             * @constant
+             */
+            schema_version: "trip-temporal-context.v1";
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string[];
+            /**
+             * Trip Date
+             * Format: date
+             */
+            trip_date: string;
+            /**
+             * Usage
+             * @default INFORMATION_ONLY
+             * @constant
+             */
+            usage: "INFORMATION_ONLY";
+            visitors: components["schemas"]["RegionalVisitorsContext"];
         };
         /**
          * UnknownReason
@@ -3875,6 +5432,127 @@ export interface components {
          * @enum {string}
          */
         VisitTime: "MORNING" | "DAYTIME" | "SUNSET" | "EVENING" | "UNDECIDED";
+        /**
+         * VisualMoodDimension
+         * @enum {string}
+         */
+        VisualMoodDimension: "greenery" | "water" | "open_composition" | "traditional_appearance" | "contemporary_design" | "warm_light" | "vivid_color" | "night_lighting";
+        /** WalkingContext */
+        WalkingContext: {
+            /** Context Sha256 */
+            context_sha256: string;
+            /** Courses */
+            courses: components["schemas"]["WalkingCourse"][];
+            /**
+             * Expires At
+             * Format: date-time
+             */
+            expires_at: string;
+            /** Place Id */
+            place_id: string;
+            /** Reason */
+            reason: string;
+            /** Receipts */
+            receipts: components["schemas"]["SourceReceipt"][];
+            /**
+             * Retrieved At
+             * Format: date-time
+             */
+            retrieved_at: string;
+            /**
+             * Schema Version
+             * @default walking-context.v1
+             * @constant
+             */
+            schema_version: "walking-context.v1";
+            /** Source Snapshot Sha256 */
+            source_snapshot_sha256: string[];
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "PARTIAL" | "UNKNOWN";
+            /**
+             * Warning Ko
+             * @default 거리·시간·난이도는 전체 걷기 코스의 공식 안내값입니다. 이 관광지 한 곳의 체류시간·보행 부담이나 현장 통행 가능 여부를 뜻하지 않습니다.
+             */
+            warning_ko: string;
+        };
+        /** WalkingCourse */
+        WalkingCourse: {
+            /**
+             * Applies To Place Walking Score
+             * @default false
+             * @constant
+             */
+            applies_to_place_walking_score: false;
+            /** Course Id */
+            course_id: string;
+            /** Difficulty Code */
+            difficulty_code: ("1" | "2" | "3") | null;
+            /** Difficulty Label Ko */
+            difficulty_label_ko: string | null;
+            /** Distance From Place Meters */
+            distance_from_place_meters?: number | null;
+            /** Distance Km */
+            distance_km: string | null;
+            /**
+             * Distance Method
+             * @default LOCAL_PROJECTED_STRAIGHT_LINE
+             * @constant
+             */
+            distance_method: "LOCAL_PROJECTED_STRAIGHT_LINE";
+            /** Duration Minutes */
+            duration_minutes: number | null;
+            /** Exact Match Review Sha256 */
+            exact_match_review_sha256?: string | null;
+            /** Geometry Sha256 */
+            geometry_sha256?: string | null;
+            /** Gpx Url */
+            gpx_url: string | null;
+            /**
+             * Link Kind
+             * @enum {string}
+             */
+            link_kind: "EXACT_CANONICAL_COURSE" | "MENTIONED_ON_COURSE" | "REGIONAL_COURSE" | "VERIFIED_NEARBY_COURSE";
+            /** Name Ko */
+            name_ko: string;
+            /** Reason */
+            reason: string;
+            /** Route Id */
+            route_id: string;
+            /**
+             * Scope
+             * @default COURSE
+             * @constant
+             */
+            scope: "COURSE";
+            /** Scope Label Ko */
+            scope_label_ko: string;
+            /** Source Field Values */
+            source_field_values: {
+                [key: string]: string;
+            };
+            /** Source Modified Date */
+            source_modified_date: string | null;
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "AVAILABLE" | "UNKNOWN";
+            /**
+             * Unit Authority
+             * @default DURUNUBI_MANUAL_4_1
+             * @constant
+             */
+            unit_authority: "DURUNUBI_MANUAL_4_1";
+            /**
+             * Unit Authority Sha256
+             * @default 2f164f46748a4f64b2d11b672f8001b9f844c6435449bc97e1ee1bfb5ed4ea08
+             * @constant
+             */
+            unit_authority_sha256: "2f164f46748a4f64b2d11b672f8001b9f844c6435449bc97e1ee1bfb5ed4ea08";
+        };
         /**
          * WalkingTolerance
          * @enum {string}
@@ -5529,13 +7207,13 @@ export interface operations {
             };
         };
         responses: {
-            /** @description Successful Response */
-            202: {
+            /** @description Raw-only recollection retired; use grounded daily CLI */
+            410: {
                 headers: {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["DailyRecollectionCommandProjection"];
+                    "application/json": unknown;
                 };
             };
             /** @description Validation Error */
@@ -6193,6 +7871,274 @@ export interface operations {
             };
         };
     };
+    getPhotoJobMoods: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                job_id: string;
+            };
+            cookie?: {
+                itda_current_profile?: string | null;
+            };
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoMoodReview"];
+                };
+            };
+            /** @description Bad Request */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Conflict */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Precondition Failed */
+            412: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Content Too Large */
+            413: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Unsupported Media Type */
+            415: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Unprocessable Content */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Too Many Requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Internal Server Error */
+            500: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+        };
+    };
+    confirmPhotoJobMoods: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                job_id: string;
+            };
+            cookie?: {
+                itda_current_profile?: string | null;
+            };
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PhotoMoodConfirmRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ConfirmedMoodProjection"];
+                };
+            };
+            /** @description Bad Request */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Unauthorized */
+            401: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Forbidden */
+            403: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Conflict */
+            409: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Precondition Failed */
+            412: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Content Too Large */
+            413: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Unsupported Media Type */
+            415: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Unprocessable Content */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Too Many Requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Internal Server Error */
+            500: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoErrorResponse"];
+                };
+            };
+        };
+    };
     submit_photo_job: {
         parameters: {
             query?: never;
@@ -6699,6 +8645,26 @@ export interface operations {
             };
         };
     };
+    getRecommendationRegions: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RecommendationRegionsResponse"];
+                };
+            };
+        };
+    };
     createRecommendationRun: {
         parameters: {
             query?: never;
@@ -6796,7 +8762,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["RecommendationResultsResponse"] | components["schemas"]["MvpRecommendationResultsResponse"];
+                    "application/json": components["schemas"]["RecommendationResultsResponse"] | components["schemas"]["MvpRecommendationResultsResponse"] | components["schemas"]["GroundedResultsResponse"];
                 };
             };
             /** @description Forbidden */
@@ -6874,7 +8840,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["RecommendationComparisonResponse"];
+                    "application/json": components["schemas"]["RecommendationComparisonResponse"] | components["schemas"]["GroundedComparisonResponse"];
                 };
             };
             /** @description Forbidden */
@@ -7029,7 +8995,7 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content: {
-                    "application/json": components["schemas"]["RecommendationDetail"] | components["schemas"]["MvpRecommendationDetail"];
+                    "application/json": components["schemas"]["RecommendationDetail"] | components["schemas"]["MvpRecommendationDetail"] | components["schemas"]["GroundedDetailResponse"];
                 };
             };
             /** @description Forbidden */
@@ -7084,6 +9050,68 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["RecommendationErrorResponse"];
+                };
+            };
+        };
+    };
+    getRecommendationTourismContext: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                run_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TourismContextResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    getRecommendationTripContext: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                run_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TripContextResponse"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };

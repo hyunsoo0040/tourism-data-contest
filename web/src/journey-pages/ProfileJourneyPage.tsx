@@ -5,7 +5,7 @@ import {
   fetchPreferenceProfile,
   type PreferenceProfile,
 } from "../api/api";
-import questionnaireArtifact from "../../../contracts/questionnaire-v2.json";
+import { FRONTEND_QUESTIONNAIRE } from "../content/questionnaire";
 import type { QuestionnaireDefinition } from "../api/api";
 import { useJourneyDraft } from "../app/AppShell";
 import { useLocation, useNavigate } from "../app/react-router-dom";
@@ -13,11 +13,14 @@ import { questionnaireAnswersSchema, tripConditionsSchema } from "../app/schemas
 import { clearPhotoDraft, readPhotoDraft, readProfileReference } from "../app/storage";
 import { pickResultForProfile } from "../app/upstream/resultProjection";
 import { PhotoPreferenceFlow } from "../features/photo/PhotoPreferenceFlow";
+import { quizNavigationState } from "../features/journey/quizNavigation";
 import {
   confirmPhotoJobTraitsRequest,
+  confirmPhotoJobMoodsRequest,
   createPhotoJobRequest,
   getPhotoJobRequest,
   getPhotoJobTraitsRequest,
+  getPhotoJobMoodsRequest,
   putPhotoJobImageRequest,
   requestPhotoDeletionRequest,
   submitPhotoJobRequest,
@@ -32,8 +35,9 @@ import { ThreeAxisProfile } from "../features/profile/ThreeAxisProfile";
 import { createAndStorePreferenceProfile } from "../features/profile/profileSubmission";
 import {
   clearConfirmedPhotoReference,
+  readConfirmedMoodReference,
   readConfirmedPhotoReference,
-  writeConfirmedPhotoReference,
+  writeConfirmedMoodReference,
 } from "../features/photo/photoProjection";
 
 type PageState = "loading" | "ready" | "empty" | "recovery" | "api-error" | "invalid";
@@ -69,7 +73,7 @@ export function ProfilePage() {
   const [state, setState] = useState<PageState>("loading");
   const [profile, setProfile] = useState<PreferenceProfile | null>(null);
   const [upstreamContract, setUpstreamContract] = useState<QuestionnaireDefinition | null>(
-    questionnaireArtifact as unknown as QuestionnaireDefinition,
+    FRONTEND_QUESTIONNAIRE,
   );
   const [busy, setBusy] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -108,7 +112,7 @@ export function ProfilePage() {
     options: { message?: string; restoreDraft?: boolean; focusMeter?: boolean } = {},
   ) => {
     setProfile(nextProfile);
-    setConfirmedPhotoJobId(readConfirmedPhotoReference(nextProfile.profile_id));
+    setConfirmedPhotoJobId(readConfirmedMoodReference(nextProfile.profile_id)?.photo_job_id ?? readConfirmedPhotoReference(nextProfile.profile_id));
     const photoDraft = readPhotoDraft(nextProfile.profile_id);
     if (
       photoDraft.state === "valid" ||
@@ -116,12 +120,8 @@ export function ProfilePage() {
     ) {
       setPhotoPanelOpen(true);
     }
-    // The upstream result shell (type badge, character, keywords) projects the
-    // stored profile through the canonical contract copy. The committed v2
-    // artifact is byte-identical to the served contract (07-01 contract tests
-    // pin this), so the shell derives from the same authority without an
-    // extra request.
-    setUpstreamContract(questionnaireArtifact as unknown as QuestionnaireDefinition);
+    // Result visuals and answer labels use the frontend presentation; scores stay server-owned.
+    setUpstreamContract(FRONTEND_QUESTIONNAIRE);
     // Drafts are v2-only: a restored draft must carry answers that parse under
     // the current questionnaire generation. Legacy v1 profiles stay displayed
     // (scores, description, CTA) but never seed a v2 draft.
@@ -157,8 +157,8 @@ export function ProfilePage() {
       if (
         isCurrentProfile &&
         currentDraft !== null &&
-        (JSON.stringify(currentDraft.tripConditions) !== JSON.stringify(nextProfile.trip_conditions) ||
-          JSON.stringify(currentDraft.answers) !== JSON.stringify(nextProfile.answers))
+        (JSON.stringify(currentDraft.tripConditions) !== JSON.stringify(tripConditionsSchema.parse(nextProfile.trip_conditions)) ||
+          JSON.stringify(currentDraft.answers) !== JSON.stringify(questionnaireAnswersSchema.parse(nextProfile.answers)))
       ) {
         setProfile(null);
         setState("recovery");
@@ -258,7 +258,7 @@ export function ProfilePage() {
       <ProfileShell>
         <article className="panel profile-state" aria-labelledby="profile-loading-title">
           <p className="eyebrow">이번 여행의 기대 프로필</p>
-          <h1 id="profile-loading-title" tabIndex={-1}>당신이 기대하는 경주의 시간</h1>
+          <h1 id="profile-loading-title" tabIndex={-1}>당신이 기대하는 여행의 시간</h1>
           <div className="profile-loading" aria-hidden="true"><span /><span /><span /></div>
           <p role="status" aria-live="polite">여행 기대를 정리하고 있어요.</p>
         </article>
@@ -281,7 +281,7 @@ export function ProfilePage() {
                 ? () => void rebuild()
                 : retry
           }
-          onReviewAnswers={state === "api-error" && hasCompleteDraft ? () => void navigate("/quiz?q=1") : undefined}
+          onReviewAnswers={state === "api-error" && hasCompleteDraft ? () => void navigate("/quiz", { state: quizNavigationState(1) }) : undefined}
         />
       </ProfileShell>
     );
@@ -294,7 +294,7 @@ export function ProfilePage() {
     const isCurrentProfile = profile !== null && questionnaireAnswersSchema.safeParse(profile.answers).success;
     if (isCurrentProfile) {
       updateDraft({ current_route: "/quiz", current_question: ordinal });
-      void navigate(`/quiz?q=${ordinal}`, { state: { editingProfile: true } });
+      void navigate("/quiz", { state: quizNavigationState(ordinal, true) });
       return;
     }
     resetDraft();
@@ -306,14 +306,14 @@ export function ProfilePage() {
         trip_conditions: conditions.data,
       });
     }
-    void navigate(`/quiz?q=${ordinal}`);
+    void navigate("/quiz", { state: quizNavigationState(ordinal) });
   };
 
   return (
     <ProfileShell>
       <section className="panel result visible profile-result" aria-labelledby="profile-result-heading">
         <p className="eyebrow">Result</p>
-        <h1 id="profile-result-heading" tabIndex={-1}>당신이 기대하는 경주의 시간</h1>
+        <h1 id="profile-result-heading" tabIndex={-1}>당신이 기대하는 여행의 시간</h1>
         <p className="profile-scope">이 결과는 평소 성격이나 여행 만족도를 예측하지 않아요. 지금 입력한 여행 조건과 답변을 정리한 값이에요.</p>
         <p className="visually-hidden" role="status" aria-live="polite">{announcement}</p>
         {upstreamResult !== null ? (
@@ -328,8 +328,8 @@ export function ProfilePage() {
                 <img src={upstreamResult.image} alt={`${upstreamResult.character} 캐릭터 이미지`} />
               </div>
               <div className="match-card">
-                <b>{upstreamResult.match}%</b>
-                <span>대표 유형 적합도</span>
+                <b>{upstreamResult.match}점</b>
+                <span>대표 유형 점수</span>
                 <div className="character-card">
                   <span>{upstreamResult.role}</span>
                   <b>{upstreamResult.character}</b>
@@ -359,7 +359,9 @@ export function ProfilePage() {
         </section>
 
         <div className="result-actions profile-primary-action" ref={ctaRef}>
-          <ProfileRecommendationCTA profile={profile} photoJobId={confirmedPhotoJobId} />
+          <ProfileRecommendationCTA profile={profile} photoJobId={confirmedPhotoJobId} onClearPhoto={() => {
+            clearConfirmedPhotoReference(profile.profile_id); setConfirmedPhotoJobId(null);
+          }} />
         </div>
 
         <details
@@ -374,6 +376,7 @@ export function ProfilePage() {
           <div className="profile-photo-panel__body">
             <p>좋아했던 여행 사진 1–3장으로 원하는 분위기를 보강할 수 있어요. 사진 없이도 바로 추천을 볼 수 있습니다.</p>
             <PhotoPreferenceFlow
+              key={profile.profile_id}
               profileId={profile.profile_id}
               startAtConsent
               consentHeadingLevel={2}
@@ -384,6 +387,8 @@ export function ProfilePage() {
                 }) => Promise<{ job_id: string; state: string }>,
                 getPhotoJob: getPhotoJobRequest,
                 getPhotoJobTraits: getPhotoJobTraitsRequest,
+                getPhotoJobMoods: getPhotoJobMoodsRequest,
+                confirmPhotoJobMoods: confirmPhotoJobMoodsRequest,
                 requestPhotoDeletion: requestPhotoDeletionRequest as never,
                 putPhotoJobImage: putPhotoJobImageRequest,
                 submitPhotoJob: submitPhotoJobRequest,
@@ -394,15 +399,18 @@ export function ProfilePage() {
                 clearConfirmedPhotoReference(profile.profile_id);
                 setPhotoPanelOpen(false);
               }}
-              onConfirmed={(confirmed, jobId) => {
-                if (
-                  confirmed.length === 0 ||
-                  !writeConfirmedPhotoReference(profile.profile_id, jobId)
-                ) return;
+              onConfirmed={() => {
+                setConfirmedPhotoJobId(null);
+                clearConfirmedPhotoReference(profile.profile_id);
+                setAnnouncement("이전 사진 취향은 저장된 추천에서 확인할 수 있어요. 새 사진을 추가하거나 사진 없이 계속해 주세요.");
+              }}
+              onMoodConfirmed={(confirmed, jobId) => {
+                if (!writeConfirmedMoodReference(profile.profile_id, jobId, confirmed.receipt_id)) return;
                 setConfirmedPhotoJobId(jobId);
                 clearPhotoDraft();
                 setPhotoPanelOpen(false);
-                setAnnouncement(`사진 취향 ${confirmed.length}개를 추천에 반영할 준비가 됐어요.`);
+                const count = confirmed.moods.filter((row) => row.value !== null).length;
+                setAnnouncement(count ? `사진 분위기 ${count}개를 추천에 참고할 준비가 됐어요.` : "확정한 사진 분위기 없이 설문 기준으로 추천해요.");
               }}
             />
           </div>

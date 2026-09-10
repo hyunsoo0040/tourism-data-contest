@@ -5,6 +5,7 @@ import { useJourneyAnnouncements } from "../../app/AppShell";
 export type ComparePlaceReference = {
   placeId: string;
   placeName: string;
+  regionName?: string | null;
 };
 
 type CompareTrayProps = {
@@ -63,11 +64,11 @@ export function CompareTray({
         <ul className="compare-tray__selection" aria-label="비교에 선택한 장소">
           {selectedPlaces.map((place) => (
             <li key={place.placeId}>
-              <span>{place.placeName}</span>
+              <span>{place.placeName}{place.regionName && <small className="recommendation-location"> · {place.regionName}</small>}</span>
               <button
                 type="button"
                 className="button button--secondary"
-                aria-label={`${place.placeName} 비교에서 빼기`}
+                aria-label={`${place.placeName}${place.regionName ? ` · ${place.regionName}` : ""} 비교에서 빼기`}
                 onClick={() => {
                   onRemove(place.placeId);
                   requestAnimationFrame(() => trayRef.current?.focus());

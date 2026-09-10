@@ -3,7 +3,9 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import questionnaireArtifact from "../../../../contracts/questionnaire-v2.json";
+import { FRONTEND_QUESTIONNAIRE } from "../../content/questionnaire";
 import { appRoutes } from "../../app/routes";
+import { quizNavigationState } from "./quizNavigation";
 import {
   DRAFT_STORAGE_KEY,
   PENDING_PROFILE_SUBMISSION_KEY,
@@ -30,11 +32,22 @@ function questionnaireResponse() {
   });
 }
 
-async function renderQuiz(initialEntry = "/quiz?q=1") {
-  const router = createMemoryRouter(appRoutes, { initialEntries: ["/start", initialEntry] });
+function quizEntry(questionOrdinal: number, editingProfile = false) {
+  return { pathname: "/quiz", state: quizNavigationState(questionOrdinal, editingProfile) };
+}
+
+function expectQuestion(router: ReturnType<typeof createMemoryRouter>, ordinal: number) {
+  expect(router.state.location).toMatchObject({
+    pathname: "/quiz", search: "", hash: "", state: { questionOrdinal: ordinal },
+  });
+  expect(screen.getByText(FRONTEND_QUESTIONNAIRE.questions[ordinal - 1]!.title_ko)).toBeTruthy();
+  expect(screen.getByText(`${ordinal} / 12`)).toBeTruthy();
+}
+
+async function renderQuiz(ordinal = 1) {
+  const router = createMemoryRouter(appRoutes, { initialEntries: ["/start", quizEntry(ordinal)] });
   const view = render(<RouterProvider router={router} />);
-  const ordinal = Number(new URL(initialEntry, "https://itda.test").searchParams.get("q") ?? "1");
-  await screen.findByText(questionnaireArtifact.questions[ordinal - 1]!.title_ko);
+  await waitFor(() => expectQuestion(router, ordinal));
   return { router, ...view };
 }
 
@@ -58,13 +71,13 @@ describe("/quiz canonical twelve-question journey", () => {
     expect(screen.getByText("1 / 12")).toBeTruthy();
     expect(screen.getByText("0 / 12 응답 완료")).toBeTruthy();
     await waitFor(() =>
-      expect(document.activeElement?.textContent).toBe(questionnaireArtifact.questions[0]!.title_ko),
+      expect(document.activeElement?.textContent).toBe(FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko),
     );
 
     fireEvent.click(screen.getAllByRole("radio")[2]);
 
-    await waitFor(() => expect(firstRender.router.state.location.search).toBe("?q=2"));
-    expect(await screen.findByText(questionnaireArtifact.questions[1]!.title_ko)).toBeTruthy();
+    await waitFor(() => expectQuestion(firstRender.router, 2));
+    expect(await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[1]!.title_ko)).toBeTruthy();
     expect(
       (JSON.parse(window.localStorage.getItem(DRAFT_STORAGE_KEY) ?? "null") as {
         answers: { q1?: number };
@@ -72,29 +85,115 @@ describe("/quiz canonical twelve-question journey", () => {
     ).toBe(3);
 
     await act(async () => firstRender.router.navigate(-1));
-    await waitFor(() => expect(firstRender.router.state.location.search).toBe("?q=1"));
+    await waitFor(() => expectQuestion(firstRender.router, 1));
     await waitFor(() =>
       expect(screen.getAllByRole("radio")[2]?.getAttribute("aria-checked")).toBe("true"),
     );
 
     firstRender.unmount();
 
-    const refreshed = await renderQuiz("/quiz?q=1");
+    const refreshed = await renderQuiz(1);
     expect(screen.getAllByRole("radio")[2]?.getAttribute("aria-checked")).toBe("true");
     refreshed.unmount();
+  });
+
+  it("shows and advances frontend questions while the backend is unreachable", async () => {
+    const fetchMock = vi.fn().mockRejectedValue(new TypeError("offline"));
+    vi.stubGlobal("fetch", fetchMock);
+    const { router } = await renderQuiz();
+    fireEvent.click(screen.getAllByRole("radio")[0]);
+    await waitFor(() => expectQuestion(router, 2));
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("blocks submission before POST when the deployed scoring contract differs", async () => {
+    writeDraft({
+      ...createEmptyDraft(), current_route: "/quiz", current_question: 12,
+      trip_conditions: completeTripConditions,
+      answers: Object.fromEntries(FRONTEND_QUESTIONNAIRE.questions.slice(0, 11).map(({ question_id }) => [question_id, 1])),
+    });
+    const remote = structuredClone(questionnaireArtifact);
+    remote.scoring_version = "different-scoring-version";
+    const fetchMock = vi.fn().mockResolvedValue(new Response(JSON.stringify(remote), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const { router } = await renderQuiz(12);
+    fireEvent.click(screen.getAllByRole("radio")[0]);
+    expect((await screen.findByRole("alert")).textContent).toContain("질문과 점수 계산 구성이 맞지 않아요.");
+    expect(router.state.location.pathname).toBe("/quiz");
+    expect(fetchMock.mock.calls).toHaveLength(1);
+    expect(fetchMock.mock.calls[0]![0]).toBe("/v1/questionnaires/current");
+    expect(window.localStorage.getItem(PROFILE_STORAGE_KEY)).toBeNull();
+  });
+
+  it("Back/Forward 위치를 draft에 동기화하고 state 없는 재진입에서 복원한다", async () => {
+    const first = await renderQuiz();
+    for (let ordinal = 2; ordinal <= 3; ordinal += 1) {
+      fireEvent.click(screen.getAllByRole("radio")[2]);
+      await waitFor(() => expectQuestion(first.router, ordinal));
+    }
+    const storedQuestion = () => JSON.parse(localStorage.getItem(DRAFT_STORAGE_KEY)!).current_question;
+    await act(async () => first.router.navigate(-1));
+    await waitFor(() => expectQuestion(first.router, 2));
+    expect(storedQuestion()).toBe(2);
+    await act(async () => first.router.navigate(1));
+    await waitFor(() => expectQuestion(first.router, 3));
+    expect(storedQuestion()).toBe(3);
+    await act(async () => first.router.navigate(-1));
+    await waitFor(() => expectQuestion(first.router, 2));
+    first.unmount();
+    const router = createMemoryRouter(appRoutes, { initialEntries: ["/start", "/quiz"] });
+    render(<RouterProvider router={router} />);
+    await waitFor(() => expectQuestion(router, 2));
+    expect(screen.getAllByRole("radio")[2]?.getAttribute("aria-checked")).toBe("true");
+    expect(router.state.historyAction).toBe("REPLACE");
+    await act(async () => router.navigate(-1));
+    expect(router.state.location.pathname).toBe("/start");
+  });
+
+  it.each([
+    { search: "?q=7", state: { questionOrdinal: 2, editingProfile: true }, expected: 7 },
+    { search: "?q=13", state: { questionOrdinal: 2 }, expected: 2 },
+    { search: "?q=7&q=7", state: { questionOrdinal: 2 }, expected: 2 },
+    { search: "?q=bad", state: null, expected: 5 },
+    { search: "", state: { questionOrdinal: "7" }, expected: 5 },
+    { search: "", state: { questionOrdinal: 12 }, expected: 12 },
+  ])("이전 링크와 state를 검증·정규화한다: $search / $expected", async ({ search, state, expected }) => {
+    writeDraft({ ...createEmptyDraft(), current_route: "/quiz", current_question: 5,
+      trip_conditions: completeTripConditions,
+      answers: Object.fromEntries(FRONTEND_QUESTIONNAIRE.questions.map(({ question_id }) => [question_id, 3])),
+    });
+    const router = createMemoryRouter(appRoutes, {
+      initialEntries: ["/start", { pathname: "/quiz", search, state }],
+    });
+    render(<RouterProvider router={router} />);
+    await waitFor(() => expectQuestion(router, expected));
+    expect(JSON.parse(localStorage.getItem(DRAFT_STORAGE_KEY)!).current_question).toBe(expected);
+    expect(router.state.location.state).toEqual(quizNavigationState(expected, state?.editingProfile === true));
+    expect(vi.mocked(fetch).mock.calls.every(([, init]) => init?.method !== "POST")).toBe(true);
+    await act(async () => router.navigate(-1));
+    expect(router.state.location.pathname).toBe("/start");
+  });
+
+  it("state와 draft만으로 미응답 문제를 건너뛸 수 없다", async () => {
+    writeDraft({ ...createEmptyDraft(), current_route: "/quiz", current_question: 12, trip_conditions: completeTripConditions });
+    const router = createMemoryRouter(appRoutes, { initialEntries: [quizEntry(7, true)] });
+    render(<RouterProvider router={router} />);
+    await waitFor(() => expectQuestion(router, 1));
+    expect(router.state.location.state).toEqual(quizNavigationState(1, true));
+    expect(JSON.parse(localStorage.getItem(DRAFT_STORAGE_KEY)!).current_question).toBe(1);
   });
 
   it("has no independent advance action and redirects unavailable direct entry", async () => {
     const first = await renderQuiz();
     expect(screen.queryByRole("button", { name: "다음 질문" })).toBeNull();
     expect(screen.queryByRole("alert")).toBeNull();
-    expect(first.router.state.location.search).toBe("?q=1");
+    expectQuestion(first.router, 1);
     first.unmount();
 
     const router = createMemoryRouter(appRoutes, { initialEntries: ["/quiz?q=7"] });
     render(<RouterProvider router={router} />);
-    await waitFor(() => expect(router.state.location.search).toBe("?q=1"));
-    expect(await screen.findByText(questionnaireArtifact.questions[0]!.title_ko)).toBeTruthy();
+    await waitFor(() => expectQuestion(router, 1));
+    expect(await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko)).toBeTruthy();
     expect(router.state.location.search).not.toContain("q7=");
   });
 
@@ -102,17 +201,17 @@ describe("/quiz canonical twelve-question journey", () => {
     const scrollTo = vi.spyOn(window, "scrollTo").mockImplementation(() => {});
     const focus = vi.spyOn(HTMLElement.prototype, "focus");
     const { router } = await renderQuiz();
-    await waitFor(() => expect(document.activeElement?.textContent).toBe(questionnaireArtifact.questions[0]!.title_ko));
+    await waitFor(() => expect(document.activeElement?.textContent).toBe(FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko));
     scrollTo.mockClear();
     focus.mockClear();
 
     fireEvent.click(screen.getAllByRole("radio")[0]);
-    await waitFor(() => expect(document.activeElement?.textContent).toBe(questionnaireArtifact.questions[1]!.title_ko));
+    await waitFor(() => expect(document.activeElement?.textContent).toBe(FRONTEND_QUESTIONNAIRE.questions[1]!.title_ko));
     expect(scrollTo).not.toHaveBeenCalled();
     expect(focus).toHaveBeenLastCalledWith({ preventScroll: true });
 
     await act(async () => router.navigate(-1));
-    await waitFor(() => expect(document.activeElement?.textContent).toBe(questionnaireArtifact.questions[0]!.title_ko));
+    await waitFor(() => expect(document.activeElement?.textContent).toBe(FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko));
     expect(scrollTo).not.toHaveBeenCalled();
     expect(focus).toHaveBeenLastCalledWith({ preventScroll: true });
 
@@ -125,7 +224,7 @@ describe("/quiz canonical twelve-question journey", () => {
     expect(scrollTo).toHaveBeenCalledWith({ top: 0 });
   });
 
-  it("counts completed answers consistently when advancing, revisiting, refreshing, and restarting", async () => {
+  it("tracks the visible position while preserving answers when revisiting and refreshing", async () => {
     const first = await renderQuiz();
     const progress = () => screen.getByRole("progressbar", { name: "응답 진행도" });
     expect(progress().getAttribute("aria-valuenow")).toBe("0");
@@ -135,29 +234,67 @@ describe("/quiz canonical twelve-question journey", () => {
       expect(screen.getByText(`${answered} / 12 응답 완료`)).toBeTruthy();
     }
     await act(async () => first.router.navigate(-1));
-    expect(progress().getAttribute("aria-valuenow")).toBe("2");
+    expect(progress().getAttribute("aria-valuenow")).toBe("1");
     fireEvent.click(screen.getAllByRole("radio")[1]);
-    await waitFor(() => expect(first.router.state.location.search).toBe("?q=3"));
+    await waitFor(() => expectQuestion(first.router, 3));
     expect(progress().getAttribute("aria-valuenow")).toBe("2");
     first.unmount();
 
-    await renderQuiz("/quiz?q=3");
+    await renderQuiz(3);
     expect(progress().getAttribute("aria-valuenow")).toBe("2");
     fireEvent.click(screen.getByRole("button", { name: "처음부터" }));
     await waitFor(() => expect(progress().getAttribute("aria-valuenow")).toBe("0"));
+  });
+
+  it("updates progress on Previous, browser Back/Forward, and reload without deleting saved answers", async () => {
+    const savedAnswers = Object.fromEntries(Array.from({ length: 10 }, (_, i) => [`q${i + 1}`, 1]));
+    writeDraft({
+      ...createEmptyDraft(), current_route: "/quiz", current_question: 11,
+      trip_conditions: completeTripConditions, answers: savedAnswers,
+    });
+    const first = await renderQuiz(11);
+    const expectProgress = (count: number) => {
+      const bar = screen.getByRole("progressbar", { name: "응답 진행도" });
+      expect(bar.getAttribute("aria-valuenow")).toBe(String(count));
+      expect(bar.getAttribute("aria-valuetext")).toBe(`12개 중 ${count}개 응답 완료`);
+      expect((bar.firstElementChild as HTMLElement).style.width).toBe(`${Math.round(count / 12 * 100)}%`);
+      expect(screen.getByText(`${count} / 12 응답 완료`)).toBeTruthy();
+    };
+    expectProgress(10);
+    fireEvent.click(screen.getByRole("button", { name: "이전" }));
+    await waitFor(() => expectQuestion(first.router, 10));
+    expectProgress(9);
+    expect(screen.getAllByRole("radio")[0]!.getAttribute("aria-checked")).toBe("true");
+    fireEvent.click(screen.getByRole("button", { name: "이전" }));
+    await waitFor(() => expectQuestion(first.router, 9));
+    expectProgress(8);
+    await act(async () => first.router.navigate(-1));
+    expectQuestion(first.router, 10);
+    expectProgress(9);
+    await act(async () => first.router.navigate(1));
+    expectQuestion(first.router, 9);
+    expectProgress(8);
+    expect(JSON.parse(window.localStorage.getItem(DRAFT_STORAGE_KEY)!).answers).toEqual(savedAnswers);
+    first.unmount();
+    await renderQuiz(9);
+    expectProgress(8);
+    expect(screen.getAllByRole("radio")[0]!.getAttribute("aria-checked")).toBe("true");
+    fireEvent.click(screen.getAllByRole("radio")[0]);
+    await waitFor(() => expectProgress(9));
+    expect(JSON.parse(window.localStorage.getItem(DRAFT_STORAGE_KEY)!).answers).toEqual(savedAnswers);
   });
 
   it("walks the served order from q=1 through q=12 without putting answers in the URL", async () => {
     const { router } = await renderQuiz();
 
     for (let ordinal = 1; ordinal < 12; ordinal += 1) {
-      expect(screen.getByText(questionnaireArtifact.questions[ordinal - 1]!.title_ko)).toBeTruthy();
+      expect(screen.getByText(FRONTEND_QUESTIONNAIRE.questions[ordinal - 1]!.title_ko)).toBeTruthy();
       fireEvent.click(screen.getAllByRole("radio")[2]);
-      await waitFor(() => expect(router.state.location.search).toBe(`?q=${ordinal + 1}`));
+      await waitFor(() => expectQuestion(router, ordinal + 1));
     }
 
-    expect(screen.getByText(questionnaireArtifact.questions[11]!.title_ko)).toBeTruthy();
-    expect(router.state.location.search).toBe("?q=12");
+    expect(screen.getByText(FRONTEND_QUESTIONNAIRE.questions[11]!.title_ko)).toBeTruthy();
+    expectQuestion(router, 12);
     expect(router.state.location.search).not.toContain("answers");
     expect(
       Object.keys(
@@ -176,13 +313,13 @@ describe("/quiz canonical twelve-question journey", () => {
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/start"));
     expect(
-      await screen.findByRole("heading", { name: "이번 경주, 어떤 시간을 보내고 싶나요?" }),
+      await screen.findByRole("heading", { name: "이번 여행, 어떤 시간을 보내고 싶나요?" }),
     ).toBeTruthy();
   });
 
   it("submits the complete generated request once and stores a recoverable profile reference", async () => {
     const firstEight = Object.fromEntries(
-      questionnaireArtifact.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
+      FRONTEND_QUESTIONNAIRE.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
     );
     writeDraft({
       ...createEmptyDraft(),
@@ -231,12 +368,12 @@ describe("/quiz canonical twelve-question journey", () => {
     });
     vi.stubGlobal("fetch", fetchMock);
 
-    const { router } = await renderQuiz("/quiz?q=12");
+    const { router } = await renderQuiz(12);
     fireEvent.click(screen.getAllByRole("radio")[2]);
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
     expect(
-      await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" }),
+      await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" }),
     ).toBeTruthy();
     const postCalls = fetchMock.mock.calls.filter(([, init]) =>
       init?.method === "POST",
@@ -258,7 +395,7 @@ describe("/quiz canonical twelve-question journey", () => {
 
   it("shows the storage warning when a completed quiz keeps its profile reference only in memory", async () => {
     const firstEight = Object.fromEntries(
-      questionnaireArtifact.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
+      FRONTEND_QUESTIONNAIRE.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
     );
     writeDraft({
       ...createEmptyDraft(),
@@ -305,17 +442,17 @@ describe("/quiz canonical twelve-question journey", () => {
       if (key === PROFILE_STORAGE_KEY) throw new DOMException("quota", "QuotaExceededError");
       return nativeSetItem.call(this, key, value);
     });
-    const { router } = await renderQuiz("/quiz?q=12");
+    const { router } = await renderQuiz(12);
     fireEvent.click(screen.getAllByRole("radio")[2]);
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     expect(await screen.findByText(STORAGE_MESSAGES.unavailable)).toBeTruthy();
   });
 
   it("keeps all answers and fails closed when the created profile version or hash mismatches", async () => {
     const firstEight = Object.fromEntries(
-      questionnaireArtifact.questions.slice(0, 11).map(({ question_id }) => [question_id, 2]),
+      FRONTEND_QUESTIONNAIRE.questions.slice(0, 11).map(({ question_id }) => [question_id, 2]),
     );
     writeDraft({
       ...createEmptyDraft(),
@@ -354,7 +491,7 @@ describe("/quiz canonical twelve-question journey", () => {
       }),
     );
 
-    const { router } = await renderQuiz("/quiz?q=12");
+    const { router } = await renderQuiz(12);
     fireEvent.click(screen.getAllByRole("radio")[2]);
 
     expect((await screen.findByRole("alert")).textContent).toContain(
@@ -371,7 +508,7 @@ describe("/quiz canonical twelve-question journey", () => {
 
   it("offers an explicit retry with the same request ID and prevents duplicate in-flight posts", async () => {
     const firstEight = Object.fromEntries(
-      questionnaireArtifact.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
+      FRONTEND_QUESTIONNAIRE.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
     );
     writeDraft({
       ...createEmptyDraft(),
@@ -423,7 +560,7 @@ describe("/quiz canonical twelve-question journey", () => {
       }),
     );
 
-    const { router } = await renderQuiz("/quiz?q=12");
+    const { router } = await renderQuiz(12);
     const selectedOption = screen.getAllByRole("radio")[2] as HTMLButtonElement;
     fireEvent.click(selectedOption);
     await waitFor(() => expect(selectedOption.disabled).toBe(true));
@@ -444,7 +581,7 @@ describe("/quiz canonical twelve-question journey", () => {
 
   it("rejects a malformed matching-version profile without storing partial output", async () => {
     const firstEight = Object.fromEntries(
-      questionnaireArtifact.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
+      FRONTEND_QUESTIONNAIRE.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
     );
     writeDraft({
       ...createEmptyDraft(),
@@ -485,7 +622,7 @@ describe("/quiz canonical twelve-question journey", () => {
       }),
     );
 
-    const { router } = await renderQuiz("/quiz?q=12");
+    const { router } = await renderQuiz(12);
     fireEvent.click(screen.getAllByRole("radio")[2]);
 
     expect((await screen.findByRole("alert")).textContent).toContain(
@@ -497,7 +634,7 @@ describe("/quiz canonical twelve-question journey", () => {
 
   it("maps a 422 answer error back to its question and clears stale errors on navigation", async () => {
     const firstEight = Object.fromEntries(
-      questionnaireArtifact.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
+      FRONTEND_QUESTIONNAIRE.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
     );
     writeDraft({
       ...createEmptyDraft(),
@@ -519,14 +656,14 @@ describe("/quiz canonical twelve-question journey", () => {
       }),
     );
 
-    const { router } = await renderQuiz("/quiz?q=12");
+    const { router } = await renderQuiz(12);
     fireEvent.click(screen.getAllByRole("radio")[2]);
 
     expect((await screen.findByRole("alert")).textContent).toContain("확인할 답변이 있어요.");
     fireEvent.click(screen.getByRole("button", { name: "답변 확인하기" }));
-    await waitFor(() => expect(router.state.location.search).toBe("?q=3"));
+    await waitFor(() => expectQuestion(router, 3));
     await waitFor(() =>
-      expect(document.activeElement?.textContent).toBe(questionnaireArtifact.questions[2]!.title_ko),
+      expect(document.activeElement?.textContent).toBe(FRONTEND_QUESTIONNAIRE.questions[2]!.title_ko),
     );
     expect(screen.queryByRole("alert")).toBeNull();
   });
@@ -534,17 +671,17 @@ describe("/quiz canonical twelve-question journey", () => {
   it("does not create an answer-required alert during browser question navigation", async () => {
     const { router } = await renderQuiz();
     fireEvent.click(screen.getAllByRole("radio")[2]);
-    await waitFor(() => expect(router.state.location.search).toBe("?q=2"));
+    await waitFor(() => expectQuestion(router, 2));
     expect(screen.queryByRole("alert")).toBeNull();
 
     await act(async () => router.navigate(-1));
-    await waitFor(() => expect(router.state.location.search).toBe("?q=1"));
+    await waitFor(() => expectQuestion(router, 1));
     expect(screen.queryByRole("alert")).toBeNull();
   });
 
   it("reuses the pending request ID after refresh but rotates it when the payload changes", async () => {
     const firstEight = Object.fromEntries(
-      questionnaireArtifact.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
+      FRONTEND_QUESTIONNAIRE.questions.slice(0, 11).map(({ question_id }) => [question_id, 3]),
     );
     writeDraft({
       ...createEmptyDraft(),
@@ -563,20 +700,22 @@ describe("/quiz canonical twelve-question journey", () => {
       }),
     );
 
-    const first = await renderQuiz("/quiz?q=12");
+    const first = await renderQuiz(12);
     fireEvent.click(screen.getAllByRole("radio")[2]);
     await screen.findByRole("alert");
+    expect(screen.getByRole("progressbar").getAttribute("aria-valuenow")).toBe("12");
     first.unmount();
 
-    const refreshed = await renderQuiz("/quiz?q=12");
+    const refreshed = await renderQuiz(12);
+    expect(screen.getByRole("progressbar").getAttribute("aria-valuenow")).toBe("11");
     fireEvent.click(screen.getAllByRole("radio")[2]);
     await waitFor(() => expect(submissions).toHaveLength(2));
     expect(submissions[1]!.request_id).toBe(submissions[0]!.request_id);
 
     // Rotating the payload requires a different answer: navigate to q11,
     // pick a different choice, advance to q12, and resubmit.
-    await act(async () => refreshed.router.navigate("/quiz?q=11"));
-    await screen.findByText(questionnaireArtifact.questions[10]!.title_ko);
+    await act(async () => refreshed.router.navigate("/quiz", { state: quizNavigationState(11) }));
+    await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[10]!.title_ko);
     fireEvent.click(screen.getAllByRole("radio")[1]);
     await waitFor(() =>
       expect(
@@ -585,7 +724,7 @@ describe("/quiz canonical twelve-question journey", () => {
         }).answers.q11,
       ).toBe(2),
     );
-    await screen.findByText(questionnaireArtifact.questions[11]!.title_ko);
+    await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[11]!.title_ko);
     fireEvent.click(screen.getAllByRole("radio")[2]);
     await waitFor(() => expect(submissions).toHaveLength(3));
     expect(submissions[2]!.request_id).not.toBe(submissions[1]!.request_id);
@@ -609,7 +748,7 @@ describe("/quiz canonical twelve-question journey", () => {
     },
   ])("ignores a delayed $label failure after browser Back leaves q12", async ({ response }) => {
     const allAnswers = Object.fromEntries(
-      questionnaireArtifact.questions.map(({ question_id }) => [question_id, 3]),
+      FRONTEND_QUESTIONNAIRE.questions.map(({ question_id }) => [question_id, 3]),
     );
     writeDraft({
       ...createEmptyDraft(),
@@ -634,25 +773,27 @@ describe("/quiz canonical twelve-question journey", () => {
       }),
     );
     const router = createMemoryRouter(appRoutes, {
-      initialEntries: ["/quiz?q=11", "/quiz?q=12"],
+      initialEntries: [quizEntry(11), quizEntry(12)],
       initialIndex: 1,
     });
     render(<RouterProvider router={router} />);
-    await screen.findByText(questionnaireArtifact.questions[11]!.title_ko);
+    await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[11]!.title_ko);
 
     const selectedOption = screen.getAllByRole("radio")[2] as HTMLButtonElement;
     fireEvent.click(selectedOption);
     await waitFor(() => expect(selectedOption.disabled).toBe(true));
+    expect(screen.getByRole("progressbar").getAttribute("aria-valuenow")).toBe("12");
     await act(async () => router.navigate(-1));
-    await screen.findByText(questionnaireArtifact.questions[10]!.title_ko);
+    await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[10]!.title_ko);
     await waitFor(() => expect(postSignal?.aborted).toBe(true));
+    expect(screen.getByRole("progressbar").getAttribute("aria-valuenow")).toBe("10");
 
     await act(async () => {
       resolvePost(response());
       await delayedPost;
     });
 
-    expect(router.state.location.search).toBe("?q=11");
+    expectQuestion(router, 11);
     expect(screen.queryByRole("alert")).toBeNull();
     expect(screen.queryByRole("button", { name: "다음 질문" })).toBeNull();
     expect(window.localStorage.getItem(PENDING_PROFILE_SUBMISSION_KEY)).not.toBeNull();

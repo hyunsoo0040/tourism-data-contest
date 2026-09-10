@@ -390,6 +390,220 @@
   }
 }
 
+/* The home photo feature introduces optional input without a call to action. */
+.up-main .photo-feature--intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 48px;
+  padding: 44px;
+}
+
+.up-main .photo-intro-copy h2 {
+  font-size: clamp(30px, 3.3vw, 44px);
+  line-height: 1.25;
+}
+
+.up-main .photo-intro-copy > p {
+  max-width: 510px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.up-main .photo-intro-note {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 24px;
+  color: #607086;
+}
+
+.up-main .photo-intro-note span {
+  border-left: 3px solid var(--brand);
+  padding-left: 9px;
+  color: #92513a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.up-main .photo-intro-note small {
+  font-size: 13px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.up-main .photo-mood-preview {
+  min-width: 0;
+  padding-block: 24px 8px;
+}
+
+.up-main .photo-mood-scenes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 10px;
+}
+
+.up-main .photo-mood-frame {
+  min-width: 0;
+  margin: 0;
+  padding: 8px 8px 12px;
+  border: 1px solid #e6e7e5;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 12px 24px rgba(39, 55, 47, .09);
+}
+
+.up-main .photo-mood-scene {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  border-radius: 2px;
+}
+
+.up-main .photo-mood-frame figcaption {
+  padding-top: 12px;
+  color: #526257;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.up-main .photo-mood-frame--warm {
+  transform: rotate(-7deg) translateY(9px);
+}
+
+.up-main .photo-mood-frame--warm .photo-mood-scene {
+  background: radial-gradient(circle at 65% 30%, #fff2c6 0 11%, transparent 12%),
+    linear-gradient(175deg, #e9b38b, #f5d4a7 60%, #be9477 61%, #967858);
+}
+
+.up-main .photo-mood-frame--nature {
+  z-index: 1;
+  transform: translateY(-14px) rotate(2deg);
+}
+
+.up-main .photo-mood-frame--nature .photo-mood-scene {
+  background: linear-gradient(155deg, #dce9e0, #b3cbb9);
+}
+
+.up-main .photo-mood-frame--nature .photo-mood-scene::before,
+.up-main .photo-mood-frame--nature .photo-mood-scene::after {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 80%;
+  border-radius: 50% 50% 0 0;
+  background: #83a18a;
+  left: -45%;
+  bottom: -20%;
+  transform: rotate(30deg);
+}
+
+.up-main .photo-mood-frame--nature .photo-mood-scene::after {
+  left: 5%;
+  bottom: -40%;
+  background: #456f5c;
+  transform: rotate(-25deg);
+}
+
+.up-main .photo-mood-frame--open {
+  transform: rotate(8deg) translateY(12px);
+}
+
+.up-main .photo-mood-frame--open .photo-mood-scene {
+  background: linear-gradient(#bad4df, #e5ece6 54%, #86b3bd 55%, #61949f 80%, #dcd7bd 81%);
+}
+
+.up-main .photo-mood-preview .photo-mood-caption {
+  margin: 32px 0 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 920px) {
+  .up-main .photo-feature--intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .up-main .photo-mood-preview {
+    width: min(100%, 420px);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .up-main .photo-feature--intro {
+    padding: 28px 24px;
+  }
+
+  .up-main .photo-intro-copy > p {
+    font-size: 14px;
+  }
+
+  .up-main .photo-mood-frame {
+    padding: 5px 5px 9px;
+  }
+
+  .up-main .photo-mood-frame figcaption {
+    padding-top: 9px;
+    font-size: 11px;
+  }
+}
+
+/* Clip horizontal decoration without creating an ancestor scroll container
+ * that prevents the home header from sticking to the document viewport. */
+.up-main {
+  overflow-x: clip;
+}
+
+.up-main main > section[id] {
+  scroll-margin-top: calc(var(--main-header-height, 75px) + 16px);
+}
+
+/* Keep desktop typography consistent across the upstream 1280–1600px
+ * layout breakpoint. The broad hero paragraph rule must not enlarge the
+ * phone preview's miniature descriptions. */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .up-main .nav-menu {
+    font-size: 15px;
+  }
+
+  .up-main .badge,
+  .up-main .step p,
+  .up-main .place p,
+  .up-main .data-item span,
+  .up-main footer {
+    font-size: 14px;
+  }
+
+  .up-main .hero p,
+  .up-main .step strong {
+    font-size: 19px;
+  }
+
+  .up-main .mini-hero p {
+    font-size: 14px;
+  }
+
+  .up-main .match p {
+    font-size: 13px;
+  }
+
+  .up-main .btn,
+  .up-main .section-head p,
+  .up-main .card p {
+    font-size: 16px;
+  }
+
+  .up-main .data-item b {
+    font-size: 18px;
+  }
+}
+
 /* Remote experience-type refinements live here so generated CSS stays reproducible. */
 .up-main .type-visual {
   display: grid;
@@ -487,6 +701,12 @@
   font-size: 16px;
   line-height: 1.7;
   word-break: keep-all;
+}
+
+@media (min-width: 921px) {
+  .up-main .flow--four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 920px) {

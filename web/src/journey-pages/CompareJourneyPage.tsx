@@ -4,7 +4,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   ApiRequestError,
   fetchRecommendationComparison,
-  fetchRecommendationResults,
   recommendationErrorCode,
   type ComparisonRow,
   type RecommendationResultsResponse,
@@ -20,6 +19,12 @@ import { useJourneyAnnouncements } from "../app/AppShell";
 import { clearCurrentRecommendationReferenceIfMatches } from "../features/profile/ProfileRecommendationCTA";
 import { RecommendationShell } from "../features/recommendations/RecommendationShell";
 import { useOperatingInformation } from "../features/recommendations/useOperatingInformation";
+import { useTripContext } from "../features/recommendations/useTripContext";
+import { TripContext, visibleFacilityFacts } from "../features/recommendations/TripContext";
+import { fetchRecommendationEnvelope, type GroundedResults } from "../api/grounded-recommendation";
+import { fetchGroundedComparison, type GroundedDetail } from "../api/grounded-detail";
+import { GroundedComparisonView } from "../features/recommendations/GroundedRecommendationViews";
+import { RECOMMENDATION_ORDER_DESCRIPTION, SIMILARITY_DESCRIPTION } from "../features/recommendations/PreferenceSimilarity";
 
 type TerminalCompareState = "RECOMMENDATION_RUN_NOT_FOUND" | "RECOMMENDATION_PIN_INVALID";
 
@@ -36,6 +41,7 @@ type CompareState =
   | { kind: "invalid"; message: string }
   | { kind: "terminal"; state: TerminalCompareState }
   | { kind: "error" }
+  | { kind: "grounded"; results: GroundedResults; details: GroundedDetail[] }
   | {
       kind: "success";
       results: RecommendationResultsResponse;
@@ -51,6 +57,7 @@ export function ComparePage() {
   const [attempt, setAttempt] = useState(0);
   const [state, setState] = useState<CompareState>({ kind: "loading" });
   const announcements = useJourneyAnnouncements();
+  const tripContext = useTripContext(runId, state.kind === "success");
   const operatingInformation = useOperatingInformation(
     runId,
     state.kind === "success" ? state.placeIds : [],
@@ -72,10 +79,20 @@ export function ComparePage() {
 
     const controller = new AbortController();
     setState({ kind: "loading" });
-    void fetchRecommendationResults(runId, { signal: controller.signal })
+    void fetchRecommendationEnvelope(runId, { signal: controller.signal })
       .then(async (results) => {
         if (controller.signal.aborted) return;
         const selectedIds = selection.place_ids;
+        if (results.schema_version === "itda.grounded-recommendation-results.v1") {
+          if (selection.release_sha256 !== results.run.authority.candidate_sha256 || !selectedIds.every((id) => results.run.items.some((item) => item.place_id === id))) {
+            clearCompareSelection();
+            setState({ kind: "invalid", message: "같은 추천 실행에서 장소 2~3곳을 다시 선택해 주세요." });
+            return;
+          }
+          const details = await fetchGroundedComparison(results, [...selectedIds], { signal: controller.signal });
+          if (!controller.signal.aborted) setState({ kind: "grounded", results, details });
+          return;
+        }
         const itemsById = new Map(results.run.items.map((item) => [item.place_id, item]));
         if (
           selection.release_sha256 !== results.release_disclosure.release_sha256 ||
@@ -164,6 +181,8 @@ export function ComparePage() {
     );
   }
 
+  if (state.kind === "grounded") return <GroundedComparisonView key={state.results.run.run_id} results={state.results} details={state.details} />;
+
   const photoRun =
     state.results.run.schema_version === "recommendation-run.v3" &&
     "photo_scores" in state.results.run
@@ -187,7 +206,8 @@ export function ComparePage() {
       <header className="page-intro recommendations-intro">
         <p className="eyebrow">같은 추천 실행의 장소 비교</p>
         <h1 ref={headingRef} tabIndex={-1}>선택한 장소 비교</h1>
-        <p>저장된 결과를 바꾸거나 다시 계산하지 않고 나란히 확인해요.</p>
+        <p>{SIMILARITY_DESCRIPTION}</p>
+        <p>{RECOMMENDATION_ORDER_DESCRIPTION}</p>
         <Link className="button button--secondary" to={`/recommendations/${encodeURIComponent(runId)}`}>
           추천 5곳으로 돌아가기
         </Link>
@@ -212,8 +232,20 @@ export function ComparePage() {
         placeNames={state.placeNames}
         rows={state.rows}
         placeIds={state.placeIds}
+        items={state.results.run.items}
         operatingInformation={operatingInformation}
       />
+      {tripContext.kind === "resolved" && state.placeIds.some((placeId) => visibleFacilityFacts(tripContext.places.get(placeId)).length > 0) && <section aria-label="선택한 장소의 편의시설 비교">
+        {state.placeIds.map((placeId, index) => visibleFacilityFacts(tripContext.places.get(placeId)).length > 0 && <section key={placeId} className="recommendation-copy-section">
+          <h2>{state.placeNames[index]}</h2>
+          <TripContext
+            place={tripContext.kind === "resolved" ? tripContext.places.get(placeId) : undefined}
+            loading={false}
+            checkedAt={tripContext.kind === "resolved" ? tripContext.response.checked_at : undefined}
+            mode={tripContext.kind === "resolved" ? tripContext.response.mode : undefined}
+          />
+        </section>)}
+      </section>}
       </article>
     </RecommendationShell>
   );

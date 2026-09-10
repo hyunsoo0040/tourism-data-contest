@@ -12,8 +12,8 @@ type SavedRow =
   | { state: "resolved"; reference: SavedPlaceReference; projection: SavedPlaceProjection }
   | { state: "temporary-failure"; reference: SavedPlaceReference };
 
-function rowName(row: SavedRow) {
-  return row.state === "resolved" ? row.projection.place_name_ko : row.reference.place_id;
+function rowName(row: SavedRow, index: number) {
+  return row.state === "resolved" ? row.projection.place_name_ko : `저장한 장소 ${index + 1}`;
 }
 
 function stateCopy(row: SavedRow) {
@@ -99,23 +99,27 @@ export function SavedSection({
         <p>{cleanupNotice}</p>
       )}
       <ul aria-label="저장한 장소 목록">
-        {rows.map((row) => {
-          const name = rowName(row);
+        {rows.map((row, index) => {
+          const name = rowName(row, index);
+          const location = row.state === "resolved" ? row.projection.region_name ?? row.projection.address_ko : null;
+          const accessibleName = location ? `${name} · ${location}` : name;
           const machineState =
             row.state === "resolved" ? row.projection.state : row.state.toUpperCase();
           return (
             <li
               data-saved-state={machineState}
               key={`${row.reference.release_sha256}:${row.reference.place_id}`}
+              style={{ minWidth: 0, overflowWrap: "anywhere" }}
             >
               <strong>{name}</strong>
+              {location && <p className="recommendation-location">{location}</p>}
               <p>{stateCopy(row)}</p>
               <button
-                aria-label={`${name} 저장에서 삭제`}
+                aria-label={`${accessibleName} 저장에서 삭제`}
                 className="button button--secondary"
                 onClick={() => {
                   onRemove(row.reference);
-                  setAnnouncement(`${name}을 저장에서 삭제했어요.`);
+                  setAnnouncement(`${accessibleName}을 저장에서 삭제했어요.`);
                 }}
                 type="button"
               >

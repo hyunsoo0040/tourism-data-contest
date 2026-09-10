@@ -9,6 +9,30 @@
 
 type PhotoJsonResponse = unknown;
 
+import { moodReviewSchema, confirmedMoodSchema, validateMoodReview, validateMoodConfirmation,
+  type MoodReview, type ConfirmedMood } from "../../api/visual-mood";
+
+export async function getPhotoJobMoodsRequest(jobId: string): Promise<MoodReview> {
+  const parsed = moodReviewSchema.safeParse(await requestJson(`/v1/photo-jobs/${encodeURIComponent(jobId)}/moods`,
+    { method: "GET", credentials: "same-origin" }, "사진 분위기 제안을 확인하지 못했어요."));
+  if (!parsed.success || parsed.data.job_id !== jobId || !await validateMoodReview(parsed.data)) {
+    throw new Error("사진 분위기 근거를 확인하지 못했어요.");
+  }
+  return parsed.data;
+}
+
+export async function confirmPhotoJobMoodsRequest(jobId: string, input: {
+  draft_sha256: string; choices: Array<{ candidate_id: string; included: boolean }>;
+}): Promise<ConfirmedMood> {
+  const parsed = confirmedMoodSchema.safeParse(await requestJson(`/v1/photo-jobs/${encodeURIComponent(jobId)}/moods/confirm`,
+    { method: "POST", credentials: "same-origin", headers: { "Content-Type": "application/json" }, body: JSON.stringify(input) },
+    "사진 분위기를 확정하지 못했어요."));
+  if (!parsed.success || parsed.data.job_id !== jobId || !await validateMoodConfirmation(parsed.data)) {
+    throw new Error("사진 분위기 확정 근거를 확인하지 못했어요.");
+  }
+  return parsed.data;
+}
+
 async function requestJson(
   path: string,
   init: RequestInit,

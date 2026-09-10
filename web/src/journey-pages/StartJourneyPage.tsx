@@ -2,12 +2,14 @@ import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 import { useJourneyDraft } from "../app/AppShell";
+import { JOURNEY_COPY } from "../content/journey.ko";
 import {
   questionnaireAnswersSchema,
   type TripConditionFormValues,
   type TripConditions,
 } from "../app/schemas";
 import { TripConditionForm } from "../features/journey/TripConditionForm";
+import { quizNavigationState } from "../features/journey/quizNavigation";
 import { createAndStorePreferenceProfile } from "../features/profile/profileSubmission";
 
 function formValues(conditions: Partial<TripConditions> | undefined): TripConditionFormValues {
@@ -36,7 +38,7 @@ export function StartPage() {
       current_route: "/quiz",
       current_question: 1,
     });
-    void navigate("/quiz?q=1");
+    void navigate("/quiz", { state: quizNavigationState(1) });
   };
 
   const applyEdit = async (conditions: TripConditions) => {
@@ -67,13 +69,12 @@ export function StartPage() {
   return (
     <article className="start-page">
       <header className="page-intro">
-        <p className="eyebrow">경주 여행 기대 프로필</p>
+        <p className="eyebrow">나의 여행 기대 프로필</p>
         <h1 id="start-heading" tabIndex={-1}>
-          이번 경주, 어떤 시간을 보내고 싶나요?
+          {JOURNEY_COPY.start.title}
         </h1>
         <p>
-          여행 조건과 아홉 가지 장면을 고르면, 지금 이 여행에서 기대하는 세 가지 경험을 보여드려요.
-          약 1분 걸려요.
+          {JOURNEY_COPY.start.legacyDescription}
         </p>
         <p className="privacy-note">계정 없이 진행하며, 답변은 이 브라우저에만 임시 저장돼요.</p>
       </header>
@@ -83,7 +84,7 @@ export function StartPage() {
         onDismissRecovery={dismissNotice}
         onReset={resetDraft}
         onSubmit={editMode ? (conditions) => void applyEdit(conditions) : beginQuiz}
-        primaryLabel={editMode ? "수정 내용 반영하기" : "취향 테스트 시작하기"}
+        primaryLabel={editMode ? "수정 내용 반영하기" : JOURNEY_COPY.start.primaryLabel}
         secondaryLabel={editMode ? "변경하지 않고 프로필로 돌아가기" : undefined}
         onSecondary={editMode ? () => void navigate("/profile") : undefined}
         busy={busy}

@@ -36,6 +36,9 @@ import {
 import type { PhotoTraitCandidatePayload } from "./PhotoTraitReview";
 import { DELETE_COPY, PhotoDeleteDialog } from "./PhotoDeleteDialog";
 import { PhotoStorageNotice } from "./PhotoStorageNotice";
+import { PhotoMoodConfirmation, type MoodConfirmationInput } from "./PhotoMoodConfirmation";
+import { moodReviewSchema, confirmedMoodSchema, validateMoodReview, validateMoodConfirmation,
+  type MoodReview, type ConfirmedMood } from "../../api/visual-mood";
 
 /**
  * Traveler entry, consent, local preflight, and bounded upload start.
@@ -63,6 +66,7 @@ type FlowState =
   | "uploading"
   | "polling"
   | "review"
+  | "mood_review"
   | "fallback";
 
 type FallbackKind =
@@ -82,6 +86,7 @@ function parseSnapshot(value: unknown): PhotoJobSnapshotLike | null {
   if (typeof value !== "object" || value === null) return null;
   const row = value as Record<string, unknown>;
   if (typeof row.job_id !== "string" || typeof row.state !== "string") return null;
+  if (row.analysis_family !== undefined && row.analysis_family !== "photo-mood-v1") return null;
   if (
     !["queued", "running", "succeeded", "failed", "expired", "deleted"].includes(row.state)
   ) {
@@ -99,6 +104,7 @@ export function PhotoPreferenceFlow({
   onNoPhoto,
   onJobCreated,
   onConfirmed,
+  onMoodConfirmed,
 }: {
   profileId: string;
   noticeVersion?: string;
@@ -108,9 +114,11 @@ export function PhotoPreferenceFlow({
     createPhotoJob: (input: {
       consent_accepted: boolean;
       consent_version: string;
-    }) => Promise<{ job_id: string; state: string }>;
+    }) => Promise<{ job_id: string; state: string; analysis_family?: "photo-mood-v1" }>;
     getPhotoJob: (jobId: string) => Promise<unknown>;
     getPhotoJobTraits?: (jobId: string) => Promise<unknown>;
+    getPhotoJobMoods?: (jobId: string) => Promise<unknown>;
+    confirmPhotoJobMoods?: (jobId: string, input: MoodConfirmationInput) => Promise<unknown>;
     requestPhotoDeletion?: (jobId: string) => Promise<{
       state: string;
       residue_verified?: boolean;
@@ -137,6 +145,7 @@ export function PhotoPreferenceFlow({
   onNoPhoto: () => void;
   onJobCreated?: (jobId: string) => void;
   onConfirmed?: (confirmed: ConfirmedTrait[], jobId: string) => void;
+  onMoodConfirmed?: (confirmed: ConfirmedMood, jobId: string) => void;
 }) {
   const [state, setState] = useState<FlowState>("entry");
   const [consentChecked, setConsentChecked] = useState(false);
@@ -150,6 +159,9 @@ export function PhotoPreferenceFlow({
   const [snapshot, setSnapshot] = useState<PhotoJobSnapshotLike | null>(null);
   const [fallback, setFallback] = useState<FallbackKind | null>(null);
   const [candidates, setCandidates] = useState<PhotoTraitCandidatePayload | null>(null);
+  const [analysisFamily, setAnalysisFamily] = useState<"photo-mood-v1" | null>(null);
+  const [moodReview, setMoodReview] = useState<MoodReview | null>(null);
+  const moodLoadRef = useRef<string | null>(null);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const deleteTriggerRef = useRef<HTMLButtonElement | null>(null);
   const [storageNotice, setStorageNotice] = useState(false);
@@ -174,6 +186,7 @@ export function PhotoPreferenceFlow({
   }, []);
 
   useEffect(() => revokeAll, [revokeAll]);
+  useEffect(() => () => { submitGenerationRef.current += 1; }, []);
 
   useLayoutEffect(() => {
     if (problem !== null || emptyError) summaryRef.current?.focus();
@@ -263,6 +276,9 @@ export function PhotoPreferenceFlow({
     setEmptyError(false);
     setSnapshot(null);
     setCandidates(null);
+    setMoodReview(null);
+    setAnalysisFamily(null);
+    moodLoadRef.current = null;
     setFallback(null);
     setJobId(null);
     durableJobIdRef.current = null;
@@ -291,6 +307,7 @@ export function PhotoPreferenceFlow({
     setState("uploading");
     setUploadTotal(rows.length);
     let createdJobId: string | null = null;
+    let analysisRequested = false;
     try {
       const created = await client.createPhotoJob({
         consent_accepted: true,
@@ -303,6 +320,8 @@ export function PhotoPreferenceFlow({
         return;
       }
       setJobId(created.job_id);
+      if (created.analysis_family !== undefined && created.analysis_family !== "photo-mood-v1") throw new Error("unsupported photo family");
+      setAnalysisFamily(created.analysis_family ?? null);
       const stored = writePhotoDraft({
         jobId: created.job_id,
         profileId,
@@ -321,6 +340,7 @@ export function PhotoPreferenceFlow({
       }
       if (generation !== submitGenerationRef.current) return;
       revokeAll();
+      analysisRequested = true;
       await client.submitPhotoJob?.(created.job_id);
       if (generation !== submitGenerationRef.current) return;
       setUploadOrdinal(0);
@@ -329,7 +349,7 @@ export function PhotoPreferenceFlow({
     } catch {
       if (generation !== submitGenerationRef.current) return;
       setUploadOrdinal(0);
-      setFallback(createdJobId === null ? "providerUnavailable" : "uploadUncertainty");
+      setFallback(createdJobId === null ? "providerUnavailable" : analysisRequested ? "analysisFailed" : "uploadUncertainty");
       setState("fallback");
     } finally {
       uploadingRef.current = false;
@@ -446,6 +466,25 @@ export function PhotoPreferenceFlow({
     if (snapshot === null) return;
     if (state !== "polling" && state !== "fallback") return;
     if (snapshot.state === "succeeded") {
+      if (snapshot.analysis_family === "photo-mood-v1" || analysisFamily === "photo-mood-v1") {
+        if (state !== "polling" || moodLoadRef.current === snapshot.job_id) return;
+        moodLoadRef.current = snapshot.job_id;
+        const generation = submitGenerationRef.current;
+        if (!client.getPhotoJobMoods) {
+          setFallback("unknown"); setState("fallback"); return;
+        }
+        void client.getPhotoJobMoods(snapshot.job_id).then(async (raw) => {
+          const parsed = moodReviewSchema.safeParse(raw);
+          if (!parsed.success || parsed.data.job_id !== snapshot.job_id || parsed.data.preference_profile_id !== profileId ||
+            !await validateMoodReview(parsed.data)) throw new Error("invalid mood review");
+          if (generation !== submitGenerationRef.current) return;
+          setMoodReview(parsed.data); setAnalysisFamily("photo-mood-v1"); setState("mood_review");
+        }).catch(() => {
+          if (generation !== submitGenerationRef.current) return;
+          setFallback("unknown"); setState("fallback");
+        });
+        return;
+      }
       if (isValidCandidatePayload(snapshot.trait_candidates)) {
         setCandidates(snapshot.trait_candidates);
         setState("review");
@@ -500,7 +539,27 @@ export function PhotoPreferenceFlow({
       setFallback(verified ? "deletedVerified" : "deletePending");
       setState("fallback");
     }
-  }, [client, snapshot, state]);
+  }, [client, snapshot, state, analysisFamily, profileId]);
+
+  const confirmMoods = async (input: MoodConfirmationInput) => {
+    if (!client.confirmPhotoJobMoods || !jobId || !moodReview) throw new Error("mood confirmation unavailable");
+    const generation = submitGenerationRef.current;
+    const stored = moodReview.confirmation;
+    const selected = input.choices.filter((row) => row.included).map((row) => row.candidate_id).sort();
+    if (stored && JSON.stringify(selected) !== JSON.stringify(stored.choices.filter((row) => row.included).map((row) => row.candidate_id).sort())) {
+      throw new Error("stored mood selection cannot change");
+    }
+    const parsed = confirmedMoodSchema.safeParse(stored ?? await client.confirmPhotoJobMoods(jobId, input));
+    if (!parsed.success || !await validateMoodConfirmation(parsed.data, moodReview) ||
+      parsed.data.job_id !== jobId || parsed.data.preference_profile_id !== profileId) throw new Error("invalid mood confirmation");
+    if (!stored && JSON.stringify(parsed.data.choices) !== JSON.stringify([...input.choices].sort((a, b) => a.candidate_id.localeCompare(b.candidate_id)))) throw new Error("mood confirmation differs from the chosen draft");
+    if (generation !== submitGenerationRef.current) return;
+    setMoodReview((previous) => previous ? { ...previous, confirmation: parsed.data } : previous);
+    onMoodConfirmed?.(parsed.data, jobId);
+    const count = parsed.data.moods.filter((row) => row.value !== null).length;
+    setAnnounce(count ? `사진 분위기 ${count}개를 직접 확정했어요.` : "사진 분위기 없이 설문 기준으로 계속해요.");
+    setConfirmAnnounced(true);
+  };
 
   // The batch CTA is the single caller of the explicit confirm POST; edits,
   // blurs, Enter, and navigation never reach this path. Only included,
@@ -692,6 +751,15 @@ export function PhotoPreferenceFlow({
         />
       </>
     );
+  }
+
+  if (state === "mood_review" && moodReview !== null) {
+    return <>
+      <PhotoMoodConfirmation review={moodReview} onConfirm={confirmMoods} onSkip={goNoPhoto} />
+      {confirmAnnounced && <p role="status" className="privacy-note">{announce}</p>}
+      <button ref={deleteTriggerRef} type="button" className="button button--text-destructive" onClick={() => setDeleteDialogOpen(true)}>{DELETE_COPY.trigger}</button>
+      <PhotoDeleteDialog open={deleteDialogOpen} onClose={() => setDeleteDialogOpen(false)} onConfirm={() => requestDeletion()} triggerRef={deleteTriggerRef} />
+    </>;
   }
 
   if (state === "review" && candidates !== null) {

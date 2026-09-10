@@ -1,22 +1,23 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import {
   ApiRequestError,
+  QuestionnaireContractError,
   type QuestionnaireDefinition,
 } from "../api/api";
 import { useJourneyDraft } from "../app/AppShell";
 import { tripConditionsSchema, type QuestionnaireAnswers } from "../app/schemas";
-import { QuestionCard, QuestionnaireBoundary } from "../features/journey/QuestionCard";
+import { QuestionCard } from "../features/journey/QuestionCard";
+import { FRONTEND_QUESTIONNAIRE } from "../content/questionnaire";
 import { QuizProgress } from "../features/journey/QuizProgress";
 import { createAndStorePreferenceProfile } from "../features/profile/profileSubmission";
-
-function requestedOrdinal(search: string): number | null {
-  const raw = new URLSearchParams(search).get("q");
-  if (raw === null || !/^\d+$/.test(raw)) return null;
-  const value = Number(raw);
-  return Number.isInteger(value) && value >= 1 && value <= 12 ? value : null;
-}
+import {
+  legacyQuizOrdinal,
+  quizNavigationState,
+  quizOrdinal,
+  readQuizNavigationState,
+} from "../features/journey/quizNavigation";
 
 function validationQuestionOrdinal(body: unknown): number | null {
   if (typeof body !== "object" || body === null || !("detail" in body)) return null;
@@ -52,32 +53,41 @@ function QuizContent({ questionnaire }: { questionnaire: QuestionnaireDefinition
   const [busy, setBusy] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [validationOrdinal, setValidationOrdinal] = useState<number | null>(null);
-  const requested = requestedOrdinal(location.search);
-  const editingProfile =
-    (location.state as { editingProfile?: boolean } | null)?.editingProfile === true;
-  const editNavigationState = useMemo(
-    () => (editingProfile ? { editingProfile: true } : undefined),
-    [editingProfile],
-  );
-  const ordinal = requested ?? 1;
-  currentOrdinalRef.current = ordinal;
+  const navigationState = readQuizNavigationState(location.state);
+  const editingProfile = navigationState.editingProfile;
+  const requested = legacyQuizOrdinal(location.search)
+    ?? navigationState.questionOrdinal
+    ?? (draft?.current_route === "/quiz" ? quizOrdinal(draft.current_question) : null)
+    ?? 1;
   const firstIncomplete = questionnaire.question_order.find((candidate) => {
     const item = questionnaire.questions.find(({ ordinal: value }) => value === candidate);
     return item ? draft?.answers[item.question_id as keyof QuestionnaireAnswers] === undefined : true;
   });
-  const availableOrdinal =
-    firstIncomplete !== undefined && ordinal > firstIncomplete ? firstIncomplete : ordinal;
-  const redirecting = requested === null || availableOrdinal !== ordinal;
-  const question = questionnaire.questions.find(({ ordinal: value }) => value === availableOrdinal);
+  const ordinal =
+    firstIncomplete !== undefined && requested > firstIncomplete ? firstIncomplete : requested;
+  currentOrdinalRef.current = ordinal;
+  const redirecting = location.search !== "" || location.hash !== ""
+    || navigationState.questionOrdinal !== ordinal;
+  const question = questionnaire.questions.find(({ ordinal: value }) => value === ordinal);
 
   useEffect(() => {
     if (redirecting) {
-      void navigate(`/quiz?q=${availableOrdinal}`, { replace: true, state: editNavigationState });
-      return;
+      void navigate("/quiz", { replace: true, state: quizNavigationState(ordinal, editingProfile) });
     }
+  }, [editingProfile, navigate, ordinal, redirecting]);
+
+  useEffect(() => {
+    if (redirecting) return;
+    if (draft?.current_route !== "/quiz" || draft.current_question !== ordinal) {
+      updateDraft({ current_route: "/quiz", current_question: ordinal });
+    }
+  }, [draft?.current_question, draft?.current_route, ordinal, redirecting, updateDraft]);
+
+  useEffect(() => {
+    if (redirecting) return;
     const focusTimer = window.setTimeout(() => headingRef.current?.focus({ preventScroll: true }), 0);
     return () => window.clearTimeout(focusTimer);
-  }, [availableOrdinal, editNavigationState, navigate, ordinal, redirecting]);
+  }, [ordinal, redirecting]);
 
   useEffect(() => {
     if (previousOrdinalRef.current !== null && previousOrdinalRef.current !== ordinal) {
@@ -117,7 +127,12 @@ function QuizContent({ questionnaire }: { questionnaire: QuestionnaireDefinition
   const currentIndex = questionnaire.question_order.indexOf(ordinal);
   const previousOrdinal = questionnaire.question_order[currentIndex - 1];
   const nextOrdinal = questionnaire.question_order[currentIndex + 1];
-  const answered = questionnaire.question_order.filter((candidate) => {
+  // Saved answers survive Back; the progress follows the visible position.
+  // Count the final answer once submission begins, including retryable errors.
+  const progressEndIndex = currentIndex + Number(
+    nextOrdinal === undefined && (busy || submitError !== null),
+  );
+  const answered = questionnaire.question_order.slice(0, progressEndIndex).filter((candidate) => {
     const item = questionnaire.questions.find(({ ordinal: value }) => value === candidate);
     return item ? draft?.answers[item.question_id as keyof QuestionnaireAnswers] !== undefined : false;
   });
@@ -134,7 +149,7 @@ function QuizContent({ questionnaire }: { questionnaire: QuestionnaireDefinition
       answers,
     });
     if (nextOrdinal !== undefined) {
-      void navigate(`/quiz?q=${nextOrdinal}`, { state: editNavigationState });
+      void navigate("/quiz", { state: quizNavigationState(nextOrdinal, editingProfile) });
       return;
     }
     window.setTimeout(() => void submitProfileWithAnswers(answers), 0);
@@ -189,7 +204,9 @@ function QuizContent({ questionnaire }: { questionnaire: QuestionnaireDefinition
       );
     } catch (error) {
       if (!isCurrentSubmission()) return;
-      if (error instanceof ApiRequestError && error.status === 422) {
+      if (error instanceof QuestionnaireContractError) {
+        setSubmitError("질문과 점수 계산 구성이 맞지 않아요. 페이지를 새로고침한 뒤 다시 시도해 주세요.");
+      } else if (error instanceof ApiRequestError && error.status === 422) {
         setValidationOrdinal(validationQuestionOrdinal(error.body));
         setSubmitError("확인할 답변이 있어요.");
       } else if (
@@ -221,7 +238,7 @@ function QuizContent({ questionnaire }: { questionnaire: QuestionnaireDefinition
       return;
     }
     updateDraft({ current_route: "/quiz", current_question: previousOrdinal });
-    void navigate(`/quiz?q=${previousOrdinal}`, { state: editNavigationState });
+    void navigate("/quiz", { state: quizNavigationState(previousOrdinal, editingProfile) });
   };
 
   const reviewAnswers = () => {
@@ -230,7 +247,7 @@ function QuizContent({ questionnaire }: { questionnaire: QuestionnaireDefinition
     setValidationOrdinal(null);
     if (targetOrdinal !== null) {
       updateDraft({ current_route: "/quiz", current_question: targetOrdinal });
-      void navigate(`/quiz?q=${targetOrdinal}`, { state: editNavigationState });
+      void navigate("/quiz", { state: quizNavigationState(targetOrdinal, editingProfile) });
       return;
     }
     headingRef.current?.focus();
@@ -254,7 +271,7 @@ function QuizContent({ questionnaire }: { questionnaire: QuestionnaireDefinition
         onBack={goBack}
         onRestart={() => {
           updateDraft({ current_route: "/quiz", current_question: 1, answers: {} });
-          void navigate("/quiz?q=1", { state: editNavigationState });
+          void navigate("/quiz", { state: quizNavigationState(1, editingProfile) });
         }}
       />
       {submitError ? (
@@ -291,5 +308,5 @@ export function QuizPage() {
     );
   }
 
-  return <QuestionnaireBoundary>{(questionnaire) => <QuizContent questionnaire={questionnaire} />}</QuestionnaireBoundary>;
+  return <QuizContent questionnaire={FRONTEND_QUESTIONNAIRE} />;
 }

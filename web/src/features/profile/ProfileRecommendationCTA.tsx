@@ -7,26 +7,42 @@ import {
   profileSubmissionFingerprint,
   recommendationErrorCode,
   type PreferenceProfile,
+  type RecommendationRequest,
 } from "../../api/api";
 import { useJourneyAnnouncements } from "../../app/AppShell";
+import { groundedTripForRecommendation, groundedTripInputSha256 } from "../journey/groundedTrip";
+import { travelRegionName, useTravelRegions } from "../../api/recommendation-regions";
+import { readConfirmedMoodReference } from "../photo/photoProjection";
+
+type RecommendationPurpose = NonNullable<RecommendationRequest["purpose"]>;
+const PURPOSES: ReadonlyArray<{ value: RecommendationPurpose; label: string }> = [
+  { value: "SIGHTSEEING", label: "볼거리·체험" },
+  { value: "FOOD", label: "먹거리" },
+  { value: "LODGING", label: "숙소" },
+  { value: "MIXED", label: "모두 둘러보기" },
+];
 
 type PendingRecommendation = {
-  schema_version: "phase5-pending-recommendation-v2";
+  schema_version: "phase5-pending-recommendation-v2" | "phase5-pending-recommendation-v3" | "phase5-pending-recommendation-v4";
   request_id: string;
   preference_profile_id: string;
   preference_input_sha256: string;
   photo_job_id: string | null;
+  purpose?: RecommendationPurpose;
+  grounded_input_sha256?: string;
 };
 
 type CurrentRecommendation = {
-  schema_version: "phase5-current-recommendation-v2";
+  schema_version: "phase5-current-recommendation-v2" | "phase5-current-recommendation-v3" | "phase5-current-recommendation-v4";
   recommendation_run_id: string;
   preference_profile_id: string;
   preference_input_sha256: string;
   photo_job_id: string | null;
+  purpose?: RecommendationPurpose;
+  grounded_input_sha256?: string;
 };
 
-type CTAState = "idle" | "loading" | "unavailable" | "error";
+type CTAState = "idle" | "loading" | "unavailable" | "insufficient" | "error" | "legacyPhoto";
 
 const PENDING_KEY = "itda:phase5:pending-recommendation:v2";
 const CURRENT_KEY = "itda:phase5:current-recommendation:v2";
@@ -57,12 +73,17 @@ function parsePending(value: string | null): PendingRecommendation | null {
         "preference_profile_id",
         "request_id",
         "schema_version",
+        ...(["phase5-pending-recommendation-v3", "phase5-pending-recommendation-v4"].includes(String((parsed as Record<string, unknown>).schema_version)) ? ["purpose"] : []),
+        ...((parsed as Record<string, unknown>).schema_version === "phase5-pending-recommendation-v4" ? ["grounded_input_sha256"] : []),
       ])
     ) {
       return null;
     }
     const pending = parsed as Record<string, unknown>;
-    return pending.schema_version === "phase5-pending-recommendation-v2" &&
+    return (pending.schema_version === "phase5-pending-recommendation-v2" ||
+      (["phase5-pending-recommendation-v3", "phase5-pending-recommendation-v4"].includes(String(pending.schema_version)) && PURPOSES.some(({ value }) => value === pending.purpose))) &&
+      (pending.schema_version !== "phase5-pending-recommendation-v4" ||
+        (typeof pending.grounded_input_sha256 === "string" && SHA256_PATTERN.test(pending.grounded_input_sha256))) &&
       typeof pending.request_id === "string" &&
       pending.request_id.length > 0 &&
       pending.request_id.length <= 160 &&
@@ -94,12 +115,17 @@ function parseCurrent(value: string | null): CurrentRecommendation | null {
         "preference_profile_id",
         "recommendation_run_id",
         "schema_version",
+        ...(["phase5-current-recommendation-v3", "phase5-current-recommendation-v4"].includes(String((parsed as Record<string, unknown>).schema_version)) ? ["purpose"] : []),
+        ...((parsed as Record<string, unknown>).schema_version === "phase5-current-recommendation-v4" ? ["grounded_input_sha256"] : []),
       ])
     ) {
       return null;
     }
     const current = parsed as Record<string, unknown>;
-    return current.schema_version === "phase5-current-recommendation-v2" &&
+    return (current.schema_version === "phase5-current-recommendation-v2" ||
+      (["phase5-current-recommendation-v3", "phase5-current-recommendation-v4"].includes(String(current.schema_version)) && PURPOSES.some(({ value }) => value === current.purpose))) &&
+      (current.schema_version !== "phase5-current-recommendation-v4" ||
+        (typeof current.grounded_input_sha256 === "string" && SHA256_PATTERN.test(current.grounded_input_sha256))) &&
       typeof current.recommendation_run_id === "string" &&
       current.recommendation_run_id.length > 0 &&
       current.recommendation_run_id.length <= 160 &&
@@ -178,24 +204,38 @@ function belongsToProfile(
 }
 
 function modeMatches(
-  value: { preference_profile_id: string; preference_input_sha256: string; photo_job_id: string | null },
+  value: { preference_profile_id: string; preference_input_sha256: string; photo_job_id: string | null; purpose?: RecommendationPurpose; grounded_input_sha256?: string },
   profile: PreferenceProfile,
   inputSha256: string,
   photoJobId: string | null,
+  purpose: RecommendationPurpose,
+  groundedSha256: string | null,
 ) {
-  return belongsToProfile(value, profile, inputSha256) && value.photo_job_id === photoJobId;
+  // Historical runs considered every category, so they only match MIXED.
+  return belongsToProfile(value, profile, inputSha256) && value.photo_job_id === photoJobId &&
+    (value.purpose ?? "MIXED") === purpose && (value.grounded_input_sha256 ?? null) === groundedSha256;
 }
 
 export function ProfileRecommendationCTA({
   profile,
   photoJobId = null,
+  onClearPhoto,
 }: {
   profile: PreferenceProfile;
   photoJobId?: string | null;
+  onClearPhoto?: () => void;
 }) {
   const navigate = useNavigate();
   const [state, setState] = useState<CTAState>("idle");
+  const [purpose, setPurpose] = useState<RecommendationPurpose>(() => {
+    const stored = readCurrent() ?? readPending();
+    return stored?.preference_profile_id === profile.profile_id ? stored.purpose ?? "MIXED" : "SIGHTSEEING";
+  });
   const [inputSha256, setInputSha256] = useState<string | null>(null);
+  const [groundedSha256, setGroundedSha256] = useState<string | null>(null);
+  const groundedInput = groundedTripForRecommendation();
+  const travelRegions = useTravelRegions(groundedInput?.region_code != null);
+  const groundedInputKey = JSON.stringify(groundedInput);
   const stateHeadingRef = useRef<HTMLHeadingElement>(null);
   const activeRequestRef = useRef<AbortController | null>(null);
   const generationRef = useRef(0);
@@ -215,7 +255,7 @@ export function ProfileRecommendationCTA({
     if (current !== null && current.preference_profile_id !== profile.profile_id) {
       writeCurrent(null);
     }
-  }, [profile.profile_id, photoJobId]);
+  }, [profile.profile_id, photoJobId, purpose, groundedInputKey]);
 
   useEffect(
     () => () => {
@@ -233,19 +273,23 @@ export function ProfileRecommendationCTA({
     // The fingerprint uses the profile's own generation tuple: legacy v1
     // profiles keep matching their historical pending/current records instead
     // of being hashed as if they were v2 submissions.
-    void profileSubmissionFingerprint(profile.trip_conditions, profile).then((digest) => {
+    void Promise.all([
+      profileSubmissionFingerprint(profile.trip_conditions, profile),
+      groundedTripInputSha256(groundedInput),
+    ]).then(([digest, groundedDigest]) => {
       if (!active) return;
       const pending = readPending();
       const current = readCurrent();
-      if (pending !== null && !modeMatches(pending, profile, digest, photoJobId)) writePending(null);
-      if (current !== null && !modeMatches(current, profile, digest, photoJobId)) writeCurrent(null);
+      if (pending !== null && !modeMatches(pending, profile, digest, photoJobId, purpose, groundedDigest)) writePending(null);
+      if (current !== null && !modeMatches(current, profile, digest, photoJobId, purpose, groundedDigest)) writeCurrent(null);
       setInputSha256(digest);
+      setGroundedSha256(groundedDigest);
       setState("idle");
     });
     return () => {
       active = false;
     };
-  }, [photoJobId, profile]);
+  }, [photoJobId, profile, purpose, groundedInputKey]);
 
   useEffect(() => {
     if (state === "unavailable" || state === "error") {
@@ -261,20 +305,26 @@ export function ProfileRecommendationCTA({
   const submit = async () => {
     if (state === "loading" || inputSha256 === null) return;
     const current = readCurrent();
-    if (current !== null && modeMatches(current, profile, inputSha256, photoJobId)) {
+    if (current !== null && modeMatches(current, profile, inputSha256, photoJobId, purpose, groundedSha256)) {
       void navigate(`/recommendations/${encodeURIComponent(current.recommendation_run_id)}`);
       return;
     }
+    if (photoJobId !== null && readConfirmedMoodReference(profile.profile_id)?.photo_job_id !== photoJobId) {
+      setState("legacyPhoto");
+      return;
+    }
     const stored = readPending();
-    const pending =
-      stored !== null && modeMatches(stored, profile, inputSha256, photoJobId)
+    const pending: PendingRecommendation =
+      stored !== null && modeMatches(stored, profile, inputSha256, photoJobId, purpose, groundedSha256)
         ? stored
         : {
-            schema_version: "phase5-pending-recommendation-v2" as const,
+            schema_version: groundedSha256 === null ? "phase5-pending-recommendation-v3" : "phase5-pending-recommendation-v4",
             request_id: crypto.randomUUID(),
             preference_profile_id: profile.profile_id,
             preference_input_sha256: inputSha256,
             photo_job_id: photoJobId,
+            purpose,
+            ...(groundedSha256 === null ? {} : { grounded_input_sha256: groundedSha256 }),
           };
     writePending(pending);
     setState("loading");
@@ -287,6 +337,8 @@ export function ProfileRecommendationCTA({
         {
           request_id: pending.request_id,
           preference_profile_id: pending.preference_profile_id,
+          purpose,
+          grounded_input: groundedInput,
           ...(pending.photo_job_id === null
             ? {}
             : { photo_job_id: pending.photo_job_id }),
@@ -304,11 +356,13 @@ export function ProfileRecommendationCTA({
         return;
       }
       writeCurrent({
-        schema_version: "phase5-current-recommendation-v2",
+        schema_version: groundedSha256 === null ? "phase5-current-recommendation-v3" : "phase5-current-recommendation-v4",
         recommendation_run_id: created.recommendation_run_id,
         preference_profile_id: created.preference_profile_id,
         preference_input_sha256: created.preference_input_sha256,
         photo_job_id: photoJobId,
+        purpose,
+        ...(groundedSha256 === null ? {} : { grounded_input_sha256: groundedSha256 }),
       });
       writePending(null);
       void navigate(`/recommendations/${encodeURIComponent(created.recommendation_run_id)}`);
@@ -320,6 +374,8 @@ export function ProfileRecommendationCTA({
         recommendationErrorCode(error.body) === "NO_ACTIVE_SCORED_RELEASE"
       ) {
         setState("unavailable");
+      } else if (error instanceof ApiRequestError && recommendationErrorCode(error.body) === "INSUFFICIENT_ELIGIBLE_CANDIDATES") {
+        setState("insufficient");
       } else {
         setState("error");
       }
@@ -328,15 +384,43 @@ export function ProfileRecommendationCTA({
     }
   };
 
+  const loading = state === "loading";
+  const purposeSelector = (
+    <>
+    <p className="recommendation-region-choice" style={{ flexBasis: "100%" }}>여행 지역: <strong>{travelRegionName(groundedInput?.region_code, travelRegions.regions)}</strong>{" · "}
+      <a href="/start?mode=edit">지역·조건 변경</a></p>
+    <label className="field-label" style={{ flexBasis: "100%" }}>
+      어떤 장소를 찾고 있나요?
+      <select
+        aria-label="추천 여행 목적"
+        value={purpose}
+        disabled={loading}
+        onChange={(event) => setPurpose(event.target.value as RecommendationPurpose)}
+        style={{ display: "block", width: "100%", marginTop: "0.5rem", padding: "0.75rem", border: "1px solid var(--border, #d8d4ce)", borderRadius: "0.75rem", background: "var(--surface, #fff)", color: "inherit" }}
+      >
+        {PURPOSES.map((option) => <option value={option.value} key={option.value}>{option.label}</option>)}
+      </select>
+    </label>
+    </>
+  );
+
+  if (state === "insufficient") {
+    return <>{purposeSelector}<section className="profile-state" role="status" style={{ flexBasis: "100%" }}>
+      <h2>이 조건에 맞는 여행지가 아직 충분하지 않아요.</h2>
+      <p>여행 목적을 넓히거나 다른 지역을 선택해 주세요. 선택한 지역 밖의 장소를 대신 추천하지 않아요.</p>
+    </section></>;
+  }
+
   if (state === "unavailable") {
     return (
+      <>{purposeSelector}
       <section
         className="profile-state"
         data-status="NO_ACTIVE_SCORED_RELEASE"
         style={{ flexBasis: "100%" }}
       >
         <h2 ref={stateHeadingRef} tabIndex={-1}>추천 준비가 아직 끝나지 않았어요.</h2>
-        <p>검증된 점수 프로필 24곳이 모두 준비된 뒤에만 추천을 보여드려요. 잠시 후 다시 확인해 주세요.</p>
+        <p>새 여행지 자료를 확인하고 있어요. 준비가 끝나면 추천을 다시 볼 수 있어요.</p>
         <button type="button" className="button button--primary" onClick={() => void submit()}>
           추천 준비 다시 확인
         </button>
@@ -346,11 +430,21 @@ export function ProfileRecommendationCTA({
           </p>
         ) : null}
       </section>
+      </>
     );
+  }
+
+  if (state === "legacyPhoto") {
+    return <>{purposeSelector}<section className="profile-state" role="status" style={{ flexBasis: "100%" }}>
+      <h2>사진 분위기를 새로 확정해 주세요.</h2>
+      <p>이전 사진 취향은 저장된 추천에서 확인할 수 있어요. 새 추천에는 사진의 분위기만 참고합니다.</p>
+      {onClearPhoto && <button type="button" className="button button--primary" onClick={onClearPhoto}>사진 없이 계속하기</button>}
+    </section></>;
   }
 
   if (state === "error") {
     return (
+      <>{purposeSelector}
       <section className="profile-state" data-status="RECOVERABLE_API_FAILURE" style={{ flexBasis: "100%" }}>
         <h2 ref={stateHeadingRef} tabIndex={-1}>추천을 불러오지 못했어요.</h2>
         <p>기대 프로필은 이 브라우저에 남아 있어요. 연결을 확인하고 다시 시도해 주세요.</p>
@@ -363,11 +457,13 @@ export function ProfileRecommendationCTA({
           </p>
         ) : null}
       </section>
+      </>
     );
   }
 
-  const loading = state === "loading";
   return (
+    <>
+    {purposeSelector}
     <button
       type="button"
       className="button button--primary"
@@ -382,5 +478,6 @@ export function ProfileRecommendationCTA({
           ? "바로 추천 보기"
           : "사진 취향을 반영해 추천 보기"}
     </button>
+    </>
   );
 }

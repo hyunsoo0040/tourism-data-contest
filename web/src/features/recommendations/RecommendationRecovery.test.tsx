@@ -49,7 +49,7 @@ if (!controlledRedOnly) {
     const matrix = [
       [
         "loading",
-        "경주 여행지 5곳을 고르고 있어요.",
+        "내 취향에 맞는 여행지 5곳을 고르고 있어요.",
         null,
         "status",
       ],

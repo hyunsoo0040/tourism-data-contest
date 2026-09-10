@@ -1,14 +1,9 @@
+import { FRONTEND_QUESTIONNAIRE as questionnaire } from "../src/content/questionnaire";
 import { expect, type Page, test } from "@playwright/test";
-import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = resolve(fileURLToPath(import.meta.url), "../../..");
-const questionnaire = JSON.parse(
-  readFileSync(resolve(repoRoot, "contracts/questionnaire-v2.json"), "utf8"),
-) as {
-  questions: Array<{ ordinal: number; title_ko: string; options: Array<{ text_ko: string }> }>;
-};
 
 async function guardLoopbackTraffic(page: Page) {
   await page.route("**/*", async (route) => {
@@ -39,7 +34,7 @@ async function expectNoHorizontalOverflow(page: Page) {
 async function enterQuiz(page: Page) {
   await page.goto("/start");
   await expect(
-    page.getByRole("heading", { name: "이번 경주, 어떤 시간을 보내고 싶나요?" }),
+    page.getByRole("heading", { name: "이번 여행, 어떤 시간을 보내고 싶나요?" }),
   ).toBeVisible();
   await page.getByLabel("방문 날짜 (선택)").fill("2026-10-09");
   for (const label of [
@@ -59,7 +54,8 @@ async function enterQuiz(page: Page) {
   );
   await page.getByRole("button", { name: "취향 테스트 시작하기" }).click();
   await questionnaireResponse;
-  await expect(page).toHaveURL(/\/quiz\?q=1$/);
+  await expect(page).toHaveURL(/\/quiz$/);
+  await expect(page.getByText("1 / 12", { exact: true })).toBeVisible();
 }
 
 async function createV2Profile(page: Page) {
@@ -71,13 +67,15 @@ async function createV2Profile(page: Page) {
       response.url().endsWith("/v1/preference-profiles"),
   );
   for (let ordinal = 1; ordinal <= 12; ordinal += 1) {
+    await expect(page).toHaveURL(/\/quiz$/);
+    await expect(page.getByText(`${ordinal} / 12`, { exact: true })).toBeVisible();
     const question = questionnaire.questions.find((candidate) => candidate.ordinal === ordinal)!;
     await expect(page.getByText(question.title_ko)).toBeVisible();
     await page.getByRole("radio").nth(2).click();
   }
   await profileResponse;
   await expect(page).toHaveURL(/\/profile$/);
-  await expect(page.getByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeVisible();
 }
 
 test.describe("07-02 upstream main page", () => {
@@ -246,7 +244,7 @@ test.describe("07-02 no-photo recommendation journey", () => {
     await resultsResponse;
 
     await page.waitForURL(/\/recommendations\//, { timeout: 180_000 });
-    await expect(page.getByRole("heading", { name: "이번 경주에 맞는 5곳" })).toBeVisible({
+    await expect(page.getByRole("heading", { name: "이번 여행에 맞는 5곳" })).toBeVisible({
       timeout: 30_000,
     });
     const headerCenters = await page

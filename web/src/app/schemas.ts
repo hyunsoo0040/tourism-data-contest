@@ -11,7 +11,7 @@ export const PROFILE_REFERENCE_SCHEMA_VERSION = "phase1-profile-reference-v1" as
 export const QUESTIONNAIRE_VERSION = "questionnaire-v2" as const;
 /** Canonical schema_version for currently created (questionnaire-v2) profiles. */
 export const PROFILE_SCHEMA_VERSION = "preference-profile-v2" as const;
-export const SCORING_VERSION = "choice-bp-v2" as const;
+export const SCORING_VERSION = "choice-distribution-v3" as const;
 export const DESCRIPTION_TEMPLATE_VERSION = "current-trip-expectation-v1" as const;
 
 /** Legacy questionnaire-v1 generation: stored profiles remain readable and replayable. */
@@ -148,6 +148,7 @@ export const legacyProfileReferenceRecordSchema = z.strictObject({
 
 export const profileReferenceRecordSchema = z.union([
   currentProfileReferenceRecordSchema,
+  currentProfileReferenceRecordSchema.extend({ scoring_version: z.literal("choice-bp-v2") }),
   legacyProfileReferenceRecordSchema,
 ]);
 

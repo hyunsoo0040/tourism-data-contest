@@ -1,6 +1,15 @@
-import type { ComparisonRow } from "../../api/api";
+import type { ComparisonRow, RecommendationResultsResponse } from "../../api/api";
 import { OperatingInformation } from "./OperatingInformation";
 import type { OperatingInformationState } from "./useOperatingInformation";
+import { similarityLabel } from "./PreferenceSimilarity";
+
+type RecommendationItem = RecommendationResultsResponse["run"]["items"][number];
+
+const AXIS_LABELS = {
+  HISTORY_TRADITION: "역사·전통 유사도",
+  EMOTION_IMAGE: "감성·이미지 유사도",
+  REST_IMMERSION: "휴식·몰입 유사도",
+} as const;
 
 const MISSING_REASON_COPY = {
   OPERATING_INFORMATION_UNVERIFIED: "운영 정보가 확인되지 않았어요.",
@@ -8,8 +17,8 @@ const MISSING_REASON_COPY = {
 
 function cellValue(row: ComparisonRow, index: number): string {
   const reason = row.missing_reasons[index];
-  if (reason === null) return row.values_ko[index]!;
-  const copy = MISSING_REASON_COPY[reason as keyof typeof MISSING_REASON_COPY];
+  if (reason === null) return row.values_ko[index] || "정보 없음";
+  const copy = MISSING_REASON_COPY[reason as keyof typeof MISSING_REASON_COPY] ?? "확인되지 않았어요.";
   return `정보 없음 — ${copy}`;
 }
 
@@ -17,16 +26,43 @@ export function ComparisonTable({
   placeNames,
   rows,
   placeIds,
+  items = [],
   operatingInformation,
 }: {
   placeNames: readonly string[];
   rows: readonly ComparisonRow[];
   placeIds?: readonly string[];
+  items?: readonly RecommendationItem[];
   operatingInformation?: OperatingInformationState;
 }) {
+  const byId = new Map(items.map((item) => [item.place_id, item]));
+  const selected = placeNames.map((_, index) => byId.get(placeIds?.[index] ?? ""));
+  const similarityRows: ComparisonRow[] = [
+    {
+      row_id: "preference-similarity",
+      label_ko: "내 취향과의 유사도",
+      values_ko: selected.map((item) => similarityLabel(item?.contribution.experience_fit_score ?? null)),
+      missing_reasons: selected.map(() => null),
+    },
+    ...Object.entries(AXIS_LABELS).map(([axis, label]) => ({
+      row_id: `similarity-${axis}`,
+      label_ko: label,
+      values_ko: selected.map((item) => similarityLabel(
+        item?.contribution.axis_components.find((component) => component.axis === axis)?.fit_score ?? null,
+      )),
+      missing_reasons: selected.map(() => null),
+    })),
+  ];
+  const displayRows = [
+    ...similarityRows,
+    ...rows.filter((row) => row.row_id !== "fit-score"
+      && !row.row_id.startsWith("axis-")
+      && !row.row_id.startsWith("trait-")
+      && row.row_id !== "time-season-context"),
+  ];
   return (
     <section className="comparison-table-section" aria-labelledby="comparison-table-heading">
-      <h2 id="comparison-table-heading">장소별 저장 근거 비교</h2>
+      <h2 id="comparison-table-heading">내 취향과의 유사도 비교</h2>
       <p id="comparison-table-instruction">
         표를 좌우로 이동해 모든 장소를 확인할 수 있어요.
       </p>
@@ -48,7 +84,7 @@ export function ComparisonTable({
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => (
+            {displayRows.map((row) => (
               <tr key={row.row_id}>
                 <th scope="row">{row.label_ko}</th>
                 {placeNames.map((placeName, index) => (

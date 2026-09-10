@@ -1,5 +1,13 @@
+import previousCopyArtifact from "../../../contracts/questionnaire-v2-20260908.json";
+import legacyChoiceArtifact from "../../../contracts/questionnaire-v2-legacy.json";
 import questionnaireArtifact from "../../../contracts/questionnaire-v2.json";
 import type { components } from "../contracts/generated/api";
+import { FRONTEND_QUESTIONNAIRE } from "../content/questionnaire";
+import {
+  groundedTripForRecommendation,
+  parseGroundedTripInput,
+  type GroundedTripInput,
+} from "../features/journey/groundedTrip";
 import {
   DESCRIPTION_TEMPLATE_VERSION,
   LEGACY_CONFIG_HASH,
@@ -18,7 +26,9 @@ import {
 export type QuestionnaireDefinition = components["schemas"]["QuestionnaireDefinitionV2"];
 export type QuestionnaireSubmission = components["schemas"]["QuestionnaireSubmission"];
 export type PreferenceProfile = components["schemas"]["PreferenceProfile"];
-export type RecommendationRequest = components["schemas"]["RecommendationRequest"];
+export type RecommendationRequest = components["schemas"]["RecommendationRequest"] & {
+  grounded_input?: GroundedTripInput | null;
+};
 export type RecommendationRunCreated = components["schemas"]["RecommendationRunCreated"];
 export type RecommendationRun = components["schemas"]["RecommendationRun"];
 export type RecommendationResultsResponse =
@@ -52,7 +62,7 @@ export class ApiRequestError extends Error {
 
 export class QuestionnaireContractError extends Error {
   constructor() {
-    super("served questionnaire does not match the committed canonical contract");
+    super("served questionnaire does not match the expected scoring contract");
     this.name = "QuestionnaireContractError";
   }
 }
@@ -151,6 +161,31 @@ async function readJson(response: Response): Promise<unknown> {
   }
 }
 
+/** Display copy is frontend-owned; only fields that bind answers to scoring are checked. */
+function questionnaireScoringContract(value: unknown): unknown {
+  if (!isRecord(value) || !Array.isArray(value.questions)) return null;
+  return {
+    questionnaire_version: value.questionnaire_version,
+    scoring_version: value.scoring_version,
+    description_template_version: value.description_template_version,
+    config_hash: value.config_hash,
+    question_order: value.question_order,
+    axis_tie_break: value.axis_tie_break,
+    scoring_matrix: value.scoring_matrix,
+    questions: value.questions.map((question: unknown) => {
+      if (!isRecord(question) || !Array.isArray(question.options)) return null;
+      return {
+        question_id: question.question_id,
+        ordinal: question.ordinal,
+        options: question.options.map((option: unknown) => {
+          if (!isRecord(option)) return null;
+          return { choice_id: option.choice_id, value: option.value, axis: option.axis };
+        }),
+      };
+    }),
+  };
+}
+
 export async function fetchCurrentQuestionnaire(
   options: RequestOptions = {},
 ): Promise<QuestionnaireDefinition> {
@@ -165,10 +200,10 @@ export async function fetchCurrentQuestionnaire(
     throw new ApiRequestError("질문을 불러오지 못했어요.", response.status);
   }
   const payload = await readJson(response);
-  if (!jsonEquals(payload, canonicalQuestionnaire)) {
+  if (!jsonEquals(questionnaireScoringContract(payload), questionnaireScoringContract(canonicalQuestionnaire))) {
     throw new QuestionnaireContractError();
   }
-  return payload as QuestionnaireDefinition;
+  return FRONTEND_QUESTIONNAIRE;
 }
 
 type VersionCoupling = {
@@ -185,6 +220,18 @@ const V2_COUPLING: VersionCoupling = {
   scoring_version: SCORING_VERSION,
   config_hash: canonicalQuestionnaire.config_hash,
   description_template_version: DESCRIPTION_TEMPLATE_VERSION,
+};
+
+const LEGACY_V2_COUPLING: VersionCoupling = {
+  ...V2_COUPLING,
+  scoring_version: legacyChoiceArtifact.scoring_version,
+  config_hash: legacyChoiceArtifact.config_hash,
+};
+
+const PREVIOUS_COPY_V2_COUPLING: VersionCoupling = {
+  ...V2_COUPLING,
+  scoring_version: previousCopyArtifact.scoring_version,
+  config_hash: previousCopyArtifact.config_hash,
 };
 
 const V1_COUPLING: VersionCoupling = {
@@ -251,7 +298,9 @@ function isPreferenceProfileV2(
 ): payload is PreferenceProfile {
   return (
     isPreferenceProfileShape(payload) &&
-    matchesVersionCoupling(payload, V2_COUPLING) &&
+    (matchesVersionCoupling(payload, V2_COUPLING) ||
+      matchesVersionCoupling(payload, LEGACY_V2_COUPLING) ||
+      matchesVersionCoupling(payload, PREVIOUS_COPY_V2_COUPLING)) &&
     questionnaireAnswersSchema.safeParse(payload.answers).success &&
     (submission === undefined ||
       (payload.request_id === submission.request_id &&
@@ -541,7 +590,20 @@ function halfUp(numerator: number, denominator: number): number {
   return Math.floor((numerator + Math.floor(denominator / 2)) / denominator);
 }
 
-function isScoreContribution(payload: unknown): payload is ScoreContributionPayload {
+function observedConditionWeights(components: JsonObject[]): number[] {
+  const base = [400, 350, 350, 350, 300, 250];
+  const active = components.map((row) => row.expected_value !== null && row.place_value !== null);
+  const total = base.reduce((sum, weight, index) => sum + (active[index] ? weight : 0), 0);
+  if (total === 0) return base.map(() => 0);
+  const weights = base.map((weight, index) => active[index] ? Math.floor(weight * 2_000 / total) : 0);
+  const order = base.map((weight, index) => ({ index, remainder: active[index] ? weight * 2_000 % total : -1 }))
+    .sort((left, right) => right.remainder - left.remainder || left.index - right.index);
+  const remaining = 2_000 - weights.reduce((sum, weight) => sum + weight, 0);
+  for (const { index } of order.slice(0, remaining)) weights[index]! += 1;
+  return weights;
+}
+
+function isScoreContribution(payload: unknown, quality = false): payload is ScoreContributionPayload {
   if (
     !isRecord(payload) ||
     !hasExactKeys(payload, [
@@ -572,6 +634,10 @@ function isScoreContribution(payload: unknown): payload is ScoreContributionPayl
 
   const axisComponents = payload.axis_components;
   const conditionComponents = payload.condition_components;
+  if (!conditionComponents.every(isRecord)) return false;
+  const conditionWeights = quality
+    ? observedConditionWeights(conditionComponents)
+    : [400, 350, 350, 350, 300, 250];
   if (
     !axisComponents.every(
       (component, index) =>
@@ -609,17 +675,18 @@ function isScoreContribution(payload: unknown): payload is ScoreContributionPayl
         ]) &&
         isStableId(component.contribution_id) &&
         component.condition_id === recommendationConditions[index] &&
-        isScore(component.expected_value) &&
-        isScore(component.place_value) &&
-        isScore(component.absolute_difference) &&
-        isScore(component.fit_score) &&
-        component.total_score_weight_bp === [400, 350, 350, 350, 300, 250][index] &&
+        (isScore(component.expected_value) || (quality && component.expected_value === null)) &&
+        (isScore(component.place_value) || (quality && component.place_value === null)) &&
+        component.total_score_weight_bp === conditionWeights[index] &&
         isIntegerInRange(component.weighted_numerator, 0, Number.MAX_SAFE_INTEGER) &&
-        component.absolute_difference ===
+        (quality && (component.expected_value === null || component.place_value === null)
+          ? component.absolute_difference === null && component.fit_score === null &&
+            component.total_score_weight_bp === 0 && component.weighted_numerator === 0
+          : isScore(component.absolute_difference) && isScore(component.fit_score) && component.absolute_difference ===
           Math.abs(Number(component.expected_value) - Number(component.place_value)) &&
         component.fit_score === 100 - Number(component.absolute_difference) &&
         component.weighted_numerator ===
-          Number(component.fit_score) * Number(component.total_score_weight_bp),
+          Number(component.fit_score) * Number(component.total_score_weight_bp)),
     )
   ) {
     return false;
@@ -639,13 +706,14 @@ function isScoreContribution(payload: unknown): payload is ScoreContributionPayl
     0,
   );
   const expectedTravelConditionFit = halfUp(expectedConditionNumerator, 2_000);
+  const conditionWeight = conditionWeights.some((weight) => weight > 0) ? 2_000 : 0;
   const expectedRelevanceNumerator =
-    Number(payload.experience_fit_score) * 8_000 + expectedTravelConditionFit * 2_000;
+    Number(payload.experience_fit_score) * 8_000 + expectedTravelConditionFit * conditionWeight;
   if (
     payload.experience_fit_score !== halfUp(axisFit, recommendationAxes.length) ||
     payload.travel_condition_fit_score !== expectedTravelConditionFit ||
     payload.relevance_numerator !== expectedRelevanceNumerator ||
-    payload.relevance_score !== halfUp(expectedRelevanceNumerator, 10_000) ||
+    payload.relevance_score !== halfUp(expectedRelevanceNumerator, 8_000 + conditionWeight) ||
     payload.rerank_numerator !==
       payload.relevance_score * 8_500 + payload.diversity_novelty_score * 1_500 ||
     payload.rerank_score !== halfUp(payload.rerank_numerator, 10_000)
@@ -1064,6 +1132,7 @@ function isMvpRecommendationItem(
   payload: unknown,
   rank: number,
   requireBaseFit = true,
+  quality = false,
 ): boolean {
   if (
     !isRecord(payload) ||
@@ -1094,7 +1163,7 @@ function isMvpRecommendationItem(
     payload.evidence_confidence_reason_ko !==
       CONFIDENCE_REASON[payload.evidence_confidence_state as EvidenceConfidenceState] ||
     !isMismatchGuidance(payload.mismatch) ||
-    !isScoreContribution(payload.contribution) ||
+    !isScoreContribution(payload.contribution, quality) ||
     (requireBaseFit && payload.fit_score !== payload.contribution.relevance_score) ||
     !Array.isArray(payload.axis_scores) ||
     payload.axis_scores.length !== recommendationAxes.length ||
@@ -1157,7 +1226,31 @@ function isMvpRecommendationItem(
   );
 }
 
-function isMvpPreference(payload: unknown): boolean {
+function isGroundedInputAuthority(payload: unknown): boolean {
+  if (!isRecord(payload) || !hasExactKeys(payload, ["schema_version", "trip_input_sha256",
+    "source_release_sha256", "source_snapshot_sha256", "assessment_bundle_sha256"]) ||
+    payload.schema_version !== "grounded-input-authority.v1" ||
+    !isSha256(payload.trip_input_sha256) || !isSha256(payload.source_release_sha256)) return false;
+  return [payload.source_snapshot_sha256, payload.assessment_bundle_sha256].every((hashes) =>
+    Array.isArray(hashes) && hashes.every(isSha256) &&
+    hashes.every((hash, index) => index === 0 || hashes[index - 1]! < hash));
+}
+
+function isQualityContext(payload: unknown): payload is JsonObject {
+  return isRecord(payload) &&
+    hasExactKeys(payload, ["companion", "transport", "purpose", "eligible_place_ids",
+      ...("grounding" in payload ? ["grounding"] : [])]) &&
+    (!("grounding" in payload) || isGroundedInputAuthority(payload.grounding)) &&
+    ["SOLO", "FRIEND_OR_PARTNER", "FAMILY_WITH_CHILDREN", "WITH_SENIORS", "GROUP"].includes(String(payload.companion)) &&
+    ["WALK_OR_TRANSIT", "CAR_OR_TAXI", "MIXED"].includes(String(payload.transport)) &&
+    ["SIGHTSEEING", "FOOD", "LODGING", "MIXED"].includes(String(payload.purpose)) &&
+    Array.isArray(payload.eligible_place_ids) && payload.eligible_place_ids.length <= 100 &&
+    payload.eligible_place_ids.every(isStableId) &&
+    new Set(payload.eligible_place_ids).size === payload.eligible_place_ids.length &&
+    payload.eligible_place_ids.every((id, index) => index === 0 || (payload.eligible_place_ids as string[])[index - 1]! < id);
+}
+
+function isMvpPreference(payload: unknown, quality = false): boolean {
   if (
     !isRecord(payload) ||
     !hasExactKeys(payload, [
@@ -1166,7 +1259,9 @@ function isMvpPreference(payload: unknown): boolean {
       "input_sha256",
       "profile_id",
       "trait_targets",
+      ...(quality ? ["quality_context"] : []),
     ]) ||
+    (quality && !isQualityContext(payload.quality_context)) ||
     !isStableId(payload.profile_id) ||
     !isSha256(payload.input_sha256) ||
     !Array.isArray(payload.axis_targets) ||
@@ -1191,7 +1286,7 @@ function isMvpPreference(payload: unknown): boolean {
         isRecord(row) &&
         hasExactKeys(row, ["condition_id", "value"]) &&
         row.condition_id === recommendationConditions[index] &&
-        isScore(row.value),
+        (isScore(row.value) || (quality && row.value === null)),
     ) &&
     payload.trait_targets.every(
       (row, index) =>
@@ -1208,6 +1303,7 @@ function isPhotoScoreTrace(
   payload: unknown,
   expectedBaseRelevance: unknown,
   expectedEffectiveRelevance: unknown,
+  semantic = false,
 ): boolean {
   if (
     !isRecord(payload) ||
@@ -1217,7 +1313,15 @@ function isPhotoScoreTrace(
       "explanation_ko",
       "photo_trait_fit",
       "trait_components",
+      ...(semantic ? ["observed_traits"] : []),
     ]) ||
+    (semantic && (
+      !Array.isArray(payload.observed_traits) ||
+      payload.observed_traits.length < 1 || payload.observed_traits.length > 6 ||
+      !payload.observed_traits.every((trait, index) =>
+        typeof trait === "string" && /^M[1-6]$/.test(trait) &&
+        (index === 0 || (payload.observed_traits as string[])[index - 1]! < trait))
+    )) ||
     !isScore(payload.base_relevance) ||
     payload.base_relevance !== expectedBaseRelevance ||
     !isScore(payload.photo_trait_fit) ||
@@ -1242,11 +1346,14 @@ function isPhotoScoreTrace(
       row.fit === 100 - Math.abs(Number(row.expected) - Number(row.actual)),
   );
   if (!componentsValid) return false;
-  const photoFit = Math.floor(
-    ((payload.trait_components as JsonObject[]).reduce(
+  const observed = (payload.trait_components as JsonObject[]).filter(
+    (row) => !semantic || (payload.observed_traits as string[]).includes(String(row.trait_id)),
+  );
+  const photoFit = halfUp(
+    observed.reduce(
       (sum, row) => sum + Number(row.fit),
       0,
-    ) * 2 + 6) / 12,
+    ), observed.length,
   );
   const effective = Math.floor(
     (2 * (Number(payload.base_relevance) * 6_500 + photoFit * 3_500) + 10_000) /
@@ -1255,7 +1362,43 @@ function isPhotoScoreTrace(
   return payload.photo_trait_fit === photoFit && payload.effective_relevance === effective;
 }
 
+function qualityRunBindings(payload: JsonObject): boolean {
+  const preference = payload.preference as JsonObject;
+  const context = preference.quality_context as JsonObject;
+  const eligible = context.eligible_place_ids as string[];
+  const candidates = payload.candidate_place_ids as string[];
+  return eligible.every((id) => candidates.includes(id)) &&
+    (payload.items as JsonObject[]).every((item) => {
+      const contribution = item.contribution as ScoreContributionPayload;
+      return eligible.includes(String(item.place_id)) &&
+        contribution.axis_components.every((row, index) =>
+          row.expected_value === (preference.axis_targets as JsonObject[])[index]!.value) &&
+        contribution.condition_components.every((row, index) =>
+          row.expected_value === (preference.condition_targets as JsonObject[])[index]!.value);
+    });
+}
+
+const MVP_KERNEL_CONFIGS = {
+  "recommendation-kernel-v3": "f94bcaa2b895f9a19e94a5f54ba6af640e9a1226fce03b942ba023e0bd2e9c19",
+  "recommendation-kernel-v4": "397373e43782b44242dfd094312978a664f290b8b57ad127412b30589f88926e",
+} as const;
+
+function sharedSemanticPhotoInputs(scores: JsonObject[]): boolean {
+  const first = scores[0]!;
+  const observed = first.observed_traits as string[];
+  const firstTraits = first.trait_components as JsonObject[];
+  return scores.every((score) =>
+    jsonEquals(score.observed_traits, observed) &&
+    (score.trait_components as JsonObject[]).every((trait, index) =>
+      !observed.includes(String(trait.trait_id)) || trait.expected === firstTraits[index]!.expected),
+  );
+}
+
 async function isMvpRecommendationRun(payload: unknown): Promise<boolean> {
+  const quality = isRecord(payload) && isRecord(payload.authority) &&
+    payload.authority.kernel_version === "recommendation-kernel-v4";
+  const semanticPhoto = isRecord(payload) && isRecord(payload.authority) &&
+    payload.authority.photo_projection_version === "photo-projection-v2";
   if (
     isRecord(payload) &&
     payload.schema_version === "recommendation-run.v3"
@@ -1283,7 +1426,7 @@ async function isMvpRecommendationRun(payload: unknown): Promise<boolean> {
       !payload.candidate_place_ids.every(isStableId) ||
       !Array.isArray(payload.items) ||
       payload.items.length !== 5 ||
-      !payload.items.every((item, index) => isMvpRecommendationItem(item, index + 1, false)) ||
+      !payload.items.every((item, index) => isMvpRecommendationItem(item, index + 1, false, quality)) ||
       !Array.isArray(payload.photo_scores) ||
       payload.photo_scores.length !== 5 ||
       !payload.photo_scores.every((row, index) => {
@@ -1295,10 +1438,11 @@ async function isMvpRecommendationRun(payload: unknown): Promise<boolean> {
             row,
             contribution.relevance_score,
             item?.fit_score,
+            semanticPhoto,
           )
         );
       }) ||
-      !isMvpPreference(payload.preference) ||
+      !isMvpPreference(payload.preference, quality) ||
       !isRecord(payload.authority) ||
       !hasExactKeys(payload.authority, [
         "candidate_sha256",
@@ -1328,14 +1472,18 @@ async function isMvpRecommendationRun(payload: unknown): Promise<boolean> {
     const itemIds = (payload.items as JsonObject[]).map((row) => String(row.place_id));
     if (
       !digestFields.every((key) => isSha256(authority[key])) ||
-      authority.kernel_version !== "recommendation-kernel-v3" ||
-      authority.photo_projection_version !== "photo-projection-v1" ||
+      authority.kernel_version !== (quality ? "recommendation-kernel-v4" : "recommendation-kernel-v3") ||
+      authority.config_sha256 !== MVP_KERNEL_CONFIGS[quality ? "recommendation-kernel-v4" : "recommendation-kernel-v3"] ||
+      authority.photo_projection_version !== (semanticPhoto ? "photo-projection-v2" : "photo-projection-v1") ||
+      (quality && !semanticPhoto) ||
+      (semanticPhoto && !sharedSemanticPhotoInputs(payload.photo_scores as JsonObject[])) ||
       !isIntegerInRange(authority.images_count, 1, 3) ||
       !isIntegerInRange(authority.included_count, 1, 6) ||
       new Set(candidatePlaceIds).size !== candidatePlaceIds.length ||
       [...candidatePlaceIds].sort().some((value, index) => value !== candidatePlaceIds[index]) ||
       new Set(itemIds).size !== 5 ||
-      !itemIds.every((placeId) => candidatePlaceIds.includes(placeId))
+      !itemIds.every((placeId) => candidatePlaceIds.includes(placeId)) ||
+      (quality && !qualityRunBindings(payload))
     ) {
       return false;
     }
@@ -1381,8 +1529,8 @@ async function isMvpRecommendationRun(payload: unknown): Promise<boolean> {
     !payload.candidate_place_ids.every(isStableId) ||
     !Array.isArray(payload.items) ||
     payload.items.length !== 5 ||
-    !payload.items.every((item, index) => isMvpRecommendationItem(item, index + 1)) ||
-    !isMvpPreference(payload.preference) ||
+    !payload.items.every((item, index) => isMvpRecommendationItem(item, index + 1, true, quality)) ||
+    !isMvpPreference(payload.preference, quality) ||
     !isRecord(payload.authority) ||
     !hasExactKeys(payload.authority, [
       "candidate_sha256",
@@ -1410,9 +1558,11 @@ async function isMvpRecommendationRun(payload: unknown): Promise<boolean> {
       "candidate_sha256",
       "config_sha256",
     ].every((key) => isSha256(authority[key])) ||
-    authority.kernel_version !== "recommendation-kernel-v3" ||
+    authority.kernel_version !== (quality ? "recommendation-kernel-v4" : "recommendation-kernel-v3") ||
+    authority.config_sha256 !== MVP_KERNEL_CONFIGS[quality ? "recommendation-kernel-v4" : "recommendation-kernel-v3"] ||
     new Set(itemIds).size !== 5 ||
-    !itemIds.every((placeId) => candidatePlaceIds.includes(placeId))
+    !itemIds.every((placeId) => candidatePlaceIds.includes(placeId)) ||
+    (quality && !qualityRunBindings(payload))
   ) {
     return false;
   }
@@ -1783,12 +1933,19 @@ export async function createRecommendationRun(
   options: RequestOptions = {},
 ): Promise<RecommendationRunCreated> {
   const fetchImpl = options.fetchImpl ?? fetch;
+  const groundedInput = request.grounded_input === undefined ? groundedTripForRecommendation()
+    : request.grounded_input === null ? null : parseGroundedTripInput(request.grounded_input);
+  if (request.grounded_input != null && groundedInput === null) {
+    throw new RecommendationContractError("INVALID_RECOMMENDATION_OUTPUT");
+  }
+  const { grounded_input: _explicitGrounding, ...baseRequest } = request;
+  const submitted = groundedInput === null ? baseRequest : { ...baseRequest, grounded_input: groundedInput };
   let response: Response;
   try {
     response = await fetchImpl("/v1/recommendation-runs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(request),
+      body: JSON.stringify(submitted),
       signal: options.signal,
     });
   } catch {
@@ -1881,6 +2038,7 @@ function isMvpRecommendationDetail(
       payload.item,
       Number(payload.item.rank),
       expectedItem === undefined,
+      expectedItem !== undefined,
     ) ||
     (expectedItem !== undefined && !jsonEquals(payload.item, expectedItem)) ||
     !isConfidenceProjection(payload.item, payload.confidence_percent) ||
@@ -2315,12 +2473,16 @@ export async function resolveSavedPlaceReference(
       "saved_release_sha256",
       "state",
       "state_reason",
+      ...["region_code", "region_name", "address_ko"].filter((key) => Object.hasOwn(payload, key)),
     ]) ||
     payload.place_id !== placeId ||
     payload.saved_release_sha256 !== releaseSha256 ||
     typeof payload.place_name_ko !== "string" ||
     payload.place_name_ko.trim().length === 0 ||
     payload.place_name_ko.length > 120 ||
+    (payload.region_code != null && (typeof payload.region_code !== "string" || !/^\d{5}$/.test(payload.region_code))) ||
+    (payload.region_name != null && (typeof payload.region_name !== "string" || payload.region_name.trim().length === 0 || payload.region_name.length > 160)) ||
+    (payload.address_ko != null && (typeof payload.address_ko !== "string" || payload.address_ko.trim().length === 0 || payload.address_ko.length > 500)) ||
     !["CURRENT", "STALE", "UNAVAILABLE"].includes(String(payload.state)) ||
     (payload.resolved_release_sha256 !== null && !isSha256(payload.resolved_release_sha256)) ||
     (payload.state === "CURRENT" &&

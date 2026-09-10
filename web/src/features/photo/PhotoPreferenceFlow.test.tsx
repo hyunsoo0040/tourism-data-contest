@@ -207,8 +207,8 @@ const DELETE_COPY = {
 } as const;
 
 const PROVENANCE_COPY = {
-  photo: "직접 확인한 사진 취향을 기대 프로필에 반영해 고른 경주 여행지예요.",
-  noPhoto: "사진 없이 만든 기대 프로필로 고른 경주 여행지예요.",
+  photo: "직접 확인한 사진 취향을 기대 프로필에 반영해 고른 여행지예요.",
+  noPhoto: "사진 없이 만든 기대 프로필로 고른 여행지예요.",
 } as const;
 
 const TRAIT_TEXTS = {
@@ -859,6 +859,33 @@ it("UI-BS-04 polling lifecycle is bounded and deduplicated", async () => {
 });
 
 describe("the optional-photo journey stays synthetic and recoverable", () => {
+  it.each(["upload", "analysis"] as const)("distinguishes a rejected %s stage without misreporting a successful upload", async (failedStage) => {
+    const jobId = "a".repeat(64);
+    const client = {
+      ...syntheticClient(),
+      createPhotoJob: vi.fn().mockResolvedValue({ job_id: jobId, state: "queued", analysis_family: "photo-mood-v1" }),
+      putPhotoJobImage: vi.fn().mockImplementation(async () => {
+        if (failedStage === "upload") throw new Error("upload status unknown");
+        return { job_id: jobId, image_index: 1, byte_length: 1024 };
+      }),
+      submitPhotoJob: vi.fn().mockRejectedValue(new Error("analysis unavailable")),
+    };
+    const { onNoPhoto } = await renderPhotoFlow(client);
+    await startConsentAndPickFiles(client, 1);
+    if (failedStage === "analysis") {
+      expect(client.putPhotoJobImage).toHaveBeenCalledTimes(1);
+      expect(client.submitPhotoJob).toHaveBeenCalledTimes(1);
+      expect(screen.getByRole("heading", { name: "사진 분석을 마치지 못했어요." })).toBeTruthy();
+      expect(screen.queryByText(FALLBACK_COPY.uploadUncertainty)).toBeNull();
+    } else {
+      expect(client.submitPhotoJob).not.toHaveBeenCalled();
+      expect(screen.getByText(FALLBACK_COPY.uploadUncertainty)).toBeTruthy();
+    }
+    fireEvent.click(screen.getByRole("button", { name: ENTRY_COPY.noPhoto }));
+    expect(onNoPhoto).toHaveBeenCalledTimes(1);
+    expect(client.requestPhotoDeletion).toHaveBeenCalledWith(jobId);
+  });
+
   it("walks consent, preflight, and polling to trait review with a synthetic client", async () => {
     const client = syntheticClient();
     client.getPhotoJob

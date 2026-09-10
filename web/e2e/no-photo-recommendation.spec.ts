@@ -1,25 +1,11 @@
+import { FRONTEND_QUESTIONNAIRE as QUESTIONNAIRE } from "../src/content/questionnaire";
 import { expect, type Page, type Response, type Route, test } from "@playwright/test";
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
-import { fileURLToPath } from "node:url";
 
 const SHA = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef";
 const PENDING_RECOMMENDATION_KEY = "itda:phase5:pending-recommendation:v2";
 const CURRENT_RECOMMENDATION_KEY = "itda:phase5:current-recommendation:v2";
-const QUESTION_ROUTES = Array.from({ length: 12 }, (_, index) => `/quiz?q=${index + 1}`);
-const QUESTIONNAIRE = JSON.parse(
-  readFileSync(
-    resolve(fileURLToPath(new URL(".", import.meta.url)), "../../contracts/questionnaire-v2.json"),
-    "utf8",
-  ),
-) as {
-  questions: Array<{ title_ko: string; options: Array<{ text_ko: string }> }>;
-  questionnaire_version: string;
-  scoring_version: string;
-  description_template_version: string;
-  config_hash: string;
-};
+
 const CANONICAL_TITLES = QUESTIONNAIRE.questions.map(({ title_ko }) => title_ko);
 
 type PreferenceProfileObservation = {
@@ -128,11 +114,12 @@ function waitForProfile(page: Page) {
 
 async function answerQuiz(page: Page, answerIndex: (ordinal: number) => number) {
   let responsePromise: Promise<Response> | null = null;
-  for (const [index, route] of QUESTION_ROUTES.entries()) {
-    await expect(page).toHaveURL(new RegExp(`${route.replace("?", "\\?")}$`));
+  for (const [index] of QUESTIONNAIRE.questions.entries()) {
+    await expect(page).toHaveURL(/\/quiz$/);
+    await expect(page.getByText(`${index + 1} / 12`, { exact: true })).toBeVisible();
     await expect(page.getByText(CANONICAL_TITLES[index], { exact: true })).toBeVisible();
     const option = QUESTIONNAIRE.questions[index]!.options[answerIndex(index + 1)]!;
-    if (index === QUESTION_ROUTES.length - 1) {
+    if (index === QUESTIONNAIRE.questions.length - 1) {
       responsePromise = waitForProfile(page);
     }
     await page.getByRole("radio", { name: option.text_ko, exact: true }).click();
@@ -528,7 +515,7 @@ async function assertTop5Results(
     | "DEMO_MODEL_DERIVED"
     | "GLM_CODING_PLAN_PUBLIC_MODEL_DERIVED",
 ) {
-  await expect(page.getByRole("heading", { name: "이번 경주에 맞는 5곳" })).toBeFocused();
+  await expect(page.getByRole("heading", { name: "이번 여행에 맞는 5곳" })).toBeFocused();
   const cards = page.getByRole("list", { name: "추천 5곳" }).getByRole("listitem");
   await expect(cards).toHaveCount(5);
   await expect(cards.first()).toContainText("1위");
@@ -702,7 +689,7 @@ test("@real-demo @private-real-demo private real demo complete journey", async (
   await expect(page.getByRole("region", { name: "장소 비교표" })).toBeVisible();
 
   await page.goBack();
-  await expect(page.getByRole("heading", { name: "이번 경주에 맞는 5곳" })).toBeFocused();
+  await expect(page.getByRole("heading", { name: "이번 여행에 맞는 5곳" })).toBeFocused();
   cards = page.getByRole("list", { name: "추천 5곳" }).getByRole("listitem");
   await cards.nth(0).getByRole("button", { name: / 저장$/ }).click();
   await expect(cards.nth(0).getByRole("button", { name: / 저장됨$/ })).toHaveAttribute(

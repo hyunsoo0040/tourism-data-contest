@@ -1,5 +1,6 @@
 import {
   createPreferenceProfile,
+  fetchCurrentQuestionnaire,
   profileSubmissionFingerprint,
   type PreferenceProfile,
   type QuestionnaireSubmission,
@@ -28,6 +29,10 @@ export async function createAndStorePreferenceProfile(
     trip_conditions: tripConditions,
     answers,
   };
+  // Questions are rendered locally. Verify the server's scoring identity before
+  // any mutation, including retries, edited conditions, and profile recovery.
+  await fetchCurrentQuestionnaire({ signal });
+  signal?.throwIfAborted();
   const profile = await createPreferenceProfile(submission, { signal });
   if (!shouldStore()) return { profile, reference: null };
   const reference = writeProfileReference(profile.profile_id);

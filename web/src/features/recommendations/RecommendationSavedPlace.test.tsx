@@ -3,7 +3,7 @@ import type { ComponentType } from "react";
 import { MemoryRouter } from "react-router-dom";
 import { beforeEach, expect, test, vi } from "vitest";
 
-import type { SavedPlaceProjection } from "../../api/api";
+import { resolveSavedPlaceReference, type SavedPlaceProjection } from "../../api/api";
 
 const RED_SENTINEL = "PHASE5_RED_SAVED_PLACE_NOT_IMPLEMENTED";
 const RELEASE = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef";
@@ -79,6 +79,41 @@ if (controlledRedOnly) {
 }
 
 if (!controlledRedOnly) {
+  test("saved national places keep their pinned location and distinguish the same name", async () => {
+    const { SavedSection } = await importRuntime<{ SavedSection: SavedSectionComponent }>("./SavedSection");
+    const refs = [reference("place:a"), reference("place:b")];
+    const lookup = async (_release: string, id: string) => resolveSavedPlaceReference(RELEASE, id, {
+      fetchImpl: async () => new Response(JSON.stringify({ place_id: id, place_name_ko: "동명 관광지",
+        resolved_release_sha256: RELEASE, saved_release_sha256: RELEASE, state: "CURRENT", state_reason: null,
+        region_code: id === "place:a" ? "11110" : "26110",
+        region_name: id === "place:a" ? "서울특별시 종로구" : "부산광역시 중구", address_ko: null }), { status: 200 }),
+    });
+    const onRemove = vi.fn();
+    render(<MemoryRouter><SavedSection references={refs} onRemove={onRemove} resolveReference={lookup} /></MemoryRouter>);
+    expect(await screen.findByText("서울특별시 종로구")).toBeTruthy();
+    expect(await screen.findByText("부산광역시 중구")).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "동명 관광지 · 부산광역시 중구 저장에서 삭제" }));
+    expect(onRemove).toHaveBeenCalledWith(refs[1]);
+  });
+
+  test("pending and failed saved lookups use friendly distinct labels instead of opaque IDs", async () => {
+    const { SavedSection } = await importRuntime<{ SavedSection: SavedSectionComponent }>("./SavedSection");
+    const refs = [reference(`public:gyeongju:${"a".repeat(64)}`), reference(`public:gyeongju:${"b".repeat(64)}`)];
+    let rejectLookup: (reason: Error) => void = () => {};
+    const pending = new Promise<SavedPlaceProjection>((_resolve, reject) => { rejectLookup = reject; });
+    const onRemove = vi.fn();
+    const { container } = render(<MemoryRouter><SavedSection references={refs} onRemove={onRemove}
+      resolveReference={() => pending} /></MemoryRouter>);
+    expect(screen.getByText("저장한 장소 1")).toBeTruthy();
+    expect(screen.getByText("저장한 장소 2")).toBeTruthy();
+    expect(container.textContent).not.toContain("public:gyeongju:");
+    expect(screen.getByRole("button", { name: "저장한 장소 2 저장에서 삭제" })).toBeTruthy();
+    await act(async () => { rejectLookup(new Error("temporary lookup failure")); });
+    expect(container.textContent).not.toContain("public:gyeongju:");
+    fireEvent.click(screen.getByRole("button", { name: "저장한 장소 2 저장에서 삭제" }));
+    expect(onRemove).toHaveBeenCalledWith(refs[1]);
+  });
+
   test("save control and storage use place-specific aria-pressed labels and identity-only records", async () => {
     const storageModule = await import("../../app/storage");
     const { SaveToggle } = await importRuntime<{ SaveToggle: SaveToggleComponent }>("./SaveToggle");
@@ -217,7 +252,7 @@ if (!controlledRedOnly) {
     await act(async () => {});
     expect(screen.getByText("일부 저장 정보를 읽지 못했어요. 읽을 수 없는 저장 항목만 정리했어요.")).toBeTruthy();
     expect(onRemove).not.toHaveBeenCalled();
-    expect(screen.getByRole("button", { name: "place-kept 저장에서 삭제" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "저장한 장소 1 저장에서 삭제" })).toBeTruthy();
   });
 
   test("saved resolver rejects active-pointer rebinding and accepts the exact historical release", async () => {

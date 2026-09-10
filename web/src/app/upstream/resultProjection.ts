@@ -4,14 +4,14 @@ import type { PreferenceProfile, QuestionnaireDefinition } from "../../api/api";
 
 /**
  * Shared upstream-style result projection over a persisted profile: maps the
- * stored canonical v2 answers onto the served contract's result_types copy.
+ * server-owned scores onto the served contract's result_types copy.
+ * Answers are used only for keyword copy, never to rerank the profile.
  * Presentation only — scoring stays server-owned.
  */
 export function pickResultForProfile(
   questionnaire: QuestionnaireDefinition,
   profile: PreferenceProfile,
 ) {
-  const counts: Record<string, number> = {};
   const keywords: string[] = [];
   const answers: Record<string, number> = profile.answers as unknown as Record<string, number>;
   for (const ordinal of questionnaire.question_order) {
@@ -21,14 +21,15 @@ export function pickResultForProfile(
     if (value === undefined) continue;
     const option = item.options.find((candidate) => candidate.value === value);
     if (option === undefined) continue;
-    counts[option.axis] = (counts[option.axis] ?? 0) + 1;
     keywords.push(...option.keywords_ko);
   }
   const tieBreak = questionnaire.axis_tie_break;
-  const topAxis = [...tieBreak].sort((left, right) => (counts[right] ?? 0) - (counts[left] ?? 0))[0] ?? tieBreak[0]!;
+  const byAxis = new Map(profile.scores.map((score) => [score.axis, score]));
+  const topAxis = [...tieBreak].sort((left, right) =>
+    (byAxis.get(right)?.basis_points ?? 0) - (byAxis.get(left)?.basis_points ?? 0)
+  )[0] ?? tieBreak[0]!;
   const info = questionnaire.result_types.find((type) => type.axis === topAxis) ?? questionnaire.result_types[0]!;
-  const totalAnswers = Object.values(counts).reduce((sum, count) => sum + count, 0);
-  const match = totalAnswers === 0 ? 0 : Math.round(((counts[topAxis] ?? 0) / totalAnswers) * 100);
+  const match = byAxis.get(topAxis)?.display_score ?? 0;
   const keywordCounts = new Map<string, number>();
   for (const keyword of keywords) {
     keywordCounts.set(keyword, (keywordCounts.get(keyword) ?? 0) + 1);

@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ES2023",
     "useDefineForClassFields": true,
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2023",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -23,11 +27,23 @@
       }
     ],
     "paths": {
-      "react-router-dom": ["./src/app/react-router-dom.tsx"]
+      "react-router-dom": [
+        "./src/app/react-router-dom.tsx"
+      ]
     },
-    "types": ["vitest/globals", "vitest/jsdom"]
+    "types": [
+      "vitest/globals",
+      "vitest/jsdom"
+    ]
   },
-  "include": ["src", "next.config.ts", "next-env.d.ts", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"], 
-  
+  "include": [
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "next.config.ts",
+    "src",
+    ".next-mock/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

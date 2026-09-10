@@ -1,15 +1,7 @@
-import questionnaireV2Artifact from "../../../../contracts/questionnaire-v2.json";
+import { FRONTEND_QUESTIONNAIRE } from "../../content/questionnaire";
+import { TRIP_FIELD_LABELS, tripChoiceLabel } from "../../content/journey.ko";
 import type { PreferenceProfile } from "../../api/api";
 import { questionnaireAnswersSchema } from "../../app/schemas";
-
-const CONDITION_LABELS = {
-  visit_time: { MORNING: "오전", DAYTIME: "낮", SUNSET: "해질녘", EVENING: "저녁", UNDECIDED: "아직 미정" },
-  companion: { SOLO: "혼자", FRIEND_OR_PARTNER: "친구·연인", FAMILY_WITH_CHILDREN: "가족·아이", WITH_SENIORS: "어르신 동반", GROUP: "여럿이" },
-  transport: { WALK_OR_TRANSIT: "도보·대중교통", CAR_OR_TAXI: "자가용·택시", MIXED: "둘 다" },
-  walking_tolerance: { WITHIN_30_MINUTES: "30분 이내로 가볍게", ABOUT_1_HOUR: "1시간 안팎", EXTENDED_WALKING_OK: "충분히 걸어도 괜찮아요" },
-  indoor_outdoor_preference: { INDOOR: "실내 위주", NO_PREFERENCE: "상관없어요", OUTDOOR: "야외 위주" },
-  crowd_avoidance: { LOW: "괜찮아요", MEDIUM: "조금 피하고 싶어요", HIGH: "많이 피하고 싶어요" },
-} as const;
 
 /** Legacy questionnaire-v1 Likert labels (values 1..5); replay display only. */
 const LEGACY_ANSWER_LABELS: Record<number, string> = {
@@ -20,7 +12,7 @@ const LEGACY_ANSWER_LABELS: Record<number, string> = {
   5: "매우 그래요",
 };
 
-const CURRENT_QUESTIONS = questionnaireV2Artifact.questions;
+const CURRENT_QUESTIONS = FRONTEND_QUESTIONNAIRE.questions;
 type CurrentQuestion = (typeof CURRENT_QUESTIONS)[number];
 
 export function InputSummary({
@@ -48,12 +40,12 @@ export function InputSummary({
         </div>
         <dl>
           <div><dt>방문 날짜</dt><dd>{conditions.visit_date ?? "아직 미정"}</dd></div>
-          <div><dt>방문 시간</dt><dd>{CONDITION_LABELS.visit_time[conditions.visit_time]}</dd></div>
-          <div><dt>동행</dt><dd>{CONDITION_LABELS.companion[conditions.companion]}</dd></div>
-          <div><dt>이동수단</dt><dd>{CONDITION_LABELS.transport[conditions.transport]}</dd></div>
-          <div><dt>도보 허용</dt><dd>{CONDITION_LABELS.walking_tolerance[conditions.walking_tolerance]}</dd></div>
-          <div><dt>실내외 선호</dt><dd>{CONDITION_LABELS.indoor_outdoor_preference[conditions.indoor_outdoor_preference]}</dd></div>
-          <div><dt>혼잡 회피</dt><dd>{CONDITION_LABELS.crowd_avoidance[conditions.crowd_avoidance]}</dd></div>
+          <div><dt>{TRIP_FIELD_LABELS.visit_time}</dt><dd>{tripChoiceLabel("visit_time", conditions.visit_time)}</dd></div>
+          <div><dt>{TRIP_FIELD_LABELS.companion}</dt><dd>{tripChoiceLabel("companion", conditions.companion)}</dd></div>
+          <div><dt>{TRIP_FIELD_LABELS.transport}</dt><dd>{tripChoiceLabel("transport", conditions.transport)}</dd></div>
+          <div><dt>{TRIP_FIELD_LABELS.walking_tolerance}</dt><dd>{tripChoiceLabel("walking_tolerance", conditions.walking_tolerance)}</dd></div>
+          <div><dt>{TRIP_FIELD_LABELS.indoor_outdoor_preference}</dt><dd>{tripChoiceLabel("indoor_outdoor_preference", conditions.indoor_outdoor_preference)}</dd></div>
+          <div><dt>{TRIP_FIELD_LABELS.crowd_avoidance}</dt><dd>{tripChoiceLabel("crowd_avoidance", conditions.crowd_avoidance)}</dd></div>
         </dl>
       </section>
       {isCurrentAnswers ? (

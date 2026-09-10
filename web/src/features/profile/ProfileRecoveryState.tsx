@@ -5,7 +5,7 @@ type RecoveryState = "empty" | "recovery" | "api-error" | "invalid";
 const COPY = {
   empty: {
     title: "아직 만든 여행 기대 프로필이 없어요.",
-    body: "여행 조건과 아홉 가지 질문에 답하면 이번 경주의 기대를 세 축으로 확인할 수 있어요.",
+    body: "여행 조건과 취향 질문에 답하면 이번 여행의 기대를 세 축으로 확인할 수 있어요.",
     action: "여행 조건 입력하기",
   },
   recovery: {

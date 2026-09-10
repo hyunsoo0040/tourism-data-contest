@@ -1,6 +1,9 @@
 "use client";
 
+import { JOURNEY_COPY } from "../../content/journey.ko";
+
 import { TripConditionForm } from "../../features/journey/TripConditionForm";
+import { quizNavigationState } from "../../features/journey/quizNavigation";
 import { useNavigate } from "../react-router-dom";
 import { useJourneyDraft } from "../AppShell";
 import {
@@ -32,7 +35,7 @@ export function UpstreamStartPage() {
       current_route: "/quiz",
       current_question: 1,
     });
-    void navigate("/quiz?q=1");
+    void navigate("/quiz", { state: quizNavigationState(1) });
   };
 
   return (
@@ -51,9 +54,9 @@ export function UpstreamStartPage() {
             <div className="panel up-conditions-panel">
               <div className="up-conditions-head">
                 <p className="eyebrow">Travel Conditions</p>
-                <h1 id="start-heading">이번 경주, 어떤 시간을 보내고 싶나요?</h1>
+                <h1 id="start-heading">{JOURNEY_COPY.start.title}</h1>
                 <p>
-                  <br/>취향 테스트를 시작하기 전에 이번 여행의 조건을 고르면, 추천이 일정과 상황에 맞아집니다.
+                  <br />{JOURNEY_COPY.start.description}
                 </p>
               </div>
               <TripConditionForm
@@ -62,7 +65,7 @@ export function UpstreamStartPage() {
                 onDismissRecovery={dismissNotice}
                 onReset={resetDraft}
                 onSubmit={beginQuiz}
-                primaryLabel="취향 테스트 시작하기"
+                primaryLabel={JOURNEY_COPY.start.primaryLabel}
                 busy={false}
                 requestError={null}
               />
@@ -73,4 +76,3 @@ export function UpstreamStartPage() {
     </div>
   );
 }
-

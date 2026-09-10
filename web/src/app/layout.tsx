@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { MockToolbar } from "./MockToolbar";
 
 export const metadata: Metadata = {
   title: "IT-DA | 나의 여행 기대와 맞는 장소를 잇다",
@@ -15,7 +16,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>{process.env.ITDA_MOCK_UI === "1" && <MockToolbar />}{children}</body>
     </html>
   );
 }

@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import {
   ApiRequestError,
   RecommendationContractError,
-  fetchRecommendationResults,
   recommendationErrorCode,
   type RecommendationResultsResponse,
 } from "../api/api";
@@ -31,10 +30,15 @@ import { clearCurrentRecommendationReferenceIfMatches } from "../features/profil
 import { PhotoRecommendationProvenance } from "../features/photo/PhotoRecommendationProvenance";
 import { RecommendationShell } from "../features/recommendations/RecommendationShell";
 import { useOperatingInformation } from "../features/recommendations/useOperatingInformation";
+import { useTripContext } from "../features/recommendations/useTripContext";
+import { fetchRecommendationEnvelope, type GroundedResults } from "../api/grounded-recommendation";
+import { GroundedResultsView } from "../features/recommendations/GroundedRecommendationViews";
+import { RECOMMENDATION_ORDER_DESCRIPTION, SIMILARITY_DESCRIPTION } from "../features/recommendations/PreferenceSimilarity";
 
 type PageState =
   | { kind: "loading" }
   | { kind: "success"; results: RecommendationResultsResponse }
+  | { kind: "grounded"; results: GroundedResults }
   | { kind: "closed"; state: Exclude<RecommendationPageState, "loading"> };
 
 function closedState(error: unknown): Exclude<RecommendationPageState, "loading"> {
@@ -66,6 +70,7 @@ export function RecommendationsPage() {
   const [saveWarning, setSaveWarning] = useState("");
   const [saveCleanupNotice, setSaveCleanupNotice] = useState("");
   const announcements = useJourneyAnnouncements();
+  const tripContext = useTripContext(runId, state.kind === "success");
   const operatingInformation = useOperatingInformation(
     runId,
     state.kind === "success"
@@ -76,9 +81,10 @@ export function RecommendationsPage() {
   useEffect(() => {
     const controller = new AbortController();
     setState({ kind: "loading" });
-    void fetchRecommendationResults(runId, { signal: controller.signal })
+    void fetchRecommendationEnvelope(runId, { signal: controller.signal })
       .then((results) => {
-        if (!controller.signal.aborted) setState({ kind: "success", results });
+        if (!controller.signal.aborted) setState(results.schema_version === "itda.grounded-recommendation-results.v1"
+          ? { kind: "grounded", results } : { kind: "success", results });
       })
       .catch((error: unknown) => {
         if (!controller.signal.aborted) {
@@ -149,6 +155,8 @@ export function RecommendationsPage() {
       />
     );
   }
+
+  if (state.kind === "grounded") return <GroundedResultsView key={state.results.run.run_id} results={state.results} />;
 
   const operatingByPlace = new Map(
     state.results.operating_states.map((row) => [row.place_id, row.state]),
@@ -227,10 +235,11 @@ export function RecommendationsPage() {
       <article className="recommendations-page panel" data-status="success">
       <header className="page-intro recommendations-intro">
         <p className="eyebrow">
-          {photoConfirmed ? "사진 취향을 반영한 경주 여행지" : "사진 없이 고른 경주 여행지"}
+          {photoConfirmed ? "사진 취향을 반영한 여행지" : "사진 없이 고른 여행지"}
         </p>
-        <h1 ref={headingRef} tabIndex={-1}>이번 경주에 맞는 5곳</h1>
-        <p>확인한 이번 여행의 기대 프로필과 저장된 장소 근거를 연결한 결과예요.</p>
+        <h1 ref={headingRef} tabIndex={-1}>이번 여행에 맞는 5곳</h1>
+        <p>{SIMILARITY_DESCRIPTION}</p>
+        <p>{RECOMMENDATION_ORDER_DESCRIPTION}</p>
       </header>
       {announcements === null ? (
         <p className="visually-hidden" role="status" aria-live="polite" aria-atomic="true">
@@ -259,6 +268,11 @@ export function RecommendationsPage() {
                   : undefined
               }
               operatingInformationLoading={operatingInformation.kind === "loading"}
+              tripContextEnabled
+              tripContext={tripContext.kind === "resolved" ? tripContext.places.get(item.place_id) : undefined}
+              tripContextLoading={tripContext.kind === "loading" || tripContext.kind === "idle"}
+              tripContextCheckedAt={tripContext.kind === "resolved" ? tripContext.response.checked_at : undefined}
+              tripContextMode={tripContext.kind === "resolved" ? tripContext.response.mode : undefined}
               runId={runId}
               analysisOrigin={state.results.analysis_origin}
               photoExplanation={photoExplanationByPlace.get(item.place_id)}

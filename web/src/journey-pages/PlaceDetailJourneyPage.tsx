@@ -5,7 +5,6 @@ import {
   ApiRequestError,
   RecommendationContractError,
   fetchRecommendationDetail,
-  fetchRecommendationResults,
   recommendationErrorCode,
   type RecommendationDetail,
   type RecommendationResultsResponse,
@@ -32,25 +31,23 @@ import { clearCurrentRecommendationReferenceIfMatches } from "../features/profil
 import { OperatingInformation } from "../features/recommendations/OperatingInformation";
 import { RecommendationShell } from "../features/recommendations/RecommendationShell";
 import { useOperatingInformation } from "../features/recommendations/useOperatingInformation";
+import { useTripContext } from "../features/recommendations/useTripContext";
+import { TripContext } from "../features/recommendations/TripContext";
+import { fetchRecommendationEnvelope, type GroundedResults } from "../api/grounded-recommendation";
+import { fetchGroundedDetail, type GroundedDetail } from "../api/grounded-detail";
+import { GroundedDetailView } from "../features/recommendations/GroundedRecommendationViews";
+import { RECOMMENDATION_ORDER_DESCRIPTION, SIMILARITY_DESCRIPTION, SimilaritySummary, similarityLabel } from "../features/recommendations/PreferenceSimilarity";
 
 type PageState =
   | { kind: "loading" }
   | { kind: "success"; detail: RecommendationDetail; results: RecommendationResultsResponse }
+  | { kind: "grounded"; detail: GroundedDetail; results: GroundedResults }
   | { kind: "closed"; state: Exclude<RecommendationPageState, "loading"> };
 
 const AXIS_COPY = {
   HISTORY_TRADITION: { label: "역사·전통", className: "recommendation-axis--history" },
   EMOTION_IMAGE: { label: "감성·이미지", className: "recommendation-axis--emotion" },
   REST_IMMERSION: { label: "휴식·몰입", className: "recommendation-axis--rest" },
-} as const;
-
-const TRAIT_COPY = {
-  M1: { label: "공간 성격", endpoints: "원형·보존 중심 ↔ 현대적 재해석 중심" },
-  M2: { label: "방문객 성격", endpoints: "생활·로컬 중심 ↔ 관광·상업 중심" },
-  M3: { label: "현장 밀도", endpoints: "한적함 ↔ 혼잡함" },
-  M4: { label: "경험 방식", endpoints: "감상·촬영 ↔ 참여·체험" },
-  M5: { label: "체류 방식", endpoints: "짧은 관람 ↔ 산책·장시간 체류" },
-  M6: { label: "시간 의존성", endpoints: "시간 영향 적음 ↔ 야간·계절·특정 시간 의존" },
 } as const;
 
 function formatReferenceDate(value: string) {
@@ -118,6 +115,7 @@ export function PlaceDetailPage() {
   const [saveAnnouncement, setSaveAnnouncement] = useState("");
   const [saveWarning, setSaveWarning] = useState("");
   const announcements = useJourneyAnnouncements();
+  const tripContext = useTripContext(runId, state.kind === "success");
   const operatingInformation = useOperatingInformation(
     runId,
     state.kind === "success" ? [placeId] : [],
@@ -126,9 +124,14 @@ export function PlaceDetailPage() {
   useEffect(() => {
     const controller = new AbortController();
     setState({ kind: "loading" });
-    void fetchRecommendationResults(runId, { signal: controller.signal })
+    void fetchRecommendationEnvelope(runId, { signal: controller.signal })
       .then(async (results) => {
         if (controller.signal.aborted) return;
+        if (results.schema_version === "itda.grounded-recommendation-results.v1") {
+          const detail = await fetchGroundedDetail(results, placeId, { signal: controller.signal });
+          if (!controller.signal.aborted) setState({ kind: "grounded", detail, results });
+          return;
+        }
         const expectedItem = results.run.items.find(
           (candidate) => candidate.place_id === placeId,
         );
@@ -213,6 +216,8 @@ export function PlaceDetailPage() {
     );
   }
 
+  if (state.kind === "grounded") return <GroundedDetailView key={`${state.results.run.run_id}:${state.detail.item.place_id}`} results={state.results} detail={state.detail} />;
+
   const { detail, results } = state;
   const item = detail.item;
   const photoExplanation =
@@ -220,7 +225,6 @@ export function PlaceDetailPage() {
       ? results.run.photo_scores[item.rank - 1]?.explanation_ko
       : undefined;
   const similarById = new Map(results.run.items.map((candidate) => [candidate.place_id, candidate]));
-  const timeTrait = detail.mismatch_traits.find((trait) => trait.trait_id === "M6");
   const selectedPlaces = compareIds.map((selectedId) => {
     const selected = similarById.get(selectedId)!;
     return { placeId: selectedId, placeName: selected.place_name_ko };
@@ -277,7 +281,10 @@ export function PlaceDetailPage() {
       <header className="page-intro recommendations-intro">
         <p className="eyebrow">같은 추천 실행의 장소 상세</p>
         <h1 ref={headingRef} tabIndex={-1}>{item.place_name_ko}</h1>
-        <p>{item.rank}위 · 적합도 {item.fit_score}점 / 100점</p>
+        <p>{item.rank}위</p>
+        <SimilaritySummary value={item.contribution.experience_fit_score} />
+        <p>{SIMILARITY_DESCRIPTION}</p>
+        <p>{RECOMMENDATION_ORDER_DESCRIPTION}</p>
         <Link className="button button--secondary" to={`/recommendations/${encodeURIComponent(runId)}`}>
           추천 5곳으로 돌아가기
         </Link>
@@ -305,13 +312,19 @@ export function PlaceDetailPage() {
 
       <RecommendationStatusBanner disclosure={results.release_disclosure} />
       <TextFirstMediaState state={mediaStateFromImageState(item.image_state)} />
+      <TripContext
+        place={tripContext.kind === "resolved" ? tripContext.places.get(placeId) : undefined}
+        loading={tripContext.kind === "loading" || tripContext.kind === "idle"}
+        checkedAt={tripContext.kind === "resolved" ? tripContext.response.checked_at : undefined}
+        mode={tripContext.kind === "resolved" ? tripContext.response.mode : undefined}
+      />
 
       <section
         className="place-detail__section place-detail__confidence"
-        aria-label="분석 신뢰도"
+        aria-label="근거 상태"
         data-evidence-confidence-state={detail.evidence_confidence_state}
       >
-        <h2>분석 신뢰도 {detail.confidence_percent}점 / 100점</h2>
+        <h2>근거 상태</h2>
         <p className="place-detail__confidence-status">
           <strong>
             {detail.evidence_confidence_state === "EVIDENCE_SUPPORTED" ? "근거 충분" : "근거 제한"}
@@ -320,25 +333,25 @@ export function PlaceDetailPage() {
         </p>
       </section>
 
-      <section className="place-detail__section" aria-label={`${item.place_name_ko} 경험 점수`}>
-        <h2>이번 여행과 맞는 경험 점수</h2>
+      <section className="place-detail__section" aria-label={`${item.place_name_ko} 내 취향과의 유사도`}>
+        <h2>내 취향과의 유사도</h2>
         <div className="recommendation-axes">
-          {item.axis_scores.map((axis) => {
+          {item.contribution.axis_components.map((axis) => {
             const copy = AXIS_COPY[axis.axis];
             return (
               <div className={`recommendation-axis ${copy.className}`} key={axis.axis}>
                 <div className="recommendation-axis__label">
-                  <span>{copy.label}</span><span>{axis.value}점</span>
+                  <span>{copy.label}</span><span>{similarityLabel(axis.fit_score)}</span>
                 </div>
                 <div
                   className="axis-meter"
                   role="meter"
-                  aria-label={`${copy.label} ${axis.value}점 / 100점`}
+                  aria-label={`${copy.label} 취향 유사도 ${similarityLabel(axis.fit_score)}`}
                   aria-valuemin={0}
                   aria-valuemax={100}
-                  aria-valuenow={axis.value}
+                  aria-valuenow={axis.fit_score}
                 >
-                  <span className="axis-meter__fill" style={{ width: `${axis.value}%` }} />
+                  <span className="axis-meter__fill" style={{ width: `${axis.fit_score}%` }} />
                 </div>
               </div>
             );
@@ -359,31 +372,6 @@ export function PlaceDetailPage() {
       </section>
 
       <MismatchGuidance mismatch={item.mismatch} />
-
-      <section className="place-detail__section">
-        <h2>여섯 가지 기대 차이 특성</h2>
-        <ul className="place-detail__trait-list" aria-label="여섯 가지 기대 차이 특성">
-          {detail.mismatch_traits.map((trait) => {
-            const copy = TRAIT_COPY[trait.trait_id];
-            return (
-              <li key={trait.trait_id}>
-                <strong>{copy.label}</strong>
-                <span>{trait.value}점 / 100점</span>
-                <small>{copy.endpoints}</small>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
-      <section className="place-detail__section">
-        <h2>시간·계절 맥락</h2>
-        {timeTrait === undefined ? (
-          <p>정보 없음 — 저장된 시간 의존성 근거가 없어요.</p>
-        ) : (
-          <p>저장된 시간 의존성은 {timeTrait.value}점 / 100점이에요. 야간·계절·특정 시간의 영향 가능성을 뜻하며 현재 상황을 단정하지 않아요.</p>
-        )}
-      </section>
 
       <section className="place-detail__section" data-operating-state={
         operatingInformation.kind === "resolved"
@@ -434,7 +422,7 @@ export function PlaceDetailPage() {
                     aria-label={`${similar.place_name_ko} 상세 보기`}
                     to={`/recommendations/${encodeURIComponent(runId)}/places/${encodeURIComponent(similarId)}`}
                   >
-                    {similar.place_name_ko} · 적합도 {similar.fit_score}점
+                    {similar.place_name_ko} · 내 취향과 {similarityLabel(similar.contribution.experience_fit_score)} 유사
                   </Link>
                 </li>
               );

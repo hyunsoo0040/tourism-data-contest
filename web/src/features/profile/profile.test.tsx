@@ -4,6 +4,7 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import questionnaireArtifact from "../../../../contracts/questionnaire-v2.json";
+import { FRONTEND_QUESTIONNAIRE } from "../../content/questionnaire";
 import {
   profileSubmissionFingerprint,
   type PreferenceProfile,
@@ -20,9 +21,12 @@ import {
   writeProfileReference,
 } from "../../app/storage";
 import {
-  CONFIRMED_PHOTO_REFERENCE_STORAGE_KEY,
   writeConfirmedPhotoReference,
+  writeConfirmedMoodReference,
+  CONFIRMED_MOOD_REFERENCE_STORAGE_KEY,
 } from "../photo/photoProjection";
+import { ProfileRecommendationCTA } from "./ProfileRecommendationCTA";
+import { groundedTripInputSha256, writeGroundedTripInput } from "../journey/groundedTrip";
 
 const tripConditions = {
   visit_date: null,
@@ -44,7 +48,7 @@ function profile(overrides: Partial<PreferenceProfile> = {}): PreferenceProfile 
     request_id: "request-current",
     schema_version: "preference-profile-v2",
     questionnaire_version: "questionnaire-v2",
-    scoring_version: "choice-bp-v2",
+    scoring_version: "choice-distribution-v3",
     description_template_version: "current-trip-expectation-v1",
     config_hash: questionnaireArtifact.config_hash,
     created_at: "2026-07-22T12:00:00Z",
@@ -84,6 +88,147 @@ async function renderStrictProfile() {
 }
 
 describe("/profile result, reload, and recovery", () => {
+  it("reuses an identical extra-needs run but creates a new request after the needs change, including photo mode", async () => {
+    const currentProfile = profile({ profile_id: "profile-facility-current" });
+    const inputSha256 = await profileSubmissionFingerprint(currentProfile.trip_conditions, currentProfile);
+    const bodies: Record<string, unknown>[] = [];
+    const firstGrounded = { visit_date: "2026-10-03", visit_time: null, required_facilities: ["accessible_toilet" as const] };
+    writeGroundedTripInput(firstGrounded);
+    writeConfirmedMoodReference(currentProfile.profile_id, "f".repeat(64), "e".repeat(64));
+    vi.stubGlobal("fetch", vi.fn().mockImplementation((_input: RequestInfo | URL, init?: RequestInit) => {
+      const body = JSON.parse(String(init?.body)) as Record<string, unknown>;
+      bodies.push(body);
+      return Promise.resolve(jsonResponse({ schema_version: "itda.recommendation-run-created.v1",
+        recommendation_run_id: `recommendation-run:needs-${bodies.length}`, request_id: body.request_id,
+        preference_profile_id: currentProfile.profile_id, preference_input_sha256: inputSha256 }));
+    }));
+    const router = createMemoryRouter([
+      { path: "/profile", element: <ProfileRecommendationCTA profile={currentProfile} photoJobId={"f".repeat(64)} /> },
+      { path: "/recommendations/:runId", element: <p>시설 추천 완료</p> },
+    ], { initialEntries: ["/profile"] });
+    render(<RouterProvider router={router} />);
+    async function submit() {
+      const button = screen.getByRole("button", { name: "사진 취향을 반영해 추천 보기" });
+      await waitFor(() => expect(button).toHaveProperty("disabled", false));
+      fireEvent.click(button);
+      await screen.findByText("시설 추천 완료");
+    }
+    await submit();
+    const stored = JSON.parse(window.sessionStorage.getItem("itda:phase5:current-recommendation:v2")!);
+    expect(stored.schema_version).toBe("phase5-current-recommendation-v4");
+    expect(stored.preference_input_sha256).toBe(inputSha256);
+    expect(stored.grounded_input_sha256).toBe(await groundedTripInputSha256(firstGrounded));
+    await act(async () => { await router.navigate("/profile"); });
+    await submit();
+    expect(bodies).toHaveLength(1);
+    writeGroundedTripInput({ ...firstGrounded, required_facilities: ["step_free_entry"] });
+    await act(async () => { await router.navigate("/profile"); });
+    await submit();
+    expect(bodies).toHaveLength(2);
+    expect(bodies[1]!.request_id).not.toBe(bodies[0]!.request_id);
+    expect(bodies[1]!.grounded_input).toMatchObject({ required_facilities: ["step_free_entry"] });
+    expect(bodies[1]!.photo_job_id).toBe("f".repeat(64));
+  });
+
+  it("retries the same explicit needs with one request ID and replaces it when only those needs change", async () => {
+    const currentProfile = profile({ profile_id: "profile-facility-retry" });
+    const bodies: Record<string, unknown>[] = [];
+    writeGroundedTripInput({ visit_date: "2026-10-03", visit_time: "14:30", required_facilities: [] });
+    vi.stubGlobal("fetch", vi.fn().mockImplementation((_input: RequestInfo | URL, init?: RequestInit) => {
+      bodies.push(JSON.parse(String(init?.body)) as Record<string, unknown>);
+      return Promise.resolve(jsonResponse({}, 500));
+    }));
+    const router = createMemoryRouter([
+      { path: "/profile", element: <ProfileRecommendationCTA profile={currentProfile} /> },
+      { path: "/edit", element: <p>추가 조건 수정</p> },
+    ], { initialEntries: ["/profile"] });
+    render(<RouterProvider router={router} />);
+    const cta = screen.getByRole("button", { name: "바로 추천 보기" });
+    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
+    fireEvent.click(cta);
+    fireEvent.click(await screen.findByRole("button", { name: "다시 시도하기" }));
+    await waitFor(() => expect(bodies).toHaveLength(2));
+    expect(bodies[1]!.request_id).toBe(bodies[0]!.request_id);
+    await act(async () => { await router.navigate("/edit"); });
+    writeGroundedTripInput({ visit_date: "2026-10-03", visit_time: "15:30", required_facilities: [] });
+    await act(async () => { await router.navigate("/profile"); });
+    const changed = screen.getByRole("button", { name: "바로 추천 보기" });
+    await waitFor(() => expect(changed).toHaveProperty("disabled", false));
+    fireEvent.click(changed);
+    await waitFor(() => expect(bodies).toHaveLength(3));
+    expect(bodies[2]!.request_id).not.toBe(bodies[0]!.request_id);
+    expect(bodies[2]!.grounded_input).toMatchObject({ visit_time: "15:30" });
+    expect(bodies[2]!.preference_profile_id).toBe(bodies[0]!.preference_profile_id);
+  });
+
+  it("retries the same purpose with one request ID and replaces it after a purpose change", async () => {
+    const currentProfile = profile({ profile_id: "profile-purpose-retry" });
+    const bodies: Record<string, unknown>[] = [];
+    vi.stubGlobal("fetch", vi.fn().mockImplementation((_input: RequestInfo | URL, init?: RequestInit) => {
+      bodies.push(JSON.parse(String(init?.body)) as Record<string, unknown>);
+      return Promise.resolve(jsonResponse({ code: "TEMPORARY_FAILURE" }, 500));
+    }));
+    const router = createMemoryRouter([{ path: "/profile", element: <ProfileRecommendationCTA profile={currentProfile} /> }], { initialEntries: ["/profile"] });
+    render(<RouterProvider router={router} />);
+    const cta = screen.getByRole("button", { name: "바로 추천 보기" });
+    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
+    fireEvent.click(cta);
+    fireEvent.click(await screen.findByRole("button", { name: "다시 시도하기" }));
+    await waitFor(() => expect(bodies).toHaveLength(2));
+    expect(bodies[0]!.purpose).toBe("SIGHTSEEING");
+    expect(bodies[1]!.request_id).toBe(bodies[0]!.request_id);
+    fireEvent.change(screen.getByRole("combobox", { name: "추천 여행 목적" }), { target: { value: "FOOD" } });
+    const changedCTA = await screen.findByRole("button", { name: "바로 추천 보기" });
+    await waitFor(() => expect(changedCTA).toHaveProperty("disabled", false));
+    fireEvent.click(changedCTA);
+    await waitFor(() => expect(bodies).toHaveLength(3));
+    expect(bodies[2]!.purpose).toBe("FOOD");
+    expect(bodies[2]!.request_id).not.toBe(bodies[0]!.request_id);
+  });
+
+  it("restores the selected purpose but requests a new run when it changes", async () => {
+    const currentProfile = profile({ profile_id: "profile-purpose-current" });
+    const inputSha256 = await profileSubmissionFingerprint(currentProfile.trip_conditions, currentProfile);
+    const bodies: Record<string, unknown>[] = [];
+    vi.stubGlobal("fetch", vi.fn().mockImplementation((_input: RequestInfo | URL, init?: RequestInit) => {
+      const body = JSON.parse(String(init?.body)) as Record<string, unknown>;
+      bodies.push(body);
+      return Promise.resolve(jsonResponse({
+        schema_version: "itda.recommendation-run-created.v1",
+        recommendation_run_id: `recommendation-run:purpose-${bodies.length}`,
+        request_id: body.request_id,
+        preference_profile_id: currentProfile.profile_id,
+        preference_input_sha256: inputSha256,
+      }));
+    }));
+    const router = createMemoryRouter([
+      { path: "/profile", element: <ProfileRecommendationCTA profile={currentProfile} /> },
+      { path: "/recommendations/:runId", element: <p>추천 완료</p> },
+    ], { initialEntries: ["/profile"] });
+    render(<RouterProvider router={router} />);
+    fireEvent.change(screen.getByRole("combobox", { name: "추천 여행 목적" }), { target: { value: "FOOD" } });
+    let cta = screen.getByRole("button", { name: "바로 추천 보기" });
+    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
+    fireEvent.click(cta);
+    await screen.findByText("추천 완료");
+    await act(async () => { await router.navigate("/profile"); });
+    expect(screen.getByRole("combobox", { name: "추천 여행 목적" })).toHaveProperty("value", "FOOD");
+    cta = screen.getByRole("button", { name: "바로 추천 보기" });
+    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
+    fireEvent.click(cta);
+    await screen.findByText("추천 완료");
+    expect(bodies).toHaveLength(1);
+    await act(async () => { await router.navigate("/profile"); });
+    fireEvent.change(screen.getByRole("combobox", { name: "추천 여행 목적" }), { target: { value: "LODGING" } });
+    cta = screen.getByRole("button", { name: "바로 추천 보기" });
+    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
+    fireEvent.click(cta);
+    await screen.findByText("추천 완료");
+    expect(bodies).toHaveLength(2);
+    expect(bodies[1]!.purpose).toBe("LODGING");
+    expect(bodies[1]!.request_id).not.toBe(bodies[0]!.request_id);
+  });
+
   beforeEach(() => {
     resetJourneyStorage();
     window.localStorage.clear();
@@ -99,13 +244,28 @@ describe("/profile result, reload, and recovery", () => {
 
     await renderProfile();
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     expect(screen.getAllByRole("meter").map((meter) => meter.getAttribute("aria-valuenow"))).toEqual(["0", "100", "50"]);
     expect(screen.getByText(profile().description_ko).textContent).toBe(profile().description_ko);
     expect(fetchMock).toHaveBeenCalledWith("/v1/preference-profiles/profile-current", expect.any(Object));
     const restored = JSON.parse(window.localStorage.getItem(DRAFT_STORAGE_KEY) ?? "null") as { answers: unknown; trip_conditions: unknown };
     expect(restored.answers).toEqual(answers);
     expect(restored.trip_conditions).toEqual(tripConditions);
+  });
+
+  it("keeps a matching saved profile usable when JSON object keys arrive in another order", async () => {
+    const current = profile();
+    writeProfileReference(current.profile_id);
+    writeDraft({ ...createEmptyDraft(), current_route: "/profile", trip_conditions: tripConditions, answers });
+    const reverseKeys = (value: object) => Object.fromEntries(Object.entries(value).reverse());
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse({
+      ...current,
+      trip_conditions: reverseKeys(current.trip_conditions),
+      answers: reverseKeys(current.answers),
+    })));
+    await renderProfile();
+    expect(await screen.findByRole("combobox", { name: "추천 여행 목적" })).toBeTruthy();
+    expect(screen.queryByText("기대 프로필을 다시 만들 수 있어요.")).toBeNull();
   });
 
   it("opens the optional photo panel when the base photo route redirects to profile", async () => {
@@ -115,7 +275,7 @@ describe("/profile result, reload, and recovery", () => {
     render(<RouterProvider router={router} />);
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     const panel = screen.getByText("사진으로 더 정확하게").closest("details");
     expect(panel?.open).toBe(true);
     expect(screen.getByRole("button", { name: "바로 추천 보기" })).toBeTruthy();
@@ -160,6 +320,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(recommendationBody).not.toHaveProperty("photo_job_id");
     expect(Object.keys(recommendationBody ?? {}).sort()).toEqual([
       "preference_profile_id",
+      "purpose",
       "request_id",
     ]);
   });
@@ -172,7 +333,7 @@ describe("/profile result, reload, and recovery", () => {
       currentProfile,
     );
     writeProfileReference(currentProfile.profile_id);
-    expect(writeConfirmedPhotoReference(currentProfile.profile_id, photoJobId)).toBe(true);
+    expect(writeConfirmedMoodReference(currentProfile.profile_id, photoJobId, "e".repeat(64))).toBe(true);
     let recommendationBody: Record<string, unknown> | null = null;
     vi.stubGlobal(
       "fetch",
@@ -204,12 +365,13 @@ describe("/profile result, reload, and recovery", () => {
       request_id: expect.any(String),
       preference_profile_id: currentProfile.profile_id,
       photo_job_id: photoJobId,
+      purpose: "SIGHTSEEING",
     });
     const serializedReference = window.sessionStorage.getItem(
-      CONFIRMED_PHOTO_REFERENCE_STORAGE_KEY,
+      CONFIRMED_MOOD_REFERENCE_STORAGE_KEY,
     );
     expect(serializedReference).not.toContain("traits");
-    expect(serializedReference).not.toContain("receipt");
+    expect(JSON.parse(serializedReference!).receipt_id).toBe("e".repeat(64));
     expect(serializedReference).not.toContain("provider");
   });
 
@@ -241,12 +403,29 @@ describe("/profile result, reload, and recovery", () => {
     vi.stubGlobal("fetch", fetchMock);
 
     const router = await renderProfile();
+    expect(screen.getByRole("combobox", { name: "추천 여행 목적" })).toHaveProperty("value", "MIXED");
     const cta = await screen.findByRole("button", { name: "사진 취향을 반영해 추천 보기" });
     await waitFor(() => expect(cta).toHaveProperty("disabled", false));
     fireEvent.click(cta);
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/recommendations/recommendation-run%3Arecovered-photo"));
     expect(fetchMock.mock.calls.filter(([, init]) => init?.method === "POST")).toHaveLength(0);
+  });
+
+  it("does not create a new recommendation from a historical factual-trait photo reference", async () => {
+    const currentProfile = profile({ profile_id: "profile-legacy-photo-new-run" });
+    writeProfileReference(currentProfile.profile_id);
+    writeConfirmedPhotoReference(currentProfile.profile_id, "e".repeat(64));
+    const fetchMock = vi.fn().mockResolvedValue(jsonResponse(currentProfile));
+    vi.stubGlobal("fetch", fetchMock);
+    await renderProfile();
+    const cta = await screen.findByRole("button", { name: "사진 취향을 반영해 추천 보기" });
+    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
+    fireEvent.click(cta);
+    expect(await screen.findByText("사진 분위기를 새로 확정해 주세요.")).toBeTruthy();
+    expect(fetchMock.mock.calls.filter((args) => (args[1] as RequestInit | undefined)?.method === "POST")).toHaveLength(0);
+    fireEvent.click(screen.getByRole("button", { name: "사진 없이 계속하기" }));
+    expect(await screen.findByRole("button", { name: "바로 추천 보기" })).toBeTruthy();
   });
 
   it("recovers a generated-contract-valid 160-character profile ID", async () => {
@@ -257,7 +436,7 @@ describe("/profile result, reload, and recovery", () => {
 
     await renderProfile();
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     expect(fetchMock).toHaveBeenCalledWith(
       `/v1/preference-profiles/${maximumId}`,
       expect.any(Object),
@@ -278,6 +457,7 @@ describe("/profile result, reload, and recovery", () => {
     const submissions: QuestionnaireSubmission[] = [];
     let postCount = 0;
     const fetchMock = vi.fn().mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) => {
+      if (String(input) === "/v1/questionnaires/current") return jsonResponse(questionnaireArtifact);
       if (String(input).endsWith("profile-stale")) return jsonResponse({ detail: "not found" }, 404);
       const submission = JSON.parse(String(init?.body)) as QuestionnaireSubmission;
       submissions.push(submission);
@@ -292,7 +472,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(await screen.findByRole("alert")).toHaveProperty("textContent", expect.stringContaining("프로필을 만들지 못했어요"));
     fireEvent.click(screen.getByRole("button", { name: "다시 시도하기" }));
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     expect(submissions).toHaveLength(2);
     expect(submissions[0]?.request_id).toBe(submissions[1]?.request_id);
     expect(JSON.parse(window.localStorage.getItem(PROFILE_STORAGE_KEY) ?? "null").profile_id).toBe("profile-rebuilt");
@@ -309,6 +489,7 @@ describe("/profile result, reload, and recovery", () => {
     vi.stubGlobal(
       "fetch",
       vi.fn().mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) => {
+      if (String(input) === "/v1/questionnaires/current") return jsonResponse(questionnaireArtifact);
         if (init?.method !== "POST") return jsonResponse({ detail: "not found" }, 404);
         const submission = JSON.parse(String(init.body)) as QuestionnaireSubmission;
         return jsonResponse(profile({ profile_id: "profile-memory", request_id: submission.request_id }), 201);
@@ -318,7 +499,7 @@ describe("/profile result, reload, and recovery", () => {
     await renderProfile();
     fireEvent.click(await screen.findByRole("button", { name: "프로필 다시 만들기" }));
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     expect(await screen.findByText(STORAGE_MESSAGES.unavailable)).toBeTruthy();
   });
 
@@ -332,7 +513,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(await screen.findByRole("alert")).toHaveProperty("textContent", expect.stringContaining("프로필 형식을 확인하지 못했어요"));
     expect(screen.queryByRole("meter")).toBeNull();
     fireEvent.click(screen.getByRole("button", { name: "다시 시도하기" }));
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
   });
 
   it("keeps a newer complete draft and offers recovery when the fetched profile echo is stale", async () => {
@@ -360,7 +541,8 @@ describe("/profile result, reload, and recovery", () => {
     let requestSignal: AbortSignal | undefined;
     vi.stubGlobal(
       "fetch",
-      vi.fn().mockImplementation((_input: RequestInfo | URL, init?: RequestInit) => {
+      vi.fn().mockImplementation((input: RequestInfo | URL, init?: RequestInit) => {
+        if (String(input).endsWith("/recommendation-regions")) return Promise.resolve(jsonResponse({ candidate_sha256: null, regions: [] }));
         requestSignal = init?.signal ?? undefined;
         return delayedGet;
       }),
@@ -369,7 +551,7 @@ describe("/profile result, reload, and recovery", () => {
     await waitFor(() => expect(requestSignal).toBeDefined());
 
     await act(async () => router.navigate("/start"));
-    await screen.findByRole("heading", { name: "이번 경주, 어떤 시간을 보내고 싶나요?" });
+    await screen.findByRole("heading", { name: "이번 여행, 어떤 시간을 보내고 싶나요?" });
     expect(requestSignal?.aborted).toBe(true);
     await act(async () => {
       resolveGet(jsonResponse(profile()));
@@ -396,7 +578,7 @@ describe("/profile result, reload, and recovery", () => {
 
     await renderStrictProfile();
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     expect(callCount).toBe(2);
     expect(signals[0]?.aborted).toBe(true);
     expect(signals[1]?.aborted).toBe(false);
@@ -414,14 +596,14 @@ describe("/profile result, reload, and recovery", () => {
       .mockImplementationOnce((_input: RequestInfo | URL, init?: RequestInit) => {
         retrySignal = init?.signal ?? undefined;
         return delayedRetry;
-      });
+      }).mockResolvedValue(jsonResponse({ candidate_sha256: null, regions: [] }));
     vi.stubGlobal("fetch", fetchMock);
     const router = await renderProfile();
     fireEvent.click(await screen.findByRole("button", { name: "다시 시도하기" }));
     await waitFor(() => expect(retrySignal).toBeDefined());
 
     await act(async () => router.navigate("/start"));
-    await screen.findByRole("heading", { name: "이번 경주, 어떤 시간을 보내고 싶나요?" });
+    await screen.findByRole("heading", { name: "이번 여행, 어떤 시간을 보내고 싶나요?" });
     expect(retrySignal?.aborted).toBe(true);
     await act(async () => {
       resolveRetry(jsonResponse(profile()));
@@ -434,14 +616,19 @@ describe("/profile result, reload, and recovery", () => {
 
   it("routes answer edits precisely after restoring the server echo", async () => {
     writeProfileReference("profile-current");
-    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse(profile())));
+    vi.stubGlobal("fetch", vi.fn().mockImplementation(async (input: RequestInfo | URL) =>
+      jsonResponse(String(input) === "/v1/questionnaires/current" ? questionnaireArtifact : profile()),
+    ));
     const router = await renderProfile();
-    await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" });
+    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
     fireEvent.click(screen.getByText("입력한 내용"));
     fireEvent.click(screen.getByRole("button", { name: "시나리오 7 답변 수정" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/quiz"));
-    expect(router.state.location.search).toBe("?q=7");
-    expect(router.state.location.state).toMatchObject({ editingProfile: true });
+    expect(router.state.location).toMatchObject({ search: "", hash: "", state: { questionOrdinal: 7 } });
+    expect(router.state.location.state).toEqual({ questionOrdinal: 7, editingProfile: true });
+    expect(await screen.findByRole("heading", { name: FRONTEND_QUESTIONNAIRE.questions[6]!.title_ko })).toBeTruthy();
+    expect(screen.getByText("7 / 12")).toBeTruthy();
+    expect(screen.getAllByRole("radio")[0]?.getAttribute("aria-checked")).toBe("true");
   });
 
   it("announces answer recalculation and focuses the three-axis heading after refetch", async () => {
@@ -459,13 +646,13 @@ describe("/profile result, reload, and recovery", () => {
     });
     vi.stubGlobal("fetch", fetchMock);
     const router = await renderProfile();
-    await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" });
+    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
     fireEvent.click(screen.getByText("입력한 내용"));
     fireEvent.click(screen.getByRole("button", { name: "시나리오 9 답변 수정" }));
-    await screen.findByText(questionnaireArtifact.questions[8]!.title_ko);
+    await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[8]!.title_ko);
     fireEvent.click(screen.getAllByRole("radio")[1]);
     for (let ordinal = 9; ordinal < 12; ordinal += 1) {
-      await screen.findByText(questionnaireArtifact.questions[ordinal]!.title_ko);
+      await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[ordinal]!.title_ko);
       fireEvent.click(screen.getAllByRole("radio")[2]);
     }
 
@@ -482,7 +669,7 @@ describe("/profile result, reload, and recovery", () => {
     window.localStorage.setItem("another-app", "keep");
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse(profile())));
     const router = await renderProfile();
-    await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" });
+    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
 
     const trigger = screen.getByRole("button", { name: "처음부터 다시" });
     fireEvent.click(trigger);
@@ -535,7 +722,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
 
     await renderProfile();
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     expect(screen.getByText("레거시 프로필").textContent).toBe("레거시 프로필");
     expect(screen.queryByText(STORAGE_MESSAGES.invalid)).toBeNull();
   });
@@ -547,7 +734,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
 
     await renderProfile();
 
-    await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" });
+    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
     // The nine legacy answers render with their own Likert labels...
     expect(screen.getByText("질문 1 · 꽤 그래요")).toBeTruthy();
     expect(screen.getByText("질문 2 · 매우 그래요")).toBeTruthy();
@@ -564,7 +751,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
     vi.stubGlobal("fetch", fetchMock);
 
     const router = await renderProfile();
-    await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" });
+    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
 
     fireEvent.click(screen.getByRole("button", { name: "질문 1 답변 수정" }));
 
@@ -583,7 +770,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
 
     await renderProfile();
 
-    await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" });
+    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
     expect(screen.queryByText("기대 프로필을 다시 만들었어요")).toBeNull();
     expect(screen.queryByRole("button", { name: "다시 만들기" })).toBeNull();
   });
@@ -602,6 +789,7 @@ describe("/start profile edit mode", () => {
     const posted: QuestionnaireSubmission[] = [];
     let latestProfile = profile();
     const fetchMock = vi.fn().mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) => {
+      if (String(input) === "/v1/questionnaires/current") return jsonResponse(questionnaireArtifact);
       if (init?.method !== "POST") return jsonResponse(latestProfile);
       const submission = JSON.parse(String(init?.body)) as QuestionnaireSubmission;
       posted.push(submission);
@@ -641,7 +829,8 @@ describe("/start profile edit mode", () => {
     let latestProfile = profile();
     vi.stubGlobal(
       "fetch",
-      vi.fn().mockImplementation(async (_input: RequestInfo | URL, init?: RequestInit) => {
+      vi.fn().mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) => {
+      if (String(input) === "/v1/questionnaires/current") return jsonResponse(questionnaireArtifact);
         if (init?.method !== "POST") return jsonResponse(latestProfile);
         const submission = JSON.parse(String(init.body)) as QuestionnaireSubmission;
         latestProfile = profile({
@@ -665,7 +854,7 @@ describe("/start profile edit mode", () => {
     fireEvent.click(screen.getByRole("button", { name: "수정 내용 반영하기" }));
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 경주의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
     expect(await screen.findByText(STORAGE_MESSAGES.unavailable)).toBeTruthy();
   });
 });

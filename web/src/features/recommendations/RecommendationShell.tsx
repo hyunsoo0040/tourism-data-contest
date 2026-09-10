@@ -14,7 +14,7 @@ export function RecommendationShell({ children }: { children: ReactNode }) {
             <a href="#recommendation-list">추천 장소</a>
             <a href="/">홈</a>
           </nav>
-          <div className="server-pill ok">경주 PUBLIC 100</div>
+          <div className="server-pill ok">전국 여행지 탐색</div>
         </header>
         <main>{children}</main>
         <nav className="mobile-tabs" aria-label="모바일 추천 이동">

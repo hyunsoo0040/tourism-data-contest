@@ -17,13 +17,13 @@ export type RecommendationPageState =
 
 const COPY = {
   loading: {
-    heading: "경주 여행지 5곳을 고르고 있어요.",
+    heading: "내 취향에 맞는 여행지 5곳을 고르고 있어요.",
     body: "확인된 기대 프로필과 장소 근거를 연결하고 있어요.",
     action: null,
   },
   NO_ACTIVE_SCORED_RELEASE: {
     heading: "추천 준비가 아직 끝나지 않았어요.",
-    body: "검증된 점수 프로필 24곳이 모두 준비된 뒤에만 추천을 보여드려요. 잠시 후 다시 확인해 주세요.",
+    body: "새 여행지 자료를 확인하고 있어요. 준비가 끝나면 추천을 다시 볼 수 있어요.",
     action: "추천 준비 다시 확인",
   },
   INSUFFICIENT_ELIGIBLE_CANDIDATES: {
@@ -110,7 +110,7 @@ export function RecommendationStatePage({
         data-status={machineState}
         role={isAlert ? "alert" : undefined}
       >
-        <p className="eyebrow">사진 없이 고른 경주 여행지</p>
+        <p className="eyebrow">사진 없이 고른 여행지</p>
         <h1 ref={headingRef} tabIndex={-1}>{copy.heading}</h1>
         <p>{copy.body}</p>
         {state === "loading" ? (

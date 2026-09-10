@@ -1,6 +1,7 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { StrictMode } from "react";
 import { MemoryRouter } from "react-router-dom";
-import { beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { JourneyStepper } from "../components/JourneyStepper";
 import { AppShell, useJourneyDraft } from "./AppShell";
@@ -287,6 +288,121 @@ describe("typed profile reference storage", () => {
     expect(window.localStorage.getItem(PENDING_PROFILE_SUBMISSION_KEY)).not.toBeNull();
     expect(clearPendingProfileSubmission("request-one", window.localStorage)).toBe(true);
     expect(window.localStorage.getItem(PENDING_PROFILE_SUBMISSION_KEY)).toBeNull();
+  });
+});
+
+function ResetProbe() {
+  const { state, resetDraft, reportStorageUnavailable } = useJourneyDraft();
+  return (
+    <main>
+      <h1 tabIndex={-1}>저장 상태: {state}</h1>
+      <button onClick={resetDraft}>초기화</button>
+      <button onClick={reportStorageUnavailable}>저장 실패</button>
+    </main>
+  );
+}
+
+describe("초기화 성공 알림 수명", () => {
+  beforeEach(() => {
+    resetJourneyStorage();
+    window.localStorage.clear();
+    vi.useFakeTimers({ toFake: ["Date", "setTimeout", "clearTimeout"] });
+    vi.setSystemTime(new Date("2026-09-08T15:30:00Z"));
+  });
+
+  afterEach(() => {
+    cleanup();
+    vi.restoreAllMocks();
+    vi.useRealTimers();
+  });
+
+  function renderReset() {
+    return render(
+      <StrictMode>
+        <MemoryRouter initialEntries={["/start"]}>
+          <AppShell><ResetProbe /></AppShell>
+        </MemoryRouter>
+      </StrictMode>,
+    );
+  }
+
+  it("성공 알림만 4초 후 지우고 storage는 다시 만들지 않는다", () => {
+    window.sessionStorage.setItem("itda:grounded-trip:v1", JSON.stringify({ visit_date: null,
+      visit_time: null, required_facilities: ["wheelchair_rental"] }));
+    writeDraft(createEmptyDraft());
+    renderReset();
+    fireEvent.click(screen.getByRole("button", { name: "초기화" }));
+    act(() => vi.advanceTimersByTime(3_999));
+    expect(screen.getByText(STORAGE_MESSAGES.reset)).toBeTruthy();
+    act(() => vi.advanceTimersByTime(1));
+    expect(screen.queryByText(STORAGE_MESSAGES.reset)).toBeNull();
+    expect(screen.getByRole("heading").textContent).toBe("저장 상태: normal");
+    expect(window.localStorage.getItem(DRAFT_STORAGE_KEY)).toBeNull();
+    expect(window.sessionStorage.getItem("itda:grounded-trip:v1")).toBeNull();
+  });
+
+  it("반복 초기화는 마지막 성공부터 4초를 센다", () => {
+    renderReset();
+    fireEvent.click(screen.getByRole("button", { name: "초기화" }));
+    act(() => vi.advanceTimersByTime(3_000));
+    fireEvent.click(screen.getByRole("button", { name: "초기화" }));
+    act(() => vi.advanceTimersByTime(3_999));
+    expect(screen.getByText(STORAGE_MESSAGES.reset)).toBeTruthy();
+    act(() => vi.advanceTimersByTime(1));
+    expect(screen.queryByText(STORAGE_MESSAGES.reset)).toBeNull();
+  });
+
+  it("기존 타이머가 새 저장 실패 경고를 지우지 않는다", () => {
+    renderReset();
+    fireEvent.click(screen.getByRole("button", { name: "초기화" }));
+    act(() => vi.advanceTimersByTime(1_000));
+    fireEvent.click(screen.getByRole("button", { name: "저장 실패" }));
+    act(() => vi.advanceTimersByTime(10_000));
+    fireEvent(document, new Event("visibilitychange"));
+    expect(screen.getByText(STORAGE_MESSAGES.unavailable)).toBeTruthy();
+  });
+
+  it("백그라운드에서 타이머가 지연돼도 복귀 시 만료 알림을 지운다", () => {
+    renderReset();
+    fireEvent.click(screen.getByRole("button", { name: "초기화" }));
+    vi.spyOn(document, "visibilityState", "get").mockReturnValue("visible");
+    vi.setSystemTime(new Date("2026-09-08T15:31:00Z"));
+    fireEvent(document, new Event("visibilitychange"));
+    expect(screen.queryByText(STORAGE_MESSAGES.reset)).toBeNull();
+  });
+
+  it("초기화 실패 알림은 자동으로 닫지 않는다", () => {
+    renderReset();
+    vi.spyOn(Storage.prototype, "removeItem").mockImplementation(() => { throw new Error("blocked"); });
+    fireEvent.click(screen.getByRole("button", { name: "초기화" }));
+    act(() => vi.advanceTimersByTime(10_000));
+    expect(screen.getByText(STORAGE_MESSAGES.unavailable)).toBeTruthy();
+    expect(screen.queryByText(STORAGE_MESSAGES.reset)).toBeNull();
+  });
+
+  it.each(["corrupt", "expired"])("%s 경고는 성공 알림 타이머 대상이 아니다", (kind) => {
+    if (kind === "corrupt") window.localStorage.setItem(DRAFT_STORAGE_KEY, "{invalid");
+    else writeDraft(createEmptyDraft(), window.localStorage, Date.now() - STORAGE_RETENTION_MS - 1);
+    renderReset();
+    act(() => vi.advanceTimersByTime(10_000));
+    expect(screen.getByText(STORAGE_MESSAGES.invalid)).toBeTruthy();
+  });
+
+  it("unmount 시 성공 알림 타이머와 복귀 리스너를 해제한다", () => {
+    const { unmount } = renderReset();
+    const schedule = vi.spyOn(window, "setTimeout");
+    const cancel = vi.spyOn(window, "clearTimeout");
+    const listen = vi.spyOn(document, "addEventListener");
+    const remove = vi.spyOn(document, "removeEventListener");
+    fireEvent.click(screen.getByRole("button", { name: "초기화" }));
+    const timerIndex = schedule.mock.calls.findIndex(([, delay]) => delay === 4_000);
+    expect(timerIndex).toBeGreaterThanOrEqual(0);
+    const timer = schedule.mock.results[timerIndex]!.value;
+    const visibilityListener = listen.mock.calls.find(([name]) => name === "visibilitychange")?.[1];
+    expect(visibilityListener).toBeDefined();
+    unmount();
+    expect(cancel).toHaveBeenCalledWith(timer);
+    expect(remove).toHaveBeenCalledWith("visibilitychange", visibilityListener);
   });
 });
 
