@@ -10,21 +10,9 @@ import type { QuestionnaireDefinition } from "../api/api";
 import { useJourneyDraft } from "../app/AppShell";
 import { useLocation, useNavigate } from "../app/react-router-dom";
 import { questionnaireAnswersSchema, tripConditionsSchema } from "../app/schemas";
-import { clearPhotoDraft, readPhotoDraft, readProfileReference } from "../app/storage";
+import { readProfileReference } from "../app/storage";
 import { pickResultForProfile } from "../app/upstream/resultProjection";
-import { PhotoPreferenceFlow } from "../features/photo/PhotoPreferenceFlow";
 import { quizNavigationState } from "../features/journey/quizNavigation";
-import {
-  confirmPhotoJobTraitsRequest,
-  confirmPhotoJobMoodsRequest,
-  createPhotoJobRequest,
-  getPhotoJobRequest,
-  getPhotoJobTraitsRequest,
-  getPhotoJobMoodsRequest,
-  putPhotoJobImageRequest,
-  requestPhotoDeletionRequest,
-  submitPhotoJobRequest,
-} from "../features/photo/photoClient";
 import { CalculationDetails } from "../features/profile/CalculationDetails";
 import { InputSummary } from "../features/profile/InputSummary";
 import { ProfileNarrative } from "../features/profile/ProfileNarrative";
@@ -37,7 +25,6 @@ import {
   clearConfirmedPhotoReference,
   readConfirmedMoodReference,
   readConfirmedPhotoReference,
-  writeConfirmedMoodReference,
 } from "../features/photo/photoProjection";
 
 type PageState = "loading" | "ready" | "empty" | "recovery" | "api-error" | "invalid";
@@ -47,7 +34,7 @@ function ProfileShell({ children }: { children: ReactNode }) {
     <div className="up-root">
       <div className="up-quiz" data-upstream-surface="profile">
         <header className="topbar">
-          <a className="brand" href="/"><span>잇</span>IT-DA</a>
+          <a className="brand" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
           <nav>
             <a href="/#type">유형 보기</a>
             <a href="/start">다시 테스트</a>
@@ -68,7 +55,6 @@ export function ProfilePage() {
     announcement?: string;
     focusProfile?: boolean;
     autoRecommend?: boolean;
-    openPhotoPanel?: boolean;
   } | null;
   const [state, setState] = useState<PageState>("loading");
   const [profile, setProfile] = useState<PreferenceProfile | null>(null);
@@ -81,9 +67,6 @@ export function ProfilePage() {
     navigationState?.announcement ?? "",
   );
   const [retryKind, setRetryKind] = useState<"fetch" | "rebuild">("fetch");
-  const [photoPanelOpen, setPhotoPanelOpen] = useState(
-    navigationState?.openPhotoPanel === true,
-  );
   const [confirmedPhotoJobId, setConfirmedPhotoJobId] = useState<string | null>(null);
   const profileIdRef = useRef<string | null>(null);
   const ctaRef = useRef<HTMLDivElement | null>(null);
@@ -112,14 +95,10 @@ export function ProfilePage() {
     options: { message?: string; restoreDraft?: boolean; focusMeter?: boolean } = {},
   ) => {
     setProfile(nextProfile);
-    setConfirmedPhotoJobId(readConfirmedMoodReference(nextProfile.profile_id)?.photo_job_id ?? readConfirmedPhotoReference(nextProfile.profile_id));
-    const photoDraft = readPhotoDraft(nextProfile.profile_id);
-    if (
-      photoDraft.state === "valid" ||
-      (photoDraft.state === "unavailable" && photoDraft.record !== null)
-    ) {
-      setPhotoPanelOpen(true);
-    }
+    setConfirmedPhotoJobId(
+      readConfirmedMoodReference(nextProfile.profile_id)?.photo_job_id ??
+        readConfirmedPhotoReference(nextProfile.profile_id),
+    );
     // Result visuals and answer labels use the frontend presentation; scores stay server-owned.
     setUpstreamContract(FRONTEND_QUESTIONNAIRE);
     // Drafts are v2-only: a restored draft must carry answers that parse under
@@ -328,8 +307,6 @@ export function ProfilePage() {
                 <img src={upstreamResult.image} alt={`${upstreamResult.character} 캐릭터 이미지`} />
               </div>
               <div className="match-card">
-                <b>{upstreamResult.match}점</b>
-                <span>대표 유형 점수</span>
                 <div className="character-card">
                   <span>{upstreamResult.role}</span>
                   <b>{upstreamResult.character}</b>
@@ -359,64 +336,18 @@ export function ProfilePage() {
         </section>
 
         <div className="result-actions profile-primary-action" ref={ctaRef}>
-          <ProfileRecommendationCTA profile={profile} photoJobId={confirmedPhotoJobId} onClearPhoto={() => {
-            clearConfirmedPhotoReference(profile.profile_id); setConfirmedPhotoJobId(null);
-          }} />
+          <ProfileRecommendationCTA
+            profile={profile}
+            photoJobId={confirmedPhotoJobId}
+            onClearPhoto={() => {
+              clearConfirmedPhotoReference(profile.profile_id);
+              setConfirmedPhotoJobId(null);
+            }}
+          />
         </div>
 
-        <details
-          className="profile-photo-panel"
-          open={photoPanelOpen}
-          onToggle={(event) => setPhotoPanelOpen(event.currentTarget.open)}
-        >
-          <summary>
-            <span><b>사진으로 더 정확하게</b> <small>선택 사항</small></span>
-            <span aria-hidden="true">+</span>
-          </summary>
-          <div className="profile-photo-panel__body">
-            <p>좋아했던 여행 사진 1–3장으로 원하는 분위기를 보강할 수 있어요. 사진 없이도 바로 추천을 볼 수 있습니다.</p>
-            <PhotoPreferenceFlow
-              key={profile.profile_id}
-              profileId={profile.profile_id}
-              startAtConsent
-              consentHeadingLevel={2}
-              client={{
-                createPhotoJob: createPhotoJobRequest as unknown as (input: {
-                  consent_accepted: boolean;
-                  consent_version: string;
-                }) => Promise<{ job_id: string; state: string }>,
-                getPhotoJob: getPhotoJobRequest,
-                getPhotoJobTraits: getPhotoJobTraitsRequest,
-                getPhotoJobMoods: getPhotoJobMoodsRequest,
-                confirmPhotoJobMoods: confirmPhotoJobMoodsRequest,
-                requestPhotoDeletion: requestPhotoDeletionRequest as never,
-                putPhotoJobImage: putPhotoJobImageRequest,
-                submitPhotoJob: submitPhotoJobRequest,
-                confirmPhotoJobTraits: confirmPhotoJobTraitsRequest as never,
-              }}
-              onNoPhoto={() => {
-                setConfirmedPhotoJobId(null);
-                clearConfirmedPhotoReference(profile.profile_id);
-                setPhotoPanelOpen(false);
-              }}
-              onConfirmed={() => {
-                setConfirmedPhotoJobId(null);
-                clearConfirmedPhotoReference(profile.profile_id);
-                setAnnouncement("이전 사진 취향은 저장된 추천에서 확인할 수 있어요. 새 사진을 추가하거나 사진 없이 계속해 주세요.");
-              }}
-              onMoodConfirmed={(confirmed, jobId) => {
-                if (!writeConfirmedMoodReference(profile.profile_id, jobId, confirmed.receipt_id)) return;
-                setConfirmedPhotoJobId(jobId);
-                clearPhotoDraft();
-                setPhotoPanelOpen(false);
-                const count = confirmed.moods.filter((row) => row.value !== null).length;
-                setAnnouncement(count ? `사진 분위기 ${count}개를 추천에 참고할 준비가 됐어요.` : "확정한 사진 분위기 없이 설문 기준으로 추천해요.");
-              }}
-            />
-          </div>
-        </details>
-
         <div className="result-actions profile-actions">
+          <button type="button" className="control" onClick={() => void navigate("/photo")}>사진 추천 페이지 열기</button>
           <button type="button" className="control" onClick={() => editQuestion(1)}>답변 수정하기</button>
           <button type="button" className="control" onClick={() => void navigate("/start?mode=edit")}>여행 조건 수정하기</button>
           <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>처음부터 다시</button>

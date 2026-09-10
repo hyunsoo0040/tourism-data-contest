@@ -6,8 +6,8 @@ export function RecommendationShell({ children }: { children: ReactNode }) {
       <div className="up-etc" data-upstream-surface="recommendations">
         <header className="topbar">
           <a className="brand" href="/">
-            <span>잇</span>
-            <strong>IT-DA</strong>
+            <img className="brand-mark-image" src="/itda-logo-icon.png" alt="" />
+            <strong className="brand-wordmark">IT-DA</strong>
           </a>
           <nav>
             <a href="/profile">취향 결과</a>

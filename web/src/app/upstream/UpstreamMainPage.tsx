@@ -48,14 +48,14 @@ type RecommendationBranch = {
 /** Verbatim upstream preview dataset (copy provenance; not scoring). */
 const RECOMMENDATIONS: Record<string, RecommendationBranch> = {
   rest: {
-    title: "휴식·몰입형 추천 결과",
+    title: "자기·몰입형 추천 결과",
     phoneType: "당신은<br>휴식·몰입형 여행자",
     phoneDesc: "조용한 산책, 자유로운 공간, 오래 머무는 감정을 선호해요.",
     match: 84,
     text: "기대와 장소 분위기가 높은 수준으로 일치합니다.",
     places: [
       {
-        tag: "휴식·몰입 84%",
+        tag: "자기·몰입 84%",
         title: "보문호반길",
         desc: "보문호를 따라 천천히 걷거나 머물며 물가 풍경을 즐길 수 있는 경주의 산책 코스입니다.",
         color: "linear-gradient(135deg,#80ed99,#57cc99,#22577a)",
@@ -69,7 +69,7 @@ const RECOMMENDATIONS: Record<string, RecommendationBranch> = {
     ],
   },
   history: {
-    title: "역사·전통형 추천 결과",
+    title: "대상·원형형 추천 결과",
     phoneType: "당신은<br>역사·전통형 여행자",
     phoneDesc: "장소에 담긴 이야기와 문화적 맥락을 깊게 경험하고 싶어해요.",
     match: 89,
@@ -90,8 +90,8 @@ const RECOMMENDATIONS: Record<string, RecommendationBranch> = {
     ],
   },
   image: {
-    title: "감성·이미지형 추천 결과",
-    phoneType: "당신은<br>감성·이미지형 여행자",
+    title: "인식·이미지형 추천 결과",
+    phoneType: "당신은<br>인식·이미지형 여행자",
     phoneDesc: "사진으로 남기고 싶은 분위기와 시각적 인상을 중요하게 생각해요.",
     match: 86,
     text: "사진 분위기와 시각 키워드가 기대와 잘 맞습니다.",
@@ -170,7 +170,8 @@ export function UpstreamMainPage() {
         <header className="site-header">
           <div className="wrap nav">
             <a href="/" className="logo" aria-label="IT-DA 메인으로 이동">
-              <span className="logo-mark">잇</span> IT-DA
+              <img className="logo-mark" src="/itda-logo-icon.png" alt="" />
+              <strong className="logo-wordmark">IT-DA</strong>
             </a>
             <button
               className="menu-toggle"
@@ -186,7 +187,7 @@ export function UpstreamMainPage() {
             <nav className={openMenu ? "nav-menu open" : "nav-menu"} aria-label="주요 메뉴">
               <a href="#type">여행 유형</a>
               <a href="#flow">서비스 흐름</a>
-              <a href="#photo">사진 분위기 입력</a>
+              <a href="/photo">사진 분위기 입력</a>
               <a href="#demo">추천 예시</a>
             </nav>
             <a href="/start" className="nav-cta">시작하기</a>
@@ -207,7 +208,7 @@ export function UpstreamMainPage() {
                 <p>
                   당신은 어떤 여행에서 진짜다움을 느끼나요?<br />
                   테스트와 사진을 통해 추구하는 여행 경험을 알아보세요.<br />
-                  전국에서 찾거나 원하는 지역을 골라, 내 취향에 가까운 여행지를 만나보세요.
+                  그에 맞는 장소를 연결해 드립니다.
                 </p>
                 <div className="hero-actions">
                   <a className="btn primary" href="/start">여행 취향 찾기</a>
@@ -223,23 +224,23 @@ export function UpstreamMainPage() {
                       <p id="phoneDesc">{data.phoneDesc}</p>
                     </div>
                     <div className="type-card">
-                      <div className="type-icon">古</div>
+                      <div className="type-icon">原</div>
                       <div>
-                        <strong>역사·전통형</strong>
+                        <strong>대상·원형형</strong>
                         <span>문화, 유적, 자연 보존</span>
                       </div>
                     </div>
                     <div className="type-card">
-                      <div className="type-icon">景</div>
+                      <div className="type-icon">像</div>
                       <div>
-                        <strong>감성·이미지형</strong>
+                        <strong>인식·이미지형</strong>
                         <span>SNS, 분위기, 포토 스팟</span>
                       </div>
                     </div>
                     <div className="type-card">
-                      <div className="type-icon">休</div>
+                      <div className="type-icon">我</div>
                       <div>
-                        <strong>휴식·몰입형</strong>
+                        <strong>자기·몰입형</strong>
                         <span>산책, 조용함, 감정적 만족</span>
                       </div>
                     </div>
@@ -274,9 +275,9 @@ export function UpstreamMainPage() {
               </div>
               <p className="type-summary">IT-DA는 이러한 차이를 세 가지 여행 경험 유형으로 나누어 살펴봅니다.</p>
               <div className="cards">
-                <article className="card"><div className="icon orange">古</div><h3>역사·전통형</h3><p>오랜 시간 보존되어 온 문화유산과 전통 공간이 지닌 역사적 가치와 고유한 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
-                <article className="card"><div className="icon blue">景</div><h3>감성·이미지형</h3><p>장소가 가진 분위기와 이미지, 미디어와 콘텐츠를 통해 형성된 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
-                <article className="card"><div className="icon green">休</div><h3>휴식·몰입형</h3><p>일상에서 벗어나 온전히 자신만의 시간을 보내며 휴식과 몰입의 경험을 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
+                <article className="card"><div className="icon orange">原</div><h3>대상·원형형</h3><p>오랜 시간 보존되어 온 문화유산과 전통 공간이 지닌 역사적 가치와 고유한 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
+                <article className="card"><div className="icon blue">像</div><h3>인식·이미지형</h3><p>장소가 가진 분위기와 이미지, 미디어와 콘텐츠를 통해 형성된 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
+                <article className="card"><div className="icon green">我</div><h3>자기·몰입형</h3><p>일상에서 벗어나 온전히 자신만의 시간을 보내며 휴식과 몰입의 경험을 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
               </div>
             </div>
           </section>
@@ -308,7 +309,7 @@ export function UpstreamMainPage() {
                   사용자가 감각적으로 끌리는 여행 장면을 더 쉽게 표현하도록 돕는 보조 입력입니다.
                 </p>
               </div>
-              <a className="photo-link" href="/start">
+              <a className="photo-link" href="/photo">
                 <span>선택적 사진 입력</span>
                 <strong>취향 테스트 후 사진 분위기 더하기</strong>
                 <em>결과 화면에서 원하는 분위기 사진 추가 입력 가능</em>

@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
-import { fetchPreferenceProfile } from "../api/api";
+import { fetchPreferenceProfile, type PreferenceProfile } from "../api/api";
 import { useNavigate, useParams } from "../app/react-router-dom";
 import { clearPhotoDraft, readProfileReference } from "../app/storage";
 import { PhotoPreferenceFlow } from "../features/photo/PhotoPreferenceFlow";
 import { PHOTO_FALLBACK_COPY } from "../features/photo/PhotoJobStatus";
+import { ProfileRecommendationCTA } from "../features/profile/ProfileRecommendationCTA";
 import {
   clearConfirmedPhotoReference,
   writeConfirmedMoodReference,
@@ -47,13 +48,16 @@ function DirectEntryFallback({ onNoPhoto }: { onNoPhoto: () => void }) {
   );
 }
 
-export function PhotoPage({ baseRoute = true }: { baseRoute?: boolean }) {
+export function PhotoPage() {
   const navigate = useNavigate();
   const params = useParams<{ jobId?: string }>();
   const routeJobId = params.jobId ?? null;
-  const [profileId, setProfileId] = useState<string | null>(null);
+  const [profile, setProfile] = useState<PreferenceProfile | null>(null);
   const [bounded, setBounded] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [confirmedPhotoJobId, setConfirmedPhotoJobId] = useState<string | null>(null);
   const headingFocusedRef = useRef(false);
+  const profileId = profile?.profile_id ?? null;
 
   const goNoPhoto = () =>
     void navigate("/profile", { state: { focusProfile: true, autoRecommend: true } });
@@ -67,41 +71,58 @@ export function PhotoPage({ baseRoute = true }: { baseRoute?: boolean }) {
   }, []);
 
   useEffect(() => {
-    if (baseRoute && routeJobId === null) {
-      void navigate("/profile", {
-        replace: true,
-        state: { focusProfile: true, openPhotoPanel: true },
-      });
-      return;
-    }
     let active = true;
+    setLoading(true);
+    setBounded(false);
     void (async () => {
       // Profile identity is server-owned; without a stored reference the
       // photo subflow cannot start, so direct entry stays bounded.
       const reference = readProfileReferenceSafely();
       if (reference === null) {
-        if (active) setBounded(true);
+        if (active) {
+          setBounded(true);
+          setLoading(false);
+        }
         return;
       }
       try {
-        const profile = await fetchPreferenceProfile(reference);
+        const nextProfile = await fetchPreferenceProfile(reference);
         if (!active) return;
-        setProfileId(profile.profile_id);
+        setProfile(nextProfile);
       } catch {
         if (active) setBounded(true);
+      } finally {
+        if (active) setLoading(false);
       }
     })();
     return () => {
       active = false;
     };
-  }, [baseRoute, navigate, routeJobId]);
+  }, [routeJobId]);
 
-  if (baseRoute && routeJobId === null) return null;
+  if (loading) {
+    return <UpstreamPhotoShell>{null}</UpstreamPhotoShell>;
+  }
 
-  if (bounded || profileId === null) {
+  if (bounded || profile === null || profileId === null) {
     return (
       <UpstreamPhotoShell>
         <DirectEntryFallback onNoPhoto={goNoPhoto} />
+      </UpstreamPhotoShell>
+    );
+  }
+
+  if (confirmedPhotoJobId !== null) {
+    return (
+      <UpstreamPhotoShell>
+        <section className="profile-state photo-recommendation-ready" id="recommend">
+          <p className="eyebrow">Photo Recommendation</p>
+          <h2>사진 분위기 분석을 완료했어요</h2>
+          <p>확정한 사진 분위기를 반영해 어울리는 여행지 5곳을 추천받을 수 있어요.</p>
+          <div className="result-actions">
+            <ProfileRecommendationCTA profile={profile} photoJobId={confirmedPhotoJobId} />
+          </div>
+        </section>
       </UpstreamPhotoShell>
     );
   }
@@ -142,7 +163,7 @@ export function PhotoPage({ baseRoute = true }: { baseRoute?: boolean }) {
       onMoodConfirmed={(confirmed, jobId) => {
         if (!writeConfirmedMoodReference(profileId, jobId, confirmed.receipt_id)) return;
         clearPhotoDraft();
-        goNoPhoto();
+        setConfirmedPhotoJobId(jobId);
       }}
       />
     </UpstreamPhotoShell>
@@ -160,7 +181,7 @@ function UpstreamPhotoShell({ children }: { children: React.ReactNode }) {
     <div className="up-root">
       <div className="up-photo" data-upstream-surface="photo">
         <header className="topbar">
-          <a className="brand" href="/"><span>잇</span><strong>IT-DA</strong></a>
+          <a className="brand" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
           <nav>
             <a href="#upload">사진 업로드</a>
             <a href="#recommend">유사 분위기 추천</a>
@@ -212,5 +233,5 @@ export function PhotoJobRoute() {
   // the flow itself derives polling/review state from the bounded session
   // record. A route job reference that does not match the record stays
   // bounded (never probes).
-  return <PhotoPage baseRoute={false} />;
+  return <PhotoPage />;
 }

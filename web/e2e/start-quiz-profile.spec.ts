@@ -124,9 +124,10 @@ async function expectInitialProfile(page: Page) {
     ),
   ).toBeVisible();
 
-  await expect(page.getByText("대표 유형 점수", { exact: true })).toBeVisible();
+  await expect(page.getByText("대표 유형 점수", { exact: true })).toHaveCount(0);
   await expect(page.locator(".type-badge b")).toHaveText("구성적 진정성");
-  await expect(page.locator(".match-card > b")).toHaveText("36점");
+  await expect(page.locator(".match-card > b")).toHaveCount(0);
+  await expect(page.locator(".character-card b")).toHaveText("무드 위버");
   await page.getByText("프로필 계산 정보", { exact: true }).click();
   for (const version of [
     "preference-profile-v2",

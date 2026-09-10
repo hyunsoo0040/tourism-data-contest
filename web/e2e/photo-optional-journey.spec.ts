@@ -285,7 +285,8 @@ async function createProfileJourney(page: Page) {
 async function openPhotoPanel(page: Page) {
   const consentHeading = page.getByRole("heading", { name: CONSENT_HEADING });
   if (!(await consentHeading.isVisible())) {
-    await page.locator("details.profile-photo-panel > summary").click();
+    await page.getByRole("button", { name: "사진 추천 페이지 열기" }).click();
+    await expect(page).toHaveURL(/\/photo$/);
     await expect(consentHeading).toBeVisible();
   }
 }
@@ -317,7 +318,7 @@ async function enterPhotoPathWithConsent(
   );
   await picker.setInputFiles(files);
   await page.getByRole("button", { name: `사진 ${fileCount}장 분석 시작하기` }).click();
-  await expect(page).toHaveURL(/\/profile$/);
+  await expect(page).toHaveURL(/\/photo\/jobs\//);
   if (verifyStoredReference) {
     await expect.poll(
       () => page.evaluate((key) => sessionStorage.getItem(key), PHOTO_JOBS_KEY),
@@ -470,21 +471,14 @@ test("no-photo entry stays first-class and the photo journey stays synthetic", a
   await createProfileJourney(page);
 
   const noPhoto = page.getByRole("button", { name: PROFILE_RECOMMENDATION_CTA });
-  const panelSummary = page.locator("details.profile-photo-panel > summary");
+  const photoPageButton = page.getByRole("button", { name: "사진 추천 페이지 열기" });
   await expect(noPhoto).toBeVisible();
-  await expect(panelSummary).toBeVisible();
-  const panelHandle = await panelSummary.elementHandle();
-  expect(panelHandle).toBeTruthy();
-  expect(
-    await noPhoto.evaluate(
-      (node, other) =>
-        Boolean(node.compareDocumentPosition(other as Node) & Node.DOCUMENT_POSITION_FOLLOWING),
-      panelHandle,
-    ),
-  ).toBe(true);
+  await expect(photoPageButton).toBeVisible();
+  await expect(page.locator("details.profile-photo-panel")).toHaveCount(0);
 
   await installSyntheticPhotoRoutes(page);
-  await panelSummary.click();
+  await photoPageButton.click();
+  await expect(page).toHaveURL(/\/photo$/);
   await expect(page.getByRole("heading", { name: CONSENT_HEADING })).toBeVisible();
 
   const checkbox = page.getByRole("checkbox");

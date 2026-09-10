@@ -245,6 +245,9 @@ describe("/profile result, reload, and recovery", () => {
     await renderProfile();
 
     expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(screen.queryByText("대표 유형 점수")).toBeNull();
+    expect(document.querySelector(".match-card > b")).toBeNull();
+    expect(screen.getByText("무드 위버").tagName).toBe("B");
     expect(screen.getAllByRole("meter").map((meter) => meter.getAttribute("aria-valuenow"))).toEqual(["0", "100", "50"]);
     expect(screen.getByText(profile().description_ko).textContent).toBe(profile().description_ko);
     expect(fetchMock).toHaveBeenCalledWith("/v1/preference-profiles/profile-current", expect.any(Object));
@@ -268,17 +271,15 @@ describe("/profile result, reload, and recovery", () => {
     expect(screen.queryByText("기대 프로필을 다시 만들 수 있어요.")).toBeNull();
   });
 
-  it("opens the optional photo panel when the base photo route redirects to profile", async () => {
+  it("keeps photo input on its dedicated route", async () => {
     writeProfileReference("profile-current");
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse(profile())));
     const router = createMemoryRouter(appRoutes, { initialEntries: ["/photo"] });
     render(<RouterProvider router={router} />);
 
-    await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
-    const panel = screen.getByText("사진으로 더 정확하게").closest("details");
-    expect(panel?.open).toBe(true);
-    expect(screen.getByRole("button", { name: "바로 추천 보기" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "사진 사용 내용을 먼저 확인해 주세요" })).toBeTruthy();
+    expect(router.state.location.pathname).toBe("/photo");
+    expect(screen.queryByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeNull();
   });
 
   it("keeps the no-photo CTA independent and omits photo_job_id from its request", async () => {
@@ -311,8 +312,8 @@ describe("/profile result, reload, and recovery", () => {
 
     const router = await renderProfile();
     const cta = await screen.findByRole("button", { name: "바로 추천 보기" });
-    const photoPanel = screen.getByText("사진으로 더 정확하게").closest("details");
-    expect(photoPanel?.open).toBe(false);
+    expect(screen.queryByText("사진으로 더 정확하게")).toBeNull();
+    expect(screen.getByRole("button", { name: "사진 추천 페이지 열기" })).toBeTruthy();
     await waitFor(() => expect(cta).toHaveProperty("disabled", false));
     fireEvent.click(cta);
 
