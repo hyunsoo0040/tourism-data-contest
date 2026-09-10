@@ -205,7 +205,8 @@ export function UpstreamMainPage() {
                   </span>
                 </h1>
                 <p>
-                  테스트와 사진으로, 지금 떠나고 싶은 여행의 분위기를 알려주세요.<br/> 그 감각에 어울리는 관광지를 추천해 드립니다.
+                  당신은 어떤 여행에서 진짜다움을 느끼나요?.<br/> 테스트와 사진을 통해 추구하는 여행 경험을 알아보세요.
+                  <br/>그에 맞는 장소를 연결해 드립니다.
                 </p>
                 <div className="hero-actions">
                   <a className="btn primary" href="/start">여행 취향 찾기</a>
