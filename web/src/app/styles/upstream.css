@@ -389,3 +389,154 @@
     border-radius: 14px;
   }
 }
+
+/* Remote experience-type refinements live here so generated CSS stays reproducible. */
+.up-main .type-visual {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 34px;
+  justify-content: start;
+  align-items: center;
+  margin: 0 0 16px;
+  padding: 8px 0;
+}
+
+.up-main .type-visual__word {
+  font-size: clamp(24px, 2.45vw, 36px);
+  line-height: 1;
+  letter-spacing: -.04em;
+  white-space: nowrap;
+  background: linear-gradient(100deg, #2c3039 0%, #35405a 54%, #36514f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.up-main .type-visual__word--start {
+  text-align: left;
+}
+
+.up-main .type-visual__word--end {
+  text-align: right;
+}
+
+.up-main .type-visual__reasons {
+  position: relative;
+  display: grid;
+  gap: 7px;
+  justify-items: center;
+  padding: 0 30px;
+}
+
+.up-main .type-visual__reasons::before,
+.up-main .type-visual__reasons::after {
+  content: "";
+  position: absolute;
+  top: 8%;
+  bottom: 8%;
+  width: 10px;
+  border: solid rgba(24, 32, 51, .12);
+  border-width: 1px 0;
+}
+
+.up-main .type-visual__reasons::before {
+  left: 0;
+  border-left-width: 1px;
+  border-radius: 7px 0 0 7px;
+}
+
+.up-main .type-visual__reasons::after {
+  right: 0;
+  border-right-width: 1px;
+  border-radius: 0 7px 7px 0;
+}
+
+.up-main .type-visual__reasons span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #657085;
+  font-size: clamp(16px, 1.45vw, 20px);
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -.04em;
+  white-space: nowrap;
+}
+
+.up-main .type-visual__reasons span::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #e7a18b;
+}
+
+.up-main .type-visual__reasons span:nth-child(2)::before {
+  background: #9bbbe6;
+}
+
+.up-main .type-visual__reasons span:nth-child(3)::before {
+  background: #98c9ba;
+}
+
+.up-main .type-summary {
+  margin: 0 0 30px;
+  color: #657085;
+  font-size: 16px;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+@media (max-width: 920px) {
+  .up-main .type-visual {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px 18px;
+    text-align: center;
+  }
+
+  .up-main .type-visual__word {
+    font-size: clamp(24px, 5.8vw, 34px);
+  }
+
+  .up-main .type-visual__word--start,
+  .up-main .type-visual__word--end {
+    text-align: center;
+  }
+
+  .up-main .type-visual__reasons {
+    gap: 8px;
+    padding: 0;
+  }
+
+  .up-main .type-visual__reasons span {
+    min-height: 36px;
+    font-size: clamp(16px, 3.5vw, 22px);
+  }
+
+  .up-main .type-visual__reasons::before,
+  .up-main .type-visual__reasons::after {
+    display: none;
+  }
+
+  .up-main .type-summary {
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 680px) {
+  .up-main .type-visual__word {
+    font-size: clamp(24px, 8vw, 32px);
+  }
+
+  .up-main .type-visual__reasons span {
+    font-size: clamp(15px, 4.6vw, 19px);
+  }
+
+  .up-main .type-summary {
+    font-size: 14px;
+  }
+}
