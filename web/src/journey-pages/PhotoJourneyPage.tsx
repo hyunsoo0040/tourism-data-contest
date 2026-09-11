@@ -180,14 +180,16 @@ function UpstreamPhotoShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="up-root">
       <div className="up-photo" data-upstream-surface="photo">
-        <header className="topbar">
-          <a className="brand" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
-          <nav>
-            <a href="#upload">사진 업로드</a>
-            <a href="#recommend">유사 분위기 추천</a>
-            <a href="/">메인으로</a>
-          </nav>
-          <div className="source-pill">KTO 관광사진·공모전 수상작 활용</div>
+        <header className="photo-site-header">
+          <div className="topbar">
+            <a className="brand" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
+            <nav>
+              <a href="#upload" aria-current="page">사진 업로드</a>
+              <a href="#recommend">유사 분위기 추천</a>
+              <a href="/">메인으로</a>
+            </nav>
+            <div className="source-pill">KTO 관광사진·공모전 수상작 활용</div>
+          </div>
         </header>
         <main>
           <section className="hero">

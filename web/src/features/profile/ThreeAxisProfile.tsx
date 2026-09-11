@@ -12,12 +12,12 @@ const AXIS_COPY: Record<Axis, { label: string; subtitle: string; className: stri
   },
   EMOTION_IMAGE: {
     label: "감성·이미지",
-    subtitle: "빛과 장면의 인상",
+    subtitle: "마음속에 그려온 모습",
     className: "axis-score--emotion",
   },
   REST_IMMERSION: {
     label: "휴식·몰입",
-    subtitle: "고요하게 머무는 시간",
+    subtitle: "나를 온전히 마주하는 순간",
     className: "axis-score--rest",
   },
 };
@@ -42,7 +42,7 @@ export function ThreeAxisProfile({
         </h2>
       </div>
       <p id="axis-independence-note" className="axis-independence-note">
-        세 점수는 합계가 아니라, 이번 여행에서 기대하는 경험을 각각 나타냅니다.
+        세 점수는 당신이 여행에서 끌리는 ‘진짜다움’을 보여줍니다. 각 점수는 서로 독립적으로 산정됩니다.
       </p>
       <div className="axis-score-list">
         {AXIS_ORDER.map((axis) => {

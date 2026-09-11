@@ -26,10 +26,10 @@ export const TRIP_CHOICES: TripChoiceOptions = {
   ],
   companion: [
     { value: "SOLO", label: "혼자" },
-    { value: "FRIEND_OR_PARTNER", label: "친구·연인" },
-    { value: "FAMILY_WITH_CHILDREN", label: "가족·아이" },
+    { value: "FRIEND_OR_PARTNER", label: "친구" },
+    { value: "FAMILY_WITH_CHILDREN", label: "아이 동반" },
     { value: "WITH_SENIORS", label: "어르신 동반" },
-    { value: "GROUP", label: "여럿이" },
+    
   ],
   transport: [
     { value: "WALK_OR_TRANSIT", label: "도보·대중교통" },
