@@ -12,7 +12,7 @@ RUN --mount=type=cache,target=/pnpm/store \
 FROM dependencies AS builder
 WORKDIR /app
 COPY web /app/web
-COPY contracts/questionnaire-v1.json contracts/questionnaire-v2.json /app/contracts/
+COPY contracts/questionnaire-*.json /app/contracts/
 WORKDIR /app/web
 ENV NEXT_TELEMETRY_DISABLED=1 \
     ITDA_BACKEND_ORIGIN=http://backend:8000
