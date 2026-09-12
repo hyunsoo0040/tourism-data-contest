@@ -16,6 +16,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     });
     await page.goto("/start");
     await expect(page.getByRole("complementary", { name: "UI 목업 설정" })).toBeVisible();
+    await page.screenshot({ path: info.outputPath("design-start.png"), fullPage: true });
     for (const choices of Object.values(TRIP_CHOICES)) await page.getByRole("radio", { name: choices[0]!.label, exact: true }).check();
     await page.getByRole("button", { name: JOURNEY_COPY.start.primaryLabel, exact: true }).click();
     for (const question of FRONTEND_QUESTIONNAIRE.questions) {
@@ -24,6 +25,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     }
     await expect(page.getByRole("button", { name: "바로 추천 보기", exact: true })).toBeVisible();
     const profileUrl = page.url();
+    await page.screenshot({ path: info.outputPath("design-profile.png"), fullPage: true });
     await page.getByRole("button", { name: "바로 추천 보기", exact: true }).click();
     await expect(page.locator("[data-grounded-item]")).toHaveCount(5);
     await page.screenshot({ path: info.outputPath("mock-results.png"), fullPage: true });

@@ -30,8 +30,6 @@
       width:min(1120px, calc(100% - 40px));
       margin:0 auto;}
 .up-quiz .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px}
-.up-quiz .brand-mark-image{width:58px;height:58px;display:block;object-fit:contain;flex:0 0 auto;transform:scale(1.5);transform-origin:center}
-.up-quiz .brand-wordmark{color:var(--orange);font-size:1.21em;font-weight:900}
 .up-quiz .brand span{width:38px;
       height:38px;
       border-radius:14px;
@@ -172,10 +170,10 @@
       border-radius:8px;
       border:1px solid rgba(24,32,51,.08);
       box-shadow:0 14px 32px rgba(24,32,51,.12);}
-.up-quiz .character-card{margin-top:0;
+.up-quiz .character-card{margin-top:14px;
       word-break:keep-all;}
 .up-quiz .character-card span{display:block;color:var(--orange);font-size:13px;font-weight:900}
-.up-quiz .character-card b{display:block;margin-top:8px;font-size:42px;line-height:1.08;letter-spacing:-.05em}
+.up-quiz .character-card b{display:block;margin-top:5px;font-size:24px;letter-spacing:-.04em}
 .up-quiz .character-card p{margin:8px 0 0;color:var(--muted);line-height:1.58}
 .up-quiz .keyword-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .up-quiz .keyword-list span{padding:8px 11px;border-radius:999px;background:#e9fbf4;color:#087f5b;font-size:13px;font-weight:900}
@@ -192,7 +190,7 @@
   .up-quiz .status h2, .up-quiz .question h2, .up-quiz .result h2{font-size:30px}
   .up-quiz .type-badge b{font-size:36px}
   .up-quiz .match-card b{font-size:46px}
-  .up-quiz .character-card b{font-size:46px}
+  .up-quiz .character-card b{font-size:26px}
 }
 @media(max-width:900px){
   .up-quiz .intro, .up-quiz .test-shell{grid-template-columns:1fr}
@@ -206,7 +204,6 @@
   .up-quiz .topbar{width:min(100% - 24px,1120px)}
   .up-quiz .topbar{height:62px}
   .up-quiz .brand{font-size:20px}
-  .up-quiz .brand-mark-image{width:48px;height:48px}
   .up-quiz .brand span{width:34px;height:34px;border-radius:12px}
   .up-quiz .topbar nav a:first-child{display:none}
   .up-quiz main{width:min(100% - 24px,1120px);padding:16px 0 88px}
@@ -249,7 +246,6 @@
           "type";}
   .up-quiz .type-badge, .up-quiz .match-card, .up-quiz .recommend-box{border-radius:14px}
   .up-quiz .type-badge b{font-size:28px}
-  .up-quiz .character-card b{font-size:34px}
   .up-quiz .mobile-tabs{position:fixed;
         left:12px;
         right:12px;

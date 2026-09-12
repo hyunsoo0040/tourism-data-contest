@@ -161,7 +161,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(bodies[2]!.preference_profile_id).toBe(bodies[0]!.preference_profile_id);
   });
 
-  it("retries the same purpose with one request ID and replaces it after a purpose change", async () => {
+  it("retries sightseeing with one request ID and offers no excluded purposes", async () => {
     const currentProfile = profile({ profile_id: "profile-purpose-retry" });
     const bodies: Record<string, unknown>[] = [];
     vi.stubGlobal("fetch", vi.fn().mockImplementation((_input: RequestInfo | URL, init?: RequestInit) => {
@@ -177,18 +177,20 @@ describe("/profile result, reload, and recovery", () => {
     await waitFor(() => expect(bodies).toHaveLength(2));
     expect(bodies[0]!.purpose).toBe("SIGHTSEEING");
     expect(bodies[1]!.request_id).toBe(bodies[0]!.request_id);
-    fireEvent.change(screen.getByRole("combobox", { name: "추천 여행 목적" }), { target: { value: "FOOD" } });
-    const changedCTA = await screen.findByRole("button", { name: "바로 추천 보기" });
-    await waitFor(() => expect(changedCTA).toHaveProperty("disabled", false));
-    fireEvent.click(changedCTA);
-    await waitFor(() => expect(bodies).toHaveLength(3));
-    expect(bodies[2]!.purpose).toBe("FOOD");
-    expect(bodies[2]!.request_id).not.toBe(bodies[0]!.request_id);
+    expect(bodies[1]!.purpose).toBe("SIGHTSEEING");
+    expect(screen.queryByRole("combobox", { name: "추천 여행 목적" })).toBeNull();
+    expect(screen.queryByRole("option", { name: "먹거리" })).toBeNull();
+    expect(screen.queryByRole("option", { name: "숙소" })).toBeNull();
   });
 
-  it("restores the selected purpose but requests a new run when it changes", async () => {
+  it("discards a stored food run and reuses only the new sightseeing run", async () => {
     const currentProfile = profile({ profile_id: "profile-purpose-current" });
     const inputSha256 = await profileSubmissionFingerprint(currentProfile.trip_conditions, currentProfile);
+    window.sessionStorage.setItem("itda:phase5:current-recommendation:v2", JSON.stringify({
+      schema_version: "phase5-current-recommendation-v3", recommendation_run_id: "old-food-run",
+      preference_profile_id: currentProfile.profile_id, preference_input_sha256: inputSha256,
+      photo_job_id: null, purpose: "FOOD",
+    }));
     const bodies: Record<string, unknown>[] = [];
     vi.stubGlobal("fetch", vi.fn().mockImplementation((_input: RequestInfo | URL, init?: RequestInit) => {
       const body = JSON.parse(String(init?.body)) as Record<string, unknown>;
@@ -206,27 +208,18 @@ describe("/profile result, reload, and recovery", () => {
       { path: "/recommendations/:runId", element: <p>추천 완료</p> },
     ], { initialEntries: ["/profile"] });
     render(<RouterProvider router={router} />);
-    fireEvent.change(screen.getByRole("combobox", { name: "추천 여행 목적" }), { target: { value: "FOOD" } });
     let cta = screen.getByRole("button", { name: "바로 추천 보기" });
     await waitFor(() => expect(cta).toHaveProperty("disabled", false));
     fireEvent.click(cta);
     await screen.findByText("추천 완료");
     await act(async () => { await router.navigate("/profile"); });
-    expect(screen.getByRole("combobox", { name: "추천 여행 목적" })).toHaveProperty("value", "FOOD");
+    expect(bodies[0]!.purpose).toBe("SIGHTSEEING");
     cta = screen.getByRole("button", { name: "바로 추천 보기" });
     await waitFor(() => expect(cta).toHaveProperty("disabled", false));
     fireEvent.click(cta);
     await screen.findByText("추천 완료");
     expect(bodies).toHaveLength(1);
-    await act(async () => { await router.navigate("/profile"); });
-    fireEvent.change(screen.getByRole("combobox", { name: "추천 여행 목적" }), { target: { value: "LODGING" } });
-    cta = screen.getByRole("button", { name: "바로 추천 보기" });
-    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
-    fireEvent.click(cta);
-    await screen.findByText("추천 완료");
-    expect(bodies).toHaveLength(2);
-    expect(bodies[1]!.purpose).toBe("LODGING");
-    expect(bodies[1]!.request_id).not.toBe(bodies[0]!.request_id);
+
   });
 
   beforeEach(() => {
@@ -249,7 +242,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(document.querySelector(".match-card > b")).toBeNull();
     expect(screen.getByText("무드 위버").tagName).toBe("B");
     expect(screen.getAllByRole("meter").map((meter) => meter.getAttribute("aria-valuenow"))).toEqual(["0", "100", "50"]);
-    expect(screen.getByText(profile().description_ko).textContent).toBe(profile().description_ko);
+    expect(screen.getByText("나는 오래된 이야기와 마음속에 그려온 모습에 끌려요.")).toBeTruthy();
     expect(fetchMock).toHaveBeenCalledWith("/v1/preference-profiles/profile-current", expect.any(Object));
     const restored = JSON.parse(window.localStorage.getItem(DRAFT_STORAGE_KEY) ?? "null") as { answers: unknown; trip_conditions: unknown };
     expect(restored.answers).toEqual(answers);
@@ -267,7 +260,7 @@ describe("/profile result, reload, and recovery", () => {
       answers: reverseKeys(current.answers),
     })));
     await renderProfile();
-    expect(await screen.findByRole("combobox", { name: "추천 여행 목적" })).toBeTruthy();
+    expect(await screen.findByText("취향에 맞는 볼거리·체험을 추천해요.")).toBeTruthy();
     expect(screen.queryByText("기대 프로필을 다시 만들 수 있어요.")).toBeNull();
   });
 
@@ -376,7 +369,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(serializedReference).not.toContain("provider");
   });
 
-  it("recovers a matching current photo-mode run without another POST", async () => {
+  it("does not restore a historical mixed-purpose photo run as sightseeing", async () => {
     const currentProfile = profile({ profile_id: "profile-photo-current" });
     const photoJobId = "d".repeat(64);
     const inputSha256 = await profileSubmissionFingerprint(
@@ -404,12 +397,13 @@ describe("/profile result, reload, and recovery", () => {
     vi.stubGlobal("fetch", fetchMock);
 
     const router = await renderProfile();
-    expect(screen.getByRole("combobox", { name: "추천 여행 목적" })).toHaveProperty("value", "MIXED");
+    expect(screen.queryByRole("combobox", { name: "추천 여행 목적" })).toBeNull();
     const cta = await screen.findByRole("button", { name: "사진 취향을 반영해 추천 보기" });
     await waitFor(() => expect(cta).toHaveProperty("disabled", false));
     fireEvent.click(cta);
 
-    await waitFor(() => expect(router.state.location.pathname).toBe("/recommendations/recommendation-run%3Arecovered-photo"));
+    expect(await screen.findByText("사진 분위기를 새로 확정해 주세요.")).toBeTruthy();
+    expect(router.state.location.pathname).toBe("/profile");
     expect(fetchMock.mock.calls.filter(([, init]) => init?.method === "POST")).toHaveLength(0);
   });
 
@@ -806,7 +800,7 @@ describe("/start profile edit mode", () => {
     render(<RouterProvider router={router} />);
 
     expect(await screen.findByRole("button", { name: "수정 내용 반영하기" })).toBeTruthy();
-    fireEvent.click(screen.getByRole("radio", { name: "여럿이" }));
+    fireEvent.click(screen.getByRole("radio", { name: "친구" }));
     fireEvent.click(screen.getByRole("button", { name: "변경하지 않고 프로필로 돌아가기" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
     expect((JSON.parse(window.localStorage.getItem(DRAFT_STORAGE_KEY) ?? "null") as { trip_conditions: typeof tripConditions }).trip_conditions.companion).toBe("SOLO");
@@ -815,14 +809,14 @@ describe("/start profile edit mode", () => {
       await router.navigate("/start?mode=edit");
     });
     expect(await screen.findByRole("button", { name: "수정 내용 반영하기" })).toBeTruthy();
-    fireEvent.click(screen.getByRole("radio", { name: "여럿이" }));
+    fireEvent.click(screen.getByRole("radio", { name: "친구" }));
     fireEvent.click(screen.getByRole("button", { name: "수정 내용 반영하기" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
     expect(await screen.findByText("수정한 답변으로 기대 프로필을 다시 만들었어요.")).toBeTruthy();
     await waitFor(() =>
       expect(document.activeElement?.textContent).toBe("이번 여행에서 기대하는 시간"),
     );
-    expect(posted.at(-1)?.trip_conditions.companion).toBe("GROUP");
+    expect(posted.at(-1)?.trip_conditions.companion).toBe("FRIEND_OR_PARTNER");
     expect(JSON.parse(window.localStorage.getItem(PROFILE_STORAGE_KEY) ?? "null").profile_id).toBe("profile-edited");
   });
 
@@ -851,7 +845,7 @@ describe("/start profile edit mode", () => {
     render(<RouterProvider router={router} />);
     expect(await screen.findByRole("button", { name: "수정 내용 반영하기" })).toBeTruthy();
 
-    fireEvent.click(screen.getByRole("radio", { name: "여럿이" }));
+    fireEvent.click(screen.getByRole("radio", { name: "친구" }));
     fireEvent.click(screen.getByRole("button", { name: "수정 내용 반영하기" }));
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));

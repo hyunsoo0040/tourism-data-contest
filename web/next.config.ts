@@ -4,8 +4,9 @@ import type { NextConfig } from "next";
 const backend = process.env.ITDA_BACKEND_ORIGIN ?? "http://127.0.0.1:8000";
 
 const nextConfig: NextConfig = {
-  ...(process.env.ITDA_MOCK_UI === "1" ? { distDir: ".next-mock" } : {}),
+  ...(process.env.ITDA_NEXT_DIST_DIR ? { distDir: process.env.ITDA_NEXT_DIST_DIR } : process.env.ITDA_MOCK_UI === "1" ? { distDir: ".next-mock" } : {}),
   output: "standalone",
+  devIndicators: false,
   outputFileTracingRoot: path.join(import.meta.dirname, ".."),
   async rewrites() {
     return [

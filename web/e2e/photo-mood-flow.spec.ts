@@ -21,7 +21,7 @@ function aggregateMoodBatches(batches: MoodCandidateSet[], selected: string[]) {
   });
 }
 
-// The questionnaire/profile use the real local API. Photo model responses and
+// The questionnaire/profile use the configured local API (synthetic in the design gate). Photo model responses and
 // recommendation outputs are explicitly synthetic contract fixtures. The real
 // photo sanitation/SQL/confirmation lifecycle is covered separately in PG tests.
 
@@ -50,7 +50,7 @@ async function reviewFor(profileId: string, jobId: string): Promise<MoodReview> 
 }
 
 for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: "mobile", width: 390, height: 844 }]) {
-  test(`quiz → image mood → bound recommendation (${viewport.name}, contract fixture)`, async ({ page }) => {
+  test(`quiz → image mood → bound recommendation (${viewport.name}, contract fixture)`, async ({ page }, info) => {
     test.setTimeout(120_000);
     await page.setViewportSize(viewport);
     const errors: string[] = [], requests: string[] = [];
@@ -103,7 +103,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
       return route.fallback();
     });
     await page.goto("/start");
-    for (const label of ["해질녘", "친구·연인", "도보·대중교통", "1시간 안팎", "상관없어요", "조금 피하고 싶어요"]) {
+    for (const label of ["해질녘", "친구", "도보·대중교통", "1시간 안팎", "상관없어요", "조금 피하고 싶어요"]) {
       await page.getByRole("radio", { name: label, exact: true }).check();
     }
     await page.getByRole("button", { name: "취향 테스트 시작하기" }).click();
@@ -116,7 +116,10 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     profile = await response.json(); review = await reviewFor(String(profile!.profile_id), jobId);
     await expect(page.getByRole("button", { name: "바로 추천 보기", exact: true })).toBeVisible();
     const before = await page.locator(".axis-score-list").allTextContents();
-    await page.locator("details.profile-photo-panel > summary").click();
+    await page.getByRole("button", { name: "사진 추천 페이지 열기" }).click();
+    await expect(page).toHaveURL(/\/photo$/);
+    await expect(page.getByRole("heading", { name: "사진 사용 내용을 먼저 확인해 주세요" })).toBeVisible();
+    await page.screenshot({ path: info.outputPath("design-photo.png"), fullPage: true });
     await page.getByRole("checkbox").check();
     await page.getByRole("button", { name: "동의하고 사진 고르기" }).click();
     await page.locator('input[type="file"]').setInputFiles({ name: "fixture.png", mimeType: "image/png", buffer: image });
@@ -128,7 +131,11 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     if (viewport.name === "mobile") for (const box of await page.getByRole("checkbox").all()) await box.uncheck();
     await page.getByRole("button", { name: viewport.name === "mobile" ? "사진 분위기 없이 계속" : "선택한 분위기로 계속", exact: true }).click();
     await expect(page.getByRole("button", { name: "사진 취향을 반영해 추천 보기" })).toBeVisible();
+    await page.goto("/profile");
+    await expect(page.locator(".axis-score-list")).toBeVisible();
     expect(await page.locator(".axis-score-list").allTextContents()).toEqual(before);
+    await page.goto(`/photo/jobs/${jobId}`);
+    await expect(page.getByRole("heading", { name: "사진 분위기 분석을 완료했어요" })).toBeVisible();
     expect(confirmPosts).toBe(1);
     const reference = await page.evaluate(() => JSON.parse(sessionStorage.getItem("itda.photo-mood-reference.v1")!));
     expect(reference.receipt_id).toBe(confirmation!.receipt_id);

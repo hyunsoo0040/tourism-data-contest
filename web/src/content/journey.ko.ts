@@ -29,7 +29,6 @@ export const TRIP_CHOICES: TripChoiceOptions = {
     { value: "FRIEND_OR_PARTNER", label: "친구" },
     { value: "FAMILY_WITH_CHILDREN", label: "아이 동반" },
     { value: "WITH_SENIORS", label: "어르신 동반" },
-    
   ],
   transport: [
     { value: "WALK_OR_TRANSIT", label: "도보·대중교통" },
@@ -86,5 +85,6 @@ export const JOURNEY_COPY = {
 } as const;
 
 export function tripChoiceLabel(field: TripChoiceField, value: string): string {
+  if (field === "companion" && value === "GROUP") return "여럿이 (이전 선택)";
   return TRIP_CHOICES[field].find((choice) => choice.value === value)?.label ?? "확인 필요";
 }

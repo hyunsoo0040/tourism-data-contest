@@ -18,6 +18,13 @@
  */
 import { useEffect, useMemo, useRef, useState } from "react";
 
+const MAIN_NAV_ITEMS = [
+  { id: "type", label: "여행 유형" },
+  { id: "flow", label: "서비스 흐름" },
+  { id: "photo", label: "사진 분위기 입력" },
+  { id: "demo", label: "추천 예시" },
+] as const;
+
 const UPSTREAM_STORAGE_KEY = "itdaTravelPreference";
 const PREVIEW_TYPES = ["history", "rest", "image"] as const;
 
@@ -49,7 +56,7 @@ type RecommendationBranch = {
 const RECOMMENDATIONS: Record<string, RecommendationBranch> = {
   rest: {
     title: "자기·몰입형 추천 결과",
-    phoneType: "당신은<br>휴식·몰입형 여행자",
+    phoneType: "당신은<br>자기·몰입형 여행자",
     phoneDesc: "조용한 산책, 자유로운 공간, 오래 머무는 감정을 선호해요.",
     match: 84,
     text: "기대와 장소 분위기가 높은 수준으로 일치합니다.",
@@ -70,13 +77,13 @@ const RECOMMENDATIONS: Record<string, RecommendationBranch> = {
   },
   history: {
     title: "대상·원형형 추천 결과",
-    phoneType: "당신은<br>역사·전통형 여행자",
+    phoneType: "당신은<br>대상·원형형 여행자",
     phoneDesc: "장소에 담긴 이야기와 문화적 맥락을 깊게 경험하고 싶어해요.",
     match: 89,
     text: "스토리와 문화 자원이 기대와 잘 맞습니다.",
     places: [
       {
-        tag: "역사·전통 89%",
+        tag: "대상·원형 89%",
         title: "불국사",
         desc: "신라 불교문화와 석조 건축의 흐름을 한자리에서 살펴볼 수 있는 경주의 대표 문화유산입니다.",
         color: "linear-gradient(135deg,#f4a261,#e76f51,#7f5539)",
@@ -97,7 +104,7 @@ const RECOMMENDATIONS: Record<string, RecommendationBranch> = {
     text: "사진 분위기와 시각 키워드가 기대와 잘 맞습니다.",
     places: [
       {
-        tag: "감성·이미지 86%",
+        tag: "인식·이미지 86%",
         title: "황리단길",
         desc: "한옥과 상점이 어우러진 거리에서 경주의 현재적인 분위기와 다양한 거리 풍경을 만날 수 있습니다.",
         color: "linear-gradient(135deg,#ffafcc,#bde0fe,#a2d2ff)",
@@ -119,6 +126,7 @@ function PhoneTypeCopy({ html }: { html: string }) {
 
 export function UpstreamMainPage() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<string>("rest");
   const rootRef = useRef<HTMLElement>(null);
 
@@ -162,6 +170,48 @@ export function UpstreamMainPage() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const root = rootRef.current;
+    if (root === null) return;
+    const header = root.querySelector<HTMLElement>(".site-header");
+    const sections = Array.from(root.querySelectorAll<HTMLElement>("main > section"));
+    let frame: number | null = null;
+
+    const updateActiveSection = () => {
+      frame = null;
+      const headerHeight = header?.getBoundingClientRect().height ?? 0;
+      root.style.setProperty("--main-header-height", `${headerHeight}px`);
+      let current: string | null = null;
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top > headerHeight + 24) break;
+        current = MAIN_NAV_ITEMS.some(({ id }) => id === section.id) ? section.id : null;
+      }
+      setActiveSection(current);
+    };
+    const scheduleUpdate = () => {
+      if (frame === null) frame = window.requestAnimationFrame(updateActiveSection);
+    };
+    // Reveal transforms can finish after scrolling stops, changing section bounds.
+    root.addEventListener("transitionend", scheduleUpdate);
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    window.addEventListener("hashchange", scheduleUpdate);
+    const resizeObserver = typeof ResizeObserver === "undefined"
+      ? null : new ResizeObserver(scheduleUpdate);
+    resizeObserver?.observe(root);
+    if (header !== null) resizeObserver?.observe(header);
+    updateActiveSection();
+
+    return () => {
+      root.removeEventListener("transitionend", scheduleUpdate);
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+      window.removeEventListener("hashchange", scheduleUpdate);
+      resizeObserver?.disconnect();
+      if (frame !== null) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
   const data = useMemo(() => RECOMMENDATIONS[selectedType] ?? RECOMMENDATIONS.rest!, [selectedType]);
 
   return (
@@ -185,10 +235,17 @@ export function UpstreamMainPage() {
               <span></span>
             </button>
             <nav className={openMenu ? "nav-menu open" : "nav-menu"} aria-label="주요 메뉴">
-              <a href="#type">여행 유형</a>
-              <a href="#flow">서비스 흐름</a>
-              <a href="/photo">사진 분위기 입력</a>
-              <a href="#demo">추천 예시</a>
+              {MAIN_NAV_ITEMS.map(({ id, label }) => (
+                <a
+                  key={id}
+                  href={id === "photo" ? "/photo" : `#${id}`}
+                  className={id !== "photo" && activeSection === id ? "active" : undefined}
+                  aria-current={id !== "photo" && activeSection === id ? "location" : undefined}
+                  onClick={() => setOpenMenu(false)}
+                >
+                  {label}
+                </a>
+              ))}
             </nav>
             <a href="/start" className="nav-cta">시작하기</a>
           </div>
@@ -198,7 +255,7 @@ export function UpstreamMainPage() {
           <section className="hero reveal visible">
             <div className="wrap hero-grid">
               <div>
-                <div className="badge"><span></span> 관광데이터 기반 개인 맞춤 여행 큐레이션</div>
+                <div className="badge"><span></span> 전국 관광데이터 기반 개인 맞춤 여행 큐레이션</div>
                 <h1>
                   <span className="hero-title-line">가장 나다운 여행과</span>
                   <span className="hero-title-line">
@@ -245,7 +302,7 @@ export function UpstreamMainPage() {
                       </div>
                     </div>
                     <div className="match">
-                      <strong>추천 장소 적합도</strong>
+                      <strong>내 취향과의 유사도 예시</strong>
                       <div className="bar"><i id="matchBar" style={{ width: `${data.match}%` }}></i></div>
                       <p id="matchText">{data.text}</p>
                     </div>
@@ -290,7 +347,7 @@ export function UpstreamMainPage() {
                   <h2>사용자 기대와 관광 데이터를<br />하나의 추천 흐름으로 연결합니다</h2>
                 </div>
               </div>
-              <div className="flow">
+              <div className="flow flow--four">
                 <div className="step"><div className="num">01</div><strong>취향 입력</strong><p>테스트 또는 사진 업로드로 원하는 여행 분위기를 표현합니다.</p></div>
                 <div className="step"><div className="num">02</div><strong>데이터 수집</strong><p>관광지 설명, 위치, 사진, 오디오 가이드 정보를 불러옵니다.</p></div>
                 <div className="step"><div className="num">03</div><strong>분위기 분석</strong><p>사진은 경험 유형 판정이 아닌 감각적 분위기 신호로만 활용합니다.</p></div>
@@ -300,20 +357,37 @@ export function UpstreamMainPage() {
           </section>
 
           <section id="photo" className="reveal">
-            <div className="wrap photo-feature">
-              <div>
-                <div className="eyebrow">find your type</div>
-                <h2>간단한 테스트로<br />나의 취향을 발견하세요</h2>
+            <div className="wrap photo-feature photo-feature--intro">
+              <div className="photo-intro-copy">
+                <div className="eyebrow">Photo mood input</div>
+                <h2>사진으로 더하는<br />나만의 여행 분위기</h2>
                 <p>
-                  테스트는 사용자의 경험 유형을 단정하는 기준이 아닙니다. 여행 중에 마주할 수 있는 우연들로
-                  사용자가 감각적으로 끌리는 여행 장면을 더 쉽게 표현하도록 돕는 보조 입력입니다.
+                  말로 표현하기 어려운 취향은 사진으로 알려주세요.
+                  테스트를 마친 뒤, 마음에 드는 여행 사진을 더하면
+                  그 안의 색감과 풍경을 추천에 함께 반영해요.
                 </p>
+                <div className="photo-intro-note">
+                  <span>선택 입력</span>
+                  <small>사진 없이도 테스트만으로 추천받을 수 있어요.</small>
+                </div>
               </div>
-              <a className="photo-link" href="/photo">
-                <span>선택적 사진 입력</span>
-                <strong>취향 테스트 후 사진 분위기 더하기</strong>
-                <em>결과 화면에서 원하는 분위기 사진 추가 입력 가능</em>
-              </a>
+              <div className="photo-mood-preview" aria-label="사진으로 더할 수 있는 분위기 예시">
+                <div className="photo-mood-scenes">
+                  <figure className="photo-mood-frame photo-mood-frame--warm">
+                    <div className="photo-mood-scene" aria-hidden="true" />
+                    <figcaption>따뜻한 빛</figcaption>
+                  </figure>
+                  <figure className="photo-mood-frame photo-mood-frame--nature">
+                    <div className="photo-mood-scene" aria-hidden="true" />
+                    <figcaption>차분한 자연</figcaption>
+                  </figure>
+                  <figure className="photo-mood-frame photo-mood-frame--open">
+                    <div className="photo-mood-scene" aria-hidden="true" />
+                    <figcaption>탁 트인 풍경</figcaption>
+                  </figure>
+                </div>
+                <p className="photo-mood-caption">내가 끌리는 장면이, 여행의 힌트가 되도록.</p>
+              </div>
             </div>
           </section>
 
@@ -321,7 +395,8 @@ export function UpstreamMainPage() {
             <div className="wrap demo">
               <div className="quiz">
                 <div className="eyebrow">type test</div>
-                <h3>간단 선택으로 추천 미리보기</h3>
+                <h3>간단 선택으로 추천 화면 살펴보기</h3>
+                <p>화면 구성 예시예요. 실제 추천은 선택한 지역과 취향에 따라 달라져요.</p>
                 <button
                   className={selectedType === "history" ? "choice active" : "choice"}
                   type="button"
