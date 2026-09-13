@@ -29,7 +29,7 @@ async function fillTripContext(page: Page) {
   await page.getByLabel("방문 날짜 (선택)").fill(today);
   for (const label of [
     "해질녘",
-    "친구·연인",
+    "친구",
     "도보·대중교통",
     "1시간 안팎",
     "상관없어요",

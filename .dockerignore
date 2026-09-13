@@ -26,8 +26,7 @@ web/*
 
 !contracts/
 contracts/*
-!contracts/questionnaire-v1.json
-!contracts/questionnaire-v2.json
+!contracts/questionnaire-*.json
 
 !artifacts/
 artifacts/*
@@ -58,3 +57,8 @@ artifacts/public/catalog/mvp-scored-releases/releases/*
 **/playwright-report/
 **/test-results/
 **/*.tsbuildinfo
+
+# Unit tests are validated before packaging; their fixtures are not runtime inputs.
+web/src/**/*.test.ts
+web/src/**/*.test.tsx
+web/src/test/

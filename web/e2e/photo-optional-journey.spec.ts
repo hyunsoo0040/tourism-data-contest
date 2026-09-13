@@ -247,7 +247,7 @@ async function createProfileJourney(page: Page) {
   await page.getByLabel("방문 날짜 (선택)").fill("2026-10-09");
   for (const label of [
     "해질녘",
-    "친구·연인",
+    "친구",
     "도보·대중교통",
     "1시간 안팎",
     "상관없어요",
@@ -1086,7 +1086,7 @@ test("UI-BS-05 reload preserves provenance and confirmed-only projection", async
   await page.getByRole("button", { name: REVIEW_CONFIRM_CTA }).click();
   await expect(page).toHaveURL(/\/profile$/);
   await expect(page.getByRole("button", { name: PHOTO_RECOMMENDATION_CTA })).toBeVisible();
-  await expect(page.locator("details.profile-photo-panel")).not.toHaveAttribute("open", "");
+  await expect(page.locator("details.profile-photo-panel")).toHaveCount(0);
   expect(
     confirmedBody.confirmations?.some((row) => row.text_ko === TRAIT_TEXTS.second),
   ).toBe(false);
@@ -1113,10 +1113,10 @@ test("UI-BS-06 keyboard and accessibility journeys cover every optional-photo st
     },
   });
 
-  // Entry: the independent recommendation CTA stays first and the photo panel is keyboard-reachable.
+  // Entry: the independent recommendation CTA stays first and the dedicated photo page is keyboard-reachable.
   await page.getByRole("button", { name: PROFILE_RECOMMENDATION_CTA }).focus();
   await page.keyboard.press("Tab");
-  const panelSummary = page.locator("details.profile-photo-panel > summary");
+  const panelSummary = page.getByRole("button", { name: "사진 추천 페이지 열기" });
   await expect(panelSummary).toBeFocused();
 
   // Consent: single h1, described checkbox, keyboard-only activation.

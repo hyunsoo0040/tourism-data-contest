@@ -56,6 +56,24 @@ describe("/start current-trip form", () => {
     vi.useRealTimers();
   });
 
+  it("offers four companion choices for a new trip", async () => {
+    await renderStart();
+    const companion = screen.getByRole("group", { name: "동행" });
+    expect(within(companion).getAllByRole("radio").map((radio) => (radio as HTMLInputElement).value))
+      .toEqual(["SOLO", "FRIEND_OR_PARTNER", "FAMILY_WITH_CHILDREN", "WITH_SENIORS"]);
+  });
+
+  it("preserves a retired companion selection until the user chooses a current option", async () => {
+    writeDraft({ ...createEmptyDraft(), trip_conditions: { companion: "GROUP" }, answers: { q1: 2 } });
+    const original = window.localStorage.getItem(DRAFT_STORAGE_KEY);
+    await renderStart();
+    expect((screen.getByRole("radio", { name: "여럿이 (이전 선택)" }) as HTMLInputElement).checked).toBe(true);
+    expect(window.localStorage.getItem(DRAFT_STORAGE_KEY)).toBe(original);
+    fireEvent.click(screen.getByRole("radio", { name: "친구" }));
+    expect(screen.queryByRole("radio", { name: "여럿이 (이전 선택)" })).toBeNull();
+    expect((screen.getByRole("radio", { name: "친구" }) as HTMLInputElement).checked).toBe(true);
+  });
+
   it("오늘 기본값과 최소 날짜를 저장 없이 표시한다", async () => {
     await renderStart();
     const input = screen.getByLabelText("방문 날짜 (선택)") as HTMLInputElement;
@@ -189,7 +207,7 @@ describe("/start current-trip form", () => {
     await renderStart();
     expect(await screen.findByText(STORAGE_MESSAGES.recovered)).toBeTruthy();
     expect((screen.getByRole("radio", { name: "오전" }) as HTMLInputElement).checked).toBe(true);
-    expect((screen.getByRole("radio", { name: "친구·연인" }) as HTMLInputElement).checked).toBe(
+    expect((screen.getByRole("radio", { name: "친구" }) as HTMLInputElement).checked).toBe(
       true,
     );
 

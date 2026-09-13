@@ -27,3 +27,5 @@ pnpm exec playwright test --config playwright.mock.config.ts
 ```
 
 Playwright는 실제 로컬 목업 서버에 연결하며 API 라우트를 응답으로 대체하지 않는다. 데스크톱·모바일의 전체 흐름과 오류·부족·초기화, 외부 요청 부재를 확인한다.
+
+디자인 통합 검증은 `pnpm exec playwright test --config playwright.design.config.ts`로 실행한다. 위 흐름에 메인 메뉴와 별도 사진 페이지를 추가로 검사한다. 사진 테스트만 합성 분석·확정 응답을 주입해 선택, 새로고침, 추천 요청의 연결을 확인하며 실제 사진 모델을 호출하지 않는다.

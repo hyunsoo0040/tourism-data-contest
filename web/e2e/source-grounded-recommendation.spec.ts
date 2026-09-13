@@ -222,7 +222,8 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
       schema_version: "api-ui-browser-evidence.v1",
       mode: "CAPTURED_HTTP_RESPONSE_REPLAY",
       fixture_kind: rawFixture.fixture_kind ?? rawFixture.schema_version ?? rawFixture.provenance,
-      source_values: rawFixture.scope === "API_POSTGRES_ONLY" ? "REAL_PUBLIC_100_CANDIDATE_SCRIPTED_USER_PROFILE" : "SYNTHETIC_NOT_FIELD_DATA",
+      source_values: rawFixture.scope === "API_POSTGRES_ONLY" ? "REAL_CANDIDATE_SCRIPTED_USER_PROFILE" : "SYNTHETIC_NOT_FIELD_DATA",
+      candidate_member_count: run.candidate_bindings.length,
       source_context_mode: rawFixture.source_context_mode ?? "SYNTHETIC_PROVIDER_TRANSPORT",
       fixture: fixturePath ? { path: relative(resolve(".."), fixturePath), sha256: fixtureSha256 }
         : { path: "web/fixtures/grounded-synthetic-v5.json", sha256: sha256(readFileSync("fixtures/grounded-synthetic-v5.json")) },

@@ -17,9 +17,6 @@ import { readConfirmedMoodReference } from "../photo/photoProjection";
 type RecommendationPurpose = NonNullable<RecommendationRequest["purpose"]>;
 const PURPOSES: ReadonlyArray<{ value: RecommendationPurpose; label: string }> = [
   { value: "SIGHTSEEING", label: "볼거리·체험" },
-  { value: "FOOD", label: "먹거리" },
-  { value: "LODGING", label: "숙소" },
-  { value: "MIXED", label: "모두 둘러보기" },
 ];
 
 type PendingRecommendation = {
@@ -227,10 +224,7 @@ export function ProfileRecommendationCTA({
 }) {
   const navigate = useNavigate();
   const [state, setState] = useState<CTAState>("idle");
-  const [purpose, setPurpose] = useState<RecommendationPurpose>(() => {
-    const stored = readCurrent() ?? readPending();
-    return stored?.preference_profile_id === profile.profile_id ? stored.purpose ?? "MIXED" : "SIGHTSEEING";
-  });
+  const purpose: RecommendationPurpose = "SIGHTSEEING";
   const [inputSha256, setInputSha256] = useState<string | null>(null);
   const [groundedSha256, setGroundedSha256] = useState<string | null>(null);
   const groundedInput = groundedTripForRecommendation();
@@ -389,25 +383,14 @@ export function ProfileRecommendationCTA({
     <>
     <p className="recommendation-region-choice" style={{ flexBasis: "100%" }}>여행 지역: <strong>{travelRegionName(groundedInput?.region_code, travelRegions.regions)}</strong>{" · "}
       <a href="/start?mode=edit">지역·조건 변경</a></p>
-    <label className="field-label" style={{ flexBasis: "100%" }}>
-      어떤 장소를 찾고 있나요?
-      <select
-        aria-label="추천 여행 목적"
-        value={purpose}
-        disabled={loading}
-        onChange={(event) => setPurpose(event.target.value as RecommendationPurpose)}
-        style={{ display: "block", width: "100%", marginTop: "0.5rem", padding: "0.75rem", border: "1px solid var(--border, #d8d4ce)", borderRadius: "0.75rem", background: "var(--surface, #fff)", color: "inherit" }}
-      >
-        {PURPOSES.map((option) => <option value={option.value} key={option.value}>{option.label}</option>)}
-      </select>
-    </label>
+    <p className="recommendation-region-choice" style={{ flexBasis: "100%" }}>취향에 맞는 볼거리·체험을 추천해요.</p>
     </>
   );
 
   if (state === "insufficient") {
     return <>{purposeSelector}<section className="profile-state" role="status" style={{ flexBasis: "100%" }}>
       <h2>이 조건에 맞는 여행지가 아직 충분하지 않아요.</h2>
-      <p>여행 목적을 넓히거나 다른 지역을 선택해 주세요. 선택한 지역 밖의 장소를 대신 추천하지 않아요.</p>
+      <p>여행 조건을 조정하거나 다른 지역을 선택해 주세요. 선택한 지역 밖의 장소를 대신 추천하지 않아요.</p>
     </section></>;
   }
 

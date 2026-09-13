@@ -8,6 +8,7 @@ import { PHOTO_FALLBACK_COPY } from "../features/photo/PhotoJobStatus";
 import { ProfileRecommendationCTA } from "../features/profile/ProfileRecommendationCTA";
 import {
   clearConfirmedPhotoReference,
+  readConfirmedMoodReference,
   writeConfirmedMoodReference,
 } from "../features/photo/photoProjection";
 import {
@@ -74,6 +75,7 @@ export function PhotoPage() {
     let active = true;
     setLoading(true);
     setBounded(false);
+    setConfirmedPhotoJobId(null);
     void (async () => {
       // Profile identity is server-owned; without a stored reference the
       // photo subflow cannot start, so direct entry stays bounded.
@@ -89,6 +91,10 @@ export function PhotoPage() {
         const nextProfile = await fetchPreferenceProfile(reference);
         if (!active) return;
         setProfile(nextProfile);
+        const confirmed = readConfirmedMoodReference(nextProfile.profile_id);
+        if (routeJobId !== null && confirmed?.photo_job_id === routeJobId) {
+          setConfirmedPhotoJobId(routeJobId);
+        }
       } catch {
         if (active) setBounded(true);
       } finally {
@@ -120,7 +126,10 @@ export function PhotoPage() {
           <h2>사진 분위기 분석을 완료했어요</h2>
           <p>확정한 사진 분위기를 반영해 어울리는 여행지 5곳을 추천받을 수 있어요.</p>
           <div className="result-actions">
-            <ProfileRecommendationCTA profile={profile} photoJobId={confirmedPhotoJobId} />
+            <ProfileRecommendationCTA profile={profile} photoJobId={confirmedPhotoJobId} onClearPhoto={() => {
+              clearConfirmedPhotoReference(profileId);
+              goNoPhoto();
+            }} />
           </div>
         </section>
       </UpstreamPhotoShell>

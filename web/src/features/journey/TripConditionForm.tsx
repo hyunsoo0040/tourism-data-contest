@@ -1,4 +1,4 @@
-import { JOURNEY_COPY, TRIP_CHOICES, TRIP_FIELD_LABELS } from "../../content/journey.ko";
+import { JOURNEY_COPY, TRIP_CHOICES, TRIP_FIELD_LABELS, tripChoiceLabel } from "../../content/journey.ko";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   useForm,
@@ -54,16 +54,24 @@ function ChoiceGroup({
   name,
   register,
   error,
+  retainedGroup = false,
 }: {
   name: keyof typeof TRIP_FIELD_LABELS;
   register: ReturnType<typeof useForm<TripConditionFormValues>>["register"];
   error?: string;
+  retainedGroup?: boolean;
 }) {
   const errorId = `${name}-error`;
   return (
     <fieldset className="choice-group" id={`${name}-field`} aria-describedby={error ? errorId : undefined}>
       <legend>{TRIP_FIELD_LABELS[name]}</legend>
       <div className="choice-grid">
+        {name === "companion" && retainedGroup ? (
+          <label className="choice-card">
+            <input type="radio" value="GROUP" {...register(name)} />
+            <span>{tripChoiceLabel("companion", "GROUP")}</span>
+          </label>
+        ) : null}
         {TRIP_CHOICES[name].map((choice) => (
           <label className="choice-card" key={choice.value}>
             <input type="radio" value={choice.value} {...register(name)} />
@@ -118,6 +126,7 @@ export function TripConditionForm({
     handleSubmit,
     setFocus,
     reset,
+    watch,
     formState: { errors },
   } = useForm<TripConditionFormValues, unknown, TripConditions>({
     defaultValues: {
@@ -127,6 +136,8 @@ export function TripConditionForm({
     resolver,
     shouldFocusError: false,
   });
+  // Only restored selections expose the retired option; new trips use the design's four choices.
+  const retainedGroup = defaultValues.companion === "GROUP" && watch("companion") === "GROUP";
 
   useEffect(() => {
     let timer: number;
@@ -284,7 +295,7 @@ export function TripConditionForm({
           </label>
         </fieldset>
 
-        <ChoiceGroup name="companion" register={register} error={errors.companion?.message} />
+        <ChoiceGroup name="companion" register={register} error={errors.companion?.message} retainedGroup={retainedGroup} />
         <fieldset className="choice-group" aria-describedby="facility-preferences-help">
           <legend>{JOURNEY_COPY.facilities.legend}</legend>
           <p id="facility-preferences-help">{JOURNEY_COPY.facilities.help}</p>
