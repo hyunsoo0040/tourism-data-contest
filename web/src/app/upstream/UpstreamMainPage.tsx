@@ -21,7 +21,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 const MAIN_NAV_ITEMS = [
   { id: "type", label: "여행 유형" },
   { id: "flow", label: "서비스 흐름" },
-  { id: "photo", label: "사진 분위기 입력" },
   { id: "demo", label: "추천 예시" },
 ] as const;
 
@@ -238,9 +237,9 @@ export function UpstreamMainPage() {
               {MAIN_NAV_ITEMS.map(({ id, label }) => (
                 <a
                   key={id}
-                  href={id === "photo" ? "/photo" : `#${id}`}
-                  className={id !== "photo" && activeSection === id ? "active" : undefined}
-                  aria-current={id !== "photo" && activeSection === id ? "location" : undefined}
+                  href={`#${id}`}
+                  className={activeSection === id ? "active" : undefined}
+                  aria-current={activeSection === id ? "location" : undefined}
                   onClick={() => setOpenMenu(false)}
                 >
                   {label}
@@ -460,7 +459,6 @@ export function UpstreamMainPage() {
 
         <nav className="mobile-tabs" aria-label="모바일 빠른 이동">
           <a href="#type">유형</a>
-          <a href="#photo">사진</a>
           <a href="#demo">추천</a>
         </nav>
 

@@ -10,7 +10,7 @@ import { useId } from "react";
  */
 
 export const PHOTO_CONSENT_COPY = {
-  heading: "사진 사용 내용을 먼저 확인해 주세요",
+  heading: "사진 사용 안내를 먼저 확인해 주세요",
   facts: [
     "선택한 사진은 이번 여행에서 선호하는 분위기와 경험 후보를 찾는 데만 사용해요.",
     "지원 형식과 크기, 실제 이미지 여부를 확인한 뒤 새 파일명과 안전한 형식으로 다시 만들어요. 원본 파일명과 위치 정보 같은 EXIF 메타데이터는 분석에 사용하지 않아요.",
@@ -48,55 +48,32 @@ export function PhotoConsentPanel({
   const errorId = `${baseId}-consent-error`;
   return (
     <section
-      className="profile-state"
+      className="profile-state photo-consent"
       aria-labelledby="photo-consent-heading"
-      style={{ padding: "var(--space-lg)" }}
     >
+      <p className="photo-section-label">사진 사용 안내</p>
       <Heading id="photo-consent-heading" tabIndex={-1}>
         {PHOTO_CONSENT_COPY.heading}
       </Heading>
-      <dl style={{ margin: "var(--space-md) 0 0" }}>
+      <dl className="photo-consent__facts">
         {PHOTO_CONSENT_COPY.facts.map((fact, index) => (
-          <div
-            key={factIds[index]}
-            id={factIds[index]}
-            style={{
-              paddingBlock: "var(--space-sm)",
-              borderTop: "1px solid var(--line)",
-            }}
-          >
-            <dt
-              style={{
-                color: "var(--ink-muted)",
-                fontSize: "14px",
-                fontWeight: 600,
-              }}
-            >
+          <div key={factIds[index]} id={factIds[index]}>
+            <dt>
               {PHOTO_CONSENT_COPY.factLabels[index]}
             </dt>
-            <dd style={{ margin: "var(--space-xs) 0 0", minWidth: 0 }}>{fact}</dd>
+            <dd>{fact}</dd>
           </div>
         ))}
       </dl>
-      <p className="privacy-note" style={{ marginTop: "var(--space-md)" }}>
+      <p className="privacy-note photo-consent__notice">
         {PHOTO_CONSENT_COPY.midJourneyStop}
       </p>
-      <label
-        style={{
-          display: "flex",
-          minHeight: "44px",
-          alignItems: "center",
-          gap: "var(--space-sm)",
-          padding: "var(--space-sm) 0",
-          cursor: "pointer",
-        }}
-      >
+      <label className="photo-consent__check">
         <input
           type="checkbox"
           checked={checked}
           onChange={(event) => onToggle(event.target.checked)}
           aria-describedby={[...factIds, ...(error ? [errorId] : [])].join(" ")}
-          style={{ width: "20px", minWidth: "20px", minHeight: "20px", margin: 0 }}
         />
         <span style={{ minWidth: 0 }}>{PHOTO_CONSENT_COPY.checkbox}</span>
       </label>
@@ -105,15 +82,16 @@ export function PhotoConsentPanel({
           {PHOTO_CONSENT_COPY.error}
         </p>
       ) : null}
-      {children}
-      <button
-        type="button"
-        className="button button--primary"
-        style={{ width: "100%", marginTop: "var(--space-md)" }}
-        onClick={onContinue}
-      >
-        {PHOTO_CONSENT_COPY.cta}
-      </button>
+      <div className="photo-consent__actions">
+        {children}
+        <button
+          type="button"
+          className="button button--primary"
+          onClick={onContinue}
+        >
+          {PHOTO_CONSENT_COPY.cta}
+        </button>
+      </div>
     </section>
   );
 }

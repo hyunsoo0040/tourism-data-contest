@@ -13,9 +13,6 @@ import { questionnaireAnswersSchema, tripConditionsSchema } from "../app/schemas
 import { readProfileReference } from "../app/storage";
 import { pickResultForProfile } from "../app/upstream/resultProjection";
 import { quizNavigationState } from "../features/journey/quizNavigation";
-import { CalculationDetails } from "../features/profile/CalculationDetails";
-import { InputSummary } from "../features/profile/InputSummary";
-import { ProfileNarrative } from "../features/profile/ProfileNarrative";
 import { ProfileRecommendationCTA } from "../features/profile/ProfileRecommendationCTA";
 import { ProfileRecoveryState } from "../features/profile/ProfileRecoveryState";
 import { ResetDraftDialog } from "../features/profile/ResetDraftDialog";
@@ -266,28 +263,6 @@ export function ProfilePage() {
     );
   }
 
-  const editQuestion = (ordinal: number) => {
-    // Legacy v1 answers can never re-enter the v2 quiz flow: editing starts a
-    // fresh v2 questionnaire. Trip conditions are generation-independent and
-    // stay; only the v1 answers are dropped, never re-submitted.
-    const isCurrentProfile = profile !== null && questionnaireAnswersSchema.safeParse(profile.answers).success;
-    if (isCurrentProfile) {
-      updateDraft({ current_route: "/quiz", current_question: ordinal });
-      void navigate("/quiz", { state: quizNavigationState(ordinal, true) });
-      return;
-    }
-    resetDraft();
-    const conditions = tripConditionsSchema.safeParse(profile?.trip_conditions);
-    if (conditions.success) {
-      updateDraft({
-        current_route: "/quiz",
-        current_question: ordinal,
-        trip_conditions: conditions.data,
-      });
-    }
-    void navigate("/quiz", { state: quizNavigationState(ordinal) });
-  };
-
   return (
     <ProfileShell>
       <section className="panel result visible profile-result" aria-labelledby="profile-result-heading">
@@ -323,16 +298,6 @@ export function ProfilePage() {
 
         <section className="profile-support-grid" aria-label="세부 취향 결과">
           <ThreeAxisProfile scores={profile.scores} headingRef={meterHeadingRef} />
-          <ProfileNarrative description={profile.description_ko} />
-          <InputSummary
-            profile={profile}
-            onEditTrip={() => {
-              updateDraft({ current_route: "/start" });
-              void navigate("/start?mode=edit");
-            }}
-            onEditQuestion={editQuestion}
-          />
-          <CalculationDetails profile={profile} />
         </section>
 
         <div className="result-actions profile-primary-action" ref={ctaRef}>

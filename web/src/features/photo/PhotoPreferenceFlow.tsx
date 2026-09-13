@@ -644,8 +644,7 @@ export function PhotoPreferenceFlow({
       >
         <button
           type="button"
-          className="button button--secondary"
-          style={{ width: "100%", marginTop: "var(--space-sm)" }}
+          className="button button--secondary photo-consent__skip"
           onClick={goNoPhoto}
         >
           사진 없이 추천 5곳 보기
@@ -675,7 +674,7 @@ export function PhotoPreferenceFlow({
         >
           {rows.length === 0 && emptyError !== true ? null : null}
         </PhotoPreflightPicker>
-        <div className="start-action-bar" style={{ position: "static", padding: 0, border: 0, background: "transparent" }}>
+        <div className="start-action-bar photo-flow-actions">
           <button type="button" className="button button--secondary" onClick={goNoPhoto}>
             사진 없이 추천 5곳 보기
           </button>
@@ -730,7 +729,7 @@ export function PhotoPreferenceFlow({
             {announce}
           </p>
         ) : null}
-        <div className="start-action-bar" style={{ position: "static", padding: 0, border: 0, background: "transparent" }}>
+        <div className="start-action-bar photo-flow-actions">
           <button type="button" className="button button--secondary" onClick={goNoPhoto}>
             사진 없이 추천 5곳 보기
           </button>
@@ -786,7 +785,7 @@ export function PhotoPreferenceFlow({
             {announce}
           </p>
         ) : null}
-        <div className="start-action-bar" style={{ position: "static", padding: 0, border: 0, background: "transparent" }}>
+        <div className="start-action-bar photo-flow-actions">
           <button
             ref={deleteTriggerRef}
             type="button"

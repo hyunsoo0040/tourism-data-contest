@@ -212,14 +212,14 @@ export function PhotoPreflightPicker({
 
   return (
     <section
-      className="profile-state"
+      className={`profile-state photo-picker${rows.length > 0 ? " photo-picker--has-rows" : ""}`}
       aria-labelledby="photo-preflight-heading"
-      style={{ padding: "var(--space-lg)" }}
     >
+      <p className="photo-section-label">사진 선택</p>
       <h1 ref={headingRef} id="photo-preflight-heading" tabIndex={-1}>
         {PICKER_COPY.heading}
       </h1>
-      <p>{PICKER_COPY.emptyBody}</p>
+      <p className="photo-picker__description">{PICKER_COPY.emptyBody}</p>
       {problem !== null ? (
         <div
           ref={summaryRef}
@@ -273,45 +273,25 @@ export function PhotoPreflightPicker({
         </div>
       ) : null}
       {rows.length > 0 ? (
-        <ul style={{ display: "grid", gap: "var(--space-sm)", listStyle: "none", padding: 0 }}>
+        <ul className="photo-picker__list">
           {rows.map((row) => (
             <li
               key={row.rowId}
               aria-invalid={row.error !== null || undefined}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "72px minmax(0, 1fr) auto",
-                gap: "var(--space-sm)",
-                alignItems: "center",
-                paddingBlock: "var(--space-sm)",
-                borderTop: "1px solid var(--line)",
-              }}
+              className="photo-picker__row"
             >
               {row.previewUrl === "" ? (
-                <span
-                  aria-hidden="true"
-                  style={{
-                    width: "72px",
-                    height: "72px",
-                    borderRadius: "12px",
-                    background: "var(--surface-muted)",
-                  }}
-                />
+                <span aria-hidden="true" className="photo-picker__preview photo-picker__preview--empty" />
               ) : (
                 <img
                   src={row.previewUrl}
                   alt=""
                   width={72}
                   height={72}
-                  style={{
-                    width: "72px",
-                    height: "72px",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                  }}
+                  className="photo-picker__preview"
                 />
               )}
-              <div style={{ minWidth: 0 }}>
+              <div className="photo-picker__meta">
                 <p style={{ margin: 0, fontWeight: 600 }}>
                   <span>사진 {row.ordinal}</span>
                 </p>
@@ -326,8 +306,7 @@ export function PhotoPreflightPicker({
               </div>
               <button
                 type="button"
-                className="button button--text-destructive"
-                style={{ minWidth: "44px" }}
+                className="button button--text-destructive photo-picker__remove"
                 onClick={() => onRemove(row.rowId)}
               >
                 <RemoveLabel ordinal={row.ordinal} />
@@ -344,20 +323,24 @@ export function PhotoPreflightPicker({
         accept="image/jpeg,image/png,image/webp"
         multiple
         onChange={ingest}
-        style={{
-          display: "block",
-          marginTop: "var(--space-md)",
-          minWidth: 0,
-          width: "100%",
-        }}
+        className="photo-picker__input"
       />
       <button
         type="button"
-        className="button button--secondary"
-        style={{ marginTop: "var(--space-sm)" }}
+        className="button button--secondary photo-picker__trigger"
+        aria-label={PICKER_COPY.trigger}
         onClick={() => inputRef.current?.click()}
       >
-        {PICKER_COPY.trigger}
+        <span className="photo-picker__trigger-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <path d="M7 10.5h4.2l1.8-2.6h6l1.8 2.6H25a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-10a3 3 0 0 1 3-3Z" />
+            <circle cx="16" cy="18.5" r="4.8" />
+          </svg>
+        </span>
+        <span className="photo-picker__trigger-copy">
+          <strong>{rows.length > 0 ? "사진 더 고르기" : PICKER_COPY.trigger}</strong>
+          <small>내 기기에서 여행 사진을 선택해 주세요</small>
+        </span>
       </button>
       {children}
     </section>

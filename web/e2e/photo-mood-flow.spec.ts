@@ -122,7 +122,9 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await page.screenshot({ path: info.outputPath("design-photo.png"), fullPage: true });
     await page.getByRole("checkbox").check();
     await page.getByRole("button", { name: "동의하고 사진 고르기" }).click();
+    await page.screenshot({ path: info.outputPath("design-photo-picker-empty.png"), fullPage: true });
     await page.locator('input[type="file"]').setInputFiles({ name: "fixture.png", mimeType: "image/png", buffer: image });
+    await page.screenshot({ path: info.outputPath("design-photo-picker-selected.png"), fullPage: true });
     await page.getByRole("button", { name: "사진 1장 분석 시작하기" }).click();
     await expect(page.getByRole("heading", { name: "사진에서 마음에 든 분위기를 골라 주세요" })).toBeVisible();
     await expect(page.getByRole("checkbox")).toHaveCount(3);
