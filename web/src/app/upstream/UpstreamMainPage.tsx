@@ -187,7 +187,7 @@ export function UpstreamMainPage() {
             <nav className={openMenu ? "nav-menu open" : "nav-menu"} aria-label="주요 메뉴">
               <a href="#type">여행 유형</a>
               <a href="#flow">서비스 흐름</a>
-              <a href="/photo">사진 분위기 입력</a>
+              
               <a href="#demo">추천 예시</a>
             </nav>
             <a href="/start" className="nav-cta">시작하기</a>

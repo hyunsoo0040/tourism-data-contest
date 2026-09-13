@@ -348,9 +348,7 @@ export function ProfilePage() {
 
         <div className="result-actions profile-actions">
           <button type="button" className="control" onClick={() => void navigate("/photo")}>사진 추천 페이지 열기</button>
-          <button type="button" className="control" onClick={() => editQuestion(1)}>답변 수정하기</button>
-          <button type="button" className="control" onClick={() => void navigate("/start?mode=edit")}>여행 조건 수정하기</button>
-          <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>처음부터 다시</button>
+          <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>테스트 다시하기</button>
         </div>
       </section>
       <ResetDraftDialog
