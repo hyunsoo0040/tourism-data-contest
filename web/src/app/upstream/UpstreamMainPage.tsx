@@ -90,8 +90,8 @@ const RECOMMENDATIONS: Record<string, RecommendationBranch> = {
     ],
   },
   image: {
-    title: "인식·이미지형 추천 결과",
-    phoneType: "당신은<br>인식·이미지형 여행자",
+    title: "의미·이미지형 추천 결과",
+    phoneType: "당신은<br>의미·이미지형 여행자",
     phoneDesc: "사진으로 남기고 싶은 분위기와 시각적 인상을 중요하게 생각해요.",
     match: 86,
     text: "사진 분위기와 시각 키워드가 기대와 잘 맞습니다.",
@@ -206,13 +206,11 @@ export function UpstreamMainPage() {
                   </span>
                 </h1>
                 <p>
-                  당신은 어떤 여행에서 진짜다움을 느끼나요?<br />
+                  <strong className="hero-copy-emphasis">당신은 어떤 여행에서 진짜다움을 느끼나요?</strong><br />
                   테스트와 사진을 통해 추구하는 여행 경험을 알아보세요.<br />
                   그에 맞는 장소를 연결해 드립니다.
                 </p>
-                <div className="hero-actions">
-                  <a className="btn primary" href="/start">여행 취향 찾기</a>
-                </div>
+                
               </div>
               <div className="phone-card" aria-label="IT-DA 모바일 추천 화면 미리보기">
                 <div className="blob"></div>
@@ -233,7 +231,7 @@ export function UpstreamMainPage() {
                     <div className="type-card">
                       <div className="type-icon">像</div>
                       <div>
-                        <strong>인식·이미지형</strong>
+                        <strong>의미·이미지형</strong>
                         <span>SNS, 분위기, 포토 스팟</span>
                       </div>
                     </div>
@@ -276,7 +274,7 @@ export function UpstreamMainPage() {
               <p className="type-summary">IT-DA는 이러한 차이를 세 가지 여행 경험 유형으로 나누어 살펴봅니다.</p>
               <div className="cards">
                 <article className="card"><div className="icon orange">原</div><h3>대상·원형형</h3><p>오랜 시간 보존되어 온 문화유산과 전통 공간이 지닌 역사적 가치와 고유한 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
-                <article className="card"><div className="icon blue">像</div><h3>인식·이미지형</h3><p>장소가 가진 분위기와 이미지, 미디어와 콘텐츠를 통해 형성된 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
+                <article className="card"><div className="icon blue">像</div><h3>의미·이미지형</h3><p>장소가 가진 분위기와 이미지, 미디어와 콘텐츠를 통해 형성된 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
                 <article className="card"><div className="icon green">我</div><h3>자기·몰입형</h3><p>일상에서 벗어나 온전히 자신만의 시간을 보내며 휴식과 몰입의 경험을 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
               </div>
             </div>
