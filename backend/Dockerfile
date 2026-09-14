@@ -34,7 +34,12 @@ RUN find /app/artifacts/authenticity/current -type d -exec chmod 0555 {} + \
 ENV PATH=/app/backend/.venv/bin:$PATH \
     PYTHONPATH=/app/backend/src \
     PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
+    PYTHONUNBUFFERED=1 \
+    ITDA_AUTHENTICITY_RELEASE_DIR=/app/artifacts/authenticity/current \
+    ITDA_AUTHENTICITY_RELEASE_SHA256=bcd012c94cfd1fb66a2edbc3c3922d2e4dfa5438d7d4a86fc9e2f0049b0c79f7 \
+    ITDA_AUTHENTICITY_EXPECTED_PLACES=1984 \
+    ITDA_AUTHENTICITY_ALLOW_DEVELOPMENT=0 \
+    ITDA_AUTHENTICITY_PHOTO_ENABLED=1
 USER 10001:10001
 EXPOSE 8000
 CMD ["python", "-m", "uvicorn", "itda.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips=*"]

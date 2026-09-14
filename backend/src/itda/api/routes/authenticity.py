@@ -36,7 +36,9 @@ router = APIRouter(prefix="/v1/authenticity", tags=["authenticity"])
 
 @lru_cache(maxsize=1)
 def get_service() -> Service:
-    dsn = os.environ.get("ITDA_AUTHENTICITY_DATABASE_URL", "")
+    # Existing Portainer stacks export the runtime DSN inside their command.
+    # An explicit authenticity DSN (including an empty one) keeps precedence.
+    dsn = os.environ.get("ITDA_AUTHENTICITY_DATABASE_URL", os.environ.get("ITDA_DATABASE_URL", ""))
     if not dsn:
         raise HTTPException(503, "새 경험 자료를 준비하고 있습니다.")
     return Service(
