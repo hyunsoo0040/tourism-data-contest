@@ -1,0 +1,964 @@
+{
+  "assessed_at": "2026-09-11T18:17:29.778752Z",
+  "assessment_sha256": "3b271ef87b81dd984279fd7fdb4d327944dab47936fc56fe2c73f39a5e61a686",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f1bfc95eb7307a3e8af8bcc56caf3398451a1070391662dc0c8c9c4923f3438f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "해설사의 집 운영으로 문화해설이 가능하다는 공식 정보가 있어 유산 연결 해설 기회를 확인할 수 있다. 해설의 깊이·범위에 대한 상세는 없어 2 수준으로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "고구려 3대 평지성·임진강 절경 조망지라는 장소 이미지와 이야기가 공식 소개글에서 연결되어 있다. 여러 매체에서 일관되게 확인되는지는 근거가 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:38a7cc42fafd895dddfd8043df66dce5b9af99aa19c97e1182f06a0fb34a845b",
+            "appearance:d1fb1c841c43fa7a52ed4c41231333ceb22735e79b1f7022d4fe1893997b6295",
+            "appearance:fe0c685e0741c313ae7f4f76e7bad4f2d9ef47d65e5b25668c38471ec5ce70fb"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1baf68e2764b5cb45496bb843a03a53d8fcbb39c409c909a053a59eedb3ffb49",
+            "appearance:1d0d077a630fc12039993f78e93dac0e8ac98bd1391fd236d96cbb24f53d910d",
+            "appearance:c9bdc182a02f768add1cb579ffdb6e951145089bb84be440dbf1c3361f48ac50"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "임진강 절경과 현무암 단애 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡·회복 환경 여부는 근거가 없어 2 수준으로 제한.",
+      "value": 63
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "anchor_ko는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(4수준)인데 판정은 3수준(관람)으로 되어 불일치한다. 성벽 구조·발굴사실로 3수준 관람은 뒷받침되나, 공간·실물의 구체적 탐구가 제공된다는 근거는 없어 현재 수준은 확정 불가.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "anchor_ko는 '여러 맥락을 대상과 연결해 설명'(4수준)인데 판정은 3수준이다. 어원·발굴·길목 위치 등 그 장소 자체의 역사 맥락 제시(3수준)는 뒷받침되지만, 여러 맥락을 연결한 설명까지는 근거가 부족해 현재 수준 확정 불가.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 현재 연결에 대한 근거가 제공되지 않았다. 어원 설은 역사 서사이지 현재 전승 활동의 확인이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:f1bfc95eb7307a3e8af8bcc56caf3398451a1070391662dc0c8c9c4923f3438f",
+          "quote": {
+            "end": 18,
+            "method": "EXACT",
+            "original": "문화해설 가능(해설사의 집 운영)",
+            "start": 0,
+            "submitted": "문화해설 가능(해설사의 집 운영)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8c0241c1b02e11bd9376eb5288a85910e3714ee488b5209854997e1a03a5631b"
+        }
+      ],
+      "flags": [],
+      "key": "H.d",
+      "level": 2,
+      "reason": "해설사의 집 운영으로 문화해설이 가능하다는 공식 정보가 있어 유산 연결 해설 기회를 확인할 수 있다. 해설의 깊이·범위에 대한 상세는 없어 2 수준으로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed",
+          "quote": {
+            "end": 38,
+            "method": "EXACT",
+            "original": "연천 호로고루는 개성과 서울을 연결하는 중요한 길목에 위치하고 있으며",
+            "start": 0,
+            "submitted": "연천 호로고루는 개성과 서울을 연결하는 중요한 길목에 위치하고 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ea2489e70ba89b5d85849fcfdb9f7f9b211aa2921c4f2b3302944dfc4f37c365"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "고구려 3대 평지성·임진강 절경 조망지라는 장소 이미지와 이야기가 공식 소개글에서 연결되어 있다. 여러 매체에서 일관되게 확인되는지는 근거가 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 매체(작품, 홍보, SNS 등)에서 재현·확산되는 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다. 조망 언급은 이미지 재현 경험의 확인 자료로 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색·선택의 기회에 대한 직접 근거가 없다. '무료'는 자유나 여유의 근거가 될 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed",
+          "quote": {
+            "end": 85,
+            "method": "EXACT",
+            "original": "원당리에서 임진강으로 유입되는 지류가 흐르면서 형성된 현무암 단애 위에 조성되었다",
+            "start": 40,
+            "submitted": "원당리에서 임진강으로 유입되는 지류가 흐르면서 형성된 현무암 단애 위에 조성되었다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ea2489e70ba89b5d85849fcfdb9f7f9b211aa2921c4f2b3302944dfc4f37c365"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "임진강 절경과 현무암 단애 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡·회복 환경 여부는 근거가 없어 2 수준으로 제한.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "참여·도전·집중할 활동(체험, 탐방 프로그램 등)에 대한 근거가 제공되지 않았다. 해설 운영은 집중 활동의 직접 근거로 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 없다. 해설사의 집 운영이 관계 형성을 보장하지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed",
+            "quote": "약 28m 높이의 현무암 절벽에 위치하고 있다"
+          },
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed",
+            "quote": "성벽 위에서는 주변 지역은 물론 임진강의 절경을 바라볼 수 있다"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "현무암 단애·절벽 위 성벽과 임진강 절경이라는 뚜렷한 시각적 성격이 확인되나, 이것이 경관 연출·이미지 표현으로 지배적이라는 근거는 없어 3 수준으로 판단.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed",
+              "quote": {
+                "end": 339,
+                "method": "EXACT",
+                "original": "호로고루 동쪽벽은 현무암 대지의 동쪽 부분을 막아 조성한 것으로 가장 높은 부분이 10m로 성벽 위에서는 주변 지역은 물론 임진강의 절경을 바라볼 수 있다.",
+                "start": 252,
+                "submitted": "호로고루 동쪽벽은 현무암 대지의 동쪽 부분을 막아 조성한 것으로 가장 높은 부분이 10m로 성벽 위에서는 주변 지역은 물론 임진강의 절경을 바라볼 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "ea2489e70ba89b5d85849fcfdb9f7f9b211aa2921c4f2b3302944dfc4f37c365"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.a",
+          "level": 3,
+          "reason": "고구려 관방유적 평지성으로 발굴조사를 통해 성벽 구조가 확인된 실제 유적이며, 성벽 위를 오르며 주변을 조망하는 접촉이 가능하다고 기술되어 원형·유산 관람 경험을 뒷받침한다. 구체적 탐구가 중심이라는 근거는 없어 3 수준으로 판단.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "anchor_ko는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(4수준)인데 판정은 3수준(관람)으로 되어 불일치한다. 성벽 구조·발굴사실로 3수준 관람은 뒷받침되나, 공간·실물의 구체적 탐구가 제공된다는 근거는 없어 현재 수준은 확정 불가."
+        }
+      },
+      "reason": "anchor_ko는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(4수준)인데 판정은 3수준(관람)으로 되어 불일치한다. 성벽 구조·발굴사실로 3수준 관람은 뒷받침되나, 공간·실물의 구체적 탐구가 제공된다는 근거는 없어 현재 수준은 확정 불가."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed",
+              "quote": {
+                "end": 198,
+                "method": "EXACT",
+                "original": "호로고루의 어원에 대해서는 “이 부근의 지형이 표주박, 조롱박과 같이 생겼다.”하여 호로고루라고 불린다는 설과 고을을 뜻하는 ‘홀’과 성을 뜻하는 ‘구루’가 합쳐져 ‘호로고루’가 되었다는 설이 있다.",
+                "start": 87,
+                "submitted": "호로고루의 어원에 대해서는 “이 부근의 지형이 표주박, 조롱박과 같이 생겼다.”하여 호로고루라고 불린다는 설과 고을을 뜻하는 ‘홀’과 성을 뜻하는 ‘구루’가 합쳐져 ‘호로고루’가 되었다는 설이 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "ea2489e70ba89b5d85849fcfdb9f7f9b211aa2921c4f2b3302944dfc4f37c365"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.b",
+          "level": 3,
+          "reason": "개성-서울 연결 길목, 어원 설, 3대 평지성 위상, 2000-2002년 발굴조사 등 이 장소 자체의 역사 맥락이 구체적으로 제시되어 있으나, 심층 탐구가 경험의 중심이라는 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "anchor_ko는 '여러 맥락을 대상과 연결해 설명'(4수준)인데 판정은 3수준이다. 어원·발굴·길목 위치 등 그 장소 자체의 역사 맥락 제시(3수준)는 뒷받침되지만, 여러 맥락을 연결한 설명까지는 근거가 부족해 현재 수준 확정 불가."
+        }
+      },
+      "reason": "anchor_ko는 '여러 맥락을 대상과 연결해 설명'(4수준)인데 판정은 3수준이다. 어원·발굴·길목 위치 등 그 장소 자체의 역사 맥락 제시(3수준)는 뒷받침되지만, 여러 맥락을 연결한 설명까지는 근거가 부족해 현재 수준 확정 불가."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "041d939c6bb9d39aa672d9e0de9aa995fb39b20d2ad155c2a98d2f6107a5e5e2",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "잔디로 덮인 언덕과 드넓은 초지, 트인 하늘이 화면 전체를 채워 자연 환경 단서가 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1baf68e2764b5cb45496bb843a03a53d8fcbb39c409c909a053a59eedb3ffb49",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a52c587362c8891e0be2268b563a5b53d975d65d6ee4dbf32cd140d51335df1",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3407629",
+          "request_sha256": "cea783bb4c3cf995c5c2affb6e271d4d00bb8db6156e3141b57ae74f23d4b9cf",
+          "response_sha256": "a5c711dd84981c1b6c44d5de4cd46894287c93e5f234f22560d2a7e0da770752",
+          "retrieved_at": "2026-09-11T02:08:10.155051Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c43f8f30864abac0dd878af47cd829f30aa86240559b29eb41ce2e01a338f328",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/29/3407629.jpg"
+        },
+        "record_sha256": "81b138b513e27b9bf1cddadfe23e6af051147d890fc8599716ddf7778ddc8681",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "광활한 해바라기 밭, 트인 잔디 언덕, 넓은 하늘 등 자연 경관이 화면 대부분을 차지",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1d0d077a630fc12039993f78e93dac0e8ac98bd1391fd236d96cbb24f53d910d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a6acb820b62c4ff2fac4a63b6744ff5e2ecfdf6a280e6ec088d7af49b57c4830",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3332559_2",
+          "request_sha256": "aa77109ae02643c2fdf6d3afbb9c74b37bc706b082c71e5d6135a87de94d7135",
+          "response_sha256": "9e2d738db1eaac24c43cc30f871eab5331e6643e151f8b92954aeb3ba608349b",
+          "retrieved_at": "2026-09-11T02:08:09.285786Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "353f4b36ab15bd1764f3668a31cc1b2604039b626f9397dda0b8563cfff89e21",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/59/3332559_image2_1.jpg"
+        },
+        "record_sha256": "d7503002b5269bca20e5d2195e8ce248114120757762482e0c7ce728e7345861",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "노을빛 하늘과 해바라기 밭, 언덕 실루엣이 장면 전체를 지배하는 강렬하고 연출된 구도",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:38a7cc42fafd895dddfd8043df66dce5b9af99aa19c97e1182f06a0fb34a845b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a6acb820b62c4ff2fac4a63b6744ff5e2ecfdf6a280e6ec088d7af49b57c4830",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3332559_2",
+          "request_sha256": "aa77109ae02643c2fdf6d3afbb9c74b37bc706b082c71e5d6135a87de94d7135",
+          "response_sha256": "9e2d738db1eaac24c43cc30f871eab5331e6643e151f8b92954aeb3ba608349b",
+          "retrieved_at": "2026-09-11T02:08:09.285786Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "353f4b36ab15bd1764f3668a31cc1b2604039b626f9397dda0b8563cfff89e21",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/59/3332559_image2_1.jpg"
+        },
+        "record_sha256": "13fd53ae4d501bf2ee9e3a429a0448e8942ac893d1eadbed6a83aecf8123356f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "흙으로 쌓아 올린 듯한 완만한 언덕 형태의 구조물이 보이나, 외관상 전통적 흙 적축 형태는 보통 수준으로 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:67380e5a59d31a61b3528af80b6abaad0cbc7e70df81179cc90107303db5e25b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "892f17562f6828b554ec318bde1829c76468e9860efeed81a2411b6e7cba4c75",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3036350",
+          "request_sha256": "cea783bb4c3cf995c5c2affb6e271d4d00bb8db6156e3141b57ae74f23d4b9cf",
+          "response_sha256": "a5c711dd84981c1b6c44d5de4cd46894287c93e5f234f22560d2a7e0da770752",
+          "retrieved_at": "2026-09-11T02:08:10.155051Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "12eee8e2a6e33388b5d160f6fd8c58f83141efa406b9fbc45d8f58e8f3b9d098",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/50/3036350.jpg"
+        },
+        "record_sha256": "515b24ab9a9901ac1fbf0100320927beb364d8a836cfe306c548716e6670c72e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "광활한 해바라기 밭, 잔디 언덕, 트인 하늘과 일몰광이 장면 전체를 지배하는 자연 환경 단서가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c9bdc182a02f768add1cb579ffdb6e951145089bb84be440dbf1c3361f48ac50",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "892f17562f6828b554ec318bde1829c76468e9860efeed81a2411b6e7cba4c75",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3036350",
+          "request_sha256": "cea783bb4c3cf995c5c2affb6e271d4d00bb8db6156e3141b57ae74f23d4b9cf",
+          "response_sha256": "a5c711dd84981c1b6c44d5de4cd46894287c93e5f234f22560d2a7e0da770752",
+          "retrieved_at": "2026-09-11T02:08:10.155051Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "12eee8e2a6e33388b5d160f6fd8c58f83141efa406b9fbc45d8f58e8f3b9d098",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/50/3036350.jpg"
+        },
+        "record_sha256": "46a7bf98a9d79932fe27decffb19445b1001550cfb0d76d73c4d5d2e1c5f506c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "화면 상단 2/3를 차지하는 푸른 하늘과 넓은 잔디 언덕의 대비가 장면을 지배하며, 계단의 S자 곡선이 시선을 끄는 강한 구도를 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d1fb1c841c43fa7a52ed4c41231333ceb22735e79b1f7022d4fe1893997b6295",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a52c587362c8891e0be2268b563a5b53d975d65d6ee4dbf32cd140d51335df1",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3407629",
+          "request_sha256": "cea783bb4c3cf995c5c2affb6e271d4d00bb8db6156e3141b57ae74f23d4b9cf",
+          "response_sha256": "a5c711dd84981c1b6c44d5de4cd46894287c93e5f234f22560d2a7e0da770752",
+          "retrieved_at": "2026-09-11T02:08:10.155051Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c43f8f30864abac0dd878af47cd829f30aa86240559b29eb41ce2e01a338f328",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/29/3407629.jpg"
+        },
+        "record_sha256": "34a628d90a6670476489eacc1b9feeffb6bff607f888ede810e6ef326bfe042f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "흙으로 이루어진 완만한 봉분 형태의 언덕과 자연 재료의 낮은 울타리가 전통적으로 보이는 외관을 어느 정도 보여주나 뚜렷한 전통 구조물은 없다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d95a0fd0e0f85fc358a546f5117625a514a684a5788cb43aa51046305ed68c1a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a52c587362c8891e0be2268b563a5b53d975d65d6ee4dbf32cd140d51335df1",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3407629",
+          "request_sha256": "cea783bb4c3cf995c5c2affb6e271d4d00bb8db6156e3141b57ae74f23d4b9cf",
+          "response_sha256": "a5c711dd84981c1b6c44d5de4cd46894287c93e5f234f22560d2a7e0da770752",
+          "retrieved_at": "2026-09-11T02:08:10.155051Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c43f8f30864abac0dd878af47cd829f30aa86240559b29eb41ce2e01a338f328",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/29/3407629.jpg"
+        },
+        "record_sha256": "9df759277a18303c6c289144fcf05448cbc7ee661964bab7d101eb784d0241cc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "흙으로 쌓아 올린 완만한 언덕형 봉분 형태의 구조물이 보이나 외관상 전통적 느낌은 보통 수준",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ecae19cf88c83e79a94a17a5ba954b65055a5fa471e1d41f6eab84f5bee9c3a9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a6acb820b62c4ff2fac4a63b6744ff5e2ecfdf6a280e6ec088d7af49b57c4830",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3332559_2",
+          "request_sha256": "aa77109ae02643c2fdf6d3afbb9c74b37bc706b082c71e5d6135a87de94d7135",
+          "response_sha256": "9e2d738db1eaac24c43cc30f871eab5331e6643e151f8b92954aeb3ba608349b",
+          "retrieved_at": "2026-09-11T02:08:09.285786Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "353f4b36ab15bd1764f3668a31cc1b2604039b626f9397dda0b8563cfff89e21",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/59/3332559_image2_1.jpg"
+        },
+        "record_sha256": "6d143951c8194ed67e334051b6cb788755276ff7d892c02fbcbef2bf3aea8582",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "노을의 분홍·주황 하늘과 해바라기 노란색이 강렬한 대비를 이루며, 언덕 실루엣과 인물들이 수평 구도를 지배하는 매우 연출적인 장면이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fe0c685e0741c313ae7f4f76e7bad4f2d9ef47d65e5b25668c38471ec5ce70fb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "892f17562f6828b554ec318bde1829c76468e9860efeed81a2411b6e7cba4c75",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3036350",
+          "request_sha256": "cea783bb4c3cf995c5c2affb6e271d4d00bb8db6156e3141b57ae74f23d4b9cf",
+          "response_sha256": "a5c711dd84981c1b6c44d5de4cd46894287c93e5f234f22560d2a7e0da770752",
+          "retrieved_at": "2026-09-11T02:08:10.155051Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "12eee8e2a6e33388b5d160f6fd8c58f83141efa406b9fbc45d8f58e8f3b9d098",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/50/3036350.jpg"
+        },
+        "record_sha256": "ac5b0fe2719a92e2c44478eca12d20bca2aeaa11c03974471d0f98ac14cbbe9d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4387fc2f1fe5bddab0a1f81033adfaa6cdee4021eed5eba82a4ec8513cfc954e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128647",
+          "request_sha256": "81904b7e33fae373e56734178164a4e7b2406dda80c48e60921379eab2d23378",
+          "response_sha256": "322869aac44034b597992a60c07b27112b327a0937f8f043acc2c64ac7617a18",
+          "retrieved_at": "2026-09-11T02:08:08.945138Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e53b4a3f41c7b33064e0532fcebf752f57daa476f127f9dc01eb27fa8612a970",
+          "source_uri": null
+        },
+        "record_sha256": "017e00d02cd27de8aa07c70f4b1d6441fe6bbd181fc0f140875a45d6c8aa340f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:702950d7787b9fd4812815ad7051b8c1a27e97ab3ce948208d17dc330d1314ed",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "128647",
+          "request_sha256": "f317469eb364474fd139ec9ff61108327ad3126a13ec7c37f7d32b2299188c99",
+          "response_sha256": "66b7fc95431d1612eee73c3f9fc194851e638a66cbc57c562bcd8844e144f27c",
+          "retrieved_at": "2026-09-10T16:47:32.191000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-07-31T05:10:11Z",
+          "source_record_sha256": "8112101f70ee16c9cf1aa723d3d0173af64ba04aaf52b3ae8fa1c608ed74691c",
+          "source_uri": null
+        },
+        "record_sha256": "ea2489e70ba89b5d85849fcfdb9f7f9b211aa2921c4f2b3302944dfc4f37c365",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "연천 호로고루는 개성과 서울을 연결하는 중요한 길목에 위치하고 있으며, 원당리에서 임진강으로 유입되는 지류가 흐르면서 형성된 현무암 단애 위에 조성되었다. 호로고루의 어원에 대해서는 “이 부근의 지형이 표주박, 조롱박과 같이 생겼다.”하여 호로고루라고 불린다는 설과 고을을 뜻하는 ‘홀’과 성을 뜻하는 ‘구루’가 합쳐져 ‘호로고루’가 되었다는 설이 있다. 경기도 지역에서 조사된 고구려 관방유적 중 당포성, 은대리성과 함께 3대 평지성 중 하나이다. 호로고루 동쪽벽은 현무암 대지의 동쪽 부분을 막아 조성한 것으로 가장 높은 부분이 10m로 성벽 위에서는 주변 지역은 물론 임진강의 절경을 바라볼 수 있다. 호로고루에 대한 1차 발굴조사는 2000년 11월부터 2002년 5월까지 이루어져 성벽의 축성방식과 구조에 대한 확인이 이루어졌다. 호로고루 성벽 전체 둘레는 401m로 남벽 161.9m, 북벽 146m, 동벽 93.1m로 내부 면적은 606㎡이며 약 28m 높이의 현무암 절벽에 위치하고 있다. 동쪽벽은 여러 번에 걸쳐 흙을 다져 쌓은 위에 돌로 성벽을 높이 쌓아 올려 석성과 토성의 장점을 적절하게 결합한 축성술을 보여주고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f1bfc95eb7307a3e8af8bcc56caf3398451a1070391662dc0c8c9c4923f3438f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128647",
+          "request_sha256": "81904b7e33fae373e56734178164a4e7b2406dda80c48e60921379eab2d23378",
+          "response_sha256": "322869aac44034b597992a60c07b27112b327a0937f8f043acc2c64ac7617a18",
+          "retrieved_at": "2026-09-11T02:08:08.945138Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "15268d2e48fcd721a3cc6ad51e3ed24ed88611bfa0d498db264aaca8e9a50d77",
+          "source_uri": null
+        },
+        "record_sha256": "8c0241c1b02e11bd9376eb5288a85910e3714ee488b5209854997e1a03a5631b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "문화해설 가능(해설사의 집 운영)"
+      }
+    ],
+    "parent_source_sha256": "27b4d2dd559bfe6fa1b5e03fe6cb704fba8ffe420757270a17adc973ff3a3d3a",
+    "place": {
+      "address": "경기도 연천군 장남면 원당리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+      "name_ko": "연천 호로고루",
+      "place_id": "public:korea:9ce27e3dda05e4c3a8309715e513289f955a6985b483be78ef86d44b5ab92896",
+      "provider_content_id": "128647",
+      "region_code": "41800",
+      "region_name": "경기도 연천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

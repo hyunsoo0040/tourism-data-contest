@@ -1,0 +1,734 @@
+{
+  "assessed_at": "2026-09-11T18:11:27.283510Z",
+  "assessment_sha256": "fcbf939ab75c819e43409d330c91d212d5262f53ee96500179887acfdd9a05a9",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "두메산골 시골마을과 다들바위 소원 이야기라는 이미지가 장소와 연결되어 있다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "숲·절벽·맑은 물·울창한 소나무 그늘 등 마을 경관의 시각적 성격이 구체적으로 묘사되어 분명한 경관 표현이 확인된다. 다만 장면을 지배하는 일관된 연출까지는 근거가 부족해 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "시골길 따라 탐색하는 여지가 있으나 자율 탐색이 중심이라는 근거까지는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "염색, 목공예, 꽃차 만들기, 다들바위 체험 등 참여 활동이 다양하고 방문 경험의 중심으로 운영된다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "민박·향토음식 등 교류의 기회가 있으나 공동 활동·자기표현이 풍부하다는 근거는 부족하다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "장승테마공원, 폐교 학습체험장 등이 언급되나 확인된 실제 원형·유산의 실물 접촉 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "마을의 실제 역사·연혁 맥락 설명은 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "주민 자체 조성 언급이 있으나 실제 지역 전승·생활문화와의 지속적 연결 근거는 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "숲 해설가 해설이 있으나 유산·전통에 연결된 해설·탐구라는 구체적 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56",
+          "quote": {
+            "end": 99,
+            "method": "EXACT",
+            "original": "소원을 들어주는 신비한 바위이야기가 있는 두메산골 시골마을을 만날 수 있다",
+            "start": 58,
+            "submitted": "소원을 들어주는 신비한 바위이야기가 있는 두메산골 시골마을을 만날 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2c88780f1cd1b8ef3a4fd371f3d75ca13f0e6ef66a5bfc580c63ba67d08e93b0"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "두메산골 시골마을과 다들바위 소원 이야기라는 이미지가 장소와 연결되어 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 유통 근거는 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56",
+          "quote": {
+            "end": 52,
+            "method": "EXACT",
+            "original": "솔잎 향기 가득한 숲과 깎아지른 절벽사이로 흐르는 맑은 물",
+            "start": 20,
+            "submitted": "솔잎 향기 가득한 숲과 깎아지른 절벽사이로 흐르는 맑은 물",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2c88780f1cd1b8ef3a4fd371f3d75ca13f0e6ef66a5bfc580c63ba67d08e93b0"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "숲·절벽·맑은 물·울창한 소나무 그늘 등 마을 경관의 시각적 성격이 구체적으로 묘사되어 분명한 경관 표현이 확인된다. 다만 장면을 지배하는 일관된 연출까지는 근거가 부족해 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도의 재현 체험 근거는 없다. 다들바위 체험이 이미지 재현이라 단정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56",
+          "quote": {
+            "end": 31,
+            "method": "EXACT",
+            "original": "굽이 굽이 이어진 시골길을 따라가면 솔잎 향기 가득한 숲",
+            "start": 0,
+            "submitted": "굽이 굽이 이어진 시골길을 따라가면 솔잎 향기 가득한 숲",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2c88780f1cd1b8ef3a4fd371f3d75ca13f0e6ef66a5bfc580c63ba67d08e93b0"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "시골길 따라 탐색하는 여지가 있으나 자율 탐색이 중심이라는 근거까지는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56",
+          "quote": {
+            "end": 380,
+            "method": "EXACT",
+            "original": "다양한 체험프로그램이 이루어진다",
+            "start": 363,
+            "submitted": "다양한 체험프로그램이 이루어진다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2c88780f1cd1b8ef3a4fd371f3d75ca13f0e6ef66a5bfc580c63ba67d08e93b0"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 4,
+      "reason": "염색, 목공예, 꽃차 만들기, 다들바위 체험 등 참여 활동이 다양하고 방문 경험의 중심으로 운영된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56",
+          "quote": {
+            "end": 611,
+            "method": "EXACT",
+            "original": "마을에 오시는 손님들을 위해 송하연가펜션 외에도 올레민박, 다들바위이야기 등의 숙소를 마련하고 있으며 산채비빔밥, 도토리묵 등 다양한 향토음식도 만날 수 있다",
+            "start": 523,
+            "submitted": "마을에 오시는 손님들을 위해 송하연가펜션 외에도 올레민박, 다들바위이야기 등의 숙소를 마련하고 있으며 산채비빔밥, 도토리묵 등 다양한 향토음식도 만날 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2c88780f1cd1b8ef3a4fd371f3d75ca13f0e6ef66a5bfc580c63ba67d08e93b0"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "민박·향토음식 등 교류의 기회가 있으나 공동 활동·자기표현이 풍부하다는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56",
+              "quote": {
+                "end": 309,
+                "method": "EXACT",
+                "original": "계곡을 따라 소나무가 울창하여 그늘을 제공하고 차갑고도 맑은 물은 그리 깊지 않아서 피서지로도 손색이 없다",
+                "start": 250,
+                "submitted": "계곡을 따라 소나무가 울창하여 그늘을 제공하고 차갑고도 맑은 물은 그리 깊지 않아서 피서지로도 손색이 없다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "2c88780f1cd1b8ef3a4fd371f3d75ca13f0e6ef66a5bfc580c63ba67d08e93b0"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 4,
+          "reason": "청정 계곡·울창한 소나무 숲 등 자연·저자극 환경 단서가 장면을 지배한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "6313467b9fe6eac1cba99586a557579b1c8e18be272e152eddcfad669f2bdfc2",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1938e5b1728bfb165ca70e97854c22f5ed378ee4e4a411b2dcf562fd0d9d30a9",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129373",
+          "request_sha256": "8148ac211816815cf0535756a0c0e95433389114450917128bfd4375855a74d2",
+          "response_sha256": "bfafe7b5a2343314d33c685fdd081ba236821fef6c2d17f41a46fb0d06cfc96a",
+          "retrieved_at": "2026-09-11T02:07:54.267755Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "66bb2b94638612f9cfd8b9d60b0eadceb4d463faa11887e9bb809ba4340f62d0",
+          "source_uri": null
+        },
+        "record_sha256": "331a8f53254e038f865478d165794a0efb598ec9ae5aea1b2ab00e4a6b04b3bf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:20bbba6e2f21de8c91f92ca00da0b07711c28cd64ad7a7ef19b0e27aaa516d9c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129373",
+          "request_sha256": "8148ac211816815cf0535756a0c0e95433389114450917128bfd4375855a74d2",
+          "response_sha256": "bfafe7b5a2343314d33c685fdd081ba236821fef6c2d17f41a46fb0d06cfc96a",
+          "retrieved_at": "2026-09-11T02:07:54.267755Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "47bbbca78f9768f9be8cc6b0f4bd3c88afd6cf42d5130bb36e44ee9284b4955e",
+          "source_uri": null
+        },
+        "record_sha256": "1c4f79d79f23b4c50982e226ae2af710e5e4b1d45cd0a738fab3991c51100cbd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "가능"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4d058494793d7c15ebe82727a96664c71c3cb58953ce4fda666f60a6721b8a79",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "129373",
+          "request_sha256": "8148ac211816815cf0535756a0c0e95433389114450917128bfd4375855a74d2",
+          "response_sha256": "4f88feddb92a30a8ee017c6b1365e93ef658b13fa19f3063e2f74a70b1881a91",
+          "retrieved_at": "2026-09-10T16:45:48.719361Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4110709132f131c7b66fbedd70dbcc4ff62c92108e7f96301b17391f2ae8bd8e",
+          "source_uri": null
+        },
+        "record_sha256": "c10d367c92bd63ff9e45ce47f264149f1fbd93687f88b43c8c73899bf9c0fb06",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "하바리움 볼펜만들기 / 고추따고 장아찌만들기 / 메리골드꽃차 (7월~8월) / 꽃차만들기 / 스카프염색하기(봄~가을) / 손수건 염색하기"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:683eb24766a190c073820fae46397aeadba5b486aaadf1c5c3a42cb145ade3af",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129373",
+          "request_sha256": "8148ac211816815cf0535756a0c0e95433389114450917128bfd4375855a74d2",
+          "response_sha256": "bfafe7b5a2343314d33c685fdd081ba236821fef6c2d17f41a46fb0d06cfc96a",
+          "retrieved_at": "2026-09-11T02:07:54.267755Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1dec8927855164221c3aa8c230c48be3a665b6bc3e1e8e4a660f79826a68a200",
+          "source_uri": null
+        },
+        "record_sha256": "332a17ea6ba0f8eed02093086571946533cba244ee07007bc2b709f90fa93c7e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "체험실 / 인근농장 / 숙박시설 / 휴게실 / 식당"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:87fc992019328383682cf9d768a54317c551c7a7e09c858be261641580b7c304",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129373",
+          "request_sha256": "8148ac211816815cf0535756a0c0e95433389114450917128bfd4375855a74d2",
+          "response_sha256": "bfafe7b5a2343314d33c685fdd081ba236821fef6c2d17f41a46fb0d06cfc96a",
+          "retrieved_at": "2026-09-11T02:07:54.267755Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b97489e7a4509fe052d3d5be9050278b831c09b53517163d47275899d03c24eb",
+          "source_uri": null
+        },
+        "record_sha256": "30609c205ba76884142f87221e559687e9c1bffa477c6527444dd844073e264a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a62a26614e710ce87fdcffa3f1a4fd8db666a3c0f09512d6df7dfb3ba59f05c2",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129373",
+          "request_sha256": "8148ac211816815cf0535756a0c0e95433389114450917128bfd4375855a74d2",
+          "response_sha256": "bfafe7b5a2343314d33c685fdd081ba236821fef6c2d17f41a46fb0d06cfc96a",
+          "retrieved_at": "2026-09-11T02:07:54.267755Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "213a1d460a6f07797a68d240b104391201dc0eb65313a1fb4a9976806605e0b9",
+          "source_uri": null
+        },
+        "record_sha256": "4e565bd5d3c0c47b91f05f6b65059b84467bdf33df21183fa1d148d5be957c4e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[하바리움 볼펜만들기] - 10,000원 [고추따고 장아찌만들기] - 20,000원 [메리골드꽃차 (7월~8월)] - 15,000원 [꽃차만들기] - 15,000원 [스카프염색하기 (봄~가을)] - 20,000원 [손수건 염색하기] - 10,000원"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d1979c2bdc1ee354d6a36358e396d8d50d6d75900e5e47a38e0cb60388f62d56",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "129373",
+          "request_sha256": "9c1988fd15ade31b0441a31e4d3f5f1000a70b900f1ec7de7b860b53197937d7",
+          "response_sha256": "334b2cc53ccd198cb57dba0b2bfce5213f017bb151201b836f3c83ddf561d081",
+          "retrieved_at": "2026-09-10T16:45:48.373029Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-03-18T02:31:24Z",
+          "source_record_sha256": "57fc8604bd14f4059999973093fcaa841c1014d1550a2e494811a87a7420f50c",
+          "source_uri": null
+        },
+        "record_sha256": "2c88780f1cd1b8ef3a4fd371f3d75ca13f0e6ef66a5bfc580c63ba67d08e93b0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "굽이 굽이 이어진 시골길을 따라가면 솔잎 향기 가득한 숲과 깎아지른 절벽사이로 흐르는 맑은 물, 그리고 소원을 들어주는 신비한 바위이야기가 있는 두메산골 시골마을을 만날 수 있다. 마을인근에는 푸른 숲과 어우러진 맑은 물이 청량감을 느끼게 해주는 송하계곡이 있다. 오염원이 적어 수질이 깨끗하며 수리부엉이 서식지로 지정되었을 만큼 청정한 환경을 자랑한다. 계곡 물속에는 다양한 민물어류가 서식하고 있어 물고기 잡는 모습을 종종 볼 수 있다. 또한 계곡을 따라 소나무가 울창하여 그늘을 제공하고 차갑고도 맑은 물은 그리 깊지 않아서 피서지로도 손색이 없다. 마을 내에는 주민들이 자체적으로 조성한 장승테마공원과 폐교를 이용한 해달뫼 학습체험장이 있어 다양한 체험프로그램이 이루어진다. 숲 해설가와 함께 산길을 걸으며 소원도 빌어보는 다들바위체험, 자연 부산물을 이용하여 꽃, 곤충, 동물 등의 형상을 만들어 보는 목공예체험, 천연염색 및 천연비누 만들기 등 계절과 장소에 따라 다양하고 재미있는 프로그램을 만들어 운영하고 있다. 그리고 마을에 오시는 손님들을 위해 송하연가펜션 외에도 올레민박, 다들바위이야기 등의 숙소를 마련하고 있으며 산채비빔밥, 도토리묵 등 다양한 향토음식도 만날 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e1aab054de9d61f97d723d056dbdb697bfb10b8e20015fd3867c7f5b7544813a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129373",
+          "request_sha256": "8148ac211816815cf0535756a0c0e95433389114450917128bfd4375855a74d2",
+          "response_sha256": "bfafe7b5a2343314d33c685fdd081ba236821fef6c2d17f41a46fb0d06cfc96a",
+          "retrieved_at": "2026-09-11T02:07:54.267755Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "eaebff0a045910502407c1226cd0132ac9a0f2abac76791531146977cc3ea334",
+          "source_uri": null
+        },
+        "record_sha256": "9d6aa6c5ce7b82955a2caaac887657c3c35fe8f8c8cf688a939c6838fb861421",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "예약 필수"
+      }
+    ],
+    "parent_source_sha256": "f6260495721431bbf7b8e72c7381ceeae7879299cf8e68a92c86aa5f8b8afc94",
+    "place": {
+      "address": "경상북도 영양군 수비면 가천로 614",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+      "name_ko": "영양 두메송하마을",
+      "place_id": "public:korea:97c5de1c6b91f39f19385f327cd0232f8ea4e88cabab47064e2fcd83f865d95a",
+      "provider_content_id": "129373",
+      "region_code": "47760",
+      "region_name": "경상북도 영양군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

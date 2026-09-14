@@ -1,0 +1,937 @@
+{
+  "assessed_at": "2026-09-11T19:19:51.627036Z",
+  "assessment_sha256": "9b4dd67d03494a2807a0845ea4a3e35959108e962342c644f096e16b77e9f7fb",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 27
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "상록수림 구성 식물 목록과 생태적 가치 설명이 제공되어 원형(원시림)에 연결된 해설·학습이 가능하다. 그러나 해설 프로그램의 실제 운영 정보는 없고 안내 수준이므로 낮은 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:463f759009d9825aff7b81b385775e3ee1d301cc02c0762caf20f74156d77bea",
+            "appearance:ae359c63059cbf4680198d8beb8d86d70be638301f3a834c30237420533cfb81"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:11258317aa1e2175647b7151433bdc093bd5fb6f5c7d707712eee1cc0ad0f89c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "상록수림 보호를 위해 일반인 출입이 제한된다고 명시되어 있어 자율적 탐색·일상 이탈 경험이 직접적으로 제한된다.",
+      "value": 0
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:59f66b999b2ac1bdbf18c5a82105650cb19953d80a6b3bb01859a27ca38cbb91",
+            "appearance:c02b083597e29b61c74c3e29c406a85fb945bfdcfb8b1418cc545dfa83f212a9"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "온통 상록수로 뒤덮인 섬과 바다의 자연 환경이 확인된다. 다만 출입 제한으로 방문자가 이 환경에 머무는 경험은 제한적이므로 환경 단서가 두드러진 수준으로 평가한다.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:11258317aa1e2175647b7151433bdc093bd5fb6f5c7d707712eee1cc0ad0f89c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "일반인 출입 제한이 명시되어 있어 섬에서의 참여·탐방 등 집중 활동 기회가 직접적으로 제한된다. 여객선터미널 이용은 배 접근 정보일 뿐 참여 활동 근거가 아니다.",
+      "value": 0
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "수준 3 앵커는 '원형·유산의 공간이나 실물을 구체적으로 탐구'인데, 상록수림 보호를 위한 일반인 출입 제한이 명시되어 방문자가 섬의 원시림 공간을 구체적으로 탐구하는 것은 뒷받침되지 않는다. 원형 자체(원시림·자생식물)는 확인되므로 상위 수준의 한계이며, 하위 수준(관람·제한적 접촉)이라면 성립 가능하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "수준 2 앵커는 '그 장소의 사건·인물 맥락 제시'인데, 제시된 근거는 지명 유래(구슬 모양→주도·추섬)라는 간단한 연혁·유래 소개에 그친다. 사건·인물 맥락은 없으므로 상위 수준으로는 부적합하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승이나 생활문화와의 연결에 대한 근거가 제공되지 않았다. 식물생태 연구 가치는 전통 전승 활동의 증거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8",
+          "quote": {
+            "end": 496,
+            "method": "EXACT",
+            "original": "주도는 온대식물의 보고로서 식물생태연구상 중요한 가치를 지니고 있어 학술연구에 귀중한 자원이 되고 있다.",
+            "start": 438,
+            "submitted": "주도는 온대식물의 보고로서 식물생태연구상 중요한 가치를 지니고 있어 학술연구에 귀중한 자원이 되고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "90e238f4eeb070a86c4d5380060417bb551b3b57027f9a6a62cfdc027ec7cacf"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "상록수림 구성 식물 목록과 생태적 가치 설명이 제공되어 원형(원시림)에 연결된 해설·학습이 가능하다. 그러나 해설 프로그램의 실제 운영 정보는 없고 안내 수준이므로 낮은 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "수준 3 앵커는 '여러 표현·장면에서 일관된 의미를 확인'인데, 근거는 단일 개요 문서 내 구슬·하트모양 이미지뿐이고 여러 표현·장면에서의 반복 확인 근거가 부족하다. 제안 사유 스스로도 일관성 확인이 제한적임을 인정하므로 하위 수준이 적절하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체(작품·홍보·SNS 등)를 통한 장소 이미지의 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "수준 2 앵커는 '대표 장면·상징을 직접 경험'인데, 하트모양은 하늘에서 볼 때의 형상이고 섬은 일반인 출입 제한이며, 여객선터미널 이용은 접근 수단 정보일 뿐 대표 장면의 직접 경험을 뒷받침하지 않는다. 제한적 관람 수준(하위)이 적절하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:11258317aa1e2175647b7151433bdc093bd5fb6f5c7d707712eee1cc0ad0f89c",
+          "quote": {
+            "end": 8,
+            "method": "EXACT",
+            "original": "일반인 출입제한",
+            "start": 0,
+            "submitted": "일반인 출입제한",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "40409b39e478ac17b06bad8ee7711c751339b21f00f5a2d5cad2926b98715543"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 0,
+      "reason": "상록수림 보호를 위해 일반인 출입이 제한된다고 명시되어 있어 자율적 탐색·일상 이탈 경험이 직접적으로 제한된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8",
+          "quote": {
+            "end": 206,
+            "method": "EXACT",
+            "original": "둥글고 자그마한 이 섬은 온통 상록수에 뒤덮여 있는데, 다도해의 푸른 바다와 초록빛 섬이 아름답게 조화를 이룬다.",
+            "start": 143,
+            "submitted": "둥글고 자그마한 이 섬은 온통 상록수에 뒤덮여 있는데, 다도해의 푸른 바다와 초록빛 섬이 아름답게 조화를 이룬다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "90e238f4eeb070a86c4d5380060417bb551b3b57027f9a6a62cfdc027ec7cacf"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "온통 상록수로 뒤덮인 섬과 바다의 자연 환경이 확인된다. 다만 출입 제한으로 방문자가 이 환경에 머무는 경험은 제한적이므로 환경 단서가 두드러진 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:11258317aa1e2175647b7151433bdc093bd5fb6f5c7d707712eee1cc0ad0f89c",
+          "quote": {
+            "end": 8,
+            "method": "EXACT",
+            "original": "일반인 출입제한",
+            "start": 0,
+            "submitted": "일반인 출입제한",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "40409b39e478ac17b06bad8ee7711c751339b21f00f5a2d5cad2926b98715543"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 0,
+      "reason": "일반인 출입 제한이 명시되어 있어 섬에서의 참여·탐방 등 집중 활동 기회가 직접적으로 제한된다. 여객선터미널 이용은 배 접근 정보일 뿐 참여 활동 근거가 아니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8",
+            "quote": "다도해의 푸른 바다와 초록빛 섬이 아름답게 조화를 이룬다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "푸른 바다와 초록빛 상록수 섬이라는 뚜렷한 시각적 성격이 공식 개요에 설명되어 있어 분명한 외관·경관의 표현으로 본다. 다만 상록수림 보호를 위한 일반인 출입 제한으로 현장 경관 연출의 직접 체험은 제한적이므로 수준 3으로 평가했다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8",
+              "quote": {
+                "end": 288,
+                "method": "EXACT",
+                "original": "섬 중앙에는 원시림이 그대로 남아있어 그야말로 바다에 떠 있는 수목원이라 해도 과언이 아니다.",
+                "start": 236,
+                "submitted": "섬 중앙에는 원시림이 그대로 남아있어 그야말로 바다에 떠 있는 수목원이라 해도 과언이 아니다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "90e238f4eeb070a86c4d5380060417bb551b3b57027f9a6a62cfdc027ec7cacf"
+            }
+          ],
+          "flags": [],
+          "key": "H.a",
+          "level": 3,
+          "reason": "주도에는 원시림이 그대로 남아 있고 상록수림과 자생 식물 140여 종, 수달 흔적 등 확인된 자연유산이 있다. 다만 상록수림 보호를 위해 일반인 출입이 제한되므로 방문자가 원형을 직접 탐구하기는 어렵고, 관람·접촉 수준으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "수준 3 앵커는 '원형·유산의 공간이나 실물을 구체적으로 탐구'인데, 상록수림 보호를 위한 일반인 출입 제한이 명시되어 방문자가 섬의 원시림 공간을 구체적으로 탐구하는 것은 뒷받침되지 않는다. 원형 자체(원시림·자생식물)는 확인되므로 상위 수준의 한계이며, 하위 수준(관람·제한적 접촉)이라면 성립 가능하다."
+        }
+      },
+      "reason": "수준 3 앵커는 '원형·유산의 공간이나 실물을 구체적으로 탐구'인데, 상록수림 보호를 위한 일반인 출입 제한이 명시되어 방문자가 섬의 원시림 공간을 구체적으로 탐구하는 것은 뒷받침되지 않는다. 원형 자체(원시림·자생식물)는 확인되므로 상위 수준의 한계이며, 하위 수준(관람·제한적 접촉)이라면 성립 가능하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8",
+              "quote": {
+                "end": 121,
+                "method": "EXACT",
+                "original": "동그란 형상이 마치 구슬과 같다고 해서 주도(珠島)라는 지명이 붙었으며, 일명 ‘추섬(錘島)’으로도 불린다.",
+                "start": 61,
+                "submitted": "동그란 형상이 마치 구슬과 같다고 해서 주도(珠島)라는 지명이 붙었으며, 일명 ‘추섬(錘島)’으로도 불린다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "90e238f4eeb070a86c4d5380060417bb551b3b57027f9a6a62cfdc027ec7cacf"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 2,
+          "reason": "지명 유래(주도·추섬)와 하트모양 형상 등 섬의 연혁·명칭에 대한 간단한 소개가 있다. 사건·인물 등 구체적 역사 맥락까지는 제시되지 않는다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "수준 2 앵커는 '그 장소의 사건·인물 맥락 제시'인데, 제시된 근거는 지명 유래(구슬 모양→주도·추섬)라는 간단한 연혁·유래 소개에 그친다. 사건·인물 맥락은 없으므로 상위 수준으로는 부적합하다."
+        }
+      },
+      "reason": "수준 2 앵커는 '그 장소의 사건·인물 맥락 제시'인데, 제시된 근거는 지명 유래(구슬 모양→주도·추섬)라는 간단한 연혁·유래 소개에 그친다. 사건·인물 맥락은 없으므로 상위 수준으로는 부적합하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "REPRESENTED_MEANING",
+              "evidence_id": "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8",
+              "quote": {
+                "end": 142,
+                "method": "EXACT",
+                "original": "동그란 형상이 마치 구슬과 같다고 해서 주도(珠島)라는 지명이 붙었으며, 일명 ‘추섬(錘島)’으로도 불린다. 하늘에서 보면 하트모양을 하고 있다.",
+                "start": 61,
+                "submitted": "동그란 형상이 마치 구슬과 같다고 해서 주도(珠島)라는 지명이 붙었으며, 일명 ‘추섬(錘島)’으로도 불린다. 하늘에서 보면 하트모양을 하고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "90e238f4eeb070a86c4d5380060417bb551b3b57027f9a6a62cfdc027ec7cacf"
+            }
+          ],
+          "flags": [],
+          "key": "E.a",
+          "level": 3,
+          "reason": "구슬·하트모양이라는 구체적 이미지와 지명이 섬에 연결되어 있고, 푸른 바다와 초록빛 섬의 조화라는 이야기가 부여되어 있다. 여러 표현에서 일관된 의미를 확인하기에는 근거가 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.a",
+          "reason": "수준 3 앵커는 '여러 표현·장면에서 일관된 의미를 확인'인데, 근거는 단일 개요 문서 내 구슬·하트모양 이미지뿐이고 여러 표현·장면에서의 반복 확인 근거가 부족하다. 제안 사유 스스로도 일관성 확인이 제한적임을 인정하므로 하위 수준이 적절하다."
+        }
+      },
+      "reason": "수준 3 앵커는 '여러 표현·장면에서 일관된 의미를 확인'인데, 근거는 단일 개요 문서 내 구슬·하트모양 이미지뿐이고 여러 표현·장면에서의 반복 확인 근거가 부족하다. 제안 사유 스스로도 일관성 확인이 제한적임을 인정하므로 하위 수준이 적절하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8",
+              "quote": {
+                "end": 142,
+                "method": "EXACT",
+                "original": "하늘에서 보면 하트모양을 하고 있다.",
+                "start": 122,
+                "submitted": "하늘에서 보면 하트모양을 하고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "90e238f4eeb070a86c4d5380060417bb551b3b57027f9a6a62cfdc027ec7cacf"
+            },
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:13c00a95ac5b1b65e9aa102daf8e7a26da69ee7af301ba8b8771a6aa04a9a990",
+              "quote": {
+                "end": 16,
+                "method": "EXACT",
+                "original": "완도연안여객선터미널 시설 이용",
+                "start": 0,
+                "submitted": "완도연안여객선터미널 시설 이용",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "b8367291ae8e469317641aadf3f566231b00445f2c342286d0252575b5117b73"
+            }
+          ],
+          "flags": [],
+          "key": "E.d",
+          "level": 2,
+          "reason": "하트 모양 섬이라는 대표 이미지가 문서로 확인되며 여객선 터미널을 통한 접근이 안내되어 관람이 가능하나, 출입 제한으로 대표 장면을 직접 경험하거나 재현할 기회는 제한적이라 판단해 수준 2로 평가했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "수준 2 앵커는 '대표 장면·상징을 직접 경험'인데, 하트모양은 하늘에서 볼 때의 형상이고 섬은 일반인 출입 제한이며, 여객선터미널 이용은 접근 수단 정보일 뿐 대표 장면의 직접 경험을 뒷받침하지 않는다. 제한적 관람 수준(하위)이 적절하다."
+        }
+      },
+      "reason": "수준 2 앵커는 '대표 장면·상징을 직접 경험'인데, 하트모양은 하늘에서 볼 때의 형상이고 섬은 일반인 출입 제한이며, 여객선터미널 이용은 접근 수단 정보일 뿐 대표 장면의 직접 경험을 뒷받침하지 않는다. 제한적 관람 수준(하위)이 적절하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "0c64cd574e513e7caf6db1e5b5e7971de59391161d01819907e3f4509a65eb2a",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "좌측 원경에 희미한 다리 구조 외에 전통적 외관·재료의 시각적 단서는 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3ec27de67b820d6b2a594959d3c7c957484b4518e275075616b6007533e8b840",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15ec2895878892aa56de2e1221b9a0f6e9d71021fe1de58155e499526959cc1e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3587599_4",
+          "request_sha256": "0dc97b344e27f3d49936a257b5d12c5b8beac1becc7c6df847f6b4689ba2e9fb",
+          "response_sha256": "45bf06e5cf9d129781d06c2019d513a64fa9ec8b27506709bf67e6167e1f1290",
+          "retrieved_at": "2026-09-11T02:11:16.872034Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1bf8600dc4cff82ec4daf2fb0371e935ca04f4217cfe92ba0a3baa9e520574d8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/99/3587599_image2_1.jpg"
+        },
+        "record_sha256": "12af581aa1e10f9f6f6de38efd869ae1c6e9631e49de567f9f4441133e93bff2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "청록빛 물과 울창한 녹색 수림, 갈색 암반이 대비를 이루며 채도와 빛이 선명해 시각적 성격이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:463f759009d9825aff7b81b385775e3ee1d301cc02c0762caf20f74156d77bea",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "eec86ccef2bea4c0af82cab712e300d4c14f35b4ecdfb43427709d5f5ed496b9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3587597_5",
+          "request_sha256": "0dc97b344e27f3d49936a257b5d12c5b8beac1becc7c6df847f6b4689ba2e9fb",
+          "response_sha256": "45bf06e5cf9d129781d06c2019d513a64fa9ec8b27506709bf67e6167e1f1290",
+          "retrieved_at": "2026-09-11T02:11:16.872034Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9a78e98cdc666a093ad1f652d58b56a30ba65b7add5125d8e90ba926c7922301",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3587597_image2_1.jpg"
+        },
+        "record_sha256": "ec13e430758a2cc81ed3f9064d6fab4f883f2ab91ec89d0f0c22cfea602213be",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "바다, 완전히 숲으로 덮인 섬, 갯바위, 하늘 구름 등 자연 경관이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:59f66b999b2ac1bdbf18c5a82105650cb19953d80a6b3bb01859a27ca38cbb91",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15ec2895878892aa56de2e1221b9a0f6e9d71021fe1de58155e499526959cc1e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3587599_4",
+          "request_sha256": "0dc97b344e27f3d49936a257b5d12c5b8beac1becc7c6df847f6b4689ba2e9fb",
+          "response_sha256": "45bf06e5cf9d129781d06c2019d513a64fa9ec8b27506709bf67e6167e1f1290",
+          "retrieved_at": "2026-09-11T02:11:16.872034Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1bf8600dc4cff82ec4daf2fb0371e935ca04f4217cfe92ba0a3baa9e520574d8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/99/3587599_image2_1.jpg"
+        },
+        "record_sha256": "76759193ac1bd6d0d1a8a268d99d36fefbc03c18a8cd109f2c2b3c7f93c29f52",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축물이나 재료·공간 구성의 시각적 단서는 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a1dec33237ad9ac302f224ffdf71cc510d37dfc945414c2eb2fd16196270e269",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "eec86ccef2bea4c0af82cab712e300d4c14f35b4ecdfb43427709d5f5ed496b9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3587597_5",
+          "request_sha256": "0dc97b344e27f3d49936a257b5d12c5b8beac1becc7c6df847f6b4689ba2e9fb",
+          "response_sha256": "45bf06e5cf9d129781d06c2019d513a64fa9ec8b27506709bf67e6167e1f1290",
+          "retrieved_at": "2026-09-11T02:11:16.872034Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9a78e98cdc666a093ad1f652d58b56a30ba65b7add5125d8e90ba926c7922301",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3587597_image2_1.jpg"
+        },
+        "record_sha256": "98ad79d296d4d91da186b5e464483e5214c984b3beddfba0c2f6d3ed11af0833",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "녹색 섬이 청록바다와 흰 하늘 대비 속 중앙에 안정적으로 배치된 구도로, 따뜻한 햇빛 받는 수목 색조가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ae359c63059cbf4680198d8beb8d86d70be638301f3a834c30237420533cfb81",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15ec2895878892aa56de2e1221b9a0f6e9d71021fe1de58155e499526959cc1e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3587599_4",
+          "request_sha256": "0dc97b344e27f3d49936a257b5d12c5b8beac1becc7c6df847f6b4689ba2e9fb",
+          "response_sha256": "45bf06e5cf9d129781d06c2019d513a64fa9ec8b27506709bf67e6167e1f1290",
+          "retrieved_at": "2026-09-11T02:11:16.872034Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1bf8600dc4cff82ec4daf2fb0371e935ca04f4217cfe92ba0a3baa9e520574d8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/99/3587599_image2_1.jpg"
+        },
+        "record_sha256": "f788fb14ca1118a1bb2925c83a49f3d70fe043837f6949cfc559633b456c60c7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "바다, 바위 해안, 뒤덮인 숲 등 자연 경관이 화면 전체를 지배하며 물새들도 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c02b083597e29b61c74c3e29c406a85fb945bfdcfb8b1418cc545dfa83f212a9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "eec86ccef2bea4c0af82cab712e300d4c14f35b4ecdfb43427709d5f5ed496b9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3587597_5",
+          "request_sha256": "0dc97b344e27f3d49936a257b5d12c5b8beac1becc7c6df847f6b4689ba2e9fb",
+          "response_sha256": "45bf06e5cf9d129781d06c2019d513a64fa9ec8b27506709bf67e6167e1f1290",
+          "retrieved_at": "2026-09-11T02:11:16.872034Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9a78e98cdc666a093ad1f652d58b56a30ba65b7add5125d8e90ba926c7922301",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3587597_image2_1.jpg"
+        },
+        "record_sha256": "44cb5097a34079abc731d47799bc4f4c4c12e7ec91f36cfa95512d0ef506b647",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:11258317aa1e2175647b7151433bdc093bd5fb6f5c7d707712eee1cc0ad0f89c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126308",
+          "request_sha256": "4d4d8954b789f58881fef7eda3b7928b806cc2be57cc2d332102a59f4fa0e376",
+          "response_sha256": "a14ec39269d153bd81d37d895f29fe50d819ce20dc77059931622ccd86ae158c",
+          "retrieved_at": "2026-09-11T02:11:16.581260Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "04913046e7eb80a712647e7ae605fab4d7ddbbff5b785671a82752a7dbffcf01",
+          "source_uri": null
+        },
+        "record_sha256": "40409b39e478ac17b06bad8ee7711c751339b21f00f5a2d5cad2926b98715543",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "일반인 출입제한"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:13c00a95ac5b1b65e9aa102daf8e7a26da69ee7af301ba8b8771a6aa04a9a990",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126308",
+          "request_sha256": "4d4d8954b789f58881fef7eda3b7928b806cc2be57cc2d332102a59f4fa0e376",
+          "response_sha256": "a14ec39269d153bd81d37d895f29fe50d819ce20dc77059931622ccd86ae158c",
+          "retrieved_at": "2026-09-11T02:11:16.581260Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d19c174de80e9d3436d3795de77d4157b0c9d49150e14d7fa6be062960a4d66d",
+          "source_uri": null
+        },
+        "record_sha256": "b8367291ae8e469317641aadf3f566231b00445f2c342286d0252575b5117b73",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "완도연안여객선터미널 시설 이용"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:61a78c981d7ef31cad742285169112e4ed2951360dc3014629b3f72ea77265a8",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126308",
+          "request_sha256": "24af6c7e46c952cc8c1ad1d2867875b93b824921602e27769cd666b667284c99",
+          "response_sha256": "6b2586c82b0984f72ec2f5fb0cbdb6ca99a5055971ef413296deee25002028c2",
+          "retrieved_at": "2026-09-10T17:06:00.275224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "94ced102ac37e6d631c771413bd81efaf70deea133ab21237e25bfc3e522f990",
+          "source_uri": null
+        },
+        "record_sha256": "90e238f4eeb070a86c4d5380060417bb551b3b57027f9a6a62cfdc027ec7cacf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "완도항에서 손에 잡힐 듯한 거리에 떠 있는 아담한 섬이다.면적은 1.75㏊(둘레 495m)에 불과한 이 섬은 동그란 형상이 마치 구슬과 같다고 해서 주도(珠島)라는 지명이 붙었으며, 일명 ‘추섬(錘島)’으로도 불린다. 하늘에서 보면 하트모양을 하고 있다. 둥글고 자그마한 이 섬은 온통 상록수에 뒤덮여 있는데, 다도해의 푸른 바다와 초록빛 섬이 아름답게 조화를 이룬다. 주도에 자생하고 있는 식물의 수는 140여 종이며, 섬 중앙에는 원시림이 그대로 남아있어 그야말로 바다에 떠 있는 수목원이라 해도 과언이 아니다. 상록수림을 구성하고 있는 식물들로는 참식나무, 돈나무, 사스레피나무, 붉가시나무, 모밀잣밤나무, 광나무, 다정큼나무, 가마귀쪽나무, 감탕나무, 빗죽이나무, 생달나무, 검양옻나무, 소사나무, 느티나무, 청가시덩굴, 인동덩굴, 덜꿩나무, 고란초 등이 있다. 이상과 같이 주도는 온대식물의 보고로서 식물생태연구상 중요한 가치를 지니고 있어 학술연구에 귀중한 자원이 되고 있다. 또한, 천연기념물인 멸종위기 야생동물 1급인 수달이 배설물이 관찰되었다. 물고기가 서식하기 알맞은 환경을 제공하여 물고기 떼를 해안으로 유인하는 어부림의 역할도 하고 있다. 상록수림 보호를 위해 일반인의 출입을 제한한다."
+      }
+    ],
+    "parent_source_sha256": "4287cb3b18e82323c46186039d6521ebad7cb2365e2e820ca337ff206e02edbf",
+    "place": {
+      "address": "전남광주통합특별시 완도군 완도읍 군내리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+      "name_ko": "주도",
+      "place_id": "public:korea:dd955a9a261403eb18521ff6373ca36d4c7aa77e360233ed7abd03a0306526f4",
+      "provider_content_id": "126308",
+      "region_code": "12850",
+      "region_name": "전남광주통합특별시 완도군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

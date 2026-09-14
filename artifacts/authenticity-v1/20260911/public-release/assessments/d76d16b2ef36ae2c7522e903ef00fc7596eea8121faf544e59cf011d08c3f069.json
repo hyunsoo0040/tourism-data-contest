@@ -1,0 +1,898 @@
+{
+  "assessed_at": "2026-09-11T18:30:13.603692Z",
+  "assessment_sha256": "d76d16b2ef36ae2c7522e903ef00fc7596eea8121faf544e59cf011d08c3f069",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 73
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+            "evidence:ee88b6bf7aabd62812da61a97ac55309920f2e555d1cef3db07e9b5c63efe8db"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "강원 산림 주제 상설전시와 숲해설이 자연·산림 유산에 연결된 설명·해설을 제공한다. 심층 탐구 중심이라는 근거는 없어 수준 2~3 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:443510f7061d54df05c5991af28f61d03ec87fdb17bae919520c4d210811b4ae",
+            "appearance:9ae285ce4d5bd9a10b2a6ee81ed08c82a950ebf8524f904ccdb4ce21811f03c1"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 88,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 88
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "도심 속 산림에서의 자연체험학습장·휴식공간 제공이 자율적 탐색·여유의 기회를 뒷받침한다. 자기 방식의 탐색이 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:12ed69cfc34023653d74079c562b1c453b0b5b0cbcdf9f73d81a15786f05ccfc",
+            "appearance:e920d826a684467a1452d23102313a26cc7b5329e00bf0f4cd8ebc4ae66323e4"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 50,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "도심 속 산림, 숲, 연못·폭포·정자 등 자연 환경 단서가 확인된다. 실제 고요함·회복 효과는 확정할 수 없어 수준 3으로 판단한다.",
+      "value": 69
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+            "evidence:ee88b6bf7aabd62812da61a97ac55309920f2e555d1cef3db07e9b5c63efe8db"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "숲해설, 목공예체험, 자연체험학습 등 구체적 참여 활동이 확인된다. 지속적 도전·집중 활동이 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "수목원·산림박물관이 확인된 문화유산 원형이나 실물 유산과의 접촉을 제공한다는 근거가 없다. 식물 보존·전시는 문화유산 원형 접촉으로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "1999년 개원 연도는 확인되나, 개관 연도 자체는 이 장소의 역사 맥락 탐구 경험의 근거가 아니다. 장소의 역사·연혁 서사 제공 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "산림박물관의 산촌생활 전시 언급이 있으나, 이것이 실제 지역 주체의 현재 전승·생활문화와 연결되는지에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+          "quote": {
+            "end": 590,
+            "method": "EXACT",
+            "original": "산림박물관은 강원특별자치도의 동식물, 산촌생활 등 강원특별자치도 산림을 주제로 한 상설전시관을 비롯해 기획전시관, 3D영상관 등을 갖추었다.",
+            "start": 512,
+            "submitted": "산림박물관은 강원특별자치도의 동식물, 산촌생활 등 강원특별자치도 산림을 주제로 한 상설전시관을 비롯해 기획전시관, 3D영상관 등을 갖추었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "98e86b1c2eb09e85fd53f119196b884e3eedd61134be13bcc06b81e7b4e8d41f"
+        },
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:ee88b6bf7aabd62812da61a97ac55309920f2e555d1cef3db07e9b5c63efe8db",
+          "quote": {
+            "end": 19,
+            "method": "EXACT",
+            "original": "숲해설 / 목공예체험 / 3D영상관",
+            "start": 0,
+            "submitted": "숲해설 / 목공예체험 / 3D영상관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "46c0cc214aa3c4a73462e02895a5e9a317bcded5254c81221fb47894234b6371"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "강원 산림 주제 상설전시와 숲해설이 자연·산림 유산에 연결된 설명·해설을 제공한다. 심층 탐구 중심이라는 근거는 없어 수준 2~3 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "자연 휴양·학습 공간이라는 설립 목적이 있으나, 사회적으로 공유되는 특정 상징·이미지·이야기가 이 장소에 부여된다는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체 작품, 홍보, SNS 등을 통한 장소 이미지의 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다. 3D영상관은 대표 이미지의 체험·재현으로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+          "quote": {
+            "end": 170,
+            "method": "EXACT",
+            "original": "대국민 자연체험학습장 및 휴식공간 제공으로 자연에 대한 소중한 가치체험의 기회를 제공하고 있다",
+            "start": 118,
+            "submitted": "대국민 자연체험학습장 및 휴식공간 제공으로 자연에 대한 소중한 가치체험의 기회를 제공하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "98e86b1c2eb09e85fd53f119196b884e3eedd61134be13bcc06b81e7b4e8d41f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "도심 속 산림에서의 자연체험학습장·휴식공간 제공이 자율적 탐색·여유의 기회를 뒷받침한다. 자기 방식의 탐색이 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+          "quote": {
+            "end": 77,
+            "method": "EXACT",
+            "original": "도심 속 산림 휴양과 자연학습 공간을 제공할 목적으로 1999년에 개원했다",
+            "start": 36,
+            "submitted": "도심 속 산림 휴양과 자연학습 공간을 제공할 목적으로 1999년에 개원했다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "98e86b1c2eb09e85fd53f119196b884e3eedd61134be13bcc06b81e7b4e8d41f"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+          "quote": {
+            "end": 439,
+            "method": "EXACT",
+            "original": "여름에는 분수광장과 메타세쿼이아 숲에서 시원한 한때를 보낸다",
+            "start": 406,
+            "submitted": "여름에는 분수광장과 메타세쿼이아 숲에서 시원한 한때를 보낸다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "98e86b1c2eb09e85fd53f119196b884e3eedd61134be13bcc06b81e7b4e8d41f"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "도심 속 산림, 숲, 연못·폭포·정자 등 자연 환경 단서가 확인된다. 실제 고요함·회복 효과는 확정할 수 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:ee88b6bf7aabd62812da61a97ac55309920f2e555d1cef3db07e9b5c63efe8db",
+          "quote": {
+            "end": 19,
+            "method": "EXACT",
+            "original": "숲해설 / 목공예체험 / 3D영상관",
+            "start": 0,
+            "submitted": "숲해설 / 목공예체험 / 3D영상관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "46c0cc214aa3c4a73462e02895a5e9a317bcded5254c81221fb47894234b6371"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+          "quote": {
+            "end": 170,
+            "method": "EXACT",
+            "original": "대국민 자연체험학습장 및 휴식공간 제공으로 자연에 대한 소중한 가치체험의 기회를 제공하고 있다",
+            "start": 118,
+            "submitted": "대국민 자연체험학습장 및 휴식공간 제공으로 자연에 대한 소중한 가치체험의 기회를 제공하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "98e86b1c2eb09e85fd53f119196b884e3eedd61134be13bcc06b81e7b4e8d41f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "숲해설, 목공예체험, 자연체험학습 등 구체적 참여 활동이 확인된다. 지속적 도전·집중 활동이 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "어린이정원(자연 놀이터) 언급이 있으나 교류·공동 활동·자기표현의 기회라는 근거로는 불충분하다. 가족·아동 방문 적합성만으로 유대·교류를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+            "quote": "계절별로 다채로운 꽃이 피고 지면서 색다른 풍경과 재미를 선사한다. 봄에는 벚나무길과 철쭉원에서 꽃놀이를 즐기고, 여름에는 분수광장과 메타세쿼이아 숲에서 시원한 한때를 보낸다."
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+            "quote": "연못, 인공폭포, 정자가 어우러지는 수생식물원"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "벚나무길, 철쭉원, 메타세쿼이아 숲, 수생식물원 등 계절별 경관의 시각적 성격이 구체적으로 확인된다. 경관이 장면을 지배한다는 수준의 근거는 없어 수준 3으로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "95f018459ac29922f405aeb5b1f8841db0e500cd99359d9dd658ad512f647c80",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시 공간으로 실제 녹지·물·자연 경관은 보이지 않으며, 벽면 그래픽 속 자연 이미지만 존재.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:12ed69cfc34023653d74079c562b1c453b0b5b0cbcdf9f73d81a15786f05ccfc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d776bd48adff15befec9d7f75d6e303bb5be7fc47eb8a3c46436013186c54e25",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3331854_13",
+          "request_sha256": "dfb68c1c59669e4a0cc94e23e1b1bca88816fbd26a2b219531877847815d478f",
+          "response_sha256": "bcdae671a1b66a6a2639dc137927227c5a6fb725fc4ef3e76622af41f369545c",
+          "retrieved_at": "2026-09-11T02:08:45.111765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dd9f50f17ae08b9ba86a93dfad8c279fd547fcc9e5446fd04924ef4ab988a96f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/54/3331854_image2_1.jpg"
+        },
+        "record_sha256": "0d353a645cb160901b4a1ca256d5663da9510bf066624254897a8121e4e06845",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "울창한 녹음과 곡선형 보도, 돌담이 이끄는 깊이감 있는 구도로 숲길의 정서적 분위기가 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:443510f7061d54df05c5991af28f61d03ec87fdb17bae919520c4d210811b4ae",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5bdb419b5b24f0efc9d8328c9f92338719bb823c22d64ee45544e8d41252eb72",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3331848_18",
+          "request_sha256": "dfb68c1c59669e4a0cc94e23e1b1bca88816fbd26a2b219531877847815d478f",
+          "response_sha256": "bcdae671a1b66a6a2639dc137927227c5a6fb725fc4ef3e76622af41f369545c",
+          "retrieved_at": "2026-09-11T02:08:45.111765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0f2b98dfdbfa3dd8712f67a1b94f345d688bf456fa410f01eccddca32816d0f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/48/3331848_image2_1.jpg"
+        },
+        "record_sha256": "41e5d8b43b5d4db7ba9ec5bccc0eada8119e60152b8b7efffafd9bb7f4e74581",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "돌을 쌓은 연석과 자연석 개울 정원식 구성에서 전통 정원적 외관이 보이나 두드러진 편은 아니다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:47740cb0f8800f6303cf60f26321df03df3a5e34f2f39f2b43b58a5dc34a88e8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5bdb419b5b24f0efc9d8328c9f92338719bb823c22d64ee45544e8d41252eb72",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3331848_18",
+          "request_sha256": "dfb68c1c59669e4a0cc94e23e1b1bca88816fbd26a2b219531877847815d478f",
+          "response_sha256": "bcdae671a1b66a6a2639dc137927227c5a6fb725fc4ef3e76622af41f369545c",
+          "retrieved_at": "2026-09-11T02:08:45.111765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0f2b98dfdbfa3dd8712f67a1b94f345d688bf456fa410f01eccddca32816d0f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/48/3331848_image2_1.jpg"
+        },
+        "record_sha256": "b530ea85af2eaaa6d5af87ae8bfbe1390781c6f1d9f0670240402599a5c3429d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "터널형 아치 구조와 우주·진화 테마의 대형 그래픽 벽면이 장면 전체를 지배하며, 원근법을 활용한 강한 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9ae285ce4d5bd9a10b2a6ee81ed08c82a950ebf8524f904ccdb4ce21811f03c1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d776bd48adff15befec9d7f75d6e303bb5be7fc47eb8a3c46436013186c54e25",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3331854_13",
+          "request_sha256": "dfb68c1c59669e4a0cc94e23e1b1bca88816fbd26a2b219531877847815d478f",
+          "response_sha256": "bcdae671a1b66a6a2639dc137927227c5a6fb725fc4ef3e76622af41f369545c",
+          "retrieved_at": "2026-09-11T02:08:45.111765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dd9f50f17ae08b9ba86a93dfad8c279fd547fcc9e5446fd04924ef4ab988a96f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/54/3331854_image2_1.jpg"
+        },
+        "record_sha256": "312c1d3b385b3066b2072e3a18936fb0c41bb8f06b5f0ad00177ccb903baaf2f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 재료나 전통적 공간 구성의 흔적은 보이지 않고 현대적 전시 그래픽과 조명 중심의 외관.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e258074426a25d7a53fb03ab1b3207446055f4093f58100420c474d04e114441",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d776bd48adff15befec9d7f75d6e303bb5be7fc47eb8a3c46436013186c54e25",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3331854_13",
+          "request_sha256": "dfb68c1c59669e4a0cc94e23e1b1bca88816fbd26a2b219531877847815d478f",
+          "response_sha256": "bcdae671a1b66a6a2639dc137927227c5a6fb725fc4ef3e76622af41f369545c",
+          "retrieved_at": "2026-09-11T02:08:45.111765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dd9f50f17ae08b9ba86a93dfad8c279fd547fcc9e5446fd04924ef4ab988a96f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/54/3331854_image2_1.jpg"
+        },
+        "record_sha256": "26bd02c76cebec62ba79a84bade754a5639c6434d7384b339861a4109b976415",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "용울창한 수목, 양치식물, 화단, 잔물 흐르는 개울 등 자연 환경 요소가 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e920d826a684467a1452d23102313a26cc7b5329e00bf0f4cd8ebc4ae66323e4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5bdb419b5b24f0efc9d8328c9f92338719bb823c22d64ee45544e8d41252eb72",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3331848_18",
+          "request_sha256": "dfb68c1c59669e4a0cc94e23e1b1bca88816fbd26a2b219531877847815d478f",
+          "response_sha256": "bcdae671a1b66a6a2639dc137927227c5a6fb725fc4ef3e76622af41f369545c",
+          "retrieved_at": "2026-09-11T02:08:45.111765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0f2b98dfdbfa3dd8712f67a1b94f345d688bf456fa410f01eccddca32816d0f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/48/3331848_image2_1.jpg"
+        },
+        "record_sha256": "c8356ef6beea4a29e686a97c8b854dbb2e717185db23fbd115ed17c45d190d94",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:25eb8054d4deec703b5b5ffd1e60375bebd08e5787c9c0fa9555d39d2e25408c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127433",
+          "request_sha256": "37d4d55d3ef2ec87d5cf9947a6f46214cbb66c9a5438f11c9c992063a378dd05",
+          "response_sha256": "d26acbedab1bc9b00c821542f5cd36d9a681d2f4a644746581bd5c818e0b5053",
+          "retrieved_at": "2026-09-11T02:08:44.741960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "97663df4c944a428757016f24061af0a6e18e3f58dd6c4b84c3f24ade42fac89",
+          "source_uri": null
+        },
+        "record_sha256": "0f3e52ec202d6346359d6c03214984e080047f2baccb1c13cb52009cdd90d953",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[3D영상관] - 어른 2,000원 - 청소년 1,500원 - 어린이 1,000원 ※ 자세한 요금은 홈페이지 참조"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:30b913d4746a22023328175e3130ba3f2a76229507bbfcd12b58e60c2b79c96f",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127433",
+          "request_sha256": "bb7e7fa0787bb3801c9a6975b2d80d37a7f999f5bc8bfeceae2eee458d3cdeea",
+          "response_sha256": "432f1483028e9f0b57f70f3aa3f047e824787c5b3083b42a695f411b35415490",
+          "retrieved_at": "2026-09-10T17:12:12.325805Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-05-21T05:40:36Z",
+          "source_record_sha256": "eb8fa5df40cd9d84c0b2db7fb656c68258238010ec8212a2b5b60b90a0911733",
+          "source_uri": null
+        },
+        "record_sha256": "98e86b1c2eb09e85fd53f119196b884e3eedd61134be13bcc06b81e7b4e8d41f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "강원특별자치도립화목원은 강원특별자치도에서 운영하는 공립수목원으로 도심 속 산림 휴양과 자연학습 공간을 제공할 목적으로 1999년에 개원했다. 식물유전자원 수집·증식·보존을 위한 연구 등 현지 외 보전기능 강화와 대국민 자연체험학습장 및 휴식공간 제공으로 자연에 대한 소중한 가치체험의 기회를 제공하고 있다. 총 1,827종류 8만 5천여 본의 식물을 보유하고 있으며, 이 중 산솜다리, 모데미풀, 노랑만병초, 홍월귤 등 희귀 식물이 129종류, 모데미풀, 금강봄맞이, 금강초롱꽃, 개느삼 등의 특산식물이 49종류, 두메닥나무, 제비동자꽃, 등대시호, 금꿩의다리 등 기후변화 취약식물 보존원이 136종류가 있다. 계절별로 다채로운 꽃이 피고 지면서 색다른 풍경과 재미를 선사한다. 봄에는 벚나무길과 철쭉원에서 꽃놀이를 즐기고, 여름에는 분수광장과 메타세쿼이아 숲에서 시원한 한때를 보낸다. 가을에는 국화전시회를 감상하고 겨울에도 따뜻한 유리온실에서 푸릇한 기운을 느낄 수 있다. 화목원 내에선 산림박물관도 운영한다. 산림박물관은 강원특별자치도의 동식물, 산촌생활 등 강원특별자치도 산림을 주제로 한 상설전시관을 비롯해 기획전시관, 3D영상관 등을 갖추었다. 연못, 인공폭포, 정자가 어우러지는 수생식물원과 어린이들을 위한 자연 놀이터인 어린이정원도 화목원의 놓칠 수 없는 포인트다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:54acc4920716d599d1e9e26ad1cb0f0a724033806c24e49aec492fffcc2ab3f4",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127433",
+          "request_sha256": "37d4d55d3ef2ec87d5cf9947a6f46214cbb66c9a5438f11c9c992063a378dd05",
+          "response_sha256": "d26acbedab1bc9b00c821542f5cd36d9a681d2f4a644746581bd5c818e0b5053",
+          "retrieved_at": "2026-09-11T02:08:44.741960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4bd88a8f213b8179fe8e4b8b1d3a56ecb1f8c1b44bb9c23a5b69b0cfb5549d3e",
+          "source_uri": null
+        },
+        "record_sha256": "3b3d080965251beb1ebf41b846e382b403bbde62ac1b801a14b35f17e630ffa2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:65ff11601b1118805a68edc7e4628372f78a8e29b45c72cc3036fb699914379e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127433",
+          "request_sha256": "37d4d55d3ef2ec87d5cf9947a6f46214cbb66c9a5438f11c9c992063a378dd05",
+          "response_sha256": "d26acbedab1bc9b00c821542f5cd36d9a681d2f4a644746581bd5c818e0b5053",
+          "retrieved_at": "2026-09-11T02:08:44.741960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2f823fe7756dd8fc4465908450a5f3e9b13a63879212e2208103511f8cff2b39",
+          "source_uri": null
+        },
+        "record_sha256": "21f8132f289861902d17a7d2612cdf9723b7cabff43ec6ed75ad9fa2a73c352b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[개인] - 어른 1,000원 - 중·고등학생 700원 - 초등학생 500원 [단체(30명 이상)] - 어른 700원 - 중·고등학생 500원 - 초등학생 300원"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ee88b6bf7aabd62812da61a97ac55309920f2e555d1cef3db07e9b5c63efe8db",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "127433",
+          "request_sha256": "37d4d55d3ef2ec87d5cf9947a6f46214cbb66c9a5438f11c9c992063a378dd05",
+          "response_sha256": "48ceed54311b93f1d5552fd49ddf1935bdd183eac7cc403f8929866880346077",
+          "retrieved_at": "2026-09-10T17:12:12.672952Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0ff92fa120a8f43285ab2564907516a66baa2fa6a43cb49816b0dab91479a7b",
+          "source_uri": null
+        },
+        "record_sha256": "46c0cc214aa3c4a73462e02895a5e9a317bcded5254c81221fb47894234b6371",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "숲해설 / 목공예체험 / 3D영상관"
+      }
+    ],
+    "parent_source_sha256": "2917f96b895661ddfe51e6213fb23efd8ce5ea1be4f723ae618e510702947eca",
+    "place": {
+      "address": "강원특별자치도 춘천시 화목원길 24 (사농동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+      "name_ko": "강원특별자치도립화목원",
+      "place_id": "public:korea:ab3497b5cf87fde277ab2d09d9f98a3bab0f6d16b92648def230a5ea382b6d6d",
+      "provider_content_id": "127433",
+      "region_code": "51110",
+      "region_name": "강원특별자치도 춘천시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

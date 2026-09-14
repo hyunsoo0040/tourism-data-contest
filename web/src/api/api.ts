@@ -1,4 +1,5 @@
 import previousCopyArtifact from "../../../contracts/questionnaire-v2-20260908.json";
+import previousTerminologyArtifact from "../../../contracts/questionnaire-v2-20260913.json";
 import legacyChoiceArtifact from "../../../contracts/questionnaire-v2-legacy.json";
 import questionnaireArtifact from "../../../contracts/questionnaire-v2.json";
 import type { components } from "../contracts/generated/api";
@@ -234,6 +235,11 @@ const PREVIOUS_COPY_V2_COUPLING: VersionCoupling = {
   config_hash: previousCopyArtifact.config_hash,
 };
 
+const PREVIOUS_TERMINOLOGY_V2_COUPLING: VersionCoupling = {
+  ...V2_COUPLING,
+  config_hash: previousTerminologyArtifact.config_hash,
+};
+
 const V1_COUPLING: VersionCoupling = {
   schema_version: LEGACY_PROFILE_SCHEMA_VERSION,
   questionnaire_version: LEGACY_QUESTIONNAIRE_VERSION,
@@ -300,7 +306,8 @@ function isPreferenceProfileV2(
     isPreferenceProfileShape(payload) &&
     (matchesVersionCoupling(payload, V2_COUPLING) ||
       matchesVersionCoupling(payload, LEGACY_V2_COUPLING) ||
-      matchesVersionCoupling(payload, PREVIOUS_COPY_V2_COUPLING)) &&
+      matchesVersionCoupling(payload, PREVIOUS_COPY_V2_COUPLING) ||
+      matchesVersionCoupling(payload, PREVIOUS_TERMINOLOGY_V2_COUPLING)) &&
     questionnaireAnswersSchema.safeParse(payload.answers).success &&
     (submission === undefined ||
       (payload.request_id === submission.request_id &&
@@ -2232,9 +2239,9 @@ export async function fetchRecommendationDetail(
 
 const COMPARISON_ROW_SCHEMA = [
   ["fit-score", "추천 적합도"],
-  ["axis-history_tradition", "역사·전통"],
-  ["axis-emotion_image", "감성·이미지"],
-  ["axis-rest_immersion", "휴식·몰입"],
+  ["axis-history_tradition", "대상•원형형"],
+  ["axis-emotion_image", "의미•이미지형"],
+  ["axis-rest_immersion", "자기•몰입형"],
   ["evidence-reason-1", "잘 맞는 이유 1"],
   ["evidence-reason-2", "잘 맞는 이유 2"],
   ["mismatch-guidance", "이번 여행에서 기대한 것과 다른 점"],

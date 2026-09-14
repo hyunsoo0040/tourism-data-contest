@@ -42,8 +42,22 @@ class PhotoProjectionReaderStub:
             included_count=2,
             images_count=1,
             traits=(
-                ProjectionTraitRow(trait_id="M1", text_ko="고요한", value=80, included=True),
-                ProjectionTraitRow(trait_id="M5", text_ko="산책", value=70, included=True),
+                ProjectionTraitRow(
+                    trait_id="M1",
+                    text_ko="현대적 재해석 중심",
+                    value=100,
+                    included=True,
+                    observed=True,
+                    semantic_version="photo-semantics-v2",
+                ),
+                ProjectionTraitRow(
+                    trait_id="M5",
+                    text_ko="산책·장시간 체류",
+                    value=100,
+                    included=True,
+                    observed=True,
+                    semantic_version="photo-semantics-v2",
+                ),
             ),
         )
 
@@ -111,9 +125,7 @@ def test_bound_v2_recovery_validates_preference_without_active_release() -> None
     created = service.create_run(request)
     service._release_resolver = lambda: (_ for _ in ()).throw(AssertionError("resolver called"))
     assert service.create_run(request) == created
-    changed = profile.model_copy(
-        update={"answers": profile.answers.model_copy(update={"q1": 1})}
-    )
+    changed = profile.model_copy(update={"answers": profile.answers.model_copy(update={"q1": 1})})
     service._profile_repository = ProfileRepositoryStub(changed)
     try:
         service.create_run(request)
@@ -143,9 +155,7 @@ def test_bound_v1_recovery_validates_preference_without_active_release() -> None
     )
     assert service.create_run(request) == runs.run
 
-    changed = profile.model_copy(
-        update={"answers": profile.answers.model_copy(update={"q1": 1})}
-    )
+    changed = profile.model_copy(update={"answers": profile.answers.model_copy(update={"q1": 1})})
     service._profile_repository = ProfileRepositoryStub(changed)
     try:
         service.create_run(request)

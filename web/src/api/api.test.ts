@@ -1,4 +1,5 @@
 import previousCopyArtifact from "../../../contracts/questionnaire-v2-20260908.json";
+import previousTerminologyArtifact from "../../../contracts/questionnaire-v2-20260913.json";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import {
@@ -182,7 +183,7 @@ describe("version-coupled preference profile validators", () => {
     expect(profile.scoring_version).toBe("integer-bp-v1");
   });
 
-  it.each([legacyChoiceArtifact, previousCopyArtifact])("reads historical scores with their original version/hash ($config_hash)", async (artifact) => {
+  it.each([legacyChoiceArtifact, previousCopyArtifact, previousTerminologyArtifact])("reads historical scores with their original version/hash ($config_hash)", async (artifact) => {
     const stored = v2Profile({
       scoring_version: artifact.scoring_version,
       config_hash: artifact.config_hash,

@@ -6,17 +6,30 @@
  *
  * Presentation, copy, DOM structure, palette, and typography are preserved.
  * Upstream vanilla-JS behavior is replaced by equivalent React state:
- * - the recommendation-preview chooser (recommendations dataset + phone card)
+ * - the recommendation-preview chooser (verified PUBLIC examples + official photographs)
  * - the mobile menu toggle
  * - the reveal-on-scroll observer
  * - reading the upstream-persisted travel preference (type + keywords) to
  *   preselect the preview type
  *
- * The upstream script never executes; nothing here scores or recommends.
+ * The upstream script never executes. Example scores are exported from the
+ * verified PUBLIC release; the homepage does not create a personalized ranking.
  * The type-test entry links route into the IT-DA journey (/start, /quiz,
  * /photo) which is served by the local backend as sole authority.
  */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
+import examples from "../../content/public-place-examples.json";
+import "../styles/place-examples.css";
+import { PlacePhotos } from "../../features/authenticity/PlacePhotos";
+import { placeMapUrl } from "../../features/authenticity/placeMetadata";
+
+function startDestination(): "/start?resume=profile" | "/trip" {
+  return "/trip";
+}
+
+function refreshStartLink(event: MouseEvent<HTMLAnchorElement>) {
+  event.currentTarget.href = startDestination();
+}
 
 const MAIN_NAV_ITEMS = [
   { id: "type", label: "여행 유형" },
@@ -25,7 +38,6 @@ const MAIN_NAV_ITEMS = [
 ] as const;
 
 const UPSTREAM_STORAGE_KEY = "itdaTravelPreference";
-const PREVIEW_TYPES = ["history", "rest", "image"] as const;
 
 type UpstreamPreference = {
   type?: string;
@@ -42,79 +54,24 @@ function readUpstreamPreference(): UpstreamPreference | null {
   }
 }
 
-type RecommendationBranch = {
-  title: string;
-  phoneType: string;
-  phoneDesc: string;
-  match: number;
-  text: string;
-  places: Array<{ tag: string; title: string; desc: string; color: string }>;
-};
-
-/** Verbatim upstream preview dataset (copy provenance; not scoring). */
-const RECOMMENDATIONS: Record<string, RecommendationBranch> = {
-  rest: {
-    title: "자기·몰입형 추천 결과",
-    phoneType: "당신은<br>자기·몰입형 여행자",
-    phoneDesc: "조용한 산책, 자유로운 공간, 오래 머무는 감정을 선호해요.",
-    match: 84,
-    text: "기대와 장소 분위기가 높은 수준으로 일치합니다.",
-    places: [
-      {
-        tag: "자기·몰입 84%",
-        title: "보문호반길",
-        desc: "보문호를 따라 천천히 걷거나 머물며 물가 풍경을 즐길 수 있는 경주의 산책 코스입니다.",
-        color: "linear-gradient(135deg,#80ed99,#57cc99,#22577a)",
-      },
-      {
-        tag: "감정 몰입 78%",
-        title: "동궁과 월지",
-        desc: "복원된 신라 궁궐과 연못 풍경을 둘러보며 낮과 밤의 서로 다른 분위기를 경험할 수 있습니다.",
-        color: "linear-gradient(135deg,#cdb4db,#90dbf4,#8eecf5)",
-      },
-    ],
-  },
+const RECOMMENDATIONS = {
   history: {
-    title: "대상·원형형 추천 결과",
-    phoneType: "당신은<br>대상·원형형 여행자",
-    phoneDesc: "장소에 담긴 이야기와 문화적 맥락을 깊게 경험하고 싶어해요.",
-    match: 89,
-    text: "스토리와 문화 자원이 기대와 잘 맞습니다.",
-    places: [
-      {
-        tag: "대상·원형 89%",
-        title: "불국사",
-        desc: "신라 불교문화와 석조 건축의 흐름을 한자리에서 살펴볼 수 있는 경주의 대표 문화유산입니다.",
-        color: "linear-gradient(135deg,#f4a261,#e76f51,#7f5539)",
-      },
-      {
-        tag: "스토리 적합 81%",
-        title: "경주 양동마을",
-        desc: "전통 가옥과 골목이 이어지는 마을을 걸으며 조선시대 생활문화와 건축을 살펴볼 수 있습니다.",
-        color: "linear-gradient(135deg,#e9c46a,#bc6c25,#606c38)",
-      },
-    ],
+    title: "역사·전통을 만나는 장소",
+    phoneType: "오래된 이야기와<br>전통이 궁금하다면",
+    phoneDesc: "공식 설명에서 확인한 장소의 역사·전통을 살펴보세요.",
+    axisLabel: "역사·전통", places: examples.examples.history,
   },
   image: {
-    title: "의미·이미지형 추천 결과",
-    phoneType: "당신은<br>의미·이미지형 여행자",
-    phoneDesc: "사진으로 남기고 싶은 분위기와 시각적 인상을 중요하게 생각해요.",
-    match: 86,
-    text: "사진 분위기와 시각 키워드가 기대와 잘 맞습니다.",
-    places: [
-      {
-        tag: "인식·이미지 86%",
-        title: "황리단길",
-        desc: "한옥과 상점이 어우러진 거리에서 경주의 현재적인 분위기와 다양한 거리 풍경을 만날 수 있습니다.",
-        color: "linear-gradient(135deg,#ffafcc,#bde0fe,#a2d2ff)",
-      },
-      {
-        tag: "포토 스팟 79%",
-        title: "대릉원 일원",
-        desc: "큰 고분과 산책로가 이어져 계절과 시간대에 따라 달라지는 경주의 풍경을 기록하기 좋습니다.",
-        color: "linear-gradient(135deg,#ffb703,#fb8500,#219ebc)",
-      },
-    ],
+    title: "감성·이미지를 만나는 장소",
+    phoneType: "마음에 남을 풍경과<br>이미지를 찾는다면",
+    phoneDesc: "장소가 담은 의미와 사진에서 보이는 분위기를 함께 살펴보세요.",
+    axisLabel: "감성·이미지", places: examples.examples.image,
+  },
+  rest: {
+    title: "휴식·몰입을 만나는 장소",
+    phoneType: "걷고 머무는 시간에<br>마음이 끌린다면",
+    phoneDesc: "일상에서 벗어나 머물고 몰입할 수 있는 장소를 살펴보세요.",
+    axisLabel: "휴식·몰입", places: examples.examples.rest,
   },
 };
 
@@ -126,25 +83,30 @@ function PhoneTypeCopy({ html }: { html: string }) {
 export function UpstreamMainPage() {
   const [openMenu, setOpenMenu] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  const [selectedType, setSelectedType] = useState<string>("rest");
+  const [selectedType, setSelectedType] = useState<keyof typeof RECOMMENDATIONS>("rest");
+  const [startHref, setStartHref] = useState<"/start?resume=profile" | "/trip">("/trip");
   const rootRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const refreshDestination = () => setStartHref(startDestination());
+    refreshDestination();
+    window.addEventListener("storage", refreshDestination);
+    window.addEventListener("focus", refreshDestination);
+    window.addEventListener("pageshow", refreshDestination);
+    return () => {
+      window.removeEventListener("storage", refreshDestination);
+      window.removeEventListener("focus", refreshDestination);
+      window.removeEventListener("pageshow", refreshDestination);
+    };
+  }, []);
 
   useEffect(() => {
     const saved = readUpstreamPreference();
     if (saved?.type && saved.type in RECOMMENDATIONS) {
-      setSelectedType(saved.type);
+      setSelectedType(saved.type as keyof typeof RECOMMENDATIONS);
     }
   }, []);
 
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setSelectedType((current) => {
-        const currentIndex = PREVIEW_TYPES.indexOf(current as (typeof PREVIEW_TYPES)[number]);
-        return PREVIEW_TYPES[(Math.max(0, currentIndex) + 1) % PREVIEW_TYPES.length]!;
-      });
-    }, 3_000);
-    return () => window.clearInterval(timer);
-  }, []);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -246,7 +208,7 @@ export function UpstreamMainPage() {
                 </a>
               ))}
             </nav>
-            <a href="/start" className="nav-cta">시작하기</a>
+            <a href={startHref} className="nav-cta" onClick={refreshStartLink}>시작하기</a>
           </div>
         </header>
 
@@ -266,13 +228,13 @@ export function UpstreamMainPage() {
                   테스트와 사진을 통해 추구하는 여행 경험을 알아보세요.<br />
                   그에 맞는 장소를 연결해 드립니다.
                 </p>
-                
+
               </div>
               <div className="phone-card" aria-label="IT-DA 모바일 추천 화면 미리보기">
                 <div className="blob"></div>
                 <div className="phone">
                   <div className="screen">
-                    <div className="screen-top"><span>IT-DA</span><span id="phoneMatch">{data.match}% match</span></div>
+                    <div className="screen-top"><span>IT-DA</span><span id="phoneMatch">{data.places[0].axis_value}점 · 장소 예시</span></div>
                     <div className="mini-hero">
                       <PhoneTypeCopy html={data.phoneType} />
                       <p id="phoneDesc">{data.phoneDesc}</p>
@@ -299,9 +261,9 @@ export function UpstreamMainPage() {
                       </div>
                     </div>
                     <div className="match">
-                      <strong>내 취향과의 유사도 예시</strong>
-                      <div className="bar"><i id="matchBar" style={{ width: `${data.match}%` }}></i></div>
-                      <p id="matchText">{data.text}</p>
+                      <strong>{data.places[0].name} · {data.axisLabel}</strong>
+                      <div className="bar"><i id="matchBar" style={{ width: `${data.places[0].axis_value}%` }}></i></div>
+                      <p id="matchText">공식 자료로 분석한 장소 점수예요. 내 취향과의 연결 정도는 테스트 후 확인할 수 있어요.</p>
                     </div>
                   </div>
                 </div>
@@ -353,51 +315,16 @@ export function UpstreamMainPage() {
             </div>
           </section>
 
-          <section id="photo" className="reveal">
-            <div className="wrap photo-feature photo-feature--intro">
-              <div className="photo-intro-copy">
-                <div className="eyebrow">Photo mood input</div>
-                <h2>사진으로 더하는<br />나만의 여행 분위기</h2>
-                <p>
-                  말로 표현하기 어려운 취향은 사진으로 알려주세요.
-                  테스트를 마친 뒤, 마음에 드는 여행 사진을 더하면
-                  그 안의 색감과 풍경을 추천에 함께 반영해요.
-                </p>
-                <div className="photo-intro-note">
-                  <span>선택 입력</span>
-                  <small>사진 없이도 테스트만으로 추천받을 수 있어요.</small>
-                </div>
-              </div>
-              <div className="photo-mood-preview" aria-label="사진으로 더할 수 있는 분위기 예시">
-                <div className="photo-mood-scenes">
-                  <figure className="photo-mood-frame photo-mood-frame--warm">
-                    <div className="photo-mood-scene" aria-hidden="true" />
-                    <figcaption>따뜻한 빛</figcaption>
-                  </figure>
-                  <figure className="photo-mood-frame photo-mood-frame--nature">
-                    <div className="photo-mood-scene" aria-hidden="true" />
-                    <figcaption>차분한 자연</figcaption>
-                  </figure>
-                  <figure className="photo-mood-frame photo-mood-frame--open">
-                    <div className="photo-mood-scene" aria-hidden="true" />
-                    <figcaption>탁 트인 풍경</figcaption>
-                  </figure>
-                </div>
-                <p className="photo-mood-caption">내가 끌리는 장면이, 여행의 힌트가 되도록.</p>
-              </div>
-            </div>
-          </section>
-
           <section id="demo" className="reveal">
             <div className="wrap demo">
               <div className="quiz">
-                <div className="eyebrow">type test</div>
                 <h3>간단 선택으로 추천 화면 살펴보기</h3>
-                <p>화면 구성 예시예요. 실제 추천은 선택한 지역과 취향에 따라 달라져요.</p>
+                <p>공개 관광지 {examples.place_count.toLocaleString("ko-KR")}곳에서 고른 실제 장소예요. 아래 점수는 장소의 경험 특성이며, 나의 추천 순위는 테스트 후 달라져요.</p>
                 <button
                   className={selectedType === "history" ? "choice active" : "choice"}
                   type="button"
                   data-type="history"
+                  aria-pressed={selectedType === "history"}
                   onClick={() => setSelectedType("history")}
                 >
                   <i></i><span>오래된 이야기와 전통이 살아있는 공간</span>
@@ -406,6 +333,7 @@ export function UpstreamMainPage() {
                   className={selectedType === "rest" ? "choice active" : "choice"}
                   type="button"
                   data-type="rest"
+                  aria-pressed={selectedType === "rest"}
                   onClick={() => setSelectedType("rest")}
                 >
                   <i></i><span>조용히 걷고 머물 수 있는 차분한 분위기</span>
@@ -414,25 +342,29 @@ export function UpstreamMainPage() {
                   className={selectedType === "image" ? "choice active" : "choice"}
                   type="button"
                   data-type="image"
+                  aria-pressed={selectedType === "image"}
                   onClick={() => setSelectedType("image")}
                 >
                   <i></i><span>사진으로 남기고 싶은 감성적인 장소</span>
                 </button>
-                <a className="test-link" href="/quiz">12문항 취향 테스트로 자세히 보기</a>
+                <a className="test-link" href="/trip">12문항 취향 테스트로 자세히 보기</a>
               </div>
               <div className="result">
-                <div className="eyebrow">Recommendation Preview</div>
                 <h2 id="resultTitle">{data.title}</h2>
+                <p className="preview-date">공개 자료 기준 {examples.release_created_at.slice(0, 10)}</p>
                 <div id="recommendations">
                   {data.places.map((place) => (
-                    <div className="place" key={place.title}>
-                      <div className="photo" style={{ background: place.color }}></div>
+                    <article className="place" key={place.place_id}>
+                      <PlacePhotos name={place.name} photos={[place.photo]} gallery={false} />
                       <div>
-                        <span className="tag">{place.tag}</span>
-                        <h4>{place.title}</h4>
-                        <p>{place.desc}</p>
+                        <span className="tag">{data.axisLabel} {place.axis_value}점</span>
+                        <h3>{place.name}</h3>
+                        <p className="place-region">{place.region} · {place.category}</p>
+                        <p>{place.description}</p>
+                        <details className="place-address"><summary>주소 확인</summary><p>{place.address}</p></details>
+                        <a className="place-map" href={placeMapUrl(place.name, place.address)} target="_blank" rel="noreferrer">지도에서 보기</a>
                       </div>
-                    </div>
+                    </article>
                   ))}
                 </div>
               </div>

@@ -1,0 +1,845 @@
+{
+  "assessed_at": "2026-09-11T16:08:50.459194Z",
+  "assessment_sha256": "c54a7daa9c3072390cb6985e3de81e55ed86aab80ba3deb5127b98577dd999e1",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 13
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:be35dbb2cda2a8d89c95de4456957c07f4a2248beb80c92ad05c11e0194d993c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "개관·재개관 연혁 등 간단한 시설 연혁 소개 수준의 근거만 있으며, 장소의 사건·인물 맥락 등 구체적 역사 해설은 제시되지 않아 낮은 수준으로 판단한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:18834e1259b1bbac98d006c9b31f238d9c7f1a99d971413fda8755e592eb2cbd",
+            "appearance:19c149fc40ff0eaeab122b5df59d5824dc9c29c6a117dd404483f3e8d6c62fa1",
+            "appearance:9c674e0b975ac7a15897b9799fd55dd9e6619fd36397bb7e8399ec8550fbad19"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "인용은 갤러리 공간의 기능적 유연성(무빙 파티션)에 관한 설비 소개일 뿐, 장소의 외관·경관·연출이 나타내는 시각적 성격에 대한 직접 근거가 아니다. 수준 1로도 현재 수준을 뒷받침하는지 확정하기 어려워 UNCERTAIN으로 남긴다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:be35dbb2cda2a8d89c95de4456957c07f4a2248beb80c92ad05c11e0194d993c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "카페·서비스 프라자 등 자유롭게 이용할 수 있는 편의시설과 다양한 공연·전시 선택지가 언급되지만, 자율 탐색·일상 이탈 경험이 중심이라는 근거는 없어 제한적 수준으로 판단한다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1658283138c83595a9ec46264dd5542b29a6393fb11567aae56bbc05894678de",
+            "appearance:532c2989f76d4ae4ac9473bcc28e45794a99573bbf1022e8f33824864b1fda7c",
+            "appearance:a0274650b2f683cc9d9e1b256a0cdad8604a7557ac14f751a114ca4fdaf269c3"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "인근 산 언급은 주변 관광지 정보일 뿐 이 장소 자체의 자연환경·저자극·머무를 환경에 대한 근거가 아니므로 판단할 수 없다.",
+      "value": 0
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 1989년 문예회관으로 개관 후 리모델링을 거쳐 재개관한 다목적 문화시설임을 설명할 뿐, 확인된 원형·유산과의 접촉에 대한 근거가 없다. 건축 연혁은 H.a의 유산 경험을 뒷받침하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:be35dbb2cda2a8d89c95de4456957c07f4a2248beb80c92ad05c11e0194d993c",
+          "quote": {
+            "end": 119,
+            "method": "EXACT",
+            "original": "1989년 12월 안양문예회관으로 개관해 대규모 리모델링을 거쳐 안양아트센터로 명칭을 변경하고 2010년 5월 재개관하였다.",
+            "start": 50,
+            "submitted": "1989년 12월 안양문예회관으로 개관해 대규모 리모델링을 거쳐 안양아트센터로 명칭을 변경하고 2010년 5월 재개관하였다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8304ee93672787f8a7f4e682b408402aebe7becdb852af3d3b5d61d3e9e3cbc6"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 1,
+      "reason": "개관·재개관 연혁 등 간단한 시설 연혁 소개 수준의 근거만 있으며, 장소의 사건·인물 맥락 등 구체적 역사 해설은 제시되지 않아 낮은 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 언급이 없다. 공연·전시 개최 사실만으로는 실제 전승의 지속을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·전시·학습 프로그램에 대한 근거가 없다. 공연장·갤러리·컨벤션홀 시설 설명만 제공된다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "장소에 사회적으로 부여된 상징·의미나 일관된 이미지·이야기에 대한 근거가 없다. '시민의 여가와 문화생활 증진' 목적은 구체적 공유 의미의 내용을 확인해 주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보, SNS 등 매체를 통한 장소 이미지의 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "인용은 갤러리 공간의 기능적 유연성(무빙 파티션)에 관한 설비 소개일 뿐, 장소의 외관·경관·연출이 나타내는 시각적 성격에 대한 직접 근거가 아니다. 수준 1로도 현재 수준을 뒷받침하는지 확정하기 어려워 UNCERTAIN으로 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:be35dbb2cda2a8d89c95de4456957c07f4a2248beb80c92ad05c11e0194d993c",
+          "quote": {
+            "end": 273,
+            "method": "EXACT",
+            "original": "1층 로비에는 서비스 프라자와 카페 브람스 등의 편의시설을 갖추고 있다.",
+            "start": 233,
+            "submitted": "1층 로비에는 서비스 프라자와 카페 브람스 등의 편의시설을 갖추고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8304ee93672787f8a7f4e682b408402aebe7becdb852af3d3b5d61d3e9e3cbc6"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 1,
+      "reason": "카페·서비스 프라자 등 자유롭게 이용할 수 있는 편의시설과 다양한 공연·전시 선택지가 언급되지만, 자율 탐색·일상 이탈 경험이 중심이라는 근거는 없어 제한적 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "인근 산 언급은 주변 관광지 정보일 뿐 이 장소 자체의 자연환경·저자극·머무를 환경에 대한 근거가 아니므로 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "인용된 활동은 공연·영화·전시 등 주로 관람 중심이다. '제한된 체험 기회'조차 참여·집중 활동의 기회를 요구하는데, 관람의 존재만으로 참여 기회를 인정하는 것은 확대 해석이므로 현재 수준의 적합성을 확정할 수 없어 UNCERTAIN으로 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 구체적 근거가 없다. 컨벤션홀의 심포지엄·세미나는 관계 형성 경험을 확인해 주지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "6d382e7b4118923a0d448c4b3335b886b69e01e8f071972b6119546e8e5190b2",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:be35dbb2cda2a8d89c95de4456957c07f4a2248beb80c92ad05c11e0194d993c",
+              "quote": {
+                "end": 581,
+                "method": "EXACT",
+                "original": "갤러리미담은 회화, 사진, 서예, 조각, 설치예술 등의 작품 전시가 가능한 공간으로 레일 식 무빙 파티션으로 설계되어 자유로운 공간연출이 가능하다.",
+                "start": 499,
+                "submitted": "갤러리미담은 회화, 사진, 서예, 조각, 설치예술 등의 작품 전시가 가능한 공간으로 레일 식 무빙 파티션으로 설계되어 자유로운 공간연출이 가능하다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8304ee93672787f8a7f4e682b408402aebe7becdb852af3d3b5d61d3e9e3cbc6"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.c",
+          "level": 1,
+          "reason": "무빙 파티션 갤러리 등 시설 구성의 간략한 소개는 있으나, 장소 전체의 외관·경관·연출이 일관된 시각적 성격을 표현한다는 근거는 부족해 제한적 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "E.c",
+          "reason": "인용은 갤러리 공간의 기능적 유연성(무빙 파티션)에 관한 설비 소개일 뿐, 장소의 외관·경관·연출이 나타내는 시각적 성격에 대한 직접 근거가 아니다. 수준 1로도 현재 수준을 뒷받침하는지 확정하기 어려워 UNCERTAIN으로 남긴다."
+        }
+      },
+      "reason": "인용은 갤러리 공간의 기능적 유연성(무빙 파티션)에 관한 설비 소개일 뿐, 장소의 외관·경관·연출이 나타내는 시각적 성격에 대한 직접 근거가 아니다. 수준 1로도 현재 수준을 뒷받침하는지 확정하기 어려워 UNCERTAIN으로 남긴다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:be35dbb2cda2a8d89c95de4456957c07f4a2248beb80c92ad05c11e0194d993c",
+              "quote": {
+                "end": 716,
+                "method": "EXACT",
+                "original": "각종 문화행사 및 영화 상영, 공연, 연주회, 콘서트, 전시회 등이 수시로 개최되고 이다.",
+                "start": 666,
+                "submitted": "각종 문화행사 및 영화 상영, 공연, 연주회, 콘서트, 전시회 등이 수시로 개최되고 이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8304ee93672787f8a7f4e682b408402aebe7becdb852af3d3b5d61d3e9e3cbc6"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 1,
+          "reason": "관람 중심의 공연·전시·영화 상영이 수시로 개최된다는 근거는 있으나, 만들기·신체 활동 등 방문자가 직접 참여·몰입하는 활동의 근거는 없어 제한적 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.c",
+          "reason": "인용된 활동은 공연·영화·전시 등 주로 관람 중심이다. '제한된 체험 기회'조차 참여·집중 활동의 기회를 요구하는데, 관람의 존재만으로 참여 기회를 인정하는 것은 확대 해석이므로 현재 수준의 적합성을 확정할 수 없어 UNCERTAIN으로 남긴다."
+        }
+      },
+      "reason": "인용된 활동은 공연·영화·전시 등 주로 관람 중심이다. '제한된 체험 기회'조차 참여·집중 활동의 기회를 요구하는데, 관람의 존재만으로 참여 기회를 인정하는 것은 확대 해석이므로 현재 수준의 적합성을 확정할 수 없어 UNCERTAIN으로 남긴다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "779b0d988a8a61d1b1d46792a294fd55a4abda2df51b90abbd42e1850577da7e",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 공연장 인테리어로 전통적 재료나 공간 구성의 시각적 특성이 나타나지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:08d73d5f6458b6e24fe12c34f263d1f86ae2fbd2bebf82b531977a2cf958e164",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f106f2d7edeb83ee2e4c0e923287e668b6a1d108ee7004f4d86b6c18c3fbe87c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577751_6",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ceb270982711321bcd476e38f1bc1c7fca2c668af1e4d6a11a646ded95e45e09",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/51/3577751_image2_1.jpg"
+        },
+        "record_sha256": "fff5d73fc44cbf627940bf47d0457b7ded993296beca6533286ee6cdff7d8a50",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 공연장 내부로 녹지, 물, 자연 경관 등 자연 환경 단서가 전혀 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1658283138c83595a9ec46264dd5542b29a6393fb11567aae56bbc05894678de",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "636554605af41f5352d624720a5032769113130b901dbc2f3a98a874c64b57d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577753_5",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff3b83587c989fe418acc762fb72b662896eb1168b5a4d4807317e767b43a61b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3577753_image2_1.jpg"
+        },
+        "record_sha256": "73fde57803cf00e5fc1de31eef7e72a49d0ae4b9d0a85852a76dadf866777227",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "붉은 객석과 주황 톤 천장이 화면을 지배하고, 중앙 무대를 향한 대칭 원근 구도가 강한 연출감을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:18834e1259b1bbac98d006c9b31f238d9c7f1a99d971413fda8755e592eb2cbd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f106f2d7edeb83ee2e4c0e923287e668b6a1d108ee7004f4d86b6c18c3fbe87c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577751_6",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ceb270982711321bcd476e38f1bc1c7fca2c668af1e4d6a11a646ded95e45e09",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/51/3577751_image2_1.jpg"
+        },
+        "record_sha256": "1fd898676371bc23b356b092592e8d595967ebdeda4f50184acb33ad5757227a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "빨간 좌석이 화면을 가득 채우고 따뜻한 조명과 대칭적 중앙 구도가 강한 인상을 준다. 원색 붉은색과 정돈된 좌석 배열이 장면을 지배하는 시각적 성격을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:19c149fc40ff0eaeab122b5df59d5824dc9c29c6a117dd404483f3e8d6c62fa1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "636554605af41f5352d624720a5032769113130b901dbc2f3a98a874c64b57d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577753_5",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff3b83587c989fe418acc762fb72b662896eb1168b5a4d4807317e767b43a61b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3577753_image2_1.jpg"
+        },
+        "record_sha256": "8b0803dc0b0a5b1066145c6e83fe9af8e02127aa4a37c0b35156a70a7896f15d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 공연장 내부로 녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:532c2989f76d4ae4ac9473bcc28e45794a99573bbf1022e8f33824864b1fda7c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f106f2d7edeb83ee2e4c0e923287e668b6a1d108ee7004f4d86b6c18c3fbe87c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577751_6",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ceb270982711321bcd476e38f1bc1c7fca2c668af1e4d6a11a646ded95e45e09",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/51/3577751_image2_1.jpg"
+        },
+        "record_sha256": "4ec905f36dae78680e9cdc87963d8e6f49f19a23685053acc2c9d895616298f4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "주홍색 좌석과 붉은 카펫이 화면을 강하게 채우고, 따뜻한 조명과 넓은 천장 구도가 극장 특유의 연출된 시각 성격을 뚜렷이 드러낸다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9c674e0b975ac7a15897b9799fd55dd9e6619fd36397bb7e8399ec8550fbad19",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5df7d791469cbaa5b0c0ecbb9a405e35ebe84efb8fe6de460fb82a6ad9c0ac6d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577758_1",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "68ccdd7775bd308cb01225f5ee9e6ef6a403891b5d6d38c84820dbdee23ec0ff",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/58/3577758_image2_1.jpg"
+        },
+        "record_sha256": "19504a2a832fddfa9ca19974aed90e0857b5661661a6ce98dc44a50253cb9566",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 공연장 내부로 녹지, 물, 자연 경관 등 자연 환경 단서는 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a0274650b2f683cc9d9e1b256a0cdad8604a7557ac14f751a114ca4fdaf269c3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5df7d791469cbaa5b0c0ecbb9a405e35ebe84efb8fe6de460fb82a6ad9c0ac6d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577758_1",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "68ccdd7775bd308cb01225f5ee9e6ef6a403891b5d6d38c84820dbdee23ec0ff",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/58/3577758_image2_1.jpg"
+        },
+        "record_sha256": "96c506b7086df1ab65e60efa70a8dcab61bb2b958ef976246f234f17cba50846",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 공연장 인테리어로 전통적 외관, 재료, 공간 구성의 시각적 특성은 나타나지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d51f2cd624f95d7ba0cba441f5764dcadef82207cd525eb03a166fa33e1c2a9b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5df7d791469cbaa5b0c0ecbb9a405e35ebe84efb8fe6de460fb82a6ad9c0ac6d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577758_1",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "68ccdd7775bd308cb01225f5ee9e6ef6a403891b5d6d38c84820dbdee23ec0ff",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/58/3577758_image2_1.jpg"
+        },
+        "record_sha256": "405e1be9683d7660db3065c27c51d0663f2c0b934e308061a9684523c9d633e0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대적 공연장 인테리어가 주를 이루며, 천장의 목재 느낌 마감 등 전통적으로 보이는 재료 단서가 일부 있으나 매우 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f621ebe3826c528aaf5020cf07f55b7cca7feb74d07e56bebf1fd210fde3eea3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "636554605af41f5352d624720a5032769113130b901dbc2f3a98a874c64b57d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577753_5",
+          "request_sha256": "48e49591783f2c0674a0e12f94f4086f0aa7902a656eaec561818342c99ec3e8",
+          "response_sha256": "a8c1c2f2ec47b0613cef6ccd34eb554492a001b7ed4e5f40e7319fe34823720f",
+          "retrieved_at": "2026-09-10T08:20:26.410252Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff3b83587c989fe418acc762fb72b662896eb1168b5a4d4807317e767b43a61b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3577753_image2_1.jpg"
+        },
+        "record_sha256": "ce3fb0fd5212feb3432358b103570cd44b88390d07a8cef7685e3325b3c760d9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:be35dbb2cda2a8d89c95de4456957c07f4a2248beb80c92ad05c11e0194d993c",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "130092",
+          "request_sha256": "09ad5a0a9afc3892f7257b40f2f5b171cf2c299eae71683cdd1da5b038a19304",
+          "response_sha256": "1be4c0e9fbf0b8bf56f29cf741adb5bb67b591b63834eee57ed864b249c23d2b",
+          "retrieved_at": "2026-09-10T07:40:01.951151Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-16T04:28:56Z",
+          "source_record_sha256": "e735b69fbeb59df3f543b8fda1b17022939514a8bb9da5115aab96f7f25c0ce0",
+          "source_uri": null
+        },
+        "record_sha256": "8304ee93672787f8a7f4e682b408402aebe7becdb852af3d3b5d61d3e9e3cbc6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "만안구청 부근에 있는 안양아트센터는 안양 시민의 여가와 문화생활 증진을 위해 조성되었다. 1989년 12월 안양문예회관으로 개관해 대규모 리모델링을 거쳐 안양아트센터로 명칭을 변경하고 2010년 5월 재개관하였다. 안양문화예술재단이 운영하고 있다. 지하 1층, 지상 2층으로 건축된 안양아트센터는 관악홀[대공연장], 수리홀[소공연장], 야외공연장 등 3개의 공연장과 갤러리 미담, 컨벤션홀을 갖춘 다목적 문화공간으로 1층 로비에는 서비스 프라자와 카페 브람스 등의 편의시설을 갖추고 있다. 관악홀은 1,126명(장애인 13석 포함)을 수용할 수 있는 프로세니움 형식의 2층 규모의 대공연장으로 828㎡의 무대와 분장실 6개를 보유하고 있으며, 콘서트, 오케스트라, 뮤지컬 등 규모가 큰 공연이 가능하다. 수리홀은 382명(장애인 4석 포함) 수용 규모의 프로세니움 형식의 소공연장으로 240㎡의 무대와 분장실 2개를 보유하고 있으며, 연극, 실내악, 독주회 등 다양한 공연을 펼칠 수 있다. 갤러리미담은 회화, 사진, 서예, 조각, 설치예술 등의 작품 전시가 가능한 공간으로 레일 식 무빙 파티션으로 설계되어 자유로운 공간연출이 가능하다. 컨벤션홀은 심포지엄, 세미나, 기념식, 교육 등의 다목적 공간이며, 부대시설로 연습실 3개를 보유하고 있다. 이러한 시설을 기반으로 안양아트센터에서는 각종 문화행사 및 영화 상영, 공연, 연주회, 콘서트, 전시회 등이 수시로 개최되고 이다. 산본IC에서 차량으로 약 8분, 1호선 명학역에서 도보로 약 10분 소요된다. 인근에 관악산, 청계산, 광교산, 안양예술공원, 안양박물관, 김중업건축박물관, 평촌중앙공원, 서울랜드, 서울대공원, 렛츠런파크서울, 광명동굴, 광명에디슨뮤지엄 등이 있다."
+      }
+    ],
+    "parent_source_sha256": "1c7d317bd1cc331569bb3d0479cf795d546af6a54991daee22c8ab7bb395011b",
+    "place": {
+      "address": "경기도 안양시 만안구 문예로36번길 16 (안양동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+      "name_ko": "안양아트센터",
+      "place_id": "public:korea:2550fdcd27833fb9e6698cc5983a580d5c3fe8d6242a2b762f1c8417171b3583",
+      "provider_content_id": "130092",
+      "region_code": "41171",
+      "region_name": "경기도 안양시 만안구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

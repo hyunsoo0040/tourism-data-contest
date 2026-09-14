@@ -1,0 +1,972 @@
+{
+  "assessed_at": "2026-09-11T16:26:47.217154Z",
+  "assessment_sha256": "69652da402841ccffd1fe015772d3ef13a634d0211c754138f5ddd3efd4c3b9c",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 54
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 74
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "도심 빌딩숲 가운데 야생 자연이 살아있는 장소라는 구체적 이미지·이야기가 이 공원에 연결되어 있다. 이것이 방문 경험의 중심이라는 표현·재현 근거까지는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2e857cc9ed0904bf23a83053343e3c49222cdfe92225a6ba67912975594a5ab1",
+            "appearance:671ec726238cba7bad320bd653f00bdb3a19fbac2780da40208ac84ed1ac2e2b",
+            "appearance:ac1598fc31016d19636def949acd38d21baf8e09dfb5107e2061546d373fb246"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "6km 산책로, 자전거도로, 구역별 탐방 동선 등 방문자가 자신의 방식으로 선택·탐색할 기회가 확인된다. 일상 이탈 경험이 방문의 중심이라는 근거까지는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:5d618c2df99cb919da1b345b7a68f2f321a14221b7a288dbc92011aa98f02ed3",
+            "appearance:959dfcf4e40a06bff40401491e85965226ff32f1bf5f49b8a984b09dc2c1a005",
+            "appearance:96fab3842c61e5871af73f75838454767ff4e1f38be2d6505117dd9a5e875701"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "습지·버들숲·억새 군락 등 자연 환경 단서가 구역 전반에 걸쳐 확인되고, 가로등·매점을 두지 않는 저자극·보존 중심 운영이 직접 기술되어 환경 단서가 공간을 지배한다. 실제 고요함·심리적 회복을 확정하지 않고 환경 단서 수준에서 수준 4로 판단한다. (수정: 원 제안의 두 번째 인용은 해당 출처의 허용 claim에 VISUAL_APPEARANCE가 없어 같은 출처의 ENVIRONMENT로 대체)",
+      "value": 96
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "생태해설·자연관찰·자연놀이, 파크골프, 탐방로 관찰 활동 등 구체적인 참여·탐방 활동 기회가 확인된다. 지속적 도전·집중이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d0e14af58f4b9a2db7eb229a410ece319edc2325dd05ac966ec88219e03e1bca"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "광장과 생태프로그램을 통한 공동 활동의 가능성이 확인되지만, 교류·자기표현이 풍부하거나 방문 경험의 중심이라는 근거는 없어 제한적 수준 2로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "근거는 자연환경·습지·희귀 동식물 등 생태 자원을 설명할 뿐, 확인된 문화유산·역사적 원형과의 접촉을 제시하지 않는다. 생태적 자연성은 H.a의 유산 접촉 근거로 확정할 수 없어 판단을 보류한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "제공된 근거는 조성 구역과 시설을 안내할 뿐 이 장소의 실제 역사·연혁·사건·인물 맥락을 다루지 않는다. 역사 서사의 부재는 0의 근거가 아니므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 생태프로그램은 전통 전승과의 직접 연결로 확정하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "토종식물 안내판과 생태해설은 자연 해설이지, 원형·유산·전통에 연결된 역사적 해설·탐구라 확정할 수 없다. H.d는 유산·전통 연결 해설을 요구하므로 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+          "quote": {
+            "end": 434,
+            "method": "EXACT",
+            "original": "서울 한복판 빌딩숲 사이에 위치한 공원이지만, 온갖 야생화가 피어나는 들판과 버들치, 송사리, 붕어가 사는 샛강이 있다.",
+            "start": 367,
+            "submitted": "서울 한복판 빌딩숲 사이에 위치한 공원이지만, 온갖 야생화가 피어나는 들판과 버들치, 송사리, 붕어가 사는 샛강이 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "daaa332c543c3dd8d068739d3081eb12f4367859e4536e04aa60b3162fd2a4dd"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "도심 빌딩숲 가운데 야생 자연이 살아있는 장소라는 구체적 이미지·이야기가 이 공원에 연결되어 있다. 이것이 방문 경험의 중심이라는 표현·재현 근거까지는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지를 유통하는 작품·홍보·SNS 등 매체 표현에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험하거나 재현(촬영·참여)할 수 있다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+          "quote": {
+            "end": 469,
+            "method": "EXACT",
+            "original": "갈대와 물억새가 무성하게 자라며 6km의 산책로가 조성돼 있고",
+            "start": 435,
+            "submitted": "갈대와 물억새가 무성하게 자라며 6km의 산책로가 조성돼 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "daaa332c543c3dd8d068739d3081eb12f4367859e4536e04aa60b3162fd2a4dd"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+          "quote": {
+            "end": 287,
+            "method": "EXACT",
+            "original": "이 곳에는 자전거도로, 산책로, 주차장 2개소, 교량 5개소, 광장 2개소, 안내센터, 잔디마당, 파크골프장, 생태수로, 창포원, 버들숲, 수질정화원, 물억새 군락, 폐쇄형 습지 등이 있다.",
+            "start": 181,
+            "submitted": "이 곳에는 자전거도로, 산책로, 주차장 2개소, 교량 5개소, 광장 2개소, 안내센터, 잔디마당, 파크골프장, 생태수로, 창포원, 버들숲, 수질정화원, 물억새 군락, 폐쇄형 습지 등이 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "daaa332c543c3dd8d068739d3081eb12f4367859e4536e04aa60b3162fd2a4dd"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "6km 산책로, 자전거도로, 구역별 탐방 동선 등 방문자가 자신의 방식으로 선택·탐색할 기회가 확인된다. 일상 이탈 경험이 방문의 중심이라는 근거까지는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+          "quote": {
+            "end": 629,
+            "method": "EXACT",
+            "original": "생태공원에는 자연을 해치지 않기 위해 벤치와 매점은 물론, 동식물들의 휴식과 수면을 위해 가로등도 설치하지 않았다.",
+            "start": 565,
+            "submitted": "생태공원에는 자연을 해치지 않기 위해 벤치와 매점은 물론, 동식물들의 휴식과 수면을 위해 가로등도 설치하지 않았다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "daaa332c543c3dd8d068739d3081eb12f4367859e4536e04aa60b3162fd2a4dd"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+          "quote": {
+            "end": 82,
+            "method": "EXACT",
+            "original": "버드나무, 갈대, 억새 등의 군락을 이루고 있는 자연환경을 최대한 활용한 곳이다.",
+            "start": 37,
+            "submitted": "버드나무, 갈대, 억새 등의 군락을 이루고 있는 자연환경을 최대한 활용한 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "daaa332c543c3dd8d068739d3081eb12f4367859e4536e04aa60b3162fd2a4dd"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 4,
+      "reason": "습지·버들숲·억새 군락 등 자연 환경 단서가 구역 전반에 걸쳐 확인되고, 가로등·매점을 두지 않는 저자극·보존 중심 운영이 직접 기술되어 환경 단서가 공간을 지배한다. 실제 고요함·심리적 회복을 확정하지 않고 환경 단서 수준에서 수준 4로 판단한다. (수정: 원 제안의 두 번째 인용은 해당 출처의 허용 claim에 VISUAL_APPEARANCE가 없어 같은 출처의 ENVIRONMENT로 대체)",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+          "quote": {
+            "end": 327,
+            "method": "EXACT",
+            "original": "또한 생태해설, 자연관찰, 자연놀이 등의 생태프로그램을 운영하고 있다.",
+            "start": 288,
+            "submitted": "또한 생태해설, 자연관찰, 자연놀이 등의 생태프로그램을 운영하고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "daaa332c543c3dd8d068739d3081eb12f4367859e4536e04aa60b3162fd2a4dd"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+          "quote": {
+            "end": 366,
+            "method": "EXACT",
+            "original": "안내센터에는 학습공간과 생태프로그램 운영실, 반딧불이 사육장이 있다.",
+            "start": 328,
+            "submitted": "안내센터에는 학습공간과 생태프로그램 운영실, 반딧불이 사육장이 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "daaa332c543c3dd8d068739d3081eb12f4367859e4536e04aa60b3162fd2a4dd"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "생태해설·자연관찰·자연놀이, 파크골프, 탐방로 관찰 활동 등 구체적인 참여·탐방 활동 기회가 확인된다. 지속적 도전·집중이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:d0e14af58f4b9a2db7eb229a410ece319edc2325dd05ac966ec88219e03e1bca",
+          "quote": {
+            "end": 373,
+            "method": "EXACT",
+            "original": "여의도 공원과 연계하여 시민들의 여가문화 공간을 제공하고 생태학습장으로서의 다양한 관찰활동을 할 수 있도록 버들광장, 창포원 및 물억새 군락 조성",
+            "start": 292,
+            "submitted": "여의도 공원과 연계하여 시민들의 여가문화 공간을 제공하고 생태학습장으로서의 다양한 관찰활동을 할 수 있도록 버들광장, 창포원 및 물억새 군락 조성",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e3d3de3c97c3f80d4f67661088271976d4cfba4240ffa7df33ad412d19cd37b4"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "광장과 생태프로그램을 통한 공동 활동의 가능성이 확인되지만, 교류·자기표현이 풍부하거나 방문 경험의 중심이라는 근거는 없어 제한적 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+            "quote": "갈대와 물억새가 무성하게 자라며 6km의 산책로가 조성돼 있고, 20∼30m 간격으로 토종식물에 대한 안내판이 설치되어 있다."
+          },
+          {
+            "claim": "ENVIRONMENT",
+            "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+            "quote": "버드나무, 갈대, 억새 등의 군락을 이루고 있는 자연환경을 최대한 활용한 곳이다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "버드나무·갈대·억새 군락, 계류 폭포와 연못, 구역별 경관 조망 등 장면에서 구별되는 시각적 성격이 확인된다. 일관된 연출이 장면 전체를 지배한다는 수준의 근거는 없어 수준 3으로 판단한다. (수정: 원 제안의 두 번째 인용은 해당 출처의 허용 claim에 VISUAL_APPEARANCE가 없어 같은 출처의 허용 claim으로 대체)",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "c87b3194b9476b0644a10cae99e39c53cf53ba7d0e1216198d2fcda2e339a8ff",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성의 시각적 특성은 보이지 않으며 콘크리트 블록과 안내판이 현대적 조성물임을 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:044486d039265234f0492dbc80d0fcf9b79bae00a034bc7a979c9cac770d8333",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "cc05493fc732f999b1e66869227c3df68828a92f037643d5adff38ccb0ccd109",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569396_1",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8bd12f7e9bde86efa68213e332061af29d118a798b8fd9bbfa1cd55ffee331c6",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/96/3569396_image2_1.jpg"
+        },
+        "record_sha256": "47a019c6c312dfc082a77463f6bea9547b00ab0000fb8ef8f5c81dbd1ebbe867",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "무지개 모양의 붉은 목재 전통식 다리가 보이나 원근상 작고, 주변은 콘크리트 교량과 도시 건물이 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0ef3d410752a65e85c629459f7bef0788dbf7920a639273166a12873c8f0c597",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15e86cd6de6ef51db14bc93c164facd20ec724c992e3a5aa9f56de767f6829a9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569376_7",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fe95c7e084fd2355b9995b4a5f5170ab6f80776f245e6561c7393519ae982f0c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/76/3569376_image2_1.jpg"
+        },
+        "record_sha256": "3c7fffed849f2452063f7d2f7130d34af7b979a6dc7ec04cd5676ba2c463c5df",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "빨강·노랑·파랑·초록으로 칠해진 벌하우스 블록이 풀숲의 무채색 녹조 속에서 색 대비를 이루며 시선을 끄는 중간 정도의 연출적 성격을 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2e857cc9ed0904bf23a83053343e3c49222cdfe92225a6ba67912975594a5ab1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "cc05493fc732f999b1e66869227c3df68828a92f037643d5adff38ccb0ccd109",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569396_1",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8bd12f7e9bde86efa68213e332061af29d118a798b8fd9bbfa1cd55ffee331c6",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/96/3569396_image2_1.jpg"
+        },
+        "record_sha256": "79f591ff9d5b247949ae83e316a88ce7ecb9b8a36bee59564d485ecd459f83de",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "하천 수면, 양쪽의 울창한 녹지와 버드나무가 장면의 대부분을 채우며 물과 자연 경관이 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5d618c2df99cb919da1b345b7a68f2f321a14221b7a288dbc92011aa98f02ed3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15e86cd6de6ef51db14bc93c164facd20ec724c992e3a5aa9f56de767f6829a9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569376_7",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fe95c7e084fd2355b9995b4a5f5170ab6f80776f245e6561c7393519ae982f0c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/76/3569376_image2_1.jpg"
+        },
+        "record_sha256": "18b68b5dedf195e3bdb14d98a3d17bb65111614caa3eece37836a499f0c7a17b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "잔잔한 하늘과 초록·노랑·주황으로 변한 나뭇잎이 조화를 이루는 자연스러운 공원 구도로, 평온하고 대비가 절제된 시각적 성격이 보통 수준으로 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:671ec726238cba7bad320bd653f00bdb3a19fbac2780da40208ac84ed1ac2e2b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "003a7338545cd7bf6cc2c6820988464b0e2349b4243b3ffbba6486810ea730c7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569378_11",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "00b4ed7e011e6cf7c32e2dc888d1a8057ab4352bc511703140f73dfeec218ffa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/78/3569378_image2_1.jpg"
+        },
+        "record_sha256": "59ea4e8a4cae1737fd0c508edc40a74d25b7316e7527b4613903ae6de7e6999e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "울창한 수림, 버드나무, 시원하게 트인 하늘과 구름 등 녹지와 자연 경관이 화면 대부분을 차지하며 두드러지게 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:959dfcf4e40a06bff40401491e85965226ff32f1bf5f49b8a984b09dc2c1a005",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "003a7338545cd7bf6cc2c6820988464b0e2349b4243b3ffbba6486810ea730c7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569378_11",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "00b4ed7e011e6cf7c32e2dc888d1a8057ab4352bc511703140f73dfeec218ffa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/78/3569378_image2_1.jpg"
+        },
+        "record_sha256": "6275fa7ecf5e2013c7c92798f8d13ea75a06c325fc51de2e28065cfd37200abe",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "우거진 나무, 키 큰 풀, 덤불이 화면 전체를 채워 자연 환경 단서가 장면을 지배함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:96fab3842c61e5871af73f75838454767ff4e1f38be2d6505117dd9a5e875701",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "cc05493fc732f999b1e66869227c3df68828a92f037643d5adff38ccb0ccd109",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569396_1",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8bd12f7e9bde86efa68213e332061af29d118a798b8fd9bbfa1cd55ffee331c6",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/96/3569396_image2_1.jpg"
+        },
+        "record_sha256": "2c1b3e006c38e2a3d1e6604dc03b8cf26527b029c01f2d4065b918e96f5574c1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "나무 벤치와 울타리 등이 일부 보이지만 전통적 재료나 공간 구성의 시각적 특징은 거의 드러나지 않아 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9edb32e24fdd6c4eabb029937014e92f563c4aaef3c8b3b4a285a6703f6f4161",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "003a7338545cd7bf6cc2c6820988464b0e2349b4243b3ffbba6486810ea730c7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569378_11",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "00b4ed7e011e6cf7c32e2dc888d1a8057ab4352bc511703140f73dfeec218ffa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/78/3569378_image2_1.jpg"
+        },
+        "record_sha256": "32573cca5857a92574b75de72769fb7cf3a03b4b8ab469ffd07c1dfbc2b09d82",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "교량 하부 어두운 프레임이 강물과 푸른 하늘을 자연스럽게 자르는 대비 구도가 두드러지며, 수면 반사와 아치 형태가 시각적 연출감을 강화한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ac1598fc31016d19636def949acd38d21baf8e09dfb5107e2061546d373fb246",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15e86cd6de6ef51db14bc93c164facd20ec724c992e3a5aa9f56de767f6829a9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569376_7",
+          "request_sha256": "6535c7c11fb6cc02c686de2c871c75c553df4e68aee7e1437eeb8114d455c644",
+          "response_sha256": "85022eca8582c2820faae947ae9f53b2d6140a45bbf67eccc63f32c92d6e1052",
+          "retrieved_at": "2026-09-10T08:21:20.267515Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fe95c7e084fd2355b9995b4a5f5170ab6f80776f245e6561c7393519ae982f0c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/76/3569376_image2_1.jpg"
+        },
+        "record_sha256": "2fdae90fa511ef9a8b440c896383b4fd2be532c61e0e6e5e62f73779d9361599",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:227a2ad632e76130b346574a16f81122c559e1bf97c2094abaa39cbb5ead9421",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "809596",
+          "request_sha256": "6188f9252cd1a88ad11e4763559273fac541869f27aa53133d96298453da4109",
+          "response_sha256": "f3d3a9fd109bfe3fab70eb74dd9000bf3920ce8af110ebccb412a6231531f595",
+          "retrieved_at": "2026-09-10T07:55:19.448295Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-02T04:32:59Z",
+          "source_record_sha256": "f1d2a18959faa0e4f58fc73b552dfb615c47f8cf4c5f05d0f73d874570d52472",
+          "source_uri": null
+        },
+        "record_sha256": "daaa332c543c3dd8d068739d3081eb12f4367859e4536e04aa60b3162fd2a4dd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "여의도샛강생태공원은 여의도 국회 뒤 샛강에서 가양대교 중앙까지로, 버드나무, 갈대, 억새 등의 군락을 이루고 있는 자연환경을 최대한 활용한 곳이다. 인근 지하철에서 발생하는 지하수를 이용하여 계류 폭포와 연못을 조성하였고 주변에는 습지성 식물인 부들, 미나리, 물옥잠 등을 심어 수질개선과 자연환경에 적합하도록 조성하였다. 이 곳에는 자전거도로, 산책로, 주차장 2개소, 교량 5개소, 광장 2개소, 안내센터, 잔디마당, 파크골프장, 생태수로, 창포원, 버들숲, 수질정화원, 물억새 군락, 폐쇄형 습지 등이 있다. 또한 생태해설, 자연관찰, 자연놀이 등의 생태프로그램을 운영하고 있다. 안내센터에는 학습공간과 생태프로그램 운영실, 반딧불이 사육장이 있다. 서울 한복판 빌딩숲 사이에 위치한 공원이지만, 온갖 야생화가 피어나는 들판과 버들치, 송사리, 붕어가 사는 샛강이 있다. 갈대와 물억새가 무성하게 자라며 6km의 산책로가 조성돼 있고, 20∼30m 간격으로 토종식물에 대한 안내판이 설치되어 있다. 천연기념물 황조롱이를 비롯해 흰뺨검둥오리, 왜가리, 제비꽃, 말즘, 버들치 등 희귀 동식물이 살고 있다. 생태공원에는 자연을 해치지 않기 위해 벤치와 매점은 물론, 동식물들의 휴식과 수면을 위해 가로등도 설치하지 않았다. 연중 이용이 가능하나 동물의 산란기에는 일부 구간의 출입이 제한될 수 있다. 수도권 지하철 5호선 여의도역 1번 출구에서 700m에 위치하고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:492b6c294555ec8b5fa9661e4fef7682ce38712c907ce67b080a546b85fab948",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "809596",
+          "request_sha256": "d15c4cbd72e939ecd1c6ab51f41a239b39f90a4433edbf4be4315b5a38b7668e",
+          "response_sha256": "c13097e3729ccfef3a0656cb231f1e2e9073b22b53dffd0a586d97da4d594c54",
+          "retrieved_at": "2026-09-10T08:21:19.923380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9b6ba097f1ad158c61ad1ce8cf804176931abe63b658f33565e9d63f85ff03e8",
+          "source_uri": null
+        },
+        "record_sha256": "544bccec4491c5a12c87ff0215b8427da1eda242bc782a03063ba4324a681410",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d0e14af58f4b9a2db7eb229a410ece319edc2325dd05ac966ec88219e03e1bca",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "809596",
+          "request_sha256": "d15c4cbd72e939ecd1c6ab51f41a239b39f90a4433edbf4be4315b5a38b7668e",
+          "response_sha256": "c13097e3729ccfef3a0656cb231f1e2e9073b22b53dffd0a586d97da4d594c54",
+          "retrieved_at": "2026-09-10T08:21:19.923380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a531b7e58024cd149ff5be1bf52e777eeaf8cc32a255fc9081f20c80e3bf2973",
+          "source_uri": null
+        },
+        "record_sha256": "e3d3de3c97c3f80d4f67661088271976d4cfba4240ffa7df33ad412d19cd37b4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "여의경관구역(여의도 샛강 상류 한강본류부 400m) - 한강과 여의도 샛강이 만나는 유입부로서 한강의 경관을 조망할 수 있는 초지 및 잔디마당과 파크골프장, 산책로가 있어 다양한 놀이를 즐길 수 있음 수질정화 습지지역(63빌딩 ~ 여의교 지점) - 다양한 형태의 습지를 조성하여 여의도샛강 생태공원의 수질정화 및 생태적 발생기반을 조성. 생태체험 학습지역(여의교 ~ 서울교) - 안정된 생태자원을 보존하기 위하여 생태수로 및 버들숲 등을 조성하여 생태학습을 할 수 있는 기회 제공 공간 버들문화구역(서울교 ~ 파천교) - 여의도 공원과 연계하여 시민들의 여가문화 공간을 제공하고 생태학습장으로서의 다양한 관찰활동을 할 수 있도록 버들광장, 창포원 및 물억새 군락 조성 생태보존 구역(파천교 ~ 국회의사당) - 보존지구로 선정하고 통행로를 우회하여 생태적 자연성이 우수한 폐쇄형 습지를 절대적으로 보존하도록 조성 둔치경관 탐방구역(여의하류 IC 부분) - 한강 및 밤섬의 경관을 조망 할 수 있도록 넓은 초지로 남는 언덕형태로 조성"
+      }
+    ],
+    "parent_source_sha256": "29b302b132a53c5bcef84c645b6897f429f03c9a303a03d34a53f34be0f83e3b",
+    "place": {
+      "address": "서울특별시 영등포구 여의동로 48 (여의도동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+      "name_ko": "여의도샛강생태공원",
+      "place_id": "public:korea:35963c6aa33aa63ba0cc1f58e02dbb0d5ca86f5be74b4372a2a4ace87962921d",
+      "provider_content_id": "809596",
+      "region_code": "11560",
+      "region_name": "서울특별시 영등포구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

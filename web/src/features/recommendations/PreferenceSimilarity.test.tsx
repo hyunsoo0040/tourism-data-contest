@@ -51,9 +51,9 @@ describe("preference similarity display", () => {
   it("shows expected 50 and actual 50 as 100%, mapping asymmetric components by key", () => {
     const { item } = presentation();
     const { container } = render(<GroundedAxes item={item} />);
-    const history = screen.getByRole("meter", { name: "역사·전통 취향 유사도 100%" });
-    const emotion = screen.getByRole("meter", { name: "감성·이미지 취향 유사도 20%" });
-    const rest = screen.getByRole("meter", { name: "휴식·몰입 취향 유사도 75%" });
+    const history = screen.getByRole("meter", { name: "대상•원형형 취향 유사도 100%" });
+    const emotion = screen.getByRole("meter", { name: "의미•이미지형 취향 유사도 20%" });
+    const rest = screen.getByRole("meter", { name: "자기•몰입형 취향 유사도 75%" });
     expect(history.getAttribute("aria-valuenow")).toBe("100");
     expect(history.getAttribute("aria-valuetext")).toBe("내 취향과 100% 유사");
     expect(emotion.getAttribute("aria-valuenow")).toBe("20");
@@ -67,7 +67,7 @@ describe("preference similarity display", () => {
     setAxes(item, [comparison("E", 90, null, null), comparison("H", 0, 100, 0), comparison("R", 25, 50, 75)], 38);
     const { container } = render(<GroundedAxes item={item} />);
     expect(screen.getAllByRole("meter")).toHaveLength(2);
-    expect(screen.getByRole("meter", { name: "역사·전통 취향 유사도 0%" }).getAttribute("aria-valuenow")).toBe("0");
+    expect(screen.getByRole("meter", { name: "대상•원형형 취향 유사도 0%" }).getAttribute("aria-valuenow")).toBe("0");
     const unknown = container.querySelector('[data-supported-axis="E"]') as HTMLElement;
     expect(within(unknown).getByText("비교 어려움")).toBeTruthy();
     expect(within(unknown).queryByRole("meter")).toBeNull();
@@ -123,9 +123,9 @@ describe("preference similarity display", () => {
     const table = screen.getByRole("table", { name: "선택한 장소와 내 취향의 유사도" });
     const cell = (heading: string) => within(table).getByRole("rowheader", { name: heading }).parentElement!.querySelector("td")!.textContent;
     expect(cell("내 취향과의 유사도")).toBe("65%");
-    expect(cell("역사·전통 유사도")).toBe("100%");
-    expect(cell("감성·이미지 유사도")).toBe("20%");
-    expect(cell("휴식·몰입 유사도")).toBe("75%");
+    expect(cell("대상•원형형 유사도")).toBe("100%");
+    expect(cell("의미•이미지형 유사도")).toBe("20%");
+    expect(cell("자기•몰입형 유사도")).toBe("75%");
     expect(cell("공간 성격 유사도")).toBe("20%");
     expect(cell("방문객 성격 유사도")).toBe("선택하지 않은 항목");
     expect(cell("현장 밀도 유사도")).toBe("비교 어려움");

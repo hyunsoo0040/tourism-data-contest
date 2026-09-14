@@ -62,6 +62,30 @@ def _reseal(payload: dict[str, object]) -> dict[str, object]:
     return sealed
 
 
+def test_v2_requires_bound_provider_and_matching_semantic_identity() -> None:
+    contracts = _contracts()
+    payload = _candidate_set_payload([_candidate(trait_id="M5", text_ko="산책·장시간 체류")])
+    payload.update(
+        schema_version="photo-trait-candidates.v2",
+        analysis_kind="semantic",
+        provider_id="fixture-semantic",
+        semantic_version="photo-semantics-v2",
+    )
+    payload["candidates"][0]["semantic_id"] = "M5.long_stay"
+    accepted = contracts.PhotoTraitCandidateSet.model_validate(_reseal(payload))
+    assert accepted.candidates[0].semantic_id == "M5.long_stay"
+    assert accepted.analysis_kind == "semantic"
+    for changed in (
+        payload | {"provider_id": "synthetic-photo-analyzer"},
+        payload | {"schema_version": "photo-trait-candidates.v1"},
+    ):
+        with pytest.raises(ValidationError):
+            contracts.PhotoTraitCandidateSet.model_validate(_reseal(changed))
+    payload["candidates"][0]["semantic_id"] = "M4.participation"
+    with pytest.raises(ValidationError):
+        contracts.PhotoTraitCandidateSet.model_validate(_reseal(payload))
+
+
 def test_candidate_authority_scope_is_candidate_evidence_only() -> None:
     contracts = _contracts()
     assert contracts.CANDIDATE_EVIDENCE_ONLY == "CANDIDATE_EVIDENCE_ONLY"

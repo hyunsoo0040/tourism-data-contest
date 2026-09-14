@@ -14,10 +14,10 @@ import re
 from typing import Final, Literal, cast
 
 from itda.domain.canonical import canonical_sha256
+from itda.domain.photo_semantics import PHOTO_SEMANTIC_VERSION
 from itda.photo.contracts import (
     CANDIDATE_EVIDENCE_ONLY,
     PHOTO_TRAIT_CANDIDATE_CAP,
-    PHOTO_TRAIT_CANDIDATE_SCHEMA_VERSION,
     PhotoTraitCandidate,
     PhotoTraitCandidateSet,
 )
@@ -30,12 +30,12 @@ _MAX_RUBRIC_KO_LENGTH: Final[int] = 300
 _JOB_ID_PATTERN: Final[re.Pattern[str]] = re.compile(r"^[0-9a-f]{64}$")
 
 _TRAIT_VOCABULARY: Final[tuple[tuple[str, str], ...]] = (
-    ("M5", "조용한 자연 산책"),
-    ("M2", "역사와 이야기가 있는 곳"),
-    ("M3", "사람이 적은 한적한 곳"),
-    ("M1", "편안한 저녁 산책"),
-    ("M4", "넓게 걷기 좋은 길"),
-    ("M6", "노을이 보이는 자리"),
+    ("M5", "산책·장시간 체류"),
+    ("M2", "관광·상업 중심"),
+    ("M3", "한적함"),
+    ("M1", "원형·보존 중심"),
+    ("M4", "참여·체험"),
+    ("M6", "야간·계절·특정 시간 의존"),
 )
 
 
@@ -94,15 +94,19 @@ class SyntheticPhotoAnalysisProvider:
             for trait_id, text_ko in ordered[:count]
         )
         return PhotoTraitCandidateSet(
-            schema_version=cast(
-                Literal["photo-trait-candidates.v1"], PHOTO_TRAIT_CANDIDATE_SCHEMA_VERSION
-            ),
+            schema_version="photo-trait-candidates.v2",
+            analysis_kind="synthetic",
+            provider_id=self.provider_id,
+            semantic_version=PHOTO_SEMANTIC_VERSION,
             job_id=job_id,
             payload_sha256=payload_sha256,
             candidates=candidates,
             authority_scope=cast(Literal["CANDIDATE_EVIDENCE_ONLY"], CANDIDATE_EVIDENCE_ONLY),
             candidate_set_sha256=_seal(
-                schema_version=PHOTO_TRAIT_CANDIDATE_SCHEMA_VERSION,
+                schema_version="photo-trait-candidates.v2",
+                analysis_kind="synthetic",
+                provider_id=self.provider_id,
+                semantic_version=PHOTO_SEMANTIC_VERSION,
                 job_id=job_id,
                 payload_sha256=payload_sha256,
                 candidates=[row.model_dump(mode="json") for row in candidates],

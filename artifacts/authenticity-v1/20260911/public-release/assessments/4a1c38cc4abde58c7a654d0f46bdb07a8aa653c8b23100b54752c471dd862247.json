@@ -1,0 +1,984 @@
+{
+  "assessed_at": "2026-09-11T19:30:46.915605Z",
+  "assessment_sha256": "4a1c38cc4abde58c7a654d0f46bdb07a8aa653c8b23100b54752c471dd862247",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 36
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e83eefe7637957b328737c4aee868311bac8cff87afdc6480d5b6e1e1eb2b30d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "강남역이 만남의 장소로 공유되는 이미지를 지닌다는 공식 설명이 있으나, 그 의미 표현이 다양한 장면에서 확인되거나 방문 경험의 중심이라는 근거는 부족하여 낮은 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:647acf3aa7fee773ce84d224f39097e6c4d47ff1b66840076b9e1baa7ffaec19"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "한류라는 매체적 이미지와 장소가 연결되어 관광 코스로 제공된다는 공식 근거가 있으나, 반복되는 매체 유통의 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:23f4db575cbe7b50a76d99d2c38fbeb327d95845a94b1af918dba5b18f47235d",
+            "appearance:24c40f83dfeb5d42c8a132785dbb2fd991e1cbe5a8b596e167d7a91ef91c859b",
+            "appearance:6fa3a9f721ceb8641079ceaf98b0e7e30cea86b50784f7c11f8ffd63543941cf"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "강남이라는 장소의 외관·경관·연출이 특정 이미지를 표현한다는 시각적 성격에 관한 근거가 없다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:647acf3aa7fee773ce84d224f39097e6c4d47ff1b66840076b9e1baa7ffaec19"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "한류스타거리 등 대표 이미지 장면을 도보관광으로 경험할 수 있다는 근거가 있으나, 재현·참여 경험이 중심이라는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e83eefe7637957b328737c4aee868311bac8cff87afdc6480d5b6e1e1eb2b30d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:016820e67ba6c909db0b3fa112eaf1a0c6d2230a651b49c98220c60304d0dce6",
+            "appearance:2a314d7e242903a311b1de8a760626f2bb458b2bae484e126939545add945a10",
+            "appearance:2a38ba667e8718d09ab25b5986144edbc6c7b805826f7d54421c380c63d1f133"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 8,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "관광정보센터 내 휴게공간이라는 제한적인 환경 단서만 있으며, 자연 환경이나 회복 환경이 두드러진다는 근거는 없다.",
+      "value": 21
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:647acf3aa7fee773ce84d224f39097e6c4d47ff1b66840076b9e1baa7ffaec19"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "트롤리버스 투어와 도보관광 프로그램 등 구체적 참여 활동이 제공되나, 지속적 몰입·도전 활동이라는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "강남이라는 장소 자체의 확인된 원형·유산 접촉 경험을 뒷받침하는 근거가 없다. 자료는 교통·상권·관광 안내 서비스에 관한 것뿐이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "강남역 주변의 교통·상권 현황은 기술되어 있으나 이 장소의 실제 역사나 유래에 대한 구체적 서사는 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 없다. 한류 코스는 전통 전승과 직결되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 관한 근거가 없다. 관광 안내는 역사 탐구를 의미하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e83eefe7637957b328737c4aee868311bac8cff87afdc6480d5b6e1e1eb2b30d",
+          "quote": {
+            "end": 322,
+            "method": "EXACT",
+            "original": "강남역 부근이 만남을 위한 약속장소로 적합하기 때문이다. 각종 모임이나 행사 또는 개인적인 만남을 갖기에 좋은 지역적, 상권적 특성을 지니고 있다.",
+            "start": 240,
+            "submitted": "강남역 부근이 만남을 위한 약속장소로 적합하기 때문이다. 각종 모임이나 행사 또는 개인적인 만남을 갖기에 좋은 지역적, 상권적 특성을 지니고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4c6d2259b4434547cecaf0157f769428cf367ec130aa07668eefcfb8f8c2ae16"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "강남역이 만남의 장소로 공유되는 이미지를 지닌다는 공식 설명이 있으나, 그 의미 표현이 다양한 장면에서 확인되거나 방문 경험의 중심이라는 근거는 부족하여 낮은 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:647acf3aa7fee773ce84d224f39097e6c4d47ff1b66840076b9e1baa7ffaec19",
+          "quote": {
+            "end": 202,
+            "method": "EXACT",
+            "original": "강남관광정보센터 외국인대상 무료도보관광 프로그램 - 한류코스: 강남관광정보센터-JYP엔터테인먼트-JS엔터테인먼트-FNC엔터테인먼트-SM엔터테인먼트-한류스타거리-강남돌하우스",
+            "start": 107,
+            "submitted": "강남관광정보센터 외국인대상 무료도보관광 프로그램 - 한류코스: 강남관광정보센터-JYP엔터테인먼트-JS엔터테인먼트-FNC엔터테인먼트-SM엔터테인먼트-한류스타거리-강남돌하우스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c20cb083b1910188a9b1ebb22a68410901974e32cead70715c0228f9e9e52a42"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "한류라는 매체적 이미지와 장소가 연결되어 관광 코스로 제공된다는 공식 근거가 있으나, 반복되는 매체 유통의 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "강남이라는 장소의 외관·경관·연출이 특정 이미지를 표현한다는 시각적 성격에 관한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:647acf3aa7fee773ce84d224f39097e6c4d47ff1b66840076b9e1baa7ffaec19",
+          "quote": {
+            "end": 217,
+            "method": "EXACT",
+            "original": "한류코스: 강남관광정보센터-JYP엔터테인먼트-JS엔터테인먼트-FNC엔터테인먼트-SM엔터테인먼트-한류스타거리-강남돌하우스-G+스타존(압구정로데오역)",
+            "start": 136,
+            "submitted": "한류코스: 강남관광정보센터-JYP엔터테인먼트-JS엔터테인먼트-FNC엔터테인먼트-SM엔터테인먼트-한류스타거리-강남돌하우스-G+스타존(압구정로데오역)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c20cb083b1910188a9b1ebb22a68410901974e32cead70715c0228f9e9e52a42"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "한류스타거리 등 대표 이미지 장면을 도보관광으로 경험할 수 있다는 근거가 있으나, 재현·참여 경험이 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "인용은 관광정보센터의 리플릿·휴게공간·보관함 편의시설에 불과하며, 수준 2 '자율적으로 선택·탐색할 기회'가 지원된다고 보기엔 환경·기회의 실체가 불분명하다. 원문은 편의 제공을 서술할 뿐 자율 탐색 기회를 직접 뒷받침하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e83eefe7637957b328737c4aee868311bac8cff87afdc6480d5b6e1e1eb2b30d",
+          "quote": {
+            "end": 864,
+            "method": "EXACT",
+            "original": "잠시 쉬어갈 수 있는 휴게공간과 무료로 짐을 보관할 수 있는 물품 보관함 등의 편의시설도 이용할 수 있다",
+            "start": 806,
+            "submitted": "잠시 쉬어갈 수 있는 휴게공간과 무료로 짐을 보관할 수 있는 물품 보관함 등의 편의시설도 이용할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4c6d2259b4434547cecaf0157f769428cf367ec130aa07668eefcfb8f8c2ae16"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 1,
+      "reason": "관광정보센터 내 휴게공간이라는 제한적인 환경 단서만 있으며, 자연 환경이나 회복 환경이 두드러진다는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:647acf3aa7fee773ce84d224f39097e6c4d47ff1b66840076b9e1baa7ffaec19",
+          "quote": {
+            "end": 66,
+            "method": "EXACT",
+            "original": "강남시티투어 트롤리버스 - 어라운드강남시티투어 코스: 강남역-봉은사/코엑스-한류스타거리-관광정보센터-가로수길-세빛섬",
+            "start": 2,
+            "submitted": "강남시티투어 트롤리버스 - 어라운드강남시티투어 코스: 강남역-봉은사/코엑스-한류스타거리-관광정보센터-가로수길-세빛섬",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c20cb083b1910188a9b1ebb22a68410901974e32cead70715c0228f9e9e52a42"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "트롤리버스 투어와 도보관광 프로그램 등 구체적 참여 활동이 제공되나, 지속적 몰입·도전 활동이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회를 직접 보여주는 근거가 없다. 만남 장소라는 상권 설명만으로는 관계 활동 지원을 확정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "792d93faf7587388e08a37d70fe9c4523fc4c71328dedc4cc80e9a1518b8fa4f",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:e83eefe7637957b328737c4aee868311bac8cff87afdc6480d5b6e1e1eb2b30d",
+              "quote": {
+                "end": 846,
+                "method": "EXACT",
+                "original": "관광 안내 리플릿 등을 통해 여행 정보를 쉽게 얻을 수 있으며 잠시 쉬어갈 수 있는 휴게공간과 무료로 짐을 보관할 수 있는 물품 보관함",
+                "start": 771,
+                "submitted": "관광 안내 리플릿 등을 통해 여행 정보를 쉽게 얻을 수 있으며 잠시 쉬어갈 수 있는 휴게공간과 무료로 짐을 보관할 수 있는 물품 보관함",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "4c6d2259b4434547cecaf0157f769428cf367ec130aa07668eefcfb8f8c2ae16"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 2,
+          "reason": "자율적으로 정보를 얻고 쉬어갈 수 있는 제한된 기회가 안내되나, 자율 탐색이 방문 경험의 중심이라는 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "인용은 관광정보센터의 리플릿·휴게공간·보관함 편의시설에 불과하며, 수준 2 '자율적으로 선택·탐색할 기회'가 지원된다고 보기엔 환경·기회의 실체가 불분명하다. 원문은 편의 제공을 서술할 뿐 자율 탐색 기회를 직접 뒷받침하지 않는다."
+        }
+      },
+      "reason": "인용은 관광정보센터의 리플릿·휴게공간·보관함 편의시설에 불과하며, 수준 2 '자율적으로 선택·탐색할 기회'가 지원된다고 보기엔 환경·기회의 실체가 불분명하다. 원문은 편의 제공을 서술할 뿐 자율 탐색 기회를 직접 뒷받침하지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "19a992521a85f4fdba2ce30e881e2011e60ead187c6655b62cbc80198e8945e6",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "도로변 나무와 가로수 잎이 약간 보이고 하늘이 트였으나, 전체는 고층 건물과 도시 인프라가 중심이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:016820e67ba6c909db0b3fa112eaf1a0c6d2230a651b49c98220c60304d0dce6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11b9df688cdc8af361a8ae47677b7b32343662f22dc697e97db48ae9a5303634",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412239_3",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9ea3581e6e28f9046c19f574ff38965c78ba8f751824d46a45ff3342b6b441dc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/39/3412239_image2_1.jpg"
+        },
+        "record_sha256": "f03160eabe940a5d100f7e2166f21953f4d4669bae73410892c65ca81c1f5059",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "야경의 네온·간판 조명과 차량 궤적이 화면을 지배하며, 종횡 중심 구도로 도시 밤의 연출이 매우 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:23f4db575cbe7b50a76d99d2c38fbeb327d95845a94b1af918dba5b18f47235d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "541cf1c5bfb915c10e72c2dc2e51a288e82aa6f6d4d3d7f99cb6041c98c1e5d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412240_4",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "749e15e315f4d58773afb8bb098012985c7752e1c0968958455580cceac02f6c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/40/3412240_image2_1.jpg"
+        },
+        "record_sha256": "2a524046898d7e650a8471a37334c3d1b7153ad4a33668169ec91843a9e7fe29",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "야간 네온과 따뜻한 조명, 화려한 간판과 벽화가 장면 전체를 지배하며 강한 시각적 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:24c40f83dfeb5d42c8a132785dbb2fd991e1cbe5a8b596e167d7a91ef91c859b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5206d0dc31732c071ab0fc42964183a439eef71445384683ba1bfcc371b6ceed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412243_6",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c87cf42faebcd403a0793d435d6766ff2ef3f951d288c3e0eb8ddab277ff9372",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/43/3412243_image2_1.jpg"
+        },
+        "record_sha256": "b82c64778e8a1df6f803c1ac0d0c9257cbbdcb1fe3179ec056fd279a64c22781",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "가로수와 나뭇잎이 일부 보이나 도시 상가 거리가 대부분으로 자연 경관 단서는 매우 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2a314d7e242903a311b1de8a760626f2bb458b2bae484e126939545add945a10",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5206d0dc31732c071ab0fc42964183a439eef71445384683ba1bfcc371b6ceed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412243_6",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c87cf42faebcd403a0793d435d6766ff2ef3f951d288c3e0eb8ddab277ff9372",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/43/3412243_image2_1.jpg"
+        },
+        "record_sha256": "a4742644674b2837a0e494d9af79a974d86959731722dfe6d9c4fa2e3bf208bd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지·수면·자연 경관이 거의 보이지 않고 밀집된 건물과 도로만 채움",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2a38ba667e8718d09ab25b5986144edbc6c7b805826f7d54421c380c63d1f133",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "541cf1c5bfb915c10e72c2dc2e51a288e82aa6f6d4d3d7f99cb6041c98c1e5d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412240_4",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "749e15e315f4d58773afb8bb098012985c7752e1c0968958455580cceac02f6c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/40/3412240_image2_1.jpg"
+        },
+        "record_sha256": "ec02972436ae2a755210037c7601c9093c0ed39a7cee0ed59148ef37a2ee056c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "유리 커튼월과 현대적 마천루 구성만 보이며 전통적 외관·재료·공간 구성의 특성은 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4d3efd73e7c9c287da6e048c989c97293937a83afc55fc5317576a43b6b97fd1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11b9df688cdc8af361a8ae47677b7b32343662f22dc697e97db48ae9a5303634",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412239_3",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9ea3581e6e28f9046c19f574ff38965c78ba8f751824d46a45ff3342b6b441dc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/39/3412239_image2_1.jpg"
+        },
+        "record_sha256": "d365ec64cbe93671bb48669fc37eed1a4111b44dcd3f815c54ddd0d29ff828b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 상업 건물, 간판, 유리·콘크리트 외관 위주로 전통적 재료나 공간 구성이 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:683ce32562a856270ff0e8788ae75a9a648dd229b9a2f1ab6de124bcce9583a4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "541cf1c5bfb915c10e72c2dc2e51a288e82aa6f6d4d3d7f99cb6041c98c1e5d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412240_4",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "749e15e315f4d58773afb8bb098012985c7752e1c0968958455580cceac02f6c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/40/3412240_image2_1.jpg"
+        },
+        "record_sha256": "95e3e16fdc1f5b4f21d3732c0affcd6571a378cd2185fb6cc601dc1f1948aab1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "청사진 유리 고층 빌딩들이 저녁 하늘을 반사하며 화면을 지배하고, 저각도 구도와 건물 내부 조명이 강한 시각적 연출을 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6fa3a9f721ceb8641079ceaf98b0e7e30cea86b50784f7c11f8ffd63543941cf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11b9df688cdc8af361a8ae47677b7b32343662f22dc697e97db48ae9a5303634",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412239_3",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9ea3581e6e28f9046c19f574ff38965c78ba8f751824d46a45ff3342b6b441dc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/39/3412239_image2_1.jpg"
+        },
+        "record_sha256": "99d6e7d113b3958732fe33ef1e2af534bbd0ddbf50322c32be6c081906d22d5d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "벽돌 외관과 아치형 창 등 일부 클래식한 조형 요소가 있으나 전반은 현대적 상업 외관이 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c0c700c116a03341f7b3c242ac759c1099edca5d80f4b51fd2452dbf57b3b88e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5206d0dc31732c071ab0fc42964183a439eef71445384683ba1bfcc371b6ceed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3412243_6",
+          "request_sha256": "c5ee0a77b1b502f10bde225d418339e96a53c45f844f02a2308accf3ca6195e9",
+          "response_sha256": "d24dfda887d93fcc6f4a67592241483c7b532d83904a00a30b9004f6dbf920ab",
+          "retrieved_at": "2026-09-11T02:11:50.509440Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c87cf42faebcd403a0793d435d6766ff2ef3f951d288c3e0eb8ddab277ff9372",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/43/3412243_image2_1.jpg"
+        },
+        "record_sha256": "4ffee7793847c89a644a0a7f29f449fc4bfd34349f5c4550087a20b9fba5cdef",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1c04c580b84f973562c1e0671c58ae1b369c5762a9a4512276e732327ebbe32d",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "264570",
+          "request_sha256": "e2d40aa1c2efc7d56c234f86ad10e1e8b02a6601a2735713e525831d97c387c7",
+          "response_sha256": "44316d01514a1144d0ef7acb34c2375dc8558c0cd0f434db46eec697b0aec07c",
+          "retrieved_at": "2026-09-11T02:11:50.181048Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6e9eea65dd77f8df3efece3acfe9d9d8d4bcc2d6edf3caa4218773ef3cc18485",
+          "source_uri": null
+        },
+        "record_sha256": "f6d90a7027af67a6dac67ee4b4a7e1f1497ddd10dca7815174f7607b1d6583a2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4555b5d5d2c04ec3d24cb2e3e3d1ec53ec111cef09f7f6f3b51d40eea24e52ca",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "264570",
+          "request_sha256": "e2d40aa1c2efc7d56c234f86ad10e1e8b02a6601a2735713e525831d97c387c7",
+          "response_sha256": "44316d01514a1144d0ef7acb34c2375dc8558c0cd0f434db46eec697b0aec07c",
+          "retrieved_at": "2026-09-11T02:11:50.181048Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e61c5078f49405fb0e6ae9f2355dc82be70780cbdbae864ae444d90d0a997e57",
+          "source_uri": null
+        },
+        "record_sha256": "8fadcfa41653f69d97de55cc5b353725ec1f17decdbc59f02ea4edc3ca011854",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:647acf3aa7fee773ce84d224f39097e6c4d47ff1b66840076b9e1baa7ffaec19",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "264570",
+          "request_sha256": "e2d40aa1c2efc7d56c234f86ad10e1e8b02a6601a2735713e525831d97c387c7",
+          "response_sha256": "44316d01514a1144d0ef7acb34c2375dc8558c0cd0f434db46eec697b0aec07c",
+          "retrieved_at": "2026-09-11T02:11:50.181048Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a66c833ab03c83c423a32e59156fc6326b9b700c6c73688768734356c5c5d2f5",
+          "source_uri": null
+        },
+        "record_sha256": "c20cb083b1910188a9b1ebb22a68410901974e32cead70715c0228f9e9e52a42",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "* 강남시티투어 트롤리버스 - 어라운드강남시티투어 코스: 강남역-봉은사/코엑스-한류스타거리-관광정보센터-가로수길-세빛섬-고속터미널/신세계백화점-서래마을-법원.교대역-삼성타운-강남역(종착) * 강남관광정보센터 외국인대상 무료도보관광 프로그램 - 한류코스: 강남관광정보센터-JYP엔터테인먼트-JS엔터테인먼트-FNC엔터테인먼트-SM엔터테인먼트-한류스타거리-강남돌하우스-G+스타존(압구정로데오역)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e83eefe7637957b328737c4aee868311bac8cff87afdc6480d5b6e1e1eb2b30d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "264570",
+          "request_sha256": "035dfa8ad29173c4f87e230b71719dd87849666ee3e77a1a448ff44e27d06d87",
+          "response_sha256": "cc439afaa29e2d7022d35676fa83996f2f245413913c0593816f0a96cd3eca43",
+          "retrieved_at": "2026-09-10T17:04:28.295183Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-06-04T04:30:52Z",
+          "source_record_sha256": "305bf450cf3b41decf9fb9bf0d9366f65ae5a0e0f07f86810c3021dc90174753",
+          "source_uri": null
+        },
+        "record_sha256": "4c6d2259b4434547cecaf0157f769428cf367ec130aa07668eefcfb8f8c2ae16",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "강남역 주변은 강남 지역에 있어서 교통의 핵심인 곳이다. 강남대로를 중심으로 동쪽으로는 테헤란로가 뻗어 있어 잠실 방향과 이어지며, 서쪽으로는 사당 방면으로 연결된다. 교보타워 사거리에서 좌측으로는 고속터미널과 이어져 노량진 및 서부 서울로 연결되며, 그대로 북쪽으로는 한남대교를 거쳐 강북으로 연결된다. 그리고 남쪽으로는 양재를 거쳐 분당 등의 신도시와 성남시 등 수도권으로 연결된다. 많은 유동인구가 강남역으로 모이는 이유는 강남역 부근이 만남을 위한 약속장소로 적합하기 때문이다. 각종 모임이나 행사 또는 개인적인 만남을 갖기에 좋은 지역적, 상권적 특성을 지니고 있다. 따라서 평일에는 주로 저녁 시간대, 주말의 경우는 낮부터 강남역 10, 11번 출구, 롯데시네마 앞(구, 시티극장), 지오다노 매장 앞 등에서 많은 사람들로 붐비는 것을 흔히 볼 수 있다. 편리한 교통과 다수의 패션 관련 매장, 극장, 대형서점 등 소비를 하기 좋은 이러한 환경이 거리가 먼 지역의 소비자들까지 강남역으로 모이게 하고 있다. 강남구에서는 내·외국인 관광객에게 종합관광서비스는 물론, 강남구의 우수 인프라인 의료와 한류에 대하여 보고, 느끼고, 즐길 수 있는 체험형 관광거점시설인 강남메디컬투어센터를 운영하고 있다. 강남메디컬투어센터는 외국인 의료관광객을 위해 강남의료관광과 관련된 제반 서비스를 종합적으로 제공하는 의료관광 안내센터로, 병원(협력기관) 안내, 통역연결, 텍스프리, 공항픽업, 주변 관광지 안내, 호텔예약 등 의료관광에 관련된 모든 서비스를 제공받을 수 있다. 이외에도 관광 안내 리플릿 등을 통해 여행 정보를 쉽게 얻을 수 있으며 잠시 쉬어갈 수 있는 휴게공간과 무료로 짐을 보관할 수 있는 물품 보관함 등의 편의시설도 이용할 수 있다."
+      }
+    ],
+    "parent_source_sha256": "e19744578dfafe3191f66707e581d846ba51545bdc76e1aca7882cd544293da4",
+    "place": {
+      "address": "서울특별시 강남구 압구정로 161 (압구정동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+      "name_ko": "강남",
+      "place_id": "public:korea:e955b359274d5e339b4d7ca37eac9d810b3e2c77472ad1ae135636de37de8c8a",
+      "provider_content_id": "264570",
+      "region_code": "11680",
+      "region_name": "서울특별시 강남구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,847 @@
+{
+  "assessed_at": "2026-09-11T19:37:38.852674Z",
+  "assessment_sha256": "0958b7dfa381926724ef2bea50eaa5bcb5c949604a2ff9ae2928dda9b2d32019",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 41
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 53
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "데이트코스로 각광받는다는 이미지와 시민의 휴식처라는 의미가 장소에 부여되어 있으나, 간단한 이미지 수준이므로 하위 수준.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1ca68a09afc1f63d89feb41390bbd97875587204409fd8bc154946c897f0f732",
+            "appearance:e3aaeca32003dcb7fc584f819e8b51132f741d4732ffc7c31f264e0bc19d6339",
+            "appearance:fee977ef8e4c5f0afaebb23ab8a66a9facb3d0201e97e0d8da82555102faa9b0"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "타원형 저수지, 울창한 산림, 빼어난 주변경관 등 시각적 성격의 표현이 언급되지만 제한적·간접적 서술 수준이다. 원 repair 항목의 claim은 E.c에서 VISUAL_EXPRESSION으로 반환해야 하므로 이를 적용했다.",
+      "value": 56
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "등산로 연결, 보트놀이, 낚시 등 다양한 선택 가능한 활동이 언급되어 자율적 탐색 기회를 일부 지원하나 구체적 자유 탐색 묘사는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:70fd4cae0c663efbb53d1c6de51761417a14ffde29eb1e60ba5a4643d1e9df78",
+            "appearance:8bee5d218c10fbf1be7047bc206340da74f33d9158dba026f044cdda31138488",
+            "appearance:b2a7d365fac4c4e7409728d0170022b958eb2d5fe55fca99d17f0911fe7602f7"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "울창한 산림과 수려한 자연경관의 환경 단서가 확인되나, 실제 고요함·회복 효과에 대한 직접 근거는 없어 제한적 환경 단서 수준.",
+      "value": 63
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "보트놀이, 낚시, 눈썰매, 등산로 등 참여형 활동이 확인되나 지속적 도전·몰입 활동이라는 근거는 부족하여 제한된 체험 기회 수준.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "데이트코스, 주민들의 명암타워 이용 등 교류의 단서가 있으나 체계적 공동 활동·자기표현 기회의 근거는 제한적.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "명암유원지 자체의 확인된 원형·유산 실물 접촉에 대한 근거가 없다. 인근 상당산성·박물관 등은 연계 언급일 뿐 이 장소의 유산 경험으로 볼 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소 자체의 역사·연혁 맥락 제시는 없다. 명암약수터 1920년대 발견은 부근 시설 정보로 유원지의 역사 탐구 경험을 뒷받침하기 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 제공에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f",
+          "quote": {
+            "end": 357,
+            "method": "EXACT",
+            "original": "주변경관이 빼어나고, 주위에 좋은 음식을 접할 수 있는 식당가가 많아 데이트코스로도 각광받고 있으며",
+            "start": 302,
+            "submitted": "주변경관이 빼어나고, 주위에 좋은 음식을 접할 수 있는 식당가가 많아 데이트코스로도 각광받고 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "83dfb6fdefbf3bb49a1326c04841e6f441268451765ee7a5ca186d9cbe22e301"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 1,
+      "reason": "데이트코스로 각광받는다는 이미지와 시민의 휴식처라는 의미가 장소에 부여되어 있으나, 간단한 이미지 수준이므로 하위 수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f",
+          "quote": {
+            "end": 55,
+            "method": "EXACT",
+            "original": "청주에서 가장 큰 저수지로 타원형으로 되어 있으며, 보트놀이를 즐길 수 있고 주변일대엔 울창한 산림",
+            "start": 0,
+            "submitted": "청주에서 가장 큰 저수지로 타원형으로 되어 있으며, 보트놀이를 즐길 수 있고 주변일대엔 울창한 산림",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "83dfb6fdefbf3bb49a1326c04841e6f441268451765ee7a5ca186d9cbe22e301"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "타원형 저수지, 울창한 산림, 빼어난 주변경관 등 시각적 성격의 표현이 언급되지만 제한적·간접적 서술 수준이다. 원 repair 항목의 claim은 E.c에서 VISUAL_EXPRESSION으로 반환해야 하므로 이를 적용했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f",
+          "quote": {
+            "end": 135,
+            "method": "EXACT",
+            "original": "우암산 우회도로, 등산로, 청주 박물관, 우암어린이회관, 상당산성과 연결되어 시민의 휴식처로서 큰 역할을 담당하고 있다",
+            "start": 69,
+            "submitted": "우암산 우회도로, 등산로, 청주 박물관, 우암어린이회관, 상당산성과 연결되어 시민의 휴식처로서 큰 역할을 담당하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "83dfb6fdefbf3bb49a1326c04841e6f441268451765ee7a5ca186d9cbe22e301"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "등산로 연결, 보트놀이, 낚시 등 다양한 선택 가능한 활동이 언급되어 자율적 탐색 기회를 일부 지원하나 구체적 자유 탐색 묘사는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f",
+          "quote": {
+            "end": 68,
+            "method": "EXACT",
+            "original": "주변일대엔 울창한 산림과 사계절마다 특색 있는",
+            "start": 43,
+            "submitted": "주변일대엔 울창한 산림과 사계절마다 특색 있는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "83dfb6fdefbf3bb49a1326c04841e6f441268451765ee7a5ca186d9cbe22e301"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "울창한 산림과 수려한 자연경관의 환경 단서가 확인되나, 실제 고요함·회복 효과에 대한 직접 근거는 없어 제한적 환경 단서 수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f",
+          "quote": {
+            "end": 300,
+            "method": "EXACT",
+            "original": "호텔과 낚시터, 겨울에는 눈썰매를 즐길 수 있는 각종 시설이 있다",
+            "start": 264,
+            "submitted": "호텔과 낚시터, 겨울에는 눈썰매를 즐길 수 있는 각종 시설이 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "83dfb6fdefbf3bb49a1326c04841e6f441268451765ee7a5ca186d9cbe22e301"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "보트놀이, 낚시, 눈썰매, 등산로 등 참여형 활동이 확인되나 지속적 도전·몰입 활동이라는 근거는 부족하여 제한된 체험 기회 수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f",
+          "quote": {
+            "end": 400,
+            "method": "EXACT",
+            "original": "최근 명암타워가 준공되어 결혼식 및 각종회의 장소로 주민들이 즐겨 찾고 있다",
+            "start": 358,
+            "submitted": "최근 명암타워가 준공되어 결혼식 및 각종회의 장소로 주민들이 즐겨 찾고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "83dfb6fdefbf3bb49a1326c04841e6f441268451765ee7a5ca186d9cbe22e301"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 2,
+      "reason": "데이트코스, 주민들의 명암타워 이용 등 교류의 단서가 있으나 체계적 공동 활동·자기표현 기회의 근거는 제한적.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "722505ccb4457c71638943b4c0960908b0299e9c1fffb50345a36417fe59a3dd",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "호수와 분수, 녹색 산세, 독특한 현대적 타워 건물이 어우러진 구도로 시각적 개성이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1ca68a09afc1f63d89feb41390bbd97875587204409fd8bc154946c897f0f732",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0c3f8cf113755449ad2cd56ebab3dade7c22cd7e795a07dc797592b5d433c4f5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3504215_2",
+          "request_sha256": "5095437dbd499ffab9851b085eb0b69ba876f924258730d21ec7f3a34b4bd74c",
+          "response_sha256": "a938e95339eb867fdb92885d645a45bad1ff7d060b2b4697e4d2c59693ce5835",
+          "retrieved_at": "2026-09-11T02:12:13.657085Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "78fe278a9c8c67ff08723bc0e7eb8a2116e6b8ba0985e473ff7a656ba1ca6ce9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/15/3504215_image2_1.jpg"
+        },
+        "record_sha256": "3a0b4e7866d9a66f59b207689bdf7ea3fcb5b74b0710d530a4e4b698f928b712",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 호수, 분수, 둘러싸인 울창한 산지가 장면 전반을 지배하는 자연 환경 단서다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:70fd4cae0c663efbb53d1c6de51761417a14ffde29eb1e60ba5a4643d1e9df78",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0c3f8cf113755449ad2cd56ebab3dade7c22cd7e795a07dc797592b5d433c4f5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3504215_2",
+          "request_sha256": "5095437dbd499ffab9851b085eb0b69ba876f924258730d21ec7f3a34b4bd74c",
+          "response_sha256": "a938e95339eb867fdb92885d645a45bad1ff7d060b2b4697e4d2c59693ce5835",
+          "retrieved_at": "2026-09-11T02:12:13.657085Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "78fe278a9c8c67ff08723bc0e7eb8a2116e6b8ba0985e473ff7a656ba1ca6ce9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/15/3504215_image2_1.jpg"
+        },
+        "record_sha256": "6f00f858490165521d1963901314131ea922c07af699ba44e5af8e291c4810ea",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "호수, 분수, 둑의 갈대와 초화, 울창한 산과 나무가 장면 전체를 지배하며 자연 경관 단서가 매우 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8bee5d218c10fbf1be7047bc206340da74f33d9158dba026f044cdda31138488",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6fae9e70dd7b3eb301e76c0b533880db894a6b660b0ca0697ff9e85da4fd1e98",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3504208_3",
+          "request_sha256": "5095437dbd499ffab9851b085eb0b69ba876f924258730d21ec7f3a34b4bd74c",
+          "response_sha256": "a938e95339eb867fdb92885d645a45bad1ff7d060b2b4697e4d2c59693ce5835",
+          "retrieved_at": "2026-09-11T02:12:13.657085Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a01f30eb88873d1d6765a058bdb5029307371ba4f2f9be1e02a7630e101c78b5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/3504208_image2_1.jpg"
+        },
+        "record_sha256": "4ee0a62ad25f88ae51dc32c58265802ece82c5e8929046b83a7daa3518739c08",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목재 데크 산책로 등 약간의 전통적 느낌 요소가 보이나 전체적으로 현대적 시설과 자연 중심이라 전통 외관은 약함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9b771e3d786459097ab6ec61d056fce621e970e8acf3b9f954dba2f6632c9203",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6fae9e70dd7b3eb301e76c0b533880db894a6b660b0ca0697ff9e85da4fd1e98",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3504208_3",
+          "request_sha256": "5095437dbd499ffab9851b085eb0b69ba876f924258730d21ec7f3a34b4bd74c",
+          "response_sha256": "a938e95339eb867fdb92885d645a45bad1ff7d060b2b4697e4d2c59693ce5835",
+          "retrieved_at": "2026-09-11T02:12:13.657085Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a01f30eb88873d1d6765a058bdb5029307371ba4f2f9be1e02a7630e101c78b5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/3504208_image2_1.jpg"
+        },
+        "record_sha256": "c5f247e9b6cf456069bd41065b9c2a26752988126acfc928585a058c20ffbdbe",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 호수, 분수, 둘러싸인 울창한 녹지와 산이 화면 대부분을 차지하며 자연 경관이 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b2a7d365fac4c4e7409728d0170022b958eb2d5fe55fca99d17f0911fe7602f7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e079c1f8da2056cd14fbd35b4ff52ab1673d489b58f32a1909f7538ab8696195",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3504209_4",
+          "request_sha256": "5095437dbd499ffab9851b085eb0b69ba876f924258730d21ec7f3a34b4bd74c",
+          "response_sha256": "a938e95339eb867fdb92885d645a45bad1ff7d060b2b4697e4d2c59693ce5835",
+          "retrieved_at": "2026-09-11T02:12:13.657085Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e456874c671caf8ed4191b9cc92d6090e35b50a96e6921f3d276db8b57d85e07",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3504209_image2_1.jpg"
+        },
+        "record_sha256": "7a7a8b80d54751150e3d6669c8484a6d1f19c005ff3d8654422d9998f4f7870b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 재료나 구성의 흔적은 거의 보이지 않고 현대적 건축과 시설이 중심이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d44c7ee7255662f27f482c96265623e6bb87cc8009e7dda8710e3920a7a71156",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0c3f8cf113755449ad2cd56ebab3dade7c22cd7e795a07dc797592b5d433c4f5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3504215_2",
+          "request_sha256": "5095437dbd499ffab9851b085eb0b69ba876f924258730d21ec7f3a34b4bd74c",
+          "response_sha256": "a938e95339eb867fdb92885d645a45bad1ff7d060b2b4697e4d2c59693ce5835",
+          "retrieved_at": "2026-09-11T02:12:13.657085Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "78fe278a9c8c67ff08723bc0e7eb8a2116e6b8ba0985e473ff7a656ba1ca6ce9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/15/3504215_image2_1.jpg"
+        },
+        "record_sha256": "adddee9eb2b49feda768e88fcb8a24d576f758f28868c61f87bfd7e0e1b46bcf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "호수에 반사된 고층 건물, 분수, 푸른 하늘과 녹색 산림이 어우러져 대비와 구도가 뚜렷하게 연출된 장면이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e3aaeca32003dcb7fc584f819e8b51132f741d4732ffc7c31f264e0bc19d6339",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e079c1f8da2056cd14fbd35b4ff52ab1673d489b58f32a1909f7538ab8696195",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3504209_4",
+          "request_sha256": "5095437dbd499ffab9851b085eb0b69ba876f924258730d21ec7f3a34b4bd74c",
+          "response_sha256": "a938e95339eb867fdb92885d645a45bad1ff7d060b2b4697e4d2c59693ce5835",
+          "retrieved_at": "2026-09-11T02:12:13.657085Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e456874c671caf8ed4191b9cc92d6090e35b50a96e6921f3d276db8b57d85e07",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3504209_image2_1.jpg"
+        },
+        "record_sha256": "aa1eb7b6c24ce6d8dffff4fe9a7591bf130d01504930ed7c66e0836d459d825a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "맑은 청색 하늘과 짙은 녹색 산림이 수면에 비치는 대비가 뚜렷하고, 분수와 화면 가장자리를 감싸는 나뭇가지 프레임 구도가 연출적 성격을 강하게 드러냄",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fee977ef8e4c5f0afaebb23ab8a66a9facb3d0201e97e0d8da82555102faa9b0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6fae9e70dd7b3eb301e76c0b533880db894a6b660b0ca0697ff9e85da4fd1e98",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3504208_3",
+          "request_sha256": "5095437dbd499ffab9851b085eb0b69ba876f924258730d21ec7f3a34b4bd74c",
+          "response_sha256": "a938e95339eb867fdb92885d645a45bad1ff7d060b2b4697e4d2c59693ce5835",
+          "retrieved_at": "2026-09-11T02:12:13.657085Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a01f30eb88873d1d6765a058bdb5029307371ba4f2f9be1e02a7630e101c78b5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/3504208_image2_1.jpg"
+        },
+        "record_sha256": "901a60da1bbd2d2d2f053775e86c047f1cbabc8f88ecf47e6c1fe7f4f1e01d46",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b11d570a48affc7a5af475988a258d8edc9c2fce0d10cbce362f7f5ff123e38f",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127969",
+          "request_sha256": "bebab2c3e3e49cd90585196f354a7f46580ab3d209903e64f627c0a8b9249a04",
+          "response_sha256": "4f6ce05f2dbf63d9a162faa290a8ee4c03579879908c6547c1b97e97094a9901",
+          "retrieved_at": "2026-09-10T16:59:33.284197Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-09-02T07:59:29Z",
+          "source_record_sha256": "21d6613b1e0bd69a83eeb4bf65e5bf26899bd1f6223e5ad0be4125087785db08",
+          "source_uri": null
+        },
+        "record_sha256": "83dfb6fdefbf3bb49a1326c04841e6f441268451765ee7a5ca186d9cbe22e301",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "청주에서 가장 큰 저수지로 타원형으로 되어 있으며, 보트놀이를 즐길 수 있고 주변일대엔 울창한 산림과 사계절마다 특색 있는 우암산 우회도로, 등산로, 청주 박물관, 우암어린이회관, 상당산성과 연결되어 시민의 휴식처로서 큰 역할을 담당하고 있다. 근처에 있는 명암약수터는 1920년대에 발견된 탄산천으로 주변의 수려한 자연경관과 함께 탄산성분과 철분이 함유된 약수를 찾는 시민이 사철 찾던 곳이지만, 지금은 철분이 기준치 이상을 함유하여 약수로 사용을 않고 있는 실정이다. 호텔과 낚시터, 겨울에는 눈썰매를 즐길 수 있는 각종 시설이 있다. 주변경관이 빼어나고, 주위에 좋은 음식을 접할 수 있는 식당가가 많아 데이트코스로도 각광받고 있으며 최근 명암타워가 준공되어 결혼식 및 각종회의 장소로 주민들이 즐겨 찾고 있다. 명암유원지 부근에 국립청주박물관·우암어린이회관·상당산성·청주동물원·명암저수지가 있고 초정약수와 운보의 집, 손병희선생 유허지, 흥덕사지, 대청댐 등이 멀지 않은 곳에 있어 이곳과 연계하여 관광을 즐길 수 있다. 권하고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d802ec67bd9bebad87aef9ec0963e59369fc1be80a8378db9c831efd1ba99d8e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127969",
+          "request_sha256": "9822cbfd8f12b33f11e5033b1b9496a057b6d6bfeb64f1de847b54f6a208f743",
+          "response_sha256": "e3efd836c34a4ca184fdb1fc8c9fa1d4fa9bc0aafc80b7ad8e176324f641ec74",
+          "retrieved_at": "2026-09-11T02:12:12.304617Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "43c182df754f96c10442eb460a3db804abddffc84eef8848a8b8a8c277dbf6ef",
+          "source_uri": null
+        },
+        "record_sha256": "7ff74c66bfac7d74efa0ab7d3a331f22785f17b820daba60d2bc753c1c8029b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "b9965feefa86cffa6734a569d33120601bd85c547705259de85ca5466ced882f",
+    "place": {
+      "address": "충청북도 청주시 상당구 것대로46번길 33 (산성동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+      "name_ko": "명암유원지",
+      "place_id": "public:korea:f29996ff6048a3b4c0708101eb8ef590042d41190c4366d8a91b54081ba83ba3",
+      "provider_content_id": "127969",
+      "region_code": "43111",
+      "region_name": "충청북도 청주시 상당구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

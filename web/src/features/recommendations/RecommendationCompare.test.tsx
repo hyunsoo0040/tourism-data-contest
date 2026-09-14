@@ -195,7 +195,7 @@ test("comparison table uses scoped fixed rows and reasoned missing values", asyn
   );
   const rows = [
     { row_id: "fit-score", label_ko: "추천 적합도", values_ko: ["90", "88", "86"], missing_reasons: [null, null, null] },
-    { row_id: "axis-history_tradition", label_ko: "역사·전통", values_ko: ["80점", "70점", "60점"], missing_reasons: [null, null, null] },
+    { row_id: "axis-history_tradition", label_ko: "대상•원형형", values_ko: ["80점", "70점", "60점"], missing_reasons: [null, null, null] },
     { row_id: "trait-m1", label_ko: "공간 성격", values_ko: ["75점", "75점", "75점"], missing_reasons: [null, null, null] },
     {
       row_id: "operating-state",
@@ -222,7 +222,7 @@ test("comparison table uses scoped fixed rows and reasoned missing values", asyn
   expect(screen.getByRole("rowheader", { name: "내 취향과의 유사도" }).getAttribute("scope")).toBe("row");
   const overallRow = screen.getByRole("row", { name: "내 취향과의 유사도 93% 87% 비교 어려움" });
   expect(within(overallRow).getAllByRole("cell").map((cell) => cell.textContent)).toEqual(["93%", "87%", "비교 어려움"]);
-  expect(screen.getByRole("row", { name: "역사·전통 유사도 96% 91% 비교 어려움" })).toBeTruthy();
+  expect(screen.getByRole("row", { name: "대상•원형형 유사도 96% 91% 비교 어려움" })).toBeTruthy();
   expect(screen.queryByText("추천 적합도")).toBeNull();
   expect(screen.queryByText(/\d+점/)).toBeNull();
   expect(rows[0]!.values_ko).toEqual(["90", "88", "86"]);
@@ -236,7 +236,7 @@ test("comparison never substitutes raw destination scores when matching result i
   );
   render(<ComparisonTable placeNames={["동궁과 월지", "대릉원"]} rows={[
     { row_id: "fit-score", label_ko: "추천 적합도", values_ko: ["99", "98"], missing_reasons: [null, null] },
-    { row_id: "axis-history_tradition", label_ko: "역사·전통", values_ko: ["90점", "80점"], missing_reasons: [null, null] },
+    { row_id: "axis-history_tradition", label_ko: "대상•원형형", values_ko: ["90점", "80점"], missing_reasons: [null, null] },
   ]} />);
   expect(screen.getAllByText("비교 어려움")).toHaveLength(8);
   expect(screen.queryByText(/^99$|^98$|점|0%/)).toBeNull();

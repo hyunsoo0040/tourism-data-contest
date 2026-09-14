@@ -1,0 +1,505 @@
+{
+  "assessed_at": "2026-09-11T16:08:59.184099Z",
+  "assessment_sha256": "c79b1b472a0370f86dbd88012f107059d1792d02bde296e662d0927f0c7cea7a",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 83
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "시인 묵객의 절찬이라는 역사적으로 공유된 이미지가 장소에 부여된 의미로 확인된다. 다만 표현의 폭이 제한적이므로 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "절벽·기암괴석·석양의 산수화라는 시적 표현으로 뚜렷한 시각적 성격이 확인된다. 다만 일관된 연출이 장면을 지배한다고 보기는 어려워 수준 3. repair 항목의 claim을 픽셀 전용 VISUAL_APPEARANCE 대신 텍스트 근거에 맞는 VISUAL_EXPRESSION으로 교정해 반영했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "경관 장면을 직접 경험할 수 있음은 확인되나, 대표 구도·이미지의 재현(촬영·참여)에 대한 근거는 없어 제한적 관람 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산행로를 통한 자율적 탐색 기회가 확인된다. 정상까지 약 2시간의 산행로가 있으나 다양한 선택지가 명시되지 않아 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "삼복더위에도 냉기가 감도는 계곡, 절벽과 폭포 등 자연 환경 단서가 두드러지게 확인된다. 실제 심리적 회복까지는 단정하지 않는다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "220계단 철 다리와 급경사 산행 등 구체적 참여·탐방 활동이 확인된다. 지속적 도전 활동의 중심성까지는 근거가 부족해 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "자연 경관(기암절벽, 폭포, 계곡)에 대한 서술은 있으나 확인된 문화유산·역사 원형과의 접촉을 뒷받침하는 근거는 없다. '저마다의 역사와 전설'이라는 표현만으로 실제 원형 접촉을 확정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "수락 8경 선정(1997) 언급 외에 이 장소의 구체적 역사·사건·인물 맥락에 대한 근거가 없다. '역사와 전설' 존재만 암시할 뿐 내용이 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 없다. 전설의 존재 암시만으로 현재의 전승 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "역사·전통에 연결된 해설·전시·탐구 프로그램에 대한 근거가 없다. 경관 묘사와 개발 언급만 존재한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6",
+          "quote": {
+            "end": 46,
+            "method": "EXACT",
+            "original": "대둔산의 기암절벽과 웅장한 형태는 예로부터 시인 묵객의 절찬을 받을 만큼 아름다우며",
+            "start": 0,
+            "submitted": "대둔산의 기암절벽과 웅장한 형태는 예로부터 시인 묵객의 절찬을 받을 만큼 아름다우며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "49d058afa803e01e167fe34de7922cdf32d03535acf0051909977f16404d6dc1"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "시인 묵객의 절찬이라는 역사적으로 공유된 이미지가 장소에 부여된 의미로 확인된다. 다만 표현의 폭이 제한적이므로 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 이미지 유통에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6",
+          "quote": {
+            "end": 208,
+            "method": "EXACT",
+            "original": "1km 정도의 깎아지른 절벽과 저녁 햇살에 비치는 기암괴석의 절경은 한 폭의 산수화로 대자연의 신비로움을 느끼게 한다",
+            "start": 143,
+            "submitted": "1km 정도의 깎아지른 절벽과 저녁 햇살에 비치는 기암괴석의 절경은 한 폭의 산수화로 대자연의 신비로움을 느끼게 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "49d058afa803e01e167fe34de7922cdf32d03535acf0051909977f16404d6dc1"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "절벽·기암괴석·석양의 산수화라는 시적 표현으로 뚜렷한 시각적 성격이 확인된다. 다만 일관된 연출이 장면을 지배한다고 보기는 어려워 수준 3. repair 항목의 claim을 픽셀 전용 VISUAL_APPEARANCE 대신 텍스트 근거에 맞는 VISUAL_EXPRESSION으로 교정해 반영했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6",
+          "quote": {
+            "end": 312,
+            "method": "EXACT",
+            "original": "수락폭포와 군지계곡은 초입 산행길에 등산객들에게 산행의 즐거움을 한층 더 안겨준다",
+            "start": 267,
+            "submitted": "수락폭포와 군지계곡은 초입 산행길에 등산객들에게 산행의 즐거움을 한층 더 안겨준다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "49d058afa803e01e167fe34de7922cdf32d03535acf0051909977f16404d6dc1"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "경관 장면을 직접 경험할 수 있음은 확인되나, 대표 구도·이미지의 재현(촬영·참여)에 대한 근거는 없어 제한적 관람 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6",
+          "quote": {
+            "end": 263,
+            "method": "EXACT",
+            "original": "논산시 벌곡면 수락리의 관리사무소를 지나, 오르는 대둔산 산행길은 입구부터 절경을 만나게 되는데",
+            "start": 210,
+            "submitted": "논산시 벌곡면 수락리의 관리사무소를 지나, 오르는 대둔산 산행길은 입구부터 절경을 만나게 되는데",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "49d058afa803e01e167fe34de7922cdf32d03535acf0051909977f16404d6dc1"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "산행로를 통한 자율적 탐색 기회가 확인된다. 정상까지 약 2시간의 산행로가 있으나 다양한 선택지가 명시되지 않아 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6",
+          "quote": {
+            "end": 208,
+            "method": "EXACT",
+            "original": "수락계곡은 삼복더위에도 냉기가 감도는 계곡으로 1km 정도의 깎아지른 절벽과 저녁 햇살에 비치는 기암괴석의 절경은 한 폭의 산수화로 대자연의 신비로움을 느끼게 한다",
+            "start": 117,
+            "submitted": "수락계곡은 삼복더위에도 냉기가 감도는 계곡으로 1km 정도의 깎아지른 절벽과 저녁 햇살에 비치는 기암괴석의 절경은 한 폭의 산수화로 대자연의 신비로움을 느끼게 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "49d058afa803e01e167fe34de7922cdf32d03535acf0051909977f16404d6dc1"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 4,
+      "reason": "삼복더위에도 냉기가 감도는 계곡, 절벽과 폭포 등 자연 환경 단서가 두드러지게 확인된다. 실제 심리적 회복까지는 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6",
+          "quote": {
+            "end": 404,
+            "method": "EXACT",
+            "original": "군지계곡을 지나면 절벽 부분에 철 다리로 220계단을 만들어 놓아 등산로로 이어질 수 있도록 하였는데, 이곳을 오르내리는 길은 경사가 급해 스릴마저 느낄 수 있다",
+            "start": 314,
+            "submitted": "군지계곡을 지나면 절벽 부분에 철 다리로 220계단을 만들어 놓아 등산로로 이어질 수 있도록 하였는데, 이곳을 오르내리는 길은 경사가 급해 스릴마저 느낄 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "49d058afa803e01e167fe34de7922cdf32d03535acf0051909977f16404d6dc1"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "220계단 철 다리와 급경사 산행 등 구체적 참여·탐방 활동이 확인된다. 지속적 도전 활동의 중심성까지는 근거가 부족해 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 없다. 등산객 언급만으로 관계 형성 기회를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "6e107e58f653731693b60bfb30c001f46d12b6f52140f8e602a17bba56fce724",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1084c4ba4467b997819f7d7a0931618eea181e1081469f8d1d22ee9ff98f90a6",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:24606dae3d64b3dfec6efa49831afd52a95cc93b99f4ca563268c6d0d3e3260a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "128002",
+          "request_sha256": "7c57b89aa46d098f7f55962c1c83dcfd64c09069fd7a14014bd79a5f2d7ee66a",
+          "response_sha256": "32c6685c9e9597ce3cc026be6a6cd6c1dde95af1bcc4fe6a33ee82608547f10a",
+          "retrieved_at": "2026-09-10T07:49:46.909893Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-07-31T05:53:38Z",
+          "source_record_sha256": "cdaf8c8ec0f71c520701dd8e3c1837e531451acccafb5f75cfa93bb2d964afc9",
+          "source_uri": null
+        },
+        "record_sha256": "49d058afa803e01e167fe34de7922cdf32d03535acf0051909977f16404d6dc1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "대둔산의 기암절벽과 웅장한 형태는 예로부터 시인 묵객의 절찬을 받을 만큼 아름다우며 군지계곡, 수락폭포, 마천대 선녀폭포, 낙조대, 수락계곡 등 다양한 볼거리와 비경을 간직하고 있다. 특히 논산시 벌곡면 쪽의 수락계곡은 삼복더위에도 냉기가 감도는 계곡으로 1km 정도의 깎아지른 절벽과 저녁 햇살에 비치는 기암괴석의 절경은 한 폭의 산수화로 대자연의 신비로움을 느끼게 한다. 논산시 벌곡면 수락리의 관리사무소를 지나, 오르는 대둔산 산행길은 입구부터 절경을 만나게 되는데 특히 수락폭포와 군지계곡은 초입 산행길에 등산객들에게 산행의 즐거움을 한층 더 안겨준다. 군지계곡을 지나면 절벽 부분에 철 다리로 220계단을 만들어 놓아 등산로로 이어질 수 있도록 하였는데, 이곳을 오르내리는 길은 경사가 급해 스릴마저 느낄 수 있다. 수락계곡에서 대둔산 정상인 마천대까지는 약 2시간 정도 소요된다. 논산시에서는 지난 1997년 대둔산의 비경 중 가장 아름답고 신비로운 8곳을 선정하여 수락 8경이라 하고 이에 대해 집중적인 개발을 하고 있는데 저마다의 역사와 전설을 비경과 함께 고이 간직하고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:568f2465dbee8d4739f732d95ff3731196f05a9eabb4dd82a59b46112722a388",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:24606dae3d64b3dfec6efa49831afd52a95cc93b99f4ca563268c6d0d3e3260a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128002",
+          "request_sha256": "1ad8dee3f304bd51b456e9ec4c2ff56ddb30c6b6d9c4d7346c4048b3ca32d991",
+          "response_sha256": "e56c41921238ce0e0ccae717593e9ef79cab0d98b3d55caad0cda73a856709bc",
+          "retrieved_at": "2026-09-10T08:20:20.342990Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6b97032231ccc7a70df76f6a2f5fe299399bf6f7c784f73087a5e026d84e15f4",
+          "source_uri": null
+        },
+        "record_sha256": "7841e9a6ba7645f0cbf0b39d1aa25823148868507b26f5b73730ce6365ddf609",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "1b342805f39c25faf4f39a0e1a320257e5588fd6b01c2bf10039caa2f0903447",
+    "place": {
+      "address": "충청남도 논산시 벌곡면 수락계곡길 559",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:24606dae3d64b3dfec6efa49831afd52a95cc93b99f4ca563268c6d0d3e3260a",
+      "name_ko": "대둔산도립공원(논산)",
+      "place_id": "public:korea:24606dae3d64b3dfec6efa49831afd52a95cc93b99f4ca563268c6d0d3e3260a",
+      "provider_content_id": "128002",
+      "region_code": "44230",
+      "region_name": "충청남도 논산시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

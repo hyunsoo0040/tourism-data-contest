@@ -1,0 +1,550 @@
+{
+  "assessed_at": "2026-09-11T17:15:50.112394Z",
+  "assessment_sha256": "2023204190e1424f412e1c05e0b62b9dc0d2cd26d6e21463f7cdf51797154427",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.a"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "보문산성, 마애여래좌상, 보문사지 석조 등 실제 문화유산이 현존하며 산행코스(산성길, 보문산성 경유 코스)를 통해 방문자가 접할 수 있다고 공식 소개된다. 실물을 구체적으로 탐구한다는 근거까지는 없어 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "대전팔경, 대전의 대표적인 산이라는 공유된 이미지와 상징적 의미가 장소에 부여되어 있다. 여러 표현에서 일관된 의미가 확인되지는 않아 2 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "repair 항목에 따라 약수터 골짜기, 시루봉, 자연 암석 등 장소의 시각적·경관적 성격이 제한적으로 표현된다. 다만 E.c 텍스트 claim은 VISUAL_EXPRESSION이어야 하므로 원 제안의 VISUAL_APPEARANCE를 허용된 claim으로 교정했다. 일관된 연출이 장면을 지배한다는 근거는 없어 2 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "10여 개의 다양한 산행코스로 방문자가 자신의 방식으로 코스를 선택·탐색할 기회가 확인된다. 자율 탐색이 경험의 중심이라는 근거까지는 없어 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "산, 골짜기, 약수터, 송학사 등 자연 환경 단서가 공식 소개에 두드러지게 나타난다. 실제 고요함이나 회복 효과는 확정할 수 없어 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "산행(4.3~4.8km 코스)과 사정공원 레포츠 시설 등 구체적인 신체 참여·탐방 활동의 기회가 확인된다. 지속적 도전 활동이 중심이라는 근거는 없어 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864",
+          "quote": {
+            "end": 237,
+            "method": "EXACT",
+            "original": "백제의 최전선 역할을 하던 보문산성이 남아있고, 그 외에는 마애여래좌상, 보문사지 석조 등 문화유산이 있다",
+            "start": 178,
+            "submitted": "백제의 최전선 역할을 하던 보문산성이 남아있고, 그 외에는 마애여래좌상, 보문사지 석조 등 문화유산이 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a2cad2f51391786e6cd0aacf08f3ede6ceaef0ab0e94880931c0068f3b54933"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.a",
+      "level": 3,
+      "reason": "보문산성, 마애여래좌상, 보문사지 석조 등 실제 문화유산이 현존하며 산행코스(산성길, 보문산성 경유 코스)를 통해 방문자가 접할 수 있다고 공식 소개된다. 실물을 구체적으로 탐구한다는 근거까지는 없어 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "삼국시대 국경·보문산성 역할 언급은 간략한 연혁 소개 수준으로 보이나, 제시된 앵커(사건·인물 맥락 제시)에 도달하는 구체성인지 원문만으로 판단이 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화가 현재 지속되고 있다는 근거가 없다. 고촉사의 암석이나 옛 유적 언급만으로 실제 전승 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·역사에 연결된 해설·전시·학습 프로그램에 대한 근거가 제공되지 않았다. 산행코스 소개는 해설 제공을 의미하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864",
+          "quote": {
+            "end": 58,
+            "method": "EXACT",
+            "original": "대전팔경 중 하나로 꼽히는 대전의 대표적인 산이다",
+            "start": 31,
+            "submitted": "대전팔경 중 하나로 꼽히는 대전의 대표적인 산이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a2cad2f51391786e6cd0aacf08f3ede6ceaef0ab0e94880931c0068f3b54933"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "대전팔경, 대전의 대표적인 산이라는 공유된 이미지와 상징적 의미가 장소에 부여되어 있다. 여러 표현에서 일관된 의미가 확인되지는 않아 2 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보 매체, SNS 등을 통한 장소 이미지의 재현·확산에 대한 근거가 없다. 대전팔경 선정 자체는 매체 유통의 내용을 보여주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864",
+          "quote": {
+            "end": 111,
+            "method": "EXACT",
+            "original": "골짜기마다 20여 곳의 약수터가 있고 시루봉 아래 고촉사에는 미륵상을 닮은 자연 암석이 있다",
+            "start": 60,
+            "submitted": "골짜기마다 20여 곳의 약수터가 있고 시루봉 아래 고촉사에는 미륵상을 닮은 자연 암석이 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a2cad2f51391786e6cd0aacf08f3ede6ceaef0ab0e94880931c0068f3b54933"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "repair 항목에 따라 약수터 골짜기, 시루봉, 자연 암석 등 장소의 시각적·경관적 성격이 제한적으로 표현된다. 다만 E.c 텍스트 claim은 VISUAL_EXPRESSION이어야 하므로 원 제안의 VISUAL_APPEARANCE를 허용된 claim으로 교정했다. 일관된 연출이 장면을 지배한다는 근거는 없어 2 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다. 전망대 존재만으로 이미지 재현 경험을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864",
+          "quote": {
+            "end": 276,
+            "method": "EXACT",
+            "original": "보문산 산행코스는 시루봉길, 문필봉길, 산성길 등 10여 개가 있다",
+            "start": 239,
+            "submitted": "보문산 산행코스는 시루봉길, 문필봉길, 산성길 등 10여 개가 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a2cad2f51391786e6cd0aacf08f3ede6ceaef0ab0e94880931c0068f3b54933"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "10여 개의 다양한 산행코스로 방문자가 자신의 방식으로 코스를 선택·탐색할 기회가 확인된다. 자율 탐색이 경험의 중심이라는 근거까지는 없어 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864",
+          "quote": {
+            "end": 80,
+            "method": "EXACT",
+            "original": "골짜기마다 20여 곳의 약수터가 있고",
+            "start": 60,
+            "submitted": "골짜기마다 20여 곳의 약수터가 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a2cad2f51391786e6cd0aacf08f3ede6ceaef0ab0e94880931c0068f3b54933"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "산, 골짜기, 약수터, 송학사 등 자연 환경 단서가 공식 소개에 두드러지게 나타난다. 실제 고요함이나 회복 효과는 확정할 수 없어 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864",
+          "quote": {
+            "end": 547,
+            "method": "EXACT",
+            "original": "사정공원 레포츠 시설, 야외음악당, 청년광장, 전망대 등이 있다",
+            "start": 512,
+            "submitted": "사정공원 레포츠 시설, 야외음악당, 청년광장, 전망대 등이 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a2cad2f51391786e6cd0aacf08f3ede6ceaef0ab0e94880931c0068f3b54933"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "산행(4.3~4.8km 코스)과 사정공원 레포츠 시설 등 구체적인 신체 참여·탐방 활동의 기회가 확인된다. 지속적 도전 활동이 중심이라는 근거는 없어 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 구체적 근거가 없다. 야외음악당, 청년광장의 존재만으로 교류 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864",
+              "quote": {
+                "end": 192,
+                "method": "EXACT",
+                "original": "삼국시대에는 백제와 신라의 국경선으로 백제의 최전선 역할을 하던",
+                "start": 157,
+                "submitted": "삼국시대에는 백제와 신라의 국경선으로 백제의 최전선 역할을 하던",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0a2cad2f51391786e6cd0aacf08f3ede6ceaef0ab0e94880931c0068f3b54933"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 2,
+          "reason": "삼국시대 백제-신라 국경 및 보문산성의 군사적 역할 등 이 장소의 역사적 연혁이 간략히 소개된다. 여러 맥락을 연결한 깊은 서사까지는 확인되지 않아 2 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "삼국시대 국경·보문산성 역할 언급은 간략한 연혁 소개 수준으로 보이나, 제시된 앵커(사건·인물 맥락 제시)에 도달하는 구체성인지 원문만으로 판단이 어렵다."
+        }
+      },
+      "reason": "삼국시대 국경·보문산성 역할 언급은 간략한 연혁 소개 수준으로 보이나, 제시된 앵커(사건·인물 맥락 제시)에 도달하는 구체성인지 원문만으로 판단이 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "c0183f130421bb09f9746bacf01e218366b7f1517a75923e95e1f2d3608d4764",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4480de0aec4550b8714aeed49abec106b0460fcc1ceb3aed54f86e98c66d5c9b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:64df89083abc4f9a5dc2c34ef4dbc2c881459831a9f881bb2543717317e36ad4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3080289",
+          "request_sha256": "d58d0dd5b74cde35375ccc82a2b66bdd2cf8f4cc9640dcefdba09c325493a6a5",
+          "response_sha256": "a88c5c01c27db480daeebcd969a869d61e18c76d20b58ea253d51360db2c4682",
+          "retrieved_at": "2026-09-10T08:23:37.665610Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8c2c3baec01e59be1fab0e4dc1b617112e0eaf280c49cce38d037db9b7a69328",
+          "source_uri": null
+        },
+        "record_sha256": "478859d1cc50f11a7ac36934c9a912c5d5498d1735512541587b39f0d58fe388",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f8b83a2b86b823bf0fef82c74ebda8a12f6f5d7201a743dbe9b66bdcd9352864",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:64df89083abc4f9a5dc2c34ef4dbc2c881459831a9f881bb2543717317e36ad4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3080289",
+          "request_sha256": "4e91e1168bd8ae98fb5808c530884c293aa1751e1555f0cd5afce746cf1fa3cb",
+          "response_sha256": "b6ed57579f1e61dcb178d9a0c8a6f8a9166bb23d9ea849498333446220ed5868",
+          "retrieved_at": "2026-09-10T05:30:14.307822Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-09T08:17:10Z",
+          "source_record_sha256": "782c33dfa16099f0e601a76570579254a0f157a49c5df510b6cfecca2156f798",
+          "source_uri": null
+        },
+        "record_sha256": "0a2cad2f51391786e6cd0aacf08f3ede6ceaef0ab0e94880931c0068f3b54933",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "보문산은 대전 남부에 솟은 해발 457.6m의 산이자, 대전팔경 중 하나로 꼽히는 대전의 대표적인 산이다. 골짜기마다 20여 곳의 약수터가 있고 시루봉 아래 고촉사에는 미륵상을 닮은 자연 암석이 있다. 이처럼 지금도 시민들에게 각광받는 산이지만 과거에도 조상들이 중요하게 여겼다. 삼국시대에는 백제와 신라의 국경선으로 백제의 최전선 역할을 하던 보문산성이 남아있고, 그 외에는 마애여래좌상, 보문사지 석조 등 문화유산이 있다. 보문산 산행코스는 시루봉길, 문필봉길, 산성길 등 10여 개가 있다. 그중 옛 보문산 케이블카 광장에서 시작하여 전망대인 보운대과 보문산성을 거쳐 시루봉 방향으로 가다가 골짜기로 내려와 야외음악당과 송학사를 거쳐 옛 케이블카 광장으로 내려오는 4.8㎞ 코스가 대표적이다. 그 외에는 사정공원 주차장에서 시작하여 고촉사 뒤의 가파른 산비탈을 타고 시루봉에 오른 다음 서쪽 산등성이를 타고 내려오다가 보문사지 갈림길에서 북쪽 산등성이를 따라서 내려오는 4.3㎞ 코스도 있다. 산행코스 외에는 사정공원 레포츠 시설, 야외음악당, 청년광장, 전망대 등이 있다."
+      }
+    ],
+    "parent_source_sha256": "60ffee0cfda72cf9a61da016b3efc54019f405379c77b9f51378d9690ccedaaf",
+    "place": {
+      "address": "대전광역시 중구 사정공원로 160 (사정동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:64df89083abc4f9a5dc2c34ef4dbc2c881459831a9f881bb2543717317e36ad4",
+      "name_ko": "보문산",
+      "place_id": "public:korea:64df89083abc4f9a5dc2c34ef4dbc2c881459831a9f881bb2543717317e36ad4",
+      "provider_content_id": "3080289",
+      "region_code": "30140",
+      "region_name": "대전광역시 중구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

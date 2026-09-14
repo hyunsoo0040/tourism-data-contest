@@ -401,9 +401,9 @@ function photoComparison(payload: JsonRecord, placeIds: string[]): JsonRecord {
     place_ids: placeIds,
     rows: [
       row("fit-score", "추천 적합도", "88"),
-      row("axis-history_tradition", "역사·전통", "80점 / 100점"),
-      row("axis-emotion_image", "감성·이미지", "70점 / 100점"),
-      row("axis-rest_immersion", "휴식·몰입", "60점 / 100점"),
+      row("axis-history_tradition", "대상•원형형", "80점 / 100점"),
+      row("axis-emotion_image", "의미•이미지형", "70점 / 100점"),
+      row("axis-rest_immersion", "자기•몰입형", "60점 / 100점"),
       row("evidence-reason-1", "잘 맞는 이유 1", "역사 근거가 이번 기대와 이어져요."),
       row("evidence-reason-2", "잘 맞는 이유 2", "감성 근거가 이번 기대와 이어져요."),
       row("mismatch-guidance", "이번 여행에서 기대한 것과 다른 점", "한 가지 차이를 확인해 보세요."),
@@ -1227,8 +1227,8 @@ describe("results and recovery", () => {
     ]);
     expect(cards[0]!.querySelector("[data-preference-similarity]")?.textContent).toBe("내 취향과 88% 유사");
     expect(within(cards[0]!).queryByText("적합도 90점 / 100점")).toBeNull();
-    expect(within(cards[0]!).getByRole("meter", { name: "역사·전통 취향 유사도 91%" }).getAttribute("aria-valuenow")).toBe("91");
-    expect(within(cards[0]!).getByRole("meter", { name: "감성·이미지 취향 유사도 86%" }).getAttribute("aria-valuenow")).toBe("86");
+    expect(within(cards[0]!).getByRole("meter", { name: "대상•원형형 취향 유사도 91%" }).getAttribute("aria-valuenow")).toBe("91");
+    expect(within(cards[0]!).getByRole("meter", { name: "의미•이미지형 취향 유사도 86%" }).getAttribute("aria-valuenow")).toBe("86");
     expect(within(cards[0]!).queryByText("71점")).toBeNull();
     expect(within(cards[0]!).getAllByRole("meter")).toHaveLength(3);
     expect(within(cards[0]!).getByText("역사 근거 1이 이번 기대와 이어져요.")).toBeTruthy();

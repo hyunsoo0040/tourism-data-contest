@@ -1,0 +1,964 @@
+{
+  "assessed_at": "2026-09-11T16:59:47.996137Z",
+  "assessment_sha256": "a0ad48270f3b87a14958ebb018ad3b62edb799bf5db0af549746690b1042c0e9",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 54
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "농장에 '농촌체험의 대명사'라는 이미지와 사철 체험이라는 일관된 의미가 부여되어 있다. 표현이 간단해 수준 2로 평가.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "TV 예능 프로그램의 방문이라는 한 매체에서 장소 이미지가 표현된 명시적 근거. 확산의 반복·내용은 확인되지 않아 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0a55d337a94e58703fcec13b1b46153145ec74d9e871c9109f44d5b47c500240",
+            "appearance:9cdd7d10709dc203d17f5bdf1f1cdfb9890e9afd49147ab499806a7557ddc61a",
+            "appearance:f658b313df23c3947980587fcd40f2a4ea73015c79a0838f9c438c06c477e95f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 67
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "트리하우스·모래놀이터 등 관련 장면을 현장에서 관람·경험할 수 있다는 서술. 촬영·재현 활동 근거는 없어 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:13f2a6de7fe3b0da59b3e25283371cef248ab852b910e60d7e6bcba55e38e2d8"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "숲 산책로, 모래놀이터 등 자율적으로 선택해 탐색할 수 있는 시설이 확인되나, 여유로운 탐색 중심임을 뒷받침하는 강한 근거는 부족해 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1f2ab7549e9e78c15fd0592e41c01d5b8df21600e8acd97e14177de00932bbf4",
+            "appearance:87ee63807c538c22b5659cfda5344d06479bd54c542356b72150453f9c79a067",
+            "appearance:c408a68bb42a2e3ad295aee7be2bf0b88eaafabf6a93981ac0680ff79bd056b4"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "value": 58
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+            "evidence:8781c016d608a60195c705a0dd2a1916e61e634a82e59d3e94e5763c7ee7abe9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "계절별 수확, 베이킹, 숲 예술체험 등 구체적 참여 활동이 사철 지속적으로 제공된다. 몰입의 중심성까지는 단정할 수 없어 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "숲 속 공동 체험 프로그램이 교류·참여 기회를 제공한다. 자기표현이나 관계 형성이 풍부하다는 근거는 부족해 수준 2.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "비손농장은 농촌체험·캠핑 시설 중심의 관광지로, 확인된 실제 원형·유산과의 접촉을 뒷받침하는 자료가 없다. 농장 자체가 역사적 원형이라는 명시도 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에 이 장소의 역사·연혁·사건·인물 맥락에 대한 설명이 없다. 낮음을 직접 명시한 근거도 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "농작물 수확 체험이 있으나 이것이 지역 주체의 실제 전승·생활문화와 연결됨을 확인하는 근거가 없다. 단순 체험 프로그램 소개만으로 전승 판단 불가.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "체험 안내는 있으나 원형·유산·전통에 연결된 해설·학습 제공 근거가 없다. 일반 농촌체험만으로 유산 해설이라 할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+          "quote": {
+            "end": 269,
+            "method": "EXACT",
+            "original": "농촌체험은 비손농장을 대표하는 테마다.",
+            "start": 248,
+            "submitted": "농촌체험은 비손농장을 대표하는 테마다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4c575c5fa5a66de634655ceebb414111e87e31e295dd5a9d05222a9fe125f01f"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "농장에 '농촌체험의 대명사'라는 이미지와 사철 체험이라는 일관된 의미가 부여되어 있다. 표현이 간단해 수준 2로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+          "quote": {
+            "end": 69,
+            "method": "EXACT",
+            "original": "캠핑장은 tvN 예능 프로그램 <바퀴달린 집>이 찾아올 정도로 아름다운 곳이다.",
+            "start": 25,
+            "submitted": "캠핑장은 tvN 예능 프로그램 <바퀴달린 집>이 찾아올 정도로 아름다운 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4c575c5fa5a66de634655ceebb414111e87e31e295dd5a9d05222a9fe125f01f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "TV 예능 프로그램의 방문이라는 한 매체에서 장소 이미지가 표현된 명시적 근거. 확산의 반복·내용은 확인되지 않아 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+          "quote": {
+            "end": 201,
+            "method": "EXACT",
+            "original": "산책로를 따라 가다보면 예쁜 트리하우스가 나타나고, 아이들이 시간가는 줄 모르고 빠져드는 모래놀이터",
+            "start": 146,
+            "submitted": "산책로를 따라 가다보면 예쁜 트리하우스가 나타나고, 아이들이 시간가는 줄 모르고 빠져드는 모래놀이터",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4c575c5fa5a66de634655ceebb414111e87e31e295dd5a9d05222a9fe125f01f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "트리하우스·모래놀이터 등 관련 장면을 현장에서 관람·경험할 수 있다는 서술. 촬영·재현 활동 근거는 없어 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:13f2a6de7fe3b0da59b3e25283371cef248ab852b910e60d7e6bcba55e38e2d8",
+          "quote": {
+            "end": 49,
+            "method": "EXACT",
+            "original": "안내동, 카페, 매점, 편집샵, 실내쿠킹체험장, 화장실, 샤워실, 모래놀이터, 숲 산책로",
+            "start": 0,
+            "submitted": "안내동, 카페, 매점, 편집샵, 실내쿠킹체험장, 화장실, 샤워실, 모래놀이터, 숲 산책로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "172b3e73558801cf402f89a2bd9724cd8fb844ded77a4d26190056c2bf6e6578"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "숲 산책로, 모래놀이터 등 자율적으로 선택해 탐색할 수 있는 시설이 확인되나, 여유로운 탐색 중심임을 뒷받침하는 강한 근거는 부족해 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+          "quote": {
+            "end": 326,
+            "method": "EXACT",
+            "original": "봄에는 쑥과 산딸기, 여름에는 옥수수와 참외와 수박, 가을이면 밤과 호박을 수확하는 체험이 기다린다.",
+            "start": 270,
+            "submitted": "봄에는 쑥과 산딸기, 여름에는 옥수수와 참외와 수박, 가을이면 밤과 호박을 수확하는 체험이 기다린다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4c575c5fa5a66de634655ceebb414111e87e31e295dd5a9d05222a9fe125f01f"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:8781c016d608a60195c705a0dd2a1916e61e634a82e59d3e94e5763c7ee7abe9",
+          "quote": {
+            "end": 58,
+            "method": "EXACT",
+            "original": "4계절 체험 ( 비손팜핑그린, 비손팜핑레드, 비손팜핑옐로우, 비손팜핑화이트 ) ※ 매달 체험프로그램 상이",
+            "start": 0,
+            "submitted": "4계절 체험 ( 비손팜핑그린, 비손팜핑레드, 비손팜핑옐로우, 비손팜핑화이트 ) ※ 매달 체험프로그램 상이",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7f2bf361b0ff6ffb4e26e08afdec600d0aa793a122c5b11f596e308cab1170e1"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "계절별 수확, 베이킹, 숲 예술체험 등 구체적 참여 활동이 사철 지속적으로 제공된다. 몰입의 중심성까지는 단정할 수 없어 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+          "quote": {
+            "end": 457,
+            "method": "EXACT",
+            "original": "숲에서 즐기는 예술체험은 남녀노소 누구나 좋아하는 프로그램이다. 새집 만들기, 모기 퇴치제 만들기, 보물찾기가 울창한 숲 속에서 진행된다.",
+            "start": 380,
+            "submitted": "숲에서 즐기는 예술체험은 남녀노소 누구나 좋아하는 프로그램이다. 새집 만들기, 모기 퇴치제 만들기, 보물찾기가 울창한 숲 속에서 진행된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4c575c5fa5a66de634655ceebb414111e87e31e295dd5a9d05222a9fe125f01f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "숲 속 공동 체험 프로그램이 교류·참여 기회를 제공한다. 자기표현이나 관계 형성이 풍부하다는 근거는 부족해 수준 2.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+            "quote": "싱그러운 숲과 맑은 공기 그리고 월포 바다 뷰를 마당으로 삼는 캠핑장은 반려견과 함께 올 수 있다."
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+            "quote": "산책로를 따라 가다보면 예쁜 트리하우스가 나타나고"
+          }
+        ],
+        "key": "E.c",
+        "level": 2,
+        "reason": "숲·바다 뷰·트리하우스 등 장면에서 구별되는 시각적 성격이 서술되지만, 일관된 연출이 장면을 지배한다는 근거까지는 없어 수준 2.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+              "quote": {
+                "end": 108,
+                "method": "EXACT",
+                "original": "싱그러운 숲과 맑은 공기 그리고 월포 바다 뷰를 마당으로 삼는 캠핑장",
+                "start": 70,
+                "submitted": "싱그러운 숲과 맑은 공기 그리고 월포 바다 뷰를 마당으로 삼는 캠핑장",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "4c575c5fa5a66de634655ceebb414111e87e31e295dd5a9d05222a9fe125f01f"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 2,
+          "reason": "숲, 맑은 공기, 바다 뷰 등 자연 환경 단서가 확인된다. 다만 실제 고요함·회복 효과는 확인할 수 없어 수준 2.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "7b55e9ddacb3d8bb8144aa71a9cefb511b5d59eee98ca6f4d3a157631b5b8f8d",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관, 재료, 공간 구성의 시각적 특징은 보이지 않으며 녹색 철망과 나무 받침 등 현대적 사육 시설 외관만 확인된다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:08ea2c13882bae7bb5ba683fb77789c8a21ab6d38f39b55c6c0d28ebb564140a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c1f7131c5992bc39e7d11b12be9e3281c3f92efc38857ba4d3572babe6196a2b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2997098_8",
+          "request_sha256": "42ce7b86ca32cc9cb9467d8b531c1e736dcd27530c1b9e9687e7cb0ed88b804a",
+          "response_sha256": "1593381f49b3c711121628b1e40851b9c213e747f94e43c7bde58e6531c7947d",
+          "retrieved_at": "2026-09-11T02:04:20.835062Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "64beb8949dcae7e204222fbd9fa75a9b4650031939b6ca2249627b5dbc333bd5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/98/2997098_image2_1.jpg"
+        },
+        "record_sha256": "94d078bff26ce8c8aad418adb4af7c2dd6060bc6bb457c170d22a3a46d5d9590",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "비닐하우스 속 선명한 초록 작물과 노란 참외, 주황 토마토의 대비가 뚜렷하고 채광과 구도가 생동감 있게 연출됨",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0a55d337a94e58703fcec13b1b46153145ec74d9e871c9109f44d5b47c500240",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ebe60748627754078569ddcee12da4650bbe11bae4818ded00aa3ec11d520f0c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2997099_6",
+          "request_sha256": "42ce7b86ca32cc9cb9467d8b531c1e736dcd27530c1b9e9687e7cb0ed88b804a",
+          "response_sha256": "1593381f49b3c711121628b1e40851b9c213e747f94e43c7bde58e6531c7947d",
+          "retrieved_at": "2026-09-11T02:04:20.835062Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "042f6c5608a6f9afbfe968a3ef553f6b79207780f4b85262579ad12079ef8f93",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/99/2997099_image2_1.jpg"
+        },
+        "record_sha256": "1bd63a2c1f3111cb861e7e535ff2b8aa2ebd9fc05d31f2780a742bc3a8c19fd4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "바닥의 나무 조각과 흙, 트인 야외 느낌이 약간 보이지만 대부분 철망과 사육장 구조로 채워져 자연 경관 단서는 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1f2ab7549e9e78c15fd0592e41c01d5b8df21600e8acd97e14177de00932bbf4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c1f7131c5992bc39e7d11b12be9e3281c3f92efc38857ba4d3572babe6196a2b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2997098_8",
+          "request_sha256": "42ce7b86ca32cc9cb9467d8b531c1e736dcd27530c1b9e9687e7cb0ed88b804a",
+          "response_sha256": "1593381f49b3c711121628b1e40851b9c213e747f94e43c7bde58e6531c7947d",
+          "retrieved_at": "2026-09-11T02:04:20.835062Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "64beb8949dcae7e204222fbd9fa75a9b4650031939b6ca2249627b5dbc333bd5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/98/2997098_image2_1.jpg"
+        },
+        "record_sha256": "a5fc7c9a812cbe9ad3ed08fd801e5413fd70fd25e8f0d5b280e7b1e5330a63eb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 시각적 단서가 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:79174f15215b78b11417e0da71752a5bef5a064424438fac66370a50ed7c3e5e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "09f2447d56e02327401b9fa376ea16640ed07020ea0766714fd1a2b995af7981",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2821414_4",
+          "request_sha256": "42ce7b86ca32cc9cb9467d8b531c1e736dcd27530c1b9e9687e7cb0ed88b804a",
+          "response_sha256": "1593381f49b3c711121628b1e40851b9c213e747f94e43c7bde58e6531c7947d",
+          "retrieved_at": "2026-09-11T02:04:20.835062Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e9608e4230b637ef2febb35c07b07c37e44030d2620a9113f1f78dd2a8cdba3a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/14/2821414_image2_1.jpg"
+        },
+        "record_sha256": "9199701361d6fbebe1f26548e2d26fd31a748dbed6bcaa751e70b1ac12bf50e5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "덩굴 작물, 토마토 줄기 등 풍부한 녹지와 재배 환경이 화면을 가득 채우며 자연적 농촌 정경이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:87ee63807c538c22b5659cfda5344d06479bd54c542356b72150453f9c79a067",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ebe60748627754078569ddcee12da4650bbe11bae4818ded00aa3ec11d520f0c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2997099_6",
+          "request_sha256": "42ce7b86ca32cc9cb9467d8b531c1e736dcd27530c1b9e9687e7cb0ed88b804a",
+          "response_sha256": "1593381f49b3c711121628b1e40851b9c213e747f94e43c7bde58e6531c7947d",
+          "retrieved_at": "2026-09-11T02:04:20.835062Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "042f6c5608a6f9afbfe968a3ef553f6b79207780f4b85262579ad12079ef8f93",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/99/2997099_image2_1.jpg"
+        },
+        "record_sha256": "6798c50e53e66d2451151298c58980e88bae40fce0627449ff576493ed5214e3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘과 높은 태양, 넓은 야외 저각 구도로 밝고 화사한 시각적 인상이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9cdd7d10709dc203d17f5bdf1f1cdfb9890e9afd49147ab499806a7557ddc61a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "09f2447d56e02327401b9fa376ea16640ed07020ea0766714fd1a2b995af7981",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2821414_4",
+          "request_sha256": "42ce7b86ca32cc9cb9467d8b531c1e736dcd27530c1b9e9687e7cb0ed88b804a",
+          "response_sha256": "1593381f49b3c711121628b1e40851b9c213e747f94e43c7bde58e6531c7947d",
+          "retrieved_at": "2026-09-11T02:04:20.835062Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e9608e4230b637ef2febb35c07b07c37e44030d2620a9113f1f78dd2a8cdba3a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/14/2821414_image2_1.jpg"
+        },
+        "record_sha256": "a43df3adc19a5d556a8dac290272bda113fe325a1086ceab08f53263a3c7603c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "마른 풀밭, 초록 덤불, 뒤편 나무 언덕과 트인 하늘 등 자연 환경이 화면 대부분을 차지함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c408a68bb42a2e3ad295aee7be2bf0b88eaafabf6a93981ac0680ff79bd056b4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "09f2447d56e02327401b9fa376ea16640ed07020ea0766714fd1a2b995af7981",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2821414_4",
+          "request_sha256": "42ce7b86ca32cc9cb9467d8b531c1e736dcd27530c1b9e9687e7cb0ed88b804a",
+          "response_sha256": "1593381f49b3c711121628b1e40851b9c213e747f94e43c7bde58e6531c7947d",
+          "retrieved_at": "2026-09-11T02:04:20.835062Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e9608e4230b637ef2febb35c07b07c37e44030d2620a9113f1f78dd2a8cdba3a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/14/2821414_image2_1.jpg"
+        },
+        "record_sha256": "27dfb455397798767151738662613ea44f503d794630894a9575dba2748529ca",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "녹색 철망과 갈색 토끼들의 색 대비가 뚜렷하고, 손과 당근을 향해 모인 토끼들을 가까이 담은 구도가 생동감 있는 시각적 성격을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f658b313df23c3947980587fcd40f2a4ea73015c79a0838f9c438c06c477e95f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c1f7131c5992bc39e7d11b12be9e3281c3f92efc38857ba4d3572babe6196a2b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2997098_8",
+          "request_sha256": "42ce7b86ca32cc9cb9467d8b531c1e736dcd27530c1b9e9687e7cb0ed88b804a",
+          "response_sha256": "1593381f49b3c711121628b1e40851b9c213e747f94e43c7bde58e6531c7947d",
+          "retrieved_at": "2026-09-11T02:04:20.835062Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "64beb8949dcae7e204222fbd9fa75a9b4650031939b6ca2249627b5dbc333bd5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/98/2997098_image2_1.jpg"
+        },
+        "record_sha256": "4d23ce60afb62b72a148ede9ee29661fa3a4bee1c8a0b1a94a9e3becedc42ba3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:13f2a6de7fe3b0da59b3e25283371cef248ab852b910e60d7e6bcba55e38e2d8",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2790490",
+          "request_sha256": "f90d971b5e4502fb578f6ea56c156f140f258ae2b4c672f239138940134a7896",
+          "response_sha256": "f5b766b98491550817fc66c90eab429ea4fc3eaaf99ade98b37c24934967dd8f",
+          "retrieved_at": "2026-09-11T02:04:20.162010Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae5aceedbe923f665c2b1abb44a7ce0d99b00a6a32d1fa10e194a157d05263a8",
+          "source_uri": null
+        },
+        "record_sha256": "172b3e73558801cf402f89a2bd9724cd8fb844ded77a4d26190056c2bf6e6578",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "안내동, 카페, 매점, 편집샵, 실내쿠킹체험장, 화장실, 샤워실, 모래놀이터, 숲 산책로"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:20ca6859946e5bd8fc80a7a2404e9079f319d5876d0794a70695ef16ade54628",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2790490",
+          "request_sha256": "b5ba8cc98c4bdb41ec0107614f00d438f3e58c4486ebbeee38a5f1b8d2c43748",
+          "response_sha256": "92caaa94589af53807e6b89e0af53d4a4077caa52f9193ffc6838edefa343a89",
+          "retrieved_at": "2026-09-10T17:26:00.256642Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-06-26T05:35:01Z",
+          "source_record_sha256": "f3af1925b2d39ec317d471a71e5538f7c574281ea5a0b6e2011d450963448ce7",
+          "source_uri": null
+        },
+        "record_sha256": "4c575c5fa5a66de634655ceebb414111e87e31e295dd5a9d05222a9fe125f01f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "비손농장은 1만 6천 평의 넓이를 자랑한다. 캠핑장은 tvN 예능 프로그램 <바퀴달린 집>이 찾아올 정도로 아름다운 곳이다. 싱그러운 숲과 맑은 공기 그리고 월포 바다 뷰를 마당으로 삼는 캠핑장은 반려견과 함께 올 수 있다. 여름철이면 대형물놀이장이 개장된다. 산책로를 따라 가다보면 예쁜 트리하우스가 나타나고, 아이들이 시간가는 줄 모르고 빠져드는 모래놀이터, 사랑스러운 토끼, 거위, 염소가 살고 있는 동물농장까지 갖가지 테마로 가득하다. 농촌체험은 비손농장을 대표하는 테마다. 봄에는 쑥과 산딸기, 여름에는 옥수수와 참외와 수박, 가을이면 밤과 호박을 수확하는 체험이 기다린다. 겨울에는 쌀베이킹이나 밤마들렌 등 농작물 베이킹 체험으로 이어져서 사철 체험이 끊이지 않는다. 숲에서 즐기는 예술체험은 남녀노소 누구나 좋아하는 프로그램이다. 새집 만들기, 모기 퇴치제 만들기, 보물찾기가 울창한 숲 속에서 진행된다. 농촌체험으로 힐링의 시간을 가진 뒤 집으로 돌아가는 길에는 이가리 닻 전망대, 경상북도수목원, 옥계계곡이 자리한다. 유명 드라마 촬영지를 비롯해 스페이스워크, 영일대해수욕장 등 포항 명소들도 비손농장 가까이에 위치해 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8781c016d608a60195c705a0dd2a1916e61e634a82e59d3e94e5763c7ee7abe9",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "2790490",
+          "request_sha256": "f90d971b5e4502fb578f6ea56c156f140f258ae2b4c672f239138940134a7896",
+          "response_sha256": "027c2af2afbe58ad03c9aebcc94db808a847beb4f2e5ec9d64bc4bbc3e892ed7",
+          "retrieved_at": "2026-09-10T17:26:00.932385Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d235d5830707b1a54e88a949b6a1b0ca4c92f525c1c4990934253d783fa77af5",
+          "source_uri": null
+        },
+        "record_sha256": "7f2bf361b0ff6ffb4e26e08afdec600d0aa793a122c5b11f596e308cab1170e1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "4계절 체험 ( 비손팜핑그린, 비손팜핑레드, 비손팜핑옐로우, 비손팜핑화이트 ) ※ 매달 체험프로그램 상이"
+      }
+    ],
+    "parent_source_sha256": "6d22f06967c0e3aeed76c10956efec4e3d1f00e9ebafc20501b5438fb9247284",
+    "place": {
+      "address": "경상북도 포항시 북구 청하면 비학로 1889-157",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+      "name_ko": "비손농장(포항체험잇다)",
+      "place_id": "public:korea:546384fdf90bf187e8957f1ebf3764376bbf22610caf32d9b05e37d5fd77a897",
+      "provider_content_id": "2790490",
+      "region_code": "47113",
+      "region_name": "경상북도 포항시 북구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

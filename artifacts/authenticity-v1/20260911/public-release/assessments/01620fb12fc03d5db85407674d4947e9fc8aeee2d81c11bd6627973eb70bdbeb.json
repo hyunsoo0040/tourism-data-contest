@@ -1,0 +1,925 @@
+{
+  "assessed_at": "2026-09-11T18:59:55.151325Z",
+  "assessment_sha256": "01620fb12fc03d5db85407674d4947e9fc8aeee2d81c11bd6627973eb70bdbeb",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 66
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:180e7fb581bbb2c5de03601d59589c5b4f51bf29a4d1a878ede34398ddb2be6b",
+            "appearance:585ceca706e454922fb9f731d03eb406ba65da32288f72eb7d93ad34942eaad4",
+            "appearance:ba37693925822fdbacdf91cefb50096721f3b85aaa3f8b1a6ae5c74cffc281ac"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "임진강·산악 조망 등 자연 경관 언급은 환경 단서로 볼 수 있으나, 장소의 이미지를 표현하는 의도된 시각적 연출·표현이라고 확정할 근거는 불충분하다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:344cbf27f4146f0f19c75d366a2bd481dbba02c4a87e3afbe49fa5de0167e2e1"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "21개 테마별 주제원과 5㎞ 둘레길, 솔향기길 등 방문자가 자신의 방식으로 둘러볼 수 있는 자율적 탐색 기회가 명시되어 있다. 무료 개방도 탐색의 제약 요소를 낮추는 단서이나, 깊은 일상 이탈 경험의 중심성까지는 근거가 없어 수준 2~3 수준으로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:344cbf27f4146f0f19c75d366a2bd481dbba02c4a87e3afbe49fa5de0167e2e1"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1545b7188b951c7fe6e241c4d37e7ee59426cfdf5198d1e5e9b81ecc5e4c6cbc",
+            "appearance:488e7b85d10263b2a421ac0f0e42bbfdbf18a5ae3925ca4b5b4ae093380e3ba8",
+            "appearance:739ccb2604a712f3c75791db9d702276fe73843ab0824b941042faeb04ffd06c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "울창한 시유림 산림, 30만여 본의 식물, 임진강과 산악 조망 등 자연 환경 단서가 구체적으로 확인된다. 산림치유프로그램 운영도 환경의 회복 지원 성격을 뒷받침하나, 실제 고요함·혼잡도는 확정할 수 없어 수준 3으로 판단.",
+      "value": 81
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "율곡수목원은 1960년대 산림녹화사업으로 가꾼 시유림을 개원한 수목원으로, 확인된 문화유산의 원형·실물과의 접촉을 뒷받침하는 근거가 제공되지 않았다. 산림은 유산 원형이 아니므로 지원 근거 부족.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개원 연도와 산림녹화사업 연혁은 소개되나, 이는 수목원 조성 경위일 뿐 이 장소 자체의 구체적 역사·사건·인물 맥락의 탐구 경험을 제공한다는 근거는 불충분하다. 인근 율곡이이·황희선생 유적지는 다른 대상이므로 본 장소에 적용하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 제공되지 않았다. 식물 보전·증식 활동은 문화적 전승과 직접 연결된다고 확정하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·전통·원형에 연결된 해설·학습 제공 근거가 없다. 식물 전시와 숲체험 프로그램 언급만 있으며 원형 맥락의 탐구로 볼 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "이 장소에 사회적으로 부여된 특정 이미지·상징적 의미와 그 연결을 보여주는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "임진강·산악 조망 등 자연 경관 언급은 환경 단서로 볼 수 있으나, 장소의 이미지를 표현하는 의도된 시각적 연출·표현이라고 확정할 근거는 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 제공되지 않았다. 전망대 언급은 대표 이미지의 체험·재현 경험으로 확정하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:344cbf27f4146f0f19c75d366a2bd481dbba02c4a87e3afbe49fa5de0167e2e1",
+          "quote": {
+            "end": 477,
+            "method": "EXACT",
+            "original": "수목원을 감싸는 5㎞ 길이의 수목원 둘레길은 임진강의 풍경이 한눈에 내려다보이는 전망대, 솔향기길, 문바위 등이 포함되어 있어 풍성하고도 다채로운 매력을 느낄 수 있다",
+            "start": 384,
+            "submitted": "수목원을 감싸는 5㎞ 길이의 수목원 둘레길은 임진강의 풍경이 한눈에 내려다보이는 전망대, 솔향기길, 문바위 등이 포함되어 있어 풍성하고도 다채로운 매력을 느낄 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e9cf1dbdd9e3ab59109c8bb8f26c53c21e22a0b2a2f99ace15ee4fe8741067c0"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "21개 테마별 주제원과 5㎞ 둘레길, 솔향기길 등 방문자가 자신의 방식으로 둘러볼 수 있는 자율적 탐색 기회가 명시되어 있다. 무료 개방도 탐색의 제약 요소를 낮추는 단서이나, 깊은 일상 이탈 경험의 중심성까지는 근거가 없어 수준 2~3 수준으로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:344cbf27f4146f0f19c75d366a2bd481dbba02c4a87e3afbe49fa5de0167e2e1",
+          "quote": {
+            "end": 553,
+            "method": "EXACT",
+            "original": "북쪽으로는 임진강, 동쪽에는 파평산과 감악산 등이 위치하고 있어 임진강 일대 및 산자수명한 명산을 한눈에 조망이 가능하며",
+            "start": 486,
+            "submitted": "북쪽으로는 임진강, 동쪽에는 파평산과 감악산 등이 위치하고 있어 임진강 일대 및 산자수명한 명산을 한눈에 조망이 가능하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e9cf1dbdd9e3ab59109c8bb8f26c53c21e22a0b2a2f99ace15ee4fe8741067c0"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "울창한 시유림 산림, 30만여 본의 식물, 임진강과 산악 조망 등 자연 환경 단서가 구체적으로 확인된다. 산림치유프로그램 운영도 환경의 회복 지원 성격을 뒷받침하나, 실제 고요함·혼잡도는 확정할 수 없어 수준 3으로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "프로그램 존재는 확인되나 제안 수준 3의 앵커는 '지속적으로 참여·도전할 활동'이다. 단발성 프로그램 운영 사실만으로 지속적·도전적 참여 기회까지 뒷받침되는지 원문만으로는 확인이 어렵다. 수준 2(구체적인 참여 활동)면 지지 가능하나 현재 수준의 근거는 불충분하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "가족숲 등 프로그램 명칭만으로는 교류·자기표현의 구체적 기회를 확인하기 어렵다. 프로그램 이름에서 공동 활동을 추정한 것은 근거가 얇으며, '구체적인 교류·표현 기회'(수준 2~3)에 해당하는지 원문만으로 판단할 수 없다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "1c741a82eeeb1da626fb509d2a402e45687940e7bd043bcc718c58f899851feb",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:344cbf27f4146f0f19c75d366a2bd481dbba02c4a87e3afbe49fa5de0167e2e1",
+              "quote": {
+                "end": 379,
+                "method": "EXACT",
+                "original": "율곡수목원에서는 유아를 대상으로 한 유아숲체험 프로그램과 80대까지 참여 가능한 산림치유프로그램인 치유숲, 가족숲, 엄마활력숲, 실버숲, 노르딕 워킹 등의 숲체험 프로그램을 운영하고 있다",
+                "start": 275,
+                "submitted": "율곡수목원에서는 유아를 대상으로 한 유아숲체험 프로그램과 80대까지 참여 가능한 산림치유프로그램인 치유숲, 가족숲, 엄마활력숲, 실버숲, 노르딕 워킹 등의 숲체험 프로그램을 운영하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e9cf1dbdd9e3ab59109c8bb8f26c53c21e22a0b2a2f99ace15ee4fe8741067c0"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:e901f297b6c1206e71084b085a708ec64d94c4f47580bedc0fcae551b4807f32",
+              "quote": {
+                "end": 42,
+                "method": "EXACT",
+                "original": "치유테라피 / 가족숲 / 치유숲 / 엄마활력숲 / 실버숲 / 노르딕 워킹 등",
+                "start": 0,
+                "submitted": "치유테라피 / 가족숲 / 치유숲 / 엄마활력숲 / 실버숲 / 노르딕 워킹 등",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f11c70688159e712dc71dcc70538ceb2fcc89933c6248392da69e7516821e703"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "유아숲체험, 산림치유, 노르딕 워킹 등 다양한 연령대가 참여하는 구체적 프로그램이 공식 소개로 확인되어 참여·집중 활동의 기회가 지원된다. 프로그램 존재는 확인되나 방문 경험의 중심성 여부는 알 수 없어 수준 3으로 판단.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "프로그램 존재는 확인되나 제안 수준 3의 앵커는 '지속적으로 참여·도전할 활동'이다. 단발성 프로그램 운영 사실만으로 지속적·도전적 참여 기회까지 뒷받침되는지 원문만으로는 확인이 어렵다. 수준 2(구체적인 참여 활동)면 지지 가능하나 현재 수준의 근거는 불충분하다."
+        }
+      },
+      "reason": "프로그램 존재는 확인되나 제안 수준 3의 앵커는 '지속적으로 참여·도전할 활동'이다. 단발성 프로그램 운영 사실만으로 지속적·도전적 참여 기회까지 뒷받침되는지 원문만으로는 확인이 어렵다. 수준 2(구체적인 참여 활동)면 지지 가능하나 현재 수준의 근거는 불충분하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:344cbf27f4146f0f19c75d366a2bd481dbba02c4a87e3afbe49fa5de0167e2e1",
+              "quote": {
+                "end": 379,
+                "method": "EXACT",
+                "original": "80대까지 참여 가능한 산림치유프로그램인 치유숲, 가족숲, 엄마활력숲, 실버숲, 노르딕 워킹 등의 숲체험 프로그램을 운영하고 있다",
+                "start": 307,
+                "submitted": "80대까지 참여 가능한 산림치유프로그램인 치유숲, 가족숲, 엄마활력숲, 실버숲, 노르딕 워킹 등의 숲체험 프로그램을 운영하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e9cf1dbdd9e3ab59109c8bb8f26c53c21e22a0b2a2f99ace15ee4fe8741067c0"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "가족숲 등 프로그램 이름에서 함께 참여하는 공동 활동의 기회가 제한적으로 확인된다. 그러나 교류·자기표현의 풍부함이나 관계 형성 경험의 중심성을 확정할 근거는 부족하여 수준 2로 판단.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "가족숲 등 프로그램 명칭만으로는 교류·자기표현의 구체적 기회를 확인하기 어렵다. 프로그램 이름에서 공동 활동을 추정한 것은 근거가 얇으며, '구체적인 교류·표현 기회'(수준 2~3)에 해당하는지 원문만으로 판단할 수 없다."
+        }
+      },
+      "reason": "가족숲 등 프로그램 명칭만으로는 교류·자기표현의 구체적 기회를 확인하기 어렵다. 프로그램 이름에서 공동 활동을 추정한 것은 근거가 얇으며, '구체적인 교류·표현 기회'(수준 2~3)에 해당하는지 원문만으로 판단할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "a7729d237dfbb46de22ea58f3770e5a43d50ac188f6fe6df192e2abe76c47485",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목재 데크와 난간이 자연스러운 소재로 보이지만 현대적 관광 인프라로서 전통적 재료·공간 구성의 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0d87b7fae11e8d708a30dd189a0679028bdb3886c838f6c27b9c593ee0e3a670",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2a3b5b1a5e999c834bef4758d742be46c7cc160ba2d26435d6f8961194f7779",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547153_3",
+          "request_sha256": "71bbd45224db49a0994968416f68b50de2fb0f8c28fcdcaa4c3389738cbdb7e0",
+          "response_sha256": "08fc1468d2d04ce274bcb9b318dc0b3d966ddc4f651d479e1a46ad9252b7001c",
+          "retrieved_at": "2026-09-11T02:10:20.175910Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "59218b5fa70883a6c7ae6ee35173a3e3b3d0bdcc9952383b0e45dc80c01e11a2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3547153_image2_1.jpg"
+        },
+        "record_sha256": "8d82357ff9c5347f4c3e329da970e57dac871a529bff45d6a1da34bf7ddd1fd4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "화면 전체가 흰 야생화 군락으로 덮이고 뒤로 침엽수림과 안개가 장면을 지배하며, 자연 경관 단서가 극히 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1545b7188b951c7fe6e241c4d37e7ee59426cfdf5198d1e5e9b81ecc5e4c6cbc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "133bbf014e7791400206669275058d3be7c7f8ef45f1f0669a6d446f264ebe5e",
+        "match_basis": [
+          "공식 촬영지역 경기도 파주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3460537",
+          "request_sha256": "58d14e27539a627c049afaad6ebb5859c9efb6753e87f3ade2cda005d66af7d8",
+          "response_sha256": "679efd0a4f3d7b2c8153f3a9cc91bdb518ed0104e7214af2dbbe507e32b4e14e",
+          "retrieved_at": "2026-09-11T02:10:21.224626Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4071c32b3beb6373918fff7592a3c9a997148d8cb47ad83b77ae8c2345cbcd8f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/37/3460537.jpg"
+        },
+        "record_sha256": "416fb1bed7b2f27b69f2b513f4f45f9eee15c435ce387e92c12911e94d58f839",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "짙은 초록의 울창한 숲과 갈색 목재 데크의 색 대비가 뚜렷하고, 계단식 데크가 대각선으로 이어지는 구도가 시선을 끄는 연출적 성격이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:180e7fb581bbb2c5de03601d59589c5b4f51bf29a4d1a878ede34398ddb2be6b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2a3b5b1a5e999c834bef4758d742be46c7cc160ba2d26435d6f8961194f7779",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547153_3",
+          "request_sha256": "71bbd45224db49a0994968416f68b50de2fb0f8c28fcdcaa4c3389738cbdb7e0",
+          "response_sha256": "08fc1468d2d04ce274bcb9b318dc0b3d966ddc4f651d479e1a46ad9252b7001c",
+          "retrieved_at": "2026-09-11T02:10:20.175910Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "59218b5fa70883a6c7ae6ee35173a3e3b3d0bdcc9952383b0e45dc80c01e11a2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3547153_image2_1.jpg"
+        },
+        "record_sha256": "fcad67051f7a74b0c844730a5199dc351682a480ccef5115cae62a3340ccf29b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "완만한 산 능선, 울창한 활엽수·침엽수 혼합 숲, 풀나무, 하천으로 보이는 수변까지 화면 대부분을 자연 경관이 차지한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:488e7b85d10263b2a421ac0f0e42bbfdbf18a5ae3925ca4b5b4ae093380e3ba8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2a3b5b1a5e999c834bef4758d742be46c7cc160ba2d26435d6f8961194f7779",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547153_3",
+          "request_sha256": "71bbd45224db49a0994968416f68b50de2fb0f8c28fcdcaa4c3389738cbdb7e0",
+          "response_sha256": "08fc1468d2d04ce274bcb9b318dc0b3d966ddc4f651d479e1a46ad9252b7001c",
+          "retrieved_at": "2026-09-11T02:10:20.175910Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "59218b5fa70883a6c7ae6ee35173a3e3b3d0bdcc9952383b0e45dc80c01e11a2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3547153_image2_1.jpg"
+        },
+        "record_sha256": "fc588d8adcffd4cb6583464b8ea35eb4de723292621744804ca98a0403839d7e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "자연석을 쌓은 돌탑과 돌무더기가 전통적 외관 요소로 보이나 작은 규모라 보통 수준으로 관찰된다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:576c098e846d8517e275eda0e4f36cf73b53b64ff05db693886dad5207295045",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "133bbf014e7791400206669275058d3be7c7f8ef45f1f0669a6d446f264ebe5e",
+        "match_basis": [
+          "공식 촬영지역 경기도 파주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3460537",
+          "request_sha256": "58d14e27539a627c049afaad6ebb5859c9efb6753e87f3ade2cda005d66af7d8",
+          "response_sha256": "679efd0a4f3d7b2c8153f3a9cc91bdb518ed0104e7214af2dbbe507e32b4e14e",
+          "retrieved_at": "2026-09-11T02:10:21.224626Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4071c32b3beb6373918fff7592a3c9a997148d8cb47ad83b77ae8c2345cbcd8f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/37/3460537.jpg"
+        },
+        "record_sha256": "a667d8f2536c70502177abc185ec36a9eb2f24405896d4a6ad710d7afd2fc705",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "안개 낀 소나기 숲과 흰 들국화 바다의 대비, 돌탑 실루엣이 절제된 색조 속에서 시각적으로 두드러지며 서정적 분위기를 연출한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:585ceca706e454922fb9f731d03eb406ba65da32288f72eb7d93ad34942eaad4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "133bbf014e7791400206669275058d3be7c7f8ef45f1f0669a6d446f264ebe5e",
+        "match_basis": [
+          "공식 촬영지역 경기도 파주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3460537",
+          "request_sha256": "58d14e27539a627c049afaad6ebb5859c9efb6753e87f3ade2cda005d66af7d8",
+          "response_sha256": "679efd0a4f3d7b2c8153f3a9cc91bdb518ed0104e7214af2dbbe507e32b4e14e",
+          "retrieved_at": "2026-09-11T02:10:21.224626Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4071c32b3beb6373918fff7592a3c9a997148d8cb47ad83b77ae8c2345cbcd8f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/37/3460537.jpg"
+        },
+        "record_sha256": "b8731d534ef801e11436ff450b7cba5a1b6fd46045890ce25a4f1b022f4eb61e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "소나기와 활엽수 혼합림, 지면을 뒤덮은 흰 야생화, 안개 낀 산림 경관이 장면 전체를 지배함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:739ccb2604a712f3c75791db9d702276fe73843ab0824b941042faeb04ffd06c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d4dbb60b5616cf07ce456d9fe1d079432af54e150992c2c31bffb7cce42d8292",
+        "match_basis": [
+          "공식 촬영지역 경기도 파주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3460536",
+          "request_sha256": "58d14e27539a627c049afaad6ebb5859c9efb6753e87f3ade2cda005d66af7d8",
+          "response_sha256": "679efd0a4f3d7b2c8153f3a9cc91bdb518ed0104e7214af2dbbe507e32b4e14e",
+          "retrieved_at": "2026-09-11T02:10:21.224626Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b640172201717c8ed5b1b39c32053c48450ad42b01cd1bfb5654a58c3f82416a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/36/3460536.jpg"
+        },
+        "record_sha256": "a9547bd7f7f5a56f6f94dadb4a2820fddcc32479dbfee4a0f597c02f1d0999a4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "돌무더기와 흙길 등이 일부 보이나 전통적 외관·재료의 시각적 특성은 약함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b8f133d40b1938c4b6d8719f80e8d86ede8768601b85ff71a9773be482935cac",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d4dbb60b5616cf07ce456d9fe1d079432af54e150992c2c31bffb7cce42d8292",
+        "match_basis": [
+          "공식 촬영지역 경기도 파주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3460536",
+          "request_sha256": "58d14e27539a627c049afaad6ebb5859c9efb6753e87f3ade2cda005d66af7d8",
+          "response_sha256": "679efd0a4f3d7b2c8153f3a9cc91bdb518ed0104e7214af2dbbe507e32b4e14e",
+          "retrieved_at": "2026-09-11T02:10:21.224626Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b640172201717c8ed5b1b39c32053c48450ad42b01cd1bfb5654a58c3f82416a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/36/3460536.jpg"
+        },
+        "record_sha256": "8502a3a6d07d1f0d9572976f8148ff35aff73f22d73a9613ed495e93df08c05d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "안개 낀 흰 하늘과 은은한 초록·흰 꽃의 절제된 색조, 저각도 구도와 꽃밭 대 나무의 대비가 뚜렷해 몽환적 연출이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ba37693925822fdbacdf91cefb50096721f3b85aaa3f8b1a6ae5c74cffc281ac",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d4dbb60b5616cf07ce456d9fe1d079432af54e150992c2c31bffb7cce42d8292",
+        "match_basis": [
+          "공식 촬영지역 경기도 파주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3460536",
+          "request_sha256": "58d14e27539a627c049afaad6ebb5859c9efb6753e87f3ade2cda005d66af7d8",
+          "response_sha256": "679efd0a4f3d7b2c8153f3a9cc91bdb518ed0104e7214af2dbbe507e32b4e14e",
+          "retrieved_at": "2026-09-11T02:10:21.224626Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b640172201717c8ed5b1b39c32053c48450ad42b01cd1bfb5654a58c3f82416a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/36/3460536.jpg"
+        },
+        "record_sha256": "756e0078ffd4e7ef1deac2c1404d9ad222d09c94676e481ac4afa8475d2b1445",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:18fec4bf940d36acf6147fbc52e66abb248f163955812afe5de0ddf17520d6e9",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2673974",
+          "request_sha256": "92f997ae1a161261797a32113e2bf4d260769f46ad1dea76ff67b1134d351b94",
+          "response_sha256": "94e82df87d00127c8b1fda6a987c690aa32485e5e2da8b10e930f2d2286076e2",
+          "retrieved_at": "2026-09-11T02:10:19.831338Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e9934e551ed4ea1b75c377a6d00cdab860e4fa745dd045c240ad1b221c16bc12",
+          "source_uri": null
+        },
+        "record_sha256": "e03dc68ffe66f4ac0fe25f2c63f9687b6277f3e8268824a7e0cb8557b9ad27c4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:344cbf27f4146f0f19c75d366a2bd481dbba02c4a87e3afbe49fa5de0167e2e1",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2673974",
+          "request_sha256": "757fbfcaf3d3191a35b5ae9bdd071fd3c8d30fef7b096169fecda484578f63f9",
+          "response_sha256": "f8019f715c5e68c9d5e836343c8bc8a702a7bb3d3bb263211964e135c1156226",
+          "retrieved_at": "2026-09-10T16:55:08.351445Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-23T05:30:00Z",
+          "source_record_sha256": "f3fcabc56ba6f14430fe73eb4af677a15aad1a43bee90d2b3d9e4aafc41a8d44",
+          "source_uri": null
+        },
+        "record_sha256": "e9cf1dbdd9e3ab59109c8bb8f26c53c21e22a0b2a2f99ace15ee4fe8741067c0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "율곡수목원은 식물유전자원의 보전과 증식·전시를 위해 조성된 장소로, 과거 1960년대 산림녹화사업을 통해 울창한 산림이 잘 가꾸어진 시유림을 새롭게 탈바꿈시킨 곳이다. 2015년 6월에 임시개원을 한 후 2021년 6월에 정식 개원했다. 현재 율곡수목원 내에는 21개 테마별 식물 주제원이 있으며, 시민들이 기증한 15종 70그루의 기증나무와 함께 700여 종 80,000여 그루의 나무와 500여 종 220,000여 포기의 초본류 등 총 1,300여 종 30만여본의 식물이 식재되어 있다. 율곡수목원에서는 유아를 대상으로 한 유아숲체험 프로그램과 80대까지 참여 가능한 산림치유프로그램인 치유숲, 가족숲, 엄마활력숲, 실버숲, 노르딕 워킹 등의 숲체험 프로그램을 운영하고 있다. 또한 수목원을 감싸는 5㎞ 길이의 수목원 둘레길은 임진강의 풍경이 한눈에 내려다보이는 전망대, 솔향기길, 문바위 등이 포함되어 있어 풍성하고도 다채로운 매력을 느낄 수 있다. 뿐만 아니라 북쪽으로는 임진강, 동쪽에는 파평산과 감악산 등이 위치하고 있어 임진강 일대 및 산자수명한 명산을 한눈에 조망이 가능하며, 주변의 율곡이이와 황희선생 유적지와도 가까워 일대의 연계관광이 가능하다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e901f297b6c1206e71084b085a708ec64d94c4f47580bedc0fcae551b4807f32",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "2673974",
+          "request_sha256": "92f997ae1a161261797a32113e2bf4d260769f46ad1dea76ff67b1134d351b94",
+          "response_sha256": "c6785457b66dc8c3e2b344e701e547117d3257e1a8a4bac535d79dcfd8cea1e7",
+          "retrieved_at": "2026-09-10T16:55:09.043874Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9b91d7ed8782ecf72ad307fedb6689fdd49a9db6a030ad82f1ccbfe35db7d003",
+          "source_uri": null
+        },
+        "record_sha256": "f11c70688159e712dc71dcc70538ceb2fcc89933c6248392da69e7516821e703",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "치유테라피 / 가족숲 / 치유숲 / 엄마활력숲 / 실버숲 / 노르딕 워킹 등"
+      }
+    ],
+    "parent_source_sha256": "473c4794360d3162609fcd0d986ff3e83eb43d82b7f4c57ccb1f4e7e1a3c65b1",
+    "place": {
+      "address": "경기도 파주시 파평면 장승배기로 392",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+      "name_ko": "율곡수목원",
+      "place_id": "public:korea:c937a3dade4214a8e4e3838018b77ee880408dc3b94f9f047a4a8dcdd2f9c3d5",
+      "provider_content_id": "2673974",
+      "region_code": "41480",
+      "region_name": "경기도 파주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

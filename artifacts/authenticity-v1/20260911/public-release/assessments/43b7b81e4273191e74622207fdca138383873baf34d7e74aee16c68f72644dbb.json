@@ -1,0 +1,928 @@
+{
+  "assessed_at": "2026-09-11T19:37:00.441552Z",
+  "assessment_sha256": "43b7b81e4273191e74622207fdca138383873baf34d7e74aee16c68f72644dbb",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "건물의 연혁(옛 치안센터 리모델링)과 개관 시기가 간단히 소개된다. 이는 장소 관련 연혁의 짧은 안내 수준이며, 심층적 역사 맥락 탐구의 근거는 없다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'새로운 여행의 바람'이라는 주제와 각 공간의 이름(다가오면, 머물다가, 노올다가), 입국·출국식 운영시간 표기 등 여행이라는 이미지가 장소에 연결되어 표현된다. 이는 각 공간에 부여된 간단한 이미지 표현 수준으로, 일관된 상징이 여러 장면에서 반복 확인되거나 방문 경험의 중심이라는 근거는 부족하다. 대상은 제공된 place(다가 여행자 도서관)와 동일하다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:759339c7a36d51f3eecd673445dae6cc6053a79260a22fa78ece7059bd9eb0e1",
+            "appearance:7a6d3bf5487053d5fa1283177f223cb0c8e4c8929e2c381e7b09e9bc8b85c5e2",
+            "appearance:af12597d14f622dda2fb26e84cca066317264091fdc7fe583c38eab7f062de94"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "지하·1·2층·옥상까지 다양한 공간 중 '원하는 공간에서' 독서하도록 구성되어 방문자가 자신의 방식으로 자율적으로 선택·탐색할 기회가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:099cf0ca7c5ae658ee3b36734a697593643ab6f5876e7fbab0830f2305f507dd",
+            "appearance:a4a237055235e4c556aceb9823f7c5a3521dbd67d7ca5390df6e61179b33608d",
+            "appearance:b02ada2a86a950abafa4ba0b2754c05eebf7df4a89a48088ce6e81ed12eb8556"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 8,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "옥상정원, 야외 정원으로 조성한 책정원, 아늑한 다락방 같은 다가독방 등 머물며 쉴 수 있는 환경 단서가 확인된다. 다만 실제 고요함이나 혼잡 수준에 대한 직접 근거는 없어 자연·환경 단서를 확인하는 수준(level 2)으로 판단한다. 대상은 제공된 place와 동일하다.",
+      "value": 40
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개관 문장은 '전라감영 부근 옛 치안센터를 리모델링한' 건물임을 밝히지만, 이는 근처 유산과 리모델링 이력일 뿐 이 장소 자체의 확인된 원형·문화유산을 방문자가 접촉한다는 근거가 없다. 전라감영과의 직접 연결도 명시되지 않아 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d",
+          "quote": {
+            "end": 82,
+            "method": "EXACT",
+            "original": "전라감영 부근 옛 치안센터를 리모델링한 것으로 2022년 1월에 개관했다.",
+            "start": 41,
+            "submitted": "전라감영 부근 옛 치안센터를 리모델링한 것으로 2022년 1월에 개관했다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2a57d03e8d83575d1adefb90ac8d51583c1696a64165cf065b7c6db0863eeda6"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 1,
+      "reason": "건물의 연혁(옛 치안센터 리모델링)과 개관 시기가 간단히 소개된다. 이는 장소 관련 연혁의 짧은 안내 수준이며, 심층적 역사 맥락 탐구의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "도서관 자체는 여행 특화 도서관이며, 지역 주체의 전승·생활문화와의 실제 연결에 대한 언급이 없다. 주변 한옥마을 언급은 인근 관광지 특성이므로 이 장소의 전승 근거로 쓸 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "여행 가이드북과 에세이 비치 등 도서 자료 소개가 있으나, 이는 일반 여행 독서이지 원형·유산·전통에 연결된 해설·학습 프로그램에 대한 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d",
+          "quote": {
+            "end": 509,
+            "method": "EXACT",
+            "original": "옥상 노올다가는 새로운 여행의 바람이라는 주제의 공간으로",
+            "start": 478,
+            "submitted": "옥상 노올다가는 새로운 여행의 바람이라는 주제의 공간으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2a57d03e8d83575d1adefb90ac8d51583c1696a64165cf065b7c6db0863eeda6"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 1,
+      "reason": "'새로운 여행의 바람'이라는 주제와 각 공간의 이름(다가오면, 머물다가, 노올다가), 입국·출국식 운영시간 표기 등 여행이라는 이미지가 장소에 연결되어 표현된다. 이는 각 공간에 부여된 간단한 이미지 표현 수준으로, 일관된 상징이 여러 장면에서 반복 확인되거나 방문 경험의 중심이라는 근거는 부족하다. 대상은 제공된 place(다가 여행자 도서관)와 동일하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "주말 여행객 방문 언급이 있으나 이는 MEDIA_REPRESENTATION이 아니라 방문 현상이며, 매체를 통한 장소 이미지의 재현·확산(작품, 홍보물, SNS 내용 등)에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도를 현장에서 재현하거나 참여형 이미지 체험(촬영 포인트 등)에 대한 명시적 근거가 없다. 감성적 인테리어만으로 재현 경험을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d",
+          "quote": {
+            "end": 400,
+            "method": "EXACT",
+            "original": "책정원, 실내 수영장처럼 꾸며놓은 책풍덩 등 원하는 공간에서 독서할 수 있게 시설을 갖췄다.",
+            "start": 349,
+            "submitted": "책정원, 실내 수영장처럼 꾸며놓은 책풍덩 등 원하는 공간에서 독서할 수 있게 시설을 갖췄다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2a57d03e8d83575d1adefb90ac8d51583c1696a64165cf065b7c6db0863eeda6"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "지하·1·2층·옥상까지 다양한 공간 중 '원하는 공간에서' 독서하도록 구성되어 방문자가 자신의 방식으로 자율적으로 선택·탐색할 기회가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d",
+          "quote": {
+            "end": 352,
+            "method": "EXACT",
+            "original": "야외 정원으로 조성한 책정원",
+            "start": 337,
+            "submitted": "야외 정원으로 조성한 책정원",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2a57d03e8d83575d1adefb90ac8d51583c1696a64165cf065b7c6db0863eeda6"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "옥상정원, 야외 정원으로 조성한 책정원, 아늑한 다락방 같은 다가독방 등 머물며 쉴 수 있는 환경 단서가 확인된다. 다만 실제 고요함이나 혼잡 수준에 대한 직접 근거는 없어 자연·환경 단서를 확인하는 수준(level 2)으로 판단한다. 대상은 제공된 place와 동일하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "근거로 제시된 독서, LP 청취, 노트북 활용 여행 설계는 도서관 이용 수준의 활동이며, 구체적으로 마련된 참여·집중 활동인지 프로그램·체험의 실제 운영 여부가 자료에 불분명하다. 제시된 앵커(구체적인 참여·탐방 활동)를 직접 뒷받침하기에는 근거가 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "2층 머물다가가 소통·커뮤니티 공간이라는 사실로 구체적 교류 기회의 존재는 추정할 수 있으나, 제시된 앵커(함께 만들거나 자신을 표현할 활동이 풍부)에 비해 공간의 존재만으로 활동의 풍부함을 확인하기 어렵다. 실제 교류 프로그램·표현 활동의 근거가 없어 확정을 유보한다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d",
+              "quote": {
+                "end": 662,
+                "method": "EXACT",
+                "original": "북카페를 연상시키는 감성적인 인테리어와 공간 구성이 돋보인다",
+                "start": 629,
+                "submitted": "북카페를 연상시키는 감성적인 인테리어와 공간 구성이 돋보인다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "2a57d03e8d83575d1adefb90ac8d51583c1696a64165cf065b7c6db0863eeda6"
+            }
+          ],
+          "flags": [],
+          "key": "E.c",
+          "level": 3,
+          "reason": "감성적인 인테리어, 책정원·책풍덩 등 층별 테마 연출, LP 음악 등 장소의 시각적·공간적 성격이 분명하게 표현된다고 공식 소개에서 확인된다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.c",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d",
+              "quote": {
+                "end": 222,
+                "method": "EXACT",
+                "original": "조용히 여행을 설계할 수 있는 공간이다",
+                "start": 201,
+                "submitted": "조용히 여행을 설계할 수 있는 공간이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "2a57d03e8d83575d1adefb90ac8d51583c1696a64165cf065b7c6db0863eeda6"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 2,
+          "reason": "독서, LP 청취, 노트북을 활용한 여행 설계 등 참여할 수 있는 활동이 확인된다. 그러나 지속적으로 도전·몰입하는 프로그램형 활동의 근거는 없어 제한적 체험 기회 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "근거로 제시된 독서, LP 청취, 노트북 활용 여행 설계는 도서관 이용 수준의 활동이며, 구체적으로 마련된 참여·집중 활동인지 프로그램·체험의 실제 운영 여부가 자료에 불분명하다. 제시된 앵커(구체적인 참여·탐방 활동)를 직접 뒷받침하기에는 근거가 부족하다."
+        }
+      },
+      "reason": "근거로 제시된 독서, LP 청취, 노트북 활용 여행 설계는 도서관 이용 수준의 활동이며, 구체적으로 마련된 참여·집중 활동인지 프로그램·체험의 실제 운영 여부가 자료에 불분명하다. 제시된 앵커(구체적인 참여·탐방 활동)를 직접 뒷받침하기에는 근거가 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d",
+              "quote": {
+                "end": 469,
+                "method": "EXACT",
+                "original": "2층 머물다가는 여행자들의 소통과 커뮤니티를 위한 공간으로 LP판에서 음악이 흐르고 창가 책상에는 노트북을 비치해 두었다.",
+                "start": 401,
+                "submitted": "2층 머물다가는 여행자들의 소통과 커뮤니티를 위한 공간으로 LP판에서 음악이 흐르고 창가 책상에는 노트북을 비치해 두었다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "2a57d03e8d83575d1adefb90ac8d51583c1696a64165cf065b7c6db0863eeda6"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 3,
+          "reason": "여행자 간 소통과 커뮤니티를 위한 전용 공간이 마련되어 있어 구체적인 교류 기회가 확인된다. 공동 제작이나 자기표현 프로그램까지의 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "2층 머물다가가 소통·커뮤니티 공간이라는 사실로 구체적 교류 기회의 존재는 추정할 수 있으나, 제시된 앵커(함께 만들거나 자신을 표현할 활동이 풍부)에 비해 공간의 존재만으로 활동의 풍부함을 확인하기 어렵다. 실제 교류 프로그램·표현 활동의 근거가 없어 확정을 유보한다."
+        }
+      },
+      "reason": "2층 머물다가가 소통·커뮤니티 공간이라는 사실로 구체적 교류 기회의 존재는 추정할 수 있으나, 제시된 앵커(함께 만들거나 자신을 표현할 활동이 풍부)에 비해 공간의 존재만으로 활동의 풍부함을 확인하기 어렵다. 실제 교류 프로그램·표현 활동의 근거가 없어 확정을 유보한다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "d06dbb3283804ee41a38c65c1bd064d925d2b3ef1b04b47ac57ae82b07cf95d8",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않으며 인공적인 실내 바닥과 소품만 있음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:099cf0ca7c5ae658ee3b36734a697593643ab6f5876e7fbab0830f2305f507dd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e2c3207a14d6aafceb1fb0e3d9f902bcc2f72b8f74bc924adbb4cc1f9409a129",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058611_2",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "05418e9dec36a09d815d9bba55be30a6c39713cc7fc4822bb6a6c548c6c265d6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/11/4058611_image2_1.jpg"
+        },
+        "record_sha256": "c692feb96d202cebbc00b800186677502bb56a8234a2dd9a8e1595aee3be626e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 상가·다세대 건물과 금속 난간, 모던 가구만 보이며 전통적 외관·재료·공간 구성의 시각적 특성은 거의 나타나지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4f66ecf9919681fadbcda5921000b7991ed84cfd8268ba22b3cd2c807467a9e7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "57525e6ab2c90f78698eabb3a6fefa790523bb5c44d8b66c384d985704b7b942",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058610_7",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "39add3ffc85b608a7a466c8cdd604e51f64c78e26c8c8bf90361e16e41ee1e37",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/4058610_image2_1.jpg"
+        },
+        "record_sha256": "e1f2f9b5dd9bdfeab510f09ffbabc39aff22ee4c60f7db8ba884b7341f2dff1b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "천장을 향한 강한 원근 구도와 따뜻한 필라멘트 조명, 짙은 원목 책장의 대비가 장면 전체를 지배하는 극적인 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:759339c7a36d51f3eecd673445dae6cc6053a79260a22fa78ece7059bd9eb0e1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c5b57567224824b58eee6a875be8a4495d28e9abd6098741b2a4e642e64b62d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058612_3",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2774bca235963a03402513872838e13f5a93271d80aaa0b18c7fbe98794e5a32",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/12/4058612_image2_1.jpg"
+        },
+        "record_sha256": "59ce14f8c3404457ab4499eb237dc41a8afc7026fa63d11f6bfb7749caa76a35",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "짙은 회색 직물 배경 위에 두루마리 종이와 끈을 정돈된 평면 구도로 배치한 절제된 연출이 보통 수준으로 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7a6d3bf5487053d5fa1283177f223cb0c8e4c8929e2c381e7b09e9bc8b85c5e2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e2c3207a14d6aafceb1fb0e3d9f902bcc2f72b8f74bc924adbb4cc1f9409a129",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058611_2",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "05418e9dec36a09d815d9bba55be30a6c39713cc7fc4822bb6a6c548c6c265d6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/11/4058611_image2_1.jpg"
+        },
+        "record_sha256": "cabf4c125f5fd1af854f2312eac2067150a7706972b9ac9f254da53479ab706f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "자연 경관 단서가 거의 없이 도시 건물들로 둘러싸인 옥상 공간임. 화분 속 작은 나무와 잔가지만 보일 뿐 녹지·물·트인 자연 배경은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a4a237055235e4c556aceb9823f7c5a3521dbd67d7ca5390df6e61179b33608d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "57525e6ab2c90f78698eabb3a6fefa790523bb5c44d8b66c384d985704b7b942",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058610_7",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "39add3ffc85b608a7a466c8cdd604e51f64c78e26c8c8bf90361e16e41ee1e37",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/4058610_image2_1.jpg"
+        },
+        "record_sha256": "f4705c283dab9b2ce670f9a51026a14c83eb6ab240a8fdb85fa30009a2ebd2c6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "한지로 보이는 종이 질감, 끈으로 묶은 두루마리 형태, 손글씨 느낌의 인쇄 등 전통적으로 보이는 재료와 소품의 외관이 뚜렷함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a83936dcab378b044172c78d16d8ff96165ae76ee8fb151cad822607a04f1313",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e2c3207a14d6aafceb1fb0e3d9f902bcc2f72b8f74bc924adbb4cc1f9409a129",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058611_2",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "05418e9dec36a09d815d9bba55be30a6c39713cc7fc4822bb6a6c548c6c265d6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/11/4058611_image2_1.jpg"
+        },
+        "record_sha256": "c553ae297db789e65ea0548158d4620837f8d1739bd72ad387f8065e25eed350",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "채도 높은 파란 테이블·의자와 붉은 벤치가 밝은 회색·흰색 옥상 위에서 강렬한 색 대비를 이루며 장면의 시각적 중심이 됨. 자갈과 슬레이트 깔림, 미니멀한 구도로 연출된 느낌이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:af12597d14f622dda2fb26e84cca066317264091fdc7fe583c38eab7f062de94",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "57525e6ab2c90f78698eabb3a6fefa790523bb5c44d8b66c384d985704b7b942",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058610_7",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "39add3ffc85b608a7a466c8cdd604e51f64c78e26c8c8bf90361e16e41ee1e37",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/4058610_image2_1.jpg"
+        },
+        "record_sha256": "9ac002667f949edd3c63a5e6e5e620fe5f736db48aef99ab8d67760c79b23b12",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 서점·도서관 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b02ada2a86a950abafa4ba0b2754c05eebf7df4a89a48088ce6e81ed12eb8556",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c5b57567224824b58eee6a875be8a4495d28e9abd6098741b2a4e642e64b62d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058612_3",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2774bca235963a03402513872838e13f5a93271d80aaa0b18c7fbe98794e5a32",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/12/4058612_image2_1.jpg"
+        },
+        "record_sha256": "de48dac771fde185ed3244a9ad966a23ecd6242c8e0b985d4dd7deecf442ed1c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "짙은 원목 재질의 격자형 책장과 천장 부근의 전통적 지붕 구조·기와 형태가 시각적으로 뚜렷하게 나타남.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:dafda7a0392c1fa7fe02ac8e0d74d07197452330c597d990892fec7019f9002e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c5b57567224824b58eee6a875be8a4495d28e9abd6098741b2a4e642e64b62d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4058612_3",
+          "request_sha256": "e08ddda859fac6fbf177297dcb6a6b5895c8a6216bc04050c2ca136b5536bf06",
+          "response_sha256": "57ac457b3c4349ddf37a49072bc15eae6f4390b0e5836dba723cc2b617ea4b63",
+          "retrieved_at": "2026-09-10T08:29:58.915596Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2774bca235963a03402513872838e13f5a93271d80aaa0b18c7fbe98794e5a32",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/12/4058612_image2_1.jpg"
+        },
+        "record_sha256": "e03c04fbaad9aba669a028b6dad788de73391606abe7ac5dffae0f7d53c7b298",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fe76b065c0e7dd520308ebd39beef68536cb6c33c464686cfae2f97de6fe8f4d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3066196",
+          "request_sha256": "5ac36a650af3bef25b1ca39a08ef513dcc835e199d62c87bdd4ad80632da037a",
+          "response_sha256": "4e58094f3b91af5920c58573927d222067036e1b6bfe7e9d929ace1c4e8a758c",
+          "retrieved_at": "2026-09-10T07:54:10.662867Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-02T06:45:59Z",
+          "source_record_sha256": "0440fba117cf62befad916f9998872275ce2276702125a66bbd5ddb3763c137b",
+          "source_uri": null
+        },
+        "record_sha256": "2a57d03e8d83575d1adefb90ac8d51583c1696a64165cf065b7c6db0863eeda6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "다가 여행자 도서관은 전북 전주시 다가동에 위치한 여행 특화 도서관이다. 전라감영 부근 옛 치안센터를 리모델링한 것으로 2022년 1월에 개관했다. 연 면적 140㎡으로 지하 1층과 지상 1, 2층, 옥상정원으로 이루어져 있다. 지하 1층의 다가독방은 아늑한 분위기의 다락방 같은 공간으로 혼자 여행 중인 사람이나 소수의 인원이 독서하고 쉴 수 있는 공간으로 조용히 여행을 설계할 수 있는 공간이다. 지상 1층 다가오면은 여행자를 맞이하는 공간으로 가장 많은 책이 비치되어 있다. 여러 테마로 도서를 비치한 이곳은 국내외 여행가이드북과 여행 에세이 관련 서적을 비치하여 여행자들의 길잡이 역할을 한다. 야외 정원으로 조성한 책정원, 실내 수영장처럼 꾸며놓은 책풍덩 등 원하는 공간에서 독서할 수 있게 시설을 갖췄다. 2층 머물다가는 여행자들의 소통과 커뮤니티를 위한 공간으로 LP판에서 음악이 흐르고 창가 책상에는 노트북을 비치해 두었다. 마지막 공간인 옥상 노올다가는 새로운 여행의 바람이라는 주제의 공간으로 오픈된 공간에서 책을 읽을 수 있다. 오로지 여행을 위한 도서관답게 운영 시간도 입국, 출국으로 센스 있게 표기해 놓았다. 여행 도서 1,761권을 비롯해 아티스트북 52권, LP판 146점이 갖춰져 있는 이곳은 북카페를 연상시키는 감성적인 인테리어와 공간 구성이 돋보인다. 도서관 주변은 한옥 마을을 비롯한 볼거리가 많은 곳으로 주말엔 여행객들로 북적인다."
+      }
+    ],
+    "parent_source_sha256": "90bf512a4791ac456af939009a4a970453e3b2c5f5ed8ffa9b11860851c7ebc3",
+    "place": {
+      "address": "전북특별자치도 전주시 완산구 전라감영2길 28 (다가동1가)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+      "name_ko": "다가 여행자 도서관",
+      "place_id": "public:korea:f13c6a30d9b8bd47ba3055672c29364ed797a03e2b3a7dbc78606d2a2da2b2a3",
+      "provider_content_id": "3066196",
+      "region_code": "52111",
+      "region_name": "전북특별자치도 전주시 완산구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,991 @@
+{
+  "assessed_at": "2026-09-11T19:29:37.143631Z",
+  "assessment_sha256": "db9a5d8b9e212d10cdae60ba2de49c27a28eadbd1c7b81c1d8542da76f26882d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'적벽'이라는 이미지와 명칭이 장소에 부여된 구체적 의미로 확인된다. 그러나 이 이미지의 사회적 공유 범위나 일관된 의미 체계에 대한 근거는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:532820289ec476e34f87487afd9be497fd9dd6104722784a61209abc46c1e18e",
+            "appearance:87ffd7c2b4228f47eb71bd1a0950658122b402f5cf575056d477c3540bdd9255",
+            "appearance:da937e48099100987edc7a4c534eb5044b77f67a8d7ee4233197e6be623fad8a"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "수직 육각 기둥 절벽, 가을 단풍과 석양의 붉은색 등 뚜렷한 시각적 성격이 기술되어 구별되는 경관 표현이 확인된다. 일관된 연출이 장면을 지배한다는 근거까지는 없어 3수준.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:71747a9c792f8d06fb63ac1eb56b8e57b348041f30f43e4c8c2c4944c30995e4",
+            "appearance:889cb917fdd1479da9e344e623a1e48971160fb27c3fbdcde1bf771696d84f0c",
+            "appearance:b4b9f3691b82d994259a4dfa91792f34587720a244c91106f3bb9018b58256d6"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "강·절벽·담쟁이·돌단풍 등 자연 환경 단서의 확인(3수준)은 가능하나, 제안 앵커인 4수준 '자연·저자극 환경이 두드러짐'이나 실제 고요함·회복 지원 여부는 홍보적 서술만으로 확정할 수 없다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "현무암 주상절리라는 실제 지질 유산의 존재와 관람 가능성은 개요로 확인되어 3수준(관람)까지는 지지된다. 그러나 제안 앵커인 4수준 '공간이나 실물을 구체적으로 탐구'에 해당하는 탐방로·탐구 프로그램 등의 근거는 자료에 없다. 상위 수준 근거 부족이므로 UNCERTAIN.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "용암 분출·역류·침식에 의한 형성 과정이 구체적으로 제시되어 3수준(사건 맥락 제시)은 지지된다. 그러나 제안 앵커인 4수준 '여러 맥락을 대상과 연결해 설명'은 단일 형성 서술만으로는 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 제공되지 않았다. '적벽이라 부르기도 한다'는 명명은 전승 활동의 지속을 확인해주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "절리·주상절리·현무암 형성 원리에 대한 해설이 텍스트로 확인되나, 이는 소개 문안이며 현장에서 '여러 자료·해설로 탐구'하는 체계(전시·해설 패널 등)의 근거는 없다. 제안 앵커 4수준은 불충분.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75",
+          "quote": {
+            "end": 595,
+            "method": "EXACT",
+            "original": "가을이면 주상절리의 절벽이 담쟁이와 돌단풍이 물들고 석양빛에 더욱 붉게 보여 적벽이라 부르기도 한다",
+            "start": 540,
+            "submitted": "가을이면 주상절리의 절벽이 담쟁이와 돌단풍이 물들고 석양빛에 더욱 붉게 보여 적벽이라 부르기도 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f2192bdbfb38a663861ade1f8416638886171d77af22e84fa300b5de3840a769"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'적벽'이라는 이미지와 명칭이 장소에 부여된 구체적 의미로 확인된다. 그러나 이 이미지의 사회적 공유 범위나 일관된 의미 체계에 대한 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 재현·유통(작품, 홍보, SNS 등)에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75",
+          "quote": {
+            "end": 289,
+            "method": "EXACT",
+            "original": "강을 따라 기하학적인 형태의 현무암 주상절리가 만들어지게 된 것이다",
+            "start": 252,
+            "submitted": "강을 따라 기하학적인 형태의 현무암 주상절리가 만들어지게 된 것이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f2192bdbfb38a663861ade1f8416638886171d77af22e84fa300b5de3840a769"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "수직 육각 기둥 절벽, 가을 단풍과 석양의 붉은색 등 뚜렷한 시각적 성격이 기술되어 구별되는 경관 표현이 확인된다. 일관된 연출이 장면을 지배한다는 근거까지는 없어 3수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도를 현장에서 체험·재현(촬영 포인트 등)할 수 있다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "수 킬로미터 강변 경관은 자율 탐색 여지를 시사하나, 탐방로·자유 선택 지원 등 3수준 '자율적으로 선택·탐색할 기회'를 직접 뒷받침하는 명시적 근거는 없다. 제안 사유 스스로도 제한적임을 인정하므로 상위 수준은 불충분.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "강·절벽·담쟁이·돌단풍 등 자연 환경 단서의 확인(3수준)은 가능하나, 제안 앵커인 4수준 '자연·저자극 환경이 두드러짐'이나 실제 고요함·회복 지원 여부는 홍보적 서술만으로 확정할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "탐방로, 체험, 활동 등 참여·몰입 활동의 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "dc2fa796f516e5f3b206af590f66cbdb3b98d936ceb3df5412d946d1bc7a6586",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75",
+              "quote": {
+                "end": 105,
+                "method": "EXACT",
+                "original": "마치 병풍을 쳐 놓은 것 같은 아름다운 수직의 주상절리가 수 킬로미터에 걸쳐 발달해 있는 국내에서도 유일한 곳이다",
+                "start": 42,
+                "submitted": "마치 병풍을 쳐 놓은 것 같은 아름다운 수직의 주상절리가 수 킬로미터에 걸쳐 발달해 있는 국내에서도 유일한 곳이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f2192bdbfb38a663861ade1f8416638886171d77af22e84fa300b5de3840a769"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.a",
+          "level": 3,
+          "reason": "현무암 주상절리라는 실제 지질 유산의 존재가 공식 개요에서 확인되며, 방문자가 이 실물 경관을 관람할 수 있는 장소로 소개된다. 실물의 구체적 탐구 프로그램 근거는 없어 3수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "현무암 주상절리라는 실제 지질 유산의 존재와 관람 가능성은 개요로 확인되어 3수준(관람)까지는 지지된다. 그러나 제안 앵커인 4수준 '공간이나 실물을 구체적으로 탐구'에 해당하는 탐방로·탐구 프로그램 등의 근거는 자료에 없다. 상위 수준 근거 부족이므로 UNCERTAIN."
+        }
+      },
+      "reason": "현무암 주상절리라는 실제 지질 유산의 존재와 관람 가능성은 개요로 확인되어 3수준(관람)까지는 지지된다. 그러나 제안 앵커인 4수준 '공간이나 실물을 구체적으로 탐구'에 해당하는 탐방로·탐구 프로그램 등의 근거는 자료에 없다. 상위 수준 근거 부족이므로 UNCERTAIN."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75",
+              "quote": {
+                "end": 182,
+                "method": "EXACT",
+                "original": "북한 평강군 오리산과 680m 고지에서 분출한 용암은 옛 한탄강의 낮은 대지를 메우며 철원-포천-연천 일대에 넓은 용암대지를 형성하였고",
+                "start": 107,
+                "submitted": "북한 평강군 오리산과 680m 고지에서 분출한 용암은 옛 한탄강의 낮은 대지를 메우며 철원-포천-연천 일대에 넓은 용암대지를 형성하였고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f2192bdbfb38a663861ade1f8416638886171d77af22e84fa300b5de3840a769"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 3,
+          "reason": "이 장소 자체의 형성 과정(용암 분출, 역류, 침식)이 구체적으로 설명되어 장소의 지질사 맥락을 이해할 수 있다. 다만 이는 소개 텍스트이며 현장 탐구 중심 경험임은 확인되지 않아 3수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "용암 분출·역류·침식에 의한 형성 과정이 구체적으로 제시되어 3수준(사건 맥락 제시)은 지지된다. 그러나 제안 앵커인 4수준 '여러 맥락을 대상과 연결해 설명'은 단일 형성 서술만으로는 뒷받침되지 않는다."
+        }
+      },
+      "reason": "용암 분출·역류·침식에 의한 형성 과정이 구체적으로 제시되어 3수준(사건 맥락 제시)은 지지된다. 그러나 제안 앵커인 4수준 '여러 맥락을 대상과 연결해 설명'은 단일 형성 서술만으로는 뒷받침되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75",
+              "quote": {
+                "end": 412,
+                "method": "EXACT",
+                "original": "주상절리는 긴 통모양의 절리를 일컫는 말로 대개 현무암에서 가장 잘 발달하는 것으로 알려져 있다",
+                "start": 359,
+                "submitted": "주상절리는 긴 통모양의 절리를 일컫는 말로 대개 현무암에서 가장 잘 발달하는 것으로 알려져 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f2192bdbfb38a663861ade1f8416638886171d77af22e84fa300b5de3840a769"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.d",
+          "level": 3,
+          "reason": "절리와 주상절리, 현무암 형성 원리에 대한 해설이 제공되어 유산에 연결된 학습이 가능하다. 그러나 현장 해설·전시 체계의 근거는 없어 3수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.d",
+          "reason": "절리·주상절리·현무암 형성 원리에 대한 해설이 텍스트로 확인되나, 이는 소개 문안이며 현장에서 '여러 자료·해설로 탐구'하는 체계(전시·해설 패널 등)의 근거는 없다. 제안 앵커 4수준은 불충분."
+        }
+      },
+      "reason": "절리·주상절리·현무암 형성 원리에 대한 해설이 텍스트로 확인되나, 이는 소개 문안이며 현장에서 '여러 자료·해설로 탐구'하는 체계(전시·해설 패널 등)의 근거는 없다. 제안 앵커 4수준은 불충분."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75",
+              "quote": {
+                "end": 41,
+                "method": "EXACT",
+                "original": "임진강과 한탄강이 만나는 합수머리(도감포)에서부터 북쪽으로 임진강을 거슬러",
+                "start": 0,
+                "submitted": "임진강과 한탄강이 만나는 합수머리(도감포)에서부터 북쪽으로 임진강을 거슬러",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f2192bdbfb38a663861ade1f8416638886171d77af22e84fa300b5de3840a769"
+            }
+          ],
+          "flags": [],
+          "key": "R.a",
+          "level": 2,
+          "reason": "강변을 따라 수 킬로미터에 걸쳐 발달한 절벽 경관은 자율적으로 둘러볼 여지를 시사하나, 탐색로·자유 선택 지원에 대한 명시적 근거는 제한적이어서 2수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "수 킬로미터 강변 경관은 자율 탐색 여지를 시사하나, 탐방로·자유 선택 지원 등 3수준 '자율적으로 선택·탐색할 기회'를 직접 뒷받침하는 명시적 근거는 없다. 제안 사유 스스로도 제한적임을 인정하므로 상위 수준은 불충분."
+        }
+      },
+      "reason": "수 킬로미터 강변 경관은 자율 탐색 여지를 시사하나, 탐방로·자유 선택 지원 등 3수준 '자율적으로 선택·탐색할 기회'를 직접 뒷받침하는 명시적 근거는 없다. 제안 사유 스스로도 제한적임을 인정하므로 상위 수준은 불충분."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75",
+              "quote": {
+                "end": 582,
+                "method": "EXACT",
+                "original": "가을이면 주상절리의 절벽이 담쟁이와 돌단풍이 물들고 석양빛에 더욱 붉게 보여",
+                "start": 540,
+                "submitted": "가을이면 주상절리의 절벽이 담쟁이와 돌단풍이 물들고 석양빛에 더욱 붉게 보여",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f2192bdbfb38a663861ade1f8416638886171d77af22e84fa300b5de3840a769"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 3,
+          "reason": "강, 절벽, 담쟁이와 돌단풍 등 자연 환경 단서가 확인된다. 다만 실제 고요함·저자극·혼잡 수준에 대한 근거가 없어 3수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "강·절벽·담쟁이·돌단풍 등 자연 환경 단서의 확인(3수준)은 가능하나, 제안 앵커인 4수준 '자연·저자극 환경이 두드러짐'이나 실제 고요함·회복 지원 여부는 홍보적 서술만으로 확정할 수 없다."
+        }
+      },
+      "reason": "강·절벽·담쟁이·돌단풍 등 자연 환경 단서의 확인(3수준)은 가능하나, 제안 앵커인 4수준 '자연·저자극 환경이 두드러짐'이나 실제 고요함·회복 지원 여부는 홍보적 서술만으로 확정할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "ab8dd5a5eca0ffeca56b5ec174e8284224e5a8b5dc11f3ab2303c8760146bf38",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축물·재료·인공 공간 구성은 보이지 않고 자연 암벽과 식생만 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:05249cfd3d323d3659cb7c6058fa8aa61f72db461c38dc76c4f936eb2255643b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0ed25237676860cd9b3fd4d03c7c754faf5040ead8cca8d1211a00d4e29e38d2",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2592889",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ec8781139d2d36d18bfad1b63ea468dd0ad51e4b32f4c93afa4a2734e602b2ca",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/89/2592889.jpg"
+        },
+        "record_sha256": "1932c7f7d75fb43675f4cdad1e0ca430ecc4d30ae45d1268de7c42545a860b2c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "암벽 위로 곤색·빨강·초록의 낙엽 식물이 강한 대비를 이루며 가을철 색채가 두드러지고, 육각 암석 절리의 질감이 화면 중앙을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:532820289ec476e34f87487afd9be497fd9dd6104722784a61209abc46c1e18e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0ed25237676860cd9b3fd4d03c7c754faf5040ead8cca8d1211a00d4e29e38d2",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2592889",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ec8781139d2d36d18bfad1b63ea468dd0ad51e4b32f4c93afa4a2734e602b2ca",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/89/2592889.jpg"
+        },
+        "record_sha256": "c89b329d92916d5a21d3d641bc7f142c90c276acefbe3175491e97f1ed447ada",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축·재료·공간 구성으로 보이는 요소는 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6466a2de3a56890ba4fa81874cee8cc59a6f01653b76a6013e5342a1a0de1af9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2a13983ab27de7595abb7a94e9fd6468ff533813e3de1c73a87147a109d816e",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3040207",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "52726d2900f1a06a976bcf31f3fbbe3538c39b5975a155559c42324850ccc292",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/07/3040207.jpg"
+        },
+        "record_sha256": "09bba4ed25d4d5af606e0376ed8a9e155a01bd9c005bb9b9f9cb6455e5bbb6d5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "물, 울창한 수림, 암벽, 하안 초지 등 자연 환경 단서가 화면 전체를 채운다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:71747a9c792f8d06fb63ac1eb56b8e57b348041f30f43e4c8c2c4944c30995e4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2a13983ab27de7595abb7a94e9fd6468ff533813e3de1c73a87147a109d816e",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3040207",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "52726d2900f1a06a976bcf31f3fbbe3538c39b5975a155559c42324850ccc292",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/07/3040207.jpg"
+        },
+        "record_sha256": "663f4891e2b5214727d5b9a53f6950a26d90b9809be0b940eb7c9efe04f412b1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "절벽의 주상절리 질감과 수반(水面)의 거울 같은 반사가 장면을 지배하며, 녹색 식생과 갈색 암벽의 대비가 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:87ffd7c2b4228f47eb71bd1a0950658122b402f5cf575056d477c3540bdd9255",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2a13983ab27de7595abb7a94e9fd6468ff533813e3de1c73a87147a109d816e",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3040207",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "52726d2900f1a06a976bcf31f3fbbe3538c39b5975a155559c42324850ccc292",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/07/3040207.jpg"
+        },
+        "record_sha256": "555c5403ac3cdba819cd05711b725fec2343ab57c8efe51b080099c027671a72",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 강, 녹색 초지와 숲으로 덮인 둔덕, 트인 하늘이 장면 대부분을 차지하며 자연 환경 단서가 매우 강하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:889cb917fdd1479da9e344e623a1e48971160fb27c3fbdcde1bf771696d84f0c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "cbb8dd3dbc2b972bfcd79c08a747defe91b9385fee20b9e7839e82c01a6d5f22",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3040206",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7da5f9355463621cb2f256fc04807365b4323ea6098d0ba89dcb489e4fcdc89e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/06/3040206.jpg"
+        },
+        "record_sha256": "0569eadecb261aff6fa34c6f7886585c5b9be0ca5bd2c6b6fa970736dd178a73",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 사장교와 자연 풍경만 보이며 전통적 외관·재료·공간 구성의 시각적 특성은 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b37b904dfd0cf1152efccf10b0c0d469f5f876c27b497b3a46c113dece5fa4d8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "cbb8dd3dbc2b972bfcd79c08a747defe91b9385fee20b9e7839e82c01a6d5f22",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3040206",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7da5f9355463621cb2f256fc04807365b4323ea6098d0ba89dcb489e4fcdc89e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/06/3040206.jpg"
+        },
+        "record_sha256": "9fd9aee517b2c79bb7b1b40f78723f86a189f44ecbf1c6f4c8e8bf4df860be6e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "화면 전체가 암벽과 수목·덩굴 등 자연 경관으로 채워져 있어 트인 자연 환경 단서가 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b4b9f3691b82d994259a4dfa91792f34587720a244c91106f3bb9018b58256d6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0ed25237676860cd9b3fd4d03c7c754faf5040ead8cca8d1211a00d4e29e38d2",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2592889",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ec8781139d2d36d18bfad1b63ea468dd0ad51e4b32f4c93afa4a2734e602b2ca",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/89/2592889.jpg"
+        },
+        "record_sha256": "77ce813a54c2c395f5585e10d5c5f25c40c650f355257928c718c6b1d2239e5e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘과 흰 구름, 강물 반사, 사장교의 뾰족한 주탑과 케이블이 화면 중앙을 지배하며 구도적으로 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:da937e48099100987edc7a4c534eb5044b77f67a8d7ee4233197e6be623fad8a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "cbb8dd3dbc2b972bfcd79c08a747defe91b9385fee20b9e7839e82c01a6d5f22",
+        "match_basis": [
+          "공식 촬영지역 경기도 연천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3040206",
+          "request_sha256": "6c2d1cc500311cdccc82911430c2e4afda1274a4174e3695182c95e78d7afeef",
+          "response_sha256": "3d622ad2948b0201fc9ac775188028ec39e13c677248b640e4b46a16f0876b4d",
+          "retrieved_at": "2026-09-11T02:11:47.853350Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7da5f9355463621cb2f256fc04807365b4323ea6098d0ba89dcb489e4fcdc89e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/06/3040206.jpg"
+        },
+        "record_sha256": "9ad5f51b89d6c5a280646578b4690741831a45181e673fa1a0f889bbc10fa205",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:03f93a3431b18f7d2396f4ef93384cc4ddfd766e147cba01e931480a19a4df75",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2569474",
+          "request_sha256": "c2f3324494b27c0fc548975a214a333ca4ac2f67509992330a1e88a837f8baf1",
+          "response_sha256": "2cb4209405391ce4ddca80a08a50ab32976a3c7fbb51b435c995c4c661733c74",
+          "retrieved_at": "2026-09-10T16:42:28.749637Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-03-18T05:32:52Z",
+          "source_record_sha256": "e6af4b5d07badebc15bf861ca4fcc0d8baf66dbe4dcf290088abb1ac71d0debd",
+          "source_uri": null
+        },
+        "record_sha256": "f2192bdbfb38a663861ade1f8416638886171d77af22e84fa300b5de3840a769",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "임진강과 한탄강이 만나는 합수머리(도감포)에서부터 북쪽으로 임진강을 거슬러 마치 병풍을 쳐 놓은 것 같은 아름다운 수직의 주상절리가 수 킬로미터에 걸쳐 발달해 있는 국내에서도 유일한 곳이다. 북한 평강군 오리산과 680m 고지에서 분출한 용암은 옛 한탄강의 낮은 대지를 메우며 철원-포천-연천 일대에 넓은 용암대지를 형성하였고 임진강을 만나 임진강 상류 쪽으로 역류하면서 현무암층을 만들었습니다. 화산활동이 끝난 후 용암대지가 강의 침식을 받게 되자 강을 따라 기하학적인 형태의 현무암 주상절리가 만들어지게 된 것이다. 절리는 암석의 표면에 발달하는 좁은 틈(혹은 금)을 말하는데 침식을 받게 되면 이 틈이 벌어지면서 암석이 쪼개지게 된다. 주상절리는 긴 통모양의 절리를 일컫는 말로 대개 현무암에서 가장 잘 발달하는 것으로 알려져 있다. 현무암은 용암이 굳을 때 발생하는 수축작용으로 인해 중심점을 따라 사각 혹은 육각형 모양으로 수직의 절리가 발달하게 되는데, 침식을 받게 되면 육각형 모양의 돌기둥이 떨어져 나가면서 아름다운 주상절리 절벽이 만들어지게 된다. 가을이면 주상절리의 절벽이 담쟁이와 돌단풍이 물들고 석양빛에 더욱 붉게 보여 적벽이라 부르기도 한다. (출처 : 연천군청 문화관광 홈페이지)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3cadb6c5950bf4a09506e2fa830b71bb27c1a0bcea880a7a9f96e11b5a964a9f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2569474",
+          "request_sha256": "b977ed3f617c1592e5e467b7e7c030c2847dfb1b486001400781a6dfabc63ced",
+          "response_sha256": "6de4a1d07a92283e92c87a589a8a0aec39b03fdd92ebae7bedd0c87357e48da2",
+          "retrieved_at": "2026-09-11T02:11:45.448537Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f7e68de88360e413f9b5eda56e1049f1206128ad1bb048a81dea1f7c30fc9d48",
+          "source_uri": null
+        },
+        "record_sha256": "3632b050344334a6a49d9e5ba9710730a839a5cab35b7e52c10a03145a954ed4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "53e0a0dc0052593691ec9f0a0ae10e1922d916fa067699b7bf25ded7c3f82d31",
+    "place": {
+      "address": "경기도 연천군 미산면 동이리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+      "name_ko": "임진강 주상절리 (한탄강 유네스코 세계지질공원)",
+      "place_id": "public:korea:e742e23df1e4d71ad67d57b72be9c28db63407881a40318acf3c196f017384df",
+      "provider_content_id": "2569474",
+      "region_code": "41800",
+      "region_name": "경기도 연천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

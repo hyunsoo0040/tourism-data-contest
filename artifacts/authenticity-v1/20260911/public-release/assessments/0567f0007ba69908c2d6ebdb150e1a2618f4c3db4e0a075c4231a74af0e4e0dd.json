@@ -1,0 +1,849 @@
+{
+  "assessed_at": "2026-09-11T19:48:33.273378Z",
+  "assessment_sha256": "0567f0007ba69908c2d6ebdb150e1a2618f4c3db4e0a075c4231a74af0e4e0dd",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 71
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 78
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:258a7f525f2115abe7f175a395e33f681d8193d2720b28b1a7fbe879ce023cad"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "드라마와 예능 프로그램이라는 명시된 매체를 통해 장소 이미지가 표현·유통되었음을 확인할 수 있다. 매체 표현의 내용이 짧아 2 수준.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:11d6d0668fbacaf741ae8c156368fcc9f5190ef7a9d592c081df67147fe6c119",
+            "appearance:df6522e565a89e16bb1ebc7f2a24e80f0ab5a35cb76f95195dcb59fffa413f4e"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 88,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 88
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+            "evidence:258a7f525f2115abe7f175a395e33f681d8193d2720b28b1a7fbe879ce023cad"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(회룡대에서의 물도리 조망)을 현장에서 직접 경험할 수 있고, 드라마 촬영지 이미지를 현장 방문으로 경험할 수 있다. 촬영·재현 참여까지는 근거가 없어 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "마을을 자유롭게 둘러보고(1시간 걸음 규모), 다리를 건너 들어가는 방식의 자율적 탐색 기회를 확인할 수 있다. 여유로운 심화 탐색의 근거는 부족해 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0925ee5567cf44f47a862835a308858cd980b8d2e298394aff4a6d5c45113dff",
+            "appearance:8bef2622ca616522a1e5ff914ae5962243657dc742386fce34d22626c3ed1854"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "강과 모래사장, 섬과 같은 마을 등 자연 환경 단서와 '작고 조용한 마을'이라는 저자극 환경 확인. 실제 심리적 회복은 단정할 수 없고, 환경이 장면을 지배한다고까지는 근거가 부족해 3.",
+      "value": 81
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 회룡포가 자연적으로 형성된 강 휘어짐과 그 안의 마을임을 소개하나, 확인된 실제 원형·유산(문화재 등)의 접촉 경험을 뒷받침하는 기술이 없다. 장안사·원산성은 주변 관광지로만 언급되어 이 장소의 유산 접촉으로 확정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "예천 8경 선정이라는 배경과 뿅뿅다리 이름 유래가 있으나, 이는 간단한 연혁 소개 수준이며 이 장소의 구체적 역사 맥락 탐구를 지원하는 근거로 평가 수준을 확정하기 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "마을이 '모두 도시로 떠나고 몇 가구밖에 남아 있지 않다'는 기술은 실제 거주 주체의 전승·생활문화 지속의 근거로 사용할 수 없고, 오히려 전승 활동에 대한 언급이 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·전시·학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:258a7f525f2115abe7f175a395e33f681d8193d2720b28b1a7fbe879ce023cad",
+          "quote": {
+            "end": 16,
+            "method": "EXACT",
+            "original": "1박 2일 / 드라마 가을동화",
+            "start": 0,
+            "submitted": "1박 2일 / 드라마 가을동화",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5bcb4dd7ae81568923cd9d9512a30d2e8df19d2631332d461df4baa8ad87ec98"
+        }
+      ],
+      "flags": [],
+      "key": "E.b",
+      "level": 2,
+      "reason": "드라마와 예능 프로그램이라는 명시된 매체를 통해 장소 이미지가 표현·유통되었음을 확인할 수 있다. 매체 표현의 내용이 짧아 2 수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+          "quote": {
+            "end": 174,
+            "method": "EXACT",
+            "original": "이 풍경을 제대로 보려면 인접한 향석리의 장안사로 올라가야 한다",
+            "start": 139,
+            "submitted": "이 풍경을 제대로 보려면 인접한 향석리의 장안사로 올라가야 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5d3eb457c5952abc3a1fe374e466d911251b5c26f0c915f0ea41fcec9d30cef7"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:258a7f525f2115abe7f175a395e33f681d8193d2720b28b1a7fbe879ce023cad",
+          "quote": {
+            "end": 16,
+            "method": "EXACT",
+            "original": "1박 2일 / 드라마 가을동화",
+            "start": 0,
+            "submitted": "1박 2일 / 드라마 가을동화",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5bcb4dd7ae81568923cd9d9512a30d2e8df19d2631332d461df4baa8ad87ec98"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대표 장면(회룡대에서의 물도리 조망)을 현장에서 직접 경험할 수 있고, 드라마 촬영지 이미지를 현장 방문으로 경험할 수 있다. 촬영·재현 참여까지는 근거가 없어 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+          "quote": {
+            "end": 356,
+            "method": "EXACT",
+            "original": "마을에 들어가려면 마을의 상징이라 할 수 있는 뿅뿅다리를 건너야 하는데",
+            "start": 317,
+            "submitted": "마을에 들어가려면 마을의 상징이라 할 수 있는 뿅뿅다리를 건너야 하는데",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5d3eb457c5952abc3a1fe374e466d911251b5c26f0c915f0ea41fcec9d30cef7"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+          "quote": {
+            "end": 315,
+            "method": "EXACT",
+            "original": "한 바퀴 도는데 1시간도 채 안 걸린다",
+            "start": 294,
+            "submitted": "한 바퀴 도는데 1시간도 채 안 걸린다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5d3eb457c5952abc3a1fe374e466d911251b5c26f0c915f0ea41fcec9d30cef7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "마을을 자유롭게 둘러보고(1시간 걸음 규모), 다리를 건너 들어가는 방식의 자율적 탐색 기회를 확인할 수 있다. 여유로운 심화 탐색의 근거는 부족해 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+          "quote": {
+            "end": 49,
+            "method": "EXACT",
+            "original": "내성천이 휘감아 돌아 모래사장을 만든 곳이 회룡포이고",
+            "start": 20,
+            "submitted": "내성천이 휘감아 돌아 모래사장을 만든 곳이 회룡포이고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5d3eb457c5952abc3a1fe374e466d911251b5c26f0c915f0ea41fcec9d30cef7"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+          "quote": {
+            "end": 315,
+            "method": "EXACT",
+            "original": "작고 조용한 마을로 한 바퀴 도는데 1시간도 채 안 걸린다",
+            "start": 283,
+            "submitted": "작고 조용한 마을로 한 바퀴 도는데 1시간도 채 안 걸린다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5d3eb457c5952abc3a1fe374e466d911251b5c26f0c915f0ea41fcec9d30cef7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "강과 모래사장, 섬과 같은 마을 등 자연 환경 단서와 '작고 조용한 마을'이라는 저자극 환경 확인. 실제 심리적 회복은 단정할 수 없고, 환경이 장면을 지배한다고까지는 근거가 부족해 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "마을 걷기·조망 외에 만들기, 신체 활동, 지속적 참여·도전 활동에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현 기회에 대한 언급이 없다. 마을 주민이 거의 남아 있지 않다는 점만으로는 관계 경험을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.a",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "REPRESENTED_MEANING",
+            "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+            "quote": "유유히 흐르던 강이 갑자기 방향을 틀어 둥글게 원을 그리고 상류로 거슬러 흘러가는 기이한 풍경으로 예천 8경으로 선정"
+          },
+          {
+            "claim": "MEDIA_REPRESENTATION",
+            "evidence_id": "evidence:258a7f525f2115abe7f175a395e33f681d8193d2720b28b1a7fbe879ce023cad",
+            "quote": "1박 2일 / 드라마 가을동화"
+          }
+        ],
+        "key": "E.a",
+        "level": 2,
+        "reason": "'예천 8경'으로 선정된 기이한 강 풍경, 마을의 상징인 뿅뿅다리, 드라마 가을동화·예능 1박 2일과의 연결이 이 장소에 부여된 공유된 이미지·의미의 근거다. 매체·이미지 연결이 명시되었으나 일관된 의미 체계의 반복 표현까지는 근거가 없어 2로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+            "quote": "회룡대에 올라서면, 물도리 모양으로 굽어진 내성천과 그 안 섬과 같은 마을이 한눈에 들어온다"
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+            "quote": "물이 많을 때는 그 구멍으로 물이 뿅뿅 나온다 해서 붙여진 이름이다"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "회룡대에서 조망되는 원형으로 굽어진 내성천과 섬 같은 마을의 풍경, 물이 뿅뿅 나오는 독특한 구조의 다리 등 이 장소를 구별되게 표현하는 시각적 성격이 확인된다. 장면을 지배하는 일관된 연출까지의 근거는 없어 3으로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "728480e59cbcb4a66760be1c663638f053efc62e7435a40e61f6e7467b72e72f",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 산지, 강과 모래사장, 광활한 논·녹지 등 자연 경관이 장면 전반을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0925ee5567cf44f47a862835a308858cd980b8d2e298394aff4a6d5c45113dff",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "908d557f7a68f6dd46d1e9c6383349fede97e059a153bef68a97bc0ba150d274",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3542709_1",
+          "request_sha256": "0ba4128dab28830e5fb994bcced8d25906d357888f32db3a2c0b282ecd4be00b",
+          "response_sha256": "e17353747dbec08a6b0fce7e1262cabaefe1971b63318438cb618116c45ffd8b",
+          "retrieved_at": "2026-09-11T02:12:41.910246Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f72a747d3578f83685a56e15ddfe0386fbdb1f99e75c63448c9b344db05669de",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3542709_image2_1.jpg"
+        },
+        "record_sha256": "3b831f3a7f98c41a8d6b65a815059244e2a3c5a5e7e2768d150dbae37c806f0b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "호곡형 하천 곡류가 장면을 지배하는 대규모 조망 구도로, 초록 논·모래사장·푸른 하늘의 대비가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:11d6d0668fbacaf741ae8c156368fcc9f5190ef7a9d592c081df67147fe6c119",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "17b151f4cfb8c030c3929c1a5afb65d24ecc3053c55d7cc9d0ecd333d2bfd0fc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3542711_3",
+          "request_sha256": "0ba4128dab28830e5fb994bcced8d25906d357888f32db3a2c0b282ecd4be00b",
+          "response_sha256": "e17353747dbec08a6b0fce7e1262cabaefe1971b63318438cb618116c45ffd8b",
+          "retrieved_at": "2026-09-11T02:12:41.910246Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "02f84e0930b879c8a8a04081afd3dee91ec7765aa5884faf6a1d6bddd775ce83",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3542711_image2_1.jpg"
+        },
+        "record_sha256": "3dc6a88887f9214d81da019f3afb1afb204865dabc2bc799c839bf0a0e4e565e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "마을의 낮은 지붕 모양 건물 일부가 보이나 작고 뚜렷하지 않아 전통적 외관 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:361bde1dde8f9a8920900c5297ffdd8f918096c9f4c81715beaed67fa742489b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "17b151f4cfb8c030c3929c1a5afb65d24ecc3053c55d7cc9d0ecd333d2bfd0fc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3542711_3",
+          "request_sha256": "0ba4128dab28830e5fb994bcced8d25906d357888f32db3a2c0b282ecd4be00b",
+          "response_sha256": "e17353747dbec08a6b0fce7e1262cabaefe1971b63318438cb618116c45ffd8b",
+          "retrieved_at": "2026-09-11T02:12:41.910246Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "02f84e0930b879c8a8a04081afd3dee91ec7765aa5884faf6a1d6bddd775ce83",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3542711_image2_1.jpg"
+        },
+        "record_sha256": "aa880838f53182aed0d4ae0e2c4a7a1c0741736771bbe33200fc4b697af047fe",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "기와 지붕으로 보이는 건물이 일부 보이나 대부분 박공·비닐하우스 등 현대적 농업 시설이 많아 전통 외관은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:688102d0db84cd22a20a27d916c7c0d5169fc50d5bc0357dc88fe4e3c15a5a2c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "908d557f7a68f6dd46d1e9c6383349fede97e059a153bef68a97bc0ba150d274",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3542709_1",
+          "request_sha256": "0ba4128dab28830e5fb994bcced8d25906d357888f32db3a2c0b282ecd4be00b",
+          "response_sha256": "e17353747dbec08a6b0fce7e1262cabaefe1971b63318438cb618116c45ffd8b",
+          "retrieved_at": "2026-09-11T02:12:41.910246Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f72a747d3578f83685a56e15ddfe0386fbdb1f99e75c63448c9b344db05669de",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3542709_image2_1.jpg"
+        },
+        "record_sha256": "03a80ad37cb1ed73142ef403f1fd419b495c3d96431e880fe1dcd1c4ed513b1b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 강, 모래톱, 산림, 논과 트인 계곡 경관이 화면 대부분을 차지하며 자연 환경 단서가 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8bef2622ca616522a1e5ff914ae5962243657dc742386fce34d22626c3ed1854",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "17b151f4cfb8c030c3929c1a5afb65d24ecc3053c55d7cc9d0ecd333d2bfd0fc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3542711_3",
+          "request_sha256": "0ba4128dab28830e5fb994bcced8d25906d357888f32db3a2c0b282ecd4be00b",
+          "response_sha256": "e17353747dbec08a6b0fce7e1262cabaefe1971b63318438cb618116c45ffd8b",
+          "retrieved_at": "2026-09-11T02:12:41.910246Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "02f84e0930b879c8a8a04081afd3dee91ec7765aa5884faf6a1d6bddd775ce83",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3542711_image2_1.jpg"
+        },
+        "record_sha256": "a29b9958f865ba13825dca09cb756aa73d5d51b3a02e899578492d8704900951",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "짙은 녹색 들판과 하천, 산이 어우러진 넓은 항공 구도로 시골 풍광의 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:df6522e565a89e16bb1ebc7f2a24e80f0ab5a35cb76f95195dcb59fffa413f4e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "908d557f7a68f6dd46d1e9c6383349fede97e059a153bef68a97bc0ba150d274",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3542709_1",
+          "request_sha256": "0ba4128dab28830e5fb994bcced8d25906d357888f32db3a2c0b282ecd4be00b",
+          "response_sha256": "e17353747dbec08a6b0fce7e1262cabaefe1971b63318438cb618116c45ffd8b",
+          "retrieved_at": "2026-09-11T02:12:41.910246Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f72a747d3578f83685a56e15ddfe0386fbdb1f99e75c63448c9b344db05669de",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3542709_image2_1.jpg"
+        },
+        "record_sha256": "a33f63b93214101ec4cb2007b51f29bd331ff36a80b03dc641df2ffdbac362cb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:246e19de2026e295b4beaa8947556b4467ea1dd130fbf6cce016ce46ea7bf899",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126734",
+          "request_sha256": "18269b0ad48aa66fba562bf25f5abbdfdbdd48920d8fb4c7a08aa6ea8bf38610",
+          "response_sha256": "fc5ac8d3f9faeafbc489f112f25c429c31b5c518d086163737abbe9472bbf60e",
+          "retrieved_at": "2026-09-10T16:43:55.324263Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-23T05:30:00Z",
+          "source_record_sha256": "2bea6dac9bcde09d8a2561d954fff77f7c418db7af9b7292602479c734cd1483",
+          "source_uri": null
+        },
+        "record_sha256": "5d3eb457c5952abc3a1fe374e466d911251b5c26f0c915f0ea41fcec9d30cef7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "예천 용문면 대은리 낙동강의 지류인 내성천이 휘감아 돌아 모래사장을 만든 곳이 회룡포이고, 그 안에 마을이 들어서 있다. 유유히 흐르던 강이 갑자기 방향을 틀어 둥글게 원을 그리고 상류로 거슬러 흘러가는 기이한 풍경으로 예천 8경으로 선정되었는데, 이 풍경을 제대로 보려면 인접한 향석리의 장안사로 올라가야 한다. 1998년 세워진 장안사 앞 정자 회룡대에 올라서면, 물도리 모양으로 굽어진 내성천과 그 안 섬과 같은 마을이 한눈에 들어온다. 회룡포마을에는 모두 도시로 떠나고 몇 가구밖에 남아 있지 않은 작고 조용한 마을로 한 바퀴 도는데 1시간도 채 안 걸린다. 마을에 들어가려면 마을의 상징이라 할 수 있는 뿅뿅다리를 건너야 하는데 뿅뿅다리는 공사현장에서 사용되는 구멍 뚫린 구조물을 놓은 다리고, 물이 많을 때는 그 구멍으로 물이 뿅뿅 나온다 해서 붙여진 이름이다. 원래는 임시로 놓은 다리였으나 회룡포 명물이 되어 철거하지 않고, 반대편에 차량 진입이 가능한 다리를 놓았다. 주변 관광지로는 마을 건너편 비룡산에 있는 장안사, 원산성과 용문사, 석송령 등이 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:258a7f525f2115abe7f175a395e33f681d8193d2720b28b1a7fbe879ce023cad",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126734",
+          "request_sha256": "3c1ee40f3e1631e1081b264a307497660a69b8de4d8b03fa9b1278ca82e08d6f",
+          "response_sha256": "37ed6af1c086474f8be8a0ecc95ecc94bab9c0aebb8e2755e807652e7479da82",
+          "retrieved_at": "2026-09-11T02:12:41.569754Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "10f5cb5fa5c0bdb8842dd36dc5cd8aa919bb2eed83263e4b1312e9093e78191e",
+          "source_uri": null
+        },
+        "record_sha256": "5bcb4dd7ae81568923cd9d9512a30d2e8df19d2631332d461df4baa8ad87ec98",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "1박 2일 / 드라마 가을동화"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e0809b11ee33053a017d735a4426fbc592cba22010523554f5fd7af7dbc25d09",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126734",
+          "request_sha256": "3c1ee40f3e1631e1081b264a307497660a69b8de4d8b03fa9b1278ca82e08d6f",
+          "response_sha256": "37ed6af1c086474f8be8a0ecc95ecc94bab9c0aebb8e2755e807652e7479da82",
+          "retrieved_at": "2026-09-11T02:12:41.569754Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c9722634d681e9773e40370b385fb6af94c7443b1cec4c38185ee58b5da97a20",
+          "source_uri": null
+        },
+        "record_sha256": "3eeb18107f7ccc2eb8005f8d39836704c2b521b3184de53a2fa657c5883b0df5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "f9d82cdec14197dd040960af3af9cc2d0e6b2eef335daedefb24b8feac2263d2",
+    "place": {
+      "address": "경상북도 예천군 용궁면 회룡포길 359",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+      "name_ko": "회룡포",
+      "place_id": "public:korea:fbfb3dfff9109c3f5c7a4566ea1b046c82e837fd2ef42f519306240ff0a267c8",
+      "provider_content_id": "126734",
+      "region_code": "47900",
+      "region_name": "경상북도 예천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

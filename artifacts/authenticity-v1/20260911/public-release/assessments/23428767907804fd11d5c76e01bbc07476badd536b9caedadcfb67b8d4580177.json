@@ -1,0 +1,703 @@
+{
+  "assessed_at": "2026-09-11T16:43:19.482615Z",
+  "assessment_sha256": "23428767907804fd11d5c76e01bbc07476badd536b9caedadcfb67b8d4580177",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 83
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소 자체의 연혁(2002년 아시안게임용 금정체육공원 조성 후 시에 개방)이 간략히 소개된다. 깊은 역사 탐구의 중심이 아니므로 간단한 연혁 소개 수준인 1점.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1b6bd4a00680b7ec6ab628cbac11d6aa42c9bb1d8c913ff9846294ad8aee9af0"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "숲, 수변광장 등의 서술은 있으나 장소 이미지를 표현하는 일관된 시각적 성격·연출에 대한 근거가 없어 UNKNOWN이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "취향에 따라 원하는 활동을 선택할 수 있다는 명시와 돗자리·텐트 허용, 순환 조깅로·자전거로 등 자율적 이용·탐색의 기회가 확인된다. 일상 이탈 경험이 방문의 중심이라는 수준까지는 아니므로 3점.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:5daca0355e8557b10e8bda85b681dd8db338a918d9bd929c4406cd0bb6a29e8b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "부지 1/3에 이르는 녹음, 숲, 수변광장 등 자연 환경 단서가 구체적으로 확인된다. 실제 고요함이나 회복 경험까지는 확인할 수 없으므로 3점.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "수영, 골프, 배드민턴, 축구, 풋살, 테니스, 조깅, 라이딩 등 지속적으로 참여할 수 있는 다양한 신체 활동의 기회가 구체적으로 확인된다. 활동의 참여 기회가 넓으므로 4점.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "2002년 부산아시안게임용으로 조성된 체육공원이라는 연혁은 있으나, 확인된 실제 원형·문화유산과의 접촉을 지원하는 근거는 없다. 부지가 기존 금정체육공원을 개방한 것이라는 서술만으로 유산 접촉 경험을 단정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b",
+          "quote": {
+            "end": 47,
+            "method": "EXACT",
+            "original": "스포원파크는 2002년 부산아시안게임을 위해 조성된 금정체육공원을 시에 개방한 시설로",
+            "start": 0,
+            "submitted": "스포원파크는 2002년 부산아시안게임을 위해 조성된 금정체육공원을 시에 개방한 시설로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d35168ae4e48fcbfd23709bfbc491e14a5ce47a6ebce04e65e4498fb5f4ad52c"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 1,
+      "reason": "이 장소 자체의 연혁(2002년 아시안게임용 금정체육공원 조성 후 시에 개방)이 간략히 소개된다. 깊은 역사 탐구의 중심이 아니므로 간단한 연혁 소개 수준인 1점.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 뒷받침하는 근거가 없다. 레포츠·교육체험 시설은 실제 전승 활동이 아니므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "탄생의 신비 성문화센터, 교통나라, 재난안전체험장 등은 일반 교육체험이며, 이 장소의 원형·유산·전통과 연결된 해설·탐구라 할 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'휴일 힐링을 위한 최적의 장소'라는 홍보성 서술은 있으나 사회적으로 공유되는 상징·의미가 장소에 부여되고 표현된다는 구체적 근거는 부족하여 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보물, SNS 등 매체를 통한 장소 이미지의 재현·유통에 관한 근거가 제공되지 않아 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "숲, 수변광장 등의 서술은 있으나 장소 이미지를 표현하는 일관된 시각적 성격·연출에 대한 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b",
+          "quote": {
+            "end": 239,
+            "method": "EXACT",
+            "original": "다양한 레포츠 시설이 구비되어 있어 취향에 따라 원하는 활동을 즐길 수 있어",
+            "start": 197,
+            "submitted": "다양한 레포츠 시설이 구비되어 있어 취향에 따라 원하는 활동을 즐길 수 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d35168ae4e48fcbfd23709bfbc491e14a5ce47a6ebce04e65e4498fb5f4ad52c"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b",
+          "quote": {
+            "end": 192,
+            "method": "EXACT",
+            "original": "공원 내 에티켓 준수 시 돗자리, 소형텐트가 허용되고 있다",
+            "start": 160,
+            "submitted": "공원 내 에티켓 준수 시 돗자리, 소형텐트가 허용되고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d35168ae4e48fcbfd23709bfbc491e14a5ce47a6ebce04e65e4498fb5f4ad52c"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "취향에 따라 원하는 활동을 선택할 수 있다는 명시와 돗자리·텐트 허용, 순환 조깅로·자전거로 등 자율적 이용·탐색의 기회가 확인된다. 일상 이탈 경험이 방문의 중심이라는 수준까지는 아니므로 3점.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b",
+          "quote": {
+            "end": 159,
+            "method": "EXACT",
+            "original": "전체 부지의 1/3이 40만 그루의 녹음인 데다",
+            "start": 133,
+            "submitted": "전체 부지의 1/3이 40만 그루의 녹음인 데다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d35168ae4e48fcbfd23709bfbc491e14a5ce47a6ebce04e65e4498fb5f4ad52c"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b",
+          "quote": {
+            "end": 131,
+            "method": "EXACT",
+            "original": "수변광장과 숲이 있는 종합 레포츠 공원이다",
+            "start": 108,
+            "submitted": "수변광장과 숲이 있는 종합 레포츠 공원이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d35168ae4e48fcbfd23709bfbc491e14a5ce47a6ebce04e65e4498fb5f4ad52c"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "부지 1/3에 이르는 녹음, 숲, 수변광장 등 자연 환경 단서가 구체적으로 확인된다. 실제 고요함이나 회복 경험까지는 확인할 수 없으므로 3점.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b",
+          "quote": {
+            "end": 327,
+            "method": "EXACT",
+            "original": "수영, 골프, 피트니스, 배드민턴, 탁구와 키즈랜드, 문화교실을 이용할 수 있다",
+            "start": 283,
+            "submitted": "수영, 골프, 피트니스, 배드민턴, 탁구와 키즈랜드, 문화교실을 이용할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d35168ae4e48fcbfd23709bfbc491e14a5ce47a6ebce04e65e4498fb5f4ad52c"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b",
+          "quote": {
+            "end": 418,
+            "method": "EXACT",
+            "original": "인조잔디 축구장, 풋살장과 국제대회개최 규격의 하드코트 실내‧외 테니스장이 있으며",
+            "start": 373,
+            "submitted": "인조잔디 축구장, 풋살장과 국제대회개최 규격의 하드코트 실내‧외 테니스장이 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d35168ae4e48fcbfd23709bfbc491e14a5ce47a6ebce04e65e4498fb5f4ad52c"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 4,
+      "reason": "수영, 골프, 배드민턴, 축구, 풋살, 테니스, 조깅, 라이딩 등 지속적으로 참여할 수 있는 다양한 신체 활동의 기회가 구체적으로 확인된다. 활동의 참여 기회가 넓으므로 4점.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "문화교실과 경륜 관람이 언급되지만, 교류·공동 활동·자기표현의 기회로 이어진다는 구체적 근거는 부족하여 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "68c77bfb809bb03b35e5fb44e478b219950685aaffe857d54aafc370a5a38806",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "316dfbe95bd4720b88b18853d33babbda8400d7246e823dac112bd9e3de319e5",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "원형 적벽돌 스타디움과 'SpoPARK' 로고가 시선을 모으지만, 전체적으로 평이한 도시 공원 항공 구도로 연출감은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1b6bd4a00680b7ec6ab628cbac11d6aa42c9bb1d8c913ff9846294ad8aee9af0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15a2c63bb5e741bdff363d277cf56d19639f8e327928f0af63e20e9f705117c1",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 금정구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2927480",
+          "request_sha256": "d757e082a67231e84cf7b481a4b95868778b71ebca8b2b0105c49adc129a4ad1",
+          "response_sha256": "cf20cd6807b3e07cf77d6baf02af214bd9c249a1e742f5313814ece340d9b590",
+          "retrieved_at": "2026-09-10T08:22:14.845120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "838fdb22d48a4037dffeb60c8377444833a33d24f2446c06363fee5dbdde50db",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/80/2927480.jpg"
+        },
+        "record_sha256": "ba56f451804bb9efa41de3c3715e344274b553528b10eb19f2a18fb9646403c4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "배경의 넓은 산악 지형, 공원 녹지, 잔디와 나무가 정비된 열린 공간, 수시설 단서까지 자연 환경 단서가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5daca0355e8557b10e8bda85b681dd8db338a918d9bd929c4406cd0bb6a29e8b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15a2c63bb5e741bdff363d277cf56d19639f8e327928f0af63e20e9f705117c1",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 금정구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2927480",
+          "request_sha256": "d757e082a67231e84cf7b481a4b95868778b71ebca8b2b0105c49adc129a4ad1",
+          "response_sha256": "cf20cd6807b3e07cf77d6baf02af214bd9c249a1e742f5313814ece340d9b590",
+          "retrieved_at": "2026-09-10T08:22:14.845120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "838fdb22d48a4037dffeb60c8377444833a33d24f2446c06363fee5dbdde50db",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/80/2927480.jpg"
+        },
+        "record_sha256": "8180e8e2e95c9bfa4ddc12a1242a59a99501b14119297c9d3df2a188735c0640",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대식 원형 경기장과 태양광 패널 등 현대 외관이 중심이며 전통 재료나 전통적 공간 구성의 시각적 특성은 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:60f480a69dd08e73580715eb302184522f785a4bf82f6208c7432f0d6265fd33",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15a2c63bb5e741bdff363d277cf56d19639f8e327928f0af63e20e9f705117c1",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 금정구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2927480",
+          "request_sha256": "d757e082a67231e84cf7b481a4b95868778b71ebca8b2b0105c49adc129a4ad1",
+          "response_sha256": "cf20cd6807b3e07cf77d6baf02af214bd9c249a1e742f5313814ece340d9b590",
+          "retrieved_at": "2026-09-10T08:22:14.845120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "838fdb22d48a4037dffeb60c8377444833a33d24f2446c06363fee5dbdde50db",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/80/2927480.jpg"
+        },
+        "record_sha256": "c810e0935cf1277a21d18bef1d31e2fd3b4f2834fcfff21343492eea003a4d9f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:0f754b0f31b3883b2eb3e1523b524633d03ddbf151dafac4ce9358486b95d0e6",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128108",
+          "request_sha256": "d3a6fb79db47e41f5156623a2ce83fb517c8eec47feffbf77b1fce2f020afbbb",
+          "response_sha256": "9980d9e5a96d5462dd00726b56fb4e9addc1a6ccee0aa1ce879cbf754ca7b071",
+          "retrieved_at": "2026-09-10T08:22:13.476000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "41bbc0c620e9785f0b15d3a4c59699ee08becdb0bd2a7d26d49a4edca90fd2fb",
+          "source_uri": null
+        },
+        "record_sha256": "c3aff5a48a5eaddcc0aec3c82e25fdaad7012265ae6d4a61ca878232922b11bb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "시설 별로 상이"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9b01737a0c9f79a31cef361e1ed04b24b6131238a962852e5ca5985ea87cde2b",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "128108",
+          "request_sha256": "b641532ce8dedb04ddd1864e8d7e86c8bd1616958b24003571b8a873098999d3",
+          "response_sha256": "b4e4c10ef9642e9855859215bdbccde330e5aff48ae11f0406384e13e1c851b2",
+          "retrieved_at": "2026-09-09T16:40:10.398498Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-03-24T07:09:16Z",
+          "source_record_sha256": "9b52f1321cb68b8bb1afc2d8f69a48a47e965b609a001a6ab46f9c24cf6c3fb6",
+          "source_uri": null
+        },
+        "record_sha256": "d35168ae4e48fcbfd23709bfbc491e14a5ce47a6ebce04e65e4498fb5f4ad52c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "스포원파크는 2002년 부산아시안게임을 위해 조성된 금정체육공원을 시에 개방한 시설로, 8만 8천 평의 평지 부지에 경기장 3동(경륜장, 스포츠센터, 테니스장), 야외 체육시설, 교육체험시설, 수변광장과 숲이 있는 종합 레포츠 공원이다. 전체 부지의 1/3이 40만 그루의 녹음인 데다 공원 내 에티켓 준수 시 돗자리, 소형텐트가 허용되고 있다. 또한 다양한 레포츠 시설이 구비되어 있어 취향에 따라 원하는 활동을 즐길 수 있어 휴일 힐링을 위한 최적의 장소로 꼽히고 있다. 스포츠센터에서는 실내 종목으로 수영, 골프, 피트니스, 배드민턴, 탁구와 키즈랜드, 문화교실을 이용할 수 있다. 주 경기장은 BNK썸 여자농구단의 홈경기장으로 사용되고 있다. 야외체육시설로는 인조잔디 축구장, 풋살장과 국제대회개최 규격의 하드코트 실내‧외 테니스장이 있으며, 공원 외곽을 따라 순환 조깅로‧자전거로 가 조성되어 있어 간단한 산책과 라이딩을 즐길 수 있다. 자전거는 테니스경기장 1층 자전거대여점에서 대여가 가능하다. 또한 청소년을 위한 교육체험시설로 탄생의 신비 성문화센터, 어린이 교통나라, 재난안전체험장의 교육시설뿐만 아니라, 자전거 경주 관람을 즐기는 성인을 위한 경륜장도 마련되어 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a3df1b77915d996c7c0f7fd8afd475bd9dd18eaa036df4fa1f3406aac5224e82",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128108",
+          "request_sha256": "d3a6fb79db47e41f5156623a2ce83fb517c8eec47feffbf77b1fce2f020afbbb",
+          "response_sha256": "9980d9e5a96d5462dd00726b56fb4e9addc1a6ccee0aa1ce879cbf754ca7b071",
+          "retrieved_at": "2026-09-10T08:22:13.476000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2931c980eb969c5b3a9a19906ca95f9352541a92c7b6c6071ea52e62c825e7e4",
+          "source_uri": null
+        },
+        "record_sha256": "624d84ca154f0559c55d845c6bbd6e8b32d6da7dda650d07c3c2d3318520605a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "스포츠센터 / 휴식공간 / 테니스코트 / 풋살장 / 축구장 / 놀이시설 / 교육·전시시설"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:adf17589136cd4eed5a69b1ea064d53ea4732997a0d3693aea55bd8bcd7a2c70",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128108",
+          "request_sha256": "d3a6fb79db47e41f5156623a2ce83fb517c8eec47feffbf77b1fce2f020afbbb",
+          "response_sha256": "9980d9e5a96d5462dd00726b56fb4e9addc1a6ccee0aa1ce879cbf754ca7b071",
+          "retrieved_at": "2026-09-10T08:22:13.476000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0067511f07ee77797e4e28470a4b85b35cba0216413dd24c3f0775dfe40019f7",
+          "source_uri": null
+        },
+        "record_sha256": "c57bd9c0812fbb54a9d7a4e3edf07c212c6597807a14d1cbce833068298edfe9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "652e18570e5462178f25df57882b695c8ad29b9c1ecc722172fb8be28f1755d8",
+    "place": {
+      "address": "부산광역시 금정구 체육공원로399번길 324",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+      "name_ko": "스포원파크",
+      "place_id": "public:korea:44bd429fb84edd3c82aa7e6eff3081f4b19ae924b1fbd497dbaeaf0b8ff4f0db",
+      "provider_content_id": "128108",
+      "region_code": "26410",
+      "region_name": "부산광역시 금정구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

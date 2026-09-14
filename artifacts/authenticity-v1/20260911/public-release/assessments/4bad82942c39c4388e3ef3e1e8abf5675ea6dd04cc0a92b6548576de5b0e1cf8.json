@@ -1,0 +1,975 @@
+{
+  "assessed_at": "2026-09-11T18:43:35.542140Z",
+  "assessment_sha256": "4bad82942c39c4388e3ef3e1e8abf5675ea6dd04cc0a92b6548576de5b0e1cf8",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 81
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.d"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "부산을 대표하는 명소라는 공유된 이미지가 이 장소에 직접 부여되어 있음을 공식 개요에서 확인할 수 있다. 제안된 인용은 원문과 다른 표기('떠오리는')였으므로 원문 표기('떠올리는')로 바로잡아 반환한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:5d187850a83901692a9508284b3dc9f9c14b45b682929d0a4c58e61c64b21df6",
+            "appearance:95af72722fe47a8d67f981862330593ba6a26bcd1726bbe2bb9b225fb665bd96",
+            "appearance:f9bacc6a9a271606591a3fbdbba5b8cfda785af8c413182fa81e4617cdae13e7"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "백사장·해안선과 빌딩·호텔 스카이라인이 어우러진 현대적·세련된 시각적 성격이 장면을 지배한다고 공식 개요가 직접 설명한다. 출처의 allowed_claims에 VISUAL_APPEARANCE가 없어 E.c의 텍스트 claim은 허용된 VISUAL_EXPRESSION으로 반환한다.",
+      "value": 94
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "드라마 명장면을 현장에서 직접 경험하고 재현할 수 있는 대표 장면으로 제시되어 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "넓은 백사장과 얕은 수심의 해수욕 환경은 방문자가 자신의 방식으로 자율적으로 탐색·활동할 기회를 제공한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2e5ff6ebe4fb1e2ca0eaf05ec27270ef19d167eb20fc1f5ddb77656ca8c9384f",
+            "appearance:30ffc4898525eb8a27281de5f99ddd3a67103db2da480967f538ba1907855ed9",
+            "appearance:c9560184c91e1d2a399bcf61c258ce8c5aaa1e8bf0cdf4faf0f67b61ce087fac"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "바다·백사장이라는 자연 단서는 확인되지만, 동일 원문은 국내 최대 인파와 사시사철 붐비는 젊은 열기를 명시한다. '자연·시각적 저자극 환경이 두드러짐'은 홍보 어조의 경관 서명에서 실제 저자극·회복 환경을 단정한 것으로, 현재 수준을 직접 뒷받침하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "달맞이 축제, 북극곰수영대회 등 공동 참여 행사가 교류·공동 활동의 기회를 제공한다. 다만 그것이 방문 경험의 중심이라고 단정하기는 어렵다.",
+      "value": 75
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "해수욕장의 백사장과 해안선이 언급되지만, 이것이 문화유산·원형에 접촉하는 근거로 제시되지 않아 원형·유산 접촉 여부를 판단할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에 역사·연혁·유래에 대한 설명이 없이 현대적 명소 이미지와 축제만 언급되어 장소의 실제 역사 맥락을 파악할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "정월 대보름 달맞이 축제가 언급되지만 주체·전승 연속성에 대한 정보가 없어 지역 주체의 실제 전승과 연결되는지 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·전통과 연결된 해설·전시·학습 제공에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+          "quote": {
+            "end": 122,
+            "method": "EXACT",
+            "original": "부산 하면 제일 먼저 떠올리는 곳이 해운대 해수욕장이라고 할 만큼 부산을 대표하는 명소이며",
+            "start": 72,
+            "submitted": "부산 하면 제일 먼저 떠올리는 곳이 해운대 해수욕장이라고 할 만큼 부산을 대표하는 명소이며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "부산을 대표하는 명소라는 공유된 이미지가 이 장소에 직접 부여되어 있음을 공식 개요에서 확인할 수 있다. 제안된 인용은 원문과 다른 표기('떠오리는')였으므로 원문 표기('떠올리는')로 바로잡아 반환한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "드라마 촬영지라는 매체 연결은 확인되나, 단일 작품 언급만으로 '반복되는 매체 표현과 유통의 근거'(수준 4)를 뒷받침하기에는 부족하다. 확인된 작품 연결(수준 3)까지는 가능하지만 제안된 상위 수준의 근거가 부족하여 확정하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+          "quote": {
+            "end": 241,
+            "method": "EXACT",
+            "original": "해안선 주변에 크고 작은 빌딩들과 고급 호텔들이 우뚝 솟아있어 현대적이고 세련된 분위기의 해수욕장으로 유명하기",
+            "start": 180,
+            "submitted": "해안선 주변에 크고 작은 빌딩들과 고급 호텔들이 우뚝 솟아있어 현대적이고 세련된 분위기의 해수욕장으로 유명하기",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 4,
+      "reason": "백사장·해안선과 빌딩·호텔 스카이라인이 어우러진 현대적·세련된 시각적 성격이 장면을 지배한다고 공식 개요가 직접 설명한다. 출처의 allowed_claims에 VISUAL_APPEARANCE가 없어 E.c의 텍스트 claim은 허용된 VISUAL_EXPRESSION으로 반환한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+          "quote": {
+            "end": 596,
+            "method": "NORMALIZED_AND_MAPPED",
+            "original": "드라마 남순이 몽골 엄마와 함께 모래사장에 조개로 ‘바다’라는 글자를 만들고 함께 사진을 찍으며 즐거운 시간을 보낸 곳이다.",
+            "start": 527,
+            "submitted": "드라마 남순이 몽골 엄마와 함께 모래사장에 조개로 '바다'라는 글자를 만들고 함께 사진을 찍으며 즐거운 시간을 보낸 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "드라마 명장면을 현장에서 직접 경험하고 재현할 수 있는 대표 장면으로 제시되어 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+          "quote": {
+            "end": 71,
+            "method": "EXACT",
+            "original": "넓은 백사장과 아름다운 해안선을 자랑하고 있으며 얕은 수심과 잔잔한 물결로 해수욕장의 최적 조건을 갖추고 있다.",
+            "start": 9,
+            "submitted": "넓은 백사장과 아름다운 해안선을 자랑하고 있으며 얕은 수심과 잔잔한 물결로 해수욕장의 최적 조건을 갖추고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "넓은 백사장과 얕은 수심의 해수욕 환경은 방문자가 자신의 방식으로 자율적으로 탐색·활동할 기회를 제공한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "바다·백사장이라는 자연 단서는 확인되지만, 동일 원문은 국내 최대 인파와 사시사철 붐비는 젊은 열기를 명시한다. '자연·시각적 저자극 환경이 두드러짐'은 홍보 어조의 경관 서명에서 실제 저자극·회복 환경을 단정한 것으로, 현재 수준을 직접 뒷받침하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "수영대회·모래 작품전·축제 등 참여형 활동의 존재는 확인되나, 이들이 계절·행사 중심이고 방문 경험의 중심(수준 5)이라고 하기에는 근거가 부족하다. 활동의 존재와 경험의 중심성을 구분해야 한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+          "quote": {
+            "end": 350,
+            "method": "EXACT",
+            "original": "매년 정월 대보름날의 달맞이 축제를 진행하고 있다.",
+            "start": 322,
+            "submitted": "매년 정월 대보름날의 달맞이 축제를 진행하고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 3,
+      "reason": "달맞이 축제, 북극곰수영대회 등 공동 참여 행사가 교류·공동 활동의 기회를 제공한다. 다만 그것이 방문 경험의 중심이라고 단정하기는 어렵다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+              "quote": {
+                "end": 596,
+                "method": "NORMALIZED_AND_MAPPED",
+                "original": "한류의 매력을 만나는 여행 정보 - 드라마 남순이 몽골 엄마와 함께 모래사장에 조개로 ‘바다’라는 글자를 만들고 함께 사진을 찍으며 즐거운 시간을 보낸 곳이다.",
+                "start": 507,
+                "submitted": "한류의 매력을 만나는 여행 정보 - 드라마 남순이 몽골 엄마와 함께 모래사장에 조개로 '바다'라는 글자를 만들고 함께 사진을 찍으며 즐거운 시간을 보낸 곳이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed"
+            }
+          ],
+          "flags": [],
+          "key": "E.b",
+          "level": 3,
+          "reason": "드라마 촬영지로서 매체를 통해 장소 이미지가 재현·확산되고 있음을 확인할 수 있다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.b",
+          "reason": "드라마 촬영지라는 매체 연결은 확인되나, 단일 작품 언급만으로 '반복되는 매체 표현과 유통의 근거'(수준 4)를 뒷받침하기에는 부족하다. 확인된 작품 연결(수준 3)까지는 가능하지만 제안된 상위 수준의 근거가 부족하여 확정하지 않는다."
+        }
+      },
+      "reason": "드라마 촬영지라는 매체 연결은 확인되나, 단일 작품 언급만으로 '반복되는 매체 표현과 유통의 근거'(수준 4)를 뒷받침하기에는 부족하다. 확인된 작품 연결(수준 3)까지는 가능하지만 제안된 상위 수준의 근거가 부족하여 확정하지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+              "quote": {
+                "end": 50,
+                "method": "EXACT",
+                "original": "넓은 백사장과 아름다운 해안선을 자랑하고 있으며 얕은 수심과 잔잔한 물결로",
+                "start": 9,
+                "submitted": "넓은 백사장과 아름다운 해안선을 자랑하고 있으며 얕은 수심과 잔잔한 물결로",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "바다·백사장이라는 자연 환경 단서가 확인된다. 다만 매년 국내 최대 인파가 몰린다는 점에서 실제 고요함·혼잡은 불확실하여 상위 수준으로 판단하지 않는다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "바다·백사장이라는 자연 단서는 확인되지만, 동일 원문은 국내 최대 인파와 사시사철 붐비는 젊은 열기를 명시한다. '자연·시각적 저자극 환경이 두드러짐'은 홍보 어조의 경관 서명에서 실제 저자극·회복 환경을 단정한 것으로, 현재 수준을 직접 뒷받침하지 않는다."
+        }
+      },
+      "reason": "바다·백사장이라는 자연 단서는 확인되지만, 동일 원문은 국내 최대 인파와 사시사철 붐비는 젊은 열기를 명시한다. '자연·시각적 저자극 환경이 두드러짐'은 홍보 어조의 경관 서명에서 실제 저자극·회복 환경을 단정한 것으로, 현재 수준을 직접 뒷받침하지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+              "quote": {
+                "end": 445,
+                "method": "EXACT",
+                "original": "매년 겨울 주최하고 있는 북극곰수영대회는 이미 겨울철 대표 축제로 자리 잡았다. 이외에도 모래 작품전, 부산 바다 축제 등 각종 크고 작은 행사들이 열리고 있다.",
+                "start": 355,
+                "submitted": "매년 겨울 주최하고 있는 북극곰수영대회는 이미 겨울철 대표 축제로 자리 잡았다. 이외에도 모래 작품전, 부산 바다 축제 등 각종 크고 작은 행사들이 열리고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 4,
+          "reason": "수영대회, 모래 작품전, 바다 축제 등 참여형 활동이 다양하고 지속적으로 제공되어 참여·도전·몰입의 기회가 풍부하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "수영대회·모래 작품전·축제 등 참여형 활동의 존재는 확인되나, 이들이 계절·행사 중심이고 방문 경험의 중심(수준 5)이라고 하기에는 근거가 부족하다. 활동의 존재와 경험의 중심성을 구분해야 한다."
+        }
+      },
+      "reason": "수영대회·모래 작품전·축제 등 참여형 활동의 존재는 확인되나, 이들이 계절·행사 중심이고 방문 경험의 중심(수준 5)이라고 하기에는 근거가 부족하다. 활동의 존재와 경험의 중심성을 구분해야 한다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "d5597c1aee16251cd50b5a8f7b1346568519704f59ba4dd649f55ffafdf6f760",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 해변, 끝없이 트인 바다, 배경의 산과 소나무 녹지 등 자연 경관 단서가 장면의 큰 부분을 차지함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2e5ff6ebe4fb1e2ca0eaf05ec27270ef19d167eb20fc1f5ddb77656ca8c9384f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35e07e8da5791eeb29c10979acccb2b632942bfa6247f065131e6bacb9801b3b",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2554606",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3553f50a5e19fd06070e3ddea7fc66b65b16df6d891e7970cb778c325df02c27",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/06/2554606.jpg"
+        },
+        "record_sha256": "264eaed7d59e218093410734147d1e2f0abbcb23d3eb7af74d617ffa5ff8dfac",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "모래사장이 바닥으로 보이고 밤 하늘이 열려 있으나, 도시 고층 건물과 인공 조명이 배경의 상당 부분을 차지해 자연 단서는 보통 수준.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:30ffc4898525eb8a27281de5f99ddd3a67103db2da480967f538ba1907855ed9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13608bed9dabc81e8aa1525c2576b90ad82b7105f878029a222a1957d023146e",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2570367",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae0665cb700493cef32b90d8d37d93682e8817d40b9457a6fb640f0763bc8c8d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/67/2570367.jpg"
+        },
+        "record_sha256": "7251134b93ae0e493f706b9816ce36ce6e129dbbe7833f1a74cbf556e8854d7d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적인 조명 설치물과 도시 건물 외관만 보이며 전통적 재료나 공간 구성의 시각적 특성은 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:44abd14cdd86c65a433600d62069eaad139748e06e7264e98d2083c6d6a9fb79",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13608bed9dabc81e8aa1525c2576b90ad82b7105f878029a222a1957d023146e",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2570367",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae0665cb700493cef32b90d8d37d93682e8817d40b9457a6fb640f0763bc8c8d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/67/2570367.jpg"
+        },
+        "record_sha256": "7ba20b410e51e3fcd566f7dfaa64c98e619d17f9152e317226033baadac59277",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "확장된 커브의 해안선을 따라 고층 빌딩 군과 넓은 백사장·바다가 대비되는 구도로, 도시와 바다가 어우러진 강한 시각적 성격이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5d187850a83901692a9508284b3dc9f9c14b45b682929d0a4c58e61c64b21df6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35e07e8da5791eeb29c10979acccb2b632942bfa6247f065131e6bacb9801b3b",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2554606",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3553f50a5e19fd06070e3ddea7fc66b65b16df6d891e7970cb778c325df02c27",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/06/2554606.jpg"
+        },
+        "record_sha256": "44f92dac9e03a70b8be63a0e9a813bdf93672b1553700beb30f590ea7fcfc89c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "고층 건물 등 현대적 도시 외관이 보일 뿐 전통적 재료나 공간 구성의 시각적 특성은 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:87a9d85f35e5ccf964b174d439c2df851476d4044fe0eeafde1e44b1e219d855",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c693d45d57f34072435a1cbe5bb190add1c159939c7bcfde6eb3dedc32aa8d5f",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1046366",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a3972c32178235070e36be616e333f7d59f5632d4b83190d7bf5864ca99153f5",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/66/1046366.jpg"
+        },
+        "record_sha256": "d3d3edf35c134b406fb82e2df872c8e0692b16e7f1a48e47cab7c39f418334d8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "안개 낀 흐린 하늘과 넓은 모래사장, 부드러운 파도가 수평 구도로 이어져 차분하고 소박한 시각적 분위기를 형성한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:95af72722fe47a8d67f981862330593ba6a26bcd1726bbe2bb9b225fb665bd96",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c693d45d57f34072435a1cbe5bb190add1c159939c7bcfde6eb3dedc32aa8d5f",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1046366",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a3972c32178235070e36be616e333f7d59f5632d4b83190d7bf5864ca99153f5",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/66/1046366.jpg"
+        },
+        "record_sha256": "5ac965f02dc319ae4f8e1c5212d60c5980dc72910a55bb57d8cac8cb89e3fcad",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 모래사장, 밀려오는 파도, 트인 바다와 먼 산봉우리가 장면 대부분을 차지하며 자연 환경 단서가 지배적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c9560184c91e1d2a399bcf61c258ce8c5aaa1e8bf0cdf4faf0f67b61ce087fac",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c693d45d57f34072435a1cbe5bb190add1c159939c7bcfde6eb3dedc32aa8d5f",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1046366",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a3972c32178235070e36be616e333f7d59f5632d4b83190d7bf5864ca99153f5",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/66/1046366.jpg"
+        },
+        "record_sha256": "440a42958e642c493b4ee584b42786fa4c5af8686375ffedd815dc73446133c4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "밤 장면 전체를 지배하는 강렬한 분홍·주황 하트형 조명 연출로 색과 빛의 시각적 성격이 극도로 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f9bacc6a9a271606591a3fbdbba5b8cfda785af8c413182fa81e4617cdae13e7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13608bed9dabc81e8aa1525c2576b90ad82b7105f878029a222a1957d023146e",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2570367",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae0665cb700493cef32b90d8d37d93682e8817d40b9457a6fb640f0763bc8c8d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/67/2570367.jpg"
+        },
+        "record_sha256": "ffeb1b98530a9509b21f544c0525d478befd299b31e2e4c49f98fad2099ae22a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성은 보이지 않으며 현대적 고층 도시 경관이 지배적임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fa344fb9ea2adba4ae178c1e53c8cf91c1709fb3fd04fc63ec0a046018b7bcdf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35e07e8da5791eeb29c10979acccb2b632942bfa6247f065131e6bacb9801b3b",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2554606",
+          "request_sha256": "8ca85a3cc591ab168afd6cb7dbc5fb7381ec837f4e453902cb5036ec92f04be7",
+          "response_sha256": "08a8ef7938e496bdc6635fffc6add75d02bb94c8879bafa23165b1e183f8c3bf",
+          "retrieved_at": "2026-09-11T02:09:27.203813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3553f50a5e19fd06070e3ddea7fc66b65b16df6d891e7970cb778c325df02c27",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/06/2554606.jpg"
+        },
+        "record_sha256": "902c811d1d77e40fcbc1cc0f222506bdeefc8fd3ffb7b527d3bb7180c92bc78f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5cbe7796be5768b2b0b68a2f678b99161014141e91966ddc5ccce05ff19465fb",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126081",
+          "request_sha256": "72a088167bb5f0b2416c2cc5767d13dd9a0fb1ec7eafe6d08008c0c11126d77b",
+          "response_sha256": "4eae9cbaa3d77c10ab171e08a9dace8a36e29c013af37f83f696dcaa248d0980",
+          "retrieved_at": "2026-09-11T02:09:25.937921Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "74518c48f9839db76af5fa3b9401845c203b12f8c089e2bcfbf5b7b68ec0bebd",
+          "source_uri": null
+        },
+        "record_sha256": "291b3a8e270782eacd9dbed7231c42f8ac4161fcb70ed7863b3ee95eb98acc4d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f88fe90774026a618216d0b03a75fdc417259c8f2924fa723d6b1588f725da9e",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126081",
+          "request_sha256": "15207d0ee7be67b8a52e030c65addfa5cb4c548a6d99fe63516f47c463a0f323",
+          "response_sha256": "add01b851219d2ec31aa33431fb1d03004f00e12938d27199005118e863cd8a9",
+          "retrieved_at": "2026-09-10T17:07:07.606392Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-09-09T00:20:01Z",
+          "source_record_sha256": "d4efd8f5788c7c9ce8fdb02bd136b8b5d634ae9f0a9b49edae5ae3bc7a951e18",
+          "source_uri": null
+        },
+        "record_sha256": "0abdad04866f4f95abdd0f3b92c13f7985bba55c150778e7f997e838c85631ed",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "해운대해수욕장은 넓은 백사장과 아름다운 해안선을 자랑하고 있으며 얕은 수심과 잔잔한 물결로 해수욕장의 최적 조건을 갖추고 있다. 부산 하면 제일 먼저 떠올리는 곳이 해운대 해수욕장이라고 할 만큼 부산을 대표하는 명소이며, 해마다 여름철 피서객을 가늠하는 척도로 이용될 만큼 국내 최대 인파가 몰리는 곳이기도 하다. 특히, 해안선 주변에 크고 작은 빌딩들과 고급 호텔들이 우뚝 솟아있어 현대적이고 세련된 분위기의 해수욕장으로 유명하기 때문에 여름휴가철뿐만 아니라 사시사철 젊은 열기로 붐비고 해외 관광객들에게도 잘 알려져 있어 외국인들이 많이 찾는 곳이다. 해운대해수욕장에서는 매년 정월 대보름날의 달맞이 축제를 진행하고 있다. 또한, 매년 겨울 주최하고 있는 북극곰수영대회는 이미 겨울철 대표 축제로 자리 잡았다. 이외에도 모래 작품전, 부산 바다 축제 등 각종 크고 작은 행사들이 열리고 있다. 또한, 해수욕장 주변에 동백섬, 오륙도, 아쿠아리움 , 요트경기장, 벡스코 달맞이고개 등 볼거리가 많다. ◎ 한류의 매력을 만나는 여행 정보 - 드라마 남순이 몽골 엄마와 함께 모래사장에 조개로 ‘바다’라는 글자를 만들고 함께 사진을 찍으며 즐거운 시간을 보낸 곳이다."
+      }
+    ],
+    "parent_source_sha256": "786ad84ac38187673cebdec1c94ae9bf35561f605953a74cdf5cd428c44a6dfa",
+    "place": {
+      "address": "부산광역시 해운대구 해운대해변로 264",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+      "name_ko": "해운대해수욕장",
+      "place_id": "public:korea:b858705a03d67444cc23dbf32f8ebd9afb8b0938e3ab45d482ee24ab4fc6e8b9",
+      "provider_content_id": "126081",
+      "region_code": "26350",
+      "region_name": "부산광역시 해운대구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

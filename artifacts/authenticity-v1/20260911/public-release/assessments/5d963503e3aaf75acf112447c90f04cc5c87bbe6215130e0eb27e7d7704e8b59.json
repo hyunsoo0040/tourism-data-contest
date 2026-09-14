@@ -1,0 +1,981 @@
+{
+  "assessed_at": "2026-09-11T15:44:06.021163Z",
+  "assessment_sha256": "5d963503e3aaf75acf112447c90f04cc5c87bbe6215130e0eb27e7d7704e8b59",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "코스마다 안내 방송을 들으며 관광한다는 짧은 해설 안내가 확인되나, 원형·전통에 연결된 깊은 해설인지는 불명확하여 낮은 수준으로 평가한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:19aa3636877a6a2ba05aa029e1870eeb64848d47017a63de312d8d5e24a7fbed",
+            "appearance:81ecb1e9da6a4222b7047ee681370ff76dff7a9b6da1731ddbb3bad61d9380ba",
+            "appearance:eb7863d6af97cd4fbf012c38ddf5512e14e8ff1b9eb6e383a3dd647822442fcc"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "갑판에서 기념사진 촬영과 갈매기·새우깡 놀이 등 대표 장면을 직접 경험·재현할 수 있다고 명시되나, 그것이 방문 경험의 중심이라는 근거는 없어 낮은 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "층별 좌석 선택 등 제한된 자유 선택의 여지가 확인되나 자율 탐색이 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:01b3829323eb6379e219b9eefa59a9923d0fb8f928b749128a8340f96aa5b9b3",
+            "appearance:2c34669f31ff29e408486b2896f5d17bd1d232b6cb18359078347bd49388773d",
+            "appearance:4767de6f228ffd006b84e57914d198924d86b7c78b77131db11a9efdc4b0555c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "바다·섬·기암괴석 등 자연 경관 환경 단서가 두드러지게 확인되며, 실제 심리적 회복이나 고요함까지는 단정하지 않는다.",
+      "value": 73
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "갈매기·새우깡 놀이 등 구체적 참여 활동이 확인되나 지속적 도전·몰입 활동이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "유람선 코스에 섬과 기암괴석 이름이 언급되지만, 해당 유산의 원형·실물에 접촉하는 경험인지 확인할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "코스와 요금·시설 안내만 있고 이 장소의 실제 역사·연혁에 대한 설명은 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+          "quote": {
+            "end": 533,
+            "method": "EXACT",
+            "original": "유람선을 타면 코스마다 안내 방송을 들으며 유익한 관광을 즐길 수 있다.",
+            "start": 493,
+            "submitted": "유람선을 타면 코스마다 안내 방송을 들으며 유익한 관광을 즐길 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e789c3970d40e737d517f2113ed4921574e0ef5d1d384a8b571cad37f0246186"
+        }
+      ],
+      "flags": [],
+      "key": "H.d",
+      "level": 1,
+      "reason": "코스마다 안내 방송을 들으며 관광한다는 짧은 해설 안내가 확인되나, 원형·전통에 연결된 깊은 해설인지는 불명확하여 낮은 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "장소에 사회적으로 부여된 상징·의미의 내용을 확인할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 유통의 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+          "quote": {
+            "end": 312,
+            "method": "EXACT",
+            "original": "기념사진을 남기거나 갈매기와 새우깡 놀이를 하기 좋다",
+            "start": 283,
+            "submitted": "기념사진을 남기거나 갈매기와 새우깡 놀이를 하기 좋다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e789c3970d40e737d517f2113ed4921574e0ef5d1d384a8b571cad37f0246186"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "갑판에서 기념사진 촬영과 갈매기·새우깡 놀이 등 대표 장면을 직접 경험·재현할 수 있다고 명시되나, 그것이 방문 경험의 중심이라는 근거는 없어 낮은 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+          "quote": {
+            "end": 240,
+            "method": "EXACT",
+            "original": "1층의 막힌 실내나 3층 갑판을 선호하지 않을 경우 이용하기 좋다",
+            "start": 204,
+            "submitted": "1층의 막힌 실내나 3층 갑판을 선호하지 않을 경우 이용하기 좋다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e789c3970d40e737d517f2113ed4921574e0ef5d1d384a8b571cad37f0246186"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "층별 좌석 선택 등 제한된 자유 선택의 여지가 확인되나 자율 탐색이 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+          "quote": {
+            "end": 67,
+            "method": "EXACT",
+            "original": "대천항과 안면도 사이 주변 섬의 비경을 만끽할 수 있다",
+            "start": 37,
+            "submitted": "대천항과 안면도 사이 주변 섬의 비경을 만끽할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e789c3970d40e737d517f2113ed4921574e0ef5d1d384a8b571cad37f0246186"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+          "quote": {
+            "end": 443,
+            "method": "EXACT",
+            "original": "바다에 옹기종기 떠 있는 섬들과 기암괴석들을 지나",
+            "start": 416,
+            "submitted": "바다에 옹기종기 떠 있는 섬들과 기암괴석들을 지나",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e789c3970d40e737d517f2113ed4921574e0ef5d1d384a8b571cad37f0246186"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "바다·섬·기암괴석 등 자연 경관 환경 단서가 두드러지게 확인되며, 실제 심리적 회복이나 고요함까지는 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+          "quote": {
+            "end": 175,
+            "method": "EXACT",
+            "original": "2층에는 바닷바람을 맞으며 갈매기와 새우깡 놀이를 할 수 있는 야외 객실이 있다",
+            "start": 131,
+            "submitted": "2층에는 바닷바람을 맞으며 갈매기와 새우깡 놀이를 할 수 있는 야외 객실이 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e789c3970d40e737d517f2113ed4921574e0ef5d1d384a8b571cad37f0246186"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "갈매기·새우깡 놀이 등 구체적 참여 활동이 확인되나 지속적 도전·몰입 활동이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회를 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+            "quote": "한눈에도 딱 눈에 띄는 빨간 대천항 크루즈는 3층 규모로"
+          },
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+            "quote": "3층은 바다를 감상하기 좋은 갑판으로 흘러가는 작은 섬 풍경을 감상"
+          }
+        ],
+        "key": "E.c",
+        "level": 2,
+        "reason": "빨간 크루즈의 눈에 띄는 외관과 섬 풍경 감상 등 제한적이나 구별되는 시각적 성격이 확인된다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "408f09c1838a3fb9925570c9e1ae6d47051012eea6f65c6e106c6d6ad35aacc9",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "잔잔한 바다, 멀리 수평선과 능선, 트인 하늘과 항구 배경이 화면 대부분을 차지해 자연 경관 단서가 뚜렷함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:01b3829323eb6379e219b9eefa59a9923d0fb8f928b749128a8340f96aa5b9b3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f99a62a74b3b0cc06248d89fc9b364cfe54c71c47e3ed5f16a243faafd9ed88d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577229_4",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c000a34166b0afc7545aac486b3c070048d29e72c2adf00a4780a02ddf8ff90f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/3577229_image2_1.jpg"
+        },
+        "record_sha256": "7dd1c83859c6c275454fefd2f94f9a4424ff0154367137a6f959e9f4d141b789",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "선체의 흰색·파랑·빨강 대비 강한 색채와 빨강-흰색 줄무늬 차양, 녹색 갑판이 반복 구도로 이어져 연출적 시각 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:19aa3636877a6a2ba05aa029e1870eeb64848d47017a63de312d8d5e24a7fbed",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f99a62a74b3b0cc06248d89fc9b364cfe54c71c47e3ed5f16a243faafd9ed88d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577229_4",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c000a34166b0afc7545aac486b3c070048d29e72c2adf00a4780a02ddf8ff90f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/3577229_image2_1.jpg"
+        },
+        "record_sha256": "ea9b6cd3a51e4560be5b9083502803075663ea2bcce25d89fbcf62eaf9c66c14",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 바다, 수면 아래 보이는 얕은 여울, 먼 섬들과 방파제 너머 트인 해상 경관이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2c34669f31ff29e408486b2896f5d17bd1d232b6cb18359078347bd49388773d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11aaba1ebc7b511ed3b68a4077352da0044ae0da6df296ea2680ab6366ae9f4e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577243_7",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8a0ea741a2dfb448eabb614ac6d52e16ae4cda1e2bfdd2fd03b30d97743d8676",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/43/3577243_image2_1.jpg"
+        },
+        "record_sha256": "3e838419f18330a25b3c08879d83205e93df5bb4c0273bfc43b18c7a79c95ff3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "항구의 돌 방파제와 작은 등대, 어선들이 일부 보이나 전통적 재료·공간 구성의 시각적 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:445fe087b046527c72fd1ca09c01c65cc7ca41cf2ac1772ad8bce19bf37dcd92",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11aaba1ebc7b511ed3b68a4077352da0044ae0da6df296ea2680ab6366ae9f4e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577243_7",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8a0ea741a2dfb448eabb614ac6d52e16ae4cda1e2bfdd2fd03b30d97743d8676",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/43/3577243_image2_1.jpg"
+        },
+        "record_sha256": "145e6b357675a9f5ea6a2373523060bab843d8aa11a90a07df0f101429f42508",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "창밖으로 항구와 수변, 건물이 일부 보이지만 자연 경관 자체는 제한적이며, 실내 중심 구도로 환경 단서가 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4767de6f228ffd006b84e57914d198924d86b7c78b77131db11a9efdc4b0555c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7972486222757f28cf22ee22d2482f23f19afe14693b0b051a9bf3dc4249c1be",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577242_3",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "99074121cc0edcf3362715918377856e80e5f5c81f693a64ff84a4c60bf756ae",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/42/3577242_image2_1.jpg"
+        },
+        "record_sha256": "b75c6434f1b8fb0d72fffaf90a149c853ed47453f4c7ff4f180eea2dff011760",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "박차장·금연 표지판, 금속 벤치와 조명 기구 등 실용적 선박 외관이 보이나 전통 재료·구성의 시각 특성은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6c3f1bb92bbb9041e006c9f51d35b734a9b331800cdbd1c6d30bbb35d08049f1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f99a62a74b3b0cc06248d89fc9b364cfe54c71c47e3ed5f16a243faafd9ed88d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577229_4",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c000a34166b0afc7545aac486b3c070048d29e72c2adf00a4780a02ddf8ff90f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/3577229_image2_1.jpg"
+        },
+        "record_sha256": "ed2876c9996e5d8fb346292d726eba51884be8a38c525fa043ff8e7d5c548f5a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "항공 시점으로 빨강·청록 배와 넓은 바다가 대비되는 안정적 구도로, 차분한 색조 속 시각적 성격이 보통 수준으로 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:81ecb1e9da6a4222b7047ee681370ff76dff7a9b6da1731ddbb3bad61d9380ba",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11aaba1ebc7b511ed3b68a4077352da0044ae0da6df296ea2680ab6366ae9f4e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577243_7",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8a0ea741a2dfb448eabb614ac6d52e16ae4cda1e2bfdd2fd03b30d97743d8676",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/43/3577243_image2_1.jpg"
+        },
+        "record_sha256": "e828cd9dc0ce80c9a6d9deeee46a4769648824ad5787e3ff1c398f068b37083a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "실내는 현대적인 색채 연출과 좌석·테이블 배치가 대부분이며, 전통 재료나 전통적 공간 구성의 흔적은 눈에 잘 띄지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9001c7a69631377bc1c130f306441a50ebf8b45c8bbddd6851436a5893ae1ac4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7972486222757f28cf22ee22d2482f23f19afe14693b0b051a9bf3dc4249c1be",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577242_3",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "99074121cc0edcf3362715918377856e80e5f5c81f693a64ff84a4c60bf756ae",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/42/3577242_image2_1.jpg"
+        },
+        "record_sha256": "869333ceed9a82b43af8101c939d0ddeaf5b310079657874bb150b5f4fb8392c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "강렬한 붉은색 인테리어가 장면 전체를 지배하고, 천장에는 별·구름 그림이 연출된 파란색 마감, 기울어진 창과 원형 기둥 등 선박 내부 특유의 강한 시각적 연출이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:eb7863d6af97cd4fbf012c38ddf5512e14e8ff1b9eb6e383a3dd647822442fcc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7972486222757f28cf22ee22d2482f23f19afe14693b0b051a9bf3dc4249c1be",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577242_3",
+          "request_sha256": "376ddf3314ed48fcf583f958c7878e847f599681050523be04bdeb86292ba741",
+          "response_sha256": "0dbe34cca122fa440758c5e947386f2836e01eae3cd2f040783a525282a9e966",
+          "retrieved_at": "2026-09-11T02:01:09.153111Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "99074121cc0edcf3362715918377856e80e5f5c81f693a64ff84a4c60bf756ae",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/42/3577242_image2_1.jpg"
+        },
+        "record_sha256": "e72003c68f0870384d0dad1f551b0377743dcfe33a84c1ecc9340110f2404176",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3067635c5bf444fa1e7c9b015c00bd1ea7885c75b07e74e8a86a637b2bc25576",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2783017",
+          "request_sha256": "4839a67cb2635e4157e6f6b0fbaf5d31a78f61aaa3a3d05e439b9067dff9b748",
+          "response_sha256": "c9215c909a160800008a9b8389c9bc4966c03f392f197837837cc2e7102e2637",
+          "retrieved_at": "2026-09-11T02:01:08.819155Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "23c43e58ae8f2181fed0f5e237bed538769566dc89ac183628a5e58fe93419ca",
+          "source_uri": null
+        },
+        "record_sha256": "1ba73339d72c7f25dfd3f52d847cadf99dda10cdcc67d0aef60628c875d5d257",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "대천항 → 사자바위 → 송도 → 보령화력발전소 → 남근바위(무병도) → 월도 → 완장도 거북이섬 → 허육도 삼형제바위 → 육도 → 추도 → 소도 → 안면도 영목항 → 원산도 → 효자도 여자바위 → 대천항"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5a3e568b9ebc6a0d6412ee4349e6e03322565807b83e60650d021ea4a0aa3029",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2783017",
+          "request_sha256": "4839a67cb2635e4157e6f6b0fbaf5d31a78f61aaa3a3d05e439b9067dff9b748",
+          "response_sha256": "c9215c909a160800008a9b8389c9bc4966c03f392f197837837cc2e7102e2637",
+          "retrieved_at": "2026-09-11T02:01:08.819155Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "af67c04c18085db8fe8605d196e5a3a880ce08f189e2fc838a2b117a5c811481",
+          "source_uri": null
+        },
+        "record_sha256": "000eadefc7d960af75a8e4af40a9fa4585796e58e48559bed1d2e259e7d5da46",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5b6b6367297db1150d513d101b8d26bff3f2afa88fc07334a093236edd582679",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2783017",
+          "request_sha256": "4839a67cb2635e4157e6f6b0fbaf5d31a78f61aaa3a3d05e439b9067dff9b748",
+          "response_sha256": "c9215c909a160800008a9b8389c9bc4966c03f392f197837837cc2e7102e2637",
+          "retrieved_at": "2026-09-11T02:01:08.819155Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fe534bd0833ca83d2ee5b3463b92f0ef4e8bca74504efbbcd78a233f5067e0df",
+          "source_uri": null
+        },
+        "record_sha256": "1c67ca7ecdc06abf9201a2c04dd447d1c7273bdbeb893aa6042c37f28b802f63",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "- 중학생 이상 20,000원 - 초등학생 10,000원 - 유아 및 3세 이상 : 5,000원"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f4aaf502ef38e3462f6d8ecd7e9b06471941881408e82cb165203d510a0f32ba",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2783017",
+          "request_sha256": "0645b401f38f617be07af1b24f6a444063076dc399a6aac0a513bcba76b0ddb2",
+          "response_sha256": "52c46ad5761e9e015279b2447634f9c25b972b58a76fb8d435baf9b4d9d4ed84",
+          "retrieved_at": "2026-09-10T16:43:17.474504Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-18T02:34:53Z",
+          "source_record_sha256": "db8395828aa94fefb6af0025045f4d8d8dc9858739a7293e4fb90d7ed940325a",
+          "source_uri": null
+        },
+        "record_sha256": "e789c3970d40e737d517f2113ed4921574e0ef5d1d384a8b571cad37f0246186",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "대천항에서 뜨는 대천 크루즈는 대천항을 출발하여 1시간 30분가량 대천항과 안면도 사이 주변 섬의 비경을 만끽할 수 있다. 한눈에도 딱 눈에 띄는 빨간 대천항 크루즈는 3층 규모로 1층에는 실내에서 편히 앉아갈 수 있는 좌석이 있고, 2층에는 바닷바람을 맞으며 갈매기와 새우깡 놀이를 할 수 있는 야외 객실이 있다. 야외 카페처럼 편안한 좌석과 테이블이 놓여 있어 1층의 막힌 실내나 3층 갑판을 선호하지 않을 경우 이용하기 좋다. 3층은 바다를 감상하기 좋은 갑판으로 흘러가는 작은 섬 풍경을 감상하거나 기념사진을 남기거나 갈매기와 새우깡 놀이를 하기 좋다. 바닷바람이 세게 불어 옷깃을 여미게 하지만 역시 갑판이여야 배 타는 기분을 제대로 느끼게 된다. 대천항을 출발한 대천 크루즈는 화력발전소를 지나면서 왁새섬, 삼형제바위, 거북이섬 등 바다에 옹기종기 떠 있는 섬들과 기암괴석들을 지나 안면도 영목항을 거쳐 간다. 이어 효자도와 원산도까지 돌아보고 대천항에 도착하게 된다. 유람선을 타면 코스마다 안내 방송을 들으며 유익한 관광을 즐길 수 있다. 유람선 매표소는 대천항 어판장과 대천항 여객터미널 사이에 있다."
+      }
+    ],
+    "parent_source_sha256": "858151b7d227060b9f68daba217340b5a56aeefd08e45a4f722be04b1de924b9",
+    "place": {
+      "address": "충청남도 보령시 대천항중앙길 46 (신흑동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+      "name_ko": "대천항유람선",
+      "place_id": "public:korea:0c671ec0ac58bed399e08faa1605809ff291de31c96a197117143d461c524fb5",
+      "provider_content_id": "2783017",
+      "region_code": "44180",
+      "region_name": "충청남도 보령시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

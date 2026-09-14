@@ -1,0 +1,1061 @@
+{
+  "assessed_at": "2026-09-11T18:26:50.688072Z",
+  "assessment_sha256": "df37a40ccabb894a8899f650b4c030e2249313a0683a5e29e70fc764680edb97",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.a",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.b",
+        "H.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "마을의 형성 배경(일제강점기·전후 도시화, 성곽 규제)이라는 구체적 역사 맥락이 이 장소에 대해 제시된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.c",
+      "missing_channels": [],
+      "reason": "성곽 달동네라는 살아있는 주거 문화·이웃 공동체가 현재성을 갖고 언급되지만, 지역 주체의 지속적 전승 활동을 직접 확인하는 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "산동네·달동네라는 사회적으로 공유된 이미지와 심우장이라는 상징적 의미가 이 장소에 부여되어 있음이 명시된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "서울미래유산 홈페이지라는 공식 매체를 통해 장소 이미지가 표현·유통됨을 확인할 수 있다. 대중 매체 확산의 반복 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:142b08a7719ca090dc54809435d5a1f3d686d62b02395b96e36b764445b9ee99",
+            "appearance:670f54a0bda6bfc786f96c3dc75dff2032f31fab78efcc4a1b8291b068cf9d2f",
+            "appearance:a28fee334f79e858b5d96534b2d73fdb5d43603305df5003d7f1ebfbc415ec9f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "제안된 repair에 포함된 VISUAL_APPEARANCE 인용은 해당 출처의 allowed_claims에 없어 제거하고, 인가된 VISUAL_EXPRESSION 인용만 사용했다. 공식 소개가 성벽·구릉지 지형과 일체화된 마을의 독특한 경관을 이 장소 자체의 시각적 성격으로 직접 기술하므로, 달동네 골목과 성곽 경관이 구별되는 시각적 표현을 제공한다고 판단해 수준 3으로 지지한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "달동네·성벽 경관이라는 대표 이미지를 현장에서 직접 볼 수 있으나, 촬영 구도나 재현 활동에 대한 구체적 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0fc8dde2e41c154f7332d7644881f7c0b8aa6def10575927e483fc30263ea60d",
+            "appearance:7150bcc239f5b37f31b2968a0bbf615ce13783d2e4ce09337e745b7c164fb8a9",
+            "appearance:9baedbe181f8146d324389e251c70f51d7790f46bc44eaae802e4163aa19e7f3"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "성곽·구릉지 인접과 개발제한으로 인한 저층 소박한 환경이 확인되어 머물 환경 단서가 있으나, 실제 고요함·혼잡도는 확인 불가하다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "anchor_ko는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(수준 4)인데, 근거는 성곽 인접과 심우장 존재라는 사실 확인에 불과하고 구체적 탐구 프로그램·접근 근거가 없다. 제안 사유 스스로 관람 수준임을 인정하므로 현재 앵커 수준은 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+          "quote": {
+            "end": 319,
+            "method": "EXACT",
+            "original": "일제강점기와 한국전쟁 전후 도시화는 서울의 급격한 인구 증가와 주택 부족 문제로 이어졌고, 사람들은 성곽에 기대어 집을 짓고 살기 시작했다.",
+            "start": 241,
+            "submitted": "일제강점기와 한국전쟁 전후 도시화는 서울의 급격한 인구 증가와 주택 부족 문제로 이어졌고, 사람들은 성곽에 기대어 집을 짓고 살기 시작했다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 3,
+      "reason": "마을의 형성 배경(일제강점기·전후 도시화, 성곽 규제)이라는 구체적 역사 맥락이 이 장소에 대해 제시된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "LIVING_TRADITION",
+          "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+          "quote": {
+            "end": 380,
+            "method": "EXACT",
+            "original": "북정마을은 서울로 몰려든 사람들이 거친 땅을 깎고 돋우어 저마다 집을 짓고 골목에 모여 이웃이 된 마을이다.",
+            "start": 320,
+            "submitted": "북정마을은 서울로 몰려든 사람들이 거친 땅을 깎고 돋우어 저마다 집을 짓고 골목에 모여 이웃이 된 마을이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+        }
+      ],
+      "flags": [],
+      "key": "H.c",
+      "level": 2,
+      "reason": "성곽 달동네라는 살아있는 주거 문화·이웃 공동체가 현재성을 갖고 언급되지만, 지역 주체의 지속적 전승 활동을 직접 확인하는 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "마을에 연결된 해설·전시·학습 프로그램에 대한 근거가 제공되지 않았다. 북정미술관 언급이 있으나 유산 해설과의 연결 내용은 불명확하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+          "quote": {
+            "end": 58,
+            "method": "EXACT",
+            "original": "흔히 산동네·달동네로 꼽히는 마을 중 하나이다.",
+            "start": 32,
+            "submitted": "흔히 산동네·달동네로 꼽히는 마을 중 하나이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "산동네·달동네라는 사회적으로 공유된 이미지와 심우장이라는 상징적 의미가 이 장소에 부여되어 있음이 명시된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+          "quote": {
+            "end": 648,
+            "method": "EXACT",
+            "original": "오랜 세월 성벽 및 구릉지 지형과 일체화된 북정마을의 독특한 경관은 그 자체로 한양도성과 함께 지키고 가꾸어야 할 유산이 되었다. (출처 : 서울미래유산 홈페이지)",
+            "start": 557,
+            "submitted": "오랜 세월 성벽 및 구릉지 지형과 일체화된 북정마을의 독특한 경관은 그 자체로 한양도성과 함께 지키고 가꾸어야 할 유산이 되었다. (출처 : 서울미래유산 홈페이지)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+        }
+      ],
+      "flags": [],
+      "key": "E.b",
+      "level": 2,
+      "reason": "서울미래유산 홈페이지라는 공식 매체를 통해 장소 이미지가 표현·유통됨을 확인할 수 있다. 대중 매체 확산의 반복 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+          "quote": {
+            "end": 629,
+            "method": "EXACT",
+            "original": "오랜 세월 성벽 및 구릉지 지형과 일체화된 북정마을의 독특한 경관은 그 자체로 한양도성과 함께 지키고 가꾸어야 할 유산이 되었다.",
+            "start": 557,
+            "submitted": "오랜 세월 성벽 및 구릉지 지형과 일체화된 북정마을의 독특한 경관은 그 자체로 한양도성과 함께 지키고 가꾸어야 할 유산이 되었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "제안된 repair에 포함된 VISUAL_APPEARANCE 인용은 해당 출처의 allowed_claims에 없어 제거하고, 인가된 VISUAL_EXPRESSION 인용만 사용했다. 공식 소개가 성벽·구릉지 지형과 일체화된 마을의 독특한 경관을 이 장소 자체의 시각적 성격으로 직접 기술하므로, 달동네 골목과 성곽 경관이 구별되는 시각적 표현을 제공한다고 판단해 수준 3으로 지지한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+          "quote": {
+            "end": 137,
+            "method": "EXACT",
+            "original": "성벽 근처를 중심으로 생겨난 달동네의 모습을 그대로 보여준다.",
+            "start": 103,
+            "submitted": "성벽 근처를 중심으로 생겨난 달동네의 모습을 그대로 보여준다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "달동네·성벽 경관이라는 대표 이미지를 현장에서 직접 볼 수 있으나, 촬영 구도나 재현 활동에 대한 구체적 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "골목 마을이라는 형태 서술만으로 방문자의 자율적 탐색 기회를 추정한 것으로, 자유 탐색 지원에 대한 직접 근거가 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+          "quote": {
+            "end": 102,
+            "method": "EXACT",
+            "original": "마을 옆으로는 성곽을 끼고 있어",
+            "start": 85,
+            "submitted": "마을 옆으로는 성곽을 끼고 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+          "quote": {
+            "end": 462,
+            "method": "EXACT",
+            "original": "한양도성으로 인해 개발제한이 된 북정마을은 소박한 달동네로 남아 있다.",
+            "start": 423,
+            "submitted": "한양도성으로 인해 개발제한이 된 북정마을은 소박한 달동네로 남아 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "성곽·구릉지 인접과 개발제한으로 인한 저층 소박한 환경이 확인되어 머물 환경 단서가 있으나, 실제 고요함·혼잡도는 확인 불가하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "만들기·탐방 등 참여·집중 활동의 기회에 대한 근거가 제공되지 않았다. 무료라는 사실만으로는 활동 기회를 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "주민들 간 이웃 공동체 서술은 방문자 대상 교류 기회가 아니고, 북정카페는 상업 공간으로 구체적 교류·자기표현 프로그램의 근거가 부족하다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+              "quote": {
+                "end": 137,
+                "method": "EXACT",
+                "original": "마을 옆으로는 성곽을 끼고 있어 성벽 근처를 중심으로 생겨난 달동네의 모습을 그대로 보여준다.",
+                "start": 85,
+                "submitted": "마을 옆으로는 성곽을 끼고 있어 성벽 근처를 중심으로 생겨난 달동네의 모습을 그대로 보여준다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+            },
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+              "quote": {
+                "end": 514,
+                "method": "EXACT",
+                "original": "북정마을에는 독립운동가로 이름 떨친 만해 한용운의 자택 ‘심우장’이 있는 것으로도 유명하다.",
+                "start": 463,
+                "submitted": "북정마을에는 독립운동가로 이름 떨친 만해 한용운의 자택 ‘심우장’이 있는 것으로도 유명하다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.a",
+          "level": 3,
+          "reason": "한양도성 성곽과 인접하며 심우장이라는 실제 유산이 마을 안에 있어 원형·유산과의 접촉이 가능하다. 다만 유산의 구체적 탐구 프로그램 근거는 없어 관람 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "anchor_ko는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(수준 4)인데, 근거는 성곽 인접과 심우장 존재라는 사실 확인에 불과하고 구체적 탐구 프로그램·접근 근거가 없다. 제안 사유 스스로 관람 수준임을 인정하므로 현재 앵커 수준은 뒷받침되지 않는다."
+        }
+      },
+      "reason": "anchor_ko는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(수준 4)인데, 근거는 성곽 인접과 심우장 존재라는 사실 확인에 불과하고 구체적 탐구 프로그램·접근 근거가 없다. 제안 사유 스스로 관람 수준임을 인정하므로 현재 앵커 수준은 뒷받침되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+              "quote": {
+                "end": 380,
+                "method": "EXACT",
+                "original": "골목에 모여 이웃이 된 마을이다.",
+                "start": 362,
+                "submitted": "골목에 모여 이웃이 된 마을이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+            }
+          ],
+          "flags": [],
+          "key": "R.a",
+          "level": 2,
+          "reason": "골목 마을이라는 형태상 자율적 골목 탐색이 가능해 보이나, 탐색 코스나 자유 선택 지원에 대한 직접적 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.a",
+          "reason": "골목 마을이라는 형태 서술만으로 방문자의 자율적 탐색 기회를 추정한 것으로, 자유 탐색 지원에 대한 직접 근거가 부족하다."
+        }
+      },
+      "reason": "골목 마을이라는 형태 서술만으로 방문자의 자율적 탐색 기회를 추정한 것으로, 자유 탐색 지원에 대한 직접 근거가 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+              "quote": {
+                "end": 380,
+                "method": "EXACT",
+                "original": "저마다 집을 짓고 골목에 모여 이웃이 된 마을이다.",
+                "start": 352,
+                "submitted": "저마다 집을 짓고 골목에 모여 이웃이 된 마을이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+            },
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+              "quote": {
+                "end": 556,
+                "method": "EXACT",
+                "original": "그 옆 ‘북정카페’는 이 마을의 정취를 더해준다.",
+                "start": 529,
+                "submitted": "그 옆 ‘북정카페’는 이 마을의 정취를 더해준다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d"
+            }
+          ],
+          "flags": [],
+          "key": "R.d",
+          "level": 2,
+          "reason": "이웃 공동체적 마을 성격과 카페 등 교류 공간이 언급되지만, 방문자 대상 교류·자기표현 프로그램의 직접 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "주민들 간 이웃 공동체 서술은 방문자 대상 교류 기회가 아니고, 북정카페는 상업 공간으로 구체적 교류·자기표현 프로그램의 근거가 부족하다."
+        }
+      },
+      "reason": "주민들 간 이웃 공동체 서술은 방문자 대상 교류 기회가 아니고, 북정카페는 상업 공간으로 구체적 교류·자기표현 프로그램의 근거가 부족하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "37a335ca412028d89299c9ec4009f6e8bc3697e0dd84edfc6b57f8fb8c223092",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "화면 중앙의 무성한 나무와 트인 하늘, 완만한 언덕 경사가 자연 환경 단서로 보통 수준으로 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0fc8dde2e41c154f7332d7644881f7c0b8aa6def10575927e483fc30263ea60d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "46942fa1cdf61a2e20158ae163550bea0fe44ae703b78df28d3aab1eb96ed654",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551332_2",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b84d6eccadc43da4794e2e014b11738b09c850495bd0a4439fec18be089f6bd3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/32/3551332_image2_1.jpg"
+        },
+        "record_sha256": "501b8efc28349ea3b4f82099f607ee3765c6a221c5eeecb3a831e4399d9205f0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "짙은 청색 하늘과 큰 흰 구름, 붉은 기와지붕과 녹색 산록의 대비가 선명하고 채도 높은 관광 사진적 연출이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:142b08a7719ca090dc54809435d5a1f3d686d62b02395b96e36b764445b9ee99",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "54efa79a4dbb68f0cef1739a35ff31af45aaa19a7b0df7bcf0dd015d38ec019b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551329_3",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0c6a087554146ee4dcd3067e9b369484ff23792ccbb899937ff0f3c4fe4cafbf",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/3551329_image2_1.jpg"
+        },
+        "record_sha256": "61e04c1801f23e683e6459d5b73354a6f414c3f3748d0d6831073a3c2de9a2a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "기와 지붕, 낡은 벽돌과 회반죽 담, 좁은 돌계단 등 오래된 주거 외관이 보통 수준으로 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:47203156f4f93ab1fa087e0dd630569d9c62dbed88b9e076e7a0f476d8a62ffa",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "46942fa1cdf61a2e20158ae163550bea0fe44ae703b78df28d3aab1eb96ed654",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551332_2",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b84d6eccadc43da4794e2e014b11738b09c850495bd0a4439fec18be089f6bd3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/32/3551332_image2_1.jpg"
+        },
+        "record_sha256": "d568a46e613c98cb25fb35632e1434709b9f608dfc11015fe649d150852f9854",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "파스텔톤 채색 벽체, 푸른 하늘, 얽힌 전선과 계단 구도가 대비를 이루며 생활 감성이 뚜렷하게 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:670f54a0bda6bfc786f96c3dc75dff2032f31fab78efcc4a1b8291b068cf9d2f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "46942fa1cdf61a2e20158ae163550bea0fe44ae703b78df28d3aab1eb96ed654",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551332_2",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b84d6eccadc43da4794e2e014b11738b09c850495bd0a4439fec18be089f6bd3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/32/3551332_image2_1.jpg"
+        },
+        "record_sha256": "c5490c4709012a86a42b0782e5ddeee5699fb4ac61249055f5c00f104af62ca2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "낮은 기와·슬레이트 지붕과 오래된 주택들이 보이나 대부분 근대식 재료라 전통 외관은 약하게 나타남.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:67bf3150c91762a0d802dbc48c7b06c61fcd3f88b0b91e791d63246d4bf27dab",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5e122d7ef3e9f73f6f1e85aea37dfb96910a0b031fb69986a00311f5f024aa12",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551334_5",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bd1bb9b2f111596a6af33cb2394219b6daa3600ec8e495ee557bd15180ea8052",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/34/3551334_image2_1.jpg"
+        },
+        "record_sha256": "8c2a5fb8ba5b9ac78adeb6c1cc29bf6c17f331b57847b373f145648dbf920acd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 나무와 덩굴, 전경의 큰 잎 식물이 장면 대부분을 채우고 언덕 녹지가 배경을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7150bcc239f5b37f31b2968a0bbf615ce13783d2e4ce09337e745b7c164fb8a9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5e122d7ef3e9f73f6f1e85aea37dfb96910a0b031fb69986a00311f5f024aa12",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551334_5",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bd1bb9b2f111596a6af33cb2394219b6daa3600ec8e495ee557bd15180ea8052",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/34/3551334_image2_1.jpg"
+        },
+        "record_sha256": "853304a75476f581495399b4f707d3ca0ff7344b7fc9c46c396100a1ebed0e34",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "울창한 산과 수목, 트인 하늘이 화면 상당 부분을 차지하며 마을이 녹지 속에 자연스럽게 위치함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9baedbe181f8146d324389e251c70f51d7790f46bc44eaae802e4163aa19e7f3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "54efa79a4dbb68f0cef1739a35ff31af45aaa19a7b0df7bcf0dd015d38ec019b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551329_3",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0c6a087554146ee4dcd3067e9b369484ff23792ccbb899937ff0f3c4fe4cafbf",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/3551329_image2_1.jpg"
+        },
+        "record_sha256": "b5877c9e92f8e45a34160c2dbff0d3bfd40330f93f99cdf47e7dffe1318908af",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "어두운 금속 지붕, 붉은 벽돌, 분홍 건물, 넓은 유리창이 녹색 잎 사이로 대비되며 구도가 전경 식물로 프레임 처리되어 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a28fee334f79e858b5d96534b2d73fdb5d43603305df5003d7f1ebfbc415ec9f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5e122d7ef3e9f73f6f1e85aea37dfb96910a0b031fb69986a00311f5f024aa12",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551334_5",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bd1bb9b2f111596a6af33cb2394219b6daa3600ec8e495ee557bd15180ea8052",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/34/3551334_image2_1.jpg"
+        },
+        "record_sha256": "748b78dfed2bce999ff8e6d9f9656fb346ff743e2102ef53ece9e89b40798ab0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "아랫기와 지붕 등 전통적으로 보이는 지붕재가 보이나 현대식 건물과 청판 지붕이 섞여 혼재하는 마을 풍경",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:dd4831cf4a0cb29a3afe0fe57512eb32b12e693bf50937774f5501239a321a55",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "54efa79a4dbb68f0cef1739a35ff31af45aaa19a7b0df7bcf0dd015d38ec019b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3551329_3",
+          "request_sha256": "11b67a59eadc415e6dddae4e53a702cd37d8eebb635b68d7ebdd3c760dce7907",
+          "response_sha256": "fbcb646921ec72ee2597ea1058c39c337811d759dc27c307b84a282c4ab323a2",
+          "retrieved_at": "2026-09-10T08:26:41.032406Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0c6a087554146ee4dcd3067e9b369484ff23792ccbb899937ff0f3c4fe4cafbf",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/3551329_image2_1.jpg"
+        },
+        "record_sha256": "592620fc939913a9c71fcd158f277eacc7938d2b330d60039d1c80a061b22bd8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:08c6999b7605ca97151a15f0b496e7015fc878fd2e73b1193744cc177ec65461",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2661492",
+          "request_sha256": "7f781f43d1a41fd38eaa7c7114b7cf072069a88708b0eacab3d8becd6ebe04a1",
+          "response_sha256": "a85716edc62c635ff8f7b61012b507dd94b389c46afdb983d16cff5e7d60ecfa",
+          "retrieved_at": "2026-09-10T08:26:40.365508Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9e175c7944422f80aa165342a155606f19f33fa4b9c3845271297e759237c082",
+          "source_uri": null
+        },
+        "record_sha256": "34e0585f34f4109ee41c8f75275928bef3b74d7bae627b848ba62855fc725799",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c9d31912b9f19feeaf1888854005af6686b3d3ae3530abeae449e9c0ef33e11f",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2661492",
+          "request_sha256": "2bbfa00621e1b8206f2e18315d228c8e160acea570c821a07d14efe16be6fdf7",
+          "response_sha256": "df7b4b7654d6b1dbd93367317531894cce90a67786ed94a124f0c096506f60c6",
+          "retrieved_at": "2026-09-10T07:58:32.557558Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-23T05:30:00Z",
+          "source_record_sha256": "9b2f41075fc540fa5eef99944dd83b09e15e79601e56900e2a991e205b9d6690",
+          "source_uri": null
+        },
+        "record_sha256": "e284cb0e4a0b170e95ac7bbdb6ff8db5cc6bd26e9daad9df0e4529545e01161d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "북정마을은 서울특별시 사대문 안에 마지막으로 남아 있는, 흔히 산동네·달동네로 꼽히는 마을 중 하나이다. 북정마을은 큰 타원형을 한 모양을 하고 있다. 마을 옆으로는 성곽을 끼고 있어 성벽 근처를 중심으로 생겨난 달동네의 모습을 그대로 보여준다. 본래 한양도성은 성벽을 기준으로 내외부의 일정 범위 안에 주거지가 형성될 수 없었다. 특히 내사산의 굴곡을 따라 축성된 도성의 특성상 집을 짓는 데 지형적 제약을 많이 받았다. 그러나 일제강점기와 한국전쟁 전후 도시화는 서울의 급격한 인구 증가와 주택 부족 문제로 이어졌고, 사람들은 성곽에 기대어 집을 짓고 살기 시작했다. 북정마을은 서울로 몰려든 사람들이 거친 땅을 깎고 돋우어 저마다 집을 짓고 골목에 모여 이웃이 된 마을이다. 산에서 내려다보는 제한구역 외의 성북동은 주택과 아파트가 즐비하다. 하지만 한양도성으로 인해 개발제한이 된 북정마을은 소박한 달동네로 남아 있다. 북정마을에는 독립운동가로 이름 떨친 만해 한용운의 자택 ‘심우장’이 있는 것으로도 유명하다. 이밖에도 ‘북정미술관’과 그 옆 ‘북정카페’는 이 마을의 정취를 더해준다. 오랜 세월 성벽 및 구릉지 지형과 일체화된 북정마을의 독특한 경관은 그 자체로 한양도성과 함께 지키고 가꾸어야 할 유산이 되었다. (출처 : 서울미래유산 홈페이지)"
+      }
+    ],
+    "parent_source_sha256": "f208007c0d4b1a15c395c800ce21d89f05e6d78a4f86634f523948d38bdfd8b6",
+    "place": {
+      "address": "서울특별시 성북구 성북로23길 87 (성북동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+      "name_ko": "북정마을",
+      "place_id": "public:korea:a759b0e7a03756eaca7ffd47f8e2e0722b60cab3f30baea569d6f37a77d39ada",
+      "provider_content_id": "2661492",
+      "region_code": "11290",
+      "region_name": "서울특별시 성북구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

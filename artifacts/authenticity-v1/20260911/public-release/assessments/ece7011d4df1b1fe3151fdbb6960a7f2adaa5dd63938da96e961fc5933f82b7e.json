@@ -1,0 +1,658 @@
+{
+  "assessed_at": "2026-09-11T15:41:45.035380Z",
+  "assessment_sha256": "ece7011d4df1b1fe3151fdbb6960a7f2adaa5dd63938da96e961fc5933f82b7e",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "R",
+      "core_satisfied": false,
+      "missing_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "원래 김 씨 집안 소유의 실제 한옥 저택으로, 사랑채·겹안채·돌담 등 실물 공간을 관람·파악할 수 있다고 명시되어 원형 접촉이 확인된다. 구체적 탐구 중심이라는 근거는 없어 3 수준으로 판단.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "집의 소유 주체(대지주 김 씨 집안), 조정래 작가와의 인연, 『태백산맥』 김사용의 집이라는 설정 등 이 장소 자체의 역사·인물 맥락이 구체적으로 제시된다. 다층적 탐구 중심이라는 근거는 부족하다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "돼지우리, 전통 한옥 양식과 현부잣집의 일본식 주택 양식의 대비 등 원형·생활상에 연결된 해설적 설명이 제공되어 유산 이해를 돕는다. 깊은 탐구 프로그램 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "소설이라는 매체를 통해 이 장소의 이미지가 표현·유통된다는 명시적 근거가 있다. 반복적 확산이나 방문 목적 중심성의 근거는 부족하여 2 수준.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "전통 한옥 양식, 언덕 위 마을, 돌담 등 구별되는 시각적 성격이 묘사된다. 다만 일관된 연출이 장면을 지배한다는 근거는 없다. repair 제안의 VISUAL_APPEARANCE claim은 해당 출처의 allowed_claims에 없어 VISUAL_EXPRESSION으로 교정했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "소설·작가 추억의 대표 장소를 직접 방문해 경험할 수 있으나, 촬영·재현 활동에 대한 근거는 없어 제한적 관람 수준으로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+          "quote": {
+            "end": 236,
+            "method": "EXACT",
+            "original": "사랑채, 겹안채, 창고 자리, 장독대, 돌담 등 집의 규모가 대지주의 생활상을 잘 파악할 수 있게 한다.",
+            "start": 178,
+            "submitted": "사랑채, 겹안채, 창고 자리, 장독대, 돌담 등 집의 규모가 대지주의 생활상을 잘 파악할 수 있게 한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.a",
+      "level": 3,
+      "reason": "원래 김 씨 집안 소유의 실제 한옥 저택으로, 사랑채·겹안채·돌담 등 실물 공간을 관람·파악할 수 있다고 명시되어 원형 접촉이 확인된다. 구체적 탐구 중심이라는 근거는 없어 3 수준으로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+          "quote": {
+            "end": 102,
+            "method": "EXACT",
+            "original": "원래 대지주였던 김 씨 집안 소유의 집이다. 안채의 대문 옆에 딸린 아래채에서 초등학생이었던 작가가 친구인 이 집 막내아들과 자주 놀았다는",
+            "start": 25,
+            "submitted": "원래 대지주였던 김 씨 집안 소유의 집이다. 안채의 대문 옆에 딸린 아래채에서 초등학생이었던 작가가 친구인 이 집 막내아들과 자주 놀았다는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 3,
+      "reason": "집의 소유 주체(대지주 김 씨 집안), 조정래 작가와의 인연, 『태백산맥』 김사용의 집이라는 설정 등 이 장소 자체의 역사·인물 맥락이 구체적으로 제시된다. 다층적 탐구 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "현재 지역 주체의 전승·생활문화와의 실제 연결에 대한 근거가 없다. 과거 대지주 생활상의 흔적은 확인되나 현재 전승 활동 여부는 언급되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+          "quote": {
+            "end": 331,
+            "method": "EXACT",
+            "original": "특히 한채 오른쪽 앞부분 귀퉁이에 있는 돼지우리는 많은 것을 생각하게 한다. 아무리 대지주라 하더라도 음식 찌꺼기를 함부로 버리지 않으려고 돼지를 길렀음을 알 수 있다.",
+            "start": 237,
+            "submitted": "특히 한채 오른쪽 앞부분 귀퉁이에 있는 돼지우리는 많은 것을 생각하게 한다. 아무리 대지주라 하더라도 음식 찌꺼기를 함부로 버리지 않으려고 돼지를 길렀음을 알 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 3,
+      "reason": "돼지우리, 전통 한옥 양식과 현부잣집의 일본식 주택 양식의 대비 등 원형·생활상에 연결된 해설적 설명이 제공되어 유산 이해를 돕는다. 깊은 탐구 프로그램 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "『태백산맥』의 김사용의 집이라는 문학적 의미 부여는 확인되나, 제시된 앵커는 '여러 표현·장면에서 일관된 의미 확인' 수준이다. 소설 이미지 외에 일관된 의미를 보여주는 복수의 표현·장면 근거가 부족하여 현재 수준의 적합성을 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+          "quote": {
+            "end": 160,
+            "method": "EXACT",
+            "original": "소설 『태백산맥』에서는 품격 있고 양심을 갖춘 대지주 김사용의 집으로 그려지고 있다.",
+            "start": 113,
+            "submitted": "소설 『태백산맥』에서는 품격 있고 양심을 갖춘 대지주 김사용의 집으로 그려지고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "소설이라는 매체를 통해 이 장소의 이미지가 표현·유통된다는 명시적 근거가 있다. 반복적 확산이나 방문 목적 중심성의 근거는 부족하여 2 수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+          "quote": {
+            "end": 468,
+            "method": "EXACT",
+            "original": "이 저택은 전통 한옥 양식을 하고 있다. 저택이 있는 봉림리 마을은 벌교읍이 내려다보이는 양지바른 나지막한 언덕에 자리 잡고",
+            "start": 399,
+            "submitted": "이 저택은 전통 한옥 양식을 하고 있다. 저택이 있는 봉림리 마을은 벌교읍이 내려다보이는 양지바른 나지막한 언덕에 자리 잡고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "전통 한옥 양식, 언덕 위 마을, 돌담 등 구별되는 시각적 성격이 묘사된다. 다만 일관된 연출이 장면을 지배한다는 근거는 없다. repair 제안의 VISUAL_APPEARANCE claim은 해당 출처의 allowed_claims에 없어 VISUAL_EXPRESSION으로 교정했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+          "quote": {
+            "end": 112,
+            "method": "EXACT",
+            "original": "안채의 대문 옆에 딸린 아래채에서 초등학생이었던 작가가 친구인 이 집 막내아들과 자주 놀았다는 추억의 장소이다.",
+            "start": 50,
+            "submitted": "안채의 대문 옆에 딸린 아래채에서 초등학생이었던 작가가 친구인 이 집 막내아들과 자주 놀았다는 추억의 장소이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "소설·작가 추억의 대표 장소를 직접 방문해 경험할 수 있으나, 촬영·재현 활동에 대한 근거는 없어 제한적 관람 수준으로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "제시된 앵커는 '자율적으로 선택·탐색할 기회' 수준이나, 근거는 인근 배경지 연계 방문 추천 문구뿐이다. 관광 추천만으로 방문자의 자율적 탐색 기회를 단정하기 어려워 현재 수준 적합성을 확정하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "언덕, 벌교천 등 자연 환경 단서는 있으나, 제시된 앵커인 '자연·저자극 환경이 두드러짐' 수준의 근거는 부족하다. 소개 문구의 경관 묘사만으로 환경의 두드러짐을 단정할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "체험·탐방 등 참여·몰입 활동에 대한 근거가 제공되지 않는다. 관람 중심 안내만 있어 참여 기회를 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 언급이 없다. 근거 부족으로 판단할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "REPRESENTED_MEANING",
+              "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+              "quote": {
+                "end": 160,
+                "method": "EXACT",
+                "original": "소설 『태백산맥』에서는 품격 있고 양심을 갖춘 대지주 김사용의 집으로 그려지고 있다.",
+                "start": 113,
+                "submitted": "소설 『태백산맥』에서는 품격 있고 양심을 갖춘 대지주 김사용의 집으로 그려지고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+            }
+          ],
+          "flags": [],
+          "key": "E.a",
+          "level": 3,
+          "reason": "『태백산맥』의 김사용의 집이라는 구체적 문학적 이미지와 의미가 이 장소에 부여되어 있다. 여러 표현에서 일관된 의미라기보다 소설을 통한 대표적 의미 연결 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.a",
+          "reason": "『태백산맥』의 김사용의 집이라는 문학적 의미 부여는 확인되나, 제시된 앵커는 '여러 표현·장면에서 일관된 의미 확인' 수준이다. 소설 이미지 외에 일관된 의미를 보여주는 복수의 표현·장면 근거가 부족하여 현재 수준의 적합성을 확정하기 어렵다."
+        }
+      },
+      "reason": "『태백산맥』의 김사용의 집이라는 문학적 의미 부여는 확인되나, 제시된 앵커는 '여러 표현·장면에서 일관된 의미 확인' 수준이다. 소설 이미지 외에 일관된 의미를 보여주는 복수의 표현·장면 근거가 부족하여 현재 수준의 적합성을 확정하기 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+              "quote": {
+                "end": 581,
+                "method": "EXACT",
+                "original": "또 다른 배경지인 현부잣집과 소화의 집이 김범우의 집에서 도보 약 30분 거리에 있어 연계 방문을 추천한다.",
+                "start": 521,
+                "submitted": "또 다른 배경지인 현부잣집과 소화의 집이 김범우의 집에서 도보 약 30분 거리에 있어 연계 방문을 추천한다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+            }
+          ],
+          "flags": [],
+          "key": "R.a",
+          "level": 2,
+          "reason": "주변 배경지 연계 방문이 가능해 자율적 탐색의 여지가 일부 확인되나, 여유로운 자기 주도 탐색 환경에 대한 직접 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "제시된 앵커는 '자율적으로 선택·탐색할 기회' 수준이나, 근거는 인근 배경지 연계 방문 추천 문구뿐이다. 관광 추천만으로 방문자의 자율적 탐색 기회를 단정하기 어려워 현재 수준 적합성을 확정하지 않는다."
+        }
+      },
+      "reason": "제시된 앵커는 '자율적으로 선택·탐색할 기회' 수준이나, 근거는 인근 배경지 연계 방문 추천 문구뿐이다. 관광 추천만으로 방문자의 자율적 탐색 기회를 단정하기 어려워 현재 수준 적합성을 확정하지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+              "quote": {
+                "end": 495,
+                "method": "EXACT",
+                "original": "봉림리 마을은 벌교읍이 내려다보이는 양지바른 나지막한 언덕에 자리 잡고 있으며 마을 앞 벌교천을 건너는 홍교를 이용하여",
+                "start": 429,
+                "submitted": "봉림리 마을은 벌교읍이 내려다보이는 양지바른 나지막한 언덕에 자리 잡고 있으며 마을 앞 벌교천을 건너는 홍교를 이용하여",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "언덕, 벌교천 등 자연 환경 단서가 확인된다. 다만 실제 고요함·회복 효과를 확정할 수는 없어 환경 단서 확인 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "언덕, 벌교천 등 자연 환경 단서는 있으나, 제시된 앵커인 '자연·저자극 환경이 두드러짐' 수준의 근거는 부족하다. 소개 문구의 경관 묘사만으로 환경의 두드러짐을 단정할 수 없다."
+        }
+      },
+      "reason": "언덕, 벌교천 등 자연 환경 단서는 있으나, 제시된 앵커인 '자연·저자극 환경이 두드러짐' 수준의 근거는 부족하다. 소개 문구의 경관 묘사만으로 환경의 두드러짐을 단정할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "23e02b3491ebcf94bd64cbec0e8781e150fbe038b3927b357074a9115c61c54c",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:999de28a1bda6d8b82a29929063fb83ecffe094f2bb58807a40083802aaed737",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:09572821b54b5192de0389534e82d0042496ecd2415c2f001426ac6f1549ead4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3025345",
+          "request_sha256": "984a9883b1ff9bea563062cc4595afe04211efdace1b45dd15bb16e0d5af9e86",
+          "response_sha256": "84d877e06ec38a4cf09e85a4bfd000d916952c7d8873eb189e4453e67149efa3",
+          "retrieved_at": "2026-09-11T02:01:00.140043Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0f1403cb4a612fd357598f3088b2f9dbb4d637a0f131c21a45c20e19977d8ffa",
+          "source_uri": null
+        },
+        "record_sha256": "51b9cb6e35a790be0238f4ff12f17a6aeecb6ef7cbb3c34b73e3573b6a6a70a5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9d82fd5cf245131bc197443a351f9fbd20680d93cce42fe4e476e76395b30c98",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:09572821b54b5192de0389534e82d0042496ecd2415c2f001426ac6f1549ead4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3025345",
+          "request_sha256": "984a9883b1ff9bea563062cc4595afe04211efdace1b45dd15bb16e0d5af9e86",
+          "response_sha256": "84d877e06ec38a4cf09e85a4bfd000d916952c7d8873eb189e4453e67149efa3",
+          "retrieved_at": "2026-09-11T02:01:00.140043Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "753f5062381f48fb113896b87ebc3a675de2e2d555440b5f08d59f879b5beb04",
+          "source_uri": null
+        },
+        "record_sha256": "76f3663721132f28d4cba7d7eb277dd9df24ae8f195e981805fb0fd945dca6b0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b6b7c672d0e9ecb8b875026c35905f5bef68378ca77c6d21f8bc26051e6d632b",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:09572821b54b5192de0389534e82d0042496ecd2415c2f001426ac6f1549ead4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3025345",
+          "request_sha256": "123c5331fd74d4560ce828d64c3353f70f6084d52e317756d4f2a955d8e9a588",
+          "response_sha256": "0d5abd84899f92c8fd22f677317e0866815804fe95ccd03884f82feb33658c4e",
+          "retrieved_at": "2026-09-10T16:56:21.391983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "8000a8d59e60df2f896210bf482403f4edd1f1bf20c7e1baf6f9dd02e54d756f",
+          "source_uri": null
+        },
+        "record_sha256": "866d7c0bf4b7d91e2970852dc58d04e9ab948ec70329d4e5699d16842f3be25f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "소설가 조정래가 어릴 때 살던 동네의 집으로 원래 대지주였던 김 씨 집안 소유의 집이다. 안채의 대문 옆에 딸린 아래채에서 초등학생이었던 작가가 친구인 이 집 막내아들과 자주 놀았다는 추억의 장소이다. 소설 『태백산맥』에서는 품격 있고 양심을 갖춘 대지주 김사용의 집으로 그려지고 있다. 김사용은 김범우의 아버지이다. 사랑채, 겹안채, 창고 자리, 장독대, 돌담 등 집의 규모가 대지주의 생활상을 잘 파악할 수 있게 한다. 특히 한채 오른쪽 앞부분 귀퉁이에 있는 돼지우리는 많은 것을 생각하게 한다. 아무리 대지주라 하더라도 음식 찌꺼기를 함부로 버리지 않으려고 돼지를 길렀음을 알 수 있다. 소설에 등장하는 대저택인 현부잣집이 당시 신흥 부호가 살았던 일본식 주택 양식이 반영된 대저택 형태를 하고 있는 반면, 이 저택은 전통 한옥 양식을 하고 있다. 저택이 있는 봉림리 마을은 벌교읍이 내려다보이는 양지바른 나지막한 언덕에 자리 잡고 있으며 마을 앞 벌교천을 건너는 홍교를 이용하여 보성여관이 있는 벌교읍으로 들어갈 수 있다. 또 다른 배경지인 현부잣집과 소화의 집이 김범우의 집에서 도보 약 30분 거리에 있어 연계 방문을 추천한다."
+      }
+    ],
+    "parent_source_sha256": "2526f78fc7a0c561ef8bd85c73964b3b117e0e53554c38ad751dfb36dbd67846",
+    "place": {
+      "address": "전남광주통합특별시 보성군 벌교읍 봉림길 22-9",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:09572821b54b5192de0389534e82d0042496ecd2415c2f001426ac6f1549ead4",
+      "name_ko": "김범우의 집",
+      "place_id": "public:korea:09572821b54b5192de0389534e82d0042496ecd2415c2f001426ac6f1549ead4",
+      "provider_content_id": "3025345",
+      "region_code": "12750",
+      "region_name": "전남광주통합특별시 보성군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

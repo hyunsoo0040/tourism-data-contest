@@ -1,0 +1,240 @@
+{
+  "source_capture_sha256": "7bfad8a211802bcbb7a3fc8f0328fe43ec7d77e82e5737bea7676cd7895a9806",
+  "checks": [
+    {
+      "http_status": 200,
+      "operation": "areaTarSjrnDsList",
+      "params": {
+        "areaCd": "47",
+        "baseYm": "202607",
+        "numOfRows": 10,
+        "pageNo": 1,
+        "signguCd": "47130",
+        "tarSjrnDsIxCd": "21"
+      },
+      "payload": {
+        "response": {
+          "body": {
+            "items": {
+              "item": [
+                {
+                  "areaCd": "47",
+                  "areaNm": "경상북도",
+                  "baseYm": "202607",
+                  "signguCd": "47130",
+                  "signguNm": "경주시",
+                  "tarSjrnDsIxCd": "21",
+                  "tarSjrnDsIxNm": "관광체류강도",
+                  "tarSjrnDsIxVal": "102.99"
+                }
+              ]
+            },
+            "numOfRows": 1,
+            "pageNo": 1,
+            "totalCount": 1
+          },
+          "header": {
+            "resultCode": "0000",
+            "resultMsg": "OK"
+          }
+        }
+      }
+    },
+    {
+      "http_status": 200,
+      "operation": "areaTarSjrnDsList",
+      "params": {
+        "areaCd": "47",
+        "baseYm": "202509",
+        "numOfRows": 10,
+        "pageNo": 1,
+        "signguCd": "47130",
+        "tarSjrnDsIxCd": "21"
+      },
+      "payload": {
+        "response": {
+          "body": {
+            "items": {
+              "item": [
+                {
+                  "areaCd": "47",
+                  "areaNm": "경상북도",
+                  "baseYm": "202509",
+                  "signguCd": "47130",
+                  "signguNm": "경주시",
+                  "tarSjrnDsIxCd": "21",
+                  "tarSjrnDsIxNm": "관광체류강도",
+                  "tarSjrnDsIxVal": "91"
+                }
+              ]
+            },
+            "numOfRows": 1,
+            "pageNo": 1,
+            "totalCount": 1
+          },
+          "header": {
+            "resultCode": "0000",
+            "resultMsg": "OK"
+          }
+        }
+      }
+    },
+    {
+      "http_status": 200,
+      "operation": "areaTarExpDsList",
+      "params": {
+        "areaCd": "47",
+        "baseYm": "202607",
+        "numOfRows": 10,
+        "pageNo": 1,
+        "signguCd": "47130",
+        "tarExpDsIxCd": "22"
+      },
+      "payload": {
+        "response": {
+          "body": {
+            "items": {
+              "item": [
+                {
+                  "areaCd": "47",
+                  "areaNm": "경상북도",
+                  "baseYm": "202607",
+                  "signguCd": "47130",
+                  "signguNm": "경주시",
+                  "tarExpDsIxCd": "22",
+                  "tarExpDsIxNm": "관광소비강도",
+                  "tarExpDsIxVal": "77.92"
+                }
+              ]
+            },
+            "numOfRows": 1,
+            "pageNo": 1,
+            "totalCount": 1
+          },
+          "header": {
+            "resultCode": "0000",
+            "resultMsg": "OK"
+          }
+        }
+      }
+    },
+    {
+      "http_status": 200,
+      "operation": "areaTarExpDsList",
+      "params": {
+        "areaCd": "47",
+        "baseYm": "202509",
+        "numOfRows": 10,
+        "pageNo": 1,
+        "signguCd": "47130",
+        "tarExpDsIxCd": "22"
+      },
+      "payload": {
+        "response": {
+          "body": {
+            "items": {
+              "item": [
+                {
+                  "areaCd": "47",
+                  "areaNm": "경상북도",
+                  "baseYm": "202509",
+                  "signguCd": "47130",
+                  "signguNm": "경주시",
+                  "tarExpDsIxCd": "22",
+                  "tarExpDsIxNm": "관광소비강도",
+                  "tarExpDsIxVal": "74.48"
+                }
+              ]
+            },
+            "numOfRows": 1,
+            "pageNo": 1,
+            "totalCount": 1
+          },
+          "header": {
+            "resultCode": "0000",
+            "resultMsg": "OK"
+          }
+        }
+      }
+    }
+  ],
+  "legacy_demand_contexts": [
+    {
+      "scope": "REGION",
+      "region_code": "47130",
+      "region_name": "경주시",
+      "measure_kind": "REGIONAL_STAY_INTENSITY",
+      "state": "UNKNOWN",
+      "reason": "AUTHORIZATION_UNAVAILABLE",
+      "base_month": "202607",
+      "provider_issue_date": null,
+      "measures": [],
+      "provider_result_code": "30",
+      "source_snapshot_sha256": "59eede808b88a4f0d716e95b92be27da72ffeae4a555a1dbe32ae137e7a87a75",
+      "receipts": [
+        {
+          "schema_version": "source-receipt.v1",
+          "service": "AreaTarDemDsService",
+          "operation": "areaTarSjrnDsList",
+          "dataset_id": "15151868",
+          "request_scope": {
+            "baseYm": "202607",
+            "areaCd": "47",
+            "signguCd": "47130",
+            "pageNo": "1",
+            "numOfRows": "1000"
+          },
+          "retrieved_at": "2026-09-09T05:06:56.868446Z",
+          "source_modified_at": null,
+          "reference_date": null,
+          "status": "UNAVAILABLE",
+          "http_status": 403,
+          "response_sha256": "c41369295887d9454b7f06970e62d5892fdc0c7c16cb3843a2eb20f80df4aade",
+          "reason": "AUTHORIZATION_UNAVAILABLE"
+        }
+      ],
+      "retrieved_at": "2026-09-09T05:06:56.868446Z",
+      "expires_at": "2026-09-09T05:21:56.868446Z",
+      "warning_ko": "지역·월별 지표입니다. 개별 장소의 체류시간·혼잡·인기도로 환산하지 않습니다. 단위가 확인되지 않은 수치는 공식 원문으로만 제공합니다."
+    },
+    {
+      "scope": "REGION",
+      "region_code": "47130",
+      "region_name": "경주시",
+      "measure_kind": "REGIONAL_SPENDING_INTENSITY",
+      "state": "UNKNOWN",
+      "reason": "AUTHORIZATION_UNAVAILABLE",
+      "base_month": "202607",
+      "provider_issue_date": null,
+      "measures": [],
+      "provider_result_code": "30",
+      "source_snapshot_sha256": "ebfe4c5b6d244e3e42c1759178172fc40d35e8d6db13f561a870e91d96dd7591",
+      "receipts": [
+        {
+          "schema_version": "source-receipt.v1",
+          "service": "AreaTarDemDsService",
+          "operation": "areaTarExpDsList",
+          "dataset_id": "15151868",
+          "request_scope": {
+            "baseYm": "202607",
+            "areaCd": "47",
+            "signguCd": "47130",
+            "pageNo": "1",
+            "numOfRows": "1000"
+          },
+          "retrieved_at": "2026-09-09T05:06:57.368787Z",
+          "source_modified_at": null,
+          "reference_date": null,
+          "status": "UNAVAILABLE",
+          "http_status": 403,
+          "response_sha256": "c41369295887d9454b7f06970e62d5892fdc0c7c16cb3843a2eb20f80df4aade",
+          "reason": "AUTHORIZATION_UNAVAILABLE"
+        }
+      ],
+      "retrieved_at": "2026-09-09T05:06:57.368787Z",
+      "expires_at": "2026-09-09T05:21:57.368787Z",
+      "warning_ko": "지역·월별 지표입니다. 개별 장소의 체류시간·혼잡·인기도로 환산하지 않습니다. 단위가 확인되지 않은 수치는 공식 원문으로만 제공합니다."
+    }
+  ],
+  "legacy_demand_sha256": "fa27ef71165b0948a8b7cfe0997f2c68059ef6fb4f6344fca6635eb9940f66e9"
+}

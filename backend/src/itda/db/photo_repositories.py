@@ -28,6 +28,8 @@ from sqlalchemy import text
 from sqlalchemy.exc import ProgrammingError as SQLAlchemyProgrammingError
 from sqlalchemy.orm import Session, sessionmaker
 
+from itda.domain.photo_semantics import trusted_photo_value
+
 _JOB_ID_PATTERN: re.Pattern[str] = re.compile(r"^[0-9a-f]{64}$")
 _TRAIT_ID_PATTERN: re.Pattern[str] = re.compile(r"^M[1-6]$")
 _CAUSE_PATTERN: re.Pattern[str] = re.compile(
@@ -115,6 +117,11 @@ class CandidateRow:
     edited_text_ko: str | None
     excluded: bool
     provenance: str
+    analysis_kind: str = "legacy"
+    provider_id: str | None = None
+    semantic_version: str | None = None
+    semantic_id: str | None = None
+    image_index: int | None = None
 
     def model_dump(self, *, mode: str = "python") -> dict[str, Any]:
         if mode not in ("python", "json"):
@@ -128,6 +135,11 @@ class CandidateRow:
             "edited_text_ko": self.edited_text_ko,
             "excluded": self.excluded,
             "provenance": self.provenance,
+            "analysis_kind": self.analysis_kind,
+            "provider_id": self.provider_id,
+            "semantic_version": self.semantic_version,
+            "semantic_id": self.semantic_id,
+            "image_index": self.image_index,
         }
 
 
@@ -161,17 +173,15 @@ class ConfirmedTraitRow:
 
 @dataclass(frozen=True, slots=True)
 class ProjectionTraitRow:
-    """The projection-facing row: trait id plus the effective integer value.
-
-    The confirmed store derives each value deterministically from the
-    confirmed text (canonical Korean-text digest projection), so the
-    integer-only projection authority keeps consuming typed rows.
-    """
+    """Server-validated semantic observation; unknown is distinct from zero."""
 
     trait_id: str
     text_ko: str
-    value: int
+    value: int | None
     included: bool
+    observed: bool = False
+    semantic_version: str | None = None
+    image_index: int = 1
 
 
 @dataclass(frozen=True, slots=True)
@@ -209,16 +219,33 @@ def _raise_closed_candidate_error(error: SQLAlchemyProgrammingError) -> NoReturn
     raise PhotoJobStoreError("photo candidate annotation was rejected") from None
 
 
-def _trait_value_from_text(text_ko: str) -> int:
-    """Deterministic integer projection of confirmed Korean text.
-
-    The value space is 0-100; the mapping is a stable function of the text
-    bytes so identical confirmations aggregate identically across reloads.
-    A fully neutral anchor maps to the scale midpoint.
-    """
-
-    digest = hashlib.sha256(text_ko.encode("utf-8")).digest()
-    return int.from_bytes(digest[:2], "big") % 101
+def _semantic_projection_row(
+    *,
+    trait_id: str,
+    text_ko: str,
+    analysis_kind: str,
+    provider_id: str | None,
+    semantic_version: str | None,
+    semantic_id: str | None,
+    image_index: int | None,
+) -> ProjectionTraitRow:
+    value = trusted_photo_value(
+        trait_id=trait_id,
+        text_ko=text_ko,
+        analysis_kind=analysis_kind,
+        provider_id=provider_id,
+        semantic_version=semantic_version,
+        semantic_id=semantic_id,
+    )
+    return ProjectionTraitRow(
+        trait_id=trait_id,
+        text_ko=text_ko,
+        value=value,
+        included=True,
+        observed=value is not None,
+        semantic_version=semantic_version,
+        image_index=image_index or 1,
+    )
 
 
 class PhotoJobStore:
@@ -472,8 +499,9 @@ class PhotoTraitCandidateStore:
             rows = session.execute(
                 text(
                     "SELECT job_id, candidate_id, trait_id, text_ko, "
-                    "candidate_set_sha256, edited_text_ko, excluded, provenance "
-                    "FROM dev_eval.list_photo_candidates_v2(:job_id, :profile_id)"
+                    "candidate_set_sha256, edited_text_ko, excluded, provenance, "
+                    "analysis_kind, provider_id, semantic_version, semantic_id, image_index "
+                    "FROM dev_eval.list_photo_candidates_v3(:job_id, :profile_id)"
                 ),
                 {"job_id": job_id, "profile_id": profile_id},
             ).all()
@@ -487,6 +515,11 @@ class PhotoTraitCandidateStore:
                 edited_text_ko=None if row[5] is None else str(row[5]),
                 excluded=bool(row[6]),
                 provenance=str(row[7]),
+                analysis_kind=str(row[8]),
+                provider_id=row[9],
+                semantic_version=row[10],
+                semantic_id=row[11],
+                image_index=row[12],
             )
             for row in rows
         ]
@@ -949,14 +982,22 @@ class PhotoConfirmedTraitStore:
             for row in self.list_for_job(job_id, profile_id)
             if row.included and not row.text_ko_is_blank and row.text_ko.strip() != ""
         ]
+        candidates = {
+            row.candidate_id: row
+            for row in PhotoTraitCandidateStore(self._factory).list_for_job(job_id, profile_id)
+        }
         return [
-            ProjectionTraitRow(
+            _semantic_projection_row(
                 trait_id=row.trait_id,
                 text_ko=row.text_ko,
-                value=_trait_value_from_text(row.text_ko),
-                included=True,
+                analysis_kind=candidates[row.source_candidate_id].analysis_kind,
+                provider_id=candidates[row.source_candidate_id].provider_id,
+                semantic_version=candidates[row.source_candidate_id].semantic_version,
+                semantic_id=candidates[row.source_candidate_id].semantic_id,
+                image_index=candidates[row.source_candidate_id].image_index,
             )
             for row in included_rows
+            if row.source_candidate_id in candidates
         ]
 
 
@@ -973,8 +1014,9 @@ class PhotoRecommendationProjectionReader:
                 rows = session.execute(
                     text(
                         "SELECT draft_digest, included_count, images_count, "
-                        "confirmation_seq, trait_id, text_ko "
-                        "FROM dev_eval.read_photo_recommendation_projection_v1"
+                        "confirmation_seq, trait_id, text_ko, analysis_kind, "
+                        "provider_id, semantic_version, semantic_id, image_index "
+                        "FROM dev_eval.read_photo_recommendation_projection_v2"
                         "(:job_id, :profile_id)"
                     ),
                     {"job_id": job_id, "profile_id": profile_id},
@@ -989,11 +1031,14 @@ class PhotoRecommendationProjectionReader:
         if len(rows) != included_count or not 1 <= included_count <= 6:
             raise PhotoJobStoreError("photo recommendation projection cardinality drifted")
         traits = tuple(
-            ProjectionTraitRow(
+            _semantic_projection_row(
                 trait_id=str(row[4]),
                 text_ko=str(row[5]),
-                value=_trait_value_from_text(str(row[5])),
-                included=True,
+                analysis_kind=str(row[6]),
+                provider_id=row[7],
+                semantic_version=row[8],
+                semantic_id=row[9],
+                image_index=row[10],
             )
             for row in rows
         )

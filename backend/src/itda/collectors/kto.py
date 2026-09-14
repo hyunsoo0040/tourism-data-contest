@@ -14,6 +14,7 @@ class KorService2Client(OfficialApiClient):
     base_url: ClassVar[str] = "https://apis.data.go.kr/B551011/KorService2"
     allowed_operations: ClassVar[frozenset[str]] = frozenset(
         {
+            "ldongCode2",
             "searchKeyword2",
             "areaBasedList2",
             "detailCommon2",

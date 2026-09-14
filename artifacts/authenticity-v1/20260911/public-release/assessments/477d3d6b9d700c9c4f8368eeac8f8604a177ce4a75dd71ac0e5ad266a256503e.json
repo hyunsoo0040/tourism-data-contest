@@ -1,0 +1,970 @@
+{
+  "assessed_at": "2026-09-11T15:56:58.827178Z",
+  "assessment_sha256": "477d3d6b9d700c9c4f8368eeac8f8604a177ce4a75dd71ac0e5ad266a256503e",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 59
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "홍길동 생가터 발굴 후 고증을 거쳐 복원한 시설로, 복원물이지만 원형 터와 연결된 유산 접촉 경험을 제공한다. 실물 원형의 구체적 탐구까지의 근거는 없어 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소의 대상인 홍길동의 생애, 역사적 기록과 소설적 재해석, 오키나와 진출 등 구체적 역사 맥락이 공식 개요에 제시되어 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "홍길동 전시관이 있어 생애와 연구 성과에 연결된 해설·전시를 제공한다. 다만 여러 자료를 통한 깊은 탐구가 중심이라는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "홍길동이라는 상징적 인물 이미지(의적·만민평등의 이념)가 장소에 부여되어 있으며, 역사와 소설의 대비된 의미가 구체적으로 연결된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:32a168e4462950898ed413ec0a603ea7a9a28e5d879eb53b8884365efdf1124f",
+            "appearance:5544bca8dbd016ea57c1bb92a60b95d7430b7d3d3b3d123418d935e85909b210",
+            "appearance:e685cc1b05b2e296641cebbb06c56dd7b360eaf3163a51bcd542b2c9db03d7b3"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안된 repair 항목(E.c)은 검토 결과 채택할 수 없다. 근거로 제시된 인용문은 부지 면적 사실만 담고 있으며 해당 출처의 허용 claim 목록에 VISUAL_APPEARANCE가 포함되지 않아 이 facet의 시각적 표현을 지지하는 claim으로 인용이 허용되지 않는다. 외관·경관·연출이 장소 이미지를 표현한다는 직접 근거가 없어 UNKNOWN으로 처리한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:563640bd7e8274e2d3877cf5b9c9b9cc7d87fca337155826a0340971c713fe66"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "전통 옷을 입고 사진을 찍는 체험을 통해 홍길동 서사와 관련된 장면·이미지를 방문자가 직접 재현할 수 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:563640bd7e8274e2d3877cf5b9c9b9cc7d87fca337155826a0340971c713fe66"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "여러 체험 중 선택할 수 있는 활동이 나열되어 있어 자율적 선택의 여지가 있으나, 개방적 탐색·여유에 대한 구체적 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1fb3ddd3fefd91c052d922e9ce897738228cca73428a93e401688d9f0b641e52",
+            "appearance:2a58a458564aa38db84dc545737765b77c64d1507046af2c4a1b2492f9279d09",
+            "appearance:99b1e6af5d9636c48b6ed31a95345c2de0838f6fca3e32fe753548936a68a8be"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연환경, 고요함, 저자극 환경에 대한 직접적 근거가 없다. 부지 면적만으로 회복 환경을 추정할 수 없다.",
+      "value": 67
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480",
+          "quote": {
+            "end": 744,
+            "method": "EXACT",
+            "original": "생가터 발굴 작업 및 철저한 고증을 거쳐 생가를 복원하였고",
+            "start": 712,
+            "submitted": "생가터 발굴 작업 및 철저한 고증을 거쳐 생가를 복원하였고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "11207822cecf4fa86f304cccfc6ec2353bf9e8482ec57ca1a33a1211f84e0c46"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.a",
+      "level": 2,
+      "reason": "홍길동 생가터 발굴 후 고증을 거쳐 복원한 시설로, 복원물이지만 원형 터와 연결된 유산 접촉 경험을 제공한다. 실물 원형의 구체적 탐구까지의 근거는 없어 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480",
+          "quote": {
+            "end": 67,
+            "method": "EXACT",
+            "original": "홍길동은 역사에서는 반역자, 또는 강도로 기록되어 있으나, 소설에서는 봉건제도에 맞서 만민평등의 이념으로 활빈당을 이끌고",
+            "start": 0,
+            "submitted": "홍길동은 역사에서는 반역자, 또는 강도로 기록되어 있으나, 소설에서는 봉건제도에 맞서 만민평등의 이념으로 활빈당을 이끌고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "11207822cecf4fa86f304cccfc6ec2353bf9e8482ec57ca1a33a1211f84e0c46"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 3,
+      "reason": "이 장소의 대상인 홍길동의 생애, 역사적 기록과 소설적 재해석, 오키나와 진출 등 구체적 역사 맥락이 공식 개요에 제시되어 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 실제 전승·생활문화와의 지속적 연결을 확인하는 근거가 없다. 연구·복원 사실만으로 현재의 살아있는 전승이라 단정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480",
+          "quote": {
+            "end": 770,
+            "method": "EXACT",
+            "original": "2004년 5월 3일 홍길동 전시관을 개관하여",
+            "start": 745,
+            "submitted": "2004년 5월 3일 홍길동 전시관을 개관하여",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "11207822cecf4fa86f304cccfc6ec2353bf9e8482ec57ca1a33a1211f84e0c46"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "홍길동 전시관이 있어 생애와 연구 성과에 연결된 해설·전시를 제공한다. 다만 여러 자료를 통한 깊은 탐구가 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480",
+          "quote": {
+            "end": 96,
+            "method": "EXACT",
+            "original": "소설에서는 봉건제도에 맞서 만민평등의 이념으로 활빈당을 이끌고, 이상국인 일본 오키나와의 율도국을 건설한 인물이다",
+            "start": 33,
+            "submitted": "소설에서는 봉건제도에 맞서 만민평등의 이념으로 활빈당을 이끌고, 이상국인 일본 오키나와의 율도국을 건설한 인물이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "11207822cecf4fa86f304cccfc6ec2353bf9e8482ec57ca1a33a1211f84e0c46"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "홍길동이라는 상징적 인물 이미지(의적·만민평등의 이념)가 장소에 부여되어 있으며, 역사와 소설의 대비된 의미가 구체적으로 연결된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지를 유통하는 매체(작품, 홍보, SNS 등) 표현에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "제안된 repair 항목(E.c)은 검토 결과 채택할 수 없다. 근거로 제시된 인용문은 부지 면적 사실만 담고 있으며 해당 출처의 허용 claim 목록에 VISUAL_APPEARANCE가 포함되지 않아 이 facet의 시각적 표현을 지지하는 claim으로 인용이 허용되지 않는다. 외관·경관·연출이 장소 이미지를 표현한다는 직접 근거가 없어 UNKNOWN으로 처리한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:563640bd7e8274e2d3877cf5b9c9b9cc7d87fca337155826a0340971c713fe66",
+          "quote": {
+            "end": 16,
+            "method": "EXACT",
+            "original": "전통 옷 입고 사진 찍기 체험",
+            "start": 0,
+            "submitted": "전통 옷 입고 사진 찍기 체험",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5dfde39e60aea37ca354d64e6ed959cb816cf42714bb3efb076205541a318760"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "전통 옷을 입고 사진을 찍는 체험을 통해 홍길동 서사와 관련된 장면·이미지를 방문자가 직접 재현할 수 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:563640bd7e8274e2d3877cf5b9c9b9cc7d87fca337155826a0340971c713fe66",
+          "quote": {
+            "end": 51,
+            "method": "EXACT",
+            "original": "민속악기 연주 체험 / 활쏘기 체험 / 율도국 병영체험 등",
+            "start": 19,
+            "submitted": "민속악기 연주 체험 / 활쏘기 체험 / 율도국 병영체험 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5dfde39e60aea37ca354d64e6ed959cb816cf42714bb3efb076205541a318760"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "여러 체험 중 선택할 수 있는 활동이 나열되어 있어 자율적 선택의 여지가 있으나, 개방적 탐색·여유에 대한 구체적 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연환경, 고요함, 저자극 환경에 대한 직접적 근거가 없다. 부지 면적만으로 회복 환경을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "활쏘기, 병영체험 등 구체적 참여 활동의 근거는 수준 3(구체적인 참여·탐방 활동)을 지지하지만, 제안된 anchor_ko는 수준 4 표현인 '지속적으로 참여·도전할 활동'이다. 사유 스스로 지속적 도전이 중심이라는 근거가 없다고 인정하여, 제안된 앵커 수준은 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "병영체험이 공동 활동을 '가능성'으로 함축할 뿐이며, 구체적인 교류·자기표현 기회를 직접 확인하는 근거가 없다. 사유도 직접 근거 부족을 인정하여 제안된 수준의 앵커가 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:563640bd7e8274e2d3877cf5b9c9b9cc7d87fca337155826a0340971c713fe66",
+              "quote": {
+                "end": 51,
+                "method": "EXACT",
+                "original": "활쏘기 체험 / 율도국 병영체험 등",
+                "start": 32,
+                "submitted": "활쏘기 체험 / 율도국 병영체험 등",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "5dfde39e60aea37ca354d64e6ed959cb816cf42714bb3efb076205541a318760"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "활쏘기, 병영체험, 민속악기 연주 등 신체 참여형 구체 활동이 다수 제공된다. 지속적 도전이 중심이라는 근거는 없어 수준 3으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "활쏘기, 병영체험 등 구체적 참여 활동의 근거는 수준 3(구체적인 참여·탐방 활동)을 지지하지만, 제안된 anchor_ko는 수준 4 표현인 '지속적으로 참여·도전할 활동'이다. 사유 스스로 지속적 도전이 중심이라는 근거가 없다고 인정하여, 제안된 앵커 수준은 뒷받침되지 않는다."
+        }
+      },
+      "reason": "활쏘기, 병영체험 등 구체적 참여 활동의 근거는 수준 3(구체적인 참여·탐방 활동)을 지지하지만, 제안된 anchor_ko는 수준 4 표현인 '지속적으로 참여·도전할 활동'이다. 사유 스스로 지속적 도전이 중심이라는 근거가 없다고 인정하여, 제안된 앵커 수준은 뒷받침되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:563640bd7e8274e2d3877cf5b9c9b9cc7d87fca337155826a0340971c713fe66",
+              "quote": {
+                "end": 51,
+                "method": "EXACT",
+                "original": "율도국 병영체험 등",
+                "start": 41,
+                "submitted": "율도국 병영체험 등",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "5dfde39e60aea37ca354d64e6ed959cb816cf42714bb3efb076205541a318760"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "병영체험 등 공동 활동 가능성이 있으나, 교류·자기표현의 기회가 풍부하다는 직접 근거는 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "병영체험이 공동 활동을 '가능성'으로 함축할 뿐이며, 구체적인 교류·자기표현 기회를 직접 확인하는 근거가 없다. 사유도 직접 근거 부족을 인정하여 제안된 수준의 앵커가 뒷받침되지 않는다."
+        }
+      },
+      "reason": "병영체험이 공동 활동을 '가능성'으로 함축할 뿐이며, 구체적인 교류·자기표현 기회를 직접 확인하는 근거가 없다. 사유도 직접 근거 부족을 인정하여 제안된 수준의 앵커가 뒷받침되지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "4f4f9d8660ac7c8b89f4254b65713d4b6d37d9531778d6a4075bafedaf141fab",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "배경에 울창한 소나무와 활엽수 숲, 돌담, 흙길 등 자연 환경 단서가 넓게 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1fb3ddd3fefd91c052d922e9ce897738228cca73428a93e401688d9f0b641e52",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "43ac5bc6b6d1b7aa28de51a06cd68622f95acbade897b93fbda84e054ce3098c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568817_4",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "07c466b4f24b1eca7ebd1aa4b89d90cd20fde66b4571ec3771e8953e2ccfc685",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/17/3568817_image2_1.jpg"
+        },
+        "record_sha256": "a653e574d20d3f3c2c1b40c44ecf8de14af555d105bc71ccf9d56e6f411264dd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "건물 뒤 울창한 소나무 숲과 앞 잔디, 돌담이 자연 환경 단서로 보이나 지배적이지는 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2a58a458564aa38db84dc545737765b77c64d1507046af2c4a1b2492f9279d09",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "656cc6ba4856dfc81495f0f467391f2dc502157c82b34c4f721ce9b3bb7f267f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568815_2",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4a110405fbedcfd31502e189fd067956dbad5476037d1bb66014ff689a40e1b9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/15/3568815_image2_1.jpg"
+        },
+        "record_sha256": "5e8db63c180b6f3b2f68757ac8d117ba2dad120e777c76e1d1d45dacf8681615",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "맑고 푸른 하늘 아래 기와지붕의 곡선과 대비되는 백벽·목재 구조, 잔디 녹색과 석축 회색이 조화를 이루며 구도가 안정적이고 시각적 인상이 뚜렷함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:32a168e4462950898ed413ec0a603ea7a9a28e5d879eb53b8884365efdf1124f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2deac0379be5be4402bb32914a2e7b69a1616d1bd288f62e986cf87e8480a8fb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568814_1",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c63a6785f616dee2da5aa171e6d9372d05e12ef5c5d12679ad4c211375d2d295",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3568814_image2_1.jpg"
+        },
+        "record_sha256": "100f230e62aad8bc6b58e985d347edd40147d1f74fa99ab7862da1168665e7eb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "초가지붕, 한식 목조 기둥과 격자문, 흙벽과 기와 담, 돌담 등 전통 외관이 장면 전체를 지배함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:46c1f36ab695a28164b64ae982949fe6d58b73c66486d2c5467469dd93c051c4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "43ac5bc6b6d1b7aa28de51a06cd68622f95acbade897b93fbda84e054ce3098c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568817_4",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "07c466b4f24b1eca7ebd1aa4b89d90cd20fde66b4571ec3771e8953e2ccfc685",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/17/3568817_image2_1.jpg"
+        },
+        "record_sha256": "af31de5ba8cf3240c6d140822701a48695761245d16cbb9e9ea10e4f42631028",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "기와 지붕의 반복 리듬, 중앙 조형물을 향한 대칭 구도, 맑은 채광이 뚜렷한 연출적 성격을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5544bca8dbd016ea57c1bb92a60b95d7430b7d3d3b3d123418d935e85909b210",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "656cc6ba4856dfc81495f0f467391f2dc502157c82b34c4f721ce9b3bb7f267f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568815_2",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4a110405fbedcfd31502e189fd067956dbad5476037d1bb66014ff689a40e1b9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/15/3568815_image2_1.jpg"
+        },
+        "record_sha256": "3c1f45b497639c70d00d35d1356a603fdc183806e6de2eeb3d8902bfc2bba4d8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "한옥 기와지붕, 흙벽과 목재 기둥, 돌로 쌓은 석축과 돌계단 등 전통 외관·재료·공간 구성이 장면 전체를 지배함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:71ca2d3b740852abf6baae04d2d611d496b68f3dd3f7de16afa1ebbea9fd5d4c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2deac0379be5be4402bb32914a2e7b69a1616d1bd288f62e986cf87e8480a8fb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568814_1",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c63a6785f616dee2da5aa171e6d9372d05e12ef5c5d12679ad4c211375d2d295",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3568814_image2_1.jpg"
+        },
+        "record_sha256": "3316e3c37516ac4400320b35271bb0768200edaf644ac8d467228dd807268b3b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "뒤편 울창한 산림, 앞쪽 넓은 잔디밭, 주변 수목 등 자연 환경 단서가 넓게 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:99b1e6af5d9636c48b6ed31a95345c2de0838f6fca3e32fe753548936a68a8be",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2deac0379be5be4402bb32914a2e7b69a1616d1bd288f62e986cf87e8480a8fb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568814_1",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c63a6785f616dee2da5aa171e6d9372d05e12ef5c5d12679ad4c211375d2d295",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3568814_image2_1.jpg"
+        },
+        "record_sha256": "414758072ce8f649216dc6b434765beaba5750d2c24cce38aeef1fd37a774d90",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "초콣 지붕과 흰 벽, 갈색 목재의 대비가 뚜렷하고 화려한 구도의 햇빛 아래 정면 촬영으로 시각적으로 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e685cc1b05b2e296641cebbb06c56dd7b360eaf3163a51bcd542b2c9db03d7b3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "43ac5bc6b6d1b7aa28de51a06cd68622f95acbade897b93fbda84e054ce3098c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568817_4",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "07c466b4f24b1eca7ebd1aa4b89d90cd20fde66b4571ec3771e8953e2ccfc685",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/17/3568817_image2_1.jpg"
+        },
+        "record_sha256": "8f240e19799b332167c79ad393daf5ec9394e220767d1e37aeeabc04821a785f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와지붕, 목조 기둥과 서까래, 흙벽과 한지 문, 돌담 등 전통 한옥 외관이 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f23e4e533cc7f917381106f81054293689fc6a289778706fad0feea539ed55cc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "656cc6ba4856dfc81495f0f467391f2dc502157c82b34c4f721ce9b3bb7f267f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568815_2",
+          "request_sha256": "02b361af9b03f91c5160307a28725606d87c5b983c59e68056b5cee6d4a3895a",
+          "response_sha256": "13c26fc0c84b697e169d8f492d170574d99e359b9751fde1aa2b5778fa13979b",
+          "retrieved_at": "2026-09-11T02:01:47.457009Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4a110405fbedcfd31502e189fd067956dbad5476037d1bb66014ff689a40e1b9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/15/3568815_image2_1.jpg"
+        },
+        "record_sha256": "7571d65f01db19076a7da348c1acbb10c2869a4c19dc44d93027175a409d55f0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:563640bd7e8274e2d3877cf5b9c9b9cc7d87fca337155826a0340971c713fe66",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "126783",
+          "request_sha256": "954290cf30ebfa3d29d0f720dbf9a47542d2f6f3e5fe696c39bfddc0684d862a",
+          "response_sha256": "ae178caee80f959005be2f11917d112c205e2d251f15cd56dafd42888f02f5fe",
+          "retrieved_at": "2026-09-10T16:46:58.035534Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a24ed9651ce07f5c0244e13931af0bd6bcd38433d2c58ab8086accb40771a0c8",
+          "source_uri": null
+        },
+        "record_sha256": "5dfde39e60aea37ca354d64e6ed959cb816cf42714bb3efb076205541a318760",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "전통 옷 입고 사진 찍기 체험 / 민속악기 연주 체험 / 활쏘기 체험 / 율도국 병영체험 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8a68104bcb43f978573be61bb0425bf95445f673843388ca27481099e2119480",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126783",
+          "request_sha256": "0a79216cc81e14ce65baa13289b10cd6824afb0341f5bfdb501a35f693be80a5",
+          "response_sha256": "25b6ef6a98043f65d863482b8298d6d523f77c40f32b8f5264d4a1360c5da835",
+          "retrieved_at": "2026-09-10T16:46:56.996591Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-07-02T00:44:47Z",
+          "source_record_sha256": "a4e0b0e084989f9c4e16522f754459caa24e4bd829c37f79bbe9853404093b51",
+          "source_uri": null
+        },
+        "record_sha256": "11207822cecf4fa86f304cccfc6ec2353bf9e8482ec57ca1a33a1211f84e0c46",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "홍길동은 역사에서는 반역자, 또는 강도로 기록되어 있으나, 소설에서는 봉건제도에 맞서 만민평등의 이념으로 활빈당을 이끌고, 이상국인 일본 오키나와의 율도국을 건설한 인물이다. 역사상 홍길동은 조선 초 15세기 중엽 명문가의 자제로 태어났으나 신분이 첩의 자식이라 관리등용을 제한하는 국법 때문에 출세의 길이 막혔다. 좌절과 울분 속에서 출가하여 양반으로부터 차별받던 소외된 민중을 규합하여 활빈당을 결성한 후 사회정의를 구현하는 실천적 삶을 살았다. 그러나 봉건적 조선왕조의 핍박을 받던 중 관군에 체포되어 남해로 유배되었으나 탈출하여 무리를 이끌고 오키나와로 진출하였다. 그곳에서 조선에서처럼 민중을 대변하는 민권운동의 선구자가 되었다. 그동안 홍길동의 역사적 실체가 왜곡됐으나, 이 문제를 바로 잡으려는 홍길동 연구팀(장성군, 연세대학교국학연구회, 전남매일, 유구대학, 오키나와관광국, 석원도문화원)의 3년에 걸친 끈질긴 노력 끝에 그 베일에 싸인 비밀이 밝혀졌다. 홍길동은 조선에서 뱃길로 3000리나 떨어진 일본 최남단의 섬 오키나와에서 삶의 후반을 보냈는데, 그곳에는 민권운동의 선구자 홍길동을 추모하는 기념비가 서 있다. 이러한 홍길동의 생애 전반에 걸친 학술연구의 성과가 총체적으로 정리되었으며 500여 년 전의 일본과 한국 간의 교류사를 조명하는 계기가 될 것이다. 이에 장성군은 홍길동 생가터 주변에 18,843m²(5,700여 평)의 부지를 사들였으며, 생가터 발굴 작업 및 철저한 고증을 거쳐 생가를 복원하였고 2004년 5월 3일 홍길동 전시관을 개관하여 새로운 관광지로 발전하고 있다."
+      }
+    ],
+    "parent_source_sha256": "2f4016ed84ac5b2bcbc63fac7f9ddafb26bc6402abdd665979f77408d99dbf42",
+    "place": {
+      "address": "전남광주통합특별시 장성군 황룡면 홍길동로 431",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+      "name_ko": "홍길동 생가",
+      "place_id": "public:korea:1a166f173d265f0fe0c9c23be9c4a2165007b6c0f101e5ef76a0622f835a332c",
+      "provider_content_id": "126783",
+      "region_code": "12840",
+      "region_name": "전남광주통합특별시 장성군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

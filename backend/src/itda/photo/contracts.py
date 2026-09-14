@@ -14,10 +14,15 @@ from collections.abc import Mapping
 from enum import StrEnum
 from typing import Annotated, Any, Final, Literal, Protocol, Self, runtime_checkable
 
-from pydantic import Field, model_validator
+from pydantic import Field, model_serializer, model_validator
 
 from itda.contracts.base import Sha256, StrictContract
 from itda.domain.canonical import canonical_sha256
+from itda.domain.photo_semantics import PHOTO_SEMANTIC_VERSION, resolve_photo_semantic
+
+# Separate persisted job authority. Historical jobs without a family binding
+# continue to use their original trait contracts and hashes.
+PhotoAnalysisFamily = Literal["photo-mood-v1"]
 
 CANDIDATE_EVIDENCE_ONLY: Final[str] = "CANDIDATE_EVIDENCE_ONLY"
 PHOTO_TRAIT_CANDIDATE_SCHEMA_VERSION: Final[str] = "photo-trait-candidates.v1"
@@ -343,23 +348,46 @@ class PhotoTraitCandidate(StrictContract):
     candidate_id: Sha256
     trait_id: Annotated[str, Field(strict=True, pattern=r"^M[1-6]$")]
     text_ko: Annotated[str, Field(strict=True, min_length=1, max_length=24)]
+    semantic_id: Annotated[str, Field(strict=True, min_length=1, max_length=64)] | None = None
+
+    @model_serializer(mode="wrap")
+    def serialize_compatible(self, handler: Any) -> dict[str, Any]:
+        result: dict[str, Any] = handler(self)
+        if self.semantic_id is None:
+            result.pop("semantic_id", None)
+        return result
 
     @model_validator(mode="after")
     def require_korean_text(self) -> Self:
         if _HANGUL.search(self.text_ko) is None:
             raise ValueError("trait text must contain Korean characters")
+        if self.semantic_id is not None:
+            anchor = resolve_photo_semantic(self.trait_id, self.semantic_id)
+            if anchor is None or resolve_photo_semantic(self.trait_id, self.text_ko) != anchor:
+                raise ValueError("semantic identity must match the canonical trait phrase")
         return self
 
 
 class PhotoTraitCandidateSet(StrictContract):
     """Complete candidate-only model output bound by a canonical digest."""
 
-    schema_version: Literal["photo-trait-candidates.v1"]
+    schema_version: Literal["photo-trait-candidates.v1", "photo-trait-candidates.v2"]
     job_id: OpaqueJobId
     payload_sha256: Sha256
     candidates: Annotated[tuple[PhotoTraitCandidate, ...], Field(max_length=6)]
     authority_scope: Literal["CANDIDATE_EVIDENCE_ONLY"]
     candidate_set_sha256: Sha256
+    analysis_kind: Literal["legacy", "synthetic", "semantic"] = "legacy"
+    provider_id: Annotated[str, Field(strict=True, min_length=1, max_length=100)] | None = None
+    semantic_version: Literal["photo-semantics-v2"] | None = None
+
+    @model_serializer(mode="wrap")
+    def serialize_compatible(self, handler: Any) -> dict[str, Any]:
+        result: dict[str, Any] = handler(self)
+        if self.schema_version == "photo-trait-candidates.v1":
+            for field in ("analysis_kind", "provider_id", "semantic_version"):
+                result.pop(field, None)
+        return result
 
     @model_validator(mode="before")
     @classmethod
@@ -369,6 +397,25 @@ class PhotoTraitCandidateSet(StrictContract):
 
     @model_validator(mode="after")
     def validate_candidate_set(self) -> Self:
+        if self.schema_version == "photo-trait-candidates.v1":
+            if (
+                self.analysis_kind != "legacy"
+                or self.provider_id is not None
+                or self.semantic_version is not None
+                or any(row.semantic_id is not None for row in self.candidates)
+            ):
+                raise ValueError("legacy candidates cannot claim semantic provenance")
+        elif (
+            self.analysis_kind == "legacy"
+            or self.provider_id is None
+            or self.semantic_version != PHOTO_SEMANTIC_VERSION
+        ):
+            raise ValueError("v2 candidates require explicit provider provenance")
+        elif self.analysis_kind == "semantic" and (
+            "synthetic" in self.provider_id.casefold()
+            or any(row.semantic_id is None for row in self.candidates)
+        ):
+            raise ValueError("semantic candidates require canonical observed meanings")
         if len({row.candidate_id for row in self.candidates}) != len(self.candidates):
             raise ValueError("candidate identifiers must be unique and opaque")
         expected_digest = canonical_sha256(

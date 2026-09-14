@@ -1,0 +1,896 @@
+{
+  "assessed_at": "2026-09-11T19:48:53.265363Z",
+  "assessment_sha256": "fd41e1c086b97ff27b220a52db79f710d751d0399cc906f98ec974a5926e4428",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 78
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 56
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.c",
+      "missing_channels": [],
+      "reason": "홍대에서 비롯되어 매주 지속되는 예술시장 등 지역 주체의 생활문화 활동이 확인된다. 다만 전통적 전승이 아닌 현대적 청년문화이므로 관람 수준(level 2)으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'청춘들의 아지트', '젊음과 트렌드, 감각과 역동'이라는 구체적이고 일관된 이미지가 장소에 부여되어 있으며 여러 장면(매장, 공연, 시장)에서 반복 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1e5fde920b762695d49f1214ac61002d6b4feff9f98eae058e4effc125094720",
+            "appearance:82f269be128c941f3b2c31ee4740d14d63ea1f6c6e63872931b6e76481831c2f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "형형색색의 숍 개성, 벽화거리, 밤의 불야성 등 젊음·트렌드라는 장소 이미지를 시각적으로 표현하는 경관과 연출의 근거가 이 장소(홍대)에 대해 직접 확인된다. 다만 시각적 연출이 전체 장면을 지배한다고까지 단정할 근거는 부족하여 level 3이다.",
+      "value": 81
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "골목 탐색, 산책 코스, 자전거 이용 등 자신의 방식으로 자율적으로 선택·탐색할 기회가 확인된다. 자기주도 탐색이 방문의 중심이라 단정하기는 어려워 level 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:07535c3b0dc010f2eb77f4b955adb89a79d8386e13f7c68f4dd2ededb1417299",
+            "appearance:d559dffb6c18a645afb42a4dbf5b8c23e6c5f133baf473613cde3261de14076b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "경의선숲길·공원 등 자연 환경 단서는 확인되지만, 동일 원문이 불야성·클럽거리·공연 등 고자극 번화가로 일관되게 기술한다. '자연·저자극 환경이 두드러짐'(level 4)이라는 현재 제안 수준이 이 맥락에서 성립하는지 자료만으로 확정하기 어렵다.",
+      "value": 0
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "자전거 라이딩, 공연 관람·참여, 걷기 탐방 등 구체적 참여 활동이 확인된다. 지속적 도전·몰입 활동이 방문 경험의 중심이라는 근거까지는 없어 level 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "예술시장 참여, 직접 만든 작품 선보이기, 버스킹·공연 등 교류와 자기표현의 기회가 확인된다. 이것이 방문 경험의 중심이라 단정할 근거는 부족하여 level 3이다.",
+      "value": 75
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "홍대 거리 소개에 확인된 실제 원형·유산(문화유산 실물·역사 공간)의 접촉에 대한 근거가 없다. 벽화거리 등은 현대적 거리 경관일 뿐 유산 접촉으로 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "연남동 기사식당 거리의 변화 등 간단한 연혁 언급이 있으나 그 자체의 역사 맥락 탐구를 지원하는 요소로 보기에 구체성이 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "LIVING_TRADITION",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 355,
+            "method": "EXACT",
+            "original": "홍익대 정문 앞 홍익어린이공원에서 매주 토요일에 열리는 홍대 앞 예술시장 플리마켓, 일요일에 열리는 홍대 앞 희망시장 등 재기 발랄한 작가들이 이끄는 많은 예술시장이 홍대에서 비롯되었다.",
+            "start": 251,
+            "submitted": "홍익대 정문 앞 홍익어린이공원에서 매주 토요일에 열리는 홍대 앞 예술시장 플리마켓, 일요일에 열리는 홍대 앞 희망시장 등 재기 발랄한 작가들이 이끄는 많은 예술시장이 홍대에서 비롯되었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        }
+      ],
+      "flags": [],
+      "key": "H.c",
+      "level": 2,
+      "reason": "홍대에서 비롯되어 매주 지속되는 예술시장 등 지역 주체의 생활문화 활동이 확인된다. 다만 전통적 전승이 아닌 현대적 청년문화이므로 관람 수준(level 2)으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 제공에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 430,
+            "method": "EXACT",
+            "original": "쇼핑과 맛집에 이어 공연이나 전시 관람을 충족하는 상권이 있고 젊음과 트렌드, 감각과 역동이 곳곳에 도사린, 언제나 매력적인 동네다.",
+            "start": 356,
+            "submitted": "쇼핑과 맛집에 이어 공연이나 전시 관람을 충족하는 상권이 있고 젊음과 트렌드, 감각과 역동이 곳곳에 도사린, 언제나 매력적인 동네다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 89,
+            "method": "EXACT",
+            "original": "청춘들의 아지트 홍대 거리에는 패션과 뷰티, 리빙, 책과 문구 등 종류를 불문하고 갖은 매장과 디자이너 브랜드, 편집숍, 서점, 카페와 레스토랑 등이 즐비하다.",
+            "start": 0,
+            "submitted": "청춘들의 아지트 홍대 거리에는 패션과 뷰티, 리빙, 책과 문구 등 종류를 불문하고 갖은 매장과 디자이너 브랜드, 편집숍, 서점, 카페와 레스토랑 등이 즐비하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "'청춘들의 아지트', '젊음과 트렌드, 감각과 역동'이라는 구체적이고 일관된 이미지가 장소에 부여되어 있으며 여러 장면(매장, 공연, 시장)에서 반복 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "'이름난 골목'이라는 표현으로 명성이 암시되나, 특정 매체를 통한 이미지 재현·확산의 근거는 제시되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 499,
+            "method": "EXACT",
+            "original": "낮에는 다채로운 숍이 형형색색 개성을 드러내고 발길을 붙드는 그윽해진 불야성 역시 청춘들이 한결같이 찾고 머무는 까닭이다.",
+            "start": 431,
+            "submitted": "낮에는 다채로운 숍이 형형색색 개성을 드러내고 발길을 붙드는 그윽해진 불야성 역시 청춘들이 한결같이 찾고 머무는 까닭이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 181,
+            "method": "EXACT",
+            "original": "홍익대 후문 와우산로 22길에 펼쳐진 벽화거리, 상수역과도 잇닿은 홍대 클럽거리 등 이름난 골목을 거느렸다.",
+            "start": 121,
+            "submitted": "홍익대 후문 와우산로 22길에 펼쳐진 벽화거리, 상수역과도 잇닿은 홍대 클럽거리 등 이름난 골목을 거느렸다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "형형색색의 숍 개성, 벽화거리, 밤의 불야성 등 젊음·트렌드라는 장소 이미지를 시각적으로 표현하는 경관과 연출의 근거가 이 장소(홍대)에 대해 직접 확인된다. 다만 시각적 연출이 전체 장면을 지배한다고까지 단정할 근거는 부족하여 level 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "판단 레벨 3('대표 장면·상징을 직접 경험') 자체는 버스킹·벽화거리·예술시장 인용으로 뒷받침되나, 제안된 anchor_ko가 '촬영·참여로 이미지나 장면을 재현'(level 4 문구)이고 이유문은 재현 근거가 없다고 명시한다. 현재 제안 수준의 앵커와 근거가 불일치하여 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 923,
+            "method": "EXACT",
+            "original": "홍대 입구 3번 출구에서 연남동 산책을 시작해 경의선숲길공원을 걷다가 동교동 방향으로 살짝 틀면 연희동에 닿는다.",
+            "start": 860,
+            "submitted": "홍대 입구 3번 출구에서 연남동 산책을 시작해 경의선숲길공원을 걷다가 동교동 방향으로 살짝 틀면 연희동에 닿는다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 859,
+            "method": "EXACT",
+            "original": "홍대입구역을 중심으로 합정역, 상수역, 광흥창역을 잇는 서교동 일대의 골목에는 아기자기한 상점이 숨어 있다면, 홍대입구역에서 연남동, 연희동으로 이어지는 신흥 명소는 세련되고 트렌디하며 이국적인 분위기가 물씬한 가게가 줄을 잇는다.",
+            "start": 730,
+            "submitted": "홍대입구역을 중심으로 합정역, 상수역, 광흥창역을 잇는 서교동 일대의 골목에는 아기자기한 상점이 숨어 있다면, 홍대입구역에서 연남동, 연희동으로 이어지는 신흥 명소는 세련되고 트렌디하며 이국적인 분위기가 물씬한 가게가 줄을 잇는다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "골목 탐색, 산책 코스, 자전거 이용 등 자신의 방식으로 자율적으로 선택·탐색할 기회가 확인된다. 자기주도 탐색이 방문의 중심이라 단정하기는 어려워 level 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "경의선숲길·공원 등 자연 환경 단서는 확인되지만, 동일 원문이 불야성·클럽거리·공연 등 고자극 번화가로 일관되게 기술한다. '자연·저자극 환경이 두드러짐'(level 4)이라는 현재 제안 수준이 이 맥락에서 성립하는지 자료만으로 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 1104,
+            "method": "EXACT",
+            "original": "경의선숲길과 경의선책거리 일대를 즐기는 색다른 방법은 서울자전거 따릉이를 타는 것이다.",
+            "start": 1056,
+            "submitted": "경의선숲길과 경의선책거리 일대를 즐기는 색다른 방법은 서울자전거 따릉이를 타는 것이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 181,
+            "method": "EXACT",
+            "original": "버스킹이나 춤 공연이 끊이지 않는 걷고 싶은 거리, 홍익대 후문 와우산로 22길에 펼쳐진 벽화거리, 상수역과도 잇닿은 홍대 클럽거리 등 이름난 골목을 거느렸다.",
+            "start": 92,
+            "submitted": "버스킹이나 춤 공연이 끊이지 않는 걷고 싶은 거리, 홍익대 후문 와우산로 22길에 펼쳐진 벽화거리, 상수역과도 잇닿은 홍대 클럽거리 등 이름난 골목을 거느렸다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "자전거 라이딩, 공연 관람·참여, 걷기 탐방 등 구체적 참여 활동이 확인된다. 지속적 도전·몰입 활동이 방문 경험의 중심이라는 근거까지는 없어 level 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 355,
+            "method": "EXACT",
+            "original": "홍익대 정문 앞 홍익어린이공원에서 매주 토요일에 열리는 홍대 앞 예술시장 플리마켓, 일요일에 열리는 홍대 앞 희망시장 등 재기 발랄한 작가들이 이끄는 많은 예술시장이 홍대에서 비롯되었다.",
+            "start": 251,
+            "submitted": "홍익대 정문 앞 홍익어린이공원에서 매주 토요일에 열리는 홍대 앞 예술시장 플리마켓, 일요일에 열리는 홍대 앞 희망시장 등 재기 발랄한 작가들이 이끄는 많은 예술시장이 홍대에서 비롯되었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        },
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+          "quote": {
+            "end": 250,
+            "method": "EXACT",
+            "original": "이곳을 찾는 이들은 무언가를 구입하거나 감상하는 데 머물지 않으며 직접 만든 무언가를 선보이고 소개하기를 주저하지 않는다.",
+            "start": 182,
+            "submitted": "이곳을 찾는 이들은 무언가를 구입하거나 감상하는 데 머물지 않으며 직접 만든 무언가를 선보이고 소개하기를 주저하지 않는다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 3,
+      "reason": "예술시장 참여, 직접 만든 작품 선보이기, 버스킹·공연 등 교류와 자기표현의 기회가 확인된다. 이것이 방문 경험의 중심이라 단정할 근거는 부족하여 level 3이다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+              "quote": {
+                "end": 250,
+                "method": "EXACT",
+                "original": "이곳을 찾는 이들은 무언가를 구입하거나 감상하는 데 머물지 않으며 직접 만든 무언가를 선보이고 소개하기를 주저하지 않는다.",
+                "start": 182,
+                "submitted": "이곳을 찾는 이들은 무언가를 구입하거나 감상하는 데 머물지 않으며 직접 만든 무언가를 선보이고 소개하기를 주저하지 않는다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+            },
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+              "quote": {
+                "end": 181,
+                "method": "EXACT",
+                "original": "또 버스킹이나 춤 공연이 끊이지 않는 걷고 싶은 거리, 홍익대 후문 와우산로 22길에 펼쳐진 벽화거리, 상수역과도 잇닿은 홍대 클럽거리 등 이름난 골목을 거느렸다.",
+                "start": 90,
+                "submitted": "또 버스킹이나 춤 공연이 끊이지 않는 걷고 싶은 거리, 홍익대 후문 와우산로 22길에 펼쳐진 벽화거리, 상수역과도 잇닿은 홍대 클럽거리 등 이름난 골목을 거느렸다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+            }
+          ],
+          "flags": [],
+          "key": "E.d",
+          "level": 3,
+          "reason": "버스킹·공연, 벽화거리, 예술시장 등 장소의 상징적 장면을 방문자가 현장에서 직접 경험하고 참여할 수 있다. 재현(촬영 등)의 명시는 없어 level 3으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "판단 레벨 3('대표 장면·상징을 직접 경험') 자체는 버스킹·벽화거리·예술시장 인용으로 뒷받침되나, 제안된 anchor_ko가 '촬영·참여로 이미지나 장면을 재현'(level 4 문구)이고 이유문은 재현 근거가 없다고 명시한다. 현재 제안 수준의 앵커와 근거가 불일치하여 확정하기 어렵다."
+        }
+      },
+      "reason": "판단 레벨 3('대표 장면·상징을 직접 경험') 자체는 버스킹·벽화거리·예술시장 인용으로 뒷받침되나, 제안된 anchor_ko가 '촬영·참여로 이미지나 장면을 재현'(level 4 문구)이고 이유문은 재현 근거가 없다고 명시한다. 현재 제안 수준의 앵커와 근거가 불일치하여 확정하기 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+              "quote": {
+                "end": 729,
+                "method": "EXACT",
+                "original": "푸르게 펼쳐진 연트럴파크 경의선 숲길을 따라 지금도 호기심을 자극하는 매장이 출현 중이다.",
+                "start": 679,
+                "submitted": "푸르게 펼쳐진 연트럴파크 경의선 숲길을 따라 지금도 호기심을 자극하는 매장이 출현 중이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+            },
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+              "quote": {
+                "end": 1055,
+                "method": "EXACT",
+                "original": "경의선책거리에서 산울림소극장에 이르는 구간에는 공원이 있고 이를 중심으로 양 길가에 책, 문구, 소품을 파는 다양한 가게가 즐비하다.",
+                "start": 981,
+                "submitted": "경의선책거리에서 산울림소극장에 이르는 구간에는 공원이 있고 이를 중심으로 양 길가에 책, 문구, 소품을 파는 다양한 가게가 즐비하다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "경의선숲길공원('푸르게 펼쳐진'), 책거리 구간의 공원 등 자연·머무를 환경 단서가 이 장소에 대해 직접 확인된다. 그러나 상업·공연 중심 번화가라는 맥락상 자연·저자극 환경이 장면을 지배한다고 보기 어렵고, 실제 고요함·혼잡 수준은 자료상 확인 불가하므로 level 3이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "경의선숲길·공원 등 자연 환경 단서는 확인되지만, 동일 원문이 불야성·클럽거리·공연 등 고자극 번화가로 일관되게 기술한다. '자연·저자극 환경이 두드러짐'(level 4)이라는 현재 제안 수준이 이 맥락에서 성립하는지 자료만으로 확정하기 어렵다."
+        }
+      },
+      "reason": "경의선숲길·공원 등 자연 환경 단서는 확인되지만, 동일 원문이 불야성·클럽거리·공연 등 고자극 번화가로 일관되게 기술한다. '자연·저자극 환경이 두드러짐'(level 4)이라는 현재 제안 수준이 이 맥락에서 성립하는지 자료만으로 확정하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "72beb4e063d997241c9b36ad47cf73c87c1c12355e0a7113b80b27eb97ec9d87",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "일부 한글 간판과 시장형 가게 구성에서 전통적 상가 느낌이 희미하게 보이나 대체로 현대적 상업 외관이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:008fcef2db25c99f88a15aae497818ef51a34115acd720e0906429c8bd353e62",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "49bc8fd6a7e03ecf8e388c04086afbd09c8418ac485c40239befd889d1baa59b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3092364_1",
+          "request_sha256": "59a5a7525fc08dcea2b5e6c865d5d91843d3f65b1ac1f30342b079bd5d246887",
+          "response_sha256": "36710105ad6ef7365a2dd6b890bc81c45c3459fc4bbddcb69e5d9119435cf52e",
+          "retrieved_at": "2026-09-11T02:12:43.595785Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3ddf57a74312435df2450a0a0f9eb651c57bf3869f2b12b9e09f8b6188a4b7e0",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/64/3092364_image2_1.jpg"
+        },
+        "record_sha256": "80e76c38dd1df19b62317cd923bd1bb9bf596a2edc5f2124d44327ec62142e9b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "건물과 간판, 포장도로로만 이루어진 도심 상권으로 녹지, 물, 자연 경관 등 자연 환경 단서는 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:07535c3b0dc010f2eb77f4b955adb89a79d8386e13f7c68f4dd2ededb1417299",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "489262cb5b19c4edc5b2ea05bafe5afba49878efcef65b08295e7701f990a832",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3092256_2",
+          "request_sha256": "59a5a7525fc08dcea2b5e6c865d5d91843d3f65b1ac1f30342b079bd5d246887",
+          "response_sha256": "36710105ad6ef7365a2dd6b890bc81c45c3459fc4bbddcb69e5d9119435cf52e",
+          "retrieved_at": "2026-09-11T02:12:43.595785Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3f59fe2051f2c56d3dd3d2f877b45a7c5b3890656f52fa19b1ab8669d07b977f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/56/3092256_image2_1.jpg"
+        },
+        "record_sha256": "ef07ec05af1c3a836a4d44686ec85449b132625f464d20887c54bd66fc2fb9fe",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "야간 네온사인과 다채로운 간판 조명이 화면을 가득 채우며 강렬한 도시 밤거리 분위기를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1e5fde920b762695d49f1214ac61002d6b4feff9f98eae058e4effc125094720",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "49bc8fd6a7e03ecf8e388c04086afbd09c8418ac485c40239befd889d1baa59b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3092364_1",
+          "request_sha256": "59a5a7525fc08dcea2b5e6c865d5d91843d3f65b1ac1f30342b079bd5d246887",
+          "response_sha256": "36710105ad6ef7365a2dd6b890bc81c45c3459fc4bbddcb69e5d9119435cf52e",
+          "retrieved_at": "2026-09-11T02:12:43.595785Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3ddf57a74312435df2450a0a0f9eb651c57bf3869f2b12b9e09f8b6188a4b7e0",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/64/3092364_image2_1.jpg"
+        },
+        "record_sha256": "6d0d19d5fdc4f1f3b7ce07cc102d2082e4c88d7c5ed1a0d6e076824550d955eb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "밤거리를 가득 채우는 네온 간판과 강렬한 색 조명, 번화한 상업 거리의 역동적 구도가 장면 전체를 지배하며 시각적으로 매우 강한 인상을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:82f269be128c941f3b2c31ee4740d14d63ea1f6c6e63872931b6e76481831c2f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "489262cb5b19c4edc5b2ea05bafe5afba49878efcef65b08295e7701f990a832",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3092256_2",
+          "request_sha256": "59a5a7525fc08dcea2b5e6c865d5d91843d3f65b1ac1f30342b079bd5d246887",
+          "response_sha256": "36710105ad6ef7365a2dd6b890bc81c45c3459fc4bbddcb69e5d9119435cf52e",
+          "retrieved_at": "2026-09-11T02:12:43.595785Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3f59fe2051f2c56d3dd3d2f877b45a7c5b3890656f52fa19b1ab8669d07b977f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/56/3092256_image2_1.jpg"
+        },
+        "record_sha256": "6465ec5f6782ec13c00787083301e1c8f8c01de7b32568ddb1bebacc4ab1c751",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지·자연 경관 등 자연 환경 단서는 보이지 않고 건물과 인공 구조물만 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d559dffb6c18a645afb42a4dbf5b8c23e6c5f133baf473613cde3261de14076b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "49bc8fd6a7e03ecf8e388c04086afbd09c8418ac485c40239befd889d1baa59b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3092364_1",
+          "request_sha256": "59a5a7525fc08dcea2b5e6c865d5d91843d3f65b1ac1f30342b079bd5d246887",
+          "response_sha256": "36710105ad6ef7365a2dd6b890bc81c45c3459fc4bbddcb69e5d9119435cf52e",
+          "retrieved_at": "2026-09-11T02:12:43.595785Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3ddf57a74312435df2450a0a0f9eb651c57bf3869f2b12b9e09f8b6188a4b7e0",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/64/3092364_image2_1.jpg"
+        },
+        "record_sha256": "195f2b8b09f1b6b26f44d2a8e746e7d1be389c30945c5167231bed06f2f4109d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 상가 건물, 대형 전광판, LED 간판 등 현대 상업 외관만이 보이며 전통적 재료나 공간 구성의 흔적은 뚜렷하지 않다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e667ebf5d200e34cc83090f8d723e72cf67953ab621cd867fb8d85a461c1de8b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "489262cb5b19c4edc5b2ea05bafe5afba49878efcef65b08295e7701f990a832",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3092256_2",
+          "request_sha256": "59a5a7525fc08dcea2b5e6c865d5d91843d3f65b1ac1f30342b079bd5d246887",
+          "response_sha256": "36710105ad6ef7365a2dd6b890bc81c45c3459fc4bbddcb69e5d9119435cf52e",
+          "retrieved_at": "2026-09-11T02:12:43.595785Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3f59fe2051f2c56d3dd3d2f877b45a7c5b3890656f52fa19b1ab8669d07b977f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/56/3092256_image2_1.jpg"
+        },
+        "record_sha256": "6c7cb4a3e047227ea8366aa6735fceed3864d60c7828504f2763a6b7f096d7fe",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8c199d9cdf89c269f6bd0e8938fa503620f7440eb68af5911bfcc2bf16cf6e12",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "781031",
+          "request_sha256": "ad5304b45deb2903fb5cb2e5112b82ceef827320d0cfc2a3c4639de2956ae965",
+          "response_sha256": "3e5bc2ba8ce5e9f75b77b9d47a868a3a2fa7e4683dcea1da61ec95ae4302bf1d",
+          "retrieved_at": "2026-09-10T16:40:46.064794Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-19T08:41:17Z",
+          "source_record_sha256": "3b573c79dc357baf8526147ff8d867d97a405d5a2089a3f2a55e9884b62fa2b9",
+          "source_uri": null
+        },
+        "record_sha256": "e0e062c668d895f351f68ddea7daead94f395c4e1b47e295c345ddd81897cc8e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "청춘들의 아지트 홍대 거리에는 패션과 뷰티, 리빙, 책과 문구 등 종류를 불문하고 갖은 매장과 디자이너 브랜드, 편집숍, 서점, 카페와 레스토랑 등이 즐비하다. 또 버스킹이나 춤 공연이 끊이지 않는 걷고 싶은 거리, 홍익대 후문 와우산로 22길에 펼쳐진 벽화거리, 상수역과도 잇닿은 홍대 클럽거리 등 이름난 골목을 거느렸다. 이곳을 찾는 이들은 무언가를 구입하거나 감상하는 데 머물지 않으며 직접 만든 무언가를 선보이고 소개하기를 주저하지 않는다. 홍익대 정문 앞 홍익어린이공원에서 매주 토요일에 열리는 홍대 앞 예술시장 플리마켓, 일요일에 열리는 홍대 앞 희망시장 등 재기 발랄한 작가들이 이끄는 많은 예술시장이 홍대에서 비롯되었다. 쇼핑과 맛집에 이어 공연이나 전시 관람을 충족하는 상권이 있고 젊음과 트렌드, 감각과 역동이 곳곳에 도사린, 언제나 매력적인 동네다. 낮에는 다채로운 숍이 형형색색 개성을 드러내고 발길을 붙드는 그윽해진 불야성 역시 청춘들이 한결같이 찾고 머무는 까닭이다. 홍대입구역 3번 출구에서 동교동삼거리 방향은 연남동이다. 한때는 일대에 24시간 문을 여는 기사식당이 즐비해 연남동기사식당 거리로 통했는데, 이제는 개성 넘치는 숍과 카페, 식당이 그 자리를 대신한다. 한식, 중식, 일식은 물론 태국, 이탈리아, 프랑스 등 각국의 음식을 맛볼 수 있는 훌륭한 식당이 골목마다 빼곡하다. 푸르게 펼쳐진 연트럴파크 경의선 숲길을 따라 지금도 호기심을 자극하는 매장이 출현 중이다. 홍대입구역을 중심으로 합정역, 상수역, 광흥창역을 잇는 서교동 일대의 골목에는 아기자기한 상점이 숨어 있다면, 홍대입구역에서 연남동, 연희동으로 이어지는 신흥 명소는 세련되고 트렌디하며 이국적인 분위기가 물씬한 가게가 줄을 잇는다. 홍대 입구 3번 출구에서 연남동 산책을 시작해 경의선숲길공원을 걷다가 동교동 방향으로 살짝 틀면 연희동에 닿는다. 한편 홍대 입구 7번 출구에선 경의선책거리가 시작되는데 길을 따라가면 지하철 2호선 신촌역에 이른다. 경의선책거리에서 산울림소극장에 이르는 구간에는 공원이 있고 이를 중심으로 양 길가에 책, 문구, 소품을 파는 다양한 가게가 즐비하다. 경의선숲길과 경의선책거리 일대를 즐기는 색다른 방법은 서울자전거 따릉이를 타는 것이다. 참고로 자전거대여소는 홍대입구역 2, 3, 6, 8번 출구에 있다."
+      }
+    ],
+    "parent_source_sha256": "b237582ef45316c9950fd16135237b9dd14119a51c9ce3377572587b13291851",
+    "place": {
+      "address": "서울특별시 마포구 서교동",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+      "name_ko": "홍대",
+      "place_id": "public:korea:fc0e395276f33eb93fa61d3cfd2fa5b49dd56d30e77755cfc0ac85fb45b9efa8",
+      "provider_content_id": "781031",
+      "region_code": "11440",
+      "region_name": "서울특별시 마포구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

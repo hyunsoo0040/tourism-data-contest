@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import UTC, date, datetime, timedelta
 
+import pytest
 from fastapi.testclient import TestClient
 
 from itda.api.dependencies import get_daily_release_overlay_reader
@@ -16,7 +17,6 @@ from itda.contracts.mvp_daily_refresh import (
 from itda.db.mvp_release_overlay import (
     DailyExecutionDetailRecord,
     DailyOperationsOverviewRecord,
-    DailyRefreshConflict,
     DailyRefreshStoreError,
 )
 
@@ -157,8 +157,8 @@ def test_operations_overview_history_detail_and_command_projection() -> None:
 
     assert overview.status_code == 200
     assert overview.json()["recollection"] == {
-        "eligible": True,
-        "safe_reason": "RECOLLECTION_ALLOWED",
+        "eligible": False,
+        "safe_reason": "LEGACY_RECOLLECTION_RETIRED",
     }
     assert overview.json()["active_release_sha256"] == "a" * 64
     assert history.status_code == 200
@@ -178,8 +178,15 @@ def test_operations_overview_history_detail_and_command_projection() -> None:
     assert command.json()["command_id"] == COMMAND_ID
 
 
-def test_operations_recollection_requires_same_origin(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+@pytest.mark.parametrize("grounded_flag", [None, "0", "1"])
+def test_retired_recollection_preserves_origin_guard_and_never_enqueues(
+    monkeypatch, grounded_flag
+) -> None:
     monkeypatch.setenv("ITDA_CANONICAL_APP_ORIGIN", "https://it-da.app")
+    if grounded_flag is None:
+        monkeypatch.delenv("ITDA_GROUNDED_DAILY_ENABLED", raising=False)
+    else:
+        monkeypatch.setenv("ITDA_GROUNDED_DAILY_ENABLED", grounded_flag)
     reader = OperationsReader()
     client, application = _client(reader)
     payload = {
@@ -193,7 +200,7 @@ def test_operations_recollection_requires_same_origin(monkeypatch) -> None:  # t
             headers={"Origin": "https://attacker.example"},
             json=payload,
         )
-        accepted = client.post(
+        retired = client.post(
             "/internal/operations/daily-glm/api/commands/recollect",
             headers={
                 "Origin": "https://it-da.app",
@@ -205,23 +212,25 @@ def test_operations_recollection_requires_same_origin(monkeypatch) -> None:  # t
         application.dependency_overrides.clear()
 
     assert denied.status_code == 403
-    assert accepted.status_code == 202
-    assert reader.requested is True
+    assert retired.status_code == 410
+    assert retired.json() == {"detail": "LEGACY_RECOLLECTION_RETIRED"}
+    assert reader.requested is False
 
 
-def test_operations_conflict_and_store_failure_are_redacted(monkeypatch) -> None:  # type: ignore[no-untyped-def]
+def test_retirement_does_not_need_a_database_and_read_failures_are_redacted(monkeypatch) -> None:
     monkeypatch.setenv("ITDA_CANONICAL_APP_ORIGIN", "https://it-da.app")
 
     class FailingReader(OperationsReader):
-        def request_recollection(self, **_fields: object) -> DailyRecollectionCommandProjection:
-            raise DailyRefreshConflict("postgresql://private-user:private-password@host")
-
         def execution_history(self, *, days: int) -> tuple[DailyRefreshExecutionProjection, ...]:
             raise DailyRefreshStoreError("provider-body-private")
 
     client, application = _client(FailingReader())
     try:
-        conflict = client.post(
+        unavailable = client.get("/internal/operations/daily-glm/api/history")
+        application.dependency_overrides[get_daily_release_overlay_reader] = lambda: pytest.fail(
+            "retired mutation must not construct a database reader"
+        )
+        retired = client.post(
             "/internal/operations/daily-glm/api/commands/recollect",
             headers={"Origin": "https://it-da.app"},
             json={
@@ -230,15 +239,14 @@ def test_operations_conflict_and_store_failure_are_redacted(monkeypatch) -> None
                 "idempotency_key": "daily-recollect-20260906",
             },
         )
-        unavailable = client.get("/internal/operations/daily-glm/api/history")
     finally:
         application.dependency_overrides.clear()
 
-    assert conflict.status_code == 409
-    assert conflict.json() == {"detail": "daily GLM recollection rejected"}
+    assert retired.status_code == 410
+    assert retired.json() == {"detail": "LEGACY_RECOLLECTION_RETIRED"}
     assert unavailable.status_code == 503
     assert unavailable.json() == {"detail": "daily GLM operations unavailable"}
-    assert "private" not in conflict.text + unavailable.text
+    assert "private" not in retired.text + unavailable.text
 
 
 def test_operations_availability_counts_and_safe_exclusion_names() -> None:

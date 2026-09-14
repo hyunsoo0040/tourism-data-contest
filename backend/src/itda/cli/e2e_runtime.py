@@ -28,7 +28,11 @@ from pathlib import Path
 from types import FrameType
 from typing import TYPE_CHECKING, Any, Protocol, cast
 
-from itda.api.routes.photo import verify_photo_service_execute_surface
+from itda.api.routes.photo import (
+    PHOTO_PROTECTED_RELATIONS,
+    PhotoLifecycleGateway,
+    verify_photo_service_execute_surface,
+)
 
 if TYPE_CHECKING:
     from itda.cli.freeze_labels import LabelFreezeReceipt
@@ -374,8 +378,12 @@ def _default_runner(
 
 
 def _safe_environment(environment: Mapping[str, str]) -> dict[str, str]:
+    from itda.cli.grounded_preview_bootstrap import BOOTSTRAP_PATH_ENV
+
     safe: dict[str, str] = {}
     for key, value in environment.items():
+        if key in BOOTSTRAP_PATH_ENV:
+            continue  # Supervisor-only artifact selectors never enter child environments.
         upper_key = key.upper()
         if any(marker in upper_key for marker in _SECRET_MARKERS):
             continue
@@ -2066,17 +2074,7 @@ command.upgrade(config, "head")
             ).fetchone()
             if related != (0,):
                 raise RuntimeError("photo role membership closure verification failed")
-            required_relations = (
-                "photo_jobs",
-                "photo_job_dispatch_markers",
-                "photo_trait_candidates",
-                "photo_confirmed_traits",
-                "photo_deletion_ledger",
-                "photo_review_drafts",
-                "photo_confirmation_receipts",
-                "photo_job_filesystem_bindings",
-                "photo_job_image_slots",
-            )
+            required_relations = PHOTO_PROTECTED_RELATIONS
             owner = connection.execute(
                 "SELECT count(*) FROM pg_catalog.pg_class c "
                 "JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace "
@@ -2087,39 +2085,9 @@ command.upgrade(config, "head")
             ).fetchone()
             if owner != (len(required_relations),):
                 raise RuntimeError("photo lifecycle ownership verification failed")
-            allowed_photo_signatures = (
-                "create_photo_job_v3(text,text,text)",
-                "claim_photo_job_filesystem_binding_v3(text,text)",
-                "read_photo_job_filesystem_binding_v3(text,text)",
-                "lock_photo_job_operation_v3(text,text,text)",
-                "list_photo_cleanup_candidates_v3()",
-                "transition_photo_job_nonterminal_v3(text,text,text,text,timestamptz)",
-                "append_photo_deletion_ledger_v3(text,text,text,text,text,integer,text)",
-                "finalize_photo_job_terminal_v3(text,text,text,text,text,text,text,text)",
-                "finalize_photo_job_unbound_explicit_deletion_v3(text,text)",
-                "record_photo_dispatch_marker_v3(text,text,integer,text)",
-                "record_photo_candidate_batch_v3(text,text,text[],text[],text[],text[])",
-                "annotate_photo_candidate_v3(text,text,text,text,boolean)",
-                "save_photo_review_draft_v3(text,text,text,text[],text[],text[],boolean[])",
-                "discard_photo_review_draft_v3(text,text)",
-                "confirm_photo_traits_v3"
-                "(text,text,text,text[],text[],text[],boolean[],boolean[],text)",
-                "read_photo_job_v2(text,text)",
-                "list_photo_candidates_v2(text,text)",
-                "list_photo_confirmed_traits_v2(text,text)",
-                "list_photo_dispatch_markers_v2(text,text)",
-                "read_photo_review_draft_v2(text,text)",
-                "read_photo_confirmation_receipt_v2(text,text,text)",
-                "read_photo_recommendation_projection_v1(text,text)",
-                "list_photo_deletion_ledger_v3(text,text)",
-                "read_photo_cleanup_status_v3(text,text)",
-                "complete_photo_filesystem_cleanup_v3(text,text,text,text)",
-                "pending_photo_filesystem_release_v3(text,text,text,text)",
-                "read_photo_filesystem_release_v3(text,text)",
-                "reserve_photo_image_slot_v3(text,text,integer,text,text)",
-                "commit_photo_image_slot_v3(text,text,integer,text,integer)",
-                "read_photo_image_slots_v3(text,text)",
-            )
+            # Reuse the API gateway's exact closed capability inventory. Keeping
+            # a second copy here omitted the 0029 mood functions on fresh boots.
+            allowed_photo_signatures = PhotoLifecycleGateway._REQUIRED_FUNCTIONS
             allowed_photo_procedures = tuple(
                 f"dev_eval.{signature}" for signature in allowed_photo_signatures
             )
@@ -2154,6 +2122,7 @@ command.upgrade(config, "head")
             if allowed_acl != (len(allowed_photo_procedures), 0):
                 raise RuntimeError("photo function EXECUTE ACL verification failed")
             owner_only_procedures = (
+                "dev_eval.purge_photo_mood_deleted_v1()",
                 "dev_eval.transition_photo_job_status_v1(text,text,text,text,timestamptz)",
                 "dev_eval.claim_photo_job_v1(text,timestamptz)",
                 "dev_eval.record_photo_dispatch_marker_v1(text,integer,text)",
@@ -2209,6 +2178,11 @@ command.upgrade(config, "head")
             self._validate_release_authority(resources)
         else:
             _validate_label_freeze_output(resources)
+        from itda.cli.grounded_preview_bootstrap import bootstrap_grounded_preview
+
+        grounded_environment = bootstrap_grounded_preview(
+            self._environment, admin_dsn=resources.admin_dsn
+        )
         child_environment = {
             **_safe_environment(self._environment),
             "ITDA_DATABASE_URL": resources.runtime_dsn,
@@ -2242,6 +2216,7 @@ command.upgrade(config, "head")
             },
             **resources.release_authority_environment,
             "PYTHONPATH": str(BACKEND_ROOT / "src"),
+            **grounded_environment,
         }
         return subprocess.Popen(
             [

@@ -1,0 +1,714 @@
+{
+  "assessed_at": "2026-09-11T17:10:30.514384Z",
+  "assessment_sha256": "6a884af1f79a217823ff1762d32ad7549a541b5758c953e557436ba5d4a3f2e6",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 81
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'온갖 꽃들과 향기로운 풀'이라는 이름의 의미와 '비밀정원'이라는 구체적 이미지·이야기가 장소에 연결되어 있다. 여러 표현까지 확인되지는 않으므로 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "'다양한 사진 명소'가 있다는 공식 설명으로 대표 장면을 현장에서 직접 경험하고 촬영할 수 있음이 확인된다. 촬영·재현이 방문 경험의 중심이라는 근거는 없어 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2c41d505e022f5df042628e7316a41bef1ba87c9397c2449fdc419aa5615c2b3",
+            "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "종주코스·순환코스 등 다양한 등산로와 산책로를 스스로 선택해 탐색할 수 있고 정상까지 자유로운 탐방이 가능해 여유로운 자기 방식의 탐색을 지원한다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "벽방산 자락의 야생 녹차밭, 야생화밭, 자연 암석원, 산책로 등 자연 환경 단서가 공간의 중심을 이룬다고 확인되어 두드러진 자연 환경으로 판단한다. 다만 실제 고요함·혼잡 수준은 확인되지 않는다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2dfb3889d1160dbbe9ad0dd9cb58eb62d5788b9d3558409e7d9d4f987446d2d4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "체험학습관, 숲길·암석원 탐방, 등산 코스 등 구체적 참여·탐방 활동이 확인된다. 지속적으로 도전하는 활동의 중심이라는 근거는 없어 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4e9edeb25b89e11fdc643b8bcce88c2dc6db2b033b2500b358cf62d255c6ce57",
+            "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "단체 방문 예약 제도를 통해 공동 방문·교류의 기회가 확인되나, 교류·자기표현 활동이 풍부하다는 근거는 없고 공개도 제한적이어서 제한된 공동 활동 수준(수준 2)으로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 개인이 약 17년에 걸쳐 조성한 사설 정원(차밭·야생화밭)에 관한 설명뿐이며, 확인된 실제 원형·문화유산과의 접촉을 뒷받침하는 자료가 없다. '만화방초'라는 이름의 의미가 소개되지만 유산 실물과의 접촉 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "조성 경위(약 17년 전부터 아카시아를 걷어내고 차밭 조성)는 있으나 이는 정원 조성 이야기이지 그 장소의 실제 역사·사건·인물 맥락을 탐구하게 하는 근거로 보기 어렵다. 역사 맥락 제공에 대한 직접 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. '옛날 마을 뒷동산 같은 느낌'은 정원의 분위기 묘사일 뿐 실제 전승 활동의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "'체험학습관 등'이라는 시설 목록만 있을 뿐 원형·유산·전통에 연결된 해설이나 학습 프로그램의 내용에 대한 근거가 없다. 일반 체험학습 시설의 존재만으로 유산 해설을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+          "quote": {
+            "end": 228,
+            "method": "EXACT",
+            "original": "만화방초를 비밀정원이라고 하는 이유는 그동안 공식적으로 만화방초를 공개하지 않고 주로 주말을 이용해 아는 사람들에게만 개방했기 때문이다.",
+            "start": 152,
+            "submitted": "만화방초를 비밀정원이라고 하는 이유는 그동안 공식적으로 만화방초를 공개하지 않고 주로 주말을 이용해 아는 사람들에게만 개방했기 때문이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "57b502b3bf8f2526d9437d6c12234bbb08dd609e0f2f9c53ef12cd3aa0cd496b"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "'온갖 꽃들과 향기로운 풀'이라는 이름의 의미와 '비밀정원'이라는 구체적 이미지·이야기가 장소에 연결되어 있다. 여러 표현까지 확인되지는 않으므로 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보, SNS 등 매체를 통한 장소 이미지의 재현·유통에 관한 근거가 제공되지 않았다. 사진 명소라는 표현은 촬영 대상성일 뿐 매체 유통의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+          "quote": {
+            "end": 318,
+            "method": "EXACT",
+            "original": "다양한 사진 명소가 있다",
+            "start": 305,
+            "submitted": "다양한 사진 명소가 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "57b502b3bf8f2526d9437d6c12234bbb08dd609e0f2f9c53ef12cd3aa0cd496b"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "'다양한 사진 명소'가 있다는 공식 설명으로 대표 장면을 현장에서 직접 경험하고 촬영할 수 있음이 확인된다. 촬영·재현이 방문 경험의 중심이라는 근거는 없어 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:2c41d505e022f5df042628e7316a41bef1ba87c9397c2449fdc419aa5615c2b3",
+          "quote": {
+            "end": 48,
+            "method": "EXACT",
+            "original": "종주코스 : 만화방초/엄홍길 전시관 - 휴게소 - 거류산 정산 - 거북바위(전망대)",
+            "start": 2,
+            "submitted": "종주코스 : 만화방초/엄홍길 전시관 - 휴게소 - 거류산 정산 - 거북바위(전망대)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3aca9216f7ea0aae8d38a348ba58a9b448e46ff193230aab0dbb757944061cc3"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+          "quote": {
+            "end": 371,
+            "method": "EXACT",
+            "original": "야생화밭 산책로를 따라 벽방산 정상 쪽으로 올라가면 자연 암석원이 나오는 작은 비경이 있으며",
+            "start": 320,
+            "submitted": "야생화밭 산책로를 따라 벽방산 정상 쪽으로 올라가면 자연 암석원이 나오는 작은 비경이 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "57b502b3bf8f2526d9437d6c12234bbb08dd609e0f2f9c53ef12cd3aa0cd496b"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.a",
+      "level": 4,
+      "reason": "종주코스·순환코스 등 다양한 등산로와 산책로를 스스로 선택해 탐색할 수 있고 정상까지 자유로운 탐방이 가능해 여유로운 자기 방식의 탐색을 지원한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+          "quote": {
+            "end": 286,
+            "method": "EXACT",
+            "original": "전체 10만 평 중 2만 평의 야생 녹차밭과, 700여 종의 야생화밭, 산책로, 자연 암석원",
+            "start": 235,
+            "submitted": "전체 10만 평 중 2만 평의 야생 녹차밭과, 700여 종의 야생화밭, 산책로, 자연 암석원",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "57b502b3bf8f2526d9437d6c12234bbb08dd609e0f2f9c53ef12cd3aa0cd496b"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+          "quote": {
+            "end": 535,
+            "method": "EXACT",
+            "original": "자연적이면서도 옛날 마을 뒷동산 같은 그런 느낌을 주는 곳으로 자연 속에 있는 정원이라 생각하면 좋은 곳이다.",
+            "start": 474,
+            "submitted": "자연적이면서도 옛날 마을 뒷동산 같은 그런 느낌을 주는 곳으로 자연 속에 있는 정원이라 생각하면 좋은 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "57b502b3bf8f2526d9437d6c12234bbb08dd609e0f2f9c53ef12cd3aa0cd496b"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 4,
+      "reason": "벽방산 자락의 야생 녹차밭, 야생화밭, 자연 암석원, 산책로 등 자연 환경 단서가 공간의 중심을 이룬다고 확인되어 두드러진 자연 환경으로 판단한다. 다만 실제 고요함·혼잡 수준은 확인되지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:2dfb3889d1160dbbe9ad0dd9cb58eb62d5788b9d3558409e7d9d4f987446d2d4",
+          "quote": {
+            "end": 25,
+            "method": "EXACT",
+            "original": "야생화(들꽃)숲길 / 암석원 / 체험학습관 등",
+            "start": 0,
+            "submitted": "야생화(들꽃)숲길 / 암석원 / 체험학습관 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3a32f4d326a7ff9d68a3d980aaa311c2aa92dd7cd07728920dfdc6a8ed591435"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "체험학습관, 숲길·암석원 탐방, 등산 코스 등 구체적 참여·탐방 활동이 확인된다. 지속적으로 도전하는 활동의 중심이라는 근거는 없어 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:4e9edeb25b89e11fdc643b8bcce88c2dc6db2b033b2500b358cf62d255c6ce57",
+          "quote": {
+            "end": 27,
+            "method": "EXACT",
+            "original": "단체 방문시 사전예약 (010-3870-1041)",
+            "start": 0,
+            "submitted": "단체 방문시 사전예약 (010-3870-1041)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ef10041fbaf7c17071a53705e12a022af630835e5bce7085d15e62d409533928"
+        },
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+          "quote": {
+            "end": 228,
+            "method": "EXACT",
+            "original": "주로 주말을 이용해 아는 사람들에게만 개방했기 때문이다.",
+            "start": 197,
+            "submitted": "주로 주말을 이용해 아는 사람들에게만 개방했기 때문이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "57b502b3bf8f2526d9437d6c12234bbb08dd609e0f2f9c53ef12cd3aa0cd496b"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "단체 방문 예약 제도를 통해 공동 방문·교류의 기회가 확인되나, 교류·자기표현 활동이 풍부하다는 근거는 없고 공개도 제한적이어서 제한된 공동 활동 수준(수준 2)으로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+            "quote": "2만 평의 야생 녹차밭과, 700여 종의 야생화밭, 산책로, 자연 암석원, 체험학습관 등이 들어서 있으며 다양한 사진 명소가 있다"
+          },
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+            "quote": "다른 등산로를 따라 벽방산 정상으로 올라가면 동, 남, 서로 푸른 남해가 내려다보인다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "야생 녹차밭, 700여 종 야생화밭, 자연 암석원, 남해 전망 등 뚜렷한 시각적 성격과 경관이 묘사되어 시각적 표현이 확인된다. 일관된 연출이 장면을 지배한다는 수준까지는 근거가 없어 수준 3이다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "e5f5e9a1964147f4a0c4a7bedc6cdf094ea372fae17dc3adf16aae802156e300",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2c41d505e022f5df042628e7316a41bef1ba87c9397c2449fdc419aa5615c2b3",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5de7f4469d58fd49c70ba1cbe68953e629b4df60ea03b5c1707e69218e62b8be",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129423",
+          "request_sha256": "5f5686b36503684fa3d65a0379364526c4c09fa457a6e2ec0005857e0881fbc2",
+          "response_sha256": "c6df1b3488db5a926d43fdbe3b5c2714cf8eeaab924a89eb246e9a57477b8fe0",
+          "retrieved_at": "2026-09-11T02:04:52.205231Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "46e76ea6ed62d07babb0dcf99dff627aa6dfc2dc6ee9b5f190fb052c7fc36158",
+          "source_uri": null
+        },
+        "record_sha256": "3aca9216f7ea0aae8d38a348ba58a9b448e46ff193230aab0dbb757944061cc3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "* 종주코스 : 만화방초/엄홍길 전시관 - 휴게소 - 거류산 정산 - 거북바위(전망대) * 순환코스 : 만화방초/엄홍길 전시관 - 장의사입구 - 거북바위(전망대) - 거류산 정상 - 휴게소 - 만화방초/엄홍길 전시관"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2dfb3889d1160dbbe9ad0dd9cb58eb62d5788b9d3558409e7d9d4f987446d2d4",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5de7f4469d58fd49c70ba1cbe68953e629b4df60ea03b5c1707e69218e62b8be",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129423",
+          "request_sha256": "5f5686b36503684fa3d65a0379364526c4c09fa457a6e2ec0005857e0881fbc2",
+          "response_sha256": "c6df1b3488db5a926d43fdbe3b5c2714cf8eeaab924a89eb246e9a57477b8fe0",
+          "retrieved_at": "2026-09-11T02:04:52.205231Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ada7725d7fba00ed8df21de7d5744fc6680ef0a240642685e9e36f1a6fc3a9e2",
+          "source_uri": null
+        },
+        "record_sha256": "3a32f4d326a7ff9d68a3d980aaa311c2aa92dd7cd07728920dfdc6a8ed591435",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "야생화(들꽃)숲길 / 암석원 / 체험학습관 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4e9edeb25b89e11fdc643b8bcce88c2dc6db2b033b2500b358cf62d255c6ce57",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5de7f4469d58fd49c70ba1cbe68953e629b4df60ea03b5c1707e69218e62b8be",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129423",
+          "request_sha256": "5f5686b36503684fa3d65a0379364526c4c09fa457a6e2ec0005857e0881fbc2",
+          "response_sha256": "c6df1b3488db5a926d43fdbe3b5c2714cf8eeaab924a89eb246e9a57477b8fe0",
+          "retrieved_at": "2026-09-11T02:04:52.205231Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a4206b4887d4aea85dd688ee615360178ced571edde0efeaf955c3b794a21d18",
+          "source_uri": null
+        },
+        "record_sha256": "ef10041fbaf7c17071a53705e12a022af630835e5bce7085d15e62d409533928",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "단체 방문시 사전예약 (010-3870-1041)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5d6b15ab22ee0ef5e0c72c5b03736cdaa170d2355309a2585420731daaf1b3c0",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5de7f4469d58fd49c70ba1cbe68953e629b4df60ea03b5c1707e69218e62b8be",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129423",
+          "request_sha256": "5f5686b36503684fa3d65a0379364526c4c09fa457a6e2ec0005857e0881fbc2",
+          "response_sha256": "c6df1b3488db5a926d43fdbe3b5c2714cf8eeaab924a89eb246e9a57477b8fe0",
+          "retrieved_at": "2026-09-11T02:04:52.205231Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a33bb44761bff1cb50f209cdd5bb1efdb985a273e67747941915922c7d80bb77",
+          "source_uri": null
+        },
+        "record_sha256": "350a1db9a9513434bfc20ca87bdaebdfb375423e07505538774471c1d0549009",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[개인] - 어른 5,000원 - 초·중·고생·어린이 3,000원 [기타] - 국가유공자·장애인 3,000원 - 고성 군민 3,000원 * 소방공무원 / 3세미만 유아 무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:81d56cb40e77c04c551e46df0dd965c7d6affec008784393c744411bb121fdb7",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5de7f4469d58fd49c70ba1cbe68953e629b4df60ea03b5c1707e69218e62b8be",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "129423",
+          "request_sha256": "e4953b30afff284836533c2e1fb29d269e370fc0261170b8b1c84685d62fe092",
+          "response_sha256": "21429522a65f8ce90e68b37d4e3757c12fb457b5c9aa04de4cf27f77e6f15d63",
+          "retrieved_at": "2026-09-10T17:00:00.359016Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-18T00:39:18Z",
+          "source_record_sha256": "ecd7404854292f78f1b1b3469dcd0dbd957389c66e7dcf36306637420ec5772e",
+          "source_uri": null
+        },
+        "record_sha256": "57b502b3bf8f2526d9437d6c12234bbb08dd609e0f2f9c53ef12cd3aa0cd496b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "온갖 꽃들과 향기로운 풀이라는 뜻의 만화방초는 경남 고성군과 통영시의 경계를 이루는 벽방산 자락에 자리잡고 있다. 약 17년 전부터 아카시아 나무를 걷어내고 거기에 차밭을 가꾸고 야생화도 심고 산책로도 내고 해서 지금의 아름다운 ‘만화방초’라는 비밀정원을 이루게 되었다. 만화방초를 비밀정원이라고 하는 이유는 그동안 공식적으로 만화방초를 공개하지 않고 주로 주말을 이용해 아는 사람들에게만 개방했기 때문이다. 만화방초는 전체 10만 평 중 2만 평의 야생 녹차밭과, 700여 종의 야생화밭, 산책로, 자연 암석원, 체험학습관 등이 들어서 있으며 다양한 사진 명소가 있다. 야생화밭 산책로를 따라 벽방산 정상 쪽으로 올라가면 자연 암석원이 나오는 작은 비경이 있으며, 다른 등산로를 따라 벽방산 정상으로 올라가면 동, 남, 서로 푸른 남해가 내려다보인다. 만화방초는 아직도 진행 중인 곳으로 거제 외도와 같은 완전히 인공적인 정원은 아니다. 하지만 자연적이면서도 옛날 마을 뒷동산 같은 그런 느낌을 주는 곳으로 자연 속에 있는 정원이라 생각하면 좋은 곳이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e7343cdeba481c9f3e63634a528d6a030eccd19cf16c19b899ad30008f355a5d",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5de7f4469d58fd49c70ba1cbe68953e629b4df60ea03b5c1707e69218e62b8be",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129423",
+          "request_sha256": "5f5686b36503684fa3d65a0379364526c4c09fa457a6e2ec0005857e0881fbc2",
+          "response_sha256": "c6df1b3488db5a926d43fdbe3b5c2714cf8eeaab924a89eb246e9a57477b8fe0",
+          "retrieved_at": "2026-09-11T02:04:52.205231Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4b6bd7aafee7d0897df15c3f85340ea54fe9c194dc1628dddac6a024eb36138d",
+          "source_uri": null
+        },
+        "record_sha256": "056eb144b8c90c3353ef5b3452c3029a740d8dcc9f70dcd7554a462b4376aef9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "d6a2dc345f86d1b63aaf7c72dea753525364858c3a07167d80d3ed6c852c51ea",
+    "place": {
+      "address": "경상남도 고성군 거류면 은황길 82-64",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:5de7f4469d58fd49c70ba1cbe68953e629b4df60ea03b5c1707e69218e62b8be",
+      "name_ko": "만화방초",
+      "place_id": "public:korea:5de7f4469d58fd49c70ba1cbe68953e629b4df60ea03b5c1707e69218e62b8be",
+      "provider_content_id": "129423",
+      "region_code": "48820",
+      "region_name": "경상남도 고성군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,575 @@
+{
+  "assessed_at": "2026-09-11T16:04:11.565114Z",
+  "assessment_sha256": "d388c177c12355d669fe8a36efa0c0d73925e00d2cbc3f7b48307e2d63b8eb01",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1c4428de7cf66813a41dcc79b06a085cda901a39de03269f1eafb4cf5cfe5b21"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "다수의 등산 코스가 명시되어 방문자가 코스를 자율적으로 선택·탐색할 기회가 확인된다. 다만 코스 목록 나열 수준이라 깊은 자유·여유까지는 단정할 수 없어 수준 2~3 사이에서 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:68177b7ea0c9524e29ea22bfb5d4dfdec220ca45aa7e4bff2b57d5fdf461a915"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "국립공원, 계곡, 폭포, 고산 능선 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡(관광객 많음 언급)·회복 효과는 확정할 수 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1c4428de7cf66813a41dcc79b06a085cda901a39de03269f1eafb4cf5cfe5b21"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "다수의 등산·종주 코스와 유대자연학습장 등 참여·탐방 활동의 구체적 기회가 확인된다. 장시간 산행이라는 지속적 신체 활동의 근거가 있으나 몰입 여부는 단정할 수 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "덕유산이라는 산 자체의 자연유산성은 언급되지만 이 장소(남덕유분소)에서 확인된 실제 원형·유산 접촉 경험의 근거가 불충분하다. 산행 코스 나열만으로 원형·유산 탐구 경험을 확정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "산 이름 유래 등 간략한 서사가 있으나 남덕유분소 방문 경험에서 그 장소의 구체적 역사·사건·인물 맥락을 탐구할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "탐방로 명칭에 사찰·유적지명이 보이나 원형·유산에 연결된 해설·전시·학습 제공에 대한 직접 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'많은 관광객이 찾는 명소'라는 표현이 있으나 이는 방문객 수 언급일 뿐 공유되는 상징·의미의 내용에 대한 근거가 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "계곡과 산세의 아름다움 서술이 있으나 이 장소 방문 경험의 시각적 표현·연출을 평가할 만한 직접 근거로 보기 어렵고 자연 경관 묘사 수준에 그친다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:1c4428de7cf66813a41dcc79b06a085cda901a39de03269f1eafb4cf5cfe5b21",
+          "quote": {
+            "end": 56,
+            "method": "EXACT",
+            "original": "남덕유산코스(영각탐방지원센터~남덕유산) - 향적봉 2코스(구천동탐방지원센터~인월담~백련사~향적봉)",
+            "start": 2,
+            "submitted": "남덕유산코스(영각탐방지원센터~남덕유산) - 향적봉 2코스(구천동탐방지원센터~인월담~백련사~향적봉)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "97c825de1b1321ac737de32aaf618eee19fca149f954e8a487d57fa6b52ee022"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "다수의 등산 코스가 명시되어 방문자가 코스를 자율적으로 선택·탐색할 기회가 확인된다. 다만 코스 목록 나열 수준이라 깊은 자유·여유까지는 단정할 수 없어 수준 2~3 사이에서 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:68177b7ea0c9524e29ea22bfb5d4dfdec220ca45aa7e4bff2b57d5fdf461a915",
+          "quote": {
+            "end": 460,
+            "method": "EXACT",
+            "original": "거창 지역으로는 월성계곡이 자리하고 있으며, 월성계곡 또한 아름답고, 계곡이 깊고 맑기로 알려진 곳으로 많은 관광객이 찾는 명소이다.",
+            "start": 386,
+            "submitted": "거창 지역으로는 월성계곡이 자리하고 있으며, 월성계곡 또한 아름답고, 계곡이 깊고 맑기로 알려진 곳으로 많은 관광객이 찾는 명소이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ff92c1cb82c4a4e45884831ec2fe63fa1620454a7d6a58073ef685dfc5cc8cd7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "국립공원, 계곡, 폭포, 고산 능선 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡(관광객 많음 언급)·회복 효과는 확정할 수 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:1c4428de7cf66813a41dcc79b06a085cda901a39de03269f1eafb4cf5cfe5b21",
+          "quote": {
+            "end": 265,
+            "method": "EXACT",
+            "original": "종주코스(삼공탐방지원센터~백련사~향적봉~중봉~동엽령~무룡산~삿갓재~남덕유산~영각탐방지원센터)",
+            "start": 214,
+            "submitted": "종주코스(삼공탐방지원센터~백련사~향적봉~중봉~동엽령~무룡산~삿갓재~남덕유산~영각탐방지원센터)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "97c825de1b1321ac737de32aaf618eee19fca149f954e8a487d57fa6b52ee022"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "다수의 등산·종주 코스와 유대자연학습장 등 참여·탐방 활동의 구체적 기회가 확인된다. 장시간 산행이라는 지속적 신체 활동의 근거가 있으나 몰입 여부는 단정할 수 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "b2dda411be6b422c8dcca5aeac7ace1cfc820d9387d2474f658fa13ab707ece6",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "79407151821a00c120155cdf08ae55795577d956a64c8b941c1032b523a689ce",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1c4428de7cf66813a41dcc79b06a085cda901a39de03269f1eafb4cf5cfe5b21",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:20eec2deafdd65e362404a364785a1903e371bf89d61eb6b84be7c0c8dcf6484",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126012",
+          "request_sha256": "b015730a9909462cd3fc06595e2e3fa548dba214585b8195b8be580d937b170d",
+          "response_sha256": "751faa29794a89f17aaca1eddbc08b122741a3c62b2abc21baa0ba1248ab1b45",
+          "retrieved_at": "2026-09-11T02:02:08.498396Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a7b7e80299cc1708844f2d70ff3fb3344c7d2c0847a9eb83d43f3047ebfb32b4",
+          "source_uri": null
+        },
+        "record_sha256": "97c825de1b1321ac737de32aaf618eee19fca149f954e8a487d57fa6b52ee022",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "- 남덕유산코스(영각탐방지원센터~남덕유산) - 향적봉 2코스(구천동탐방지원센터~인월담~백련사~향적봉) - 향적봉 1코스(설천봉~향적봉) - 삿갓재코스(황점마을~삿갓재) - 서창코스(서창공원지킴터~삼거리~안국사) - 월성재코스(월성~월성재) - 오수자굴코스(백련사~오수자굴~중봉) - 동엽령코스(안성탐방지원센터~칠연폭포삼거리~동엽령) - 횡경재코스(남덕유분소-횡경재- 송계삼거리) - 종주코스(삼공탐방지원센터~백련사~향적봉~중봉~동엽령~무룡산~삿갓재~남덕유산~영각탐방지원센터) - 치목코스(치목~송대폭포~안국사) - 신풍령코스(신풍령~횡경재) - 구천동 어사길 코스(유대자연학습장(구천동자연관찰로) ~ 안심대)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1e1528590cc340f908268fba3e8ebff6ced6548230b6ee47a6447127f759fc07",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:20eec2deafdd65e362404a364785a1903e371bf89d61eb6b84be7c0c8dcf6484",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126012",
+          "request_sha256": "b015730a9909462cd3fc06595e2e3fa548dba214585b8195b8be580d937b170d",
+          "response_sha256": "751faa29794a89f17aaca1eddbc08b122741a3c62b2abc21baa0ba1248ab1b45",
+          "retrieved_at": "2026-09-11T02:02:08.498396Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5370555b7b64e0ffa1dcaa22b0831369a84e6e95f85894f10812cc61f88f6f14",
+          "source_uri": null
+        },
+        "record_sha256": "ee7c715fc16fe31b4d29575fa6cb75d7f71e42f3f4388d746bbc5ec1d44ebaeb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:51646fa0e1b116b1608ca0e0e953bb1e1ede233c85cd07ab5f12957e697f3fc9",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:20eec2deafdd65e362404a364785a1903e371bf89d61eb6b84be7c0c8dcf6484",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126012",
+          "request_sha256": "b015730a9909462cd3fc06595e2e3fa548dba214585b8195b8be580d937b170d",
+          "response_sha256": "751faa29794a89f17aaca1eddbc08b122741a3c62b2abc21baa0ba1248ab1b45",
+          "retrieved_at": "2026-09-11T02:02:08.498396Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d417215a47c074f3d2b615db1d8ecf1689e1eab631a24c4109b78fa4df1bee80",
+          "source_uri": null
+        },
+        "record_sha256": "51f2c014508203b6fad6c24fdde24023bfb0c240fc2428c6b6763c94214bc28e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "※ 홈페이지 참조"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:68177b7ea0c9524e29ea22bfb5d4dfdec220ca45aa7e4bff2b57d5fdf461a915",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:20eec2deafdd65e362404a364785a1903e371bf89d61eb6b84be7c0c8dcf6484",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126012",
+          "request_sha256": "4eac049417b9b6039fe99d9af181d5b42123ac5ea44cbc78a0ae405d618d4fe8",
+          "response_sha256": "e9f36394d8de3783a11bf4260468a6287b7302a04cd2cfbb34ac2912c1b892f1",
+          "retrieved_at": "2026-09-10T16:41:41.045668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-07-18T05:52:36Z",
+          "source_record_sha256": "e523d370b383d47adf628879c2280202289f1dda23edf8817ddd585024d46e4c",
+          "source_uri": null
+        },
+        "record_sha256": "ff92c1cb82c4a4e45884831ec2fe63fa1620454a7d6a58073ef685dfc5cc8cd7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "백두대간의 중심부에 위치한 덕유산은 1975년 10번째 국립공원으로 지정되었고, 행정구역 상으로 전북 무주군과 장수군, 경남 거창군과 함양군 등 영호남을 아우르는 4개 군에 걸쳐 있으며, 총 229.43㎢의 면적이 공원구역으로 지정되었다. 덕유산국립공원은 동쪽의 가야산, 서쪽의 내장산, 남쪽의 지리산, 북쪽의 계룡산과 속리산 등으로 둘러싸여 있고, 덕유산은 남한에서 네 번째로 높은 산(향적봉 1,614m)으로 생태계의 보전가치가 높으며, 북쪽으로 흘러가는 금강과 동쪽으로 흐르는 낙동강의 수원지이기도 하다. 덕유산 구천동 계곡은 13곳의 대, 10여 개의 못, 20개의 폭포 등 기암절벽과 여울들이 굽이굽이 이어지는 곳으로 예로부터 선인들이 33 경이라고 이름 붙인 아름다운 계곡이다. 거창 지역으로는 월성계곡이 자리하고 있으며, 월성계곡 또한 아름답고, 계곡이 깊고 맑기로 알려진 곳으로 많은 관광객이 찾는 명소이다. 덕유산(1,614m)은 주봉인 향적봉을 중심으로 1,300m 안팎의 장중한 능선이 남서쪽으로 장장 약 30km에 걸쳐 있으며, 향적봉을 중심으로 동쪽에는 지봉, 북쪽에는 칠봉이 자리하고 있는데 덕유산은 덕이 많은 너그러운 모산이라 해서 덕유산이란 이름이 붙었다고 한다. 덕유산국립공원 지역의 지질은 선캄브리아대 변성암류인 편마암을 기반으로 하여 이를 관입한 중생대의 화성암류 및 퇴적암류를 주체로 하고 있다. 덕유산 향적봉에서 남덕유산까지 고산부가 육중하고 부드러운 산세를 갖게 된 것도 이러한 편마암 지질 때문이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:912a0956e0ffc39597e7c8df4b6879e8d75f7eaec6678f927b97489c5a0312c8",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:20eec2deafdd65e362404a364785a1903e371bf89d61eb6b84be7c0c8dcf6484",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126012",
+          "request_sha256": "b015730a9909462cd3fc06595e2e3fa548dba214585b8195b8be580d937b170d",
+          "response_sha256": "751faa29794a89f17aaca1eddbc08b122741a3c62b2abc21baa0ba1248ab1b45",
+          "retrieved_at": "2026-09-11T02:02:08.498396Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2e946823801cc269a3899210c3f947cea9522cf1f94ce5ba3eaddc5617d3d6f5",
+          "source_uri": null
+        },
+        "record_sha256": "7b94461877d2e6f449dcbc002fce6e6f42934e5956a7fe7b0180c522e3a12c68",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "야간산행 불가"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ea85c1c3bf005d2fe993f372aed40722ba2e1a6ddfae60190c339e8855378039",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:20eec2deafdd65e362404a364785a1903e371bf89d61eb6b84be7c0c8dcf6484",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126012",
+          "request_sha256": "b015730a9909462cd3fc06595e2e3fa548dba214585b8195b8be580d937b170d",
+          "response_sha256": "751faa29794a89f17aaca1eddbc08b122741a3c62b2abc21baa0ba1248ab1b45",
+          "retrieved_at": "2026-09-11T02:02:08.498396Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "316050bd165a02762f1c5757e6e50d542341800fad80acd795c6915292944b14",
+          "source_uri": null
+        },
+        "record_sha256": "ba82640acbba9a1e4f16f187afd3c598ec61522a3730eb2696d3e08a625a9226",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "10e6fa98177532a77691952f09d5096851dfc1b2d74aef7b2272ffab7d71a5a6",
+    "place": {
+      "address": "경상남도 거창군 북상면 덕유월성로 1144",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:20eec2deafdd65e362404a364785a1903e371bf89d61eb6b84be7c0c8dcf6484",
+      "name_ko": "덕유산국립공원(남덕유분소)",
+      "place_id": "public:korea:20eec2deafdd65e362404a364785a1903e371bf89d61eb6b84be7c0c8dcf6484",
+      "provider_content_id": "126012",
+      "region_code": "48880",
+      "region_name": "경상남도 거창군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -109,7 +109,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     const initialScores = await cards.locator(".recommendation-fit").allTextContents();
     expect(initialScores).toEqual(results.run.items.map((item: { contribution: { experience: { score: number } } }) => `내 취향과 ${item.contribution.experience.score}% 유사`));
     const first = results.run.items[0], second = results.run.items[1];
-    const axisLabels: Record<string, string> = { H: "역사·전통", E: "감성·이미지", R: "휴식·몰입" };
+    const axisLabels: Record<string, string> = { H: "대상•원형형", E: "의미•이미지형", R: "자기•몰입형" };
     for (const component of first.contribution.experience.components) {
       const axis = cards.first().locator(`[data-supported-axis="${component.key}"]`);
       if (component.fit === null) {

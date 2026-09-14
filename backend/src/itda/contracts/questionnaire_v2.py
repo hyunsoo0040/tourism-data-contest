@@ -1,10 +1,11 @@
 """Canonical v2 choice questionnaire and the reviewed local scoring matrix.
 
-The scenario copy, choice texts, and result-type metadata transcribe the
-authorized upstream UI (see fixtures/upstream-ui/provenance.json), but this
-module is the local backend production authority. Upstream JavaScript is never
-imported or executed: the H/E/R basis-point matrix below is reviewed, local,
-versioned, and frozen by tests.
+The 2026-09-14 axis terminology revision changes only Korean labels/connectives
+and the content hash. Its predecessor is archived for stored-profile compatibility.
+Editable question and choice copy lives in web/src/content/questionnaire.ko.json;
+frontend question wording updates must not change the scoring matrix.
+Upstream JavaScript is never imported or executed: the H/E/R basis-point matrix
+below is reviewed, local, versioned, and frozen by tests.
 """
 
 from __future__ import annotations
@@ -29,26 +30,17 @@ ChoiceId = Annotated[str, Field(strict=True, pattern=r"^q(?:[1-9]|1[0-2])o[1-3]$
 ChoiceValue = Annotated[int, Field(strict=True, ge=1, le=3)]
 
 V2_QUESTIONNAIRE_VERSION: Final[str] = "questionnaire-v2"
-V2_SCORING_VERSION: Final[str] = "choice-bp-v2"
+V2_SCORING_VERSION: Final[str] = "choice-distribution-v3"
 
-AXIS_WEIGHT_H: Final[int] = 2
-AXIS_WEIGHT_E: Final[int] = 2
-AXIS_WEIGHT_R: Final[int] = 2
-AXIS_WEIGHT_TOTAL: Final[int] = AXIS_WEIGHT_H + AXIS_WEIGHT_E + AXIS_WEIGHT_R
-
-# Attainable per-axis accumulated-weight bounds over the canonical twelve
-# questions. Each choice donates AXIS_WEIGHT_TOTAL - 2 = 4 to its primary and
-# 1 to each secondary; the two non-primary axes therefore see a minimum of
-# 1 per question (total 12), while each axis's attainable maximum follows from
-# its per-question best case across the frozen upstream scenario set
-# (H: 48, E: 42, R: 45 — verified by contract test against the matrix).
-# score_axis_v2 normalizes each axis against ITS OWN bounds so 0 bp is
-# attainable and 10_000 bp is attainable on every axis.
+# Signed evidence follows revision-3 PDF annotations. Distribution correction
+# divides each axis's net evidence by its TOTAL positive options (14/11/11),
+# not its attainable maximum: stretching back to 100 would cancel the correction.
+AXIS_WEIGHT_TOTAL: Final[int] = 1
 AXIS_ATTAINABLE_BOUNDS: Final[Mapping[str, tuple[int, int]]] = MappingProxyType(
     {
-        ExperienceAxis.HISTORY_TRADITION.value: (12, 48),
-        ExperienceAxis.EMOTION_IMAGE.value: (12, 42),
-        ExperienceAxis.REST_IMMERSION.value: (12, 45),
+        ExperienceAxis.HISTORY_TRADITION.value: (-1, 12),
+        ExperienceAxis.EMOTION_IMAGE.value: (0, 10),
+        ExperienceAxis.REST_IMMERSION.value: (0, 11),
     }
 )
 
@@ -137,20 +129,23 @@ class QuestionnaireDefinitionV2(StrictContract):
         for question in self.questions:
             for option in question.options:
                 expected_choice_axes[option.choice_id] = option.axis
+        if set(self.scoring_matrix) != set(expected_choice_axes):
+            raise ValueError("scoring matrix must cover exactly the 36 canonical choices")
         for choice_id, axis_weights in self.scoring_matrix.items():
             if tuple(sorted(axis_weights)) != tuple(sorted(ExperienceAxis)):
                 raise ValueError(f"scoring matrix row {choice_id} must cover H, E, and R")
-            if any(type(weight) is not int or weight < 0 for weight in axis_weights.values()):
+            if any(type(weight) is not int for weight in axis_weights.values()):
                 raise ValueError(f"scoring matrix row {choice_id} must use integer weights")
-            if sum(axis_weights.values()) != AXIS_WEIGHT_TOTAL:
-                raise ValueError(f"scoring matrix row {choice_id} must sum to {AXIS_WEIGHT_TOTAL}")
+            expected = _matrix_row(expected_choice_axes[choice_id])
+            if choice_id == "q5o2":
+                expected[ExperienceAxis.HISTORY_TRADITION.value] = -1
+            if dict(axis_weights) != expected:
+                raise ValueError(f"scoring matrix row {choice_id} must match PDF signed evidence")
             primary = max(axis_weights, key=lambda axis: axis_weights[axis])
             if ExperienceAxis(primary) is not expected_choice_axes.get(choice_id):
                 raise ValueError(
                     f"scoring matrix row {choice_id} primary axis must match the choice axis"
                 )
-        if set(self.scoring_matrix) != set(expected_choice_axes):
-            raise ValueError("scoring matrix must cover exactly the 36 canonical choices")
         actual_bounds = {
             axis.value: (
                 sum(
@@ -192,12 +187,7 @@ def calculate_config_hash_v2(payload: Mapping[str, object] | BaseModel) -> str:
 
 
 def _matrix_row(primary: ExperienceAxis) -> dict[str, int]:
-    row = {axis.value: 0 for axis in ExperienceAxis}
-    secondaries = [axis for axis in ExperienceAxis if axis is not primary]
-    row[primary.value] = AXIS_WEIGHT_H + AXIS_WEIGHT_E + AXIS_WEIGHT_R - len(secondaries)
-    row[secondaries[0].value] = 1
-    row[secondaries[1].value] = 1
-    return row
+    return {axis.value: int(axis is primary) for axis in ExperienceAxis}
 
 
 def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
@@ -332,27 +322,33 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
             {
                 "question_id": "q5",
                 "ordinal": 5,
-                "title_ko": "골목에서 길고양이 한 마리가 당신을 빤히 쳐다본다.",
-                "description_ko": "사소한 만남 앞에서 떠오르는 반응을 골라보세요.",
+                "title_ko": "골목을 걷다가, 유난히 눈길을 끄는 건물 한 채를 발견했다.",
+                "description_ko": "눈길을 끈 건물 앞에서, 이 골목을 어떻게 알아가고 싶나요?",
                 "options": (
                     {
                         "choice_id": "q5o1",
                         "value": 1,
-                        "text_ko": "괜히 웃음이 나고 한참 바라본다.",
+                        "text_ko": (
+                            "이 건물이 언제부터 있었고, "
+                            "어떤 이야기를 가지고 있는지 찾아본다."
+                        ),
                         "keywords_ko": ("미소", "장면"),
                         "axis": ExperienceAxis.EMOTION_IMAGE,
                     },
                     {
                         "choice_id": "q5o2",
                         "value": 2,
-                        "text_ko": "잠시 인사만 하고 갈 길을 간다.",
+                        "text_ko": (
+                            "사진으로 남겨두고, 이곳만의 분위기가 담긴 사진이나 "
+                            "여행 후기를 더 검색해 본다."
+                        ),
                         "keywords_ko": ("순간", "흐름"),
                         "axis": ExperienceAxis.REST_IMMERSION,
                     },
                     {
                         "choice_id": "q5o3",
                         "value": 3,
-                        "text_ko": "어디로 가는지 괜히 따라가 본다.",
+                        "text_ko": "특별한 이유는 없지만, 천천히 한동안 골목의 분위기를 느껴본다.",
                         "keywords_ko": ("호기심", "탐색"),
                         "axis": ExperienceAxis.HISTORY_TRADITION,
                     },
@@ -367,14 +363,14 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
                     {
                         "choice_id": "q6o1",
                         "value": 1,
-                        "text_ko": "기다리는 시간도 괜찮다고 생각한다.",
+                        "text_ko": "기다리는 시간도 여행의 일부라고 생각하며 여유롭게 즐긴다.",
                         "keywords_ko": ("기다림", "여유"),
                         "axis": ExperienceAxis.REST_IMMERSION,
                     },
                     {
                         "choice_id": "q6o2",
                         "value": 2,
-                        "text_ko": "왜 사람들이 많이 오는지 궁금해진다.",
+                        "text_ko": "이 식당이 사랑받는 이유가 궁금해진다.",
                         "keywords_ko": ("이유", "호기심"),
                         "axis": ExperienceAxis.HISTORY_TRADITION,
                     },
@@ -403,14 +399,17 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
                     {
                         "choice_id": "q7o2",
                         "value": 2,
-                        "text_ko": "지금 마음이 움직이지 않으면 다음 기회로 미룬다.",
+                        "text_ko": "현지인이 추천할 만큼의 특별한 이유가 뭔지 궁금해진다.",
                         "keywords_ko": ("마음", "흐름"),
                         "axis": ExperienceAxis.REST_IMMERSION,
                     },
                     {
                         "choice_id": "q7o3",
                         "value": 3,
-                        "text_ko": "어떤 곳인지 궁금해져 가본다.",
+                        "text_ko": (
+                            "현지인이 추천해준 곳이라니, "
+                            "왠지 그 지역을 제대로 느낄 수 있을 것 같다."
+                        ),
                         "keywords_ko": ("궁금함", "탐색"),
                         "axis": ExperienceAxis.HISTORY_TRADITION,
                     },
@@ -425,21 +424,21 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
                     {
                         "choice_id": "q8o1",
                         "value": 1,
-                        "text_ko": "짐을 정리하며 마지막 시간을 보낸다.",
+                        "text_ko": "짐을 정리하며 마지막 시간을 온전히 즐겨본다.",
                         "keywords_ko": ("마무리", "정리"),
                         "axis": ExperienceAxis.REST_IMMERSION,
                     },
                     {
                         "choice_id": "q8o2",
                         "value": 2,
-                        "text_ko": "체크아웃하기 전에 숙소 구석구석을 한 번 더 둘러본다.",
+                        "text_ko": "체크아웃하기 전에 숙소의 시설과 공간을 한 번 더 살펴본다.",
                         "keywords_ko": ("관찰", "둘러보기"),
                         "axis": ExperienceAxis.HISTORY_TRADITION,
                     },
                     {
                         "choice_id": "q8o3",
                         "value": 3,
-                        "text_ko": "숙소 주변을 한 번 더 둘러본다.",
+                        "text_ko": "숙소 주변을 걸으며 이곳 사람들의 일상을 살펴본다.",
                         "keywords_ko": ("둘러보기", "발견"),
                         "axis": ExperienceAxis.HISTORY_TRADITION,
                     },
@@ -497,7 +496,7 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
                     {
                         "choice_id": "q10o3",
                         "value": 3,
-                        "text_ko": "잠시 멈춰 서서 공연을 즐긴다.",
+                        "text_ko": "공연을 즐기다 보니 이 동네만의 분위기가 느껴진다.",
                         "keywords_ko": ("몰입", "순간"),
                         "axis": ExperienceAxis.REST_IMMERSION,
                     },
@@ -506,9 +505,7 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
             {
                 "question_id": "q11",
                 "ordinal": 11,
-                "title_ko": (
-                    "집으로 돌아가기 전, 여행을 마무리하며 마지막으로 사진첩을 훑어본다."
-                ),
+                "title_ko": ("집으로 돌아가기 전, 여행을 마무리하며 마지막으로 사진첩을 훑어본다."),
                 "description_ko": "사진첩을 넘길 때 가장 먼저 하는 일은 무엇인가요?",
                 "options": (
                     {
@@ -552,7 +549,7 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
                     {
                         "choice_id": "q12o2",
                         "value": 2,
-                        "text_ko": "그날의 장면이 떠올라 괜히 미소가 난다.",
+                        "text_ko": "영수증을 보니 그곳에서 보낸 시간이 다시 생생하게 떠오른다.",
                         "keywords_ko": ("장면", "미소"),
                         "axis": ExperienceAxis.EMOTION_IMAGE,
                     },
@@ -570,18 +567,18 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
         "axis_display": (
             {
                 "axis": ExperienceAxis.HISTORY_TRADITION,
-                "label_ko": "역사·전통",
-                "connective_ko": "역사·전통과",
+                "label_ko": "대상•원형형",
+                "connective_ko": "대상•원형형과",
             },
             {
                 "axis": ExperienceAxis.EMOTION_IMAGE,
-                "label_ko": "감성·이미지",
-                "connective_ko": "감성·이미지와",
+                "label_ko": "의미•이미지형",
+                "connective_ko": "의미•이미지형과",
             },
             {
                 "axis": ExperienceAxis.REST_IMMERSION,
-                "label_ko": "휴식·몰입",
-                "connective_ko": "휴식·몰입과",
+                "label_ko": "자기•몰입형",
+                "connective_ko": "자기•몰입형과",
             },
         ),
         "description_template_ko": (
@@ -652,6 +649,7 @@ def build_reviewed_questionnaire_definition_v2() -> QuestionnaireDefinitionV2:
     scoring_matrix = {
         choice_id: _matrix_row(axis) for choice_id, axis in sorted(choices_by_id.items())
     }
+    scoring_matrix["q5o2"][ExperienceAxis.HISTORY_TRADITION.value] = -1
     payload["scoring_matrix"] = scoring_matrix
     payload["config_hash"] = calculate_config_hash_v2(payload)
     return QuestionnaireDefinitionV2.model_validate(payload)
@@ -662,16 +660,12 @@ def derive_v2_scoring_config(
 ) -> Mapping[str, object]:
     """Project immutable v2 scoring inputs from the canonical definition."""
 
-    axis_labels = MappingProxyType(
-        {copy.axis: copy.label_ko for copy in definition.axis_display}
-    )
+    axis_labels = MappingProxyType({copy.axis: copy.label_ko for copy in definition.axis_display})
     axis_connectives = MappingProxyType(
         {copy.axis: copy.connective_ko for copy in definition.axis_display}
     )
     choices_by_id = {
-        option.choice_id: option
-        for question in definition.questions
-        for option in question.options
+        option.choice_id: option for question in definition.questions for option in question.options
     }
     return MappingProxyType(
         {
@@ -681,6 +675,14 @@ def derive_v2_scoring_config(
             "question_order": definition.question_order,
             "choices_by_id": MappingProxyType(choices_by_id),
             "scoring_matrix": definition.scoring_matrix,
+            "positive_choice_counts": MappingProxyType(
+                {
+                    axis.value: sum(
+                        row[axis.value] > 0 for row in definition.scoring_matrix.values()
+                    )
+                    for axis in ExperienceAxis
+                }
+            ),
             "axis_tie_break": definition.axis_tie_break,
             "axis_labels_ko": axis_labels,
             "axis_connectives_ko": axis_connectives,

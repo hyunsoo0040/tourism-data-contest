@@ -20,14 +20,20 @@ from itda.pipeline.mvp_place_scoring import (
     MAX_INPUT_TOKENS,
     build_scoring_requests,
     estimate_input_tokens,
+    justification_quotes_match,
+    project_local_conditions,
 )
 
 SHA = "0" * 64
 EVIDENCE_ID = f"evidence:{'1' * 64}"
 PLACE_ID = f"public:gyeongju:{'2' * 64}"
 REPO_ROOT = Path(__file__).resolve().parents[3]
-PUBLIC_CATALOG_PATH = REPO_ROOT / "artifacts/public/catalog/public-place-catalog-v1.json"
-PUBLIC_EVIDENCE_PATH = REPO_ROOT / "artifacts/public/catalog/public-evidence-inventory-v1.json"
+PUBLIC_CATALOG_PATH = (
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-place-catalog-v1.json"
+)
+PUBLIC_EVIDENCE_PATH = (
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-evidence-inventory-v1.json"
+)
 
 
 def request_payload() -> dict[str, object]:
@@ -68,6 +74,22 @@ def response_payload() -> dict[str, object]:
     }
 
 
+def test_model_intensity_scores_do_not_create_facility_conditions() -> None:
+    response = ProviderScoringResponse.model_validate(response_payload())
+    assert set(project_local_conditions(response).model_dump().values()) == {None}
+
+
+def test_explicit_quotes_must_exist_in_cited_source_but_prose_is_unreviewed() -> None:
+    response = ProviderScoringResponse.model_validate(response_payload())
+    assert justification_quotes_match(response, {EVIDENCE_ID: "합성 공개 근거"})
+    row = response.justifications[0].model_copy(
+        update={"justification_ko": "“휠체어 접근 가능”이라고 한다"}
+    )
+    response = response.model_copy(update={"justifications": (row, *response.justifications[1:])})
+    assert not justification_quotes_match(response, {EVIDENCE_ID: "합성 공개 근거"})
+    assert justification_quotes_match(response, {EVIDENCE_ID: "휠체어 접근 가능"})
+
+
 def test_real_public_100_builds_byte_stable_bounded_request_corpus() -> None:
     catalog = PublicPlaceCatalog.model_validate_json(PUBLIC_CATALOG_PATH.read_bytes())
     evidence = PublicEvidenceInventory.model_validate_json(PUBLIC_EVIDENCE_PATH.read_bytes())
@@ -83,8 +105,7 @@ def test_real_public_100_builds_byte_stable_bounded_request_corpus() -> None:
     assert all(tuple(row.rubric) == SCORING_DIMENSIONS for row in first)
     assert all(dict(row.rubric) == PUBLIC_SCORING_RUBRIC for row in first)
     assert all(
-        estimate_input_tokens(canonical_json_bytes(row.model_dump(mode="json")))
-        <= MAX_INPUT_TOKENS
+        estimate_input_tokens(canonical_json_bytes(row.model_dump(mode="json"))) <= MAX_INPUT_TOKENS
         for row in first
     )
     encoded = canonical_json_bytes([row.model_dump(mode="json") for row in first]).lower()

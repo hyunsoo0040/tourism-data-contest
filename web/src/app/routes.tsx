@@ -12,6 +12,7 @@
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 
 import { AppShell } from "./AppShell";
+import { TripPage, ResultsPage as AuthenticityResults, DetailPage as AuthenticityDetail, ComparePage as AuthenticityCompare, SavedPage as AuthenticitySaved } from "../features/authenticity/Journey";
 import { useLocation, useNavigate, type RouteObject } from "./react-router-dom";
 import {
   EvaluatorApiError,
@@ -291,6 +292,11 @@ function ProfileRouteSwitch() {
 }
 
 export const appRoutes: RouteObject[] = [
+  { path: "/trip", element: <TripPage /> },
+  { path: "/trip/saved", element: <AuthenticitySaved /> },
+  { path: "/trip/results/:runId", element: <AuthenticityResults /> },
+  { path: "/trip/results/:runId/places/:placeId", element: <AuthenticityDetail /> },
+  { path: "/trip/results/:runId/compare", element: <AuthenticityCompare /> },
   {
     path: "/internal/evaluator/assignments/:assignmentId",
     element: (

@@ -1,0 +1,992 @@
+{
+  "assessed_at": "2026-09-11T17:45:37.656183Z",
+  "assessment_sha256": "db46a9631ed7e2de15804d4b7218ccb650bf6ed2940d6c4164ab087bea7bfc5f",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 54
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "유교 교육기관·성현 제사라는 장소 의미가 서술로 연결되나, 사회적으로 공유되는 이미지의 구체적 표현·재현 근거는 제한적이어서 2수준.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:bb6d4dacc5809ec9a6dd12f3ddde5a1be182f0b2835a9a2adfc1ed6826e09944",
+            "appearance:c06aba6de4cd80ec3c27e0ac06f28a32893018bc48e7a35b326693ba5b9c09b2",
+            "appearance:eb6365fa2f12c08b87f0de3a37a8d99c9218e9eeed1fe4e36872a420bd757785"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "전학후묘 배치, 독특한 누각·외삼문 구조, 가을 은행나무 등 제한적이지만 확인된 시각적 성격의 표현이 있다. 장면을 지배하는 일관된 연출 근거는 없다.",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:10e16635114966ee617bac342aded5094f35eee561173e721ea8ccb9bc4faf2e",
+            "appearance:3b91ac34d9c9eab52cb9f55d40eebb4efca512404a6ed23d23bd4374ec800b23",
+            "appearance:fe97195ccd8a7235028279bc3734722bee1fc392215f9304babfa43b2f48f11f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안된 앵커는 4수준 '자연·시각적 저자극 환경이 두드러짐'이나, 담 옆 은행나무 한 그루는 자연 단서의 존재만 보여줄 뿐 환경이 두드러지거나 장면을 지배한다는 근거가 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제안된 앵커는 4수준 '원형·유산의 공간이나 실물을 구체적으로 탐구'이나, 인용은 대성전·명륜당 등 건물이 남아 있음(관람 수준)만 확인한다. 방문자가 실물·공간을 구체적으로 탐구한다는 근거는 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "제안된 앵커는 4수준 '여러 맥락을 대상과 연결해 설명'이나, 인용은 갑오개혁 이후 교육 기능 변화 등 단일 연혁 서술이다. 여러 맥락을 대상과 연결한 설명의 근거가 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "제안된 앵커는 4수준 '실제 지역 주체의 지속 활동을 경험'이나, 인용은 석전·분향 의례와 전교·장의 운영 존재만 확인한다. 방문자가 지역 주체의 지속 활동을 경험(참여)한다는 근거는 없으며 관람 수준에 머문다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "제안된 앵커는 4수준 '여러 자료·해설로 역사 맥락을 탐구'이나, 인용은 개관 서술상 건물별 기능 설명일 뿐 현장에서 여러 자료·해설로 탐구할 수 있음을 뒷받침하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+          "quote": {
+            "end": 93,
+            "method": "EXACT",
+            "original": "공자와 여러 성현에게 제사를 지내고 지방민의 교육과 교화를 위해 설립된 유교 교육기관이다.",
+            "start": 43,
+            "submitted": "공자와 여러 성현에게 제사를 지내고 지방민의 교육과 교화를 위해 설립된 유교 교육기관이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "유교 교육기관·성현 제사라는 장소 의미가 서술로 연결되나, 사회적으로 공유되는 이미지의 구체적 표현·재현 근거는 제한적이어서 2수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지를 확산하는 매체 표현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+          "quote": {
+            "end": 575,
+            "method": "EXACT",
+            "original": "향교 담 옆에 위치한 수령 약 300년의 은행나무는 가을이면 노랗게 물들어 방문객들에게 볼거리를 제공한다.",
+            "start": 516,
+            "submitted": "향교 담 옆에 위치한 수령 약 300년의 은행나무는 가을이면 노랗게 물들어 방문객들에게 볼거리를 제공한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "전학후묘 배치, 독특한 누각·외삼문 구조, 가을 은행나무 등 제한적이지만 확인된 시각적 성격의 표현이 있다. 장면을 지배하는 일관된 연출 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현하는 활동에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "제안된 앵커는 3수준 '자율적으로 선택·탐색할 기회'이나, '볼거리를 제공한다'는 문구는 자율적 선택·탐색 기회를 직접 뒷받침하지 않는다. 관람 가능성만으로 자율 탐색을 추정한 것이다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "제안된 앵커는 4수준 '자연·시각적 저자극 환경이 두드러짐'이나, 담 옆 은행나무 한 그루는 자연 단서의 존재만 보여줄 뿐 환경이 두드러지거나 장면을 지배한다는 근거가 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "만들기·신체 활동·탐방 등 참여·몰입 활동 기회에 대한 근거가 없다. 의례는 관람 대상이며 방문객 참여 활동으로 확인되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "방문객 간 교류·공동 활동·자기표현 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "9b32be995233105b856dfb71ec6877d11248302d8015e5949f977cf546d47eab",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+              "quote": {
+                "end": 154,
+                "method": "EXACT",
+                "original": "여러 차례의 소실과 재건을 거쳐 현재는 대성전, 명륜당, 동무, 서무, 동재, 서재 등의 건물이 남아 있다.",
+                "start": 94,
+                "submitted": "여러 차례의 소실과 재건을 거쳐 현재는 대성전, 명륜당, 동무, 서무, 동재, 서재 등의 건물이 남아 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16"
+            }
+          ],
+          "flags": [],
+          "key": "H.a",
+          "level": 3,
+          "reason": "조선 때 창건된 향교로 대성전, 명륜당 등 실제 건물이 남아 있어 확인된 유산을 관람할 수 있다. 건물 실물의 구체적 탐구 근거는 제한적이므로 3수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "제안된 앵커는 4수준 '원형·유산의 공간이나 실물을 구체적으로 탐구'이나, 인용은 대성전·명륜당 등 건물이 남아 있음(관람 수준)만 확인한다. 방문자가 실물·공간을 구체적으로 탐구한다는 근거는 없다."
+        }
+      },
+      "reason": "제안된 앵커는 4수준 '원형·유산의 공간이나 실물을 구체적으로 탐구'이나, 인용은 대성전·명륜당 등 건물이 남아 있음(관람 수준)만 확인한다. 방문자가 실물·공간을 구체적으로 탐구한다는 근거는 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+              "quote": {
+                "end": 460,
+                "method": "EXACT",
+                "original": "조선시대에는 국가로부터 토지, 전적, 노비 등을 지급받아 교관이 교생을 교육했으나 갑오개혁 이후 교육 기능은 사라지고",
+                "start": 395,
+                "submitted": "조선시대에는 국가로부터 토지, 전적, 노비 등을 지급받아 교관이 교생을 교육했으나 갑오개혁 이후 교육 기능은 사라지고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.b",
+          "level": 3,
+          "reason": "창건 연혁, 건물별 기능, 갑오개혁 이후 기능 변화 등 이 장소의 구체적 역사 맥락이 제시된다. 다면적 연결 탐구 수준까지는 근거가 없어 3수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "제안된 앵커는 4수준 '여러 맥락을 대상과 연결해 설명'이나, 인용은 갑오개혁 이후 교육 기능 변화 등 단일 연혁 서술이다. 여러 맥락을 대상과 연결한 설명의 근거가 부족하다."
+        }
+      },
+      "reason": "제안된 앵커는 4수준 '여러 맥락을 대상과 연결해 설명'이나, 인용은 갑오개혁 이후 교육 기능 변화 등 단일 연혁 서술이다. 여러 맥락을 대상과 연결한 설명의 근거가 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "LIVING_TRADITION",
+              "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+              "quote": {
+                "end": 514,
+                "method": "EXACT",
+                "original": "현재는 석전과 분향 등의 의례만 진행되고 있다. 향교 운영은 전교 1명과 장의 수 명이 담당하며",
+                "start": 461,
+                "submitted": "현재는 석전과 분향 등의 의례만 진행되고 있다. 향교 운영은 전교 1명과 장의 수 명이 담당하며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.c",
+          "level": 3,
+          "reason": "현재도 전교와 장이 운영하며 석전·분향 의례가 실제로 지속되는 것으로 확인되어 확인된 전승을 관람하는 수준. 지역 주체 활동에의 직접 참여 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.c",
+          "reason": "제안된 앵커는 4수준 '실제 지역 주체의 지속 활동을 경험'이나, 인용은 석전·분향 의례와 전교·장의 운영 존재만 확인한다. 방문자가 지역 주체의 지속 활동을 경험(참여)한다는 근거는 없으며 관람 수준에 머문다."
+        }
+      },
+      "reason": "제안된 앵커는 4수준 '실제 지역 주체의 지속 활동을 경험'이나, 인용은 석전·분향 의례와 전교·장의 운영 존재만 확인한다. 방문자가 지역 주체의 지속 활동을 경험(참여)한다는 근거는 없으며 관람 수준에 머문다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+              "quote": {
+                "end": 266,
+                "method": "EXACT",
+                "original": "명륜당은 학생들이 수업을 듣거나 시험을 보던 강당으로 사용되었으며, 동무와 서무는 제사에 사용하는 물품을 보관하는 건물이다.",
+                "start": 197,
+                "submitted": "명륜당은 학생들이 수업을 듣거나 시험을 보던 강당으로 사용되었으며, 동무와 서무는 제사에 사용하는 물품을 보관하는 건물이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.d",
+          "level": 3,
+          "reason": "건물별 기능, 전학후묘 배치 형식, 의례 등 유산에 연결된 해설 정보가 제공되어 설명·전시적 탐구가 가능하다. 깊은 해설 체계 근거는 없어 3수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.d",
+          "reason": "제안된 앵커는 4수준 '여러 자료·해설로 역사 맥락을 탐구'이나, 인용은 개관 서술상 건물별 기능 설명일 뿐 현장에서 여러 자료·해설로 탐구할 수 있음을 뒷받침하지 않는다."
+        }
+      },
+      "reason": "제안된 앵커는 4수준 '여러 자료·해설로 역사 맥락을 탐구'이나, 인용은 개관 서술상 건물별 기능 설명일 뿐 현장에서 여러 자료·해설로 탐구할 수 있음을 뒷받침하지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+              "quote": {
+                "end": 575,
+                "method": "EXACT",
+                "original": "방문객들에게 볼거리를 제공한다.",
+                "start": 558,
+                "submitted": "방문객들에게 볼거리를 제공한다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16"
+            }
+          ],
+          "flags": [],
+          "key": "R.a",
+          "level": 2,
+          "reason": "방문객이 은행나무 등을 보며 둘러볼 여지가 있으나 자율 탐색·여유의 지원 요소에 대한 구체적 근거는 제한적이어서 2수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.a",
+          "reason": "제안된 앵커는 3수준 '자율적으로 선택·탐색할 기회'이나, '볼거리를 제공한다'는 문구는 자율적 선택·탐색 기회를 직접 뒷받침하지 않는다. 관람 가능성만으로 자율 탐색을 추정한 것이다."
+        }
+      },
+      "reason": "제안된 앵커는 3수준 '자율적으로 선택·탐색할 기회'이나, '볼거리를 제공한다'는 문구는 자율적 선택·탐색 기회를 직접 뒷받침하지 않는다. 관람 가능성만으로 자율 탐색을 추정한 것이다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+              "quote": {
+                "end": 557,
+                "method": "EXACT",
+                "original": "향교 담 옆에 위치한 수령 약 300년의 은행나무는 가을이면 노랗게 물들어",
+                "start": 516,
+                "submitted": "향교 담 옆에 위치한 수령 약 300년의 은행나무는 가을이면 노랗게 물들어",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 3,
+          "reason": "수령 300년 은행나무라는 자연 환경 단서가 확인된다. 고요함·회복 환경이 장면을 지배한다는 근거는 없어 3수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "제안된 앵커는 4수준 '자연·시각적 저자극 환경이 두드러짐'이나, 담 옆 은행나무 한 그루는 자연 단서의 존재만 보여줄 뿐 환경이 두드러지거나 장면을 지배한다는 근거가 없다."
+        }
+      },
+      "reason": "제안된 앵커는 4수준 '자연·시각적 저자극 환경이 두드러짐'이나, 담 옆 은행나무 한 그루는 자연 단서의 존재만 보여줄 뿐 환경이 두드러지거나 장면을 지배한다는 근거가 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "0d2cc2cd6010bf4a09a2b245f0d860a657c750645b97b24dc48893bfb895c3d0",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "배경 상단의 나무와 하늘이 일부 보이나 자연 경관보다 건축물이 중심임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:10e16635114966ee617bac342aded5094f35eee561173e721ea8ccb9bc4faf2e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8b03aaf72d7b4afcc3315b05297563c315e5c8bca3cd83a5e5b7e68ce11d90d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093901_1",
+          "request_sha256": "2e2cec911f716427683ad76a9d3fc39897828f9abe8373c10b6597f96997c316",
+          "response_sha256": "1da0b0f5f482fd9716e366f8ee333795e50b94d4f70522ff5078d6bc8bb002bf",
+          "retrieved_at": "2026-09-10T08:24:56.130228Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "22f9b02403309c4b05f7aafdfcfea702a94cfef18deaa05d10a3a557ee07748b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/01/4093901_image2_1.jpg"
+        },
+        "record_sha256": "0fc9cc70070e9f3094b5a3019c6b4b1591fea07cdb13dc2be7990c6ccfd8ae18",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "좌우의 큰 나무, 잔디 언덕과 흐린 하늘이 배경으로 보이나 건축물에 비해 환경 단서는 보통 수준.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3b91ac34d9c9eab52cb9f55d40eebb4efca512404a6ed23d23bd4374ec800b23",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "19b394a4a833c55f1a5d09b1767013c97005f948bc95da40616fd8240069b7e4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093898_5",
+          "request_sha256": "2e2cec911f716427683ad76a9d3fc39897828f9abe8373c10b6597f96997c316",
+          "response_sha256": "1da0b0f5f482fd9716e366f8ee333795e50b94d4f70522ff5078d6bc8bb002bf",
+          "retrieved_at": "2026-09-10T08:24:56.130228Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b0a4d52f59c43950e28d98694a14a9cf93b0115eec92747c400357164cf2706",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/98/4093898_image2_1.jpg"
+        },
+        "record_sha256": "0e9e27f42d50cb5b99b237ab2905c392b89730510750e239e1469256d6112d14",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와지붕, 처마, 단청, 목조 기둥과 한자 현판 등 전통 한옥 외관이 장면 전체를 지배함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4f3efc9c5dca09728c2e0960bfe3945a23353b3524e6cc821994adc9cf27e8a1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8b03aaf72d7b4afcc3315b05297563c315e5c8bca3cd83a5e5b7e68ce11d90d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093901_1",
+          "request_sha256": "2e2cec911f716427683ad76a9d3fc39897828f9abe8373c10b6597f96997c316",
+          "response_sha256": "1da0b0f5f482fd9716e366f8ee333795e50b94d4f70522ff5078d6bc8bb002bf",
+          "retrieved_at": "2026-09-10T08:24:56.130228Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "22f9b02403309c4b05f7aafdfcfea702a94cfef18deaa05d10a3a557ee07748b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/01/4093901_image2_1.jpg"
+        },
+        "record_sha256": "a11ff058c835f4a5951f05fac7dce7f232bb8deefc29fc7446fe01cf3b8119c0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와 지붕, 격자 창, 단청, 돌계단 등 전통 한옥 외관 요소가 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5ba4c57af6c82f536ea0f38122893e7f018832d759950fbca4d2d98d132eeb85",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "19b394a4a833c55f1a5d09b1767013c97005f948bc95da40616fd8240069b7e4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093898_5",
+          "request_sha256": "2e2cec911f716427683ad76a9d3fc39897828f9abe8373c10b6597f96997c316",
+          "response_sha256": "1da0b0f5f482fd9716e366f8ee333795e50b94d4f70522ff5078d6bc8bb002bf",
+          "retrieved_at": "2026-09-10T08:24:56.130228Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b0a4d52f59c43950e28d98694a14a9cf93b0115eec92747c400357164cf2706",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/98/4093898_image2_1.jpg"
+        },
+        "record_sha256": "2c129152a8f608e99c89d7627d94fd1b37a5e29882a751721fa677cd0775d5a0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "대칭 구도와 청·황·적의 강렬한 단청 색채, 태극 문양 문이 화면을 지배하며 시각적 연출이 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bb6d4dacc5809ec9a6dd12f3ddde5a1be182f0b2835a9a2adfc1ed6826e09944",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "19b394a4a833c55f1a5d09b1767013c97005f948bc95da40616fd8240069b7e4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093898_5",
+          "request_sha256": "2e2cec911f716427683ad76a9d3fc39897828f9abe8373c10b6597f96997c316",
+          "response_sha256": "1da0b0f5f482fd9716e366f8ee333795e50b94d4f70522ff5078d6bc8bb002bf",
+          "retrieved_at": "2026-09-10T08:24:56.130228Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b0a4d52f59c43950e28d98694a14a9cf93b0115eec92747c400357164cf2706",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/98/4093898_image2_1.jpg"
+        },
+        "record_sha256": "b901e66c1319d3dd6a3639720f7f7300977479f16fe9a0d5674c8b7ed584f6e6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "적·황·녹색의 전통 단청이 화려하며 대칭 구도와 계단, 앞화분이 구성을 지배해 시각적 성격이 뚜렷함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c06aba6de4cd80ec3c27e0ac06f28a32893018bc48e7a35b326693ba5b9c09b2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8b03aaf72d7b4afcc3315b05297563c315e5c8bca3cd83a5e5b7e68ce11d90d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093901_1",
+          "request_sha256": "2e2cec911f716427683ad76a9d3fc39897828f9abe8373c10b6597f96997c316",
+          "response_sha256": "1da0b0f5f482fd9716e366f8ee333795e50b94d4f70522ff5078d6bc8bb002bf",
+          "retrieved_at": "2026-09-10T08:24:56.130228Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "22f9b02403309c4b05f7aafdfcfea702a94cfef18deaa05d10a3a557ee07748b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/01/4093901_image2_1.jpg"
+        },
+        "record_sha256": "9c0936ea4c96cff99e4d8a620c968980e849e30cbf76907bd175d541c38a680e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흑색 비석과 회백색 거북 조각·돌난간의 대비가 뚜렷하고, 비석 상부의 정교한 조각이 시선을 집중시키는 구도.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:eb6365fa2f12c08b87f0de3a37a8d99c9218e9eeed1fe4e36872a420bd757785",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "521e57eb1c35a77ce48abee756fe6e2b06c9c4bc17113ca9cb31fd34dedb4c0a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093900_3",
+          "request_sha256": "2e2cec911f716427683ad76a9d3fc39897828f9abe8373c10b6597f96997c316",
+          "response_sha256": "1da0b0f5f482fd9716e366f8ee333795e50b94d4f70522ff5078d6bc8bb002bf",
+          "retrieved_at": "2026-09-10T08:24:56.130228Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "13c56a5d18fc3b99f445103fc6d7f1d90baa379710b9b114e15f6a33140ac15f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/00/4093900_image2_1.jpg"
+        },
+        "record_sha256": "2d037538ca67a1d3803dc4b376055d7a1a4723d99cbd587f693f071bba03854d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "울창한 나무와 잔디 비탈, 숲으로 둘러싸인 열린 배경이 화면 상당 부분을 차지.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fe97195ccd8a7235028279bc3734722bee1fc392215f9304babfa43b2f48f11f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "521e57eb1c35a77ce48abee756fe6e2b06c9c4bc17113ca9cb31fd34dedb4c0a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093900_3",
+          "request_sha256": "2e2cec911f716427683ad76a9d3fc39897828f9abe8373c10b6597f96997c316",
+          "response_sha256": "1da0b0f5f482fd9716e366f8ee333795e50b94d4f70522ff5078d6bc8bb002bf",
+          "retrieved_at": "2026-09-10T08:24:56.130228Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "13c56a5d18fc3b99f445103fc6d7f1d90baa379710b9b114e15f6a33140ac15f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/00/4093900_image2_1.jpg"
+        },
+        "record_sha256": "28cc84e6e1ec354d67b81da7244cb0fbd15255135f8c98d28a235b61285d1952",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:899fd200b46af90974bb8f9332d935032ae893fc93e69cf786f78ce3a303c539",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "129007",
+          "request_sha256": "9128f7b2f5251a8816488c6390e79976c114c320be78c503d7ce5be6eda32f09",
+          "response_sha256": "296c2b979d792c0ca2fc1574fad46371d81a0efecf05eba6ddc48e1d86fdd861",
+          "retrieved_at": "2026-09-10T07:31:39.124721Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-07-30T00:49:14Z",
+          "source_record_sha256": "aec963acee04a9bb2c291fa1eb438bed5cf3b855edf094a3197fe110c2b53495",
+          "source_uri": null
+        },
+        "record_sha256": "45318a63146eb9d444351f5ae9aad869b6e31f81143a95bb84445e69a5e70b16",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "횡성향교는 강원도 횡성군 횡성읍에 위치한 향교로, 조선 태조 때 창건되었다. 공자와 여러 성현에게 제사를 지내고 지방민의 교육과 교화를 위해 설립된 유교 교육기관이다. 여러 차례의 소실과 재건을 거쳐 현재는 대성전, 명륜당, 동무, 서무, 동재, 서재 등의 건물이 남아 있다. 대성전에는 공자를 비롯한 오성 및 우리나라 18현의 위패가 봉안되어 있다. 명륜당은 학생들이 수업을 듣거나 시험을 보던 강당으로 사용되었으며, 동무와 서무는 제사에 사용하는 물품을 보관하는 건물이다. 동재와 서재는 학생들이 숙식하거나 공부하던 기숙사 역할을 했다. 건축 양식은 명륜당이 앞에 있고 대성전이 뒤쪽 언덕에 위치한 전학후묘 형식이다. 누각과 외삼문은 일반적인 형태와 달리 원형에서 다소 변형되어 독특한 구조를 갖는다. 조선시대에는 국가로부터 토지, 전적, 노비 등을 지급받아 교관이 교생을 교육했으나 갑오개혁 이후 교육 기능은 사라지고 현재는 석전과 분향 등의 의례만 진행되고 있다. 향교 운영은 전교 1명과 장의 수 명이 담당하며, 향교 담 옆에 위치한 수령 약 300년의 은행나무는 가을이면 노랗게 물들어 방문객들에게 볼거리를 제공한다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:98a5bfb89e1ab5b16ef6c789e994a389c5ed66faa235fe792004dd0d7a18cc74",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129007",
+          "request_sha256": "23b1d21ac40ce74102e58cbdda991f7d05f348ef847662b752501a632d3db830",
+          "response_sha256": "ec8adaf5742ff9c5ec6422457568d9cae007afd3ca26675eec3b557ac384d446",
+          "retrieved_at": "2026-09-10T08:24:55.403633Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0aff2eb1755071a8adc85f48528b9a8daef6d8e0141c725af76eccf162236e75",
+          "source_uri": null
+        },
+        "record_sha256": "fe0c7fb77e7fb29b4c07bce9d86e3696eb7cabbdd5924fe1044c57f1a92be098",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "db99c2d99c2a9dc149163e6c06924d3c5ceea938ff9dc72b541be8c101786d7b",
+    "place": {
+      "address": "강원특별자치도 횡성군 횡성읍 향교로 12",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+      "name_ko": "횡성향교",
+      "place_id": "public:korea:82a765881baf3ea378e9b13700e1b3d1e561b5a25594e5d49d4c57b1a6093cdd",
+      "provider_content_id": "129007",
+      "region_code": "51730",
+      "region_name": "강원특별자치도 횡성군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

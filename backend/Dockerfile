@@ -18,21 +18,19 @@ RUN --mount=type=cache,target=/root/.cache/uv \
         -exec rm -rf {} +
 
 FROM python:3.13.14-slim-bookworm@sha256:de572b33eae61a53675a87bbd02b5e365df7b6b2b06c9276124e965cec08c452 AS runtime
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends libpcre2-8-0=10.42-1+deb12u1 \
+    && rm -rf /var/lib/apt/lists/*
 RUN groupadd --gid 10001 itda && useradd --uid 10001 --gid 10001 --no-create-home --shell /usr/sbin/nologin itda
 WORKDIR /app
 COPY --from=builder /app/backend/.venv /app/backend/.venv
 COPY backend/alembic.ini /app/backend/alembic.ini
 COPY backend/migrations /app/backend/migrations
 COPY backend/src /app/backend/src
-COPY --chown=10001:10001 artifacts/public/catalog/mvp-scored-releases /app/artifacts/public/catalog/mvp-scored-releases
-COPY --chown=10001:10001 artifacts/public/catalog/public-place-catalog-v1.json /app/artifacts/public/catalog/public-place-catalog-v1.json
-COPY --chown=10001:10001 artifacts/public/catalog/public-evidence-inventory-v1.json /app/artifacts/public/catalog/public-evidence-inventory-v1.json
-COPY --chown=10001:10001 artifacts/public/catalog/public-place-relations-v1.json /app/artifacts/public/catalog/public-place-relations-v1.json
-RUN find /app/artifacts/public/catalog/mvp-scored-releases -type d -exec chmod 0555 {} + \
-    && find /app/artifacts/public/catalog/mvp-scored-releases -type f -exec chmod 0444 {} + \
-    && chmod 0444 /app/artifacts/public/catalog/public-place-catalog-v1.json \
-        /app/artifacts/public/catalog/public-evidence-inventory-v1.json \
-        /app/artifacts/public/catalog/public-place-relations-v1.json
+# PUBLIC snapshot only: no collection caches, private photos or credentials.
+COPY --chown=10001:10001 artifacts/authenticity-v1/20260911/public-release/ /app/artifacts/authenticity/current/
+RUN find /app/artifacts/authenticity/current -type d -exec chmod 0555 {} + \
+    && find /app/artifacts/authenticity/current -type f -exec chmod 0444 {} +
 ENV PATH=/app/backend/.venv/bin:$PATH \
     PYTHONPATH=/app/backend/src \
     PYTHONDONTWRITEBYTECODE=1 \

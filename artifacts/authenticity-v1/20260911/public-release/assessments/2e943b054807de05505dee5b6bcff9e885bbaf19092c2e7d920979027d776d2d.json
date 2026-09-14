@@ -1,0 +1,900 @@
+{
+  "assessed_at": "2026-09-11T16:30:25.375339Z",
+  "assessment_sha256": "2e943b054807de05505dee5b6bcff9e885bbaf19092c2e7d920979027d776d2d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 57
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "보현산에 '별이 가장 잘 보이는 곳'이라는 이미지가 부여되고 별빛·우주라는 상징적 의미가 시설 명칭과 프로그램(보현산별빛축제)에서 일관되게 연결된다. 장소에 부여된 구체적 이미지의 존재는 확인되나 그 경험이 방문의 중심이라고 단정할 근거는 부족해 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:08b18c77a67ab34d1eb6c650dc3fba81cbd4bf0aff0598d934ebef37f6e20aed",
+            "appearance:20918a574ee7098eb0456c3d8017cfd0bcce8851fde345c6ae0e35d46ae7f30e",
+            "appearance:785abbe22907c2a1847e5a391edd93aac79c16ff2a2168e991073fc550092386"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출의 시각적 성격을 묘사하는 근거가 없다. 천체투영관 돔 언급만으로 시각적 표현의 강도를 판단할 수 없다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2ace13fca04128193c69b0c85a84893f36f66e08083cee2ff1a0c8f36532eb44",
+            "appearance:4a5c5d47119643ed22f061494cdf33a649fb741ee9c516d07be7de1e3b7ca304",
+            "appearance:9c11ce14d23b1cc39174d20583116a5c48a22f10596c6a0d418c0a947d1f0799"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 33,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "보현산 정상이라는 산지 환경과 캠핑 공간 조성이 근거로 확인된다. 다만 실제 고요함·저자극·회복 효과는 확인할 수 없어 환경 단서가 존재하는 수준 2로 제한한다.",
+      "value": 46
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "중력 실험, 비행훈련, 도킹 체험, VR 우주비행, 천체 관측 등 구체적 참여 활동이 다수 확인된다. 다만 이것이 방문 경험의 전부이거나 지속적 도전 활동이라고 단정할 근거는 부족해 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "축제와 별자리 강연·전문가 설명 진행 등 공동 참여의 기회가 확인된다. 그러나 교류·자기표현이 풍부하거나 방문의 중심이라는 근거는 없어 제한적 공동 활동 수준인 수준 2로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "자료는 천문과학관·전시체험관 등 현대적 천문학습시설을 소개할 뿐, 확인된 문화유산 원형이나 실물 유산과의 접촉 근거가 없다. 인근 천문대의 존재가 곧 방문자의 유산 접촉 경험을 의미하지 않으므로 평가하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관·시설 소개 수준의 설명만 있고 이 장소 자체의 역사적 사건·인물 맥락을 탐구하게 하는 근거가 없다. '우주 도전의 역사' 전시는 일반 과학사로서 장소 고유의 역사가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 없다. 별빛축제는 과학 체험 축제로 묘사되어 전통 전승의 지속을 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "천체 관측·변자리 강연 등 과학 해설은 있으나 원형·유산·전통에 연결된 역사 해설·탐구는 확인되지 않는다. 일반 과학 체험만으로 H.d를 부여하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb",
+          "quote": {
+            "end": 33,
+            "method": "EXACT",
+            "original": "전국에서 별이 가장 잘 보이는 보현산 정상(1,124m)에는",
+            "start": 0,
+            "submitted": "전국에서 별이 가장 잘 보이는 보현산 정상(1,124m)에는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68dac7d410bfc3f37a4a6a3f6ba12e1323e2734493624440a3f577d45ee2d75"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "보현산에 '별이 가장 잘 보이는 곳'이라는 이미지가 부여되고 별빛·우주라는 상징적 의미가 시설 명칭과 프로그램(보현산별빛축제)에서 일관되게 연결된다. 장소에 부여된 구체적 이미지의 존재는 확인되나 그 경험이 방문의 중심이라고 단정할 근거는 부족해 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "축제 개최 사실은 있으나 작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·확산에 대한 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출의 시각적 성격을 묘사하는 근거가 없다. 천체투영관 돔 언급만으로 시각적 표현의 강도를 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "제안 수준(2)과 anchor_ko(수준 3 '대표 장면·상징을 직접 경험')가 불일치한다. 인용된 망원경 직접 관측은 수준 3의 직접 경험을 뒷받침할 수 있으나, 이유문은 수준 2(제한적 관람)를 주장해 판단 수준 자체가 상충한다. 어느 수준을 의도했는지 확정할 수 없어 UNCERTAIN으로 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "관람은 정해진 회차(1일 7회 40명 정원)와 예약제로 진행되고 프로그램이 전문가 안내로 이루어져 자율 탐색의 여지를 확인하거나 제한된다고 직접 명시한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb",
+          "quote": {
+            "end": 49,
+            "method": "EXACT",
+            "original": "보현산 정상(1,124m)에는 우리나라 천문 연구의 산실로",
+            "start": 17,
+            "submitted": "보현산 정상(1,124m)에는 우리나라 천문 연구의 산실로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68dac7d410bfc3f37a4a6a3f6ba12e1323e2734493624440a3f577d45ee2d75"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb",
+          "quote": {
+            "end": 158,
+            "method": "EXACT",
+            "original": "천문과학 학습시설 및 체험 전시, 캠핑 공간 등을 조성하여",
+            "start": 126,
+            "submitted": "천문과학 학습시설 및 체험 전시, 캠핑 공간 등을 조성하여",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68dac7d410bfc3f37a4a6a3f6ba12e1323e2734493624440a3f577d45ee2d75"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "보현산 정상이라는 산지 환경과 캠핑 공간 조성이 근거로 확인된다. 다만 실제 고요함·저자극·회복 효과는 확인할 수 없어 환경 단서가 존재하는 수준 2로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb",
+          "quote": {
+            "end": 463,
+            "method": "EXACT",
+            "original": "우주 도전의 역사와 중력 실험, 우주 공간 비행훈련, 우주선 도킹 체험, VR을 이용한 우주비행 등으로 실험과 체험이 진행되며",
+            "start": 393,
+            "submitted": "우주 도전의 역사와 중력 실험, 우주 공간 비행훈련, 우주선 도킹 체험, VR을 이용한 우주비행 등으로 실험과 체험이 진행되며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68dac7d410bfc3f37a4a6a3f6ba12e1323e2734493624440a3f577d45ee2d75"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "중력 실험, 비행훈련, 도킹 체험, VR 우주비행, 천체 관측 등 구체적 참여 활동이 다수 확인된다. 다만 이것이 방문 경험의 전부이거나 지속적 도전 활동이라고 단정할 근거는 부족해 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb",
+          "quote": {
+            "end": 585,
+            "method": "EXACT",
+            "original": "순수 천문우주 과학 체험 축제인 ‘보현산별빛축제’를 개최하고 있다.",
+            "start": 548,
+            "submitted": "순수 천문우주 과학 체험 축제인 ‘보현산별빛축제’를 개최하고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68dac7d410bfc3f37a4a6a3f6ba12e1323e2734493624440a3f577d45ee2d75"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "축제와 별자리 강연·전문가 설명 진행 등 공동 참여의 기회가 확인된다. 그러나 교류·자기표현이 풍부하거나 방문의 중심이라는 근거는 없어 제한적 공동 활동 수준인 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "9c2ccd3f878c58767134e9f1ca3aa6df59a99f33ad2b30b88af3c9860749528a",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb",
+              "quote": {
+                "end": 307,
+                "method": "EXACT",
+                "original": "망원경을 이용하여 태양과 우주 별자리를 직접 관측할 수 있는 천체관측실",
+                "start": 268,
+                "submitted": "망원경을 이용하여 태양과 우주 별자리를 직접 관측할 수 있는 천체관측실",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d68dac7d410bfc3f37a4a6a3f6ba12e1323e2734493624440a3f577d45ee2d75"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 2,
+          "reason": "'별을 보는 곳'이라는 장소 이미지를 관측실과 별빛축제에서 직접 경험할 수 있다. 다만 대표 장면의 재현·촬영 참여가 방문 경험의 중심이라는 근거는 없어 제한적 관람·경험 수준인 수준 2로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "제안 수준(2)과 anchor_ko(수준 3 '대표 장면·상징을 직접 경험')가 불일치한다. 인용된 망원경 직접 관측은 수준 3의 직접 경험을 뒷받침할 수 있으나, 이유문은 수준 2(제한적 관람)를 주장해 판단 수준 자체가 상충한다. 어느 수준을 의도했는지 확정할 수 없어 UNCERTAIN으로 남긴다."
+        }
+      },
+      "reason": "제안 수준(2)과 anchor_ko(수준 3 '대표 장면·상징을 직접 경험')가 불일치한다. 인용된 망원경 직접 관측은 수준 3의 직접 경험을 뒷받침할 수 있으나, 이유문은 수준 2(제한적 관람)를 주장해 판단 수준 자체가 상충한다. 어느 수준을 의도했는지 확정할 수 없어 UNCERTAIN으로 남긴다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "fd3d4102b0130d6e7d7dc708b70476d2a66b97c6e2ae2f7f66cdbed63d50b9bf",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "돔 전체를 채운 심원한 청색 야경 투사가 장면을 지배하며, 별빛과 도시 조명의 대비가 극적으로 연출된 시각적 성격이 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:08b18c77a67ab34d1eb6c650dc3fba81cbd4bf0aff0598d934ebef37f6e20aed",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "fa55b911665100fc33a82f3fd0b07b377e2324e849eaa3ce0ab4deb708c395c2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4060200_3",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f73d179550e11e148dc5fa596735b6b873589f5095257b98165491bcda3cca89",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/00/4060200_image2_1.jpg"
+        },
+        "record_sha256": "85e8d635d9fbe1276565cf00ac0d02352cb2850a8338378c7550d61bf4c48900",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 금속 돔과 캐릭터 조형물로 전통적 외관·재료의 특성이 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1012846bb6e26bde929839e6acf6aba7b852c8eb91c4df31b67a290ae8595ace",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0ea06690950d2beff2b38326cd3987506543ad9421b0069c6ce3359f073016fe",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4060194_9",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "19eb55dca25aa87395f5115ad31daed2eeba0809f2fa15805de2af0d56be9df7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/94/4060194_image2_1.jpg"
+        },
+        "record_sha256": "312848da338ee5eecd139eb9a54baab738816090c8405e69ebde423f6b15e359",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "푸른 하늘을 배경으로 은빛 돔 위에 앉은 캐릭터 조형물과 노란 별이 강한 대비를 이루며 장면을 지배하는 연출적 구도.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:20918a574ee7098eb0456c3d8017cfd0bcce8851fde345c6ae0e35d46ae7f30e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0ea06690950d2beff2b38326cd3987506543ad9421b0069c6ce3359f073016fe",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4060194_9",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "19eb55dca25aa87395f5115ad31daed2eeba0809f2fa15805de2af0d56be9df7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/94/4060194_image2_1.jpg"
+        },
+        "record_sha256": "d7cf45c59a938f5b54a23015d3826a9b8c00f69dd2c2233713db989676ffbd1c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "야경 속 도시와 어두운 하늘 이미지가 보이지만 실제 자연 환경 단서는 없고 투사된 배경에 불과함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2ace13fca04128193c69b0c85a84893f36f66e08083cee2ff1a0c8f36532eb44",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "fa55b911665100fc33a82f3fd0b07b377e2324e849eaa3ce0ab4deb708c395c2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4060200_3",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f73d179550e11e148dc5fa596735b6b873589f5095257b98165491bcda3cca89",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/00/4060200_image2_1.jpg"
+        },
+        "record_sha256": "b04d20511994ee37286759ef066a3e21ef96e72f90ea8dc746c3f9d25e8cd70f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "맑고 트인 하늘만 보이며 녹지·물 등 자연 경관 단서는 거의 없음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4a5c5d47119643ed22f061494cdf33a649fb741ee9c516d07be7de1e3b7ca304",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0ea06690950d2beff2b38326cd3987506543ad9421b0069c6ce3359f073016fe",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4060194_9",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "19eb55dca25aa87395f5115ad31daed2eeba0809f2fa15805de2af0d56be9df7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/94/4060194_image2_1.jpg"
+        },
+        "record_sha256": "43f10423a7f534715258c00c48dee5653c6e8415b9b28e811274343055402b8e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "주황색 돔 내부와 푸른 별하늘의 강한 색 대비, 열린 개구부를 향한 대칭적 구도가 장면 전체를 지배하며 매우 연출적인 시각적 성격을 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:785abbe22907c2a1847e5a391edd93aac79c16ff2a2168e991073fc550092386",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2b04c4039379f0304aa2e92be7707334892eaaebc1390f164e0680b4297e0d8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3578324_10",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4351e5f5fe4a8501db9b0858f48b15a15546eab99eb26b38e06104d3454c97ce",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/24/3578324_image2_1.jpg"
+        },
+        "record_sha256": "a618218d92b798716277109056bf8ad3d5d277963272a85f31c0e392c02a38f6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "개구부로 보이는 별이 반짝이는 밤하늘이 자연 배경 단서로 뚜렷하나, 건물 내부 시점이라 자연 경관의 비중은 중간 정도임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9c11ce14d23b1cc39174d20583116a5c48a22f10596c6a0d418c0a947d1f0799",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2b04c4039379f0304aa2e92be7707334892eaaebc1390f164e0680b4297e0d8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3578324_10",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4351e5f5fe4a8501db9b0858f48b15a15546eab99eb26b38e06104d3454c97ce",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/24/3578324_image2_1.jpg"
+        },
+        "record_sha256": "4b2e11e2505fd8d3313a34518c6eb90f03461bc01d62636b65a3abe120d98251",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적인 천문대 돔과 망원경 구조물로 전통적 외관·재료·공간 구성의 시각적 특성은 거의 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b557dc1d16f992797da19d42232ca6392c77ffd7e4eb99c861d33c4a8b630476",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c2b04c4039379f0304aa2e92be7707334892eaaebc1390f164e0680b4297e0d8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3578324_10",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4351e5f5fe4a8501db9b0858f48b15a15546eab99eb26b38e06104d3454c97ce",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/24/3578324_image2_1.jpg"
+        },
+        "record_sha256": "654659bb3980e5455d9869448494238cc7156f674699b15bc249c2237fc1a33f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 외관·재료·공간 구성의 시각적 특성이 보이지 않으며, 현대적 투영 시설 내부 공간만 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b875c3538c402ed3e693e1ea77e82b683bac55d81a6c5e5340900bcc17af305a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "fa55b911665100fc33a82f3fd0b07b377e2324e849eaa3ce0ab4deb708c395c2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4060200_3",
+          "request_sha256": "d009be70ddd36942916f3cb65cf95e32817c69c9df3fbc8d373eb8962d265ef9",
+          "response_sha256": "4262ec9de239a681f5d51fce330a830c174d30ffa0701b02d403caeb6be8d51d",
+          "retrieved_at": "2026-09-10T08:21:32.052823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f73d179550e11e148dc5fa596735b6b873589f5095257b98165491bcda3cca89",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/00/4060200_image2_1.jpg"
+        },
+        "record_sha256": "495f3dcee8b815133eee938c6b7ddae509178e138cd87046a4bfad10bcdc92f4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:10c605e6ac582d34b61b1eea7ea380211f3c65f4125180f84177c24b4b143a50",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1838591",
+          "request_sha256": "8077238465d3ef08e692a28100a34da6dd8481d00ca1befe220f0b661c59c324",
+          "response_sha256": "35de8729d56337ebf8181be235072f658224e7deb25224bf8839056301e4969d",
+          "retrieved_at": "2026-09-10T08:21:31.725795Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "aff2a334f89a1dfa74669311ccbdc84cec4d2c584d4b0d10328074bf16e79c28",
+          "source_uri": null
+        },
+        "record_sha256": "4112d32c1e885df6a9e3537b69c066d5bab475ab41e70526a245ffe0be47a37d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "가능"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9c4b7efc177b4ff2c7e9d107d6215891d997cb1bd8e44fba6f50a05f45bcebdb",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1838591",
+          "request_sha256": "bbc7536b6d56e401b92febcde8a5074d980447f8eb4f7ed517faa6dcf3d763a8",
+          "response_sha256": "8f1c4002900741940c40c8873cc59eca3143062f66e4d22e274247e9c9662e39",
+          "retrieved_at": "2026-09-10T08:00:58.358492Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-05-04T13:02:31Z",
+          "source_record_sha256": "b0dd1c3b2edb5d6bc5ebbb6e86bba0826e3727080feee68d5abce2d00efb1716",
+          "source_uri": null
+        },
+        "record_sha256": "d68dac7d410bfc3f37a4a6a3f6ba12e1323e2734493624440a3f577d45ee2d75",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "전국에서 별이 가장 잘 보이는 보현산 정상(1,124m)에는 우리나라 천문 연구의 산실로 동양 최대의 구경을 자랑하는 1.8m 광학망원경 등 첨단 천체관측시설을 보유한 연구시설인 한국천문연구원 보현산 천문대가 위치하고 있다. 천문과학 학습시설 및 체험 전시, 캠핑 공간 등을 조성하여 청소년들에게 우주천문과학에 대한 꿈과 학습 기회를 제공한다. 일반인에게 개방되는 시설로는 천문과학관과 전시체험실이 있다. 천체과학관은 전시장과 계절별 별자리 영상을 상영하는 돔형식의 천체투영관, 망원경을 이용하여 태양과 우주 별자리를 직접 관측할 수 있는 천체관측실, 별자리 강연이 진행되는 시청각실이 있으며 1일 7회 40명 정원으로 진행된다. 홈페이지 통한 예약과 잔여표에 한해 현장 발권이 가능하다. 전시체험관은 우주 도전의 역사와 중력 실험, 우주 공간 비행훈련, 우주선 도킹 체험, VR을 이용한 우주비행 등으로 실험과 체험이 진행되며 두 곳 모두 전문가의 설명으로 진행된다. 2004년부터 영천군에서는 보현산천문과학관 및 국립 보현산 천문대 등 천문, 우주 관련 인프라를 바탕으로 한 순수 천문우주 과학 체험 축제인 ‘보현산별빛축제’를 개최하고 있다. 메타버스 VR 체험존-우주전쟁, 우주 공간-크로마키 스튜디오와 별자리 실감형 콘텐츠 등의 프로그램이 있다."
+      }
+    ],
+    "parent_source_sha256": "490aee81a2c1521a669627b186b31dddf0d1be9acf30b5931bffc22ff0c58058",
+    "place": {
+      "address": "경상북도 영천시 화북면 별빛로 681-32",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+      "name_ko": "영천보현산천문과학관",
+      "place_id": "public:korea:38a1daa186fb358983a659b0814a8c324d844a83067ef7fb808bb6dba0feb361",
+      "provider_content_id": "1838591",
+      "region_code": "47230",
+      "region_name": "경상북도 영천시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

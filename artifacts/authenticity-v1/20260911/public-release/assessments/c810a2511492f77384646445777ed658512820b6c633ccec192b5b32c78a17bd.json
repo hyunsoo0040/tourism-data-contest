@@ -1,0 +1,487 @@
+{
+  "assessed_at": "2026-09-11T17:26:08.298390Z",
+  "assessment_sha256": "c810a2511492f77384646445777ed658512820b6c633ccec192b5b32c78a17bd",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.b",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "벚꽃 명소로서 '꽃놀이'와 '벚꽃 드라이브 코스'라는 이미지가 장소와 연결되어 있다. 다만 상징적 의미의 표현이 단일·제한적이어서 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "벚꽃과 두 물길이 만나는 전망 등 시각적 성격이 언급되나, 일관된 경관 연출이 장면을 지배한다는 근거까지는 없어 수준 2 수준의 제한적 표현으로 본다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(벚꽃 풍경)을 현장에서 관람·감상할 수 있으나, 촬영·재현 참여 등에 대한 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "자전거길·산책길의 구분과 자유로운 코스 선택(장거리·단거리 대안 제시)이 자율적 탐색 기회를 지원한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "자전거 라이딩과 대여소 이용 등 구체적인 신체 활동·탐방 기회가 확인된다. 다만 지속적 도전 활동으로 특화되었다는 근거는 부족해 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "팔복동 천변이 전주천의 일부라는 지리적 사실은 있으나, 확인된 원형·유산(문화유산 실물·공간)을 방문자가 경험할 수 있다는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 하천의 지리적 위치와 이용 안내만 담고 있어 이 장소의 실제 역사·사건·인물 맥락에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 벚꽃 관람은 전통 전승의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 프로그램이나 전시에 대한 언급이 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3",
+          "quote": {
+            "end": 137,
+            "method": "EXACT",
+            "original": "팔복동 천변은 전주천의 아름다운 풍경을 감상할 수 있는 곳으로 봄이면 벚꽃을 감상하기 위한 꽃놀이 관광객의 발걸음이 이어진다.",
+            "start": 67,
+            "submitted": "팔복동 천변은 전주천의 아름다운 풍경을 감상할 수 있는 곳으로 봄이면 벚꽃을 감상하기 위한 꽃놀이 관광객의 발걸음이 이어진다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a656467be5061f4b55191d52c9beedd4244c4d91e59514dc05707d6f14a9274"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "벚꽃 명소로서 '꽃놀이'와 '벚꽃 드라이브 코스'라는 이미지가 장소와 연결되어 있다. 다만 상징적 의미의 표현이 단일·제한적이어서 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "'벚꽃 드라이브 코스로 알려져 있다'는 평가는 있으나 구체적 매체를 통한 이미지의 재현·확산 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3",
+          "quote": {
+            "end": 190,
+            "method": "EXACT",
+            "original": "천변 위 도로는 벚꽃 드라이브 코스로 알려져 있다.",
+            "start": 162,
+            "submitted": "천변 위 도로는 벚꽃 드라이브 코스로 알려져 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a656467be5061f4b55191d52c9beedd4244c4d91e59514dc05707d6f14a9274"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "벚꽃과 두 물길이 만나는 전망 등 시각적 성격이 언급되나, 일관된 경관 연출이 장면을 지배한다는 근거까지는 없어 수준 2 수준의 제한적 표현으로 본다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3",
+          "quote": {
+            "end": 458,
+            "method": "EXACT",
+            "original": "팔복동 추천대교를 시작으로 삼례교까지를 코스로 삼아도 벚꽃을 충분히 감상할 수 있다.",
+            "start": 411,
+            "submitted": "팔복동 추천대교를 시작으로 삼례교까지를 코스로 삼아도 벚꽃을 충분히 감상할 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a656467be5061f4b55191d52c9beedd4244c4d91e59514dc05707d6f14a9274"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "대표 장면(벚꽃 풍경)을 현장에서 관람·감상할 수 있으나, 촬영·재현 참여 등에 대한 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3",
+          "quote": {
+            "end": 161,
+            "method": "EXACT",
+            "original": "천변은 자전거길과 산책길로 구분되어 있으며",
+            "start": 138,
+            "submitted": "천변은 자전거길과 산책길로 구분되어 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a656467be5061f4b55191d52c9beedd4244c4d91e59514dc05707d6f14a9274"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "자전거길·산책길의 구분과 자유로운 코스 선택(장거리·단거리 대안 제시)이 자율적 탐색 기회를 지원한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3",
+          "quote": {
+            "end": 247,
+            "method": "EXACT",
+            "original": "자전거를 타고 주변 경치를 즐기기에도 안성맞춤으로 전주 자전거 나들잇길인 만경강길이 이곳을 지나간다.",
+            "start": 191,
+            "submitted": "자전거를 타고 주변 경치를 즐기기에도 안성맞춤으로 전주 자전거 나들잇길인 만경강길이 이곳을 지나간다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a656467be5061f4b55191d52c9beedd4244c4d91e59514dc05707d6f14a9274"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "자전거 라이딩과 대여소 이용 등 구체적인 신체 활동·탐방 기회가 확인된다. 다만 지속적 도전 활동으로 특화되었다는 근거는 부족해 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 없다. 인근 카페 언급은 관계 형성 활동의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "cbaef6165421e25052a698d8aa0d6c1eaae2f80b560a02e60eb978b6c8e75295",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3",
+              "quote": {
+                "end": 101,
+                "method": "EXACT",
+                "original": "팔복동 천변은 전주천의 아름다운 풍경을 감상할 수 있는 곳으로",
+                "start": 67,
+                "submitted": "팔복동 천변은 전주천의 아름다운 풍경을 감상할 수 있는 곳으로",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0a656467be5061f4b55191d52c9beedd4244c4d91e59514dc05707d6f14a9274"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "천변·하천 풍경과 벚꽃이라는 자연 환경 단서가 확인된다. 다만 실제 고요함이나 혼잡 수준은 확인할 수 없어 수준 3으로 제한한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "9f6fdcfa9526b882f9f53ceb199e4a3afb58c358c499f0b2e587c55afca3c041",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a5d0e8d6f03572b1869f8210b5008f8ef1ef39c780a4aa6054837d6d429821c3",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6f20c0dc87c12a9d151dedc95f7e801e9c486bd4e64f8515bc51d1b8b8ce4f8c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3066436",
+          "request_sha256": "17836aa1d9ae0baf8a05218f610a8f64f7fa6c13bb6eb9975ef6d8b181f290e9",
+          "response_sha256": "e778050d1f4549de828a25bf102436b0a0111d10529aca4e54443e6c9768267a",
+          "retrieved_at": "2026-09-10T07:29:57.410033Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-08-06T04:16:39Z",
+          "source_record_sha256": "4375d775974a66e22747aca6f2efd94733687ab811247f47e1cbf664dd57c727",
+          "source_uri": null
+        },
+        "record_sha256": "0a656467be5061f4b55191d52c9beedd4244c4d91e59514dc05707d6f14a9274",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "팔복동 천변은 전주 덕진구 팔복동에 위치한 천변으로 만경강으로 흘러 들어가는 전라북도의 지방 하천인 전주천의 일부이다. 팔복동 천변은 전주천의 아름다운 풍경을 감상할 수 있는 곳으로 봄이면 벚꽃을 감상하기 위한 꽃놀이 관광객의 발걸음이 이어진다. 천변은 자전거길과 산책길로 구분되어 있으며 천변 위 도로는 벚꽃 드라이브 코스로 알려져 있다. 자전거를 타고 주변 경치를 즐기기에도 안성맞춤으로 전주 자전거 나들잇길인 만경강길이 이곳을 지나간다. 만경강에서 시작해 다가공원과 한벽당, 치명자산 등을 거쳐 이어지는 자전거길은 총길이 18.8㎞로 왕복 110분이 소요되는 장거리 코스이며 천변의 자전거 겸용 도로 위주로 안전하게 다녀올 수 있다. 중간에 자전거 대여소가 있으니 이용해 보는 것도 좋다. 만경강 자전거길이 장거리라 부담스럽다면 팔복동 추천대교를 시작으로 삼례교까지를 코스로 삼아도 벚꽃을 충분히 감상할 수 있다. 인근에 유명 대형 베이커리 카페가 있으며 이곳에서는 전주천 두 물길이 만나는 아름다운 천변의 전망을 감상하기에 좋다."
+      }
+    ],
+    "parent_source_sha256": "d5faeb8af4dcecbb3f12158d6e2ba6118cecb01fd4f21ff071f0e4989483e9f8",
+    "place": {
+      "address": "전북특별자치도 전주시 덕진구 신복천변3길 31 (팔복동1가)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:6f20c0dc87c12a9d151dedc95f7e801e9c486bd4e64f8515bc51d1b8b8ce4f8c",
+      "name_ko": "팔복동 천변",
+      "place_id": "public:korea:6f20c0dc87c12a9d151dedc95f7e801e9c486bd4e64f8515bc51d1b8b8ce4f8c",
+      "provider_content_id": "3066436",
+      "region_code": "52113",
+      "region_name": "전북특별자치도 전주시 덕진구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

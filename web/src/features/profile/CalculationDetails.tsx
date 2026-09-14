@@ -30,11 +30,13 @@ export function CalculationDetails({ profile }: { profile: PreferenceProfile }) 
     <details className="profile-details">
       <summary>프로필 계산 정보</summary>
       {profile.scoring_version === "choice-distribution-v3" ? (
-        <p>역사·전통 14개, 감성·이미지 11개, 휴식·몰입 11개의 선택지 분포를 반영했어요.
-          각 축의 순점수를 해당 축의 선택지 수로 나누어 100점 기준으로 표시합니다.
-          5번의 두 번째 답변은 휴식 +1, 역사 −1로 반영하며, 음수 결과는 0점으로 표시해요.
-          가능한 최고점은 역사 86점, 감성 91점, 휴식 100점입니다.</p>
+        <p>대상•원형형 14개, 의미•이미지형 11개, 자기•몰입형 11개의 선택지 분포를 반영했어요.
+          각 축의 순점수를 해당 축의 선택지 수로 나누어 원점수를 계산합니다.
+          5번의 두 번째 답변은 휴식 +1, 역사 −1로 반영하며, 음수 결과는 0점으로 처리해요.</p>
       ) : null}
+      <p>화면 점수는 세 축의 원점수 비율을 합계 100점인 정수로 환산한 값이에요.
+        원점수가 높은 축은 최소 1점 높게 표시하고, 이 조건 안에서 원래 비율에 가장 가깝게 맞춰요.
+        대표 유형과 추천에는 환산 전 원점수를 사용합니다.</p>
       <dl>
         <div><dt>결과 형식</dt><dd>{profile.schema_version}</dd></div>
         <div><dt>질문</dt><dd>{profile.questionnaire_version}</dd></div>

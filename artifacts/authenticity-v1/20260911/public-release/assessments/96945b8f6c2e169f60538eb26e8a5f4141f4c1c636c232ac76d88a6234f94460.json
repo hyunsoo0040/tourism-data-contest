@@ -1,0 +1,479 @@
+{
+  "assessed_at": "2026-09-11T19:19:08.004552Z",
+  "assessment_sha256": "96945b8f6c2e169f60538eb26e8a5f4141f4c1c636c232ac76d88a6234f94460",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 63
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "테마별 산책로·꽃밭·정원과 분수 광장 등 구별되는 시각적 경관 표현의 근거가 있어 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책·자전거 등 자율적 탐색 기회는 확인되나, 자유로운 탐색이 방문 경험의 중심이라는 근거는 없어 수준 2~3 수준의 제한적 지원으로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "넓은 녹지·식재·폭포·그늘막 평상 등 회복 지원 환경 단서가 확인되나 실제 고요함·혼잡은 확인 불가하여 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "물놀이, 구기 스포츠, 활쏘기 체험 등 구체적 참여 활동이 다수 확인되어 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "가족 단위 이용·구기 스포츠 등 교류 기회가 암시되나 공동 제작·자기표현 활동의 구체적 근거는 부족하여 수준 2.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "공원 소개에 확인된 원형·유산의 실물 접촉 근거가 없다. '문화 공원' 주제만으로 실제 유산 접촉을 추정할 수 없어 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "'김포의 역사와 미래가 담긴 문화 공원'이라는 표현만 있을 뿐 이 장소 자체의 구체적 역사·사건·인물 맥락 제시가 없어 근거 불충분.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 없다. 국궁장 언급이 있으나 전승 지속의 확인 자료가 아니므로 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·역사에 연결된 해설·전시·탐구 제공 근거가 없다. 체험·스포츠 시설 안내만 존재하여 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'도심 속 오아시스'라는 이미지 표현이 있으나 사회적으로 공유되는 상징적 의미의 내용을 확인할 근거는 부족하여 UNKNOWN 수준으로 판단.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 유통·재현의 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a",
+          "quote": {
+            "end": 185,
+            "method": "EXACT",
+            "original": "직선으로 뻗은 중앙 길을 따라 꽃빛자리, 물빛자리, 별빛자리 테마로 산책로와 꽃밭, 정원이 조성되어 있다.",
+            "start": 126,
+            "submitted": "직선으로 뻗은 중앙 길을 따라 꽃빛자리, 물빛자리, 별빛자리 테마로 산책로와 꽃밭, 정원이 조성되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c6a45c223d51e306ac8c226723d119d7ed90b5d6e45e0873e7922ee6b4e15d7"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "테마별 산책로·꽃밭·정원과 분수 광장 등 구별되는 시각적 경관 표현의 근거가 있어 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현한다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a",
+          "quote": {
+            "end": 547,
+            "method": "EXACT",
+            "original": "계양천을 끼고 이어진 자전거길과 공원 곳곳에 조성된 아름다운 꽃밭과 정원에서 산책을 즐기기에 좋아",
+            "start": 493,
+            "submitted": "계양천을 끼고 이어진 자전거길과 공원 곳곳에 조성된 아름다운 꽃밭과 정원에서 산책을 즐기기에 좋아",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c6a45c223d51e306ac8c226723d119d7ed90b5d6e45e0873e7922ee6b4e15d7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "산책·자전거 등 자율적 탐색 기회는 확인되나, 자유로운 탐색이 방문 경험의 중심이라는 근거는 없어 수준 2~3 수준의 제한적 지원으로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a",
+          "quote": {
+            "end": 125,
+            "method": "EXACT",
+            "original": "150,000㎡가 넘는 넓은 규모에 소나무와 조팝나무 등 7만 그루의 나무가 식재되었으며",
+            "start": 76,
+            "submitted": "150,000㎡가 넘는 넓은 규모에 소나무와 조팝나무 등 7만 그루의 나무가 식재되었으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c6a45c223d51e306ac8c226723d119d7ed90b5d6e45e0873e7922ee6b4e15d7"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "넓은 녹지·식재·폭포·그늘막 평상 등 회복 지원 환경 단서가 확인되나 실제 고요함·혼잡은 확인 불가하여 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a",
+          "quote": {
+            "end": 439,
+            "method": "EXACT",
+            "original": "배드민턴, 족구, 농구, 배구, 다목적 풋살장과 활쏘기 체험이 가능한 국궁장이 있으며",
+            "start": 392,
+            "submitted": "배드민턴, 족구, 농구, 배구, 다목적 풋살장과 활쏘기 체험이 가능한 국궁장이 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c6a45c223d51e306ac8c226723d119d7ed90b5d6e45e0873e7922ee6b4e15d7"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "물놀이, 구기 스포츠, 활쏘기 체험 등 구체적 참여 활동이 다수 확인되어 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a",
+          "quote": {
+            "end": 258,
+            "method": "EXACT",
+            "original": "가족단위 방문객의 사랑을 받고 있다.",
+            "start": 238,
+            "submitted": "가족단위 방문객의 사랑을 받고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c6a45c223d51e306ac8c226723d119d7ed90b5d6e45e0873e7922ee6b4e15d7"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "가족 단위 이용·구기 스포츠 등 교류 기회가 암시되나 공동 제작·자기표현 활동의 구체적 근거는 부족하여 수준 2.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "06bd9f86cbc90d153d7a93c8e28227047a4b130d655c84c2840a03511c15bf3a",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "04c919a80a9e8d9a63ff639bc466bf95a564c8af74fa8c601ca5bb4cbb94f74c",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:34774b1b67a88b647d9e5492953be6afd1575cc66a635d333a777ff023d7e32a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:dd450f3053477d64fa09b1874c955df016cd7636e548c42d1f3ec67ec2df8a11",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "753801",
+          "request_sha256": "eeb6303c061af8d3edc9e27d13ba70f5ff4a6c6a4a04aaba0c5e9c7cb8163328",
+          "response_sha256": "ac5f8e1182ab340710f641e224733f99958f98c7cc740b96fe36d3113ce5e7c9",
+          "retrieved_at": "2026-09-10T08:29:05.910720Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d7bec5d251a2aa63b3a1979e4365f8a3c5fecc6f18db3c662d62a42754287800",
+          "source_uri": null
+        },
+        "record_sha256": "31947f87b9531f65ccaac928702c6de4edf2ff4c4168f9f46f6a6dca4e4db228",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a43dba05e6df0acbf167875568a463738aa2ec265632eb5552228e0c6abf4b6a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:dd450f3053477d64fa09b1874c955df016cd7636e548c42d1f3ec67ec2df8a11",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "753801",
+          "request_sha256": "d05a7820743939ae99fe49bfa0ab568cce5d32da2ed4a65a9abafd6d7b75321e",
+          "response_sha256": "1197d04ffc1500b17b3b4031183e8a3bafb56d39d50e921c46783442be9b29cc",
+          "retrieved_at": "2026-09-10T07:59:05.984698Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-04-30T07:45:48Z",
+          "source_record_sha256": "5b06c0a063da2b50ad32726f855093ded189d1253c5bb2970dd16b18f51a0e9a",
+          "source_uri": null
+        },
+        "record_sha256": "5c6a45c223d51e306ac8c226723d119d7ed90b5d6e45e0873e7922ee6b4e15d7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "김포시 걸포동에 위치한 걸포중앙공원은 김포의 역사와 미래가 담긴 문화 공원을 주제로 2006년에 조성된 김포시의 대표적인 휴식공원이다. 150,000㎡가 넘는 넓은 규모에 소나무와 조팝나무 등 7만 그루의 나무가 식재되었으며 직선으로 뻗은 중앙 길을 따라 꽃빛자리, 물빛자리, 별빛자리 테마로 산책로와 꽃밭, 정원이 조성되어 있다. 여름철에는 공원 중앙 물빛분수 광장은 바닥분수 놀이터로, 은하숲 폭포는 물놀이장으로 운영되어 가족단위 방문객의 사랑을 받고 있다. 발목까지 오는 수심에 어린이도 안전하게 물놀이를 즐길 수 있다. 은하숲 샘 부근은 그늘막 설치가 가능한 평상이 마련되어 있으며, 한 가족당 한 개의 평상을 사용할 수 있다. 취사와 야영은 금지되며 당일 낮에만 이용 가능하다. 이 외에도, 배드민턴, 족구, 농구, 배구, 다목적 풋살장과 활쏘기 체험이 가능한 국궁장이 있으며 특히, 축구장은 인조 잔디를 깔아 놓아 사계절 안전하게 축구를 즐길 수 있도록 하였다. 그리고 계양천을 끼고 이어진 자전거길과 공원 곳곳에 조성된 아름다운 꽃밭과 정원에서 산책을 즐기기에 좋아 도심 속 오아시스 같은 곳이다."
+      }
+    ],
+    "parent_source_sha256": "f976c64182ca323521ff772d68dfaaa33e14254c74b9153ed3e1fdbde64097b1",
+    "place": {
+      "address": "경기도 김포시 걸포로 80-46 (걸포동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:dd450f3053477d64fa09b1874c955df016cd7636e548c42d1f3ec67ec2df8a11",
+      "name_ko": "걸포중앙공원",
+      "place_id": "public:korea:dd450f3053477d64fa09b1874c955df016cd7636e548c42d1f3ec67ec2df8a11",
+      "provider_content_id": "753801",
+      "region_code": "41570",
+      "region_name": "경기도 김포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

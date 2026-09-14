@@ -44,9 +44,9 @@ SCORING_DIMENSIONS = (
     "M6",
 )
 PUBLIC_SCORING_RUBRIC = {
-    "H": "역사·전통 축. 0=근거 없음, 25=약함, 50=보통, 75=강함, 100=지배적.",
-    "E": "감성·이미지 축. 0=근거 없음, 25=약함, 50=보통, 75=강함, 100=지배적.",
-    "R": "휴식·몰입 축. 0=근거 없음, 25=약함, 50=보통, 75=강함, 100=지배적.",
+    "H": "대상•원형형 축. 0=근거 없음, 25=약함, 50=보통, 75=강함, 100=지배적.",
+    "E": "의미•이미지형 축. 0=근거 없음, 25=약함, 50=보통, 75=강함, 100=지배적.",
+    "R": "자기•몰입형 축. 0=근거 없음, 25=약함, 50=보통, 75=강함, 100=지배적.",
     "H1": "역사 서사 밀도: 시대·인물·사건·유래·설화의 풍부성. 0~4.",
     "H2": "문화유산·원형 기반성: 유적·전통 건축·보존 흔적이 중심인지. 0~4.",
     "H3": "전통의 지속성: 전통생활·의례·공예·지역문화가 현재와 연결되는지. 0~4.",
@@ -149,10 +149,10 @@ class PublicScoringPlace(StrictContract):
     place_id: PublicPlaceId
     name_ko: Annotated[str, Field(strict=True, min_length=1, max_length=240)]
     category: Annotated[str, Field(strict=True, min_length=1, max_length=120)]
-    administrative_area: Literal["경주시"]
+    administrative_area: Annotated[str, Field(strict=True, min_length=1, max_length=100)]
     address_ko: Annotated[str, Field(strict=True, min_length=1, max_length=500)]
-    latitude: Annotated[float, Field(strict=True, ge=35.0, le=36.5)]
-    longitude: Annotated[float, Field(strict=True, ge=128.0, le=130.5)]
+    latitude: Annotated[float, Field(strict=True, ge=33.0, le=39.0)]
+    longitude: Annotated[float, Field(strict=True, ge=124.0, le=132.0)]
 
 
 class PublicScoringRequest(StrictContract):
@@ -241,13 +241,10 @@ class ProviderWireScoringResponse(StrictContract):
     justifications: ProviderJustificationMap
 
 
-MVP_SCORING_PROMPT_V2 = (
-    MVP_SCORING_PROMPT_INSTRUCTIONS_V2
-    + canonical_json_bytes(ProviderWireScoringResponse.model_json_schema()).decode("utf-8")
-)
-MVP_SCORING_PROMPT_SHA256 = hashlib.sha256(
-    MVP_SCORING_PROMPT_V2.encode("utf-8")
-).hexdigest()
+MVP_SCORING_PROMPT_V2 = MVP_SCORING_PROMPT_INSTRUCTIONS_V2 + canonical_json_bytes(
+    ProviderWireScoringResponse.model_json_schema()
+).decode("utf-8")
+MVP_SCORING_PROMPT_SHA256 = hashlib.sha256(MVP_SCORING_PROMPT_V2.encode("utf-8")).hexdigest()
 
 
 class ProviderScoringResponse(StrictContract):
@@ -284,21 +281,19 @@ class ProviderScoringResponse(StrictContract):
             SCORING_DIMENSIONS
         ):
             raise ValueError("response requires exactly 21 unique dimension justifications")
-        if any(
-            len(row.evidence_ids) != len(set(row.evidence_ids))
-            for row in self.justifications
-        ):
+        if any(len(row.evidence_ids) != len(set(row.evidence_ids)) for row in self.justifications):
             raise ValueError("justification evidence IDs must be unique")
         return self
 
 
 class LocalConditionScores(StrictContract):
-    visit_date_time: Score100
-    companions: Score100
-    transport: Score100
-    walking: Score100
-    indoor_outdoor: Score100
-    crowd: Score100
+    # No new default fields: old sealed results retain their canonical hashes.
+    visit_date_time: Score100 | None
+    companions: Score100 | None
+    transport: Score100 | None
+    walking: Score100 | None
+    indoor_outdoor: Score100 | None
+    crowd: Score100 | None
 
 
 class BoundScoringResult(StrictContract):

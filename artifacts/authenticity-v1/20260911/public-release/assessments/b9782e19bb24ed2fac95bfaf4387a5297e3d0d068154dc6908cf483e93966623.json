@@ -1,0 +1,940 @@
+{
+  "assessed_at": "2026-09-11T19:14:49.437748Z",
+  "assessment_sha256": "b9782e19bb24ed2fac95bfaf4387a5297e3d0d068154dc6908cf483e93966623",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b",
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 60
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소(봇재) 내 보성역사문화관에서 보성의 연혁을 소개한다고 직접 기술되어 있다. 간단한 연혁 소개 수준이므로 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "역사문화관 전시를 통한 역사·문화 안내가 확인된다. 그러나 깊은 해설·탐구의 근거는 없어 짧은 안내 수준인 수준 2로 본다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "지명 유래와 쉼의 의미가 장소에 부여된 이미지로 연결된다. 하나의 이야기 표현 수준이므로 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:9a07fd519c8fd035045adf50cd2bcc0dae43af185651013626d084d2d0885b8e",
+            "appearance:b3fac38048d1a2b5350f7d49c3f5f7f23b7919baba59020623e4673ef6d1128e",
+            "appearance:d222532460cb3e49f6d5b9d0e9fb88e2bf3e81d6a2ff10bb337614aa85ad416f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "3층 전시의 차별화된 연출이 언급되어 시각적 표현의 일부 단서가 있다. 그러나 외관·경관 전체의 시각적 성격에 대한 근거는 제한적이다.",
+      "value": 56
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "체험형 전시 공간으로서 보성의 생태·의미를 현장에서 직접 경험할 수 있다고 확인된다. 재현·촬영 참여의 근거는 없어 수준 3으로 본다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "3개 층에 전시·카페·마켓·체험 등 다양한 공간이 구성되어 방문자가 자율적으로 선택·탐색할 기회가 확인된다. 자신의 방식의 여유로운 탐색이라는 근거까지는 없어 수준 3으로 본다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:6ced36788bf21c362bc1964effb6a69b73e96d09512adc765c6667349b6a9016",
+            "appearance:a126d2222bea67530df18d34ad84dd64f7c3236b35f522d1dae9e0a3c462e7f1",
+            "appearance:e2bc0ddc0b98196fef3cb77a2d5fc3a90639f842b53e4ba3f4552e9e8448203d"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 50,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "카페에서 머무르며 쉴 수 있는 공간 단서가 확인된다. 자연 환경이나 시각적 저자극 환경의 근거는 제한적이므로 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "체험·교육 프로그램과 체험형 전시 등 구체적 참여 활동이 확인된다. 지속적 도전 활동의 근거는 없어 수준 3으로 본다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 보성역사문화관에서 역사를 살펴볼 수 있다고 하나, 확인된 실제 원형·유산(실물 유적·유물)과의 접촉인지는 불명확하다. 전시관 내용의 성격만으로 원형 접촉을 확정할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+          "quote": {
+            "end": 241,
+            "method": "EXACT",
+            "original": "삼국시대부터 오늘날의 보성이 있기까지 보성의 모든 역사를 두루 살펴볼 수 있다",
+            "start": 198,
+            "submitted": "삼국시대부터 오늘날의 보성이 있기까지 보성의 모든 역사를 두루 살펴볼 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 2,
+      "reason": "이 장소(봇재) 내 보성역사문화관에서 보성의 연혁을 소개한다고 직접 기술되어 있다. 간단한 연혁 소개 수준이므로 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "차산업·차문화를 보여준다고 하나, 지역 주체의 실제 전승·생활문화와의 지속적 연결 여부에 대한 근거가 없다. 카페·마켓 운영만으로 현재 전승을 확정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+          "quote": {
+            "end": 197,
+            "method": "EXACT",
+            "original": "보성의 역사와 문화를 한눈에 보여주며",
+            "start": 177,
+            "submitted": "보성의 역사와 문화를 한눈에 보여주며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "역사문화관 전시를 통한 역사·문화 안내가 확인된다. 그러나 깊은 해설·탐구의 근거는 없어 짧은 안내 수준인 수준 2로 본다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+          "quote": {
+            "end": 66,
+            "method": "EXACT",
+            "original": "무거운 봇짐을 내려놓고 잠시 쉬어간다는 의미를 담은 곳이다",
+            "start": 34,
+            "submitted": "무거운 봇짐을 내려놓고 잠시 쉬어간다는 의미를 담은 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "지명 유래와 쉼의 의미가 장소에 부여된 이미지로 연결된다. 하나의 이야기 표현 수준이므로 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+          "quote": {
+            "end": 505,
+            "method": "EXACT",
+            "original": "보성의 생태를 차별화된 전시 연출로 풀어낸 공간으로",
+            "start": 477,
+            "submitted": "보성의 생태를 차별화된 전시 연출로 풀어낸 공간으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "3층 전시의 차별화된 연출이 언급되어 시각적 표현의 일부 단서가 있다. 그러나 외관·경관 전체의 시각적 성격에 대한 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+          "quote": {
+            "end": 518,
+            "method": "EXACT",
+            "original": "이곳은 보성의 생태를 차별화된 전시 연출로 풀어낸 공간으로 체험형 전시 공간이다.",
+            "start": 473,
+            "submitted": "이곳은 보성의 생태를 차별화된 전시 연출로 풀어낸 공간으로 체험형 전시 공간이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "체험형 전시 공간으로서 보성의 생태·의미를 현장에서 직접 경험할 수 있다고 확인된다. 재현·촬영 참여의 근거는 없어 수준 3으로 본다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+          "quote": {
+            "end": 175,
+            "method": "EXACT",
+            "original": "총 3개의 층으로 구성되어 있다. 1층은 보성역사문화관으로",
+            "start": 143,
+            "submitted": "총 3개의 층으로 구성되어 있다. 1층은 보성역사문화관으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "3개 층에 전시·카페·마켓·체험 등 다양한 공간이 구성되어 방문자가 자율적으로 선택·탐색할 기회가 확인된다. 자신의 방식의 여유로운 탐색이라는 근거까지는 없어 수준 3으로 본다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+          "quote": {
+            "end": 428,
+            "method": "EXACT",
+            "original": "최상급 차를 마시며 기획 전시도 하고 있어 잠시 쉬어가며 예술을 느끼기에 좋은 장소다",
+            "start": 381,
+            "submitted": "최상급 차를 마시며 기획 전시도 하고 있어 잠시 쉬어가며 예술을 느끼기에 좋은 장소다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "카페에서 머무르며 쉴 수 있는 공간 단서가 확인된다. 자연 환경이나 시각적 저자극 환경의 근거는 제한적이므로 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+          "quote": {
+            "end": 367,
+            "method": "EXACT",
+            "original": "다양한 체험·교육 프로그램을 경험할 수 있는 봇재홀로 나누어져 있다",
+            "start": 330,
+            "submitted": "다양한 체험·교육 프로그램을 경험할 수 있는 봇재홀로 나누어져 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "체험·교육 프로그램과 체험형 전시 등 구체적 참여 활동이 확인된다. 지속적 도전 활동의 근거는 없어 수준 3으로 본다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 직접적 근거가 없다. 단체 예약 안내만으로 관계 형성 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "de74bd8315c9b7e8c01cabf5159828f46bc7d0098041cc3d7a01adddf1d6e2d8",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "37bd6cf9af30d3ffcdd31f8579a008af3e80e08b448d365ac9d0c7a00f177675",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "식물 일러스트와 소형 화분 등 자연 단서는 장식 수준으로 매우 약하게 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6ced36788bf21c362bc1964effb6a69b73e96d09512adc765c6667349b6a9016",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "135b49d2e43bf36a036cae86f6d45326904671f08c6d0b395137355d1c2ce089",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511579_4",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "89d866b3023c0bfe362358f28684cb388dc0570bbb3c8737f7969d49bb0f69c0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3511579_image2_1.jpg"
+        },
+        "record_sha256": "c8da726748f6f93fe6b3d86f64b371b96edd38abd5d0331223d1e1ebd6be6f29",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "따뜻한 조명과 원목 계열 디스플레이, 대형 녹차 배너가 상업적·세련된 연출로 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9a07fd519c8fd035045adf50cd2bcc0dae43af185651013626d084d2d0885b8e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e93e5ff8b6af3b23da74a9e67ba91d128d0e2bf7d7e816c71cc2b62748e3749f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511578_7",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "813f6f6dcddc950c11324669b3b8a24ccf23fe094bd4977d6261da83f379215a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/78/3511578_image2_1.jpg"
+        },
+        "record_sha256": "213d4a7ad3dd129b45832ceb86a2e8e5087ddfb0147510264c18b131e6cef07f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "실내 매장으로 자연 환경 단서는 벽면 녹차밭 이미지 배너뿐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a126d2222bea67530df18d34ad84dd64f7c3236b35f522d1dae9e0a3c462e7f1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e93e5ff8b6af3b23da74a9e67ba91d128d0e2bf7d7e816c71cc2b62748e3749f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511578_7",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "813f6f6dcddc950c11324669b3b8a24ccf23fe094bd4977d6261da83f379215a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/78/3511578_image2_1.jpg"
+        },
+        "record_sha256": "0472734519c1bf2b796d1a3e3878c2aa3e198fe56b30c8ad52d7c83c37a75a78",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "따뜻한 조명과 청색 조명 트리, 주황·녹색 판넬의 반복 배열 등 연출된 전시 공간의 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b3fac38048d1a2b5350f7d49c3f5f7f23b7919baba59020623e4673ef6d1128e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "135b49d2e43bf36a036cae86f6d45326904671f08c6d0b395137355d1c2ce089",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511579_4",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "89d866b3023c0bfe362358f28684cb388dc0570bbb3c8737f7969d49bb0f69c0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3511579_image2_1.jpg"
+        },
+        "record_sha256": "efcb70d7f1b773267de2bf2511fc119fd3f938492b577739a032c539392cfb27",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "나무 질감 선반·가구가 다소 자연적이나 전반은 현대적 매장 구성",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b46366ce2529c4e53ab80d5b8f195ecdaa47c3ad30ba024de1597f57ac70e853",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e93e5ff8b6af3b23da74a9e67ba91d128d0e2bf7d7e816c71cc2b62748e3749f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511578_7",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "813f6f6dcddc950c11324669b3b8a24ccf23fe094bd4977d6261da83f379215a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/78/3511578_image2_1.jpg"
+        },
+        "record_sha256": "e4e85b37213e103d3308cafe98a1b85c37ccc344f53851428a55082c025458fa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "기와 지붕의 목조 정자가 전통적 외관을 뚜렷하게 보여주며 녹지 속에 자리함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b7f08c7fbc855555fbe8207dcd546b941c1041e72d59968f5bccfb348258f291",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "68bd8801d2677ccabc7eb00d79950116e1efefcf5d4d15bc91e0db3ad43df622",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511581_8",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6f1c4b6815f1212f1a42d62643745ac93142ca72b7a1c0221ec8e14006b34eb9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/81/3511581_image2_1.jpg"
+        },
+        "record_sha256": "26485fa7dfa4ab28ca672b674efa8b265b11ea8192d1a61305900bf4cbdad0c5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "소박한 색채 속에 한옥 정자와 층층 녹지가 어우러진 안정된 구도로, 고즈넉한 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d222532460cb3e49f6d5b9d0e9fb88e2bf3e81d6a2ff10bb337614aa85ad416f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "68bd8801d2677ccabc7eb00d79950116e1efefcf5d4d15bc91e0db3ad43df622",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511581_8",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6f1c4b6815f1212f1a42d62643745ac93142ca72b7a1c0221ec8e14006b34eb9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/81/3511581_image2_1.jpg"
+        },
+        "record_sha256": "bb9f7c84395df0c81b02222028e96d094d834ec7685834bc4ae105af9173c208",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "차밭으로 보이는 덤불, 소나무, 완만한 산사면 등 자연 경관이 화면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e2bc0ddc0b98196fef3cb77a2d5fc3a90639f842b53e4ba3f4552e9e8448203d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "68bd8801d2677ccabc7eb00d79950116e1efefcf5d4d15bc91e0db3ad43df622",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511581_8",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6f1c4b6815f1212f1a42d62643745ac93142ca72b7a1c0221ec8e14006b34eb9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/81/3511581_image2_1.jpg"
+        },
+        "record_sha256": "c4a9200e2645fd4612ddd099232da072b13951ad536e0e532cd684258de9899e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대적 실내 전시 공간으로 전통적 재료나 공간 구성의 시각적 특성은 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f33c7c8fb754d0e33264df4a8a08b743c50b5370c3f7e39baf058be03a2b083a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "135b49d2e43bf36a036cae86f6d45326904671f08c6d0b395137355d1c2ce089",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3511579_4",
+          "request_sha256": "5b794f29cc5960e6652e73e5a966524c30564c8d182792f96eb3c0b969a912ce",
+          "response_sha256": "377e604068ae93e92d9e0815be374afabc6a60677064e50329ea3c60d672ea8e",
+          "retrieved_at": "2026-09-10T08:28:50.771031Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "89d866b3023c0bfe362358f28684cb388dc0570bbb3c8737f7969d49bb0f69c0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3511579_image2_1.jpg"
+        },
+        "record_sha256": "0ae65fedcf418e23d52d9e72f73940bbc75124f824d6df144266c104c85844af",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2e0a9d4960d8fb2e00714d7ac5ad56c56dd15420f5a8e14d883c9167e184204d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2782527",
+          "request_sha256": "0d5488040da50c0b5ad3e9d6f3c01ed8a8743ad34a02788fcb4bb230ebd9419c",
+          "response_sha256": "13c8d55db64142cdc66e22bbe84c30d5e6797c753a0b18d808d919f014d112f8",
+          "retrieved_at": "2026-09-09T16:39:50.172813Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "30a0c17f42000ccb3a2262faa104f7d6f8bb1b26d5ba19415604ce98a3e62c7e",
+          "source_uri": null
+        },
+        "record_sha256": "5fb461e4bbead0e0b2c08070f5f93bb33eb389c45f557c0d1e3ab08a196bd502",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "봇재는 보성읍과 회천면을 넘나드는 고개를 지칭하는 지명으로, 무거운 봇짐을 내려놓고 잠시 쉬어간다는 의미를 담은 곳이다. 보성의 역사와 문화, 예술 그리고 차산업과 차문화를 보여주는 공간으로 구성되어 있다. 관광객들에게 보성의 랜드마크 역할을 하는 이곳은 총 3개의 층으로 구성되어 있다. 1층은 보성역사문화관으로, 보성의 역사와 문화를 한눈에 보여주며 삼국시대부터 오늘날의 보성이 있기까지 보성의 모든 역사를 두루 살펴볼 수 있다. 2층은 3개의 공간으로 구성되어 있는데, 보성에서 생산된 차를 마실 수 있는 카페 그린다향과 보성차를 포함한 보성의 농특산물을 알리면서 판매하는 그린마켓, 다양한 체험·교육 프로그램을 경험할 수 있는 봇재홀로 나누어져 있다. 특히 카페 그린다향은 최상급 차를 마시며 기획 전시도 하고 있어 잠시 쉬어가며 예술을 느끼기에 좋은 장소다. 가장 꼭대기 층인 3층은 비움(보성에코파빌리언)이란 이름을 가진 박물관이다. 이곳은 보성의 생태를 차별화된 전시 연출로 풀어낸 공간으로 체험형 전시 공간이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:45bc68974c28f78cabf5e734ed0526c73388f7f8a1d172da392199b70397d4b5",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2782527",
+          "request_sha256": "c34d9e2a545a20a50106ffee6bb7da979a03ac5bf8cd127e8752fd1c415ab018",
+          "response_sha256": "619ec0598c8978addd3ce05dfadb6f2642de099179c4aef390a5cfc671cb9dc1",
+          "retrieved_at": "2026-09-10T08:28:49.413806Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fe5ff9ed73405d05464213674295b668b5d206fa0dc4dcfc85c32ba416c5b880",
+          "source_uri": null
+        },
+        "record_sha256": "cecccf828208cd58ec900fb9731fbe6b25bc47f23f26b8a0e83f8660b24a01ca",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "단체의 경우 전화 예약 후 관람 가능(061-850-5952)"
+      }
+    ],
+    "parent_source_sha256": "672573c7628d9c293cbe972b4c7287b878764123131b6d5806576b4c75f1eeec",
+    "place": {
+      "address": "전남광주통합특별시 보성군 보성읍 녹차로 750",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+      "name_ko": "봇재",
+      "place_id": "public:korea:d857f63aadd2eb18922e9860bbc28ec5bf1b39b35f8230b24e175fc49b3fe194",
+      "provider_content_id": "2782527",
+      "region_code": "12750",
+      "region_name": "전남광주통합특별시 보성군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,803 @@
+{
+  "assessed_at": "2026-09-11T16:19:18.988800Z",
+  "assessment_sha256": "8e3c09c88558a7d1a5c96a69a7e58fec4056391e8e56b3e6597983215fbef310",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 68
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 55
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "국가정원과 어우러진 '대표 명소'라는 공유된 이미지와 '은하수길로 이어진다'는 명칭 의미가 장소에 연결되어 있다. 구체적 상징이 장소와 연결된 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1d855409e35dd4218f96a87f1d316903d599a45698e554723562c5f8391fd5d8",
+            "appearance:226dff1cb161b84281ce4b642a6564119e9b841ed7d13e95087e07a5dbe31cf1"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 88,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "낮의 강물·대숲 경관과 밤의 시간별 색조명 연출 등 분명한 시각적 성격이 구체적으로 기술되어 있다. 다만 장면 전체를 지배한다고까지 단정할 근거는 부족하다.",
+      "value": 78
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "강화유리 바닥과 야경이라는 대표 장면을 직접 경험하고 사진으로 재현할 수 있다고 명시되어 있다. 촬영 재현이 방문의 중심 경험까지는 아니므로 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "보행자 전용 보도로 자유롭게 걸으며 탐색할 수 있으나 자전거·킥보드 탑승 금지, 유리 바닥 훼손 시 처벌 등 제약이 함께 명시되어 있어 제한적 자유 선택 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2230b19f9e66fc20e35b30ca7fc6aa52313ae00c254821c5214e1bd53d3a4d8e",
+            "appearance:f5e0d2e4299604e8d9d0379b8036f00b5fa4236a7491fc862d8af1d78eb6972a"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 38,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "태화강 국가정원이라는 자연 환경과 강·대숲 경관에 둘러싸인 환경 단서가 확인된다. 다만 실제 고요함이나 혼잡 수준은 확인되지 않아 두드러짐 이상으로 판단하지 않는다.",
+      "value": 66
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "다리 아래 운동공간 이용과 걷기·사진 촬영 등 참여 요소가 있으나 지속적으로 몰입·도전할 활동이라고 보기는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "은하수다리는 2020년 개통된 인도교로, 확인된 실제 원형·문화유산과의 접촉 근거가 제공되지 않았다. 교통·시설로서의 연혁만 있고 유산 접촉을 판단할 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "명칭 유래('은하수길로 이어진다는 의미', 2020년 공명)와 개축 경위가 간단히 소개되지만, 이는 시설 명명 정보일 뿐 그 장소의 실제 역사 맥락 탐구 경험을 지원한다고 보기 어렵다. 수준을 확정할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 대한 근거가 제공되지 않았다. 공모를 통한 명칭 부여가 전승 활동이라 단정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 없다. 경관 감상·사진 촬영 중심의 소개만 있어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d",
+          "quote": {
+            "end": 224,
+            "method": "EXACT",
+            "original": "태화강 국가정원의 대자연과 잘 어우러져 울산 시민은 물론 국가정원을 찾는 관광객들에게 사랑받는 대표 명소이다",
+            "start": 164,
+            "submitted": "태화강 국가정원의 대자연과 잘 어우러져 울산 시민은 물론 국가정원을 찾는 관광객들에게 사랑받는 대표 명소이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18b75b7434c23ea8786296768e88baefdc28f3f3725f1a28de4203f528d895ed"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "국가정원과 어우러진 '대표 명소'라는 공유된 이미지와 '은하수길로 이어진다'는 명칭 의미가 장소에 연결되어 있다. 구체적 상징이 장소와 연결된 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "제시된 인용은 특정 매체(작품·홍보물·SNS 등)의 이미지 재현이 아니라 개요 문안의 홍보성 서술('명소로 손꼽힌다')이다. 매체의 존재 자체가 확인되지 않아 1수준 앵커도 뒷받침되지 않으며, 자료 부재를 낮은 수준으로 대체한 문제가 있다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d",
+          "quote": {
+            "end": 550,
+            "method": "EXACT",
+            "original": "낮에는 햇빛에 반짝이는 태화강의 물결과 대숲을 감상하고, 밤에는 색색의 조명이 자아내는 아름다운 경관을 만끽할 수 있으며",
+            "start": 483,
+            "submitted": "낮에는 햇빛에 반짝이는 태화강의 물결과 대숲을 감상하고, 밤에는 색색의 조명이 자아내는 아름다운 경관을 만끽할 수 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18b75b7434c23ea8786296768e88baefdc28f3f3725f1a28de4203f528d895ed"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "낮의 강물·대숲 경관과 밤의 시간별 색조명 연출 등 분명한 시각적 성격이 구체적으로 기술되어 있다. 다만 장면 전체를 지배한다고까지 단정할 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d",
+          "quote": {
+            "end": 618,
+            "method": "EXACT",
+            "original": "신비로운 느낌은 물론 사진 찍는 재미까지 있어 울산의 명소로 손꼽히고 있다",
+            "start": 577,
+            "submitted": "신비로운 느낌은 물론 사진 찍는 재미까지 있어 울산의 명소로 손꼽히고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18b75b7434c23ea8786296768e88baefdc28f3f3725f1a28de4203f528d895ed"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "강화유리 바닥과 야경이라는 대표 장면을 직접 경험하고 사진으로 재현할 수 있다고 명시되어 있다. 촬영 재현이 방문의 중심 경험까지는 아니므로 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d",
+          "quote": {
+            "end": 427,
+            "method": "EXACT",
+            "original": "은하수다리 전체가 보행자 전용길로 이동 시 자전거, 킥보드 등은 내려서 끌고 갈 순 있지만 탑승 불가한 점을 유의하여야 하고",
+            "start": 358,
+            "submitted": "은하수다리 전체가 보행자 전용길로 이동 시 자전거, 킥보드 등은 내려서 끌고 갈 순 있지만 탑승 불가한 점을 유의하여야 하고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18b75b7434c23ea8786296768e88baefdc28f3f3725f1a28de4203f528d895ed"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "보행자 전용 보도로 자유롭게 걸으며 탐색할 수 있으나 자전거·킥보드 탑승 금지, 유리 바닥 훼손 시 처벌 등 제약이 함께 명시되어 있어 제한적 자유 선택 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d",
+          "quote": {
+            "end": 185,
+            "method": "EXACT",
+            "original": "태화강 국가정원의 대자연과 잘 어우러져",
+            "start": 164,
+            "submitted": "태화강 국가정원의 대자연과 잘 어우러져",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18b75b7434c23ea8786296768e88baefdc28f3f3725f1a28de4203f528d895ed"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "태화강 국가정원이라는 자연 환경과 강·대숲 경관에 둘러싸인 환경 단서가 확인된다. 다만 실제 고요함이나 혼잡 수준은 확인되지 않아 두드러짐 이상으로 판단하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d",
+          "quote": {
+            "end": 356,
+            "method": "EXACT",
+            "original": "은하수다리 아래는 시민들이 이용할 수 있는 운동공간이, 위로는 차도인 국가정원교가 있다",
+            "start": 308,
+            "submitted": "은하수다리 아래는 시민들이 이용할 수 있는 운동공간이, 위로는 차도인 국가정원교가 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18b75b7434c23ea8786296768e88baefdc28f3f3725f1a28de4203f528d895ed"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "다리 아래 운동공간 이용과 걷기·사진 촬영 등 참여 요소가 있으나 지속적으로 몰입·도전할 활동이라고 보기는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다. 관광객 방문 언급만으로 관계 형성 활동을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "53709fe4789b5b16b742b243f22919f3740ca83b82b3ec2b5faf401a0419b5c7",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d",
+              "quote": {
+                "end": 618,
+                "method": "EXACT",
+                "original": "울산의 명소로 손꼽히고 있다",
+                "start": 603,
+                "submitted": "울산의 명소로 손꼽히고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "18b75b7434c23ea8786296768e88baefdc28f3f3725f1a28de4203f528d895ed"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.b",
+          "level": 1,
+          "reason": "'울산의 명소로 손꼽힌다'는 표현으로 장소 이미지가 언급되나, 특정 매체(작품·홍보·SNS)를 통한 재현·유통의 구체적 근거는 없어 낮은 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "E.b",
+          "reason": "제시된 인용은 특정 매체(작품·홍보물·SNS 등)의 이미지 재현이 아니라 개요 문안의 홍보성 서술('명소로 손꼽힌다')이다. 매체의 존재 자체가 확인되지 않아 1수준 앵커도 뒷받침되지 않으며, 자료 부재를 낮은 수준으로 대체한 문제가 있다."
+        }
+      },
+      "reason": "제시된 인용은 특정 매체(작품·홍보물·SNS 등)의 이미지 재현이 아니라 개요 문안의 홍보성 서술('명소로 손꼽힌다')이다. 매체의 존재 자체가 확인되지 않아 1수준 앵커도 뒷받침되지 않으며, 자료 부재를 낮은 수준으로 대체한 문제가 있다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "0a9f58f01cc655befb5c7a1660b427601ffa4d24617305ff0fa8cdbbb2674e28",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "보라색 간접조명과 따뜻한 천장 조명, 대칭 기둥 배열과 유리 바닥이 장면 전체를 지배하는 강한 연출",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1d855409e35dd4218f96a87f1d316903d599a45698e554723562c5f8391fd5d8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "30bf4d8914c8eda8ad581cdd909839680b533458e0f2df7c99dda0c927172ef6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3014974_2",
+          "request_sha256": "4e98c69046df541e370a5b426ac3c8dd07643cdad82e40346ebe5a0047fe43df",
+          "response_sha256": "325eb6f0f0132f619bfd176bf604fcde27f5b43c3863fca05d3388c2538961f7",
+          "retrieved_at": "2026-09-10T08:20:56.506901Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e1245b8ebbd4a03654691ec4b14c2dc03a7eacd61f54b3480ac919dd5740503a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/74/3014974_image2_1.jpg"
+        },
+        "record_sha256": "5bab07dbeade591cb7168e2dfb73c5b37397dcdcd0eee2510ee8e1d23af5fdcf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "배경에 어두운 밤의 나무 잎이 일부 보이나, 콘크리트 구조물과 인공 통로가 장면을 지배하여 자연 단서는 약함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2230b19f9e66fc20e35b30ca7fc6aa52313ae00c254821c5214e1bd53d3a4d8e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a281448de6a090ed5637b7d358743116b5fa3789759bf0fae787d391ac6e7128",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3014973_1",
+          "request_sha256": "4e98c69046df541e370a5b426ac3c8dd07643cdad82e40346ebe5a0047fe43df",
+          "response_sha256": "325eb6f0f0132f619bfd176bf604fcde27f5b43c3863fca05d3388c2538961f7",
+          "retrieved_at": "2026-09-10T08:20:56.506901Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a6145a049153a8517c6ba746c32fd805234b1148c6996c1e417174c10f1c8e05",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/73/3014973_image2_1.jpg"
+        },
+        "record_sha256": "82c25930467a2d7d08efc812c476f02bbad40d842526de8b30f30c1b70dca30d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "야간에 난간 조명과 통로 조명이 따뜻한 노란빛으로 이어져 심원한 구도를 형성하며, 청색 발광 간판이 대비를 이루는 연출이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:226dff1cb161b84281ce4b642a6564119e9b841ed7d13e95087e07a5dbe31cf1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a281448de6a090ed5637b7d358743116b5fa3789759bf0fae787d391ac6e7128",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3014973_1",
+          "request_sha256": "4e98c69046df541e370a5b426ac3c8dd07643cdad82e40346ebe5a0047fe43df",
+          "response_sha256": "325eb6f0f0132f619bfd176bf604fcde27f5b43c3863fca05d3388c2538961f7",
+          "retrieved_at": "2026-09-10T08:20:56.506901Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a6145a049153a8517c6ba746c32fd805234b1148c6996c1e417174c10f1c8e05",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/73/3014973_image2_1.jpg"
+        },
+        "record_sha256": "a9f1717b5b8621dfdea99330c81e4ced153b72c04ed0a2f7f0666f848231fb2e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 콘크리트 기둥과 조명 연출 위주로 전통적 외관·재료의 특성은 거의 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:400da199609a93c8c49d7e511d744ef64dc712112776885a99729f80cbbdfa67",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "30bf4d8914c8eda8ad581cdd909839680b533458e0f2df7c99dda0c927172ef6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3014974_2",
+          "request_sha256": "4e98c69046df541e370a5b426ac3c8dd07643cdad82e40346ebe5a0047fe43df",
+          "response_sha256": "325eb6f0f0132f619bfd176bf604fcde27f5b43c3863fca05d3388c2538961f7",
+          "retrieved_at": "2026-09-10T08:20:56.506901Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e1245b8ebbd4a03654691ec4b14c2dc03a7eacd61f54b3480ac919dd5740503a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/74/3014974_image2_1.jpg"
+        },
+        "record_sha256": "881d111b71d815b53a6f9997ed6ba989c182e30f6d7751a9bdfbcba7629e6d50",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "원콘크리트 기둥과 현대적 금속 난간, 발광 간판 등 현대적 외관이 주를 이루어 전통적 외관 특성은 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:93031ac17ec4830dd08dc001e38d679e5f5ed708db814d2dc816376f31d432a4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a281448de6a090ed5637b7d358743116b5fa3789759bf0fae787d391ac6e7128",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3014973_1",
+          "request_sha256": "4e98c69046df541e370a5b426ac3c8dd07643cdad82e40346ebe5a0047fe43df",
+          "response_sha256": "325eb6f0f0132f619bfd176bf604fcde27f5b43c3863fca05d3388c2538961f7",
+          "retrieved_at": "2026-09-10T08:20:56.506901Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a6145a049153a8517c6ba746c32fd805234b1148c6996c1e417174c10f1c8e05",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/73/3014973_image2_1.jpg"
+        },
+        "record_sha256": "3631b90b26ad5f0264f9640ba43a6fdc794c2c040e583866e21ae059909a1660",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "황혼 하늘, 산 봉우리, 나무 실루엣 등 자연 배경이 좌우로 보이나 회랑에 가려짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f5e0d2e4299604e8d9d0379b8036f00b5fa4236a7491fc862d8af1d78eb6972a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "30bf4d8914c8eda8ad581cdd909839680b533458e0f2df7c99dda0c927172ef6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3014974_2",
+          "request_sha256": "4e98c69046df541e370a5b426ac3c8dd07643cdad82e40346ebe5a0047fe43df",
+          "response_sha256": "325eb6f0f0132f619bfd176bf604fcde27f5b43c3863fca05d3388c2538961f7",
+          "retrieved_at": "2026-09-10T08:20:56.506901Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e1245b8ebbd4a03654691ec4b14c2dc03a7eacd61f54b3480ac919dd5740503a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/74/3014974_image2_1.jpg"
+        },
+        "record_sha256": "5306d11b36eb261f0a88f03dbe8a537feca96ccd94dfea2f13ddc987335ae88e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:254f68b94d1efeabed7a7c4b065c30f346eebc563c1ae5112d45e07821b5b15d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3014975",
+          "request_sha256": "5e635e0305386ecde4caee76e9fd9bf577e3cb936415c9358da62570bae78f97",
+          "response_sha256": "035e797f1ead6df6acca8dbf911fc7ca14ec609721caf856b7f09b6cd4e64e7d",
+          "retrieved_at": "2026-09-10T07:59:07.330192Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-04T05:56:29Z",
+          "source_record_sha256": "c3782305d20a03a0cfe6a9d3d75eef5f6886acbe7e2f172c865fa6d222773547",
+          "source_uri": null
+        },
+        "record_sha256": "18b75b7434c23ea8786296768e88baefdc28f3f3725f1a28de4203f528d895ed",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "태화강을 가로질러 중구와 남구 삼호동을 이어주는 은하수다리는 옥동~농소 1구간 도로를 개설하며 건립된 인도교로, 태화강 국가정원 안내센터 뒤편에 있으며 2020년 6월 개통한 국가정원교 하부에 설치되었고 태화강 국가정원 태화지구와 삼호지구를 잇는 국가정원의 중심부에 위치하고 있다. 이 다리는 태화강 국가정원의 대자연과 잘 어우러져 울산 시민은 물론 국가정원을 찾는 관광객들에게 사랑받는 대표 명소이다. 이예로와 붙어있어 이예교라 불리다 2020년 공모를 통해 지어진 은하수다리 명칭은 은하수길로 이어진다는 의미를 가지고 있다고 한다. 태화강국가정원 은하수다리 아래는 시민들이 이용할 수 있는 운동공간이, 위로는 차도인 국가정원교가 있다. 은하수다리 전체가 보행자 전용길로 이동 시 자전거, 킥보드 등은 내려서 끌고 갈 순 있지만 탑승 불가한 점을 유의하여야 하고 은하수다리 중간쯤 나오는 강화유리 바닥을 훼손할 경우 형사처벌 대상이 된다고 하니 주의해야 한다. 낮에는 햇빛에 반짝이는 태화강의 물결과 대숲을 감상하고, 밤에는 색색의 조명이 자아내는 아름다운 경관을 만끽할 수 있으며 시간별 찬란하게 빛나는 조명 칼라가 걷는 동안 신비로운 느낌은 물론 사진 찍는 재미까지 있어 울산의 명소로 손꼽히고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c9dfb7f88571804e05345ca3794be1629b6b2c708edf03da30ecb9d4eb34d273",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3014975",
+          "request_sha256": "00b782c00d008f9bbd628e3ddfe14dbfa441d23840698d5383672513c9573058",
+          "response_sha256": "155ead7b0dbb0026b3cf19ca44710bf01bf1e905379246e83b7198f66c5f87f6",
+          "retrieved_at": "2026-09-10T08:20:56.170248Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "143a799dbc2dd66eccf2a9395b74b63e4867a8777c4f0e23d5abcb32ded46979",
+          "source_uri": null
+        },
+        "record_sha256": "412b913732a29b9c571243b7672923aeccbab95fef497b8d51dc3a6cbcff7629",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "582c0c63f4321ed641ee1e3f8cc867f28100ed4d84b40aa2b2c2753432699cbd",
+    "place": {
+      "address": "울산광역시 남구 무거동",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+      "name_ko": "은하수 다리",
+      "place_id": "public:korea:2ed3efdcc32b4e769bc0a278fa6b82449fff1d51b12b01585b40b1e4d744962a",
+      "provider_content_id": "3014975",
+      "region_code": "31140",
+      "region_name": "울산광역시 남구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

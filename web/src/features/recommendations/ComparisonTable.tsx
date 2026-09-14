@@ -6,9 +6,9 @@ import { similarityLabel } from "./PreferenceSimilarity";
 type RecommendationItem = RecommendationResultsResponse["run"]["items"][number];
 
 const AXIS_LABELS = {
-  HISTORY_TRADITION: "역사·전통 유사도",
-  EMOTION_IMAGE: "감성·이미지 유사도",
-  REST_IMMERSION: "휴식·몰입 유사도",
+  HISTORY_TRADITION: "대상•원형형 유사도",
+  EMOTION_IMAGE: "의미•이미지형 유사도",
+  REST_IMMERSION: "자기•몰입형 유사도",
 } as const;
 
 const MISSING_REASON_COPY = {

@@ -1,0 +1,443 @@
+{
+  "assessed_at": "2026-09-11T16:43:18.245694Z",
+  "assessment_sha256": "c1a9e7cdf1d28e8aaabdb21b762a197d429f4755508248ba95f026eee4965240",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "무료·관리가 잘 된 공공 야영장, '녹색나눔숲'이라는 명칭 등 장소에 연결된 간단한 이미지가 확인된다. 다만 일관된 상징적 의미의 심화 표현 근거는 부족해 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "잔디 사이트, 소나무 방풍림, 넓은 백사장, 썰물 때 원형으로 드러나는 백사장과 노을 등 구별되는 시각적 성격이 확인된다. 다만 이를 지배하는 일관된 연출이라 단정할 근거는 부족해 수준 3으로 판단한다. repair 제안의 claim이 허용 목록에 없어 VISUAL_EXPRESSION으로 수정했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "안내도를 따라 자율적으로 여행할 수 있고, 무료 야영·산책 등 스스로 선택하는 이용 방식이 제시된다. 자율 탐색이 방문 경험의 중심이라고 보기는 어려워 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "잔디 사이트, 소나무 방풍림, 바다 전망, 잘 조성된 공원 등 자연 환경 단서가 확인된다. 실제 고요함·혼잡·심리적 회복은 확정할 수 없어 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "야영, 물놀이, 모래놀이·모래찜질, 낮과 밤 산책 등 구체적 참여 활동이 제시된다. 지속적 도전·집중 활동으로까지 보기는 어려워 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 야영장과 해수욕장의 시설·환경을 다루며, 이 장소 자체의 확인된 원형·문화유산 접촉에 대한 근거가 없다. 성읍민속마얼 등 인근 유산 소개는 현재 장소의 경험이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "표선해수욕장이나 야영장 자체의 역사·연혁에 대한 설명이 제공되지 않는다. '녹색나눔숲' 명칭 언급만으로 역사 맥락을 평가할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "이 장소와 연결된 실제 지역 주체의 전승·생활문화에 대한 근거가 없다. 근처 성읍민속마을 언급은 인근 관광지 특성이며 현재 장소로 옮길 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 기회에 대한 내용이 없다. 표선 안내도는 여행 동선 안내일 뿐 유산 해설의 근거로 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5",
+          "quote": {
+            "end": 258,
+            "method": "EXACT",
+            "original": "무료로 이용할 수 있어 도민들뿐만 아니라 나 홀로 캠핑족이나 가족 관광객들에게 인기 있는 곳으로, 다른 무료 야영장에 비해 관리가 잘 되고 있다.",
+            "start": 177,
+            "submitted": "무료로 이용할 수 있어 도민들뿐만 아니라 나 홀로 캠핑족이나 가족 관광객들에게 인기 있는 곳으로, 다른 무료 야영장에 비해 관리가 잘 되고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7087e1f927a176683810d48e1612ea84fcdb5769f3dd9d37dcb148e42267295c"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "무료·관리가 잘 된 공공 야영장, '녹색나눔숲'이라는 명칭 등 장소에 연결된 간단한 이미지가 확인된다. 다만 일관된 상징적 의미의 심화 표현 근거는 부족해 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보 매체, SNS 등을 통한 장소 이미지의 재현·확산에 대한 근거가 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5",
+          "quote": {
+            "end": 573,
+            "method": "EXACT",
+            "original": "제주도에서 가장 넓은 백사장을 가지고 있으며 노을이 아름다운 표선해수욕장은 썰물 때면 백사장이 원형으로 드러나는 아름다운 곳으로",
+            "start": 502,
+            "submitted": "제주도에서 가장 넓은 백사장을 가지고 있으며 노을이 아름다운 표선해수욕장은 썰물 때면 백사장이 원형으로 드러나는 아름다운 곳으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7087e1f927a176683810d48e1612ea84fcdb5769f3dd9d37dcb148e42267295c"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "잔디 사이트, 소나무 방풍림, 넓은 백사장, 썰물 때 원형으로 드러나는 백사장과 노을 등 구별되는 시각적 성격이 확인된다. 다만 이를 지배하는 일관된 연출이라 단정할 근거는 부족해 수준 3으로 판단한다. repair 제안의 claim이 허용 목록에 없어 VISUAL_EXPRESSION으로 수정했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현(촬영 포인트 등)할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5",
+          "quote": {
+            "end": 836,
+            "method": "EXACT",
+            "original": "야영장에는 표선 안내도를 볼 수 있는데 안내도를 따라 여행을 즐겨보는 것도 좋다.",
+            "start": 791,
+            "submitted": "야영장에는 표선 안내도를 볼 수 있는데 안내도를 따라 여행을 즐겨보는 것도 좋다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7087e1f927a176683810d48e1612ea84fcdb5769f3dd9d37dcb148e42267295c"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "안내도를 따라 자율적으로 여행할 수 있고, 무료 야영·산책 등 스스로 선택하는 이용 방식이 제시된다. 자율 탐색이 방문 경험의 중심이라고 보기는 어려워 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5",
+          "quote": {
+            "end": 122,
+            "method": "EXACT",
+            "original": "사이트는 모두 잔디로 되어 있으며, 이곳에 조성되어 있는 방풍림 역할을 하는 소나무 숲에서 바다를 보며 야영을 즐길 수 있다.",
+            "start": 52,
+            "submitted": "사이트는 모두 잔디로 되어 있으며, 이곳에 조성되어 있는 방풍림 역할을 하는 소나무 숲에서 바다를 보며 야영을 즐길 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7087e1f927a176683810d48e1612ea84fcdb5769f3dd9d37dcb148e42267295c"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "잔디 사이트, 소나무 방풍림, 바다 전망, 잘 조성된 공원 등 자연 환경 단서가 확인된다. 실제 고요함·혼잡·심리적 회복은 확정할 수 없어 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5",
+          "quote": {
+            "end": 605,
+            "method": "EXACT",
+            "original": "모래가 곱고 부드러워 모래놀이와 모래찜질을 하기에 좋다.",
+            "start": 574,
+            "submitted": "모래가 곱고 부드러워 모래놀이와 모래찜질을 하기에 좋다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7087e1f927a176683810d48e1612ea84fcdb5769f3dd9d37dcb148e42267295c"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "야영, 물놀이, 모래놀이·모래찜질, 낮과 밤 산책 등 구체적 참여 활동이 제시된다. 지속적 도전·집중 활동으로까지 보기는 어려워 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "가족 단위 방문객 언급은 있으나 교류·공동 활동·자기표현의 기회를 직접 뒷받침하는 근거는 없다. 방문객 유형만으로 관계 경험을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "0107b9d3eef3cba5e49000e6dbeba0c4ad87dc0cb46eafdcf6ff2ccdf6c495c7",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5cb8994e6e73980c575cf9b31ec8fb8750ddb7db6f623e05f56a9d0e6e7046a5",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:44b05b322757a11345d912bbb2344522cd8d9a4dc9b325d3cfc24d3e3cdc9909",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3031517",
+          "request_sha256": "5ba570293c5f3c4da8a6a21b01d816f97fddea034b850bcb3e3161c3e2689fb9",
+          "response_sha256": "878ba72ac85f4b9085ffc19939199bc6dd1276f956cc9c7a6249c626cb9bda3f",
+          "retrieved_at": "2026-09-10T07:28:13.923241Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-16T05:44:26Z",
+          "source_record_sha256": "b3fb3b89ab5454e89b1528e325178f35675102543f544ab49c08fb57cd47ec3d",
+          "source_uri": null
+        },
+        "record_sha256": "7087e1f927a176683810d48e1612ea84fcdb5769f3dd9d37dcb148e42267295c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "표선해수욕장 야영장은 물놀이와 레저 명소인 표선해수욕장 입구 왼쪽에 위치하여 접근성도 좋다. 사이트는 모두 잔디로 되어 있으며, 이곳에 조성되어 있는 방풍림 역할을 하는 소나무 숲에서 바다를 보며 야영을 즐길 수 있다. 표선 야영장이라 적혀 있는 이곳은 무료 제주 캠핑장 중 한 곳으로 ‘녹색나눔숲’이라고도 불린다. 무료로 이용할 수 있어 도민들뿐만 아니라 나 홀로 캠핑족이나 가족 관광객들에게 인기 있는 곳으로, 다른 무료 야영장에 비해 관리가 잘 되고 있다. 샤워실은 없지만 한쪽 끝에는 개수대와 작은 음수대도 갖추고 있어서 설거지와 세수도 할 수 있어 하루 정도 가볍게 야영을 즐기기에 안성맞춤이다. 또한 무료 공공 와이파이를 이용할 수 있어 데이터 걱정 없이 인터넷을 이용할 수 있다. 야영은 지정된 장소에서 2일 이내에 한하여 가능하며 야영장 내에서는 잔디 보호를 위해 차량, 이륜자동차 등의 출입을 제한하고 불판 사용, 고기 구워 먹는 행위 등을 금지하며 쓰레기 분리배출 시설이 있다. 제주도에서 가장 넓은 백사장을 가지고 있으며 노을이 아름다운 표선해수욕장은 썰물 때면 백사장이 원형으로 드러나는 아름다운 곳으로 모래가 곱고 부드러워 모래놀이와 모래찜질을 하기에 좋다. 수심이 낮아 아이들이 놀기 좋아 성수기에는 가족 단위 관광객이 많이 찾는 유명한 해수욕장이 있는 야영장이어서 캠핑의 즐거움을 더할 수 있다. 바다를 둘러 공원도 잘 조성되어 있어 낮과 밤 산책하기에도 좋다. 이렇게 좋은 환경의 무료 제주 야영장이 잘 관리되고 유지될 수 있도록 이용하는 사람 하나하나가 매너 있게 즐기길 당부한다. 야영장에는 표선 안내도를 볼 수 있는데 안내도를 따라 여행을 즐겨보는 것도 좋다. 근처에는 제주 옛 모습을 그대로 보전하고 있는 성읍민속마을이 있고 20여 분 거리 안에 섭지코지, 성산일출봉, 우도 배를 탈 수 있는 성산포항, 비자림, 용눈이오름을 포함한 다양한 제주 오름 등이 있어 야영장 이용 전후로 주변 여행지를 다녀도 좋다."
+      }
+    ],
+    "parent_source_sha256": "f5d36148c22b340b3f4ffca1f19d82387b9d033bbe8190a14df687d4ed0ffaf1",
+    "place": {
+      "address": "제주특별자치도 서귀포시 표선면 민속해안로 620",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:44b05b322757a11345d912bbb2344522cd8d9a4dc9b325d3cfc24d3e3cdc9909",
+      "name_ko": "표선해수욕장 야영장",
+      "place_id": "public:korea:44b05b322757a11345d912bbb2344522cd8d9a4dc9b325d3cfc24d3e3cdc9909",
+      "provider_content_id": "3031517",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

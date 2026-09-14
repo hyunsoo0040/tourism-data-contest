@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import tempfile
 from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
@@ -71,15 +72,9 @@ SAFE_PROVIDER_ERROR_CODES = frozenset(
         "PROCESS_INTERRUPTED_UNKNOWN_OUTCOME",
     }
 )
-CONSUMED_V1_RUN_PLAN_SHA256 = (
-    "f031bd15b6e07c3b4523a81667b824600f4012b2d53941a4a591805da1e7f069"
-)
-CONSUMED_V2_RUN_PLAN_SHA256 = (
-    "b493e3b86ed0835210ccacb7a6bd4ee90a724f50ce8fc63eff91a83d0bae3564"
-)
-CONSUMED_GLM_RUN_PLAN_SHA256 = (
-    "1ee70778bb098b63bb7368bfe3aea26ef5c93f8ff6f1609608db2b3487011874"
-)
+CONSUMED_V1_RUN_PLAN_SHA256 = "f031bd15b6e07c3b4523a81667b824600f4012b2d53941a4a591805da1e7f069"
+CONSUMED_V2_RUN_PLAN_SHA256 = "b493e3b86ed0835210ccacb7a6bd4ee90a724f50ce8fc63eff91a83d0bae3564"
+CONSUMED_GLM_RUN_PLAN_SHA256 = "1ee70778bb098b63bb7368bfe3aea26ef5c93f8ff6f1609608db2b3487011874"
 CONSUMED_INTERRUPTED_RUN_PLAN_SHA256S = frozenset(
     {
         CONSUMED_V1_RUN_PLAN_SHA256,
@@ -122,12 +117,14 @@ class GlmCodingScoringTransport:
         timeout_seconds: int,
         max_tokens: int,
     ) -> bytes:
+        from itda.photo.model_budget import model_session
+
         payload = _scoring_payload(request, max_tokens=max_tokens)
         encoded_payload = canonical_json_bytes(payload)
         if estimate_input_tokens(encoded_payload) > MAX_INPUT_TOKENS:
             raise MvpScoringError("REQUEST_INPUT_TOKEN_LIMIT_EXCEEDED")
         try:
-            with self._client.stream(
+            with model_session(), self._client.stream(
                 "POST",
                 GLM_CODING_ENDPOINT,
                 headers={
@@ -211,7 +208,7 @@ class DiagnosticOutcome:
 
 
 def _mvp_prompt_text() -> str:
-    return (MVP_SCORING_PROMPT_V2)
+    return MVP_SCORING_PROMPT_V2
 
 
 def _scoring_payload(
@@ -338,9 +335,7 @@ def parse_openrouter_pricing_snapshot(
     if not isinstance(data, list):
         raise MvpScoringError("PREFLIGHT_MODELS_MISSING")
     matches = [
-        row
-        for row in data
-        if isinstance(row, Mapping) and row.get("id") == LEGACY_OPENROUTER_MODEL
+        row for row in data if isinstance(row, Mapping) and row.get("id") == LEGACY_OPENROUTER_MODEL
     ]
     if len(matches) != 1:
         raise MvpScoringError("PREFLIGHT_MODEL_NOT_UNIQUE")
@@ -361,9 +356,7 @@ def parse_openrouter_pricing_snapshot(
         reasoning_rate = completion_rate
         reasoning_basis = "COMPLETION_RATE"
     else:
-        reasoning_rate = _decimal_string(
-            internal_reasoning, "PREFLIGHT_REASONING_PRICE_INVALID"
-        )
+        reasoning_rate = _decimal_string(internal_reasoning, "PREFLIGHT_REASONING_PRICE_INVALID")
         reasoning_basis = "INTERNAL_REASONING"
     request_fee = _decimal_string(pricing.get("request", "0"), "PREFLIGHT_REQUEST_FEE_INVALID")
     fields = {
@@ -435,16 +428,17 @@ def redact_error(error: BaseException) -> str:
 
 
 def project_local_conditions(response: ProviderScoringResponse) -> LocalConditionScores:
-    def bounded(value: int) -> int:
-        return max(0, min(100, value))
-
+    # H/E/R/M intensities do not establish facilities or travel suitability.
+    # Source-bound facts are projected separately at recommendation time; this
+    # preserves sealed legacy results and explicit unknowns in newly bound output.
+    del response
     return LocalConditionScores(
-        visit_date_time=bounded((response.M6 + response.E) // 2),
-        companions=bounded(100 - abs(response.M2 - 50) * 2),
-        transport=bounded(100 - response.M5 // 2),
-        walking=bounded(response.M5),
-        indoor_outdoor=bounded((response.R + (100 - response.M1)) // 2),
-        crowd=bounded(100 - response.M3),
+        visit_date_time=None,
+        companions=None,
+        transport=None,
+        walking=None,
+        indoor_outdoor=None,
+        crowd=None,
     )
 
 
@@ -488,9 +482,7 @@ def bind_response(
         else:
             code = "PROVIDER_RESPONSE_SHAPE_INVALID"
         raise MvpScoringError(code) from error
-    score_fields = {
-        dimension: getattr(wire, dimension) for dimension in SCORING_DIMENSIONS
-    }
+    score_fields = {dimension: getattr(wire, dimension) for dimension in SCORING_DIMENSIONS}
     response = ProviderScoringResponse.model_validate(
         {
             **score_fields,
@@ -501,9 +493,7 @@ def bind_response(
                     "evidence_ids": tuple(
                         sorted(getattr(wire.justifications, dimension).evidence_ids)
                     ),
-                    "justification_ko": getattr(
-                        wire.justifications, dimension
-                    ).justification_ko,
+                    "justification_ko": getattr(wire.justifications, dimension).justification_ko,
                 }
                 for dimension in SCORING_DIMENSIONS
             ),
@@ -512,6 +502,10 @@ def bind_response(
     parsed = response.model_dump(mode="json")
     allowed = {row.evidence_id for row in request.evidence}
     if any(not set(row.evidence_ids).issubset(allowed) for row in response.justifications):
+        raise MvpScoringError("PROVIDER_EVIDENCE_REFERENCE_INVALID")
+    if not justification_quotes_match(
+        response, {row.evidence_id: row.excerpt for row in request.evidence}
+    ):
         raise MvpScoringError("PROVIDER_EVIDENCE_REFERENCE_INVALID")
     condition_scores = project_local_conditions(response)
     fields = {
@@ -538,6 +532,21 @@ def bind_response(
             ),
         }
     )
+
+
+def justification_quotes_match(
+    response: ProviderScoringResponse,
+    evidence: Mapping[str, str],
+) -> bool:
+    """Reject fabricated explicit quotations; prose entailment still needs review."""
+    for row in response.justifications:
+        if not set(row.evidence_ids).issubset(evidence):
+            return False
+        cited = tuple(evidence[evidence_id] for evidence_id in row.evidence_ids)
+        quotes = re.findall(r'[“"]([^”"\n]{4,})[”"]', row.justification_ko)
+        if any(not any(quote in excerpt for excerpt in cited) for quote in quotes):
+            return False
+    return True
 
 
 def verify_requests_match_run_plan(
@@ -637,9 +646,7 @@ def build_continuation_plan(
         "evidence_inventory_sha256": predecessor_plan["evidence_inventory_sha256"],
         "prompt_sha256": predecessor_plan["prompt_sha256"],
         "corpus_file_sha256": predecessor_plan["corpus_file_sha256"],
-        "entitlement_snapshot_sha256": predecessor_plan[
-            "entitlement_snapshot_sha256"
-        ],
+        "entitlement_snapshot_sha256": predecessor_plan["entitlement_snapshot_sha256"],
         "canary_plan_sha256": predecessor_plan["canary_plan_sha256"],
         "canary_outcome_sha256": predecessor_plan["canary_outcome_sha256"],
         "place_request_sha256": [row.request_sha256 for row in ordered],
@@ -760,8 +767,7 @@ def verify_continuation_plan(plan: Mapping[str, object]) -> str:
     integers = cast(dict[str, int], integer_fields)
     if (
         any(not _is_sha256(plan.get(field)) for field in sha_fields)
-        or plan.get("schema_version")
-        != "mvp-place-scoring-continuation-plan.v1"
+        or plan.get("schema_version") != "mvp-place-scoring-continuation-plan.v1"
         or plan.get("endpoint") != GLM_CODING_ENDPOINT
         or plan.get("model") != GLM_MODEL
         or not isinstance(place_ids, list)
@@ -792,26 +798,20 @@ def verify_continuation_plan(plan: Mapping[str, object]) -> str:
             )
             for row in manifest
         )
-        or integers["completed_first_passes"]
-        + integers["remaining_first_pass_count"]
-        != 100
-        or integers["consumed_completion_calls"]
-        != integers["completed_first_passes"]
-        or integers["carried_result_count"]
-        + integers["retry_candidate_count"]
+        or integers["completed_first_passes"] + integers["remaining_first_pass_count"] != 100
+        or integers["consumed_completion_calls"] != integers["completed_first_passes"]
+        or integers["carried_result_count"] + integers["retry_candidate_count"]
         != integers["completed_first_passes"]
         or integers["carried_result_count"] != len(manifest)
         or len({row.get("file_name") for row in manifest}) != len(manifest)
         or len({row.get("place_id") for row in manifest}) != len(manifest)
         or any(row.get("place_id") not in place_ids for row in manifest)
         or any(
-            row.get("request_sha256")
-            != request_hashes[place_ids.index(row.get("place_id"))]
+            row.get("request_sha256") != request_hashes[place_ids.index(row.get("place_id"))]
             for row in manifest
         )
         or integers["maximum_new_calls"]
-        != 2 * integers["remaining_first_pass_count"]
-        + integers["retry_candidate_count"]
+        != 2 * integers["remaining_first_pass_count"] + integers["retry_candidate_count"]
         or integers["maximum_aggregate_calls"]
         != integers["consumed_completion_calls"] + integers["maximum_new_calls"]
         or integers["maximum_aggregate_calls"] > MAX_CALLS
@@ -832,7 +832,7 @@ def verify_continuation_plan(plan: Mapping[str, object]) -> str:
         or plan.get("pay_as_you_go_fallback") is not False
     ):
         raise MvpScoringError("CONTINUATION_PLAN_INVALID")
-    return (expected)
+    return expected
 
 
 def verify_run_plan(plan: Mapping[str, object]) -> str:
@@ -845,7 +845,7 @@ def verify_run_plan(plan: Mapping[str, object]) -> str:
     if supplied in CONSUMED_INTERRUPTED_RUN_PLAN_SHA256S:
         if supplied != expected:
             raise MvpScoringError("RUN_PLAN_HASH_INVALID")
-        return (expected)
+        return expected
     expected_fields = {
         "schema_version",
         "endpoint",
@@ -926,7 +926,7 @@ def verify_run_plan(plan: Mapping[str, object]) -> str:
         or any(not _is_sha256(value) for value in request_hashes)
     ):
         raise MvpScoringError("RUN_PLAN_MEMBERSHIP_INVALID")
-    return (expected)
+    return expected
 
 
 def _is_sha256(value: object) -> bool:
@@ -947,9 +947,12 @@ def build_canary_plan(
     entitlement_snapshot_sha256: str,
     canary_selection_sha256: str,
 ) -> dict[str, object]:
-    if estimate_input_tokens(
-        canonical_json_bytes(_scoring_payload(request, max_tokens=MAX_OUTPUT_TOKENS))
-    ) > MAX_INPUT_TOKENS:
+    if (
+        estimate_input_tokens(
+            canonical_json_bytes(_scoring_payload(request, max_tokens=MAX_OUTPUT_TOKENS))
+        )
+        > MAX_INPUT_TOKENS
+    ):
         raise MvpScoringError("REQUEST_INPUT_TOKEN_LIMIT_EXCEEDED")
     fields: dict[str, object] = {
         "schema_version": "mvp-place-scoring-canary-plan.v3",
@@ -1035,8 +1038,7 @@ def verify_canary_plan(plan: Mapping[str, object]) -> str:
         plan["schema_version"] != "mvp-place-scoring-canary-plan.v3"
         or plan["endpoint"] != GLM_CODING_ENDPOINT
         or plan["model"] != GLM_MODEL
-        or plan["probe_kind"]
-        != "PUBLIC_CATALOG_MEMBER_NON_RELEASE_COMPATIBILITY_PROBE"
+        or plan["probe_kind"] != "PUBLIC_CATALOG_MEMBER_NON_RELEASE_COMPATIBILITY_PROBE"
         or plan["maximum_calls"] != 1
         or plan["concurrency"] != 1
         or plan["timeout_seconds"] != REQUEST_TIMEOUT_SECONDS
@@ -1052,7 +1054,7 @@ def verify_canary_plan(plan: Mapping[str, object]) -> str:
         or plan["pay_as_you_go_fallback"] is not False
     ):
         raise MvpScoringError("CANARY_PLAN_BOUNDS_INVALID")
-    return (expected)
+    return expected
 
 
 def execute_diagnostic(
@@ -1282,14 +1284,10 @@ def prepare_continuation_state(
         "predecessor_attempt_state_sha256"
     ):
         raise MvpScoringError("CONTINUATION_ATTEMPT_STATE_DRIFT")
-    if list(result_manifest(predecessor_root, requests)) != plan.get(
-        "predecessor_result_manifest"
-    ):
+    if list(result_manifest(predecessor_root, requests)) != plan.get("predecessor_result_manifest"):
         raise MvpScoringError("CONTINUATION_RESULT_MANIFEST_DRIFT")
     state = _read_attempt_state(attempt_path)
-    if state is None or state["run_plan_sha256"] != plan.get(
-        "predecessor_run_plan_sha256"
-    ):
+    if state is None or state["run_plan_sha256"] != plan.get("predecessor_run_plan_sha256"):
         raise MvpScoringError("CONTINUATION_PREDECESSOR_STATE_INVALID")
     attempts = state["attempts"]
     if not isinstance(attempts, list):
@@ -1303,17 +1301,13 @@ def prepare_continuation_state(
             row["status"] = "FAILED"
             row["reason"] = "PROCESS_INTERRUPTED_UNKNOWN_OUTCOME"
         carried_attempts.append(row)
-    if (
-        len(carried_attempts) != plan.get("consumed_completion_calls")
-        or sum(row.get("attempt_number") == 1 for row in carried_attempts)
-        != plan.get("completed_first_passes")
-    ):
+    if len(carried_attempts) != plan.get("consumed_completion_calls") or sum(
+        row.get("attempt_number") == 1 for row in carried_attempts
+    ) != plan.get("completed_first_passes"):
         raise MvpScoringError("CONTINUATION_PREDECESSOR_COUNTS_INVALID")
 
     output_root.parent.mkdir(parents=True, exist_ok=True)
-    temporary = Path(
-        tempfile.mkdtemp(prefix=f".{output_root.name}.", dir=output_root.parent)
-    )
+    temporary = Path(tempfile.mkdtemp(prefix=f".{output_root.name}.", dir=output_root.parent))
     try:
         _write_atomic(
             temporary / "attempt-state.json",
@@ -1499,12 +1493,15 @@ def _write_atomic(path: Path, payload: bytes) -> None:
 def consume_execution_authority(output_root: Path, run_plan_sha256: str) -> None:
     path = output_root / "execution-started.json"
     path.parent.mkdir(parents=True, exist_ok=True)
-    payload = canonical_json_bytes(
-        {
-            "schema_version": "mvp-scoring-execution-started.v1",
-            "run_plan_sha256": run_plan_sha256,
-        }
-    ) + b"\n"
+    payload = (
+        canonical_json_bytes(
+            {
+                "schema_version": "mvp-scoring-execution-started.v1",
+                "run_plan_sha256": run_plan_sha256,
+            }
+        )
+        + b"\n"
+    )
     try:
         descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
     except FileExistsError as error:

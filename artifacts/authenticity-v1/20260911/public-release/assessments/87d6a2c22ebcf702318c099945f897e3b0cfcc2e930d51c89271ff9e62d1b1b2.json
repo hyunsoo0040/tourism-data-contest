@@ -1,0 +1,541 @@
+{
+  "assessed_at": "2026-09-11T18:16:17.074694Z",
+  "assessment_sha256": "87d6a2c22ebcf702318c099945f897e3b0cfcc2e930d51c89271ff9e62d1b1b2",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.b",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'비단산'이라는 별칭과 비단결 같은 산세라는 구체적 이미지가 장소에 연결되어 있다. 수준은 간단한 이미지 표현 수준인 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "기암과 계곡, 억새풀밭, 철쭉 계절의 장관 등 장면에서 구별되는 시각적 성격이 확인된다. 일관된 연출이 지배한다는 근거는 없어 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(독바위와 정자 조망)을 현장에서 직접 경험하고 촬영할 수 있음이 확인된다. 재현이 방문 경험의 중심이라는 근거는 없어 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f",
+            "evidence:b3d93e2faca92b42deb6d5dc5b456995fbe9b5c0330daff45c9e986617d9dca7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "복수의 등산 코스 선택지가 제공되어 방문자가 자율적으로 코스를 선택·탐색할 기회가 확인된다. 심층적 일상 이탈 경험의 중심성 근거는 없어 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "계류 건너기, 가파른 돌길, 암릉 등 구체적인 등산·탐방 활동의 참여 기회가 확인된다. 지속적 도전 활동이 방문 경험의 중심임을 확정하기는 어려워 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "산과 계곡, 독바위 등 자연 지형에 대한 묘사는 있으나 확인된 문화유산 원형·실물 유산의 접촉 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "비금계곡 명칭 유래 설화가 간략히 언급되지만, 이 장소의 구체적 역사·사건·인물 맥락을 탐구할 수 있는 근거는 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "선비 거문고 전설 언급은 옛 이야기 소개일 뿐, 현재 지역 주체의 전승·생활문화와의 실제 연결 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "등산 코스 안내는 있으나 원형·유산·전통에 연결된 해설·전시·학습 프로그램의 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f",
+          "quote": {
+            "end": 142,
+            "method": "EXACT",
+            "original": "마치 비단결 같은 산세를 자랑하고 있다",
+            "start": 121,
+            "submitted": "마치 비단결 같은 산세를 자랑하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42f0e69073f9be05853247b3876aae7ac332a256cec2644b96ba53d622d1d4f3"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'비단산'이라는 별칭과 비단결 같은 산세라는 구체적 이미지가 장소에 연결되어 있다. 수준은 간단한 이미지 표현 수준인 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "특정 매체·작품·홍보·SNS를 통한 이미지 유통의 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f",
+          "quote": {
+            "end": 142,
+            "method": "EXACT",
+            "original": "정상 부근의 기암과 수려한 비금 계곡이 어우러져 마치 비단결 같은 산세를 자랑하고 있다",
+            "start": 94,
+            "submitted": "정상 부근의 기암과 수려한 비금 계곡이 어우러져 마치 비단결 같은 산세를 자랑하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42f0e69073f9be05853247b3876aae7ac332a256cec2644b96ba53d622d1d4f3"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "기암과 계곡, 억새풀밭, 철쭉 계절의 장관 등 장면에서 구별되는 시각적 성격이 확인된다. 일관된 연출이 지배한다는 근거는 없어 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f",
+          "quote": {
+            "end": 760,
+            "method": "EXACT",
+            "original": "주금산의 시그니쳐 풍경인 독바위와 정자를 한 번에 조망할 수 있는데, 이 풍경을 담기 위해 주금산을 찾는 사람들이 많다",
+            "start": 694,
+            "submitted": "주금산의 시그니쳐 풍경인 독바위와 정자를 한 번에 조망할 수 있는데, 이 풍경을 담기 위해 주금산을 찾는 사람들이 많다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42f0e69073f9be05853247b3876aae7ac332a256cec2644b96ba53d622d1d4f3"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대표 장면(독바위와 정자 조망)을 현장에서 직접 경험하고 촬영할 수 있음이 확인된다. 재현이 방문 경험의 중심이라는 근거는 없어 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f",
+          "quote": {
+            "end": 308,
+            "method": "EXACT",
+            "original": "등산길은 내촌에서 오르는 길과 비금계곡에서 오르는 길 두 가지가 있다",
+            "start": 270,
+            "submitted": "등산길은 내촌에서 오르는 길과 비금계곡에서 오르는 길 두 가지가 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42f0e69073f9be05853247b3876aae7ac332a256cec2644b96ba53d622d1d4f3"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:b3d93e2faca92b42deb6d5dc5b456995fbe9b5c0330daff45c9e986617d9dca7",
+          "quote": {
+            "end": 55,
+            "method": "EXACT",
+            "original": "1코스(2,4km):베어스타운>베어스타운 능선코스>정상 2코스(2.3km):베어스타운>계곡코스>정상",
+            "start": 0,
+            "submitted": "1코스(2,4km):베어스타운>베어스타운 능선코스>정상 2코스(2.3km):베어스타운>계곡코스>정상",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3e412c7a98225a4045471d7ab070bee103ac73e14845799ab178686b8e5c5568"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "복수의 등산 코스 선택지가 제공되어 방문자가 자율적으로 코스를 선택·탐색할 기회가 확인된다. 심층적 일상 이탈 경험의 중심성 근거는 없어 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f",
+          "quote": {
+            "end": 426,
+            "method": "EXACT",
+            "original": "합수곡에서 계류를 건너 계곡을 따라 올라가다 가파른 돌길과 폭포를 지나 왼쪽 능선길로 고개에 오른 뒤 억새풀밭을 지나 남쪽 능선을 타고 정상에 오른다",
+            "start": 343,
+            "submitted": "합수곡에서 계류를 건너 계곡을 따라 올라가다 가파른 돌길과 폭포를 지나 왼쪽 능선길로 고개에 오른 뒤 억새풀밭을 지나 남쪽 능선을 타고 정상에 오른다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42f0e69073f9be05853247b3876aae7ac332a256cec2644b96ba53d622d1d4f3"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "계류 건너기, 가파른 돌길, 암릉 등 구체적인 등산·탐방 활동의 참여 기회가 확인된다. 지속적 도전 활동이 방문 경험의 중심임을 확정하기는 어려워 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 프로그램에 대한 근거는 제공되지 않았다. 등산객 방문 언급만으로 관계 형성 기회를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "5eaa018085bb44b12558dcfbc33ac35d68ceb8deb4a94c2912ff7d6d282d40b4",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f",
+              "quote": {
+                "end": 223,
+                "method": "EXACT",
+                "original": "정상에서 남쪽으로 흘러내리는 비금계곡은 오염되지 않은 모습을 간직하고 있다",
+                "start": 182,
+                "submitted": "정상에서 남쪽으로 흘러내리는 비금계곡은 오염되지 않은 모습을 간직하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "42f0e69073f9be05853247b3876aae7ac332a256cec2644b96ba53d622d1d4f3"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 3,
+          "reason": "오염되지 않은 계곡 등 자연 환경 단서가 확인된다. 환경이 장면을 지배하거나 실제 고요함·회복 효과를 확정할 근거는 없어 3 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "def3b1094f0b06c83e0d3eea6667649eced83f029623c92314a14bbcea48885c",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a2a31435de6018472dfee31fd7e93ebabaff0e01cdfbbaf66d2860b8d44ff46f",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9b8ac4bab7ebb965de5dc940e6f78d7736ae24368366ea98b0e991c815b3586f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "125461",
+          "request_sha256": "a06aa7614f6b5b3a3083013659fd77160a5de7a74c6d5eebdb305ba16d19e220",
+          "response_sha256": "a2ce2a052d6700e1221b81f6076b7313285fc8b7d242888ea70b342eff55de10",
+          "retrieved_at": "2026-09-10T16:47:13.250120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-03-19T02:39:25Z",
+          "source_record_sha256": "2c055085c61d3d4f1bc5487341991429a7e939f1387e273ec08e54909c86b535",
+          "source_uri": null
+        },
+        "record_sha256": "42f0e69073f9be05853247b3876aae7ac332a256cec2644b96ba53d622d1d4f3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "비단산으로도 불리는 주금산(813m)은 경기도 가평과 포천, 남양주의 경계이자 걸쳐있는 산으로, 주위에는 서리, 천마, 철마, 축령산 등 명산이 호위하듯 둘러서 있다. 정상 부근의 기암과 수려한 비금 계곡이 어우러져 마치 비단결 같은 산세를 자랑하고 있다. 이 산의 서북쪽 산 자락에는 베어스타운 스키장이 자리 잡고 있으며, 정상에서 남쪽으로 흘러내리는 비금계곡은 오염되지 않은 모습을 간직하고 있다. 옛날에 선비들이 산에 놀러 왔다가 거문고를 감춰놓았다 해서 비금계곡으로 불린다. 등산길은 내촌에서 오르는 길과 비금계곡에서 오르는 길 두 가지가 있다. 내촌에서 오르려면 사기막 입구 평사교에서 산행을 시작한다. 합수곡에서 계류를 건너 계곡을 따라 올라가다 가파른 돌길과 폭포를 지나 왼쪽 능선길로 고개에 오른 뒤 억새풀밭을 지나 남쪽 능선을 타고 정상에 오른다. 하산은 정상(삼각점)에서 암릉 서쪽을 따라 암봉 남쪽 밑 신선당을 지나 능골로 내려가거나 남동쪽 능선길을 따라 비금리로 내려간다. 비금계곡에서 등산하려면 비금계곡 주차장에서 산행을 시작한다. 동남쪽 능선을 타고 바위봉을 지나 정상에 오른 뒤 바위봉을 지나 남쪽 능선을 타고 시루봉에서 주차장으로 내려가는 길과 정상에서 안부로 폭포를 지나 사기막 평사교로 내려가는 길이 있다. 정상에는 포천과 남양주에서 각각 세워놓은 두 개의 정상석이 있으며, 주금산 정자 뒤 헬기장으로 가면 주금산의 시그니쳐 풍경인 독바위와 정자를 한 번에 조망할 수 있는데, 이 풍경을 담기 위해 주금산을 찾는 사람들이 많다. 특히나 철쭉이 피는 계절에는 장관이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b3d93e2faca92b42deb6d5dc5b456995fbe9b5c0330daff45c9e986617d9dca7",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9b8ac4bab7ebb965de5dc940e6f78d7736ae24368366ea98b0e991c815b3586f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125461",
+          "request_sha256": "05f217f241a2633ff30a5fc162e0a9c0fd6458304617b4022c602c9a498483fc",
+          "response_sha256": "c0b669cef30cc44ce6f05c95c80c713a2d16726f26fffc2671cb4ae133d6163b",
+          "retrieved_at": "2026-09-11T02:08:06.235850Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "23da0194810f8e106cd9cc729abb5c76fb65219a3924ff273dc63699017e9f77",
+          "source_uri": null
+        },
+        "record_sha256": "3e412c7a98225a4045471d7ab070bee103ac73e14845799ab178686b8e5c5568",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "1코스(2,4km):베어스타운>베어스타운 능선코스>정상 2코스(2.3km):베어스타운>계곡코스>정상 3코스(3.4km):내촌면사무소>독바위>정상 4코스(3.2km):음현리>동능선>정상"
+      }
+    ],
+    "parent_source_sha256": "109c1c632026417a5afa875aacacaf1a9232504fc751ecb8363d017b289d09e8",
+    "place": {
+      "address": "경기도 포천시 내촌면 능곡청정길 50",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:9b8ac4bab7ebb965de5dc940e6f78d7736ae24368366ea98b0e991c815b3586f",
+      "name_ko": "주금산",
+      "place_id": "public:korea:9b8ac4bab7ebb965de5dc940e6f78d7736ae24368366ea98b0e991c815b3586f",
+      "provider_content_id": "125461",
+      "region_code": "41650",
+      "region_name": "경기도 포천시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

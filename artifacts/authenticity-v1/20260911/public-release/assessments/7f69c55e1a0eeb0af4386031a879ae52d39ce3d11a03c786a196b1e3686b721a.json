@@ -1,0 +1,812 @@
+{
+  "assessed_at": "2026-09-11T19:07:25.892604Z",
+  "assessment_sha256": "7f69c55e1a0eeb0af4386031a879ae52d39ce3d11a03c786a196b1e3686b721a",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 63
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:203452b44f362fb7ac018d483327ceb2ea8f4f897007de53212c4027ce388782",
+            "appearance:923ec7f5bb138b2e70d405d1b927ea7a7a2b938ec2dc274ff45799ef82310e5a",
+            "appearance:aa775e055fa4993d3e754be2de367ed71a0d7542b20aa6aad8c31e26b663687b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "'시원한 계곡', '여름의 신록', '숲이 울창' 등 계절 경관 표현이 있으나 이는 자연 환경 묘사이지 장소의 이미지를 표현하는 연출·외관의 시각적 성격이라 단정하기 어렵다. UNKNOWN으로 처리한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:09273678340ad52e36a7994f06534b0aa074e78361cfaaa06375dd7f9c7d6c59"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:248a114b7289db28b4e211e54643efff585329372644327d19512885bf9da707",
+            "appearance:262188cb069c4f2ba2e63dfbe423f6d8b9fd7ab3eacab3c49cc659a4af73a269",
+            "appearance:6f276828381f440db96f08280b39ae96865e43358b1cecfa9c708db5457337c7"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "계곡, 신록, 울창한 숲 등 자연 환경 단서가 코스 설명에서 두드러지게 확인된다. 다만 실제 고요함·혼잡·심리적 회복까지 확정할 수는 없으므로 자연 환경이 경관에서 뚜렷하다는 수준(3)으로 평가했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:09273678340ad52e36a7994f06534b0aa074e78361cfaaa06375dd7f9c7d6c59"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "약간의 난이도가 있는 2시간 30분 도보 탐방 코스로 참여·집중 활동의 기회는 확인된다. 그러나 만들기·도전형 활동이 아닌 일반 등산·걷기이고 지속적 도전 요소의 근거가 약해 수준 2(제한적 체험)로 평가했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요가 코스 경로로 '부인사', '동화사집단시설지구'를 지나가며 팔공산에 문화재·사찰이 산재한다고 일반 언급하지만, 이 코스에서 확인된 실제 원형·유산을 구체적으로 경험한다는 근거는 없다. 코스 자체는 숲·계곡 걷기이므로 유산 접촉이 중심이라 단정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 코스 거리·소요시간·경로·권장 대상·안전 안내만 제공하며 이 장소의 역사·사건·인물 맥락에 대한 서사는 없다. 따라서 역사 맥락의 구체성은 판단 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "부인사·동화사 언급이 있으나 현재 이어지는 지역 주체의 전승·생활문화와의 연결을 보여주는 근거는 없다. 사찰 존재만으로 전승 활동을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "'부인사 입구 문화해설사의 집에 신청하면 문화해설과도 함께 할 수도 있다'는 부분은 해설 기회를 시사하지만, 계곡·숲 걷기 코스의 원형·유산과 연결된 해설인지 그 내용이 무엇인지 근거가 부족하다. 선택 가능한 부가 서비스 정도로 해석이 제한되어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'팔공산 올레길의 모든 코스는 팔공산이 가지고 있는 본연의 자랑거리'라는 표현이 사계절 경관 이미지를 부여하지만, 이 특정 코스에 구체적으로 공유되는 상징·이야기가 연결되었다고 보기에 내용이 얕다. 판단 근거가 부족하여 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "대구올레라는 브랜드 코스라는 사실 외에 작품·홍보·SNS 등 매체를 통한 이미지 재현·유통의 근거는 제공되지 않는다. 매체 표현 자체가 확인되지 않아 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "'시원한 계곡', '여름의 신록', '숲이 울창' 등 계절 경관 표현이 있으나 이는 자연 환경 묘사이지 장소의 이미지를 표현하는 연출·외관의 시각적 성격이라 단정하기 어렵다. UNKNOWN으로 처리한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험하거나 재현(촬영 등)할 수 있다는 근거가 없다. 걷기 코스 소개만으로 이미지 체험·재현을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "제안 anchor는 수준 3(자율적으로 선택·탐색할 기회)이지만 검토 사유와 근거 해석은 수준 2(제한적 자유 선택)를 논리적으로 지지하며 수준이 불일치한다. 7.1km 고정 순환 코스라는 점에서 자기 속도의 걷기 기회는 있으나 대안 선택·탐색의 폭에 대한 근거가 부족해 확정할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:09273678340ad52e36a7994f06534b0aa074e78361cfaaa06375dd7f9c7d6c59",
+          "quote": {
+            "end": 337,
+            "method": "EXACT",
+            "original": "여름철 계곡과 신록이 함께 하는 코스이지만",
+            "start": 314,
+            "submitted": "여름철 계곡과 신록이 함께 하는 코스이지만",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6629942bb6f5b623c1b86eb7641c74d55c1945155be1a24d4d4f75c19b24175d"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:09273678340ad52e36a7994f06534b0aa074e78361cfaaa06375dd7f9c7d6c59",
+          "quote": {
+            "end": 403,
+            "method": "EXACT",
+            "original": "계곡과 숲이 울창하여 여름에 즐기기 편안하다",
+            "start": 379,
+            "submitted": "계곡과 숲이 울창하여 여름에 즐기기 편안하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6629942bb6f5b623c1b86eb7641c74d55c1945155be1a24d4d4f75c19b24175d"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "계곡, 신록, 울창한 숲 등 자연 환경 단서가 코스 설명에서 두드러지게 확인된다. 다만 실제 고요함·혼잡·심리적 회복까지 확정할 수는 없으므로 자연 환경이 경관에서 뚜렷하다는 수준(3)으로 평가했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:09273678340ad52e36a7994f06534b0aa074e78361cfaaa06375dd7f9c7d6c59",
+          "quote": {
+            "end": 275,
+            "method": "EXACT",
+            "original": "약간의 난이도가 있어 초등 5학년이상~성인에게 권하는 코스이며",
+            "start": 241,
+            "submitted": "약간의 난이도가 있어 초등 5학년이상~성인에게 권하는 코스이며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6629942bb6f5b623c1b86eb7641c74d55c1945155be1a24d4d4f75c19b24175d"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "약간의 난이도가 있는 2시간 30분 도보 탐방 코스로 참여·집중 활동의 기회는 확인된다. 그러나 만들기·도전형 활동이 아닌 일반 등산·걷기이고 지속적 도전 요소의 근거가 약해 수준 2(제한적 체험)로 평가했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "'휴대폰이 안 터지므로 일행과 함께 하길 권유'는 동행 권고일 뿐이고, 교류·공동 활동·자기표현의 기회를 제공한다는 근거는 없다. 함께 걷는 권유만으로 관계 형성 경험을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "96a642bfbadb8e09ae1e5e80d89cda852e35f0bf68b4ef77153c315d6d73904a",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:09273678340ad52e36a7994f06534b0aa074e78361cfaaa06375dd7f9c7d6c59",
+              "quote": {
+                "end": 114,
+                "method": "EXACT",
+                "original": "총 7.1km, 소요시간 2시간 30분 정도 내외의 시원한 계곡을 따라 숲을 마음껏 즐기며 걷는 길로 여름 코스로 제격이다.",
+                "start": 45,
+                "submitted": "총 7.1km, 소요시간 2시간 30분 정도 내외의 시원한 계곡을 따라 숲을 마음껏 즐기며 걷는 길로 여름 코스로 제격이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6629942bb6f5b623c1b86eb7641c74d55c1945155be1a24d4d4f75c19b24175d"
+            }
+          ],
+          "flags": [],
+          "key": "R.a",
+          "level": 2,
+          "reason": "7.1km 순환 걷기 코스를 '마음껏 즐기며 걷는 길'로 소개해 자율적으로 탐색하며 걷는 기회는 확인된다. 다만 정해진 코스 경로이고 일부 구간 휴대폰 불통으로 일행 동행을 권하므로 자유로운 탐색의 깊이는 제한적이라 보아 수준 2로 평가했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "제안 anchor는 수준 3(자율적으로 선택·탐색할 기회)이지만 검토 사유와 근거 해석은 수준 2(제한적 자유 선택)를 논리적으로 지지하며 수준이 불일치한다. 7.1km 고정 순환 코스라는 점에서 자기 속도의 걷기 기회는 있으나 대안 선택·탐색의 폭에 대한 근거가 부족해 확정할 수 없다."
+        }
+      },
+      "reason": "제안 anchor는 수준 3(자율적으로 선택·탐색할 기회)이지만 검토 사유와 근거 해석은 수준 2(제한적 자유 선택)를 논리적으로 지지하며 수준이 불일치한다. 7.1km 고정 순환 코스라는 점에서 자기 속도의 걷기 기회는 있으나 대안 선택·탐색의 폭에 대한 근거가 부족해 확정할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "bba293638a26c9ca04d3f1c24063ee82f03d982e1b22d5a60811df946d69f18a",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "잔돌이 석상과 단지가 로터리 중심을 장식하고, 붉은 단청 빌딩과 가을빛 나무가 대비되어 관광지 특유의 연출된 거리 경관이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:203452b44f362fb7ac018d483327ceb2ea8f4f897007de53212c4027ce388782",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3105bd89f1a59b2b8e930ccd2953b610d51b815eae10e83284e61e8be2d388bf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570254_1",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "49259ab368ee1da48251de7fd1495de3a5d8de5f83b8ca3c180f237fd70e0899",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/54/3570254_image2_1.JPG"
+        },
+        "record_sha256": "ca4b0ac69be9c8c594a68f947d9e14b4d10b808f797baf13f7e98722928124ac",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 숲과 단풍수, 녹색 언덕이 배경 전체를 채워 자연 경관이 장면의 주요 요소로 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:248a114b7289db28b4e211e54643efff585329372644327d19512885bf9da707",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "003d07855b0ff3369f4801b30f87123592dcf44f181257285728d78dd08c601f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570253_4",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "155ee393d200b974cb5d5d66916456bc78ce12107fa323ab4d6f79963d1b2602",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3570253_image2_1.JPG"
+        },
+        "record_sha256": "0a478a54cb157fc5d5ca18ca1ce0cb459c772624a64bb50a078cbea18dac0272",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "배경에 울창한 산 녹지와 파란 하늘·구름이 보이며 나무와 잔디 화단이 거리에 배치되어 있으나 도시 가로가 전면을 차지함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:262188cb069c4f2ba2e63dfbe423f6d8b9fd7ab3eacab3c49cc659a4af73a269",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3105bd89f1a59b2b8e930ccd2953b610d51b815eae10e83284e61e8be2d388bf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570254_1",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "49259ab368ee1da48251de7fd1495de3a5d8de5f83b8ca3c180f237fd70e0899",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/54/3570254_image2_1.JPG"
+        },
+        "record_sha256": "657cc499caaa20a0578ebf4f90a653b87b57a2f421f373463aa5305b6d8d720b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "돌담과 자연석 축대 등 일부 전통적 재료가 보이나 지붕 구조물은 현대적 외관",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6036855628042c2f367b5179702bbfc7691d96503b1cca003608a7381e86fb4e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c111da089f601c3dbdb2e63dee482eb28ced4e3d73d166b3bd9787c759dbb0d7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570256_3",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "263647ab491fe21626acb611c7328488b63c5188ce421c5fd5fd7d13a74369e9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/56/3570256_image2_1.JPG"
+        },
+        "record_sha256": "2f17001f63e02483c4b69a4c2176a0fbf6e2d61cb1e457dbf9a646bbe2ec65b4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "연못, 뒷산의 울창한 숲, 단풍 든 나무 등 자연 환경 단서가 넓게 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6f276828381f440db96f08280b39ae96865e43358b1cecfa9c708db5457337c7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c111da089f601c3dbdb2e63dee482eb28ced4e3d73d166b3bd9787c759dbb0d7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570256_3",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "263647ab491fe21626acb611c7328488b63c5188ce421c5fd5fd7d13a74369e9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/56/3570256_image2_1.JPG"
+        },
+        "record_sha256": "5a7ac81b78bd530fff315b58e395c18036bb068eac1cf96266af4723d05823d9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "가을 청록에서 주황·적색으로 이어지는 단풍나무 열의 풍부한 색채가 화면을 지배하며, 도로와 나무의 대비가 뚜렷하고 구도가 세련되게 연출됨.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:923ec7f5bb138b2e70d405d1b927ea7a7a2b938ec2dc274ff45799ef82310e5a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "003d07855b0ff3369f4801b30f87123592dcf44f181257285728d78dd08c601f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570253_4",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "155ee393d200b974cb5d5d66916456bc78ce12107fa323ab4d6f79963d1b2602",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3570253_image2_1.JPG"
+        },
+        "record_sha256": "b3dfe6c1d2cfa57441df3b5549b00ba022aa1c91e50e01e8589b659e5b46e53e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰 돔형 지붕의 연속된 아치 구조물이 장면의 시각적 중심으로, 돌 계단과 연못과 함께 구도가 뚜렷함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:aa775e055fa4993d3e754be2de367ed71a0d7542b20aa6aad8c31e26b663687b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c111da089f601c3dbdb2e63dee482eb28ced4e3d73d166b3bd9787c759dbb0d7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570256_3",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "263647ab491fe21626acb611c7328488b63c5188ce421c5fd5fd7d13a74369e9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/56/3570256_image2_1.JPG"
+        },
+        "record_sha256": "403f9f81d258f15e8a70b3ac21a3248d9f666c5df4651242680509496b647303",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축·재료·공간 구성의 흔적이 보이지 않으며 아스팔트 도로와 현대적 차량·시설물만 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e41e867765d2625ed17d3d0e8adb8eaadd3d84b77ac179099b8fafdd2f5e7545",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "003d07855b0ff3369f4801b30f87123592dcf44f181257285728d78dd08c601f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570253_4",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "155ee393d200b974cb5d5d66916456bc78ce12107fa323ab4d6f79963d1b2602",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/53/3570253_image2_1.JPG"
+        },
+        "record_sha256": "940d1ebe178c0d945cc901e0f58f9070b71c0765809603e277483e42a655fccc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "돌로 만든 전통 인물 석상들과 한국어 간판 건물들이 보이지만, 건물 외관은 현대적 상업 건축이 우세함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ef23d101a8e268b147cb38cc42a91ac099753a6cbac9833ac767a26b6ea130db",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3105bd89f1a59b2b8e930ccd2953b610d51b815eae10e83284e61e8be2d388bf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3570254_1",
+          "request_sha256": "80418dcfbc1b77ee24fb9c1b44a387735ba46a736a363073d3a55c9c2851249f",
+          "response_sha256": "8ff898734387f4d696ddb12c813253d7f439307143972457929d2274ecc5e0fd",
+          "retrieved_at": "2026-09-10T08:28:34.649589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "49259ab368ee1da48251de7fd1495de3a5d8de5f83b8ca3c180f237fd70e0899",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/54/3570254_image2_1.JPG"
+        },
+        "record_sha256": "040a99cceb2ad245ea3ed93916ad3ebb79669abade7c36f3fdb5d26a88d4e0d4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:09273678340ad52e36a7994f06534b0aa074e78361cfaaa06375dd7f9c7d6c59",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1168464",
+          "request_sha256": "5de3e1dd329dd21088f8bc8e85342cfdb51052d728e93920d9566f21334767d4",
+          "response_sha256": "c67d2ce437bdaa5a890da24353e331c591b00682ca7c68c72feddfaa52fe5416",
+          "retrieved_at": "2026-09-10T05:32:42.435539Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-03T01:23:22Z",
+          "source_record_sha256": "18d53afda5bb2448b94bdd0ab2ce21057b88019b4388b28b333088f3b2f7b777",
+          "source_uri": null
+        },
+        "record_sha256": "6629942bb6f5b623c1b86eb7641c74d55c1945155be1a24d4d4f75c19b24175d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "대구올레 팔공산 8코스는 동화사시설지구에서 출발하여 원점 회귀하는 순환코스이다. 총 7.1km, 소요시간 2시간 30분 정도 내외의 시원한 계곡을 따라 숲을 마음껏 즐기며 걷는 길로 여름 코스로 제격이다. 부인사 입구 문화해설사의 집에 신청하면 문화해설과도 함께 할 수도 있다. 동화사집단시설지구→대구시민안전테마파크→팔공산순환도로가로수길→수태지부근오솔길→너럭바위→부인사·서봉등산로접점→벼락맞은 나무→부인사→동화사집단시설지구 코스로 약간의 난이도가 있어 초등 5학년이상~성인에게 권하는 코스이며, 일부 구간은 휴대폰이 안 터지므로 일행과 함께 하길 권유한다. 또 여름철 계곡과 신록이 함께 하는 코스이지만 장마 후 또는 큰 비가 내린 뒤에는 탐방자제와 주의를 당부하는 코스이다. 계곡과 숲이 울창하여 여름에 즐기기 편안하다 안내하고 있지만 팔공산 올레길의 모든 코스는 팔공산이 가지고 있는 본연의 자랑거리인 봄 벚꽃길, 여름의 신록, 가을 단풍길, 겨울 설경을 사계절 내내 산책으로, 차량을 이용한 드라이브로, 등산으로 즐길 수 있다. 더불어 팔공산에 산재한 문화재와 사찰 등 팔공산은 언제나, 어느 곳을 가든 만족을 얻을 수 있는 곳이다."
+      }
+    ],
+    "parent_source_sha256": "dde30c4d9212050b9c9d17ddf4de6753bb5c36f281f637433860107d9a1766d6",
+    "place": {
+      "address": "대구광역시 동구 동화사1길 1 (도학동)",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+      "name_ko": "[대구올레 팔공산 8코스] 수태지 계곡길",
+      "place_id": "public:korea:d1713d95568a7d7da55407477f1add9de72504da9e94c8bcc7412f47ff6ceeed",
+      "provider_content_id": "1168464",
+      "region_code": "27140",
+      "region_name": "대구광역시 동구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -16,6 +16,7 @@ from itda.contracts.recommendation import (
     RecommendationPreference,
     ScoreContribution,
     TravelConditionId,
+    observed_condition_weights,
 )
 
 
@@ -137,23 +138,39 @@ def score_candidate(
         axis_rows[2],
     )
     experience_fit = _half_up(sum(row.fit_score for row in axis_components), 3)
+    condition_pairs = tuple(
+        zip(preference.condition_targets, candidate.condition_scores, strict=True)
+    )
+    condition_weights = observed_condition_weights(
+        tuple(
+            expected.value is not None and actual.value is not None
+            for expected, actual in condition_pairs
+        )
+    )
     condition_rows = tuple(
         ConditionContribution(
             contribution_id=f"condition:{expected.condition_id.value}",
             condition_id=expected.condition_id,
             expected_value=expected.value,
             place_value=actual.value,
-            absolute_difference=abs(expected.value - actual.value),
-            fit_score=100 - abs(expected.value - actual.value),
-            total_score_weight_bp=_condition_weight(config, expected.condition_id),
+            absolute_difference=(
+                abs(expected.value - actual.value)
+                if expected.value is not None and actual.value is not None
+                else None
+            ),
+            fit_score=(
+                100 - abs(expected.value - actual.value)
+                if expected.value is not None and actual.value is not None
+                else None
+            ),
+            total_score_weight_bp=weight,
             weighted_numerator=(
-                (100 - abs(expected.value - actual.value))
-                * _condition_weight(config, expected.condition_id)
+                (100 - abs(expected.value - actual.value)) * weight
+                if expected.value is not None and actual.value is not None
+                else 0
             ),
         )
-        for expected, actual in zip(
-            preference.condition_targets, candidate.condition_scores, strict=True
-        )
+        for (expected, actual), weight in zip(condition_pairs, condition_weights, strict=True)
     )
     condition_components: tuple[
         ConditionContribution,
@@ -178,10 +195,11 @@ def score_candidate(
         if config.travel_condition_fit_bp > 0
         else 0
     )
+    condition_weight = config.travel_condition_fit_bp if any(condition_weights) else 0
     relevance_numerator = (
-        experience_fit * config.experience_fit_bp + condition_fit * config.travel_condition_fit_bp
+        experience_fit * config.experience_fit_bp + condition_fit * condition_weight
     )
-    relevance = _half_up(relevance_numerator, 10_000)
+    relevance = _half_up(relevance_numerator, config.experience_fit_bp + condition_weight)
     return (
         ScoreContribution(
             axis_components=axis_components,
@@ -212,9 +230,9 @@ def explanations(
     )[:2]
     axis_by_id = {row.axis: row for row in candidate.axis_scores}
     axis_labels = {
-        ExperienceAxis.HISTORY_TRADITION: "역사·전통",
-        ExperienceAxis.EMOTION_IMAGE: "감성·이미지",
-        ExperienceAxis.REST_IMMERSION: "휴식·몰입",
+        ExperienceAxis.HISTORY_TRADITION: "대상•원형형",
+        ExperienceAxis.EMOTION_IMAGE: "의미•이미지형",
+        ExperienceAxis.REST_IMMERSION: "자기•몰입형",
     }
     result = []
     for row in best_axes:

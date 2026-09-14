@@ -1,0 +1,881 @@
+{
+  "assessed_at": "2026-09-11T17:12:57.598656Z",
+  "assessment_sha256": "7dc8f87207879b41a358626865fbe7f1a12e4d39743e6140e46fe1cf5c1066b6",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "value": 53
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 63
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:5d62cd981cf5706700dd0bab268b79c87c84d0bd1f77dca09c6efde0d67f2783",
+            "appearance:a39de15debcae5099b9416feadad5366930b9cb3bd68161b4c754d1ee11b16eb"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "야자수, 워터월, 아치 터널, 꽃 등 시각적 경관과 연출이 묘사되어 구별되는 시각적 성격이 확인되나, 장면을 지배하는 일관된 연출까지의 근거는 아니다.",
+      "value": 56
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "repair 항목을 반영하되 인용을 원문에 존재하는 구절로 교정했다. 비밀의 통로, 워터월, 아치 터널 등 대표 장면을 관람 동선에서 경험할 수 있으나 촬영·재현 중심의 체험 근거는 없어 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "4개 구역(비밀의 정원, 물의 정원, 빅트리원, 열대과일원)을 자율적으로 둘러볼 수 있는 구성이 확인되나, 깊은 자율 탐색의 중심성까지의 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:3c81f851887ebaeba0c4d7d92ffeac119aa0ca93a82714c3f40c6a68c7f44419",
+            "appearance:723f3ac9edccc459c8cbbb92459adcbc8984938890e7390898ab45e9487596d9"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "식물 213종, 워터월, 정원 등 자연 환경 단서와 휴식 공간이 구체적으로 확인된다. 실제 고요함·회복 효과까지는 단정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "레인보우식물원은 2022년 개장한 새로운 아열대 온실로, 확인된 원형·유산과의 접촉에 관한 근거가 없다. 식물 관람은 문화유산 원형이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개장 연도 외에 이 장소의 역사·출처에 대한 서사적 맥락이 제공되지 않는다. 2022년 개장은 역사 경험의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 과일 수확체험만으로 실제 전승으로 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 없다. 식물 관찰은 일반 자연 학습이며 H.d의 유산 해설은 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'제주도 식물원에 온 듯한 느낌'이라는 표현이 있으나 이는 묘사 문구이며, 사회적으로 공유되는 상징적 의미가 이 장소에 부여되었다는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 매체를 통해 재현·확산된다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f",
+          "quote": {
+            "end": 609,
+            "method": "EXACT",
+            "original": "야자수가 하늘을 찌를 듯 서 있는 모습이 마치 제주도의 어느 식물원에 와 있는 듯한 느낌을 준다",
+            "start": 556,
+            "submitted": "야자수가 하늘을 찌를 듯 서 있는 모습이 마치 제주도의 어느 식물원에 와 있는 듯한 느낌을 준다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "69812ac18cae164063f46f0e1a44e96893bfa5bcbbfecb1d086de8ffabacba33"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "야자수, 워터월, 아치 터널, 꽃 등 시각적 경관과 연출이 묘사되어 구별되는 시각적 성격이 확인되나, 장면을 지배하는 일관된 연출까지의 근거는 아니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f",
+          "quote": {
+            "end": 418,
+            "method": "EXACT",
+            "original": "입구에서 비밀의 통로를 지나면 열대과일원과 식물원 전체를 조망할 수 있는 물의 정원이 나타나며",
+            "start": 366,
+            "submitted": "입구에서 비밀의 통로를 지나면 열대과일원과 식물원 전체를 조망할 수 있는 물의 정원이 나타나며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "69812ac18cae164063f46f0e1a44e96893bfa5bcbbfecb1d086de8ffabacba33"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "repair 항목을 반영하되 인용을 원문에 존재하는 구절로 교정했다. 비밀의 통로, 워터월, 아치 터널 등 대표 장면을 관람 동선에서 경험할 수 있으나 촬영·재현 중심의 체험 근거는 없어 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f",
+          "quote": {
+            "end": 364,
+            "method": "EXACT",
+            "original": "4개의 구역으로 구성되어 있다",
+            "start": 348,
+            "submitted": "4개의 구역으로 구성되어 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "69812ac18cae164063f46f0e1a44e96893bfa5bcbbfecb1d086de8ffabacba33"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "4개 구역(비밀의 정원, 물의 정원, 빅트리원, 열대과일원)을 자율적으로 둘러볼 수 있는 구성이 확인되나, 깊은 자율 탐색의 중심성까지의 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f",
+          "quote": {
+            "end": 477,
+            "method": "EXACT",
+            "original": "이곳에서는 구리난 외 16종의 식물과 시원한 물이 쏟아지는 워터월을 감상하며 잠시 휴식을 취할 수 있다",
+            "start": 420,
+            "submitted": "이곳에서는 구리난 외 16종의 식물과 시원한 물이 쏟아지는 워터월을 감상하며 잠시 휴식을 취할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "69812ac18cae164063f46f0e1a44e96893bfa5bcbbfecb1d086de8ffabacba33"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "식물 213종, 워터월, 정원 등 자연 환경 단서와 휴식 공간이 구체적으로 확인된다. 실제 고요함·회복 효과까지는 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "수확·요리·가공체험 및 포도/복숭아/사과/배/자두 수확 요금은 온실 옆 과일나라테마공원(과수원)의 체험일 가능성이 있으며, 레인보우식물원(아열대 온실) 자체의 참여 활동이라고 단정할 수 없다. 인용된 체험이 현재 대상의 활동인지 원문만으로 확인되지 않아 수준 3의 SUPPORTED는 유보한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 제공되지 않았다. 요리·가공체험이 단체 공동 활동인지는 확인할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:233c3c68b9c50a2d346b78dc4a0bc768aa90154b8ba45d36d8d3aae0b2f72b65",
+              "quote": {
+                "end": 18,
+                "method": "EXACT",
+                "original": "수확체험 / 요리체험 / 가공체험",
+                "start": 0,
+                "submitted": "수확체험 / 요리체험 / 가공체험",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8652f1e2a21e459d2169372f50de279a1eefc67b88c419c865139723f493773a"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:10dc2a6ec54fdd98e9ae21e2a73f67072498579007d3aae7a0e58f30d389f13b",
+              "quote": {
+                "end": 38,
+                "method": "EXACT",
+                "original": "- 포도 수확 5,000원 - 복숭아/사과/배/자두 수확 4,000원",
+                "start": 0,
+                "submitted": "- 포도 수확 5,000원 - 복숭아/사과/배/자두 수확 4,000원",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "af22aa10535377fea2a82cbf061172cccb9dd315b469dce94a33de1789fa4f89"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "수확·요리·가공체험 등 구체적 참여 활동이 확인되며, 온실 관람과 더불어 지속적 몰입 활동의 기회가 있다. 그러나 도전적 몰입이 방문 경험의 중심이라는 근거까지는 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "WRONG_SUBJECT",
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "수확·요리·가공체험 및 포도/복숭아/사과/배/자두 수확 요금은 온실 옆 과일나라테마공원(과수원)의 체험일 가능성이 있으며, 레인보우식물원(아열대 온실) 자체의 참여 활동이라고 단정할 수 없다. 인용된 체험이 현재 대상의 활동인지 원문만으로 확인되지 않아 수준 3의 SUPPORTED는 유보한다."
+        }
+      },
+      "reason": "수확·요리·가공체험 및 포도/복숭아/사과/배/자두 수확 요금은 온실 옆 과일나라테마공원(과수원)의 체험일 가능성이 있으며, 레인보우식물원(아열대 온실) 자체의 참여 활동이라고 단정할 수 없다. 인용된 체험이 현재 대상의 활동인지 원문만으로 확인되지 않아 수준 3의 SUPPORTED는 유보한다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "1296d3d10a88a2c3cca569464835d6c52453dd13cab61ba56bf248c30d20b163",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "입구 너머로 온실형 정원의 다양한 초목, 녹색 벽면, 이끼 식물 등 자연 경관 단서가 화면 대부분을 채움.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3c81f851887ebaeba0c4d7d92ffeac119aa0ca93a82714c3f40c6a68c7f44419",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "32be2becdb5175ee37225999e05fb2208d7116f9c6bc91f02f5ff25e6432cb06",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4003897_1",
+          "request_sha256": "b8ca1cf0098092fc7cd47afc5214311e5d5f9b825b9d8c7d0aa6f0a005fd5380",
+          "response_sha256": "1632f7ca5847e005a1f03e716bb314c39a151649d60751d1b32a3c2ac23ee4bb",
+          "retrieved_at": "2026-09-11T02:05:02.741962Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "03ef5db7d4d09aa4411e4e571bdc85deec8fa893299f6c38dc63c433281eeb90",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/97/4003897_image2_1.jpg"
+        },
+        "record_sha256": "5e5e9803af20876ab50fbd8a0597d658ed1ebec1928d265d0a81375b6f97537b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통 재료나 재래식 공간 구성의 흔적은 거의 보이지 않으며, 라탄 느낌 의자 정도만 약한 온기가 있을 뿐 대체로 현대적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3e1b563ee6e01030f51aa9aa7f8df186ec4629d71c32eacd17fef886812de6f5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9c774846c37c3e55ee7c0f24b40b6bb276f9fb8b1e7ffe97b830a8768b32928f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4003889_4",
+          "request_sha256": "b8ca1cf0098092fc7cd47afc5214311e5d5f9b825b9d8c7d0aa6f0a005fd5380",
+          "response_sha256": "1632f7ca5847e005a1f03e716bb314c39a151649d60751d1b32a3c2ac23ee4bb",
+          "retrieved_at": "2026-09-11T02:05:02.741962Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d2db1743873ba4744cee9364ed997ffcfdcadd055ba7f4ace37a13cbd93359ce",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/4003889_image2_1.jpg"
+        },
+        "record_sha256": "4c9e39c77e7f4cf9de83acab835afbf19c356f1825dfa2042434f59880a2e180",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "유리 커튼월, 전자 안내기기 등 현대적 외관만 보이며 전통적 재료나 공간 구성의 시각적 특성은 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4a35fc591968e919eee76e226c6bbfb2a2737009f21be80b1b06c8f917080db7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "32be2becdb5175ee37225999e05fb2208d7116f9c6bc91f02f5ff25e6432cb06",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4003897_1",
+          "request_sha256": "b8ca1cf0098092fc7cd47afc5214311e5d5f9b825b9d8c7d0aa6f0a005fd5380",
+          "response_sha256": "1632f7ca5847e005a1f03e716bb314c39a151649d60751d1b32a3c2ac23ee4bb",
+          "retrieved_at": "2026-09-11T02:05:02.741962Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "03ef5db7d4d09aa4411e4e571bdc85deec8fa893299f6c38dc63c433281eeb90",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/97/4003897_image2_1.jpg"
+        },
+        "record_sha256": "cb4ee854e5feb7c920c8cd33e51c7bd599d4801dce675164e777152e7b4a2a4f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "유리벽 너머로 비치는 풍부한 녹색 식물과 화분, 디지털 안내화면 등 현대적 요소가 어우러져 구별되는 시각적 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5d62cd981cf5706700dd0bab268b79c87c84d0bd1f77dca09c6efde0d67f2783",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "32be2becdb5175ee37225999e05fb2208d7116f9c6bc91f02f5ff25e6432cb06",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4003897_1",
+          "request_sha256": "b8ca1cf0098092fc7cd47afc5214311e5d5f9b825b9d8c7d0aa6f0a005fd5380",
+          "response_sha256": "1632f7ca5847e005a1f03e716bb314c39a151649d60751d1b32a3c2ac23ee4bb",
+          "retrieved_at": "2026-09-11T02:05:02.741962Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "03ef5db7d4d09aa4411e4e571bdc85deec8fa893299f6c38dc63c433281eeb90",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/97/4003897_image2_1.jpg"
+        },
+        "record_sha256": "2b875ade9956ff6780f8224c795913fb6ba2c689f1b538a9a200ed4142342c73",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "야자수, 대형 화분, 식재 벤치, 유리창 너머의 녹지 등 식물 요소가 공간 곳곳에 풍부하게 배치되어 자연 환경 단서가 강하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:723f3ac9edccc459c8cbbb92459adcbc8984938890e7390898ab45e9487596d9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9c774846c37c3e55ee7c0f24b40b6bb276f9fb8b1e7ffe97b830a8768b32928f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4003889_4",
+          "request_sha256": "b8ca1cf0098092fc7cd47afc5214311e5d5f9b825b9d8c7d0aa6f0a005fd5380",
+          "response_sha256": "1632f7ca5847e005a1f03e716bb314c39a151649d60751d1b32a3c2ac23ee4bb",
+          "retrieved_at": "2026-09-11T02:05:02.741962Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d2db1743873ba4744cee9364ed997ffcfdcadd055ba7f4ace37a13cbd93359ce",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/4003889_image2_1.jpg"
+        },
+        "record_sha256": "da9a413f17837cb4c2f5efe4b0603b224336f6ab6e8f3a054a48238782fa9ae4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "집 모양 검은 철골 구조물, 화분에 매달린 행잉플랜트, 밝은 테라조 바닥과 알록달록 가구가 조합된 연출된 실내 정원 스타일이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a39de15debcae5099b9416feadad5366930b9cb3bd68161b4c754d1ee11b16eb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9c774846c37c3e55ee7c0f24b40b6bb276f9fb8b1e7ffe97b830a8768b32928f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4003889_4",
+          "request_sha256": "b8ca1cf0098092fc7cd47afc5214311e5d5f9b825b9d8c7d0aa6f0a005fd5380",
+          "response_sha256": "1632f7ca5847e005a1f03e716bb314c39a151649d60751d1b32a3c2ac23ee4bb",
+          "retrieved_at": "2026-09-11T02:05:02.741962Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d2db1743873ba4744cee9364ed997ffcfdcadd055ba7f4ace37a13cbd93359ce",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/4003889_image2_1.jpg"
+        },
+        "record_sha256": "88ea02bd4d2b46cd91d36581fa5b02e85f20a977d6e6eab981fd64981f7afbf2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:10dc2a6ec54fdd98e9ae21e2a73f67072498579007d3aae7a0e58f30d389f13b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3075146",
+          "request_sha256": "fc06d4b4e30718cf57f3052dab7010aebbaf5a6cd946150ffe8d4a4bf108018e",
+          "response_sha256": "e2211bbd91ac81323c63b41970cb6c91658f94b87652fd7699658ccc1d805e1a",
+          "retrieved_at": "2026-09-11T02:05:02.413083Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ac60e26bd9c78c03fc20b7911fe5ca0281699b07ba9ce676897928a10ad29366",
+          "source_uri": null
+        },
+        "record_sha256": "af22aa10535377fea2a82cbf061172cccb9dd315b469dce94a33de1789fa4f89",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "- 포도 수확 5,000원 - 복숭아/사과/배/자두 수확 4,000원 ※ 자세한 사항은 홈페이지 참조"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:233c3c68b9c50a2d346b78dc4a0bc768aa90154b8ba45d36d8d3aae0b2f72b65",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "3075146",
+          "request_sha256": "fc06d4b4e30718cf57f3052dab7010aebbaf5a6cd946150ffe8d4a4bf108018e",
+          "response_sha256": "df215589b2689a26447cd42e06b1d847fa6996ac01ddb8ab1c84f223c5a22a49",
+          "retrieved_at": "2026-09-10T17:20:12.240947Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "399be3735ebf562d2a31ce87a47894237d0a06c52cd7f9cc1f61014237af65ac",
+          "source_uri": null
+        },
+        "record_sha256": "8652f1e2a21e459d2169372f50de279a1eefc67b88c419c865139723f493773a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "수확체험 / 요리체험 / 가공체험"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3bb04c8a5900630384357d5884aa72b9d97c3796a2819fa7031013b1188d467f",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3075146",
+          "request_sha256": "d1e602cec4750b50414f0fa6e110a941664ba07e2d48ac1754935ad981f9d427",
+          "response_sha256": "c080866e7b7d876a25c5369bf376a2c81916986602dec9835eccb339ea820f8f",
+          "retrieved_at": "2026-09-10T17:20:11.896084Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-08T02:00:44Z",
+          "source_record_sha256": "1fe900217104e9bd0444314e8145234627c4345a3f726c9464331e53b102b8cb",
+          "source_uri": null
+        },
+        "record_sha256": "69812ac18cae164063f46f0e1a44e96893bfa5bcbbfecb1d086de8ffabacba33",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "전 국민의 힐링 공간으로 2022년 1월 1일 개장한 레인보우식물원은 과일나라테마공원 오른쪽에 위치하며, 건축 면적 1,663㎡ 규모에 아열대 식물 213종 1만 1,328주를 심어 사시사철 관람할 수 있는 아열대 온실이다. 식물원 내부 온도는 땅속 깊은 곳에서 끌어올린 지열을 이용해 항상 16℃ 이상을 일정하게 유지하고 있으며, 한낮에는 25℃까지 올라가 열대과일이 잘 자랄 수 있는 환경을 조성하고 있다. 또한 일반인들이 쉽게 접하기 어려운 아열대 과일의 생장 과정을 가까이에서 관찰할 수 있어 성인은 물론 아이들의 교육장으로도 손색이 없다. 레인보우식물원은 크게 비밀의 정원, 물의 정원, 빅트리원, 열대과일원 등 4개의 구역으로 구성되어 있다. 입구에서 비밀의 통로를 지나면 열대과일원과 식물원 전체를 조망할 수 있는 물의 정원이 나타나며, 이곳에서는 구리난 외 16종의 식물과 시원한 물이 쏟아지는 워터월을 감상하며 잠시 휴식을 취할 수 있다. 주위에 예쁜 꽃들이 피어 있어 볼거리도 풍성하며, 워터월 위쪽 언덕 가장 높은 곳에도 정원이 자리하고 있다. 이어지는 빅트리원에 다다르면 야자수가 하늘을 찌를 듯 서 있는 모습이 마치 제주도의 어느 식물원에 와 있는 듯한 느낌을 준다. 이곳에서는 워싱턴야자, 극락조화, 벤자민고무나무 등 우리나라에서는 흔히 볼 수 없던 열대식물을 관찰할 수 있다. 마지막으로 열대과일원은 바오바브나무를 좌측에 두고 아치 터널을 지나 경사진 언덕길을 오르며 좌우로 열대과일의 생태를 관람할 수 있는 공간으로 구성되어 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9868806090e9f1c4fd17e03356b8d265ccd856d8a472333ca3f458f55673350b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3075146",
+          "request_sha256": "fc06d4b4e30718cf57f3052dab7010aebbaf5a6cd946150ffe8d4a4bf108018e",
+          "response_sha256": "e2211bbd91ac81323c63b41970cb6c91658f94b87652fd7699658ccc1d805e1a",
+          "retrieved_at": "2026-09-11T02:05:02.413083Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "19e118c4e347a20e3c0e11274139689c46da3880058b4e50b0f663578fbc5239",
+          "source_uri": null
+        },
+        "record_sha256": "e4b7fde7bce5de6fb49ab25c94a4b3a70f86120ceca9abb68fd24915778cb92b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b7e3fc4d78ef5d9d82f1dd41919eaa80bce9bdc6995b87e84366822b938fae85",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3075146",
+          "request_sha256": "fc06d4b4e30718cf57f3052dab7010aebbaf5a6cd946150ffe8d4a4bf108018e",
+          "response_sha256": "e2211bbd91ac81323c63b41970cb6c91658f94b87652fd7699658ccc1d805e1a",
+          "retrieved_at": "2026-09-11T02:05:02.413083Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "295b279a50aed6092f96f05dbfefeaa4fd8c1c835489e76bbabb82eecdffe83e",
+          "source_uri": null
+        },
+        "record_sha256": "9439d820f8e58c6b28855cf2aa649d14e2ec43e1be0d2e1247d3dea83a292d65",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "3ceafec5c89c6e4923b612c7df820c6f8c6f0f55c2940ae15d4268d321ee6687",
+    "place": {
+      "address": "충청북도 영동군 영동읍 영동힐링로 241-42",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+      "name_ko": "레인보우식물원",
+      "place_id": "public:korea:61d8dc3f5b10bce5dfb30c801539445e2ae3b2fd4dc3a662c737bbbf69905332",
+      "provider_content_id": "3075146",
+      "region_code": "43740",
+      "region_name": "충청북도 영동군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

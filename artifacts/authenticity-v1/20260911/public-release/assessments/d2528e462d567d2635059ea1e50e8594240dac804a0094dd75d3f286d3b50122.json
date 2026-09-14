@@ -1,0 +1,425 @@
+{
+  "assessed_at": "2026-09-11T19:47:36.898215Z",
+  "assessment_sha256": "d2528e462d567d2635059ea1e50e8594240dac804a0094dd75d3f286d3b50122",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 63
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d608a6b06c5ea4101f826a48a166682bb8690a84a8fb80ffe4d82b907c4c35d0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "태백산 입구라는 자연 인접 위치와 '자연에서 뛰놀며' 활동한다는 공식 소개로 자연 환경 단서를 확인할 수 있다. 다만 실제 고요함·회복 효과까지는 단정하지 않고 수준 2(환경 단서 확인)로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d608a6b06c5ea4101f826a48a166682bb8690a84a8fb80ffe4d82b907c4c35d0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "화석 체험장, 조리실습실, 체육활동실, 인증 프로그램, 캠프 등 구체적 참여 활동이 확인된다. 지속적 도전·몰입 수준까지 근거가 확장되지는 않아 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "청소년수련관이라는 시설 설명만 제공되며, 확인된 실제 원형·문화유산과의 접촉 근거가 없다. '화석 체험장'은 일반 과학 체험 시설로 실제 유산 실물과의 연결이 확인되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관 연도(2004년)는 단순 시설 연혁일 뿐, 이 장소의 실제 역사·사건·인물 맥락을 탐구할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 뒷받침하는 내용이 없다. 지역사회·학교와의 협력은 청소년 활동 지원 서술일 뿐 전통 전승의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "프로그램(인증 프로그램, 해외 자원봉사, 디지털 캠프 등)은 일반 청소년 활동이며 원형·유산·전통에 연결된 해설·학습이라는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "태백시 슬로건이 인용되었으나 이는 시 단위 표어이며, 수련관 자체에 사회적으로 부여된 구체적 이미지·상징 의미의 내용이 확인되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출의 시각적 성격에 대한 묘사가 없어 표현 수준을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "'청소년 전용 공간', '자치활동실' 등 자율 활동의 여지를 암시하는 시설이 언급되지만, 방문자가 자신의 방식으로 자율적으로 탐색·선택할 수 있다는 직접 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d608a6b06c5ea4101f826a48a166682bb8690a84a8fb80ffe4d82b907c4c35d0",
+          "quote": {
+            "end": 86,
+            "method": "EXACT",
+            "original": "대한민국 최고의 명산인 태백산 입구에 자리하고 있으며 청소년들이 자연에서 뛰놀며 활동할 수 있는 청소년 전용 공간이다",
+            "start": 21,
+            "submitted": "대한민국 최고의 명산인 태백산 입구에 자리하고 있으며 청소년들이 자연에서 뛰놀며 활동할 수 있는 청소년 전용 공간이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ba15fd5696b210009d5348736b18e3427056c17c1ba66102502ab7297b827eef"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "태백산 입구라는 자연 인접 위치와 '자연에서 뛰놀며' 활동한다는 공식 소개로 자연 환경 단서를 확인할 수 있다. 다만 실제 고요함·회복 효과까지는 단정하지 않고 수준 2(환경 단서 확인)로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d608a6b06c5ea4101f826a48a166682bb8690a84a8fb80ffe4d82b907c4c35d0",
+          "quote": {
+            "end": 554,
+            "method": "EXACT",
+            "original": "국가 청소년 수련활동 인증 프로그램, 청소년 해외 자원봉사 활동, 디지털 새싹 캠프 등 다양한 프로그램을 운영 중이다",
+            "start": 489,
+            "submitted": "국가 청소년 수련활동 인증 프로그램, 청소년 해외 자원봉사 활동, 디지털 새싹 캠프 등 다양한 프로그램을 운영 중이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ba15fd5696b210009d5348736b18e3427056c17c1ba66102502ab7297b827eef"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d608a6b06c5ea4101f826a48a166682bb8690a84a8fb80ffe4d82b907c4c35d0",
+          "quote": {
+            "end": 458,
+            "method": "EXACT",
+            "original": "3층은 대강당, 체육활동실로 구성되어있다",
+            "start": 436,
+            "submitted": "3층은 대강당, 체육활동실로 구성되어있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ba15fd5696b210009d5348736b18e3427056c17c1ba66102502ab7297b827eef"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "화석 체험장, 조리실습실, 체육활동실, 인증 프로그램, 캠프 등 구체적 참여 활동이 확인된다. 지속적 도전·몰입 수준까지 근거가 확장되지는 않아 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "제시 인용문은 '노력하고 있다'류의 포부형 홍보 서술로, 교류·자기표현 활동이 실제로 풍부하다는 수준 3의 사실 근거를 직접 제공하지 않는다. 자치활동실·단체 급식실 등 시설 단서는 교류 기회의 존재(수준 2~3 경계) 정도까지만 뒷받침하므로 확정이 어렵다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "b09c1030618e6c60947a2984fe1eaa5f4d9da43427c34ea769e9b99a8cd07175",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:d608a6b06c5ea4101f826a48a166682bb8690a84a8fb80ffe4d82b907c4c35d0",
+              "quote": {
+                "end": 324,
+                "method": "EXACT",
+                "original": "지역사회와 학교 그리고 지역자원을 융합하여 청소년 성장 지원에 필요한 시스템을 제공하고 이에 맞는 전문역량을 갖춘 지도자와 함께 즐거운 활동을 하며 청소년들과 적극적인 소통을 통해 역량개발의 공간이 될 수 있도록 노력하고 있다",
+                "start": 198,
+                "submitted": "지역사회와 학교 그리고 지역자원을 융합하여 청소년 성장 지원에 필요한 시스템을 제공하고 이에 맞는 전문역량을 갖춘 지도자와 함께 즐거운 활동을 하며 청소년들과 적극적인 소통을 통해 역량개발의 공간이 될 수 있도록 노력하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "ba15fd5696b210009d5348736b18e3427056c17c1ba66102502ab7297b827eef"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 3,
+          "reason": "지도자와의 활동, 청소년과의 적극적 소통, 자치활동실, 단체 급식실 등 교류·공동 활동의 구체적 기회가 확인된다. 자기표현이 중심 경험이라는 수준까지는 근거가 없어 수준 3으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT",
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "제시 인용문은 '노력하고 있다'류의 포부형 홍보 서술로, 교류·자기표현 활동이 실제로 풍부하다는 수준 3의 사실 근거를 직접 제공하지 않는다. 자치활동실·단체 급식실 등 시설 단서는 교류 기회의 존재(수준 2~3 경계) 정도까지만 뒷받침하므로 확정이 어렵다."
+        }
+      },
+      "reason": "제시 인용문은 '노력하고 있다'류의 포부형 홍보 서술로, 교류·자기표현 활동이 실제로 풍부하다는 수준 3의 사실 근거를 직접 제공하지 않는다. 자치활동실·단체 급식실 등 시설 단서는 교류 기회의 존재(수준 2~3 경계) 정도까지만 뒷받침하므로 확정이 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "fab17d5697656b2e16ee47d2d9f97b0d46ed63e62b6c2830fcd64c7943dfd9e6",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d608a6b06c5ea4101f826a48a166682bb8690a84a8fb80ffe4d82b907c4c35d0",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fb7a4c1de21ec2ca2f17050b0a187ccb67158782c16cdec9a0eee866a07f95c1",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1973361",
+          "request_sha256": "b2e04597f9eb03bf6f08e65831fd0e8354f25c2309046c6bbc7676ecd56b6ab3",
+          "response_sha256": "8f79a9a1cdf57a6b4e428aaa97a5212fe3753aaf01b3f2a7408c80c830d2d786",
+          "retrieved_at": "2026-09-10T08:07:31.822142Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-08-28T02:34:11Z",
+          "source_record_sha256": "87d5bf016efa3d9d1aff97a5f9da05397c1aae6090e1c41bd142f545169a061d",
+          "source_uri": null
+        },
+        "record_sha256": "ba15fd5696b210009d5348736b18e3427056c17c1ba66102502ab7297b827eef",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "2004년 개관한 태백시청소년수련관은 대한민국 최고의 명산인 태백산 입구에 자리하고 있으며 청소년들이 자연에서 뛰놀며 활동할 수 있는 청소년 전용 공간이다. ‘인간중심 자연중심 산소도시 태백’이라는 태백시 슬로건에 걸맞게 청소년이 맑고 푸르게 성장할 수 있도록 창조적인 청소년 중심 활동을 지원하며 꿈과 희망이 가득한 수련 시설로의 역할을 다하고 있다. 지역사회와 학교 그리고 지역자원을 융합하여 청소년 성장 지원에 필요한 시스템을 제공하고 이에 맞는 전문역량을 갖춘 지도자와 함께 즐거운 활동을 하며 청소년들과 적극적인 소통을 통해 역량개발의 공간이 될 수 있도록 노력하고 있다. 수련관은 태백관과 함백관으로 구성되어 있다. 태백관의 지하 1층에는 화석 체험장, 단체 급식실 등이 자리하고 있으며, 1층은 상상 놀이터, 자치활동실, 보건실, 조리실습실로 2층은 청소년 수련방, 3층은 대강당, 체육활동실로 구성되어있다. 함백관은 청소년 수련방으로 꾸며져있다. 수련관에서는 국가 청소년 수련활동 인증 프로그램, 청소년 해외 자원봉사 활동, 디지털 새싹 캠프 등 다양한 프로그램을 운영 중이다. 태백시청소년수련관은 청소년들이 즐거운 프로그램을 할 수 있도록 기회를 제공하고 창의적이고 미래지향적인 인재를 육성하기 위해 다양하고 안전한 청소년 활동과 청소년의 올바른 진로 탐색을 위해 노력하고 있다."
+      }
+    ],
+    "parent_source_sha256": "0e050fd5b5a268fcd5ca3e8bad69b542842ef9aeb4a7ae9b26338bcc9a2cfef9",
+    "place": {
+      "address": "강원특별자치도 태백시 천제단길 148 (소도동)",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:fb7a4c1de21ec2ca2f17050b0a187ccb67158782c16cdec9a0eee866a07f95c1",
+      "name_ko": "태백시청소년수련관",
+      "place_id": "public:korea:fb7a4c1de21ec2ca2f17050b0a187ccb67158782c16cdec9a0eee866a07f95c1",
+      "provider_content_id": "1973361",
+      "region_code": "51190",
+      "region_name": "강원특별자치도 태백시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

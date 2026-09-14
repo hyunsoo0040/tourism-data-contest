@@ -1,0 +1,1193 @@
+{
+  "assessed_at": "2026-09-11T17:46:46.319503Z",
+  "assessment_sha256": "9ffd2d114376cab194f6ed50e2d90e3b408fe0e3e4e7980146785425692326cb",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.d"
+      ],
+      "value": 47
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+            "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "시대별 문화 전시와 유산·역사에 연결된 해설·교육이 제공된다. 여러 자료를 활용한 심층 탐구가 방문 경험의 중심이라고 보기는 어려워 3수준으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "Odii 해설 오디오라는 한 매체를 통해 장소의 이미지가 서사적으로 표현·유통된다는 명시적 근거는 있으나, 반복적 확산의 근거는 없어 2수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1a671c950d7b9c120f41ef7a576cf9d76170a32ce5ad8390d51f6da0d3c6fb83",
+            "appearance:7629f24c52be2863b15ee1047679de058f5c1f25d7906533d06925de692e2ffd",
+            "appearance:f9365179b2ac57865c82f8a10fcfc514bb6f795153fb638e57183b4088117f7e"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "해당 출처는 VISUAL_EXPRESSION을 허용하며, 야외 전시장에 고인돌·집터·토기가마·석탑 등이 곳곳에 배치되어 시각적으로 구별되는 장소의 성격이 확인된다. 다만 두 번째 인용의 VISUAL_APPEARANCE 주장은 이 출처의 allowed_claims에 없고 픽셀 전용 주장이므로 제외했다. 일관된 경관·연출이 장면 전체를 지배한다는 근거는 없어 수준 3으로 판단했다.",
+      "value": 77
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "야외 전시장을 산책하며 자율적으로 둘러보고 여러 전시 중 선택해 관람할 기회가 확인된다. 일상 이탈 경험이 중심이라는 근거는 없어 3수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:9dc17dda26cd2688fecf7ed67785ae998d68f284edd54c085c8cf73ff95ac6bf",
+            "appearance:a128f84d979165ead98af06491398f7cc86af0b8a0fc9b3c5cd00934eae30943",
+            "appearance:ddeb40504c4bc6d2b3fbaf9fd57e45a7371fdf24cab4d5a2aab4fb4d6b29575d"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 17,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "야외 산책 공간이라는 환경 단서는 있으나, '자연·시각적 저자극 환경이 두드러짐'(수준 3)을 뒷받침하는 직접 근거(녹지·고요함 등)는 없다. 홍보 문구 부재 상태에서 수준 3 단정은 이르다.",
+      "value": 17
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "세대별·계층별 교육 프로그램을 통한 공동 활동의 기회가 확인되나, 교류·자기표현이 풍부하다는 근거는 부족해 2수준이다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "앵커는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(수준 4)인데, 근거는 유산 관람 가능성(수준 3)만 뒷받침한다. 판단 사유 스스로 수준 3이라 명시하므로 제안된 앵커 수준(4)은 지지되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "시대별 문화상 전시와 대구 섬유 산업 맥락 소개는 확인되나, '구체적 역사 맥락의 탐구가 방문 경험의 중심'(수준 4)임을 뒷받침하는 근거는 없다. 전시 존재가 탐구 중심성을 증명하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체에 의한 현재의 전승·생활문화 활동과의 실제 연결을 뒷받침하는 근거가 제공되지 않았다. 복식문화실은 과거 산업사의 전시이며 현재 전승 활동을 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+          "quote": {
+            "end": 269,
+            "method": "EXACT",
+            "original": "고대문화실과 중세문화실에서는 시대별 문화상을 만나볼 수 있어요",
+            "start": 235,
+            "submitted": "고대문화실과 중세문화실에서는 시대별 문화상을 만나볼 수 있어요",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205"
+        },
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+          "quote": {
+            "end": 382,
+            "method": "EXACT",
+            "original": "옷의 역사를 국내외의 다양한 자료를 통해 교체·전시하고 있다",
+            "start": 349,
+            "submitted": "옷의 역사를 국내외의 다양한 자료를 통해 교체·전시하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+        }
+      ],
+      "flags": [],
+      "key": "H.d",
+      "level": 3,
+      "reason": "시대별 문화 전시와 유산·역사에 연결된 해설·교육이 제공된다. 여러 자료를 활용한 심층 탐구가 방문 경험의 중심이라고 보기는 어려워 3수준으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "대구 섬유 도시 이미지와 문화 이야기가 장소와 연결된 것은 확인되나, '여러 표현·장면에서 일관된 의미를 확인'(수준 3)하는 반복 근거는 부족하다. 판단 사유도 근거 제한을 인정한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+          "quote": {
+            "end": 49,
+            "method": "EXACT",
+            "original": "국립대구박물관 대구와 경상북도의 문화유산을 보존하고 연구하며 전시·교육하기 위해 만들어진",
+            "start": 0,
+            "submitted": "국립대구박물관 대구와 경상북도의 문화유산을 보존하고 연구하며 전시·교육하기 위해 만들어진",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "Odii 해설 오디오라는 한 매체를 통해 장소의 이미지가 서사적으로 표현·유통된다는 명시적 근거는 있으나, 반복적 확산의 근거는 없어 2수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+          "quote": {
+            "end": 449,
+            "method": "EXACT",
+            "original": "야외 전시장에는 청동기 시대의 고인돌과 집터, 삼국 시대의 토기가마, 통일신라 시대의 석탑 등이 곳곳에 전시되어 있어",
+            "start": 384,
+            "submitted": "야외 전시장에는 청동기 시대의 고인돌과 집터, 삼국 시대의 토기가마, 통일신라 시대의 석탑 등이 곳곳에 전시되어 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "해당 출처는 VISUAL_EXPRESSION을 허용하며, 야외 전시장에 고인돌·집터·토기가마·석탑 등이 곳곳에 배치되어 시각적으로 구별되는 장소의 성격이 확인된다. 다만 두 번째 인용의 VISUAL_APPEARANCE 주장은 이 출처의 allowed_claims에 없고 픽셀 전용 주장이므로 제외했다. 일관된 경관·연출이 장면 전체를 지배한다는 근거는 없어 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "앵커는 '촬영·참여로 이미지나 장면을 재현'(수준 3)이지만, 인용은 야외 유산을 산책하며 관람할 수 있다는 내용으로 수준 2(장면 관람)까지만 뒷받침한다. 재현·참여 근거가 없어 판단 사유도 인정했다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+          "quote": {
+            "end": 464,
+            "method": "EXACT",
+            "original": "산책하며 둘러볼 수 있다",
+            "start": 451,
+            "submitted": "산책하며 둘러볼 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+          "quote": {
+            "end": 506,
+            "method": "EXACT",
+            "original": "연중 다채롭고 흥미로운 전시가 열리며",
+            "start": 486,
+            "submitted": "연중 다채롭고 흥미로운 전시가 열리며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "야외 전시장을 산책하며 자율적으로 둘러보고 여러 전시 중 선택해 관람할 기회가 확인된다. 일상 이탈 경험이 중심이라는 근거는 없어 3수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "야외 산책 공간이라는 환경 단서는 있으나, '자연·시각적 저자극 환경이 두드러짐'(수준 3)을 뒷받침하는 직접 근거(녹지·고요함 등)는 없다. 홍보 문구 부재 상태에서 수준 3 단정은 이르다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "교육 프로그램 운영은 확인되나, '지속적으로 참여·도전할 활동'(수준 3)임을 보여주는 프로그램의 구체적 내용·강도 근거가 없다. 교육 프로그램 존재만으로 지속적 도전·몰입을 추정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+          "quote": {
+            "end": 576,
+            "method": "EXACT",
+            "original": "세대별·계층별 맞춤형 교육 프로그램을 연중 운영하고 있다",
+            "start": 545,
+            "submitted": "세대별·계층별 맞춤형 교육 프로그램을 연중 운영하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "세대별·계층별 교육 프로그램을 통한 공동 활동의 기회가 확인되나, 교류·자기표현이 풍부하다는 근거는 부족해 2수준이다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+              "quote": {
+                "end": 449,
+                "method": "EXACT",
+                "original": "야외 전시장에는 청동기 시대의 고인돌과 집터, 삼국 시대의 토기가마, 통일신라 시대의 석탑 등이 곳곳에 전시되어 있어",
+                "start": 384,
+                "submitted": "야외 전시장에는 청동기 시대의 고인돌과 집터, 삼국 시대의 토기가마, 통일신라 시대의 석탑 등이 곳곳에 전시되어 있어",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+            },
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+              "quote": {
+                "end": 44,
+                "method": "EXACT",
+                "original": "대구와 경상북도의 문화유산을 보존·연구·전시·교육하는 문화시설로",
+                "start": 9,
+                "submitted": "대구와 경상북도의 문화유산을 보존·연구·전시·교육하는 문화시설로",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+            }
+          ],
+          "flags": [],
+          "key": "H.a",
+          "level": 3,
+          "reason": "국립대구박물관이 대구·경북의 문화유산을 보존·전시하며 고인돌, 토기가마, 석탑 등 유산을 관람할 수 있다는 공식 소개가 있다. 실물 원형에 대한 구체적 탐구 수준까지는 확인되지 않아 3수준으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "앵커는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(수준 4)인데, 근거는 유산 관람 가능성(수준 3)만 뒷받침한다. 판단 사유 스스로 수준 3이라 명시하므로 제안된 앵커 수준(4)은 지지되지 않는다."
+        }
+      },
+      "reason": "앵커는 '원형·유산의 공간이나 실물을 구체적으로 탐구'(수준 4)인데, 근거는 유산 관람 가능성(수준 3)만 뒷받침한다. 판단 사유 스스로 수준 3이라 명시하므로 제안된 앵커 수준(4)은 지지되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+              "quote": {
+                "end": 341,
+                "method": "EXACT",
+                "original": "구석기시대부터 조선시대까지의 문화상을 모두 전시해 놓았는데요, 인류가 가장 처음 남긴 구석기문화, 삼국시대 신라와 가야의 문화",
+                "start": 271,
+                "submitted": "구석기시대부터 조선시대까지의 문화상을 모두 전시해 놓았는데요, 인류가 가장 처음 남긴 구석기문화, 삼국시대 신라와 가야의 문화",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205"
+            },
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+              "quote": {
+                "end": 539,
+                "method": "EXACT",
+                "original": "대구는 섬유복식 산업을 바탕으로 근대도시로 발전할 수 있었기에 복식문화실을 만들게 되었답니다",
+                "start": 488,
+                "submitted": "대구는 섬유복식 산업을 바탕으로 근대도시로 발전할 수 있었기에 복식문화실을 만들게 되었답니다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 4,
+          "reason": "시대별 문화상 전시와 대구의 섬유·복식 산업 기반 근대 도시 성장사 등 여러 역사 맥락이 이 장소의 전시와 연결되어 설명된다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "시대별 문화상 전시와 대구 섬유 산업 맥락 소개는 확인되나, '구체적 역사 맥락의 탐구가 방문 경험의 중심'(수준 4)임을 뒷받침하는 근거는 없다. 전시 존재가 탐구 중심성을 증명하지 않는다."
+        }
+      },
+      "reason": "시대별 문화상 전시와 대구 섬유 산업 맥락 소개는 확인되나, '구체적 역사 맥락의 탐구가 방문 경험의 중심'(수준 4)임을 뒷받침하는 근거는 없다. 전시 존재가 탐구 중심성을 증명하지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "REPRESENTED_MEANING",
+              "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+              "quote": {
+                "end": 486,
+                "method": "EXACT",
+                "original": "이곳은 대구만의 특별한 이야기를 담아 만들어진 전시관인데요",
+                "start": 454,
+                "submitted": "이곳은 대구만의 특별한 이야기를 담아 만들어진 전시관인데요",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205"
+            },
+            {
+              "claim": "REPRESENTED_MEANING",
+              "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+              "quote": {
+                "end": 829,
+                "method": "EXACT",
+                "original": "국립대구박물관에서 대구·경북의 문화와 역사를 생생하게 만나보세요",
+                "start": 794,
+                "submitted": "국립대구박물관에서 대구·경북의 문화와 역사를 생생하게 만나보세요",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205"
+            }
+          ],
+          "flags": [],
+          "key": "E.a",
+          "level": 3,
+          "reason": "대구의 섬유 산업 도시라는 구체적 이미지와 대구·경북 문화의 상징적 의미가 이 장소와 연결되어 표현된다. 여러 장면에서 일관되게 확인된다고 보기에는 근거가 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.a",
+          "reason": "대구 섬유 도시 이미지와 문화 이야기가 장소와 연결된 것은 확인되나, '여러 표현·장면에서 일관된 의미를 확인'(수준 3)하는 반복 근거는 부족하다. 판단 사유도 근거 제한을 인정한다."
+        }
+      },
+      "reason": "대구 섬유 도시 이미지와 문화 이야기가 장소와 연결된 것은 확인되나, '여러 표현·장면에서 일관된 의미를 확인'(수준 3)하는 반복 근거는 부족하다. 판단 사유도 근거 제한을 인정한다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+              "quote": {
+                "end": 464,
+                "method": "EXACT",
+                "original": "산책하며 둘러볼 수 있다",
+                "start": 451,
+                "submitted": "산책하며 둘러볼 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+            },
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+              "quote": {
+                "end": 725,
+                "method": "EXACT",
+                "original": "야외를 산책하다 보면 청동기시대 고인돌과 집터, 삼국시대 토기가마, 통일신라시대의 석탑 등을 곳곳에서 만날 수 있어요",
+                "start": 660,
+                "submitted": "야외를 산책하다 보면 청동기시대 고인돌과 집터, 삼국시대 토기가마, 통일신라시대의 석탑 등을 곳곳에서 만날 수 있어요",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 3,
+          "reason": "대표 유산 장면을 현장에서 직접 관람·경험할 수 있다. 촬영·참여를 통한 재현 기회의 근거는 없어 3수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "앵커는 '촬영·참여로 이미지나 장면을 재현'(수준 3)이지만, 인용은 야외 유산을 산책하며 관람할 수 있다는 내용으로 수준 2(장면 관람)까지만 뒷받침한다. 재현·참여 근거가 없어 판단 사유도 인정했다."
+        }
+      },
+      "reason": "앵커는 '촬영·참여로 이미지나 장면을 재현'(수준 3)이지만, 인용은 야외 유산을 산책하며 관람할 수 있다는 내용으로 수준 2(장면 관람)까지만 뒷받침한다. 재현·참여 근거가 없어 판단 사유도 인정했다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+              "quote": {
+                "end": 464,
+                "method": "EXACT",
+                "original": "야외 전시장에는 청동기 시대의 고인돌과 집터, 삼국 시대의 토기가마, 통일신라 시대의 석탑 등이 곳곳에 전시되어 있어, 산책하며 둘러볼 수 있다",
+                "start": 384,
+                "submitted": "야외 전시장에는 청동기 시대의 고인돌과 집터, 삼국 시대의 토기가마, 통일신라 시대의 석탑 등이 곳곳에 전시되어 있어, 산책하며 둘러볼 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 3,
+          "reason": "야외 산책이 가능한 전시 공간 등 머물며 둘러볼 환경 단서가 확인된다. 자연 환경이나 고요함이 두드러진다는 직접 근거는 없어 3수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "야외 산책 공간이라는 환경 단서는 있으나, '자연·시각적 저자극 환경이 두드러짐'(수준 3)을 뒷받침하는 직접 근거(녹지·고요함 등)는 없다. 홍보 문구 부재 상태에서 수준 3 단정은 이르다."
+        }
+      },
+      "reason": "야외 산책 공간이라는 환경 단서는 있으나, '자연·시각적 저자극 환경이 두드러짐'(수준 3)을 뒷받침하는 직접 근거(녹지·고요함 등)는 없다. 홍보 문구 부재 상태에서 수준 3 단정은 이르다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+              "quote": {
+                "end": 576,
+                "method": "EXACT",
+                "original": "박물관 교육의 활성화를 위해 해솔관에 다양한 교육 시설을 마련하고 세대별·계층별 맞춤형 교육 프로그램을 연중 운영하고 있다",
+                "start": 508,
+                "submitted": "박물관 교육의 활성화를 위해 해솔관에 다양한 교육 시설을 마련하고 세대별·계층별 맞춤형 교육 프로그램을 연중 운영하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+              "quote": {
+                "end": 792,
+                "method": "EXACT",
+                "original": "해솔관에서 열리는 교육프로그램도 놓칠 수 없겠죠",
+                "start": 766,
+                "submitted": "해솔관에서 열리는 교육프로그램도 놓칠 수 없겠죠",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "연중 운영되는 세대별 교육 프로그램이라는 구체적 참여 활동이 확인된다. 지속적 도전·몰입 활동이 방문 경험의 중심이라는 근거는 없어 3수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "교육 프로그램 운영은 확인되나, '지속적으로 참여·도전할 활동'(수준 3)임을 보여주는 프로그램의 구체적 내용·강도 근거가 없다. 교육 프로그램 존재만으로 지속적 도전·몰입을 추정하기 어렵다."
+        }
+      },
+      "reason": "교육 프로그램 운영은 확인되나, '지속적으로 참여·도전할 활동'(수준 3)임을 보여주는 프로그램의 구체적 내용·강도 근거가 없다. 교육 프로그램 존재만으로 지속적 도전·몰입을 추정하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "43bbd00d8a27c0961610a65fbe34d9e803c8ad08c17374d473349140c4fbb626",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "청동 유물의 녹청·적갈 색 patina가 흰 배경 위에 강한 대비를 이루고, 사선 조명이 뚜렷한 그림자를 만들어 연출된 전시 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1a671c950d7b9c120f41ef7a576cf9d76170a32ce5ad8390d51f6da0d3c6fb83",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e2ee6f5be294f3f2c3bcecb70259aed85dfb64efa315ec334e682d66421ed71",
+        "match_basis": [
+          "공식 촬영지역 대구광역시 수성구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2556797",
+          "request_sha256": "b874bae2e5549e2b00219186d08ea3edd8840812574bb77149b9d8ab4e85c21a",
+          "response_sha256": "8c5f1ecbe299abb7be509e934f5e4457e362b236b6b93b54bc54ace07910bd10",
+          "retrieved_at": "2026-09-10T08:21:06.713172Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b134e1a95bf3499be10f86c627df35af0be745e51b3d6c92883b4a155afd0d87",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/97/2556797.jpg"
+        },
+        "record_sha256": "d553444addc6f4805b1a96677ce6f8bcace3bf942d940f8483d2667f31f63a87",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "화강암 석탑, 한문 비석, 전통 문양 담장 등 전통 외관 요소가 눈에 띄게 배치되어 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:342e69c930ee6a184cb64937dfa8c1421a266a478a9cce9e8c8d92d3a6f30bc3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2cd4186ab0324c31cec46bdd54e6f7762e0dfb8b0f7e874c6477911a97f44d45",
+        "match_basis": [
+          "공식 촬영지역 대구광역시 수성구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2556784",
+          "request_sha256": "b874bae2e5549e2b00219186d08ea3edd8840812574bb77149b9d8ab4e85c21a",
+          "response_sha256": "8c5f1ecbe299abb7be509e934f5e4457e362b236b6b93b54bc54ace07910bd10",
+          "retrieved_at": "2026-09-10T08:21:06.713172Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d9e42c7ae64452aa38b995d8913f612868681531d64506978da0963f7574d3f2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/84/2556784.jpg"
+        },
+        "record_sha256": "8446c55ae639e051fed5132e6a74416b4216f78069adb2836c95477f72df543d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "전통 토기가 다양한 형태로 진열되어 있으며, 소박한 흙 빛깔과 곡선이 전통적 외관의 인상을 강하게 나타냄.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:407ea02fef5b94352288c91799b700436e44d8b8a278fbf74db7f7769af651b3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e3cb6ae1e071d81563555b38edf0623dc2747de70cd2f2341fbf1210a0d12609",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3008586_16",
+          "request_sha256": "5f1d4518e6bd5d012be9ad7c272e2df397b84bcc97dff400583ce0b30e03eca7",
+          "response_sha256": "b5b4a23692474c55feb0f3b9e5ae4dcc4747542adf8ceb0fd506d82a994ecc8b",
+          "retrieved_at": "2026-09-10T08:21:05.305474Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1aed7a11c74a41f306591ae118a5c98fb15046020e4d0141f5be5e4001ac62c1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/86/3008586_image2_1.jpg"
+        },
+        "record_sha256": "702a586c47b5a073709fd63efaed6e31efc0875ba7a81f44ab0b5e20248401b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "동검, 동모, 청동 거울, 장식 구슬 등 전통 금속 공예품의 재질과 형태가 화면 전체를 지배하며 고전적 외관이 매우 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:57f85bca474c9cacc1965c4357a7f290db783a0cbe9fa75ea262265861df2357",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e2ee6f5be294f3f2c3bcecb70259aed85dfb64efa315ec334e682d66421ed71",
+        "match_basis": [
+          "공식 촬영지역 대구광역시 수성구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2556797",
+          "request_sha256": "b874bae2e5549e2b00219186d08ea3edd8840812574bb77149b9d8ab4e85c21a",
+          "response_sha256": "8c5f1ecbe299abb7be509e934f5e4457e362b236b6b93b54bc54ace07910bd10",
+          "retrieved_at": "2026-09-10T08:21:06.713172Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b134e1a95bf3499be10f86c627df35af0be745e51b3d6c92883b4a155afd0d87",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/97/2556797.jpg"
+        },
+        "record_sha256": "5f57114bfaef31d2be6916cf1b97c4573438713b6371f704ecc1446b96b083ab",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "적벽돌 건물과 청록색 대형 배너, 잘 다듬은 소나무와 석탑이 대비되어 구도와 색채의 연출이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7629f24c52be2863b15ee1047679de058f5c1f25d7906533d06925de692e2ffd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2cd4186ab0324c31cec46bdd54e6f7762e0dfb8b0f7e874c6477911a97f44d45",
+        "match_basis": [
+          "공식 촬영지역 대구광역시 수성구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2556784",
+          "request_sha256": "b874bae2e5549e2b00219186d08ea3edd8840812574bb77149b9d8ab4e85c21a",
+          "response_sha256": "8c5f1ecbe299abb7be509e934f5e4457e362b236b6b93b54bc54ace07910bd10",
+          "retrieved_at": "2026-09-10T08:21:06.713172Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d9e42c7ae64452aa38b995d8913f612868681531d64506978da0963f7574d3f2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/84/2556784.jpg"
+        },
+        "record_sha256": "9dcd823d5dec7e64a74e32dafb6608cb3597080b1bb19b290f4919f74b78ff72",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "박물관 전시 벽면과 인공 조명만 보이며 녹지·물·자연 경관 등 자연 환경 단서는 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9dc17dda26cd2688fecf7ed67785ae998d68f284edd54c085c8cf73ff95ac6bf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e2ee6f5be294f3f2c3bcecb70259aed85dfb64efa315ec334e682d66421ed71",
+        "match_basis": [
+          "공식 촬영지역 대구광역시 수성구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2556797",
+          "request_sha256": "b874bae2e5549e2b00219186d08ea3edd8840812574bb77149b9d8ab4e85c21a",
+          "response_sha256": "8c5f1ecbe299abb7be509e934f5e4457e362b236b6b93b54bc54ace07910bd10",
+          "retrieved_at": "2026-09-10T08:21:06.713172Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b134e1a95bf3499be10f86c627df35af0be745e51b3d6c92883b4a155afd0d87",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/97/2556797.jpg"
+        },
+        "record_sha256": "47b42a14da339d9201f9f26605cc716b010fe2617129fbf6c63b3f3838f93511",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a128f84d979165ead98af06491398f7cc86af0b8a0fc9b3c5cd00934eae30943",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e3cb6ae1e071d81563555b38edf0623dc2747de70cd2f2341fbf1210a0d12609",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3008586_16",
+          "request_sha256": "5f1d4518e6bd5d012be9ad7c272e2df397b84bcc97dff400583ce0b30e03eca7",
+          "response_sha256": "b5b4a23692474c55feb0f3b9e5ae4dcc4747542adf8ceb0fd506d82a994ecc8b",
+          "retrieved_at": "2026-09-10T08:21:05.305474Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1aed7a11c74a41f306591ae118a5c98fb15046020e4d0141f5be5e4001ac62c1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/86/3008586_image2_1.jpg"
+        },
+        "record_sha256": "0e315798dd6306d5392fd86a9315a55554deb516b80793bb541a71eaf770608e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "잔디밭과 소나무, 잔디 사이 석탑·비석 등 녹지 요소가 보이나 건물과 광장이 상당 부분을 차지한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ddeb40504c4bc6d2b3fbaf9fd57e45a7371fdf24cab4d5a2aab4fb4d6b29575d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2cd4186ab0324c31cec46bdd54e6f7762e0dfb8b0f7e874c6477911a97f44d45",
+        "match_basis": [
+          "공식 촬영지역 대구광역시 수성구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2556784",
+          "request_sha256": "b874bae2e5549e2b00219186d08ea3edd8840812574bb77149b9d8ab4e85c21a",
+          "response_sha256": "8c5f1ecbe299abb7be509e934f5e4457e362b236b6b93b54bc54ace07910bd10",
+          "retrieved_at": "2026-09-10T08:21:06.713172Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d9e42c7ae64452aa38b995d8913f612868681531d64506978da0963f7574d3f2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/84/2556784.jpg"
+        },
+        "record_sha256": "0d2734dfdddcc2cea9656fec5fa97dc48773b5fc51aad975dc5be1920978ef84",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "어두운 배경과 은은한 조명이 토기 형태를 극적으로 부각시키는 연출이 장면 전체를 지배하며, 사선 구도와 유리 반사까지 시각적 성격이 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f9365179b2ac57865c82f8a10fcfc514bb6f795153fb638e57183b4088117f7e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e3cb6ae1e071d81563555b38edf0623dc2747de70cd2f2341fbf1210a0d12609",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3008586_16",
+          "request_sha256": "5f1d4518e6bd5d012be9ad7c272e2df397b84bcc97dff400583ce0b30e03eca7",
+          "response_sha256": "b5b4a23692474c55feb0f3b9e5ae4dcc4747542adf8ceb0fd506d82a994ecc8b",
+          "retrieved_at": "2026-09-10T08:21:05.305474Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1aed7a11c74a41f306591ae118a5c98fb15046020e4d0141f5be5e4001ac62c1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/86/3008586_image2_1.jpg"
+        },
+        "record_sha256": "f1d4fb56046b4b32109965131236b8d05c88b3634cf124fd86fb1b6f0f725690",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:beeef907b9d9676a0057f741617f7f5fc33bcd635b914e21b3520a7595457591",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "130132",
+          "request_sha256": "8a24d87afbd5b1667fd7a709b67d04d699e26f7b6efae805ad93ea75c7fce737",
+          "response_sha256": "64685ecab2836c292cf90212bb2f145a64887abe917e5e6f9af1d743f6253cce",
+          "retrieved_at": "2026-09-10T07:59:19.486359Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-07-07T07:09:56Z",
+          "source_record_sha256": "0fab4911a7a2073173db48393e7ddbb699948ee99170f35cb534903dcfb452a5",
+          "source_uri": null
+        },
+        "record_sha256": "d25960bdf1eeab10ee0696a41ed6438bec1bf1703bbf88fa666bb2187ba0b037",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "국립대구박물관은 대구와 경상북도의 문화유산을 보존·연구·전시·교육하는 문화시설로, 1994년 12월 7일 문을 열었다. 2006년 10월 19일에는 박물관 건물 남쪽에 수장고를 추가하고, 북쪽에는 사회교육관인 해솔관과 특별전시실을 증축하였다. 이후, 지방 국립박물관 전시의 특성화와 안정적인 전시 환경 확보를 위해 상설전시실 재개편 공사를 시행하였으며, 2010년 7월 19일에는 고대문화실, 중세문화실, 복식문화실을 새롭게 개관하였다. 특히, 기존의 민속실을 대신해 새로 문을 연 복식문화실은 대구가 섬유·복식 산업을 기반으로 근대 도시로 성장한 배경을 바탕으로 조성되었다. 이 공간에서는 우리 삶에서 큰 부분을 차지하는 옷의 역사를 국내외의 다양한 자료를 통해 교체·전시하고 있다. 야외 전시장에는 청동기 시대의 고인돌과 집터, 삼국 시대의 토기가마, 통일신라 시대의 석탑 등이 곳곳에 전시되어 있어, 산책하며 둘러볼 수 있다. 또한, 기획전시실과 특별전시실에서는 연중 다채롭고 흥미로운 전시가 열리며, 박물관 교육의 활성화를 위해 해솔관에 다양한 교육 시설을 마련하고 세대별·계층별 맞춤형 교육 프로그램을 연중 운영하고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:da04733d8cd21ee20ddd49113d04f65159fe4118cc6aebe438e20346ae626dad",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3536",
+          "request_sha256": "012bac2de444b3ca54fab44ed23fab5cebc815f7c447301377d83b6f3abef7b0",
+          "response_sha256": "ae3de77e5d7fbd0336284aef7f7faad01961d5487c03a79b5cde218c7b2e0621",
+          "retrieved_at": "2026-09-10T08:21:05.724324Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-02-10T02:23:56Z",
+          "source_record_sha256": "98a35cd6269af832dd347fa56c87b64be2a1aa5bb82f88a1cabe8770dff976a1",
+          "source_uri": null
+        },
+        "record_sha256": "d94da9b7b59d044e442411369581ec00813fc03fd3ab0c5b91f1f3e9567b5205",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "국립대구박물관 대구와 경상북도의 문화유산을 보존하고 연구하며 전시·교육하기 위해 만들어진 국립대구박물관은, 1994년 대구에 처음 문을 열었습니다. 이후 2006년에는 남쪽에 수장고를 추가하고 북쪽에 해솔관과 특별전시실을 증축했어요. 또한 2010년에는 고대문화실, 중세문화실, 복식문화실로 새롭게 단장하는 등 국립대구박물관은 끊임없이 발전하는 박물관이랍니다. 그럼, 본격적으로 국립대구박물관에 대해 살펴볼까요? 우선, 고대문화실과 중세문화실에서는 시대별 문화상을 만나볼 수 있어요. 구석기시대부터 조선시대까지의 문화상을 모두 전시해 놓았는데요, 인류가 가장 처음 남긴 구석기문화, 삼국시대 신라와 가야의 문화, 그리고 유교를 바탕으로 성장한 조선시대의 문화까지 역사의 흐름에 따라 다양한 문화를 배우고 느낄 수 있답니다. 다음으로는 기존의 민속실을 대신하여 새롭게 문을 열게 된 복식문화실에 대해 알아볼까요? 이곳은 대구만의 특별한 이야기를 담아 만들어진 전시관인데요, 대구는 섬유복식 산업을 바탕으로 근대도시로 발전할 수 있었기에 복식문화실을 만들게 되었답니다. 이 전시실에서는 우리 삶에서 큰 부분을 차지하는 옷의 역사에 대해 알아볼 수 있어요. 특히 국내외의 자료를 바탕으로 전시 내용을 교체하고 있어서 더욱 풍성한 전시가 된답니다. 야외 전시실에도 볼거리가 가득한데요, 야외를 산책하다 보면 청동기시대 고인돌과 집터, 삼국시대 토기가마, 통일신라시대의 석탑 등을 곳곳에서 만날 수 있어요. 그 밖에도 기획전시실과 특별전시실에서 열리는 다양하고 흥미로운 전시와 해솔관에서 열리는 교육프로그램도 놓칠 수 없겠죠? 국립대구박물관에서 대구·경북의 문화와 역사를 생생하게 만나보세요!"
+      }
+    ],
+    "parent_source_sha256": "134ab2d8fcd98902b50f3c36904237fd89eb00a0e602f11b341179d2c7727aff",
+    "place": {
+      "address": "대구광역시 수성구 청호로 321",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+      "name_ko": "국립대구박물관",
+      "place_id": "public:korea:31004d60cd3c79afa0dcaabcf4fe74625a503b3747cc2a5245a6dadeb586d223",
+      "provider_content_id": "130132",
+      "region_code": "27260",
+      "region_name": "대구광역시 수성구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

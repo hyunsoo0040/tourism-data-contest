@@ -1,0 +1,820 @@
+{
+  "assessed_at": "2026-09-11T18:11:50.755466Z",
+  "assessment_sha256": "5b74551267f9490e7989e20b98de743591b64f68dbfa9f3d4ee7a1c0a5b6e015",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 34
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:6698c338cbcd34fa487fc89cc48930c299ac6d3288600aafbe784292728fe107",
+            "appearance:da1dc4a1b9f5fa95925b3580c92bcc5b4a635fb962e26157be7e89eedbaab117",
+            "appearance:daf747c89189be05f8a96f635ed531a1f73e0faa663845a319495bd3ebcebe31"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "시각적 표현에 대한 직접 관찰 근거가 없다. 실내 빙상장·수영장 언급은 외관·경관의 시각적 성격을 판단할 정보가 아니다.",
+      "value": 67
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7e757a44df5ff643abce03e3e7961fbe2e62b31bfc921d07706b0c02220cf7e0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "정기 회원이 아니어도 일일 이용권으로 자유롭게 이용할 수 있다는 설명이 있어 자기 선택적 이용의 기회를 직접 확인할 수 있다. 다만 자율 탐색이 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:514ffb15a5025be110387af5ba647bd237c9bf3e23249c60d1b4287e3c13f6b3",
+            "appearance:ac7469cd3745a647db2446215399c1433be2cadd876aebe361cafebd058a0e2a",
+            "appearance:e47f45937a57c2adf87c990485e6618feb4ed60cf9c184e2f4d82de2d017fc8e"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 17,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "'상시 쾌적한 온도'는 시설 관리 설명일 뿐 자연 환경·시각적 저자극·회복 환경의 근거가 아니다. 홍보 문구만으로 회복 환경을 추정하지 않는다.",
+      "value": 17
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "의창스포츠센터는 종합 체육 공간으로, 원형·유산과의 접촉을 뒷받침하는 근거가 없다. 일일 이용권 안내 등은 유산 경험과 무관하므로 판단 불가.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소의 실제 역사·연혁·출처에 대한 설명이 제공되지 않았다. 개관 정보와 시설 소개만으로 역사 맥락을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 스포츠 시설 이용 안내는 실제 전승 경험의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 자료가 언급되지 않았다. 스포츠 강습·기초 기술 연마는 유산 해설이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "장소에 사회적으로 부여된 상징·이미지의 구체적 내용을 확인할 근거가 없다. '활기찬 에너지' 같은 홍보 문구만으로 공유된 의미를 판단하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "시각적 표현에 대한 직접 관찰 근거가 없다. 실내 빙상장·수영장 언급은 외관·경관의 시각적 성격을 판단할 정보가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다. 추억을 쌓을 수 있다는 문구는 이미지 재현 경험의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:7e757a44df5ff643abce03e3e7961fbe2e62b31bfc921d07706b0c02220cf7e0",
+          "quote": {
+            "end": 266,
+            "method": "EXACT",
+            "original": "정기 회원이 아니더라도 누구나 일일 이용권을 구매하여 자유롭게 빙판 위에 올라설 수 있으며",
+            "start": 216,
+            "submitted": "정기 회원이 아니더라도 누구나 일일 이용권을 구매하여 자유롭게 빙판 위에 올라설 수 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4e9d0d7e4de9211dda677ff265c56b58e81872b895f13242fac0b33bdf7e9504"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "정기 회원이 아니어도 일일 이용권으로 자유롭게 이용할 수 있다는 설명이 있어 자기 선택적 이용의 기회를 직접 확인할 수 있다. 다만 자율 탐색이 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "'상시 쾌적한 온도'는 시설 관리 설명일 뿐 자연 환경·시각적 저자극·회복 환경의 근거가 아니다. 홍보 문구만으로 회복 환경을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "스케이트·수영·탁구 등 구체적 참여 활동(수준 3)은 확인되나, 제시된 앵커인 수준 4(지속적으로 참여·도전할 활동)는 기초 기술 연마·경주라는 홍보성 문구만으로 뒷받침되지 않는다. 지속적 도전·몰입 활동의 실제 근거가 부족하므로 현재 제안 수준은 거부하며, 이는 상위 수준 근거 부족에 해당한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "제시된 앵커는 수준 3(구체적인 교류·표현 기회)이나, 근거는 '가족이나 친구와 함께 즐길 수 있다'는 일반적 홍보 문구뿐이다. 교류 프로그램·공동 활동·자기표현의 구체적 기회가 확인되지 않아 현재 수준도 뒷받침되지 않는다. 마케팅 문구를 관계 형성 기회로 확대한 것으로 상위 수준(및 현재 수준) 근거가 부족하다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "5de52c7439b9e4b7aeed15929165bffa87217a4700bc1229849f8f7f54dcdef6",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:7e757a44df5ff643abce03e3e7961fbe2e62b31bfc921d07706b0c02220cf7e0",
+              "quote": {
+                "end": 385,
+                "method": "EXACT",
+                "original": "매끄럽게 관리된 넓은 빙상 위에서 가족이나 친구와 함께 기초 기술을 연마하거나 시원한 경주를 즐기다 보면",
+                "start": 327,
+                "submitted": "매끄럽게 관리된 넓은 빙상 위에서 가족이나 친구와 함께 기초 기술을 연마하거나 시원한 경주를 즐기다 보면",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "4e9d0d7e4de9211dda677ff265c56b58e81872b895f13242fac0b33bdf7e9504"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "스케이트, 수영, 탁구 등 구체적인 신체 참여 활동이 확인되며 기술 연마·경주 등 지속적 참여의 기회가 제시된다. 다만 이것이 방문 경험의 중심이라 단정하기는 하나 수준 3이 적절하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "스케이트·수영·탁구 등 구체적 참여 활동(수준 3)은 확인되나, 제시된 앵커인 수준 4(지속적으로 참여·도전할 활동)는 기초 기술 연마·경주라는 홍보성 문구만으로 뒷받침되지 않는다. 지속적 도전·몰입 활동의 실제 근거가 부족하므로 현재 제안 수준은 거부하며, 이는 상위 수준 근거 부족에 해당한다."
+        }
+      },
+      "reason": "스케이트·수영·탁구 등 구체적 참여 활동(수준 3)은 확인되나, 제시된 앵커인 수준 4(지속적으로 참여·도전할 활동)는 기초 기술 연마·경주라는 홍보성 문구만으로 뒷받침되지 않는다. 지속적 도전·몰입 활동의 실제 근거가 부족하므로 현재 제안 수준은 거부하며, 이는 상위 수준 근거 부족에 해당한다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:7e757a44df5ff643abce03e3e7961fbe2e62b31bfc921d07706b0c02220cf7e0",
+              "quote": {
+                "end": 416,
+                "method": "EXACT",
+                "original": "가족이나 친구와 함께 기초 기술을 연마하거나 시원한 경주를 즐기다 보면 체력 증진은 물론 즐거운 추억까지 동시에 쌓을 수 있다",
+                "start": 346,
+                "submitted": "가족이나 친구와 함께 기초 기술을 연마하거나 시원한 경주를 즐기다 보면 체력 증진은 물론 즐거운 추억까지 동시에 쌓을 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "4e9d0d7e4de9211dda677ff265c56b58e81872b895f13242fac0b33bdf7e9504"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "가족·친구와 함께 활동할 수 있다는 안내가 있어 관계 형성의 기회를 제한적으로 확인할 수 있다. 그러나 공동 제작·자기표현 같은 풍부한 교류 프로그램의 근거는 없어 수준 2로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "제시된 앵커는 수준 3(구체적인 교류·표현 기회)이나, 근거는 '가족이나 친구와 함께 즐길 수 있다'는 일반적 홍보 문구뿐이다. 교류 프로그램·공동 활동·자기표현의 구체적 기회가 확인되지 않아 현재 수준도 뒷받침되지 않는다. 마케팅 문구를 관계 형성 기회로 확대한 것으로 상위 수준(및 현재 수준) 근거가 부족하다."
+        }
+      },
+      "reason": "제시된 앵커는 수준 3(구체적인 교류·표현 기회)이나, 근거는 '가족이나 친구와 함께 즐길 수 있다'는 일반적 홍보 문구뿐이다. 교류 프로그램·공동 활동·자기표현의 구체적 기회가 확인되지 않아 현재 수준도 뒷받침되지 않는다. 마케팅 문구를 관계 형성 기회로 확대한 것으로 상위 수준(및 현재 수준) 근거가 부족하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "375d7491bdae384b6f48cce0ca3d590149a62d8ecc7a5b808aaba6036282f9f0",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "타일, 현대식 조명, 실내 수영장 구조 등 현대적 시설 외관이며 전통적 재료나 공간 구성의 특성이 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4db0f9464236f7b4bc749d82ef05ff02ebc0d209e6ba1c4bb12bbdda1679a1fa",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7d602fad760a69c49182f86a7789a87beb264bf1852e2062047defc0fd39db74",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059546_1",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "af06479b084c58d7237518e9a5dd5d733a70bc3a43487bba10df5f00ec6bea1d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/4059546_image2_1.jpg"
+        },
+        "record_sha256": "60b5eda6cedc0b124680ded2cee35a334008c694ab5ed031d7ed1a806df88e51",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "실내 아이스링크의 인공 얼음 표면만 보이며 녹지·물·자연 경관 등 자연 환경 단서는 거의 없음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:514ffb15a5025be110387af5ba647bd237c9bf3e23249c60d1b4287e3c13f6b3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "37ccb0f74670bf0ef31818a9de0c1d3482090bc4251156196a102e5c3d7edb94",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059549_2",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c41d55a0f4e38f2314bcc1c9814117677a16e39ecbaafcefdfc8613004af4d4a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/49/4059549_image2_1.jpg"
+        },
+        "record_sha256": "97badd2f10c4ed6800eed4fef180b2ad5256658419c1d277f284ea9b254a2b81",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "클로즈업 구도로 얼음 위 클레이퍼 스케이트의 금속 부품과 다리가 강조되어 역동적인 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6698c338cbcd34fa487fc89cc48930c299ac6d3288600aafbe784292728fe107",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "37ccb0f74670bf0ef31818a9de0c1d3482090bc4251156196a102e5c3d7edb94",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059549_2",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c41d55a0f4e38f2314bcc1c9814117677a16e39ecbaafcefdfc8613004af4d4a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/49/4059549_image2_1.jpg"
+        },
+        "record_sha256": "525dc1b0b60f885a70b22979cf6b246206fb0483fef6897169e23f636041c2aa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대식 스피드스케이트 장비만 보이며 전통적 외관·재료·공간 구성의 특성은 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ac72ae9a20982395d214b65c02760c5564fb099a25ce23ed3aaf60fe79513351",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "37ccb0f74670bf0ef31818a9de0c1d3482090bc4251156196a102e5c3d7edb94",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059549_2",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c41d55a0f4e38f2314bcc1c9814117677a16e39ecbaafcefdfc8613004af4d4a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/49/4059549_image2_1.jpg"
+        },
+        "record_sha256": "803fbea3db9518b01ceba588e8ce78ca249911776c6a241b329ff34c35605ac3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "왼쪽 큰 창으로 외부 빛이 들어오지만 자연 경관·녹지 등 환경 단서는 거의 보이지 않는 실내 공간임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ac7469cd3745a647db2446215399c1433be2cadd876aebe361cafebd058a0e2a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7d602fad760a69c49182f86a7789a87beb264bf1852e2062047defc0fd39db74",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059546_1",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "af06479b084c58d7237518e9a5dd5d733a70bc3a43487bba10df5f00ec6bea1d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/4059546_image2_1.jpg"
+        },
+        "record_sha256": "3e11786ea62c6877535aabdf4bc737808e6eb4858785430125111a34f890356e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "천장의 목재 트러스 구조가 다소 전통적·자연재료적 인상을 주지만, 전체적으로 현대적 실내 스포츠 시설 외관이 지배적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c643341ee4fde43738fecea19f80b66d94be2e008140370a3b923d3617feb347",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a3123b56ed60baec309e7402574c1b61d840857cb24c022ff93d33831346e292",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059545_4",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c2a75f1d5832968a266942297da9d7552245788c505c13ca5e428affc90d0ba2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/45/4059545_image2_1.jpg"
+        },
+        "record_sha256": "9443125eecccd70e6ac4090c61fce59f26ecdc6382ad92e8c25c2e79334e2f8b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "천장의 파란 줄무늬, 벽의 알록달록한 색 띠, 깃펜 장식, 파란 수영장 타일 등 화사하고 연출된 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:da1dc4a1b9f5fa95925b3580c92bcc5b4a635fb962e26157be7e89eedbaab117",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7d602fad760a69c49182f86a7789a87beb264bf1852e2062047defc0fd39db74",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059546_1",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "af06479b084c58d7237518e9a5dd5d733a70bc3a43487bba10df5f00ec6bea1d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/4059546_image2_1.jpg"
+        },
+        "record_sha256": "5adf36c0bc4917905db4c9542b135d1a39aabfbfa5f379fcd10a9a62b139587f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "실내 빙상장의 대칭적 구도, 넓은 아이스 표면과 컬링 하우스 표시, 나무 트러스 천장과 규칙적 조명 배치가 절제되지만 질서 있는 시각적 성격을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:daf747c89189be05f8a96f635ed531a1f73e0faa663845a319495bd3ebcebe31",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a3123b56ed60baec309e7402574c1b61d840857cb24c022ff93d33831346e292",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059545_4",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c2a75f1d5832968a266942297da9d7552245788c505c13ca5e428affc90d0ba2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/45/4059545_image2_1.jpg"
+        },
+        "record_sha256": "a88c2a7a869cdf51bce20e1033a4f70df914fe2aff33dc1568906a59e8ae7d56",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "완전히 실내 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 직접 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e47f45937a57c2adf87c990485e6618feb4ed60cf9c184e2f4d82de2d017fc8e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a3123b56ed60baec309e7402574c1b61d840857cb24c022ff93d33831346e292",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4059545_4",
+          "request_sha256": "e306bd07c57327cfdf7d91ad2d240c81647eb1360b0cef45ac8d7470a0362a4b",
+          "response_sha256": "1ab79190f727c02c9c782a38e9e2c230968e0fcea5e3805a78c929137016c2fb",
+          "retrieved_at": "2026-09-10T08:26:00.788394Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c2a75f1d5832968a266942297da9d7552245788c505c13ca5e428affc90d0ba2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/45/4059545_image2_1.jpg"
+        },
+        "record_sha256": "46c6d257d3de17904a758fb4e4978bae61fbf612eef2f8a3667b96955876afa1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7e757a44df5ff643abce03e3e7961fbe2e62b31bfc921d07706b0c02220cf7e0",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "4059520",
+          "request_sha256": "c99ce17bec49ed938d2692da02a0462096f4b6bdef46768c4612916fe1c1297c",
+          "response_sha256": "6276811cafc433f2332b515bd2a8f9e0605549c87e0cb2641f84658660d7931d",
+          "retrieved_at": "2026-09-10T07:28:31.499723Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-22T08:40:26Z",
+          "source_record_sha256": "940cfe510f0d1b725b1e732aeab65a936c78b18a0569a51d824ea144414e3350",
+          "source_uri": null
+        },
+        "record_sha256": "4e9d0d7e4de9211dda677ff265c56b58e81872b895f13242fac0b33bdf7e9504",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "사계절 내내 차가운 얼음 위를 미끄러지며 시원한 속도감을 만끽할 수 있는 이곳은 역동적인 신체 활동을 통해 일상의 스트레스를 해소하기 좋은 종합 체육 공간이다. 창원특례시 의창구에 자리한 의창스포츠센터는 수영과 탁구 등 다양한 실내 운동 시설을 갖추고 있으며, 그중에서도 국제 규격을 완벽하게 충족하는 실내 빙상장은 전문 선수뿐 아니라 일반 시민들에게도 최고의 레포츠 환경을 선사한다. 정기 회원이 아니더라도 누구나 일일 이용권을 구매하여 자유롭게 빙판 위에 올라설 수 있으며, 스케이트와 헬멧 등 필수 안전 장비를 현장에서 간편하게 대여할 수 있는 체계적인 시스템을 구축하고 있다. 매끄럽게 관리된 넓은 빙상 위에서 가족이나 친구와 함께 기초 기술을 연마하거나 시원한 경주를 즐기다 보면 체력 증진은 물론 즐거운 추억까지 동시에 쌓을 수 있다. 외부 날씨에 관계없이 상시 쾌적한 온도를 유지하는 실내 경기장의 특성상 사계절 전천후 여가 활동지로 각광받고 있으며, 합리적인 비용으로 전문적인 스포츠 시설을 이용할 수 있다는 점이 큰 매력으로 꼽힌다. 활기찬 에너지가 넘치는 이곳에서 건강한 땀방울을 흘리며 일상에 새로운 활력을 불어넣는 특별한 시간을 경험해 보기를 추천한다"
+      }
+    ],
+    "parent_source_sha256": "66931561522c5e4a7195d78462719abb9efe096369e77658b735a90197c80a55",
+    "place": {
+      "address": "경상남도 창원시 의창구 원이대로56번길 11 (도계동)",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+      "name_ko": "의창스포츠센터",
+      "place_id": "public:korea:9859979809515c5accbeea817a4ffaeb01b0b8068e5219cbc5b12374c7384f14",
+      "provider_content_id": "4059520",
+      "region_code": "48121",
+      "region_name": "경상남도 창원시 의창구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

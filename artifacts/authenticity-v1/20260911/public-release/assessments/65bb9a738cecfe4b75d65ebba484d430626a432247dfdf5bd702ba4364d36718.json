@@ -1,0 +1,620 @@
+{
+  "assessed_at": "2026-09-11T19:50:25.831799Z",
+  "assessment_sha256": "65bb9a738cecfe4b75d65ebba484d430626a432247dfdf5bd702ba4364d36718",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "value": 63
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이름 유래에 대한 간단한 소개만 있고 장소의 실제 역사·사건 맥락 탐구는 없어 수준 1.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'동양화 같은 풍경, 화가들이 찾는 곳'이라는 구체적 이미지가 장소와 연결되어 있으나 일관된 상징 체계까지는 확인되지 않아 수준 2~3 범위에서 2로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "반원형 백사장, 산과 어우러진 경관 등 구별되는 시각적 성격이 확인되나 연출이 장면을 지배한다는 근거는 없어 수준 3. 출처의 allowed_claims에 맞게 VISUAL_EXPRESSION으로 수정.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "야영, 배낚시 등 구체적 참여·탐방 활동이 확인되나 지속적 도전 활동이 중심이라는 근거는 부족해 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "청소년 야영장은 공동 활동 가능성을 시사하지만 교류·자기표현 기회의 내용이 구체화되지 않아 제한적 공동 활동 수준인 2로 판단.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "해수욕장 설명에는 확인된 원형·문화유산과의 접촉에 대한 근거가 없다. 농간암은 자연 지형이지만 문화유산 원형 접촉의 근거로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+          "quote": {
+            "end": 99,
+            "method": "EXACT",
+            "original": "주변에 감나무가 많다고 해서 시목이라는 이름이 붙었다",
+            "start": 70,
+            "submitted": "주변에 감나무가 많다고 해서 시목이라는 이름이 붙었다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 1,
+      "reason": "이름 유래에 대한 간단한 소개만 있고 장소의 실제 역사·사건 맥락 탐구는 없어 수준 1.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+          "quote": {
+            "end": 295,
+            "method": "EXACT",
+            "original": "주변의 산들과 어우러져 마치 한 폭의 동양화처럼 매우 아름다워 스케치 여행하는 화가들이 즐겨 찾는 곳",
+            "start": 239,
+            "submitted": "주변의 산들과 어우러져 마치 한 폭의 동양화처럼 매우 아름다워 스케치 여행하는 화가들이 즐겨 찾는 곳",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'동양화 같은 풍경, 화가들이 찾는 곳'이라는 구체적 이미지가 장소와 연결되어 있으나 일관된 상징 체계까지는 확인되지 않아 수준 2~3 범위에서 2로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 이미지 유통에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+          "quote": {
+            "end": 22,
+            "method": "EXACT",
+            "original": "모래사장이 반원형으로 둥글게 펼쳐져 있는",
+            "start": 0,
+            "submitted": "모래사장이 반원형으로 둥글게 펼쳐져 있는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "반원형 백사장, 산과 어우러진 경관 등 구별되는 시각적 성격이 확인되나 연출이 장면을 지배한다는 근거는 없어 수준 3. 출처의 allowed_claims에 맞게 VISUAL_EXPRESSION으로 수정.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "낚시·해수욕 등 자율 선택 기회의 존재는 확인되지만, 제시된 anchor_ko('자율적으로 선택·탐색할 기회')는 수준 3 앵커인데 level은 2로 불일치하고, 여러 활동 옵션을 수준 3으로 볼지 수준 2로 볼지 원문만으로 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+          "quote": {
+            "end": 458,
+            "method": "EXACT",
+            "original": "해수욕장 내에는 33,058m²(10,000평) 규모의 청소년 야영장이 있으며",
+            "start": 415,
+            "submitted": "해수욕장 내에는 33,058m²(10,000평) 규모의 청소년 야영장이 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+          "quote": {
+            "end": 413,
+            "method": "EXACT",
+            "original": "인근 섬과 섬 사이에서 갯바위 및 배낚시를 즐길 수 있고",
+            "start": 382,
+            "submitted": "인근 섬과 섬 사이에서 갯바위 및 배낚시를 즐길 수 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "야영, 배낚시 등 구체적 참여·탐방 활동이 확인되나 지속적 도전 활동이 중심이라는 근거는 부족해 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+          "quote": {
+            "end": 458,
+            "method": "EXACT",
+            "original": "청소년 야영장이 있으며",
+            "start": 446,
+            "submitted": "청소년 야영장이 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 2,
+      "reason": "청소년 야영장은 공동 활동 가능성을 시사하지만 교류·자기표현 기회의 내용이 구체화되지 않아 제한적 공동 활동 수준인 2로 판단.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+              "quote": {
+                "end": 413,
+                "method": "EXACT",
+                "original": "인근 섬과 섬 사이에서 갯바위 및 배낚시를 즐길 수 있고",
+                "start": 382,
+                "submitted": "인근 섬과 섬 사이에서 갯바위 및 배낚시를 즐길 수 있고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 2,
+          "reason": "낚시 등 자율적 선택 활동의 기회가 언급되지만 여유로운 자기 방식 탐색이 중심이라는 근거는 부족해 수준 2~3 범위에서 2로 판단.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "낚시·해수욕 등 자율 선택 기회의 존재는 확인되지만, 제시된 anchor_ko('자율적으로 선택·탐색할 기회')는 수준 3 앵커인데 level은 2로 불일치하고, 여러 활동 옵션을 수준 3으로 볼지 수준 2로 볼지 원문만으로 확정하기 어렵다."
+        }
+      },
+      "reason": "낚시·해수욕 등 자율 선택 기회의 존재는 확인되지만, 제시된 anchor_ko('자율적으로 선택·탐색할 기회')는 수준 3 앵커인데 level은 2로 불일치하고, 여러 활동 옵션을 수준 3으로 볼지 수준 2로 볼지 원문만으로 확정하기 어렵다."
+    },
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+              "quote": {
+                "end": 136,
+                "method": "EXACT",
+                "original": "3면이 산과 바다로 마치 병풍을 쳐놓은 듯한 포근한 지형",
+                "start": 105,
+                "submitted": "3면이 산과 바다로 마치 병풍을 쳐놓은 듯한 포근한 지형",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+            },
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+              "quote": {
+                "end": 68,
+                "method": "EXACT",
+                "original": "물이 수정처럼 맑고 깨끗하며",
+                "start": 53,
+                "submitted": "물이 수정처럼 맑고 깨끗하며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 3,
+          "reason": "맑은 바다, 산으로 둘러싸인 자연 환경 단서가 확인되나 실제 고요함·저자극 환경이 지배한다는 수준의 근거는 없어 수준 3.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "54c579192a8dc7afb235dfb1038a967e762909ca1536b56ebaf9e96cdb4a9951",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1866ea6725901ec01c1888d3cb9ce8e1887525c1525072735cf8eac9f2b8961c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fd9de2e968611e275f328ed4d46d635f419a5ea9e642a2adae6d96bb72fcc849",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127766",
+          "request_sha256": "66cba2a4af2fc21e8877fe8c7ff9c61910764985061e3d26c82948e4b912fa5f",
+          "response_sha256": "5b553094279e08263ccea13533bbbc447f44d89af87d53713cb8b2fcd2182dff",
+          "retrieved_at": "2026-09-11T02:12:51.433389Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "570f99c3abc8168620d50077992d9bda8bb6a777b65946838829a701d507810e",
+          "source_uri": null
+        },
+        "record_sha256": "a106403aa660ebac2474f7168cff126a31568164688b5a70842a340a630a907b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ad8a3920a894494c96b0483a338f6296a41310366e45a1edb18f57d3235fe63c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fd9de2e968611e275f328ed4d46d635f419a5ea9e642a2adae6d96bb72fcc849",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127766",
+          "request_sha256": "66cba2a4af2fc21e8877fe8c7ff9c61910764985061e3d26c82948e4b912fa5f",
+          "response_sha256": "5b553094279e08263ccea13533bbbc447f44d89af87d53713cb8b2fcd2182dff",
+          "retrieved_at": "2026-09-11T02:12:51.433389Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2a752adb9d45495a8b5638620e3b118e8e360cf4666627182b91aa5f26023bc0",
+          "source_uri": null
+        },
+        "record_sha256": "d2721389f382b70074b7a9a48d34a7eec0601251602935f07d978d11db4e00a7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e8fba21a9a80f1250041b1d840b242928290fc9891b7d794c197ca22d169109e",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fd9de2e968611e275f328ed4d46d635f419a5ea9e642a2adae6d96bb72fcc849",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127766",
+          "request_sha256": "906b7b66489915346d006cdbd6381e3eee0ad4b01d7055a0b16aedfc8136d01b",
+          "response_sha256": "65936bead04ff0c1b21473ce7966aac1626b7a6a70cd485225e234e2455eec90",
+          "retrieved_at": "2026-09-10T17:06:09.752738Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "6de86ab03e881875a2597b426004f2f5e42e77e92691e3e304fe844d164399a6",
+          "source_uri": null
+        },
+        "record_sha256": "f13ccc6f66992bedf653d9940f70fbd444504a86f5b87e8f8b4a9d4c1e88ea48",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "모래사장이 반원형으로 둥글게 펼쳐져 있는 도초면 시목해수욕장은 다도해해상국립공원 내에 위치하여 물이 수정처럼 맑고 깨끗하며, 주변에 감나무가 많다고 해서 시목이라는 이름이 붙었다. 이곳은 3면이 산과 바다로 마치 병풍을 쳐놓은 듯한 포근한 지형에 해안 2km에는 사방사업을 해놓고 있으며 경사가 완만하여 안전한 곳이다. 백사장의 길이는 2.5㎞, 폭은 100m로 군데군데 모래성이 쌓아진 것이 특징이며, 모래사장을 감싸고 있는 주변의 산들과 어우러져 마치 한 폭의 동양화처럼 매우 아름다워 스케치 여행하는 화가들이 즐겨 찾는 곳이기도 하다. 해수욕장 바로 앞에는 농간암이라는 바위가 있는데 날씨가 흐리면 바위가 움직이는 것과 같은 착각을 일으키기도 하는 신기한 현상을 볼 수 있다. 인근 섬과 섬 사이에서 갯바위 및 배낚시를 즐길 수 있고, 해수욕장 내에는 33,058m²(10,000평) 규모의 청소년 야영장이 있으며, 차량 이동 6분, 3.5km 거리에 도초수국공원과 차량 이동 10분, 6.9km 거리에 팽나무 숲길인 환상의 정원이 있다."
+      }
+    ],
+    "parent_source_sha256": "5a3fdb0fee4148b1bcc8cc4f87be9a40a6b11d7340d02dd54751a946987311fa",
+    "place": {
+      "address": "전남광주통합특별시 신안군 도초면 시목길 219-30",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:fd9de2e968611e275f328ed4d46d635f419a5ea9e642a2adae6d96bb72fcc849",
+      "name_ko": "도초 시목해수욕장",
+      "place_id": "public:korea:fd9de2e968611e275f328ed4d46d635f419a5ea9e642a2adae6d96bb72fcc849",
+      "provider_content_id": "127766",
+      "region_code": "12870",
+      "region_name": "전남광주통합특별시 신안군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

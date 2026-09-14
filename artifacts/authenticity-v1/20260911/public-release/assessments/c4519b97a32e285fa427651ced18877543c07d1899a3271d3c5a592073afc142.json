@@ -1,0 +1,831 @@
+{
+  "assessed_at": "2026-09-11T17:47:04.974837Z",
+  "assessment_sha256": "c4519b97a32e285fa427651ced18877543c07d1899a3271d3c5a592073afc142",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+            "evidence:c4a09f8319e8ab62f520a17b7bebb6191e52c734018fbcda7c12d42cee63aa84"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소가 '제주의 상징인 노루'라는 공유된 이미지·의미와 직접 연결된다고 공식 소개·해설에서 일관되게 표현되며, 관찰원의 방문 경험(노루 관찰)이 그 의미의 내용이 된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c4a09f8319e8ab62f520a17b7bebb6191e52c734018fbcda7c12d42cee63aa84"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "Odii 오디오 해설이라는 매체가 이 장소의 이미지(노루와 친구가 되는 열린 자연학습장)를 서사로 표현·유통하고 있다. 단일 매체 표현이 확인되어 수준 2로 판단하며, 반복적 확산이나 SNS 유통 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "오름 중턱의 숲길 관찰로와 탁 트인 전망 등 장소의 시각적 성격이 공식 소개에서 구체적으로 묘사되어 시각적 표현의 존재가 확인된다. 다만 일관된 연출이 전체 장면을 지배한다는 근거는 부족하여 제한적 수준(2)으로 판단했다. VISUAL_APPEARANCE는 픽셀 전용이므로 텍스트 근거에는 사용하지 않았다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+            "evidence:c4a09f8319e8ab62f520a17b7bebb6191e52c734018fbcda7c12d42cee63aa84"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "'제주의 상징인 노루와 직접 만나는' 대표 장면을 현장에서 관찰·체험(만져보기, 먹이주기)할 수 있다고 명시되어 있다. 촬영·재현 활동 자체의 근거는 제한적이어서 직접 경험 수준으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4c4cb41de327db206443bacfd1d90b32a8ae9b1843630c4303217514baa6020f",
+            "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "2.3km·3km 관찰로를 자신의 보행으로 탐색하는 트래킹 코스가 제공되어 자율적 탐색 기회가 확인된다. 다만 입산 제한·야간산행 제한 등 통제 요소가 있어 자유로운 탐색의 중심 경험이라고 단정하기는 어렵다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "52㏊ 규모로 자연 그대로 보존된 공간, 숲길 관찰로, 탁 트인 전망 등 자연 환경 단서가 공식 소개에서 구체적으로 확인된다. 다만 '힐링' 홍보 문구만으로 실제 고요함이나 심리적 회복을 확정할 수는 없어, 확인된 환경 단서 수준(3)으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "관찰원은 2007년 조성된 생태시설로, 확인된 문화유산 원형·실물 유산과의 접촉을 뒷받침하는 근거가 없다. 오름·자연 보존 서술은 문화유산 원형 접촉의 근거로 쓸 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "'역사 속에 나오는 노루의 기록'은 노루라는 대상에 대한 지식 제공일 뿐, 이 장소 자체의 실제 역사·연혁을 탐구하게 하는 근거로 보기 어렵다. 개장 연도(2007년)는 역사 경험의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 없다. 노루가 제주의 상징·명물이라는 서술만으로 살아있는 전승 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "전시관·영상관·생태학습 프로그램은 자연·생태 해설이다. 문화유산·원형·전통에 연결된 역사 해설·탐구라는 근거는 부족하여 H.d 지원으로 판단하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+          "quote": {
+            "end": 325,
+            "method": "EXACT",
+            "original": "천혜의 자연환경을 바탕으로 제주의 상징인 노루를 직접 관찰하고",
+            "start": 291,
+            "submitted": "천혜의 자연환경을 바탕으로 제주의 상징인 노루를 직접 관찰하고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c5a9d98d735264b7b6061d37ff6ebcf43666f20cad351232479a40817083ee37"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c4a09f8319e8ab62f520a17b7bebb6191e52c734018fbcda7c12d42cee63aa84",
+          "quote": {
+            "end": 131,
+            "method": "EXACT",
+            "original": "제주의 명물하면 빼놓을 수 없는 노루! 자연학습과 생태 체험, 오름 산행을 동시에 즐길 수 있는 열린 자연 학습장",
+            "start": 68,
+            "submitted": "제주의 명물하면 빼놓을 수 없는 노루! 자연학습과 생태 체험, 오름 산행을 동시에 즐길 수 있는 열린 자연 학습장",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "af325a2ccb37887ec7ee64e1f855f8f79e8e8398ad311c8c84c1daf708916aa3"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "이 장소가 '제주의 상징인 노루'라는 공유된 이미지·의미와 직접 연결된다고 공식 소개·해설에서 일관되게 표현되며, 관찰원의 방문 경험(노루 관찰)이 그 의미의 내용이 된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:c4a09f8319e8ab62f520a17b7bebb6191e52c734018fbcda7c12d42cee63aa84",
+          "quote": {
+            "end": 31,
+            "method": "EXACT",
+            "original": "제주의 노루와 친구가 되는 곳 노루생태관찰원 한라산 자락",
+            "start": 0,
+            "submitted": "제주의 노루와 친구가 되는 곳 노루생태관찰원 한라산 자락",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "af325a2ccb37887ec7ee64e1f855f8f79e8e8398ad311c8c84c1daf708916aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "Odii 오디오 해설이라는 매체가 이 장소의 이미지(노루와 친구가 되는 열린 자연학습장)를 서사로 표현·유통하고 있다. 단일 매체 표현이 확인되어 수준 2로 판단하며, 반복적 확산이나 SNS 유통 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+          "quote": {
+            "end": 490,
+            "method": "EXACT",
+            "original": "거친 오름 중턱을 따라 조성된 숲길 관찰로는 온 가족이 쉽게 이용할 수 있는 트래킹 코스로 약 40분이 소요되며 탁 트인 전망과 함께 자연 속의 휴식공간을 제공한다.",
+            "start": 398,
+            "submitted": "거친 오름 중턱을 따라 조성된 숲길 관찰로는 온 가족이 쉽게 이용할 수 있는 트래킹 코스로 약 40분이 소요되며 탁 트인 전망과 함께 자연 속의 휴식공간을 제공한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c5a9d98d735264b7b6061d37ff6ebcf43666f20cad351232479a40817083ee37"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "오름 중턱의 숲길 관찰로와 탁 트인 전망 등 장소의 시각적 성격이 공식 소개에서 구체적으로 묘사되어 시각적 표현의 존재가 확인된다. 다만 일관된 연출이 전체 장면을 지배한다는 근거는 부족하여 제한적 수준(2)으로 판단했다. VISUAL_APPEARANCE는 픽셀 전용이므로 텍스트 근거에는 사용하지 않았다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+          "quote": {
+            "end": 139,
+            "method": "EXACT",
+            "original": "52㏊의 공간에 오름에서 자유롭게 뛰노는 노루를 관찰할 수 있는 숲길 관찰로와 관람객이 가까이에서 직접 노루를 만져보고 먹이 주기 체험을 할 수 있는 상시관찰원",
+            "start": 50,
+            "submitted": "52㏊의 공간에 오름에서 자유롭게 뛰노는 노루를 관찰할 수 있는 숲길 관찰로와 관람객이 가까이에서 직접 노루를 만져보고 먹이 주기 체험을 할 수 있는 상시관찰원",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c5a9d98d735264b7b6061d37ff6ebcf43666f20cad351232479a40817083ee37"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:c4a09f8319e8ab62f520a17b7bebb6191e52c734018fbcda7c12d42cee63aa84",
+          "quote": {
+            "end": 871,
+            "method": "EXACT",
+            "original": "방목지 안으로 들어가 노루에게 직접 먹이를 주며 노루의 생태를 가까이에서 배울 수 있어",
+            "start": 823,
+            "submitted": "방목지 안으로 들어가 노루에게 직접 먹이를 주며 노루의 생태를 가까이에서 배울 수 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "af325a2ccb37887ec7ee64e1f855f8f79e8e8398ad311c8c84c1daf708916aa3"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "'제주의 상징인 노루와 직접 만나는' 대표 장면을 현장에서 관찰·체험(만져보기, 먹이주기)할 수 있다고 명시되어 있다. 촬영·재현 활동 자체의 근거는 제한적이어서 직접 경험 수준으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+          "quote": {
+            "end": 460,
+            "method": "EXACT",
+            "original": "거친 오름 중턱을 따라 조성된 숲길 관찰로는 온 가족이 쉽게 이용할 수 있는 트래킹 코스로 약 40분이 소요되며",
+            "start": 398,
+            "submitted": "거친 오름 중턱을 따라 조성된 숲길 관찰로는 온 가족이 쉽게 이용할 수 있는 트래킹 코스로 약 40분이 소요되며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c5a9d98d735264b7b6061d37ff6ebcf43666f20cad351232479a40817083ee37"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:4c4cb41de327db206443bacfd1d90b32a8ae9b1843630c4303217514baa6020f",
+          "quote": {
+            "end": 22,
+            "method": "EXACT",
+            "original": "숲길 관찰로 2.3km, 주관찰로 3km",
+            "start": 0,
+            "submitted": "숲길 관찰로 2.3km, 주관찰로 3km",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "503e1b8095a1fae6983b7255763cc75d4987e85d50e487a3e75fec48082d5838"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "2.3km·3km 관찰로를 자신의 보행으로 탐색하는 트래킹 코스가 제공되어 자율적 탐색 기회가 확인된다. 다만 입산 제한·야간산행 제한 등 통제 요소가 있어 자유로운 탐색의 중심 경험이라고 단정하기는 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+          "quote": {
+            "end": 57,
+            "method": "EXACT",
+            "original": "각종 동식물이 자연 그대로 보존된 52㏊의 공간",
+            "start": 31,
+            "submitted": "각종 동식물이 자연 그대로 보존된 52㏊의 공간",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c5a9d98d735264b7b6061d37ff6ebcf43666f20cad351232479a40817083ee37"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "52㏊ 규모로 자연 그대로 보존된 공간, 숲길 관찰로, 탁 트인 전망 등 자연 환경 단서가 공식 소개에서 구체적으로 확인된다. 다만 '힐링' 홍보 문구만으로 실제 고요함이나 심리적 회복을 확정할 수는 없어, 확인된 환경 단서 수준(3)으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "노루 먹이주기, 만들기 체험 등 구체적 참여 활동은 확인되지만, 제안된 앵커는 '지속적으로 참여·도전할 활동' 수준이다. 판단 이유 스스로 활동이 방문 경험의 전면을 지배한다는 근거가 없다고 인정하여 상위 앵커 수준은 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.d",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "RELATIONAL_ACTIVITY",
+            "evidence_id": "evidence:c4a09f8319e8ab62f520a17b7bebb6191e52c734018fbcda7c12d42cee63aa84",
+            "quote": "가족끼리 연인끼리, 친구끼리. 대자연 속에서 풀을 뜯으며 맘껏 뛰노는 노루들과 함께 즐거운 추억을 만들 수 있는 곳입니다."
+          }
+        ],
+        "key": "R.d",
+        "level": 2,
+        "reason": "가족·연인·친구와 함께 추억을 만드는 동반자 교류의 여지가 해설에서 확인된다. 그러나 공동 제작이나 자기표현 같은 구체적 교류 프로그램의 근거는 부족하여 제한적 수준(2)으로 판단했다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+              "quote": {
+                "end": 543,
+                "method": "EXACT",
+                "original": "노루생태관찰원에서는 노루먹이 주기 체험과 나무를 이용한 노루 만들기 체험 등을 진행하고 있다.",
+                "start": 491,
+                "submitted": "노루생태관찰원에서는 노루먹이 주기 체험과 나무를 이용한 노루 만들기 체험 등을 진행하고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "c5a9d98d735264b7b6061d37ff6ebcf43666f20cad351232479a40817083ee37"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:613600ce86046c91eddcceb573b1c38408fd8c96a58605611489be2beb998566",
+              "quote": {
+                "end": 7,
+                "method": "EXACT",
+                "original": "노루 먹이주기",
+                "start": 0,
+                "submitted": "노루 먹이주기",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "3785beb0e04b999788463896ce6bbed011b147e3d964fb1a20ee45888f7f9f22"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "노루 먹이주기 체험, 나무 공예 체험, 생태학습 프로그램, 산행 등 구체적 참여 활동이 확인된다. 그 활동이 방문 경험의 전면을 지배한다는 근거까지는 없어 수준 3으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "노루 먹이주기, 만들기 체험 등 구체적 참여 활동은 확인되지만, 제안된 앵커는 '지속적으로 참여·도전할 활동' 수준이다. 판단 이유 스스로 활동이 방문 경험의 전면을 지배한다는 근거가 없다고 인정하여 상위 앵커 수준은 뒷받침되지 않는다."
+        }
+      },
+      "reason": "노루 먹이주기, 만들기 체험 등 구체적 참여 활동은 확인되지만, 제안된 앵커는 '지속적으로 참여·도전할 활동' 수준이다. 판단 이유 스스로 활동이 방문 경험의 전면을 지배한다는 근거가 없다고 인정하여 상위 앵커 수준은 뒷받침되지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "1e5ba1deed335b19946a27443566899826df018867f7f43a217f582222e12a66",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:01e77965bc3e103128fedea0260cba912f206d4a8906eca88c1138bc6d71b576",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1672315",
+          "request_sha256": "eb991a13b47828c2d7089c845123d2a23eafacd84a0828680ffc34ab01a2c3d5",
+          "response_sha256": "f6ef688cec83e379eccf83531cf07e8fc98b3eafb2fbddbce05594bfd4dbd2a8",
+          "retrieved_at": "2026-09-10T08:24:58.564298Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fb05997be33d4e0f1b845337c2114d671dd00c6d790cd1630e79177287dc5cfa",
+          "source_uri": null
+        },
+        "record_sha256": "dfbf7e9bae7b1ae790b5fe1949ea19ff3bb75f9c46a244397aae7ab18031c6b5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "산불조심기간 중 입산 가능"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:29e1b97d53e61f21673d2e2ebc24cd7987cd2db51817c66307ded9c992d5e67e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1672315",
+          "request_sha256": "eb991a13b47828c2d7089c845123d2a23eafacd84a0828680ffc34ab01a2c3d5",
+          "response_sha256": "f6ef688cec83e379eccf83531cf07e8fc98b3eafb2fbddbce05594bfd4dbd2a8",
+          "retrieved_at": "2026-09-10T08:24:58.564298Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d7c5e75544f7177d936e5a5afc993bb77a637226991eae9c1f85bf692cb354f2",
+          "source_uri": null
+        },
+        "record_sha256": "216a0f4a864ab09872defac92bd6575e4ccd81528adbfb721e9b86a00d26b288",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "- 일반 1,000원 - 청소년 600원"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4c4cb41de327db206443bacfd1d90b32a8ae9b1843630c4303217514baa6020f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1672315",
+          "request_sha256": "eb991a13b47828c2d7089c845123d2a23eafacd84a0828680ffc34ab01a2c3d5",
+          "response_sha256": "f6ef688cec83e379eccf83531cf07e8fc98b3eafb2fbddbce05594bfd4dbd2a8",
+          "retrieved_at": "2026-09-10T08:24:58.564298Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6e2cdde703c4ec3a2abd838fb12ec5ca97a9b0202b9fa25a5d706dc04d78af64",
+          "source_uri": null
+        },
+        "record_sha256": "503e1b8095a1fae6983b7255763cc75d4987e85d50e487a3e75fec48082d5838",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "숲길 관찰로 2.3km, 주관찰로 3km"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:613600ce86046c91eddcceb573b1c38408fd8c96a58605611489be2beb998566",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "1672315",
+          "request_sha256": "eb991a13b47828c2d7089c845123d2a23eafacd84a0828680ffc34ab01a2c3d5",
+          "response_sha256": "95a6bcdb2b2c64ad66a0f177874756176b8aa5321ca26242199c7a266e166539",
+          "retrieved_at": "2026-09-10T07:52:06.523326Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c92cf66db716de00f9d4ed1c346ced551c77ed71893bb5bed3d352fc740eb672",
+          "source_uri": null
+        },
+        "record_sha256": "3785beb0e04b999788463896ce6bbed011b147e3d964fb1a20ee45888f7f9f22",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "노루 먹이주기"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:62fedfe3287dd12057a439a4273b2fb551a9e20a0603422b7cb974cb0a58203b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1672315",
+          "request_sha256": "eb991a13b47828c2d7089c845123d2a23eafacd84a0828680ffc34ab01a2c3d5",
+          "response_sha256": "f6ef688cec83e379eccf83531cf07e8fc98b3eafb2fbddbce05594bfd4dbd2a8",
+          "retrieved_at": "2026-09-10T08:24:58.564298Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2626fcf01e45a3e899884577c2352411e795ad726713d010e5b284b58c212795",
+          "source_uri": null
+        },
+        "record_sha256": "eb0b8a027face3521c89d7c21f3dd8022788029835844bd48487316539861d4f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "야간산행 제한"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:645c00a0763045677fd9d939fcfd9d21df102c027df029a32cb41ab2c9a8f7ce",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1672315",
+          "request_sha256": "b52a3d39cf532b3753aa7723492664e700ef6b67e48ff8e82de5ce53a0c2241d",
+          "response_sha256": "834f9426b3b774fe94d53a2eb3121e17bafbdeb2921269758679745c59d643ac",
+          "retrieved_at": "2026-09-10T07:52:06.172670Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-03-24T07:47:26Z",
+          "source_record_sha256": "448eb4fab963485b7f2ec476fe8aa0f4a914e53638a4f77199ac831713c9643e",
+          "source_uri": null
+        },
+        "record_sha256": "c5a9d98d735264b7b6061d37ff6ebcf43666f20cad351232479a40817083ee37",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "제주 노루생태관찰원은 2007년 8월 3일 개장하였다. 각종 동식물이 자연 그대로 보존된 52㏊의 공간에 오름에서 자유롭게 뛰노는 노루를 관찰할 수 있는 숲길 관찰로와 관람객이 가까이에서 직접 노루를 만져보고 먹이 주기 체험을 할 수 있는 상시관찰원이 조성되어 있다. 전시관에는 제주의 다양한 동식물과 한라산의 식생분포 등 제주의 자연에 대한 동물 이야기관과 노루의 특징, 역사 속에 나오는 노루의 기록 등 노루에 대한 지식을 제공하는 노루의 생태관, 노루의 생태와 생활상을 영상으로 보여주는 노루이야기 영상관이 있다. 천혜의 자연환경을 바탕으로 제주의 상징인 노루를 직접 관찰하고 휴식을 취하면서 노루에 대한 지식을 얻을 수 있는 노루생태관찰원은 자연학습과 생태체험을 동시에 즐길 수 있는 우리들의 공간이다. 거친 오름 중턱을 따라 조성된 숲길 관찰로는 온 가족이 쉽게 이용할 수 있는 트래킹 코스로 약 40분이 소요되며 탁 트인 전망과 함께 자연 속의 휴식공간을 제공한다. 노루생태관찰원에서는 노루먹이 주기 체험과 나무를 이용한 노루 만들기 체험 등을 진행하고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:797e51851fdca2c3c396e1053f05524dc24e2fd43203103d8208324f4e237b8d",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1672315",
+          "request_sha256": "eb991a13b47828c2d7089c845123d2a23eafacd84a0828680ffc34ab01a2c3d5",
+          "response_sha256": "f6ef688cec83e379eccf83531cf07e8fc98b3eafb2fbddbce05594bfd4dbd2a8",
+          "retrieved_at": "2026-09-10T08:24:58.564298Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7882f2f843a89c522bd586e9b9fcdcd043cf4416cde96a84ac37d967e12dc0d0",
+          "source_uri": null
+        },
+        "record_sha256": "c9be601138b7515b680fe1dc22c85ac77791f00fc191b063d10e0e04d65a2f35",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "인터넷, 전화 예약"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c4a09f8319e8ab62f520a17b7bebb6191e52c734018fbcda7c12d42cee63aa84",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "260",
+          "request_sha256": "1ce641df4f4e9b73372e60f032c69db040f7333461bbcb6c13594b2905a7e084",
+          "response_sha256": "08001ed193a1028e7cd7072ae873a3745f9debf8bf894168b458149a7ef38d1a",
+          "retrieved_at": "2026-09-10T08:24:59.686719Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2015-09-14T09:17:06Z",
+          "source_record_sha256": "5fd1472c942c787036d35f020efb8a574e749c81d6c5e0f749b008313ed2bab1",
+          "source_uri": null
+        },
+        "record_sha256": "af325a2ccb37887ec7ee64e1f855f8f79e8e8398ad311c8c84c1daf708916aa3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "제주의 노루와 친구가 되는 곳 노루생태관찰원 한라산 자락, 뭇 동식물들이 생명의 터전을 키우며 살아가는 제주. 그 중에서 제주의 명물하면 빼놓을 수 없는 노루! 자연학습과 생태 체험, 오름 산행을 동시에 즐길 수 있는 열린 자연 학습장, 노루생태관찰원에 오면 누구나 노루와 함께 친구가 되어 뛰어놀 수 있습니다. 제주시 봉개동 거친오름 기슭에 자리한 노루생태관찰원. 노루보호시설인 사육동과 각종 편의시설을 갖추어 남녀노소 많은 사람들이 찾는 제주의 명소로 자리매김하고 있는데요~ 자연 그대로의 상태에서 노루를 접할 수 있는 노루생태관찰원, 이곳에서는 노루들이 살던 오름을 그대로 보호하고 관리하며 그 속에서 노루들이 번식할 수 있도록 도와주고 있습니다. 노약자나 장거리 이동이 어려운 관광객들이 쉽게 노루를 관찰할 수 있도록 만든 상시관찰원. 방문객들은 산책로를 걸으며 가까운 거리에서 야생 노루를 만나는 재미를 만끽할 수 있습니다. 거친오름 둘레의 2.6km 주관찰로, 목재 데크와 노루의 이동통로인 흙길과 목재계단 등이 어우러진 아름다운 생태숲길을 걸으며 지친 몸과 마음을 치유하는 힐링의 시간을 가져볼 수 있습니다. 전시실에서는 제주 노루들의 종류와 생김새는 물론 세계 여러 나라의 노루들을 비교하고 감상할 수 있고, 영상실에서는 제주 노루들의 생태에 관한 영상도 관람할 수 있습니다. 자연학습과 생태체험, 오름 산행을 함께 즐길 수 있는 열린 시민공간으로 많은 사랑을 받고 있는 노루생태공원은 노루 먹이주기 체험, 노루가 사는 오름 생태 알아보기 등 다양한 생태학습 프로그램도 마련하고 있습니다. 방문객들이 노루를 관찰할 수 있도록 조성되어 있는 노루생태관찰원. 방목지 안으로 들어가 노루에게 직접 먹이를 주며 노루의 생태를 가까이에서 배울 수 있어 아이들의 자연학습장으로 인기가 높습니다. 삶에 지친 현대인들의 몸과 마음을 편히 쉬게 할 수 있는 휴식처이자, 가족끼리 연인끼리, 친구끼리. 대자연 속에서 풀을 뜯으며 맘껏 뛰노는 노루들과 함께 즐거운 추억을 만들 수 있는 곳입니다."
+      }
+    ],
+    "parent_source_sha256": "4ccd9698c613e2a972eb9d83d83894c0d142bef581caabdef57125674aa368a4",
+    "place": {
+      "address": "제주특별자치도 제주시 명림로 520",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+      "name_ko": "제주 노루생태관찰원",
+      "place_id": "public:korea:82e17943280bf7b811cdcaf3c19b5b4a9aa3b5421709a64900d440df0aaa19db",
+      "provider_content_id": "1672315",
+      "region_code": "50110",
+      "region_name": "제주특별자치도 제주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

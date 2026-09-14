@@ -1,0 +1,908 @@
+{
+  "assessed_at": "2026-09-11T19:00:48.979722Z",
+  "assessment_sha256": "2ddb2fb0aba53a23883e16aa0b574dfa73136c4e87475fc92a39a2d42a31470d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.a"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c"
+      ],
+      "value": 52
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 70
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "도보길이 옛길 등을 포함한다는 명시적 기술이 있어 원형(옛길)과의 제한적 접촉 근거는 있으나, 실물 유산을 구체적으로 탐구하거나 접촉이 경험의 중심이라는 근거는 없어 낮은 수준으로 판단했다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'오백리'라는 이름에 상징적 의미가 부여된다는 공식 설명이 있어 장소에 연결된 구체적 의미를 확인할 수 있으나, 이 의미가 방문 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "드라마 촬영지로서 매체를 통한 장소 이미지의 재현·확산이 확인되지만, 매체 이미지가 방문 목적의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0300313c3902335a50aeb7e4e0da7da91e52d376492e0cba8e9ceff678a0ae3e",
+            "appearance:20a4dfd6e37c73155d3dfb7a0284d106b45182544549e884e868f2261cc0fc62",
+            "appearance:5a8f33f15b28f5db0190e5046493b4f33de750410f64f6e66bb5d428efb6cb30"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "갈대밭, 호수, 야산 수목 등 구별되는 시각적 경관의 기술이 있으나 일관된 연출이 장면을 지배한다는 수준의 근거는 없다.",
+      "value": 56
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "다양한 테마 코스 중 스스로 선택하여 걷고 탐색할 수 있는 자율적 기회가 확인되지만, 자유와 일상 이탈이 경험의 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2a2eaccb14cdb5d05e301230e38b5e1fede8328fb9d37261af1c3f87c8e49889",
+            "appearance:9642b44540b68ee98e3e3f1dc770f0c17f2eb5c9aa7456365fc449d57df2d72e",
+            "appearance:f6fac62e1f1f82abd1f1b731e436edc1db4c1b4a59251fb6e5f0580a60ec2fc5"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "호수·야산·수목·갈대밭 등 자연 환경 단서가 공식 설명에서 두드러지게 확인된다. 다만 실제 고요함이나 혼잡 수준에 대한 근거는 없어 상위 등급으로 판단하지 않았다.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "약 220km 도보길, 등산, 자전거, 농촌체험 등 구체적이고 지속적으로 참여할 활동이 확인되지만 집중 활동이 방문 경험의 유일한 중심이라 단정할 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "연인·가족 단위 코스가 제시되어 함께 걷는 공동 활동의 기회가 있으나, 교류·자기표현 활동이 풍부하거나 중심이라는 근거는 없어 제한적 수준으로 판단했다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+          "quote": {
+            "end": 98,
+            "method": "EXACT",
+            "original": "대청호 주변 자연부락과 소하천, 등산길, 임도, 옛길 등을 포함하고 있다",
+            "start": 58,
+            "submitted": "대청호 주변 자연부락과 소하천, 등산길, 임도, 옛길 등을 포함하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.a",
+      "level": 1,
+      "reason": "도보길이 옛길 등을 포함한다는 명시적 기술이 있어 원형(옛길)과의 제한적 접촉 근거는 있으나, 실물 유산을 구체적으로 탐구하거나 접촉이 경험의 중심이라는 근거는 없어 낮은 수준으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소 자체의 역사·연혁·사건·인물 맥락에 대한 설명이 없다. 주변 역사문화 관광지 나열은 인근 타 장소의 특성으로 THIS_PLACE의 역사 경험 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 없다. 농촌체험 언급은 전승의 지속 활동을 확인해주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "옛길·유산에 연결된 해설·전시·학습 프로그램에 대한 근거가 없다. 연계 관람시설 나열은 이 길의 원형 해설을 의미하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+          "quote": {
+            "end": 152,
+            "method": "EXACT",
+            "original": "서울, 부산에서 대청호까지 거리가 약 오백 리 정도가 되어 그 상징적 의미를 더하고 있다",
+            "start": 103,
+            "submitted": "서울, 부산에서 대청호까지 거리가 약 오백 리 정도가 되어 그 상징적 의미를 더하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'오백리'라는 이름에 상징적 의미가 부여된다는 공식 설명이 있어 장소에 연결된 구체적 의미를 확인할 수 있으나, 이 의미가 방문 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+          "quote": {
+            "end": 691,
+            "method": "EXACT",
+            "original": "권상우와 김희선 주연인 드라마 를 촬영했던 장소이기도 해 많은 사랑을 받고 있다",
+            "start": 647,
+            "submitted": "권상우와 김희선 주연인 드라마 를 촬영했던 장소이기도 해 많은 사랑을 받고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "드라마 촬영지로서 매체를 통한 장소 이미지의 재현·확산이 확인되지만, 매체 이미지가 방문 목적의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+          "quote": {
+            "end": 645,
+            "method": "EXACT",
+            "original": "갈대밭이 펼쳐진 대청호를 따라 걷는 곳으로 대청호 중에서도 가장 아름다운 곳이다",
+            "start": 601,
+            "submitted": "갈대밭이 펼쳐진 대청호를 따라 걷는 곳으로 대청호 중에서도 가장 아름다운 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "갈대밭, 호수, 야산 수목 등 구별되는 시각적 경관의 기술이 있으나 일관된 연출이 장면을 지배한다는 수준의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "드라마 촬영지라는 사실은 있으나 대표 장면·구도를 현장에서 직접 경험하거나 재현할 수 있다는 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+          "quote": {
+            "end": 354,
+            "method": "EXACT",
+            "original": "데이트 코스, 푸른 호수를 감상하며 생각에 잠길 수 있는 사색 코스, 등산이 가능한 산행 코스, 농촌체험과 문화답사를 겸하여 걸을 수 있는 가족여행 코스, 자전거 드라이브 코스",
+            "start": 256,
+            "submitted": "데이트 코스, 푸른 호수를 감상하며 생각에 잠길 수 있는 사색 코스, 등산이 가능한 산행 코스, 농촌체험과 문화답사를 겸하여 걸을 수 있는 가족여행 코스, 자전거 드라이브 코스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "다양한 테마 코스 중 스스로 선택하여 걷고 탐색할 수 있는 자율적 기회가 확인되지만, 자유와 일상 이탈이 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+          "quote": {
+            "end": 209,
+            "method": "EXACT",
+            "original": "대청호를 중심으로 해발 200~300m의 야산과 수목들이 빙 둘러져 있어 경관이 아주 뛰어나며",
+            "start": 157,
+            "submitted": "대청호를 중심으로 해발 200~300m의 야산과 수목들이 빙 둘러져 있어 경관이 아주 뛰어나며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "호수·야산·수목·갈대밭 등 자연 환경 단서가 공식 설명에서 두드러지게 확인된다. 다만 실제 고요함이나 혼잡 수준에 대한 근거는 없어 상위 등급으로 판단하지 않았다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+          "quote": {
+            "end": 354,
+            "method": "EXACT",
+            "original": "등산이 가능한 산행 코스, 농촌체험과 문화답사를 겸하여 걸을 수 있는 가족여행 코스, 자전거 드라이브 코스",
+            "start": 295,
+            "submitted": "등산이 가능한 산행 코스, 농촌체험과 문화답사를 겸하여 걸을 수 있는 가족여행 코스, 자전거 드라이브 코스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "약 220km 도보길, 등산, 자전거, 농촌체험 등 구체적이고 지속적으로 참여할 활동이 확인되지만 집중 활동이 방문 경험의 유일한 중심이라 단정할 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+          "quote": {
+            "end": 262,
+            "method": "EXACT",
+            "original": "연인끼리 낭만을 즐길 수 있는 데이트 코스",
+            "start": 239,
+            "submitted": "연인끼리 낭만을 즐길 수 있는 데이트 코스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "연인·가족 단위 코스가 제시되어 함께 걷는 공동 활동의 기회가 있으나, 교류·자기표현 활동이 풍부하거나 중심이라는 근거는 없어 제한적 수준으로 판단했다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "39372752b90339984805376e855abf33c5a0201e7af83f5d14f4e5f4350969b1",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "bce822a08e1f38377f1bee841d7be7fa59372073a4804dc5233f69e06e29b697",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "중앙의 기울어진 다크 그레이 아치형 조형물과 영화 슬레이트형 안내판들이 반복 배치되어 연출된 구성이 두드러짐. 흙길이 중앙 원근을 이끄는 안정적 구도.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0300313c3902335a50aeb7e4e0da7da91e52d376492e0cba8e9ceff678a0ae3e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "23d5f9818121c523bb711310660ed0922f55cfa49805b0f426f67eeb256f3c9a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547436_2",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6cdd65e07bec84b2ffc4e2df8482de833c600b5e24bc71883a0f3f4533405e7d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/36/3547436_image2_1.jpg"
+        },
+        "record_sha256": "8b8a7d17b58abc3340bd8ca7fbd806c9bb03a6099c5114d07726a43c9891f0da",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "호수의 에메랄드빛 녹색 물과 노을빛 하늘의 색 대비, 드론 시점의 부감 구도가 장면의 시각적 성격을 두드러지게 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:20a4dfd6e37c73155d3dfb7a0284d106b45182544549e884e868f2261cc0fc62",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7fba9a135c99b8e25cc7990f39c0cdb17a4bb509bce9ffce7b97ae352b818c8b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547431_1",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "70e1d94249ac8d14e5e05eaff08e698929192587f34b3dffd7a4a4f2edc60b45",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/31/3547431_image2_1.jpg"
+        },
+        "record_sha256": "a886ef93458d8faa371fffb5418870ccd4a231fe9c36f63fbadb1c8b215d9f8a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "호수, 먼 산봉우리, 울창한 나무, 드넓은 잔디밭 등 자연 경관이 화면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2a2eaccb14cdb5d05e301230e38b5e1fede8328fb9d37261af1c3f87c8e49889",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2e7c1bec5db4e340e84681fd555e7a14be4e030647a64681866e2239437a56d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547438_4",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1fa006816205f8e5ec2c8244b9e76399e85d77460f8de3fe774bd32a4b0c9318",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/38/3547438_image2_1.jpg"
+        },
+        "record_sha256": "4077fb1e0459a5f6cc63f0c09713c865cd376490dcf1d06a6bae27bc98c94361",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "언덕 위 작은 마을과 건물들이 희미하게 보이나 전통 외관이나 재료의 시각적 특성은 거의 드러나지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4de0b214c45125564a829a07cdbccc2f0541727511449bb62a953d1c57d82ac6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7fba9a135c99b8e25cc7990f39c0cdb17a4bb509bce9ffce7b97ae352b818c8b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547431_1",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "70e1d94249ac8d14e5e05eaff08e698929192587f34b3dffd7a4a4f2edc60b45",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/31/3547431_image2_1.jpg"
+        },
+        "record_sha256": "1f3506de2caa567f54f3b66c67b30c71463842cbb73291f7d35c7777bf71a407",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "짙은 옹기들과 넓은 잔디밭, 기와 담장, 푸른 호수와 하늘이 대비되어 구도와 색채의 연출이 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5a8f33f15b28f5db0190e5046493b4f33de750410f64f6e66bb5d428efb6cb30",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2e7c1bec5db4e340e84681fd555e7a14be4e030647a64681866e2239437a56d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547438_4",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1fa006816205f8e5ec2c8244b9e76399e85d77460f8de3fe774bd32a4b0c9318",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/38/3547438_image2_1.jpg"
+        },
+        "record_sha256": "3b425c888b116a26b77ff92bd981d817060e24f15951e660c6069bb98144327e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "한옥 기와 담장과 다수의 전통 옹기(장독대)가 전통적 외관을 강하게 드러낸다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7c1c1a32684fdcec022180e8583387c197ef6546208bea1c6d0764923e991e0c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2e7c1bec5db4e340e84681fd555e7a14be4e030647a64681866e2239437a56d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547438_4",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1fa006816205f8e5ec2c8244b9e76399e85d77460f8de3fe774bd32a4b0c9318",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/38/3547438_image2_1.jpg"
+        },
+        "record_sha256": "47300c019a216a9dcced6ddfdf8dc442e62ad82c141c6344834782929bea5941",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 호수, 울창한 산림, 반도와 습지 형태의 자연 경관이 화면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9642b44540b68ee98e3e3f1dc770f0c17f2eb5c9aa7456365fc449d57df2d72e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7fba9a135c99b8e25cc7990f39c0cdb17a4bb509bce9ffce7b97ae352b818c8b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547431_1",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "70e1d94249ac8d14e5e05eaff08e698929192587f34b3dffd7a4a4f2edc60b45",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/31/3547431_image2_1.jpg"
+        },
+        "record_sha256": "27fde7715bad1a887ca9077eb1e7b56ba5d32c988353e96c9e9e7fe2c66281e5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 재료나 옛 건축 외관의 단서는 약하고, 현대적 조형물·표지판이 중심. 자연 환경 일부에 전통 정취가 미약하게 느껴질 뿐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9d7994ffe059c11eba0d9598dfc69fb6cae43f1cd03bddeb5190b8294131d64d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "23d5f9818121c523bb711310660ed0922f55cfa49805b0f426f67eeb256f3c9a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547436_2",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6cdd65e07bec84b2ffc4e2df8482de833c600b5e24bc71883a0f3f4533405e7d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/36/3547436_image2_1.jpg"
+        },
+        "record_sha256": "59208fdfe1469eca02746356b58f1f094d82ad38a7f7194188310aac5f0095a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 호수, 수몰된 섬, 원경의 산맥, 잔디밭과 큰 나무 등 자연 경관이 장면 전반을 지배함. 트인 하늘과 물·녹지 단서가 풍부.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f6fac62e1f1f82abd1f1b731e436edc1db4c1b4a59251fb6e5f0580a60ec2fc5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "23d5f9818121c523bb711310660ed0922f55cfa49805b0f426f67eeb256f3c9a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547436_2",
+          "request_sha256": "8d25734e1b0c199716f8e2eae294407f14a80694c47219c9f52c5c8d4d25b676",
+          "response_sha256": "da1c11a71b3b2f12e9645d9fbefc04023d064e64bc16465d9525381976f00794",
+          "retrieved_at": "2026-09-10T08:28:17.921276Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6cdd65e07bec84b2ffc4e2df8482de833c600b5e24bc71883a0f3f4533405e7d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/36/3547436_image2_1.jpg"
+        },
+        "record_sha256": "847e16c57281153fa35fcf7c71bf54e4c9272eff846b177c92a1479000114561",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f74e3e6cce684fbc4f45a3be98361d457352195e2c82ebb5fbbeb12eba652a67",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1907688",
+          "request_sha256": "5faae55210ce707725e1b326a4bd9c36b5f62da26a0173ebb42c72172f5b2f70",
+          "response_sha256": "37d4c8548e69d0b2037af59e2b03b0bb3e9c022d5bbf795342af677a5656f1b1",
+          "retrieved_at": "2026-09-09T16:40:44.208799Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-13T07:38:20Z",
+          "source_record_sha256": "3640bc0e192e08f9d9877bd3a4d93a7038596a7058eab447fc92bfeccd3d965a",
+          "source_uri": null
+        },
+        "record_sha256": "2430e770585caff76119209115f2eed85a87c0e477903ca19b95ba394bc35aa3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "대청호오백리길은 대전(동구, 대덕구)과 충북(청원, 옥천, 보은)에 걸쳐 있는 약 220㎞의 도보길이며 대청호 주변 자연부락과 소하천, 등산길, 임도, 옛길 등을 포함하고 있다. 또한 서울, 부산에서 대청호까지 거리가 약 오백 리 정도가 되어 그 상징적 의미를 더하고 있다. 특히 대청호를 중심으로 해발 200~300m의 야산과 수목들이 빙 둘러져 있어 경관이 아주 뛰어나며 구간마다 특별한 재미를 느낄 수 있는 길들이 많다. 연인끼리 낭만을 즐길 수 있는 데이트 코스, 푸른 호수를 감상하며 생각에 잠길 수 있는 사색 코스, 등산이 가능한 산행 코스, 농촌체험과 문화답사를 겸하여 걸을 수 있는 가족여행 코스, 자전거 드라이브 코스 등 보고 느끼고 체험하고 즐길 수 있는 다양한 테마가 펼쳐진 길이다. 이러한 자연경관을 인정받아 유엔해비타트(UN-HABITAT)가 수여하는 아시아도시경관상도 수상하였다. 또한 주변에는 대청호물문화관과 대청호조각공원, 대청호미술관, 대청호자연생태관 등이 개관하여 대청호오백리길과 연계한 체험 및 관람시설로 이용이 가능하며 청원 청남대, 문의문화재단지, 보은 속리산, 옥천 둔주봉, 정지용생가, 육영수생가지 등 많은 역사문화 관광지가 있다. 갈대밭이 펼쳐진 대청호를 따라 걷는 곳으로 대청호 중에서도 가장 아름다운 곳이다. 권상우와 김희선 주연인 드라마 를 촬영했던 장소이기도 해 많은 사랑을 받고 있다. 그 밖에 조각공원, 미술관, 자연생태관등을 함께 감상할 수 있다."
+      }
+    ],
+    "parent_source_sha256": "386948369057027e8d3076535289a47588bbdae0cf73f49dee16fef4fc4c1771",
+    "place": {
+      "address": "대전광역시 동구 천개동로 34",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+      "name_ko": "대청호오백리길",
+      "place_id": "public:korea:cb3ca717ed98396b78d21b2f75b5af62a7525ee5d3239ca3c2e40330496cb9cc",
+      "provider_content_id": "1907688",
+      "region_code": "30110",
+      "region_name": "대전광역시 동구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

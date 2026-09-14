@@ -118,7 +118,7 @@ def test_parser_projects_only_matching_allowlisted_operating_fields() -> None:
 
 def test_public_catalog_lookup_uses_verified_crosswalk_and_category_mapping() -> None:
     catalog = PublicCatalogLookup(
-        catalog_path=REPO_ROOT / "artifacts/public/catalog/public-place-catalog-v1.json"
+        catalog_path=REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-place-catalog-v1.json"
     )
 
     assert catalog.catalog_sha256 == (

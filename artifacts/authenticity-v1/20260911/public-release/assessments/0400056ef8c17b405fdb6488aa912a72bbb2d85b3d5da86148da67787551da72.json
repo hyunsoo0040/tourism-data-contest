@@ -1,0 +1,611 @@
+{
+  "assessed_at": "2026-09-11T17:59:23.152553Z",
+  "assessment_sha256": "0400056ef8c17b405fdb6488aa912a72bbb2d85b3d5da86148da67787551da72",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "흰구름길 3구간 자체에 대해 울창한 숲과 아담한 오솔길, 독특한 원형계단의 구름 전망대, 주변 산들과 서울도심이 한눈에 들어오는 경관이 텍스트로 확인된다. 이는 E.c의 텍스트 claim인 VISUAL_EXPRESSION에 해당하며, 장면에서 구별되는 시각적 성격(수준 3)을 지지한다. 실제 방문자가 느낀 시각 경험까지는 단정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "4.1km 구간을 스스로 걷는 산책로로, 누구나 쉽게 이용 가능하다는 근거로 자율적 탐색 기회를 확인할 수 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "울창한 숲, 오솔길, 맑은 계곡물 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡 수준은 알 수 없어 3수준.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제시된 앵커는 '확인된 원형·유산을 관람'(상위 수준)이나, 근거는 국립공원 경계 산책로·빨래골 계곡 등 제한적 접촉에 불과하다. 조성된 둘레길 자체는 원형 유산의 관람·탐구 대상 실물로 확인되지 않아 현재 수준(관람)도 뒷받침되지 않는다. 제한적 접촉 수준(하위)에 해당할 가능성이 높아 판단을 UNCERTAIN으로 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "앵커는 '사건·인물 맥락 제시'이지만, 근거는 빨래골 지명 유래라는 간단한 연혁 소개에 그친다. 이는 하위 수준('짧은 역사 안내')에 해당하며 현재 제시된 상위 수준도 근거가 없어 UNCERTAIN.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 현재 연결에 대한 근거가 없다. 과거 무수리 이용은 역사 유래일 뿐 현재 전승 활동을 보여주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "역사 해설·전시·학습 프로그램 제공에 대한 근거가 없다. 개통 연도 서술은 해설 서비스가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "앵커는 '구체적인 이미지·이야기가 장소와 연결'이나, 판단 사유 스스로 여러 표현에서 일관되게 확인되는 수준이 아니라고 인정한다. '사람과 자연이 하나 되는 길'이라는 간단한 이미지 표현(하위 수준)까지만 뒷받침되어 현재 수준은 미지원.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보 매체, SNS 등을 통한 이미지 유통에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+          "quote": {
+            "end": 375,
+            "method": "EXACT",
+            "original": "울창한 숲과 아담한 오솔길을 걷다 보면 12m 높이의 구름 전망대가 나온다",
+            "start": 334,
+            "submitted": "울창한 숲과 아담한 오솔길을 걷다 보면 12m 높이의 구름 전망대가 나온다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+          "quote": {
+            "end": 457,
+            "method": "EXACT",
+            "original": "독특한 모양의 원형계단을 통해 전망대에 오르면 북한산, 도봉산, 수락산, 불암산, 용마산, 아차산, 서울도심의 모습이 한눈에 들어오는 멋진 경관",
+            "start": 377,
+            "submitted": "독특한 모양의 원형계단을 통해 전망대에 오르면 북한산, 도봉산, 수락산, 불암산, 용마산, 아차산, 서울도심의 모습이 한눈에 들어오는 멋진 경관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "흰구름길 3구간 자체에 대해 울창한 숲과 아담한 오솔길, 독특한 원형계단의 구름 전망대, 주변 산들과 서울도심이 한눈에 들어오는 경관이 텍스트로 확인된다. 이는 E.c의 텍스트 claim인 VISUAL_EXPRESSION에 해당하며, 장면에서 구별되는 시각적 성격(수준 3)을 지지한다. 실제 방문자가 느낀 시각 경험까지는 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도의 재현 체험(촬영 포인트 등)에 대한 명시적 근거가 없다. 전망대 경관 관람은 이미지 재현 경험의 중심임을 보여주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+          "quote": {
+            "end": 52,
+            "method": "EXACT",
+            "original": "기존의 샛길을 연결하고 다듬어서 북한산 자락을 완만하게 걸을 수 있도록 조성한",
+            "start": 9,
+            "submitted": "기존의 샛길을 연결하고 다듬어서 북한산 자락을 완만하게 걸을 수 있도록 조성한",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+          "quote": {
+            "end": 249,
+            "method": "EXACT",
+            "original": "누구나 쉽게 이용할 수 있는 둘레길",
+            "start": 230,
+            "submitted": "누구나 쉽게 이용할 수 있는 둘레길",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "4.1km 구간을 스스로 걷는 산책로로, 누구나 쉽게 이용 가능하다는 근거로 자율적 탐색 기회를 확인할 수 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+          "quote": {
+            "end": 355,
+            "method": "EXACT",
+            "original": "울창한 숲과 아담한 오솔길을 걷다 보면",
+            "start": 334,
+            "submitted": "울창한 숲과 아담한 오솔길을 걷다 보면",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+          "quote": {
+            "end": 492,
+            "method": "EXACT",
+            "original": "빨래골 계곡의 물이 맑고 수량이 풍부해",
+            "start": 471,
+            "submitted": "빨래골 계곡의 물이 맑고 수량이 풍부해",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "울창한 숲, 오솔길, 맑은 계곡물 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡 수준은 알 수 없어 3수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "앵커는 '지속적으로 참여·도전할 활동'이나, 근거는 2시간 걷기와 전망대 오르기라는 구체적 참여·탐방 활동(하위 수준)에 그친다. 판단 사유도 이를 인정하므로 현재 제시 수준은 미지원.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+              "quote": {
+                "end": 63,
+                "method": "EXACT",
+                "original": "북한산 자락을 완만하게 걸을 수 있도록 조성한 저지대 수평 산책로",
+                "start": 27,
+                "submitted": "북한산 자락을 완만하게 걸을 수 있도록 조성한 저지대 수평 산책로",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.a",
+          "level": 2,
+          "reason": "기존 샛길을 연결해 조성한 둘레길이지만 원형 유산과의 직접 접촉에 대한 명시는 약하고, 국립공원 경계와 빨래골 계곡 등 자연·지명 원형을 걸으며 접하는 제한적 근거가 있다. 구체적 유산 실물 접촉 근거가 없어 2수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "제시된 앵커는 '확인된 원형·유산을 관람'(상위 수준)이나, 근거는 국립공원 경계 산책로·빨래골 계곡 등 제한적 접촉에 불과하다. 조성된 둘레길 자체는 원형 유산의 관람·탐구 대상 실물로 확인되지 않아 현재 수준(관람)도 뒷받침되지 않는다. 제한적 접촉 수준(하위)에 해당할 가능성이 높아 판단을 UNCERTAIN으로 남긴다."
+        }
+      },
+      "reason": "제시된 앵커는 '확인된 원형·유산을 관람'(상위 수준)이나, 근거는 국립공원 경계 산책로·빨래골 계곡 등 제한적 접촉에 불과하다. 조성된 둘레길 자체는 원형 유산의 관람·탐구 대상 실물로 확인되지 않아 현재 수준(관람)도 뒷받침되지 않는다. 제한적 접촉 수준(하위)에 해당할 가능성이 높아 판단을 UNCERTAIN으로 남긴다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+              "quote": {
+                "end": 536,
+                "method": "EXACT",
+                "original": "빨래골 계곡의 물이 맑고 수량이 풍부해 대궐의 궁중 무수리들이 빨래터와 휴식처로 이용하면서 ‘빨래골’이란 명칭이 유래",
+                "start": 471,
+                "submitted": "빨래골 계곡의 물이 맑고 수량이 풍부해 대궐의 궁중 무수리들이 빨래터와 휴식처로 이용하면서 ‘빨래골’이란 명칭이 유래",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 2,
+          "reason": "빨래골 명칭 유래 등 이 장소 연간의 간단한 연혁 소개는 있으나, 사건·인물 맥락의 깊은 제시는 없다. 2수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "앵커는 '사건·인물 맥락 제시'이지만, 근거는 빨래골 지명 유래라는 간단한 연혁 소개에 그친다. 이는 하위 수준('짧은 역사 안내')에 해당하며 현재 제시된 상위 수준도 근거가 없어 UNCERTAIN."
+        }
+      },
+      "reason": "앵커는 '사건·인물 맥락 제시'이지만, 근거는 빨래골 지명 유래라는 간단한 연혁 소개에 그친다. 이는 하위 수준('짧은 역사 안내')에 해당하며 현재 제시된 상위 수준도 근거가 없어 UNCERTAIN."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "REPRESENTED_MEANING",
+              "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+              "quote": {
+                "end": 182,
+                "method": "EXACT",
+                "original": "사람과 자연이 하나 되어 걷는 둘레길",
+                "start": 162,
+                "submitted": "사람과 자연이 하나 되어 걷는 둘레길",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+            },
+            {
+              "claim": "REPRESENTED_MEANING",
+              "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+              "quote": {
+                "end": 269,
+                "method": "EXACT",
+                "original": "우리의 소중한 자연을 보존하는 길",
+                "start": 251,
+                "submitted": "우리의 소중한 자연을 보존하는 길",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+            }
+          ],
+          "flags": [],
+          "key": "E.a",
+          "level": 2,
+          "reason": "'사람과 자연이 하나 되는 길', '자연 보존의 길'이라는 이미지가 공식 소개에서 장소에 부여되어 있으나 여러 표현으로 일관되게 확인되는 수준은 아니다. 2수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.a",
+          "reason": "앵커는 '구체적인 이미지·이야기가 장소와 연결'이나, 판단 사유 스스로 여러 표현에서 일관되게 확인되는 수준이 아니라고 인정한다. '사람과 자연이 하나 되는 길'이라는 간단한 이미지 표현(하위 수준)까지만 뒷받침되어 현재 수준은 미지원."
+        }
+      },
+      "reason": "앵커는 '구체적인 이미지·이야기가 장소와 연결'이나, 판단 사유 스스로 여러 표현에서 일관되게 확인되는 수준이 아니라고 인정한다. '사람과 자연이 하나 되는 길'이라는 간단한 이미지 표현(하위 수준)까지만 뒷받침되어 현재 수준은 미지원."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+              "quote": {
+                "end": 579,
+                "method": "EXACT",
+                "original": "거리는 총 4.1㎞이며, 약 2시간이 소요된다",
+                "start": 554,
+                "submitted": "거리는 총 4.1㎞이며, 약 2시간이 소요된다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+              "quote": {
+                "end": 402,
+                "method": "EXACT",
+                "original": "독특한 모양의 원형계단을 통해 전망대에 오르면",
+                "start": 377,
+                "submitted": "독특한 모양의 원형계단을 통해 전망대에 오르면",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "2시간 걷기 탐방과 전망대 오르기 등 신체 참여 활동의 기회가 확인된다. 지속적 도전 활동이라기보다는 구체적 참여·탐방 활동 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "앵커는 '지속적으로 참여·도전할 활동'이나, 근거는 2시간 걷기와 전망대 오르기라는 구체적 참여·탐방 활동(하위 수준)에 그친다. 판단 사유도 이를 인정하므로 현재 제시 수준은 미지원."
+        }
+      },
+      "reason": "앵커는 '지속적으로 참여·도전할 활동'이나, 근거는 2시간 걷기와 전망대 오르기라는 구체적 참여·탐방 활동(하위 수준)에 그친다. 판단 사유도 이를 인정하므로 현재 제시 수준은 미지원."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "e7de03528d5a2de8582d2ac714ca6ac8421ac86de84417965bb9a950dbb8cc32",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7c22c0ab1a9223cf590bb7917ce3a36a359295098fea93d431641c224381e5a1",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8e347881834c1df0850686dd4f94e85ffd936686e43e890001240abb48fcbf9e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1196867",
+          "request_sha256": "88e09cd0c58124b97d9f4f763c4b19fb8514b8b867a20ee1df6974ebde9e19b9",
+          "response_sha256": "ec98b39b0d6e01a29eb3928dd8ba7213956823078a840b86d2488ac2caa42cba",
+          "retrieved_at": "2026-09-10T05:29:11.399717Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-09T05:41:15Z",
+          "source_record_sha256": "6b91cc90b06f9d3276ba1bbd9af6a706991841fab23acfd2767b891c51d8361b",
+          "source_uri": null
+        },
+        "record_sha256": "0b97e483441dc11bff031b96b81a15dd99a24f59219cc3069173ef8f255cea87",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "북한산 둘레길은 기존의 샛길을 연결하고 다듬어서 북한산 자락을 완만하게 걸을 수 있도록 조성한 저지대 수평 산책로이다. 둘레길은 전체 71.5㎞ 중 서울시 구간과 우이령길을 포함하여 2010년 9월 7일 45.7㎞를 개통하고, 2011년 6월 30일에 나머지 25.8㎞ 구간을 개통하였다. 사람과 자연이 하나 되어 걷는 둘레길은 물길, 흙길, 숲길과 마을길 산책로의 형태에 각각 21가지 테마를 구성한 길이다. 누구나 쉽게 이용할 수 있는 둘레길을 우리의 소중한 자연을 보존하는 길, 그리고 역사와 문화, 생태를 체험할 수 있는 길이다. 21가지 테마 중 3구간인 흰구름길은 국립공원 경계를 따라 울창한 숲과 아담한 오솔길을 걷다 보면 12m 높이의 구름 전망대가 나온다. 독특한 모양의 원형계단을 통해 전망대에 오르면 북한산, 도봉산, 수락산, 불암산, 용마산, 아차산, 서울도심의 모습이 한눈에 들어오는 멋진 경관을 볼 수 있다. 또한, 빨래골 계곡의 물이 맑고 수량이 풍부해 대궐의 궁중 무수리들이 빨래터와 휴식처로 이용하면서 ‘빨래골’이란 명칭이 유래되어 현재까지도 사용되고 있다. 거리는 총 4.1㎞이며, 약 2시간이 소요된다."
+      }
+    ],
+    "parent_source_sha256": "524be4cc4c21250288ba5959705821f41a2c4eef11ee012dfab8d977544e4f2b",
+    "place": {
+      "address": "서울특별시 강북구 수유동",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:8e347881834c1df0850686dd4f94e85ffd936686e43e890001240abb48fcbf9e",
+      "name_ko": "[북한산 둘레길 3구간] 흰구름길",
+      "place_id": "public:korea:8e347881834c1df0850686dd4f94e85ffd936686e43e890001240abb48fcbf9e",
+      "provider_content_id": "1196867",
+      "region_code": "11305",
+      "region_name": "서울특별시 강북구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

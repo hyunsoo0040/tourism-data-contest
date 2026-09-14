@@ -1,7 +1,7 @@
 function interpretedDescription(description: string): string {
-  const hasHistory = description.includes("역사·전통");
-  const hasEmotion = description.includes("감성·이미지");
-  const hasRest = description.includes("휴식·몰입");
+  const hasHistory = description.includes("대상•원형형");
+  const hasEmotion = description.includes("의미•이미지형");
+  const hasRest = description.includes("자기•몰입형");
 
   if (hasEmotion && hasRest) {
     return "나는 장면 속에 담긴 감정과 오래 머물 수 있는 순간에 끌려요.";

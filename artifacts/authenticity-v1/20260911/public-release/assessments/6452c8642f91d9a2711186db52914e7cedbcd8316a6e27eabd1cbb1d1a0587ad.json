@@ -1,0 +1,583 @@
+{
+  "assessed_at": "2026-09-11T16:39:14.455895Z",
+  "assessment_sha256": "6452c8642f91d9a2711186db52914e7cedbcd8316a6e27eabd1cbb1d1a0587ad",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 56
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소 자체의 연혁(2012년 사업 선정, 2013년 조성, 고속도로 둑과 방치 토지의 변천)을 구체적으로 소개하므로 간단한 연혁 소개 수준(level 2)으로 지원된다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "메타세쿼이아와 맥문동꽃이 어우러진 장소 이미지가 명칭에 반영되어 장소와 연결된 이미지가 확인되지만, 일관된 상징 체계까지의 근거는 부족하여 level 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "사진작가들의 방문은 장소 이미지가 사진 매체로 재현·확산된다는 정황이지만, 반복되는 유통의 구체적 근거는 제한적이므로 level 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "보랏빛 맥문동꽃과 메타세쿼이아 숲, 야간조명 등 경관시설로 장면에서 구별되는 시각적 성격이 확인되므로 level 3이다. 이 출처의 allowed_claims에 VISUAL_APPEARANCE가 없어 동일 출처 내 허용된 VISUAL_EXPRESSION claim으로 인용한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(보랏빛 꽃길)을 직접 보며 촬영할 수 있음을 보여주지만, 구도 재현이 방문 경험의 중심이라는 근거는 없어 level 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "약 1㎞ 숲길을 자율적으로 걷는 산책이 가능하다는 근거가 있으나, 깊은 자기 주도 탐색의 중심 경험임까지는 확인되지 않아 level 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "메타세쿼이아 녹색길과 숲 환경, 의자·데크로드 등 머무를 환경의 단서가 확인되지만 실제 고요함·저자극은 확인되지 않아 level 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "산책이라는 신체 참여 활동이 가능하지만 집중·도전형 활동의 근거는 제한적이므로 level 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제시된 개요는 방치된 자투리땅을 가꾼 도심 숲길을 설명할 뿐, 확인된 문화유산·원형(실물 유적·유산)과의 접촉 근거가 없다. 부재는 0의 근거가 아니므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 455,
+            "method": "EXACT",
+            "original": "1970년대에 전남광주통합특별시를 지나는 호남고속도로 도심 구간을 도시와 구분하기 위해 둑을 쌓았고, 1980년대 후반부터 문흥지구 등 신도시가 들어서면서 방음벽이 세워지자 외곽의 자투리땅으로 방치된 공간이었다.",
+            "start": 337,
+            "submitted": "1970년대에 전남광주통합특별시를 지나는 호남고속도로 도심 구간을 도시와 구분하기 위해 둑을 쌓았고, 1980년대 후반부터 문흥지구 등 신도시가 들어서면서 방음벽이 세워지자 외곽의 자투리땅으로 방치된 공간이었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "이 장소 자체의 연혁(2012년 사업 선정, 2013년 조성, 고속도로 둑과 방치 토지의 변천)을 구체적으로 소개하므로 간단한 연혁 소개 수준(level 2)으로 지원된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "주민들이 가꾼 사실은 과거 조성 참여이며, 현재 지역 주체의 전승·생활문화와의 지속적 연결을 보여주는 근거는 없다. 추정하지 않고 UNKNOWN으로 판단한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "안내판 설치 언급은 있으나 원형·역사에 연결된 해설·학습 프로그램의 실제 내용에 대한 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 120,
+            "method": "EXACT",
+            "original": "이후 메타세쿼이아 숲을 따라 맥문동꽃이 어우러져 핀다고 하여 맥문동숲길이라는 명칭으로 변경되었다.",
+            "start": 66,
+            "submitted": "이후 메타세쿼이아 숲을 따라 맥문동꽃이 어우러져 핀다고 하여 맥문동숲길이라는 명칭으로 변경되었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "메타세쿼이아와 맥문동꽃이 어우러진 장소 이미지가 명칭에 반영되어 장소와 연결된 이미지가 확인되지만, 일관된 상징 체계까지의 근거는 부족하여 level 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 586,
+            "method": "EXACT",
+            "original": "매년 5~6월 메타세쿼이아 숲길을 따라 약 1㎞ 구간에 걸쳐 보랏빛 맥문동꽃이 필 때면 전국의 사진작가들이 줄지어 찾아온다.",
+            "start": 517,
+            "submitted": "매년 5~6월 메타세쿼이아 숲길을 따라 약 1㎞ 구간에 걸쳐 보랏빛 맥문동꽃이 필 때면 전국의 사진작가들이 줄지어 찾아온다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "사진작가들의 방문은 장소 이미지가 사진 매체로 재현·확산된다는 정황이지만, 반복되는 유통의 구체적 근거는 제한적이므로 level 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 565,
+            "method": "EXACT",
+            "original": "매년 5~6월 메타세쿼이아 숲길을 따라 약 1㎞ 구간에 걸쳐 보랏빛 맥문동꽃이 필 때면",
+            "start": 517,
+            "submitted": "매년 5~6월 메타세쿼이아 숲길을 따라 약 1㎞ 구간에 걸쳐 보랏빛 맥문동꽃이 필 때면",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 647,
+            "method": "EXACT",
+            "original": "야간조명을 비롯한 경관시설 등이 설치되어 있다.",
+            "start": 621,
+            "submitted": "야간조명을 비롯한 경관시설 등이 설치되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "보랏빛 맥문동꽃과 메타세쿼이아 숲, 야간조명 등 경관시설로 장면에서 구별되는 시각적 성격이 확인되므로 level 3이다. 이 출처의 allowed_claims에 VISUAL_APPEARANCE가 없어 동일 출처 내 허용된 VISUAL_EXPRESSION claim으로 인용한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 586,
+            "method": "EXACT",
+            "original": "전국의 사진작가들이 줄지어 찾아온다.",
+            "start": 566,
+            "submitted": "전국의 사진작가들이 줄지어 찾아온다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "대표 장면(보랏빛 꽃길)을 직접 보며 촬영할 수 있음을 보여주지만, 구도 재현이 방문 경험의 중심이라는 근거는 없어 level 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 692,
+            "method": "EXACT",
+            "original": "문화와 휴식, 자연과 함께 하는 도심 속 걷고 싶은 산책공간으로 거듭나고 있다.",
+            "start": 648,
+            "submitted": "문화와 휴식, 자연과 함께 하는 도심 속 걷고 싶은 산책공간으로 거듭나고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "약 1㎞ 숲길을 자율적으로 걷는 산책이 가능하다는 근거가 있으나, 깊은 자기 주도 탐색의 중심 경험임까지는 확인되지 않아 level 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 276,
+            "method": "EXACT",
+            "original": "시민의 솟음길은 문흥동 중흥파크맨션 입구에서 삼각산 길을 따라 주룡마을까지 메타세쿼이아를 활용한 녹색길이다.",
+            "start": 216,
+            "submitted": "시민의 솟음길은 문흥동 중흥파크맨션 입구에서 삼각산 길을 따라 주룡마을까지 메타세쿼이아를 활용한 녹색길이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 516,
+            "method": "EXACT",
+            "original": "지금의 아름다운 숲이 되어 각광받게 되었다.",
+            "start": 492,
+            "submitted": "지금의 아름다운 숲이 되어 각광받게 되었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "메타세쿼이아 녹색길과 숲 환경, 의자·데크로드 등 머무를 환경의 단서가 확인되지만 실제 고요함·저자극은 확인되지 않아 level 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+          "quote": {
+            "end": 681,
+            "method": "EXACT",
+            "original": "문화와 휴식, 자연과 함께 하는 도심 속 걷고 싶은 산책공간",
+            "start": 648,
+            "submitted": "문화와 휴식, 자연과 함께 하는 도심 속 걷고 싶은 산책공간",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "산책이라는 신체 참여 활동이 가능하지만 집중·도전형 활동의 근거는 제한적이므로 level 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "주민 참여 조성의 과거 사실은 현재 교류·공동 활동·자기표현 기회를 보증하지 않으며, 관련 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "2bd2cece4cde1e2bf6714f0ffd22031676d47446dc4e532ec89f54d227a96dd2",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:02daa5e84b07a5c62cbacca4e0d9f4822ae847b79ee6110717c8cc2a2719388e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:41c29960fffab4dd5b5443a5da73201540fcb2e9f0d645d66093a1cfe3d97bd3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3029498",
+          "request_sha256": "122774acaab728887cd1a9f4587180a49154fcc3be78fe765b1ea856e5c2de4b",
+          "response_sha256": "bc5488d86f8cbd4a04b70bd427003432527e5d5bd4a9d2a00d5f455f38ceb1c8",
+          "retrieved_at": "2026-09-10T08:22:00.538015Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f3b3499520c84b7d36748d20747b786608cf974daa68549a665188776b6cb14e",
+          "source_uri": null
+        },
+        "record_sha256": "7e477fde0e86ab17fe6be7ced0e354f76dcd97b3a903488b00d0b2555183e89f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:48c7fc32a1830dbafec772e201ccacda61c0dc6d84690376aa75f07630249cc4",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:41c29960fffab4dd5b5443a5da73201540fcb2e9f0d645d66093a1cfe3d97bd3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3029498",
+          "request_sha256": "b7bb69f0f51e256ce932211865689d0595435ae58ed947d666a65e96ea66be09",
+          "response_sha256": "3a89870ff84f6443c036bd7d2f11cff57a552817a639e18a20a9c7c0fef9d7fc",
+          "retrieved_at": "2026-09-10T07:44:09.834578Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-07-02T02:13:37Z",
+          "source_record_sha256": "fff7ef2e1e36398f53127705d4d7737c50eabb73729c801eb67c4f825ce7bde0",
+          "source_uri": null
+        },
+        "record_sha256": "559fef1cb581c33701f0003328fba9b35e93baf4bb49742fb7564942342df513",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "맥문동숲길은 용봉나들목에서 문흥분기점에 이르는 도심 속 숲길로 기존에는 ‘천지인 문화소통길’이라는 명칭을 사용하였다. 이후 메타세쿼이아 숲을 따라 맥문동꽃이 어우러져 핀다고 하여 맥문동숲길이라는 명칭으로 변경되었다. 천지인 문화소통길은 전남광주통합특별시 북구청이 2012년 행정안전부의 친환경 생활공간 조성 사업 공모에 선정되어 2013년에 조성한 시민의 솟음길 구간의 일부에 속한다. 시민의 솟음길은 문흥동 중흥파크맨션 입구에서 삼각산 길을 따라 주룡마을까지 메타세쿼이아를 활용한 녹색길이다. 맥문동숲길은 호남고속도로 곁을 따라 이어지는 천지인 문화소통길 중에서 ‘지(地)’의 공간에 속하는 길이다. 1970년대에 전남광주통합특별시를 지나는 호남고속도로 도심 구간을 도시와 구분하기 위해 둑을 쌓았고, 1980년대 후반부터 문흥지구 등 신도시가 들어서면서 방음벽이 세워지자 외곽의 자투리땅으로 방치된 공간이었다. 전남광주통합특별시 북구청과 주민들이 약 4년에 걸쳐 가꾼 결과, 지금의 아름다운 숲이 되어 각광받게 되었다. 매년 5~6월 메타세쿼이아 숲길을 따라 약 1㎞ 구간에 걸쳐 보랏빛 맥문동꽃이 필 때면 전국의 사진작가들이 줄지어 찾아온다. 현재 맥문동숲길에는 의자, 안내판, 데크로드 등 편의 시설과 야간조명을 비롯한 경관시설 등이 설치되어 있다. 문화와 휴식, 자연과 함께 하는 도심 속 걷고 싶은 산책공간으로 거듭나고 있다."
+      }
+    ],
+    "parent_source_sha256": "d179b7f499e4f368e4c1d9f3fadd5562ba4b505468a018d9db069703fcc7202d",
+    "place": {
+      "address": "전남광주통합특별시 북구 문흥동",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:41c29960fffab4dd5b5443a5da73201540fcb2e9f0d645d66093a1cfe3d97bd3",
+      "name_ko": "맥문동숲길",
+      "place_id": "public:korea:41c29960fffab4dd5b5443a5da73201540fcb2e9f0d645d66093a1cfe3d97bd3",
+      "provider_content_id": "3029498",
+      "region_code": "12300",
+      "region_name": "전남광주통합특별시 북구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

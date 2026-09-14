@@ -1,0 +1,954 @@
+{
+  "assessed_at": "2026-09-11T19:55:03.571909Z",
+  "assessment_sha256": "c3b28ff18b64cfca198cd8fb1e46b90d4c4205c2e0d3d14140000f7b6f18a95c",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 46
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "장소의 주인공인 우제길 화백의 출생, 학력, 수상 이력 등 구체적 인물·연혁 맥락을 제시하므로 이 장소의 역사·출처 이해를 지원한다. 수준은 구체적 인물 맥락 제시에 해당하는 3로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'빛의 화가'라는 구체적 이미지와 상징적 의미가 장소(작가 전용 미술관)와 명확히 연결되어 있다. 수준은 구체적 이미지·이야기가 장소와 연결된 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:adb7f18286dcfc9807f0a35fcd4309dcccd6a1d893e564835cc98ff11cacf93f",
+            "appearance:cda21252b5cc9bca39eef11dc11456ea216f89e066864fc915207274ad2be3fd",
+            "appearance:d0cc4b4108c188ffe63d9da59c485d6069fbe97dcdc4195536dc583ac5485dea"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "승효상 설계라는 건축미와 현대적 감각이 장소의 시각적 성격으로 명시되어 구별되는 시각적 표현을 확인할 수 있다. 수준은 3으로 판단했다.",
+      "value": 77
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:71f105fcc94e533ee5a53f38b81f761f4064f043e8acccccbd240763cfb05b16"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "프라이빗 도슨트 투어를 통해 작가의 예술세계라는 대표 의미를 현장에서 관람·경험할 수 있다. 재현·촬영 등 적극적 체험 근거는 없으므로 제한적 관람 수준인 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:38ef383c464d6572581a376e6c38bfea86140ece4725dfdf5c158cd9a83c394e",
+            "appearance:652befc40f6bcbf809d27368f4a587d1328916043392be32cd0e95d3000dd3be",
+            "appearance:f3bf66058350ad200623c86b1a3d324574fc54070cfa4bb3dfba27a4afc38a80"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 42,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연 환경, 시각적 저자극, 머무를 환경에 대한 직접적 근거가 없다. '감성 공간'이라는 표현만으로 회복 환경을 추정할 수 없다.",
+      "value": 42
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:71f105fcc94e533ee5a53f38b81f761f4064f043e8acccccbd240763cfb05b16"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "한지 콜라주 클래스, 아트백 만들기 등 구체적인 참여형 체험 기회가 확인된다. 다만 지속적 도전·몰입 활동이라는 근거는 없어 체험 기회 수준인 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "현대 미술 작가(우제길)를 조명하는 사립미술관이라는 설명만 있으며, 확인된 문화유산의 원형·실물과의 접촉을 뒷받침하는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d",
+          "quote": {
+            "end": 414,
+            "method": "EXACT",
+            "original": "1942년 일본 교토에서 태어나 광주서중학교를 거쳐 1961년 광주사범학교를 졸업하였다",
+            "start": 366,
+            "submitted": "1942년 일본 교토에서 태어나 광주서중학교를 거쳐 1961년 광주사범학교를 졸업하였다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "900d7fbd2d735ba3bbbc295bc8c8bf8b9239c1c400c64eb6cbe95dd68255cf75"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "H.b",
+      "level": 3,
+      "reason": "장소의 주인공인 우제길 화백의 출생, 학력, 수상 이력 등 구체적 인물·연혁 맥락을 제시하므로 이 장소의 역사·출처 이해를 지원한다. 수준은 구체적 인물 맥락 제시에 해당하는 3로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 대한 근거가 없다. 한지 클래스가 언급되지만 이것이 실제 전승 활동과 연결됨을 확인하는 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "제시된 anchor_ko는 '유산·전통에 연결된 설명·전시'(수준 3)이지만, 근거는 현대 추상미술 작가 조명 전시이며 스스로도 원형·유산·전통과의 연결이 아니라고 인정했다. 작가 예술세계 전시를 유산 연결 해설로 볼 수 있는지 자료만으로 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d",
+          "quote": {
+            "end": 331,
+            "method": "EXACT",
+            "original": "빛의 화가 우제길",
+            "start": 322,
+            "submitted": "빛의 화가 우제길",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "900d7fbd2d735ba3bbbc295bc8c8bf8b9239c1c400c64eb6cbe95dd68255cf75"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 3,
+      "reason": "'빛의 화가'라는 구체적 이미지와 상징적 의미가 장소(작가 전용 미술관)와 명확히 연결되어 있다. 수준은 구체적 이미지·이야기가 장소와 연결된 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d",
+          "quote": {
+            "end": 85,
+            "method": "EXACT",
+            "original": "건축가 승효상의 설계로 새로운 공간을 증축하며 한층 더 현대적인 감각을 갖춘",
+            "start": 43,
+            "submitted": "건축가 승효상의 설계로 새로운 공간을 증축하며 한층 더 현대적인 감각을 갖춘",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "900d7fbd2d735ba3bbbc295bc8c8bf8b9239c1c400c64eb6cbe95dd68255cf75"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "승효상 설계라는 건축미와 현대적 감각이 장소의 시각적 성격으로 명시되어 구별되는 시각적 표현을 확인할 수 있다. 수준은 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:71f105fcc94e533ee5a53f38b81f761f4064f043e8acccccbd240763cfb05b16",
+          "quote": {
+            "end": 11,
+            "method": "EXACT",
+            "original": "프라이빗 도슨트 투어",
+            "start": 0,
+            "submitted": "프라이빗 도슨트 투어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c31beb90c699b5a17bee9eb76cb66a0fec8d9aa1dd02c7303efd4f9c87f0415f"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "프라이빗 도슨트 투어를 통해 작가의 예술세계라는 대표 의미를 현장에서 관람·경험할 수 있다. 재현·촬영 등 적극적 체험 근거는 없으므로 제한적 관람 수준인 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색·여유·자기 선택을 지원한다는 근거가 없고, 오히려 도슨트 투어 등 구조화된 프로그램 중심이라는 단서만 있다. 낮음을 직접 명시한 근거도 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경, 시각적 저자극, 머무를 환경에 대한 직접적 근거가 없다. '감성 공간'이라는 표현만으로 회복 환경을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:71f105fcc94e533ee5a53f38b81f761f4064f043e8acccccbd240763cfb05b16",
+          "quote": {
+            "end": 38,
+            "method": "EXACT",
+            "original": "한지 꼴라주 클래스 / 나만의 아트백 만들기",
+            "start": 14,
+            "submitted": "한지 꼴라주 클래스 / 나만의 아트백 만들기",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c31beb90c699b5a17bee9eb76cb66a0fec8d9aa1dd02c7303efd4f9c87f0415f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "한지 콜라주 클래스, 아트백 만들기 등 구체적인 참여형 체험 기회가 확인된다. 다만 지속적 도전·몰입 활동이라는 근거는 없어 체험 기회 수준인 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "근거로 제시된 워크숍·세미나·결혼식 등은 대관 사업(임대 서비스)의 나열이며, 일반 방문객에게 제공되는 교류·자기표현 기회가 아니다. 대관 가능성을 방문자의 관계 형성 경험 기회로 옮기는 것은 부적절하며, anchor_ko '구체적인 교류·표현 기회'도 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "f7f2473d304c59d422e2b422b09f5730bc6f8e1c506ba3d443f71c94526f56ca",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d",
+              "quote": {
+                "end": 153,
+                "method": "EXACT",
+                "original": "한국 현대 추상미술을 대표하는 ‘빛의 화가’ 우제길 화백의 예술세계를 깊이 있게 조명하는 전시",
+                "start": 101,
+                "submitted": "한국 현대 추상미술을 대표하는 ‘빛의 화가’ 우제길 화백의 예술세계를 깊이 있게 조명하는 전시",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "900d7fbd2d735ba3bbbc295bc8c8bf8b9239c1c400c64eb6cbe95dd68255cf75"
+            }
+          ],
+          "flags": [],
+          "key": "H.d",
+          "level": 2,
+          "reason": "작가의 예술세계를 조명하는 전시가 해설·학습 기회를 제공한다. 다만 원형·유산·전통과의 연결이라기보다 현대 미술가 조명이므로 간단한 안내 수준인 2로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT",
+            "WRONG_FACET"
+          ],
+          "key": "H.d",
+          "reason": "제시된 anchor_ko는 '유산·전통에 연결된 설명·전시'(수준 3)이지만, 근거는 현대 추상미술 작가 조명 전시이며 스스로도 원형·유산·전통과의 연결이 아니라고 인정했다. 작가 예술세계 전시를 유산 연결 해설로 볼 수 있는지 자료만으로 확정하기 어렵다."
+        }
+      },
+      "reason": "제시된 anchor_ko는 '유산·전통에 연결된 설명·전시'(수준 3)이지만, 근거는 현대 추상미술 작가 조명 전시이며 스스로도 원형·유산·전통과의 연결이 아니라고 인정했다. 작가 예술세계 전시를 유산 연결 해설로 볼 수 있는지 자료만으로 확정하기 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d",
+              "quote": {
+                "end": 234,
+                "method": "EXACT",
+                "original": "문화예술 행사, 교육, 워크숍 및 세미나, 결혼식 등 다양한 대관 행사",
+                "start": 195,
+                "submitted": "문화예술 행사, 교육, 워크숍 및 세미나, 결혼식 등 다양한 대관 행사",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "900d7fbd2d735ba3bbbc295bc8c8bf8b9239c1c400c64eb6cbe95dd68255cf75"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "워크숍, 세미나, 문화예술 행사 등 교류·공동 활동의 기회가 확인된다. 그러나 이것이 관계 형성이나 자기표현의 풍부한 기회임을 보여주는 근거는 부족하여 2로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "BUSINESS_AS_TOURIST_ACTIVITY",
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "근거로 제시된 워크숍·세미나·결혼식 등은 대관 사업(임대 서비스)의 나열이며, 일반 방문객에게 제공되는 교류·자기표현 기회가 아니다. 대관 가능성을 방문자의 관계 형성 경험 기회로 옮기는 것은 부적절하며, anchor_ko '구체적인 교류·표현 기회'도 뒷받침되지 않는다."
+        }
+      },
+      "reason": "근거로 제시된 워크숍·세미나·결혼식 등은 대관 사업(임대 서비스)의 나열이며, 일반 방문객에게 제공되는 교류·자기표현 기회가 아니다. 대관 가능성을 방문자의 관계 형성 경험 기회로 옮기는 것은 부적절하며, anchor_ko '구체적인 교류·표현 기회'도 뒷받침되지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "f67529069be55b2b8b308bb32e7748220b051d8d2cab5bdd65710174730f0878",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "노출 콘크리트와 미니멀한 현대적 구조로 전통적 외관·재료의 특성이 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1385d8547c05f989f0f70c78202cd4dd95961a88f72b983ec76bc5a052bd24c1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0562363d9770565d4dcc58e8d5bc1c58d7fc19dfbbae3e5ee2cb3e973cc7930e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510752_3",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e201bb72d70cc3df70f6aaed200b368d21a169c46e4a7623803e2d0f7b4624fc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/52/3510752_image2_1.jpg"
+        },
+        "record_sha256": "d17d64eb8d6e591fc078df88b30658f70d3612efdd38e2f9cb8a5e801bce9d03",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "큰 창 너머로 울창한 녹지와 나뭇잎이 보이며 자연 채광이 실내를 채우지만, 실내 중심 구도라 상대적으로 보통 수준.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:38ef383c464d6572581a376e6c38bfea86140ece4725dfdf5c158cd9a83c394e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0562363d9770565d4dcc58e8d5bc1c58d7fc19dfbbae3e5ee2cb3e973cc7930e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510752_3",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e201bb72d70cc3df70f6aaed200b368d21a169c46e4a7623803e2d0f7b4624fc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/52/3510752_image2_1.jpg"
+        },
+        "record_sha256": "8806f34dff0401b7c9f5f6ef3c96168c5311864ff7fe38c8549ab7d01fe30fbc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "전경과 측면에 나뭇가지와 나무 실루엣이 보이나, 자연 경관보다는 건축물이 중심이어서 환경 단서는 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:652befc40f6bcbf809d27368f4a587d1328916043392be32cd0e95d3000dd3be",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "59dbd893386343a504111a3929e438ac9e441e716e89e504b10e18cd9bc6fe2a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510747_1",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1f7cc90bf5c39b7494d50327149da9b5e9a5392435b9332f71099a52f6fe5c3b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/47/3510747_image2_1.JPG"
+        },
+        "record_sha256": "7d916c891435e44453578ee55927113933b7ef5547d4f3806a2ee60a071a17b2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "밤하늘 배경에 흰 입체 기하학적 건축물이 따뜻한 조명으로 역광처럼 돋보이며, 강한 명암 대비와 상승감 있는 구도가 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:adb7f18286dcfc9807f0a35fcd4309dcccd6a1d893e564835cc98ff11cacf93f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "59dbd893386343a504111a3929e438ac9e441e716e89e504b10e18cd9bc6fe2a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510747_1",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1f7cc90bf5c39b7494d50327149da9b5e9a5392435b9332f71099a52f6fe5c3b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/47/3510747_image2_1.JPG"
+        },
+        "record_sha256": "dde8fc6b4c5845b0a54e4ea4a00ce2a6499548f326756b6cc886de3d0677bcf7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "박공 지붕 형태의 일부 모티프 외에 전통적 재료나 공간 구성의 시각적 특성은 거의 보이지 않는 현대적 외관이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c7861d5b06376219991d915fda3967452ddc6ccb44d59fa15f37d343b40a4fbe",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a2c28f4ee4f35ba705a112c1118f11c0c1e235d0e97778670393a355e287256f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510751_4",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "63b84d6c0b61c689699eccf4e30b78b32d2fc621e9340d569f599bd97cb51be2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/51/3510751_image2_1.jpg"
+        },
+        "record_sha256": "83fabeba4aea3bf84d0dd457a23e86d1b2e4614fd3fc2a68b8094cce8f012bbb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰 건물에 붉은 경사 지붕과 붉은 간판이 강한 대비를 이루며, 푸른 하늘과 함께 색채 구성이 뚜렷한 현대적 연출이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cda21252b5cc9bca39eef11dc11456ea216f89e066864fc915207274ad2be3fd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a2c28f4ee4f35ba705a112c1118f11c0c1e235d0e97778670393a355e287256f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510751_4",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "63b84d6c0b61c689699eccf4e30b78b32d2fc621e9340d569f599bd97cb51be2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/51/3510751_image2_1.jpg"
+        },
+        "record_sha256": "63e9067644ef4c0fa35b21f71444c201c7aedbbf84ea16afa3fe4eb9e4a9dbdf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "채도 높은 다색 스트로크가 강한 대형 벽화가 콘크리트 벽을 지배하며, 원형 패턴 작품과 함께 강한 시각적 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d0cc4b4108c188ffe63d9da59c485d6069fbe97dcdc4195536dc583ac5485dea",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0562363d9770565d4dcc58e8d5bc1c58d7fc19dfbbae3e5ee2cb3e973cc7930e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510752_3",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e201bb72d70cc3df70f6aaed200b368d21a169c46e4a7623803e2d0f7b4624fc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/52/3510752_image2_1.jpg"
+        },
+        "record_sha256": "a2d0ed3762b3a2dc56759a42097cfe2b3aa04055507d1ac2307e189aa5db1afd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "매끈한 흰 콘크리트 느낌의 현대적 입체 구성으로 전통적 외관·재료·공간 구성의 특성은 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d8abd60ac161a9a7b0abe7b72d148d1ef677792b8c6ae1f2a4950d13617c89df",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "59dbd893386343a504111a3929e438ac9e441e716e89e504b10e18cd9bc6fe2a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510747_1",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1f7cc90bf5c39b7494d50327149da9b5e9a5392435b9332f71099a52f6fe5c3b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/47/3510747_image2_1.JPG"
+        },
+        "record_sha256": "cdfbae78bfc25d8cc39c194c97c7eb2ac6d2cbca95366a9248e5cd0106f1f4b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "푸른 하늘, 잔디, 무성한 나무들이 전경을 구성하나 건물이 중심이어서 자연 단서는 보통 수준으로 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f3bf66058350ad200623c86b1a3d324574fc54070cfa4bb3dfba27a4afc38a80",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a2c28f4ee4f35ba705a112c1118f11c0c1e235d0e97778670393a355e287256f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3510751_4",
+          "request_sha256": "bc2805cb5b197afb0ffe6b65a5f8ed0dc5fc4ae4fbd7e3dece51e5620030ed08",
+          "response_sha256": "f42e3185e0fceadc383b8d417bdd1da3120250931287b9d9e98bfd2912b84eba",
+          "retrieved_at": "2026-09-11T02:10:32.300395Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "63b84d6c0b61c689699eccf4e30b78b32d2fc621e9340d569f599bd97cb51be2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/51/3510751_image2_1.jpg"
+        },
+        "record_sha256": "11538f53603ca98056939333c8ee5bb236754bcc3326cdf9c0a3e1c35d429283",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:71f105fcc94e533ee5a53f38b81f761f4064f043e8acccccbd240763cfb05b16",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "130639",
+          "request_sha256": "aa2601842cabd287cc2c37cf1cc4fd73c9d5a15e4c955106e5a37c2908906018",
+          "response_sha256": "8cd82b69f1c9bf4bf3bcde792a439236c25a2cf288986e1f1d3f9beca27f4edc",
+          "retrieved_at": "2026-09-11T02:10:31.623930Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fafe625e65eafaeadc90ba5121a72e48f015742410a512d31286613fd7d920ee",
+          "source_uri": null
+        },
+        "record_sha256": "c31beb90c699b5a17bee9eb76cb66a0fec8d9aa1dd02c7303efd4f9c87f0415f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "프라이빗 도슨트 투어 / 한지 꼴라주 클래스 / 나만의 아트백 만들기 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c400d2bbfde55a0068751f42e0b73ed6c6e861aad4f4ac308b832989ed6cee8d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "130639",
+          "request_sha256": "a806785bf99d4e26909d524cbf26d8343b8543d3c93e181c50daec282202d896",
+          "response_sha256": "0c040db35ac377386efe73484a09c3a84899d47ba906fecd683fad28ed659c4d",
+          "retrieved_at": "2026-09-10T17:00:23.354716Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T12:26:27Z",
+          "source_record_sha256": "c5993c956d17c6e8daf45873ccd565df04440f8cc4b18802ab865828e344b3e5",
+          "source_uri": null
+        },
+        "record_sha256": "900d7fbd2d735ba3bbbc295bc8c8bf8b9239c1c400c64eb6cbe95dd68255cf75",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "우제길미술관은 사립미술관으로, 김차순 관장이 2001년 설립 이후 2014년 건축가 승효상의 설계로 새로운 공간을 증축하며 한층 더 현대적인 감각을 갖춘 복합문화공간으로 거듭났다. 한국 현대 추상미술을 대표하는 ‘빛의 화가’ 우제길 화백의 예술세계를 깊이 있게 조명하는 전시뿐만 아니라, 미술관이라는 세련된 건축미가 어우러진 인문학적 감성 공간에서 문화예술 행사, 교육, 워크숍 및 세미나, 결혼식 등 다양한 대관 행사를 개최할 수 있다. 또한, 작가의 창작 작업실이 함께 위치하여 그의 예술적 영감과 창작의 순간을 더욱 가까이에서 느낄 수 있는 특별한 경험을 제공한다. * 빛의 화가 우제길 우제길은 빛의 화가라고 불리는 작가로 현대 미술의 거장이다. 1942년 일본 교토에서 태어나 광주서중학교를 거쳐 1961년 광주사범학교를 졸업하였다. 이후 1987년 광주대학교 산업디자인과를 졸업하였다. 한국과 일본, 미국, 유라시아 국가에서 180여 회 이상의 국제전과 기획전에 참여하였으며, 한국미술대상전 특별상(1976), 문화체육부 공로상(1994), 제1회 광주비엔날레 인기작가상(1995), 옥관 문화훈장(2004) 등을 받았다."
+      }
+    ],
+    "parent_source_sha256": "cf995af4dc1b71e28aed2d6e3e2b2fa1cb8e4a9d14fcad3470e1f125cc04e8c8",
+    "place": {
+      "address": "전남광주통합특별시 동구 의재로 140-6",
+      "category": "문화시설",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+      "name_ko": "우제길미술관",
+      "place_id": "public:korea:cce5ff25a765967b1f03178997f6d3d12e35b053475c8bb8a070113ddc395aed",
+      "provider_content_id": "130639",
+      "region_code": "12210",
+      "region_name": "전남광주통합특별시 동구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

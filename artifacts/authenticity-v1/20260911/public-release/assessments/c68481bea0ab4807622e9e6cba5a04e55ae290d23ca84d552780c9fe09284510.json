@@ -1,0 +1,557 @@
+{
+  "assessed_at": "2026-09-11T18:40:19.954444Z",
+  "assessment_sha256": "c68481bea0ab4807622e9e6cba5a04e55ae290d23ca84d552780c9fe09284510",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "전주 한복데이 기반 최초 시간제 대여라는 구체적 이미지·이야기가 장소와 연결되어 있어 공유되는 상징·의미 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "온라인 쇼핑몰 개설 등 명시된 매체를 통한 장소·브랜드 이미지 유통의 근거가 있으나 반복적 확산 근거는 부족해 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "개성 있는 포토존, 한옥마을에서 가장 아름다운 배경이라는 표현으로 구별되는 시각적 성격을 확인할 수 있어 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "한복 착장과 포토존 촬영, 보정까지 대표 이미지를 현장에서 직접 재현하는 경험이 핵심 서비스이므로 수준 4이다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "의상 선택의 자유가 있으나 '의상을 고르는 시간이 정해져 있으므로'라는 제약이 명시되어 제한된 자유 선택 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "한복 선택·착장·촬영이라는 구체적 참여 활동 기회가 확인되나 지속적 도전 활동까지의 근거는 부족해 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "직원의 스타일링·추천 등 대인 교류 기회가 확인되나 공동 제작·자기표현 활동이 풍부하다고 보기는 어려워 수준 3이다.",
+      "value": 75
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "대상은 한복 대여점으로, 확인된 실제 원형·유산의 실물 접촉에 대한 근거가 없다. 한옥마을 입지 언급만으로 원형 접촉을 확정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 사업 연혁(한복데이 기반 최초 시간제 대여 등)을 소개하지만 이는 기업사이며, 장소 자체의 역사·출처 맥락 탐구에 대한 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "'한복을 입고 즐기는 문화를 만들어 가는' 표현이 있으나 지역 주체에 의한 실제 전승·생활문화의 지속과의 연결을 확인할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "의상 선택·스타일링 서비스는 있으나 원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6",
+          "quote": {
+            "end": 128,
+            "method": "EXACT",
+            "original": "‘전주 한복데이’ 축제 기획을 바탕으로 한국 최초의 한복 시간제 대여 사업을 시작했으며 한복을 입고 즐기는 문화를 만들어 가는 문화기획사이기도 하다.",
+            "start": 45,
+            "submitted": "‘전주 한복데이’ 축제 기획을 바탕으로 한국 최초의 한복 시간제 대여 사업을 시작했으며 한복을 입고 즐기는 문화를 만들어 가는 문화기획사이기도 하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "34bfc4deafae317caaeed5aed93e3745ee3043a00de2f88f3c7fe2f419857d40"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "전주 한복데이 기반 최초 시간제 대여라는 구체적 이미지·이야기가 장소와 연결되어 있어 공유되는 상징·의미 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6",
+          "quote": {
+            "end": 220,
+            "method": "EXACT",
+            "original": "2017년에는 온라인 쇼핑몰을 오픈하여 한복이 필요한 곳이면 어느 곳에서든 한복남의 의상을 접할 수 있다.",
+            "start": 161,
+            "submitted": "2017년에는 온라인 쇼핑몰을 오픈하여 한복이 필요한 곳이면 어느 곳에서든 한복남의 의상을 접할 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "34bfc4deafae317caaeed5aed93e3745ee3043a00de2f88f3c7fe2f419857d40"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "온라인 쇼핑몰 개설 등 명시된 매체를 통한 장소·브랜드 이미지 유통의 근거가 있으나 반복적 확산 근거는 부족해 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6",
+          "quote": {
+            "end": 253,
+            "method": "EXACT",
+            "original": "매장은 넓은 마당에 설치된 개성 있는 포토존으로 유명하다.",
+            "start": 221,
+            "submitted": "매장은 넓은 마당에 설치된 개성 있는 포토존으로 유명하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "34bfc4deafae317caaeed5aed93e3745ee3043a00de2f88f3c7fe2f419857d40"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "개성 있는 포토존, 한옥마을에서 가장 아름다운 배경이라는 표현으로 구별되는 시각적 성격을 확인할 수 있어 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6",
+          "quote": {
+            "end": 412,
+            "method": "EXACT",
+            "original": "사진은 한옥마을 안에서도 가장 아름다운 배경이 되는 곳에서 촬영이 이루어지며 사진 보정작업까지 마무리해 준다.",
+            "start": 351,
+            "submitted": "사진은 한옥마을 안에서도 가장 아름다운 배경이 되는 곳에서 촬영이 이루어지며 사진 보정작업까지 마무리해 준다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "34bfc4deafae317caaeed5aed93e3745ee3043a00de2f88f3c7fe2f419857d40"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 4,
+      "reason": "한복 착장과 포토존 촬영, 보정까지 대표 이미지를 현장에서 직접 재현하는 경험이 핵심 서비스이므로 수준 4이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6",
+          "quote": {
+            "end": 350,
+            "method": "EXACT",
+            "original": "치마를 먼저 고르면 직원이 그에 어울리는 저고리를 추천해 주며 머리 손질과 액세서리까지 모두 제공해 준다.",
+            "start": 291,
+            "submitted": "치마를 먼저 고르면 직원이 그에 어울리는 저고리를 추천해 주며 머리 손질과 액세서리까지 모두 제공해 준다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "34bfc4deafae317caaeed5aed93e3745ee3043a00de2f88f3c7fe2f419857d40"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "의상 선택의 자유가 있으나 '의상을 고르는 시간이 정해져 있으므로'라는 제약이 명시되어 제한된 자유 선택 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "넓은 마당 언급이 있으나 자연·저자극·회복 환경에 대한 직접 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6",
+          "quote": {
+            "end": 290,
+            "method": "EXACT",
+            "original": "전통 한복부터 경성 의복까지 다양한 종류의 의상이 준비되어 있으며",
+            "start": 254,
+            "submitted": "전통 한복부터 경성 의복까지 다양한 종류의 의상이 준비되어 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "34bfc4deafae317caaeed5aed93e3745ee3043a00de2f88f3c7fe2f419857d40"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "한복 선택·착장·촬영이라는 구체적 참여 활동 기회가 확인되나 지속적 도전 활동까지의 근거는 부족해 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6",
+          "quote": {
+            "end": 349,
+            "method": "EXACT",
+            "original": "머리 손질과 액세서리까지 모두 제공해 준다",
+            "start": 326,
+            "submitted": "머리 손질과 액세서리까지 모두 제공해 준다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "34bfc4deafae317caaeed5aed93e3745ee3043a00de2f88f3c7fe2f419857d40"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 3,
+      "reason": "직원의 스타일링·추천 등 대인 교류 기회가 확인되나 공동 제작·자기표현 활동이 풍부하다고 보기는 어려워 수준 3이다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "0d42a523561a5df0f47f5e3bb16209b910f9f05aec2e1288ad07a229882bccec",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "494e4ff0e131aba0a0995b95e7b6e4c21ba390e67c94734fa7d7fbe80d251df2",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ac2e10071b32c697912d0cd0575acb873ef491b2eeb01541e71802b2202af9b6",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b5f4d919d05e0a27c098efa6521c567e49a9b743248a6a5b3af5be59829d022f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3056624",
+          "request_sha256": "eb8b270fabe02dba1b72d2f7b58bc1366e1a778b14b0ff21a59cdd3306209aff",
+          "response_sha256": "4b64ee43e5270cca7da69996b3f1bcd41af8e226203778553c917456aac6e14a",
+          "retrieved_at": "2026-09-10T17:12:16.387261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-30T07:21:52Z",
+          "source_record_sha256": "c981fe7da2467dd75c42f6c7f7dca3e79fc4ef02af05b69a50cec2438639887e",
+          "source_uri": null
+        },
+        "record_sha256": "34bfc4deafae317caaeed5aed93e3745ee3043a00de2f88f3c7fe2f419857d40",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "한복남 전주한옥마을점은 전주시 완산구 전주 한옥마을 안에 있는 한복 대여점이다. ‘전주 한복데이’ 축제 기획을 바탕으로 한국 최초의 한복 시간제 대여 사업을 시작했으며 한복을 입고 즐기는 문화를 만들어 가는 문화기획사이기도 하다. 전주한옥마을 외에 7개의 오프라인 지점을 운영하고 있으며 2017년에는 온라인 쇼핑몰을 오픈하여 한복이 필요한 곳이면 어느 곳에서든 한복남의 의상을 접할 수 있다. 매장은 넓은 마당에 설치된 개성 있는 포토존으로 유명하다. 전통 한복부터 경성 의복까지 다양한 종류의 의상이 준비되어 있으며 치마를 먼저 고르면 직원이 그에 어울리는 저고리를 추천해 주며 머리 손질과 액세서리까지 모두 제공해 준다. 사진은 한옥마을 안에서도 가장 아름다운 배경이 되는 곳에서 촬영이 이루어지며 사진 보정작업까지 마무리해 준다. 현장에서 결제하는 방법보다는 사전에 온라인을 통해 예약하고 방문하는 것을 추천하며 다양한 할인 이벤트가 시기별로 진행되므로 부담 없이 선택하면 된다. 매장에서 의상을 고르는 시간이 정해져 있으므로 미리 어떤 콘셉트의 의상을 착장 할지 정하고 가는 것이 좋다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c90d6058b3ba817ef44b4af9aee65963ec8dbfe3f66634f8be70f7c078ac76d2",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b5f4d919d05e0a27c098efa6521c567e49a9b743248a6a5b3af5be59829d022f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3056624",
+          "request_sha256": "5262f481f2a8e75c737a985f3c6c149f3ce9432b38f94ca8a0338c4c1497a48b",
+          "response_sha256": "5801f84edd7b8ce5bd245ccd3e93ff7c269eb082946fba117dcfbe40dea50a5a",
+          "retrieved_at": "2026-09-11T02:09:16.481373Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "979417db539723a9d711e26cd1a3d7ef0b403118d7e81ed73c07f7f7839506ab",
+          "source_uri": null
+        },
+        "record_sha256": "d060c03e091c3a24f27a1602eccde29ee0cecd494795c33844b5b5b3bca6e756",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e07bbdc7c194f31a6d0ef7d97deff4fe1817df61219fba39fa75b5b250ca2b7e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b5f4d919d05e0a27c098efa6521c567e49a9b743248a6a5b3af5be59829d022f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3056624",
+          "request_sha256": "5262f481f2a8e75c737a985f3c6c149f3ce9432b38f94ca8a0338c4c1497a48b",
+          "response_sha256": "5801f84edd7b8ce5bd245ccd3e93ff7c269eb082946fba117dcfbe40dea50a5a",
+          "retrieved_at": "2026-09-11T02:09:16.481373Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6052a2259638a30a4abcb87d563751a50e4adc45d0a9433ddc3ca0b08ecb3bd5",
+          "source_uri": null
+        },
+        "record_sha256": "5da3f95c44bd3d71c72a68c29dc2a9e5bc3e060675411d15f901f399993737e5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "한복대여 10,000원 ※ 한복 종류 별로 상이함으로 자세한 사항은 홈페이지 참조"
+      }
+    ],
+    "parent_source_sha256": "193718312236232a9130233a059e70b5c80c151ce5312559ba638252779521cd",
+    "place": {
+      "address": "전북특별자치도 전주시 완산구 태조로 21 (교동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:b5f4d919d05e0a27c098efa6521c567e49a9b743248a6a5b3af5be59829d022f",
+      "name_ko": "한복남 전주한옥마을점",
+      "place_id": "public:korea:b5f4d919d05e0a27c098efa6521c567e49a9b743248a6a5b3af5be59829d022f",
+      "provider_content_id": "3056624",
+      "region_code": "52111",
+      "region_name": "전북특별자치도 전주시 완산구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

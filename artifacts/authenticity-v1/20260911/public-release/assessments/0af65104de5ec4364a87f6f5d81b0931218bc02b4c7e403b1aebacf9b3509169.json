@@ -1,0 +1,932 @@
+{
+  "assessed_at": "2026-09-11T19:25:15.094757Z",
+  "assessment_sha256": "0af65104de5ec4364a87f6f5d81b0931218bc02b4c7e403b1aebacf9b3509169",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 51
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.d"
+      ],
+      "value": 36
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'미래 지향적인 도시 환경', '새로운 랜드마크'라는 이미지가 이 장소에 부여된 의미로 제시되지만, 반복되는 표현이나 상징의 깊이에 대한 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2810dc6ed5bb31935af665f4fdbacb4121a6b49b25f5536dc79ae5b583be8350",
+            "appearance:833e7544a2b0953b36fbd50f1b24d9dc243231c405df92f44dd8399030bbf76d",
+            "appearance:8dd4ad5bf41a2c7eb85313bad2f38200bf3f83b16c62966368e0d22bb4f08742"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "공식 개요에서 이 장소의 지상 공원과 스마트 이끼 타워·수직 정원 등 첨단 시설의 시각적 요소가 제시되어, 장면에서 구별되는 시각적 성격(제한된 색·형태의 표현)을 지원한다. 다만 일관된 연출이 전체 장면을 지배한다는 근거는 없어 상위 수준은 인정하지 않는다. 대상이 제공된 place(마곡광장)와 동일한지 개요의 위치·명칭으로 확인했다.",
+      "value": 52
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "개방된 광장·공원이라는 자율적 이용 공간이 확인되지만, 여유로운 탐색 방식이나 다양한 선택지에 대한 구체적 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:a5f7f05300c13b394a5d15c183354995190e9b110997364c6f544d7186bef4cd",
+            "appearance:c3c0dd405b3138cf81c983d1c77b9effff1015bf610310ea85cb11f20fce139f",
+            "appearance:f1bd608b16c054aa01f5dc3a17c60a409f3f64d236e04db964bec0caceb821b1"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 8,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "공원·수직 정원 등 자연 단서 확인(수준 3)은 가능하나, '두드러짐'(수준 4)은 지하 상가·역사·업무지구 보행축이 함께 기술된 상황에서 자연 환경의 두드러짐을 직접 뒷받침하지 않는다. 제시된 수준은 근거 대비 상위이다.",
+      "value": 8
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "문화 활동 거점·페스티벌 축이 언급되어 교류 가능성이 있으나, 구체적인 공동 활동·자기표현 프로그램의 근거는 제한적이다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "마곡광장은 복합 문화 공간·지하 광장으로 소개되며 확인된 원형·유산 접촉에 대한 근거가 제공되지 않는다. 전통풍 외관이나 역사 유산 언급이 없으므로 평가 불가.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 위치·면적·시설 구성만 설명할 뿐 이 장소의 실제 역사·연혁·사건·인물 맥락을 다루지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다. 스마트 시티 시설은 전통 전승과 무관하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·전통에 연결된 해설·전시·학습 프로그램에 대한 언급이 없어 탐구 기회를 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+          "quote": {
+            "end": 532,
+            "method": "EXACT",
+            "original": "서울의 새로운 랜드마크로 자리매김하고 있다",
+            "start": 509,
+            "submitted": "서울의 새로운 랜드마크로 자리매김하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'미래 지향적인 도시 환경', '새로운 랜드마크'라는 이미지가 이 장소에 부여된 의미로 제시되지만, 반복되는 표현이나 상징의 깊이에 대한 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "단일 공식 개요 문안은 매체를 통한 이미지 유통의 확인된 근거가 아니다. 수준 3(작품·홍보·SNS와의 확인된 연결) 또는 수준 2(명시된 한 매체의 표현) 중 무엇으로도 확정하기에 매체성 확인이 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+          "quote": {
+            "end": 396,
+            "method": "EXACT",
+            "original": "스마트 이끼 타워, 스마트 모빌리티, 미세먼지 저감 수직 정원 등 스마트 시티 서비스가 구현된 첨단 시설들",
+            "start": 337,
+            "submitted": "스마트 이끼 타워, 스마트 모빌리티, 미세먼지 저감 수직 정원 등 스마트 시티 서비스가 구현된 첨단 시설들",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "공식 개요에서 이 장소의 지상 공원과 스마트 이끼 타워·수직 정원 등 첨단 시설의 시각적 요소가 제시되어, 장면에서 구별되는 시각적 성격(제한된 색·형태의 표현)을 지원한다. 다만 일관된 연출이 전체 장면을 지배한다는 근거는 없어 상위 수준은 인정하지 않는다. 대상이 제공된 place(마곡광장)와 동일한지 개요의 위치·명칭으로 확인했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 직접 경험하거나 재현(촬영 등)할 수 있다는 근거가 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+          "quote": {
+            "end": 149,
+            "method": "EXACT",
+            "original": "지상부는 공원으로 조성되어 시민들의 휴식 공간을 제공한다",
+            "start": 118,
+            "submitted": "지상부는 공원으로 조성되어 시민들의 휴식 공간을 제공한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "개방된 광장·공원이라는 자율적 이용 공간이 확인되지만, 여유로운 탐색 방식이나 다양한 선택지에 대한 구체적 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "공원·수직 정원 등 자연 단서 확인(수준 3)은 가능하나, '두드러짐'(수준 4)은 지하 상가·역사·업무지구 보행축이 함께 기술된 상황에서 자연 환경의 두드러짐을 직접 뒷받침하지 않는다. 제시된 수준은 근거 대비 상위이다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "'체험할 수 있는 기회'는 홍보성 서술일 뿐 구체적인 참여·탐방 활동의 확인이 아니다. 페스티벌 가로축은 개요상 기능 설명이며 실제 참여 프로그램 근거가 없어 수준 2 확정은 추정이다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+          "quote": {
+            "end": 323,
+            "method": "EXACT",
+            "original": "문화 활동의 거점으로 기능하고 있다",
+            "start": 304,
+            "submitted": "문화 활동의 거점으로 기능하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 2,
+      "reason": "문화 활동 거점·페스티벌 축이 언급되어 교류 가능성이 있으나, 구체적인 공동 활동·자기표현 프로그램의 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+              "quote": {
+                "end": 443,
+                "method": "EXACT",
+                "original": "미래 지향적인 도시 환경을 체험할 수 있는 기회를 제공",
+                "start": 413,
+                "submitted": "미래 지향적인 도시 환경을 체험할 수 있는 기회를 제공",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638"
+            }
+          ],
+          "flags": [],
+          "key": "E.b",
+          "level": 2,
+          "reason": "공식 개요가 장소의 이미지를 서술하지만 특정 매체(작품·홍보·SNS)를 통한 재현·확산의 확인된 근거는 단일 출처 설명에 한정된다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.b",
+          "reason": "단일 공식 개요 문안은 매체를 통한 이미지 유통의 확인된 근거가 아니다. 수준 3(작품·홍보·SNS와의 확인된 연결) 또는 수준 2(명시된 한 매체의 표현) 중 무엇으로도 확정하기에 매체성 확인이 부족하다."
+        }
+      },
+      "reason": "단일 공식 개요 문안은 매체를 통한 이미지 유통의 확인된 근거가 아니다. 수준 3(작품·홍보·SNS와의 확인된 연결) 또는 수준 2(명시된 한 매체의 표현) 중 무엇으로도 확정하기에 매체성 확인이 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+              "quote": {
+                "end": 395,
+                "method": "EXACT",
+                "original": "미세먼지 저감 수직 정원 등 스마트 시티 서비스가 구현된 첨단 시설",
+                "start": 358,
+                "submitted": "미세먼지 저감 수직 정원 등 스마트 시티 서비스가 구현된 첨단 시설",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638"
+            },
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+              "quote": {
+                "end": 149,
+                "method": "EXACT",
+                "original": "지상부는 공원으로 조성되어 시민들의 휴식 공간을 제공한다",
+                "start": 118,
+                "submitted": "지상부는 공원으로 조성되어 시민들의 휴식 공간을 제공한다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "지상 공원, 선큰광장, 수직 정원 등 자연·머무름 환경 단서가 확인된다. 다만 실제 고요함·혼잡도는 확인되지 않아 상위 등급으로 확정하지 않는다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "공원·수직 정원 등 자연 단서 확인(수준 3)은 가능하나, '두드러짐'(수준 4)은 지하 상가·역사·업무지구 보행축이 함께 기술된 상황에서 자연 환경의 두드러짐을 직접 뒷받침하지 않는다. 제시된 수준은 근거 대비 상위이다."
+        }
+      },
+      "reason": "공원·수직 정원 등 자연 단서 확인(수준 3)은 가능하나, '두드러짐'(수준 4)은 지하 상가·역사·업무지구 보행축이 함께 기술된 상황에서 자연 환경의 두드러짐을 직접 뒷받침하지 않는다. 제시된 수준은 근거 대비 상위이다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+              "quote": {
+                "end": 443,
+                "method": "EXACT",
+                "original": "미래 지향적인 도시 환경을 체험할 수 있는 기회를 제공",
+                "start": 413,
+                "submitted": "미래 지향적인 도시 환경을 체험할 수 있는 기회를 제공",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 2,
+          "reason": "스마트 시티 시설 체험·페스티벌 가로축 등 참여 기회가 암시되지만 지속적으로 몰입·도전할 구체적 활동의 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.c",
+          "reason": "'체험할 수 있는 기회'는 홍보성 서술일 뿐 구체적인 참여·탐방 활동의 확인이 아니다. 페스티벌 가로축은 개요상 기능 설명이며 실제 참여 프로그램 근거가 없어 수준 2 확정은 추정이다."
+        }
+      },
+      "reason": "'체험할 수 있는 기회'는 홍보성 서술일 뿐 구체적인 참여·탐방 활동의 확인이 아니다. 페스티벌 가로축은 개요상 기능 설명이며 실제 참여 프로그램 근거가 없어 수준 2 확정은 추정이다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "e7e6ece8b3390b57771234142caa790175faf29f8d527f615e20bf5c546341c4",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "짙은 청록 바탕에 금색 선으로 구성된 점자 안내판이 콘크리트 벽 앞에 대비를 이루며, 단색 팔레트와 도식적 평면 구성이 절제된 시각적 성격을 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2810dc6ed5bb31935af665f4fdbacb4121a6b49b25f5536dc79ae5b583be8350",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "97baddd6fdd8ffe6e35781d6306efb5595c83a119ad4818eb901a8f6677d2936",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458374_12",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "eab2d6b2d7300294a57a11aa70f148788eaacb327af2a205b7eb359fbb0994e0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/74/3458374_image2_1.JPG"
+        },
+        "record_sha256": "ff6d34eb572009c0df6ab86987da1bca622d0967e8fa8599b43501d06c62073a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "곡선형 콘크리트 구조물이 계단 광장을 감싸는 극적인 구도, 잿빛 석재 바닥과 푸른 하늘의 대비, 현대적 유리 건물과의 조합이 두드러진 시각적 성격을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:833e7544a2b0953b36fbd50f1b24d9dc243231c405df92f44dd8399030bbf76d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d92901a817efef51e4a5a2769308d1a7c2c9fad92a80990f25cf07059e4768a1",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458367_21",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8a422867c9f710b09f500288c28b1484d712127ff6817ac310864bd578682dd7",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/67/3458367_image2_1.JPG"
+        },
+        "record_sha256": "02a49abfea9adb565c2390637d03e5444f6d6c0e64c9d5c969db2d07a6bd73ed",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관, 재료, 공간 구성의 시각적 특성이 없으며 현대적 안내 표지판과 철근 콘크리트 벽면만 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:835be5b3f0b7d0d28cd6ebf10867a426c9a8d332ffd69887e083d664c31a4ff8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "97baddd6fdd8ffe6e35781d6306efb5595c83a119ad4818eb901a8f6677d2936",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458374_12",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "eab2d6b2d7300294a57a11aa70f148788eaacb327af2a205b7eb359fbb0994e0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/74/3458374_image2_1.JPG"
+        },
+        "record_sha256": "1da35f83e377758626dbfe582873922b15351e106b6d8f97c96fae2ee8f4caa1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "회색 석재 타일 바닥 위 노란 점자 블록이 직선과 꺾임으로 이어져 시선을 유도하는 구도가 보이며, 절제된 색채 속에 명확한 대비가 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8dd4ad5bf41a2c7eb85313bad2f38200bf3f83b16c62966368e0d22bb4f08742",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11ec3f46254b1b0a3a466a9ecbf6d0d30772caf4480d3791720f2222e997ebef",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458364_13",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "99b9be118a7ebea94bd3b3b5609e2a9af6f9522d656e7d594aa24057243772fa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3458364_image2_1.JPG"
+        },
+        "record_sha256": "3c3e597d5e99c479608f8390f329c0f722bf0ad1464c44f2e0c74a866359f64d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않고 실내 벽과 바닥 타일만 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a5f7f05300c13b394a5d15c183354995190e9b110997364c6f544d7186bef4cd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "97baddd6fdd8ffe6e35781d6306efb5595c83a119ad4818eb901a8f6677d2936",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458374_12",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "eab2d6b2d7300294a57a11aa70f148788eaacb327af2a205b7eb359fbb0994e0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/74/3458374_image2_1.JPG"
+        },
+        "record_sha256": "4128a7be6d178589b48b149eabf4cf85aa0fecbb0bfce00d41ae1cea61e405e6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지, 물, 자연 경관 등 자연 환경 단서가 전혀 보이지 않는 실내 바닥 장면이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c3c0dd405b3138cf81c983d1c77b9effff1015bf610310ea85cb11f20fce139f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11ec3f46254b1b0a3a466a9ecbf6d0d30772caf4480d3791720f2222e997ebef",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458364_13",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "99b9be118a7ebea94bd3b3b5609e2a9af6f9522d656e7d594aa24057243772fa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3458364_image2_1.JPG"
+        },
+        "record_sha256": "2dd1be8a746d2d6ad39a776bddf3f06343a556e9cb582061116a9d8dd4e4d4c6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관, 재료, 공간 구성의 시각적 특징이 보이지 않으며 현대적 포장 바닥과 점자 블록만 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c658c4a168a612d197daabec025ea5a803b9e08d938a568956d2b78751627a87",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "11ec3f46254b1b0a3a466a9ecbf6d0d30772caf4480d3791720f2222e997ebef",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458364_13",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "99b9be118a7ebea94bd3b3b5609e2a9af6f9522d656e7d594aa24057243772fa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3458364_image2_1.JPG"
+        },
+        "record_sha256": "af06c09f41aa4c512af522f79d069f8fad4a2c144ebae591fccfd68d5759f23f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "널판 계단과 잿빛 석재 포장이 절제된 전통적 외관을 연상시키지만, 유리 커튼월 건물과 철근 콘크리트 구조가 주를 이루어 전통적 재료·구성의 두드러짐은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e62a12543e330a8ffe6611e951c315f5c34558ffdf1528a39107312a71d5809a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d92901a817efef51e4a5a2769308d1a7c2c9fad92a80990f25cf07059e4768a1",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458367_21",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8a422867c9f710b09f500288c28b1484d712127ff6817ac310864bd578682dd7",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/67/3458367_image2_1.JPG"
+        },
+        "record_sha256": "0a07ead601ac026618d822a1dbe4f6cd31bd7401a5f3d337ee43f462a64fa66e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "왼쪽 가장자리의 소나무와 단상 근처 붉은 잎 나무 등 녹지 단서가 일부 보이나, 전체는 포장된 광장과 건축물이 지배하고 자연 경관은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f1bd608b16c054aa01f5dc3a17c60a409f3f64d236e04db964bec0caceb821b1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d92901a817efef51e4a5a2769308d1a7c2c9fad92a80990f25cf07059e4768a1",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3458367_21",
+          "request_sha256": "a56fb2a145d64220cbc25eacac069990d49155e8d041c0edc8fae4a44cd83159",
+          "response_sha256": "3f3a1f7bc60a79d92683e7a25df70468cfc1ec9fdbf64ec12905935739b65262",
+          "retrieved_at": "2026-09-11T02:11:33.217120Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8a422867c9f710b09f500288c28b1484d712127ff6817ac310864bd578682dd7",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/67/3458367_image2_1.JPG"
+        },
+        "record_sha256": "4eba3a4fd10a50281ff9984b5d40b31bf86ea25596d7e4ae12276168aee174a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:116fd6faed00ac2b17de4e249c79c0c1a5b232b96e3034b1650a17e022008a0a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3458417",
+          "request_sha256": "fad83487f47f884e3596f5f0f6baad39de825b30686ecf9191a38d9e76799a89",
+          "response_sha256": "72468e446bb17a86c5f07a3dd127bd2ad33a2b5dfbea44f7d64655012739d914",
+          "retrieved_at": "2026-09-10T16:48:18.928732Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2024-12-27T02:22:21Z",
+          "source_record_sha256": "fbe59eb647d0121261cbc1135c640fb0dfa0486b7a00c5b29b74ae477c798660",
+          "source_uri": null
+        },
+        "record_sha256": "a8993c3bbb59e20c4530dcbeac920942dc0f048fc16e12d82eabf97e7247c638",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "마곡광장은 서울특별시 강서구 마곡동에 위치한 복합 문화 공간이다. 이곳은 지하철 9호선과 공항철도 마곡나루역 사이에 위치하며, 면적은 약 12,979㎡이다. 광장은 지상 1층부터 지하 2층까지 구성되어 있으며, 지상부는 공원으로 조성되어 시민들의 휴식 공간을 제공한다. 지하 1층에는 선큰광장과 상가, 그리고 지하철 9호선 마곡나루역이 위치해 있어 편리한 교통 접근성을 갖추고 있다. 마곡광장은 마곡지구의 중심부에 위치하여 업무지구를 관통하는 보행축과 페스티벌이 이루어지는 가로축이 교차하는 지점에 자리하고 있다. 이로 인해 교통의 중심지이자 문화 활동의 거점으로 기능하고 있다. 또한, 광장 주변에는 스마트 이끼 타워, 스마트 모빌리티, 미세먼지 저감 수직 정원 등 스마트 시티 서비스가 구현된 첨단 시설들이 설치되어 있어 방문객들에게 미래 지향적인 도시 환경을 체험할 수 있는 기회를 제공한다. 마곡광장은 도심 속에서 자연과 첨단 기술이 어우러진 공간으로, 시민들에게 다양한 문화와 휴식의 기회를 제공하는 서울의 새로운 랜드마크로 자리매김하고 있다."
+      }
+    ],
+    "parent_source_sha256": "f1d69d6a0da8ac432314a591bcad82aa22e6ed5a67ea7cda25df7d81c80c3065",
+    "place": {
+      "address": "서울특별시 강서구 마곡중앙5로 지하9 (마곡동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+      "name_ko": "마곡광장",
+      "place_id": "public:korea:e3e705a9c0a30a9b1db99a755442496be3b26dd81e8193231694ff65cc3a887a",
+      "provider_content_id": "3458417",
+      "region_code": "11500",
+      "region_name": "서울특별시 강서구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

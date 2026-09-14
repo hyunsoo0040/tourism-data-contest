@@ -1,0 +1,971 @@
+{
+  "assessed_at": "2026-09-11T16:09:03.159993Z",
+  "assessment_sha256": "2965f0beee7a8f7fa335cee4567e890edf05703f52adafb1ad8cb480a5b54053",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 74
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 53
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "마을 전체에 '지중해의 작은 시골 마을'이라는 공유된 이미지가 부여되어 있고, 프로방스·산토리니 모델과 '블루 크리스털 빌리지' 별명 등 여러 표현에서 일관된 상징적 의미가 확인된다. 다만 그 의미를 경험이 방문 목적의 중심이라고 단정할 근거는 부족해 수준 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:25c04c0c6ebf8c13a101775fe397c00a98ee88d99d449a7ab500509b0e617092"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "드라마 촬영지라는 한 매체에서의 장소 이미지 표현이 명시되어 있다. 반복되는 유통이나 매체 이미지가 방문 목적의 중심이라는 근거는 없어 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1900dedecc3494dc8b2c388537b954dfc908df8456c7d9c02be6049c8efc2c32",
+            "appearance:87065375d350f48788c955166daa6ba27206fef728fc7d8689c46c92b1ee8ccd",
+            "appearance:a7058fb4dc7328a70c6b92fb568498c0e6f3af4cae34eba35fa29d9be1a16de7"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "출처의 허용 claim이 VISUAL_EXPRESSION뿐이므로 해당 인용만 사용했다. 프로방스풍·산토리니풍의 일관된 색채와 형태가 마을 구역 전반을 지배하고, 독특한 색감의 건물과 골목 경관이 시각적 성격의 핵심으로 묘사되어 수준 4로 판단했다.",
+      "value": 96
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "천사의 날개, 빨간 우체통 등 대표 포토존에서 장소의 대표 이미지를 직접 경험하고 촬영으로 재현할 수 있다고 명시되어 있다. 그러나 이 체험이 방문 경험의 전반적 중심이라고 단정하기에는 추가 근거가 부족해 수준 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "골목을 자유롭게 걸으며 여러 매장을 스스로 선택해 둘러볼 수 있는 자율적 탐색 기회가 확인된다. 여유로운 일상 이탈 경험이 방문의 중심이라는 근거는 없어 수준 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:83fdff58998b2f6188502383847cb82fafc7850e41f9c0937dd49dfd4aee08a9",
+            "appearance:ec70b2b4942bbf495722d188e24352e44c4ea6221dd8d466a1ba3cbe470af1cf",
+            "appearance:f2e57025009e21d642ffaa03cce19439f528fb51393b54aba825c860d041519c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 33,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "유럽풍 건물과 색채 묘사는 있으나 자연 환경, 시각적 저자극, 머무를 수 있는 회복 환경에 대한 직접적 근거는 없다. '이국적'이라는 표현만으로 회복 환경을 추정할 수 없다.",
+      "value": 33
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "사진 촬영과 매장 둘러보기, 골목 걷기 등 제한적이지만 구체적인 참여 활동이 확인된다. 지속적으로 몰입·도전할 활동이라는 근거는 없어 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공 근거는 유럽풍으로 꾸며진 재현 마을에 대한 설명일 뿐, 이 장소에 확인된 실제 원형·유산의 존재나 접촉에 대한 정보가 없다. 지중해풍 건물은 문화유산 원형이 아니므로 H.a 근거로 사용할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "마을이 탕정신도시 조성으로 주민들이 이주해 일군 마을이라는 간단한 연혁은 있으나, 이를 뒷받침하는 구체적 역사 맥락·사건·인물 해설의 제공 여부에 대한 근거가 부족하여 수준 판단이 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "주민들이 모여 새롭게 일군 마을이라는 서술이 있으나, 이것이 현재 지역 주체의 전승·생활문화와의 실제 연결 경험을 제공한다는 직접 근거는 없다. 재현된 유럽풍 마을이라는 점에서 전통 전승 여부는 확인 불가하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설, 전시, 학습 프로그램에 대한 정보가 제공되지 않았다. 매장 관람과 포토존은 유산 해설 탐구가 아니므로 근거로 쓸 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+          "quote": {
+            "end": 48,
+            "method": "EXACT",
+            "original": "지중해마을은 이국적인 유럽풍 건물이 모여 지중해의 작은 시골 마을을 연상시키는 곳이다.",
+            "start": 0,
+            "submitted": "지중해마을은 이국적인 유럽풍 건물이 모여 지중해의 작은 시골 마을을 연상시키는 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+          "quote": {
+            "end": 195,
+            "method": "EXACT",
+            "original": "블루 크리스털 빌리지(Blue Crystal Village)라는 별명을 갖고 있다.",
+            "start": 149,
+            "submitted": "블루 크리스털 빌리지(Blue Crystal Village)라는 별명을 갖고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 3,
+      "reason": "마을 전체에 '지중해의 작은 시골 마을'이라는 공유된 이미지가 부여되어 있고, 프로방스·산토리니 모델과 '블루 크리스털 빌리지' 별명 등 여러 표현에서 일관된 상징적 의미가 확인된다. 다만 그 의미를 경험이 방문 목적의 중심이라고 단정할 근거는 부족해 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:25c04c0c6ebf8c13a101775fe397c00a98ee88d99d449a7ab500509b0e617092",
+          "quote": {
+            "end": 21,
+            "method": "EXACT",
+            "original": "드라마 <저녁 같이 드실래요?> 촬영지",
+            "start": 0,
+            "submitted": "드라마 <저녁 같이 드실래요?> 촬영지",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8b0b77663913202c2d3f9649000406d6cde9c35ab3a81c42f0a9e282acdfb15e"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "드라마 촬영지라는 한 매체에서의 장소 이미지 표현이 명시되어 있다. 반복되는 유통이나 매체 이미지가 방문 목적의 중심이라는 근거는 없어 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+          "quote": {
+            "end": 302,
+            "method": "EXACT",
+            "original": "남서쪽은 붉은 지붕의 성곽 형식이 두드러진 남프랑스의 프로방스 풍으로 꾸며져 있고, 남동쪽은 원형의 파란 지붕과 하얀 벽이 화사한 그리스 산토리니를 모델로 했다",
+            "start": 213,
+            "submitted": "남서쪽은 붉은 지붕의 성곽 형식이 두드러진 남프랑스의 프로방스 풍으로 꾸며져 있고, 남동쪽은 원형의 파란 지붕과 하얀 벽이 화사한 그리스 산토리니를 모델로 했다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+          "quote": {
+            "end": 407,
+            "method": "EXACT",
+            "original": "디자인과 색감이 독특한 건물들을 구경하고, 아기자기한 골목을 걸으면서",
+            "start": 369,
+            "submitted": "디자인과 색감이 독특한 건물들을 구경하고, 아기자기한 골목을 걸으면서",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 4,
+      "reason": "출처의 허용 claim이 VISUAL_EXPRESSION뿐이므로 해당 인용만 사용했다. 프로방스풍·산토리니풍의 일관된 색채와 형태가 마을 구역 전반을 지배하고, 독특한 색감의 건물과 골목 경관이 시각적 성격의 핵심으로 묘사되어 수준 4로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+          "quote": {
+            "end": 362,
+            "method": "EXACT",
+            "original": "가장 인기 있는 곳은 포토존으로 천사의 날개, 등대 모양의 빨간 우체통을 배경으로 사진을 찍을 수 있다.",
+            "start": 304,
+            "submitted": "가장 인기 있는 곳은 포토존으로 천사의 날개, 등대 모양의 빨간 우체통을 배경으로 사진을 찍을 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "천사의 날개, 빨간 우체통 등 대표 포토존에서 장소의 대표 이미지를 직접 경험하고 촬영으로 재현할 수 있다고 명시되어 있다. 그러나 이 체험이 방문 경험의 전반적 중심이라고 단정하기에는 추가 근거가 부족해 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+          "quote": {
+            "end": 444,
+            "method": "EXACT",
+            "original": "아기자기한 골목을 걸으면서 카페, 소품점, 옷 가게 등 여러 매장을 둘러보는 즐거움이 있다.",
+            "start": 393,
+            "submitted": "아기자기한 골목을 걸으면서 카페, 소품점, 옷 가게 등 여러 매장을 둘러보는 즐거움이 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "골목을 자유롭게 걸으며 여러 매장을 스스로 선택해 둘러볼 수 있는 자율적 탐색 기회가 확인된다. 여유로운 일상 이탈 경험이 방문의 중심이라는 근거는 없어 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "유럽풍 건물과 색채 묘사는 있으나 자연 환경, 시각적 저자극, 머무를 수 있는 회복 환경에 대한 직접적 근거는 없다. '이국적'이라는 표현만으로 회복 환경을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+          "quote": {
+            "end": 362,
+            "method": "EXACT",
+            "original": "포토존으로 천사의 날개, 등대 모양의 빨간 우체통을 배경으로 사진을 찍을 수 있다.",
+            "start": 316,
+            "submitted": "포토존으로 천사의 날개, 등대 모양의 빨간 우체통을 배경으로 사진을 찍을 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+          "quote": {
+            "end": 444,
+            "method": "EXACT",
+            "original": "아기자기한 골목을 걸으면서 카페, 소품점, 옷 가게 등 여러 매장을 둘러보는 즐거움이 있다.",
+            "start": 393,
+            "submitted": "아기자기한 골목을 걸으면서 카페, 소품점, 옷 가게 등 여러 매장을 둘러보는 즐거움이 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "사진 촬영과 매장 둘러보기, 골목 걷기 등 제한적이지만 구체적인 참여 활동이 확인된다. 지속적으로 몰입·도전할 활동이라는 근거는 없어 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현의 기회에 대한 정보가 제공되지 않았다. 매장 방문이나 촬영만으로 관계·자기표현 기회를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "5f7e30d84682294f72dc1b4d51a90f4f8253dcbeb7f477c3eb7fe455d84f8063",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "흰 미학 벽돌 포장과 소박한 목재 난간 등 지방 소도시 거리의 정겨운 외관이 약간 보이나 전통적 재료·구성은 뚜렷하지 않다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:01a1e2e02a2612dcb7b1b5a68488e1f49bedebe2faad00cf7e378b77b3c58855",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f8c4ec8b6fcc718d341ee739a866cfbda52b5ea8ab4e1b7e0038cd1d1c5b43c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568493_2",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6c358bd38848139451d97f4a49e9f398cc0bc4bea9bb29a5ef2d22b89d70c1e0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3568493_image2_1.jpg"
+        },
+        "record_sha256": "1f3c74031a89936cb95a2d3af9baf6a9d05cc1776e372cda9efc3a200adc8278",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통 재료·구성보다는 현대적으로 재현된 지중해풍 외관이며, 목재 레일 등 소량의 클래식 요소만 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:13d141de259bd59f1412f43cc93185c5e3d138ebcf06cb47603a288c7b103ebc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c3504920c4ace0fec7762632e5208dff9566f20836b67370719bba39bf1c12ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568491_4",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "36e969166b1f63a77070475b31fbee34dafe0ef79511461546e75af9f0d47f85",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/91/3568491_image2_1.jpg"
+        },
+        "record_sha256": "243bf8549435f13c41f5f0b9e2d9ac5f526479b7c1d0c580d627df0bedb007d4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "흰 건물과 푸른 돔·아치 창이 지중해풍으로 통일되었고, 푸른 하늘과 대비되며 장면 전체를 지배하는 강한 연출감이 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1900dedecc3494dc8b2c388537b954dfc908df8456c7d9c02be6049c8efc2c32",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c3504920c4ace0fec7762632e5208dff9566f20836b67370719bba39bf1c12ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568491_4",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "36e969166b1f63a77070475b31fbee34dafe0ef79511461546e75af9f0d47f85",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/91/3568491_image2_1.jpg"
+        },
+        "record_sha256": "68348f54660b7bc7a70a1ae2e5c459ee205233d6f5ba8672535f6eeab6e245e2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "아치 창, 스터코 질감의 흰 외벽, 저층 보행자 거리 구성 등 전통 지중해 건축을 연상시키는 외관이 보이나 재현적 톤으로 판단된다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:52cec40fbf44062592385d7efcc2abb30bd1a98472d2ea6e5b0e17047192dc18",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e616b4876cfb960a15c73f97b3d4bd85d3dbcc0605c5c745e1041dd011fd51ea",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568494_1",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d2a3891dfea2523affecce36c71608ad27b7a6a30007d2d1e6037e8b90a0c6df",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/94/3568494_image2_1.jpg"
+        },
+        "record_sha256": "d9d3f4dd4373486e58018a94094238def56f971c8b8cb32ccca4d9cd42f13695",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "우측 나뭇가지와 하단 일부 녹지가 보이나, 자연 경관보다는 건물과 하늘이 중심이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:83fdff58998b2f6188502383847cb82fafc7850e41f9c0937dd49dfd4aee08a9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c3504920c4ace0fec7762632e5208dff9566f20836b67370719bba39bf1c12ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568491_4",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "36e969166b1f63a77070475b31fbee34dafe0ef79511461546e75af9f0d47f85",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/91/3568491_image2_1.jpg"
+        },
+        "record_sha256": "90799610d829a39c78fc9ff36d695a2d7ade6471a343c0d8298e237c9ba70a72",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰 벽과 파란 지붕·캐노피가 반복되는 지중해풍 거리 구성과 중앙 소실점 구도, 청량한 채도가 장면의 인상을 지배적으로 형성한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:87065375d350f48788c955166daa6ba27206fef728fc7d8689c46c92b1ee8ccd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e616b4876cfb960a15c73f97b3d4bd85d3dbcc0605c5c745e1041dd011fd51ea",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568494_1",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d2a3891dfea2523affecce36c71608ad27b7a6a30007d2d1e6037e8b90a0c6df",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/94/3568494_image2_1.jpg"
+        },
+        "record_sha256": "9f66d9be2f074bfa3938cdc5aa6a5ac3954b80bdcdfcc8d46c59fbaa58fd7c72",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰 벽면에 파란 캐노피·청록 출입문, 검은색 줄무늬 차양이 대비를 이루며 상점가 특유의 산뜻하고 연출된 색채 구성이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a7058fb4dc7328a70c6b92fb568498c0e6f3af4cae34eba35fa29d9be1a16de7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f8c4ec8b6fcc718d341ee739a866cfbda52b5ea8ab4e1b7e0038cd1d1c5b43c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568493_2",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6c358bd38848139451d97f4a49e9f398cc0bc4bea9bb29a5ef2d22b89d70c1e0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3568493_image2_1.jpg"
+        },
+        "record_sha256": "de16d900c012961af100f68550d9001287c7df3cb23fa1d15d2bd0b84e7eb063",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "출입문 앞에 다양한 화분·꽃이 늘어서 있고 왼쪽에 키 큰 나무가 있으나, 배경은 건물과 포장 도로로 자연 경관은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ec70b2b4942bbf495722d188e24352e44c4ea6221dd8d466a1ba3cbe470af1cf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f8c4ec8b6fcc718d341ee739a866cfbda52b5ea8ab4e1b7e0038cd1d1c5b43c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568493_2",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6c358bd38848139451d97f4a49e9f398cc0bc4bea9bb29a5ef2d22b89d70c1e0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3568493_image2_1.jpg"
+        },
+        "record_sha256": "8b97ad80234228fcac0dad2d70e8fc3ccfa95093089227cd27eabc436440e623",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "화분과 관목, 배경 구름이 일부 보이지만 자연 경관보다는 인공 거리 환경이 중심이며 녹지·수면 단서는 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f2e57025009e21d642ffaa03cce19439f528fb51393b54aba825c860d041519c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e616b4876cfb960a15c73f97b3d4bd85d3dbcc0605c5c745e1041dd011fd51ea",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3568494_1",
+          "request_sha256": "324053254278ccaacca753ab37345f81495450257b46117610ad7698ac851ade",
+          "response_sha256": "24c6981ce32fc1ee6064dff861fd4e5623a14e42a0d90274f6c60f2eaa4c911c",
+          "retrieved_at": "2026-09-10T08:20:24.387673Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d2a3891dfea2523affecce36c71608ad27b7a6a30007d2d1e6037e8b90a0c6df",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/94/3568494_image2_1.jpg"
+        },
+        "record_sha256": "3738b2b47c56e0bd597318a88f49cab214cda4ecdc704f912aac7c7300184cc1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:25c04c0c6ebf8c13a101775fe397c00a98ee88d99d449a7ab500509b0e617092",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2606741",
+          "request_sha256": "0ab6e104b5923111176cc09f957a9a49e7e45827d0571554763cf17bdc68bb8a",
+          "response_sha256": "d03e0b23356b93a5c9b0216bead10148977f6cfed61908700ef083e3b766d3a7",
+          "retrieved_at": "2026-09-10T08:20:24.096490Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fcf7c928867c082536e49e9f90cd0f71b3fc1b585f7eb3a777e8cf7fb6a45482",
+          "source_uri": null
+        },
+        "record_sha256": "8b0b77663913202c2d3f9649000406d6cde9c35ab3a81c42f0a9e282acdfb15e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "드라마 <저녁 같이 드실래요?> 촬영지"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:60f03f852554dfdd607ca80470a5028be54a024cd5f3aedafc5ac9760998a8f4",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2606741",
+          "request_sha256": "cdd4fd9b56a4713985ff51409a9d542c8a7d1ac774dbf0b84f7b0b20dabaed2d",
+          "response_sha256": "6b3bcb6dc5db29bec21fcea53746b58490282cccbdf76d7d66b881cae83326a7",
+          "retrieved_at": "2026-09-10T08:16:23.366205Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-18T07:47:09Z",
+          "source_record_sha256": "e81a14af62d17d20ab04fb8dbc067e0c643285d325e81474ecc6621ab83c8db3",
+          "source_uri": null
+        },
+        "record_sha256": "f324295269446bd0abe1ad62cab6e9c270600692db835c4645236d9446594928",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "지중해마을은 이국적인 유럽풍 건물이 모여 지중해의 작은 시골 마을을 연상시키는 곳이다. 이 마을은 아산 탕정신도시 조성으로 불가피하게 이주하게 된 이 일대 주민들이 모여 새롭게 일군 마을이다. 아산 탕정신도시 한가운데에 조성되었으며 이색적이고 이국적인 느낌을 주며, 블루 크리스털 빌리지(Blue Crystal Village)라는 별명을 갖고 있다. 이 마을은 도로를 사이에 두고 남서쪽은 붉은 지붕의 성곽 형식이 두드러진 남프랑스의 프로방스 풍으로 꾸며져 있고, 남동쪽은 원형의 파란 지붕과 하얀 벽이 화사한 그리스 산토리니를 모델로 했다. 가장 인기 있는 곳은 포토존으로 천사의 날개, 등대 모양의 빨간 우체통을 배경으로 사진을 찍을 수 있다. 이곳에서는 디자인과 색감이 독특한 건물들을 구경하고, 아기자기한 골목을 걸으면서 카페, 소품점, 옷 가게 등 여러 매장을 둘러보는 즐거움이 있다. 주변에는 온양온천, 현충사, 아산곡교천야영장 등의 관광지가 있어 연계하여 관광할 수 있으며, 경부고속철도 및 장항선 철도 천안아산역이 멀지 않다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fb345f1d37a6e6d304f865189eb04a7c02f98dfa5f4a451662896997b60176f1",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2606741",
+          "request_sha256": "0ab6e104b5923111176cc09f957a9a49e7e45827d0571554763cf17bdc68bb8a",
+          "response_sha256": "d03e0b23356b93a5c9b0216bead10148977f6cfed61908700ef083e3b766d3a7",
+          "retrieved_at": "2026-09-10T08:20:24.096490Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "784ce968110543f4dbcda4091b693ae09ccdc81fe1e6d07e7e564c81a59794cc",
+          "source_uri": null
+        },
+        "record_sha256": "d3675bc7a650127ccfd2bf57a6f043aa23d37a0f8373599679e0b5c858eb844a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "3135cd3273dcfe54b12f9eb8338fc7fab3bff4a43d95cb0da6da375bc60b73ba",
+    "place": {
+      "address": "충청남도 아산시 탕정면 탕정면로8번길 55-7",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+      "name_ko": "지중해마을",
+      "place_id": "public:korea:25519ae56e4e106ab903182f37bd3114c389d5656b5e5fd4e9ad80377d296f5f",
+      "provider_content_id": "2606741",
+      "region_code": "44200",
+      "region_name": "충청남도 아산시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,7 +1,7 @@
 """Versioned photo-preference lifecycle routes (Phase 6, Plan 06-08).
 
 Seven owned routes expose the photo vertical: consent-gated job creation,
-raw streamed image uploads into bounded quarantine, synthetic-only analysis
+raw streamed image uploads into bounded quarantine, appearance-only analysis
 submission, rate-limited polling, trait review/confirmation, and dual-truth
 deletion. Every route binds the server-derived preference-profile principal
 and maps every failure to one closed Korean reason code.
@@ -18,13 +18,14 @@ from __future__ import annotations
 import hashlib
 import os
 import re
+import stat
 import time
 import uuid
 from collections.abc import Sequence
 from contextlib import suppress
 from functools import lru_cache
 from pathlib import Path as FilePath
-from typing import Annotated, Any, Final, NoReturn
+from typing import Annotated, Any, Final, Literal, NoReturn
 
 import psycopg
 from fastapi import (
@@ -36,7 +37,7 @@ from fastapi import (
     status,
 )
 from fastapi.responses import JSONResponse
-from pydantic import Field
+from pydantic import Field, model_serializer
 
 from itda.api.dependencies import (
     PROFILE_SESSION_COOKIE_NAME,
@@ -46,6 +47,8 @@ from itda.api.dependencies import (
     require_same_origin_mutation,
 )
 from itda.contracts.base import Sha256, StableId, StrictContract
+from itda.contracts.visual_mood import PHOTO_MOOD_FAMILY, PhotoMoodCandidateSet
+from itda.db.photo_mood_repositories import PhotoMoodRepository
 from itda.db.photo_repositories import (
     PhotoConfirmedTraitStore,
     PhotoJobConflict,
@@ -57,8 +60,10 @@ from itda.db.photo_repositories import (
     ReviewDraftEntry,
 )
 from itda.db.session import create_database_engine, create_session_factory
+from itda.domain.canonical import canonical_sha256
 from itda.photo.contracts import (
     PHOTO_JOB_ID_PATTERN,
+    PhotoAnalysisProvider,
     PhotoConsentNotice,
     PhotoJobPublicState,
     PhotoTerminalCause,
@@ -71,11 +76,13 @@ from itda.photo.deletion import (
     release_filesystem_cleanup,
 )
 from itda.photo.jobs import PhotoJobError, PhotoJobService, reconcile_interrupted_jobs
+from itda.photo.mood_service import PhotoMoodService
 from itda.photo.preprocessing import (
     PhotoUploadPreprocessingError,
     preprocess_quarantined_image,
 )
-from itda.photo.provider import SyntheticPhotoAnalysisProvider
+from itda.photo.provider import PhotoLiveAnalysisUnavailable, SyntheticPhotoAnalysisProvider
+from itda.photo.provider.mood import GlmMoodProvider, MoodProvider, SyntheticMoodProvider
 from itda.photo.quarantine import (
     QuarantineError,
     QuarantinePolicy,
@@ -148,6 +155,14 @@ class PhotoJobCreatedResponse(StrictContract):
     preference_profile_id: StableId
     state: PhotoJobPublicState
     consent_version: Annotated[str, Field(strict=True, min_length=1, max_length=64)]
+    analysis_family: Literal["photo-mood-v1"] | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_trait_job_shape(self, handler: Any) -> dict[str, Any]:
+        result: dict[str, Any] = handler(self)
+        if self.analysis_family is None:
+            result.pop("analysis_family", None)
+        return result
 
 
 class PhotoJobImageStoredResponse(StrictContract):
@@ -166,6 +181,14 @@ class PhotoJobStateResponse(StrictContract):
     state: PhotoJobPublicState
     terminal_cause: PhotoTerminalCause | None
     cleanup_pending: bool
+    analysis_family: Literal["photo-mood-v1"] | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_trait_status_shape(self, handler: Any) -> dict[str, Any]:
+        result: dict[str, Any] = handler(self)
+        if self.analysis_family is None:
+            result.pop("analysis_family", None)
+        return result
 
 
 class PhotoTraitCandidateView(StrictContract):
@@ -176,6 +199,9 @@ class PhotoTraitCandidateView(StrictContract):
     text_ko: Annotated[str, Field(strict=True, min_length=1, max_length=24)]
     edited_text_ko: Annotated[str, Field(strict=True, min_length=1, max_length=64)] | None
     excluded: bool
+    analysis_kind: Annotated[str, Field(pattern="^(legacy|synthetic|semantic)$")] = "legacy"
+    semantic_id: Annotated[str, Field(max_length=64)] | None = None
+    semantic_version: Annotated[str, Field(max_length=64)] | None = None
 
 
 class PhotoConfirmedTraitView(StrictContract):
@@ -328,6 +354,15 @@ def _map_lifecycle_failure(
     preference_profile_id: object = None,
 ) -> NoReturn:
     """Map every lifecycle failure onto one closed public rejection."""
+
+    if isinstance(error, PhotoLiveAnalysisUnavailable):
+        _raise_photo_error(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            code="PHOTO_ANALYSIS_UNAVAILABLE",
+            message_ko="사진 분석이 준비되지 않았어요. 사진 없이 설문 결과로 추천받을 수 있어요.",
+            job_id=job_id,
+            preference_profile_id=preference_profile_id,
+        )
 
     if isinstance(error, PhotoRateLimitError):
         _raise_photo_error(
@@ -705,6 +740,9 @@ PHOTO_PROTECTED_RELATIONS: Final[tuple[str, ...]] = (
     "photo_confirmation_receipts",
     "photo_job_filesystem_bindings",
     "photo_job_image_slots",
+    "photo_mood_job_families",
+    "photo_mood_batches",
+    "photo_mood_confirmations",
 )
 
 
@@ -816,19 +854,39 @@ class PhotoLifecycleGateway:
         quarantine_root: FilePath,
         runtime_role: str,
         builder_role: str,
+        provider: PhotoAnalysisProvider | None = None,
+        synthetic_test_mode: bool = False,
+        mood_provider: MoodProvider | None = None,
+        mood_enabled: bool = False,
     ) -> None:
         self._factory = factory
         self._service_dsn = service_dsn
         self._quarantine_root = quarantine_root
         self._runtime_role = runtime_role
         self._builder_role = builder_role
+        self._synthetic_test_mode = synthetic_test_mode
         self._limiter = PhotoRateLimiter(policy=PhotoRateLimitPolicy(), clock=time.monotonic)
         self._budget = PhotoResourceBudget()
-        self._provider = SyntheticPhotoAnalysisProvider()
+        self._provider = provider or (
+            SyntheticPhotoAnalysisProvider() if synthetic_test_mode else None
+        )
+        if isinstance(self._provider, SyntheticPhotoAnalysisProvider) and not synthetic_test_mode:
+            raise ValueError("synthetic analysis requires explicit test mode")
         self._job_store = PhotoJobStore(factory)
         self._candidate_store = PhotoTraitCandidateStore(factory)
         self._confirmed_store = PhotoConfirmedTraitStore(factory)
         self._draft_store = PhotoReviewDraftStore(factory)
+        self._mood_store = PhotoMoodRepository(factory)
+        self.mood_service = PhotoMoodService(self._mood_store)
+        self._mood_enabled = mood_enabled
+        # Availability never selects a production analysis contract. Only an
+        # explicitly constructed test gateway can create historical trait jobs.
+        self._new_jobs_use_moods = not synthetic_test_mode or mood_enabled
+        self._mood_provider = mood_provider or (
+            SyntheticMoodProvider() if synthetic_test_mode and mood_enabled else None
+        )
+        if isinstance(self._mood_provider, SyntheticMoodProvider) and not synthetic_test_mode:
+            raise ValueError("synthetic mood analysis requires explicit test mode")
         self._job_service = PhotoJobService(factory)
         self._policies: dict[str, QuarantinePolicy] = {}
         self._stored: dict[str, dict[int, tuple[str, str]]] = {}
@@ -868,6 +926,15 @@ class PhotoLifecycleGateway:
         "read_photo_review_draft_v2(text,text)",
         "read_photo_confirmation_receipt_v2(text,text,text)",
         "read_photo_recommendation_projection_v1(text,text)",
+        "read_photo_recommendation_projection_v2(text,text)",
+        "list_photo_candidates_v3(text,text)",
+        "record_photo_candidate_batch_v4(text,text,text[],text[],text[],text[],text[],text,text,text,integer)",
+        "create_photo_mood_job_v1(text,text)",
+        "read_photo_mood_family_v1(text,text)",
+        "record_photo_mood_batch_v1(text,text,jsonb)",
+        "read_photo_mood_batches_v1(text,text)",
+        "confirm_photo_moods_v1(text,text,jsonb,text)",
+        "read_photo_mood_confirmation_v1(text,text)",
     )
 
     def verify_service_authority(self) -> None:
@@ -936,6 +1003,9 @@ class PhotoLifecycleGateway:
                 "photo_confirmation_receipts",
                 "photo_job_filesystem_bindings",
                 "photo_job_image_slots",
+                "photo_mood_job_families",
+                "photo_mood_batches",
+                "photo_mood_confirmations",
             )
             owner = connection.execute(
                 "SELECT count(*) FROM pg_catalog.pg_class c "
@@ -986,6 +1056,7 @@ class PhotoLifecycleGateway:
             if allowed_acl != (len(allowed_procedures), 0):
                 raise RuntimeError("photo service authority rejected: EXECUTE ACL mismatch")
             owner_only_procedures = (
+                "dev_eval.purge_photo_mood_deleted_v1()",
                 "dev_eval.transition_photo_job_status_v1(text,text,text,text,timestamptz)",
                 "dev_eval.claim_photo_job_v1(text,timestamptz)",
                 "dev_eval.record_photo_dispatch_marker_v1(text,integer,text)",
@@ -1017,6 +1088,9 @@ class PhotoLifecycleGateway:
                 "dev_eval.photo_confirmation_receipts",
                 "dev_eval.photo_job_filesystem_bindings",
                 "dev_eval.photo_job_image_slots",
+                "dev_eval.photo_mood_job_families",
+                "dev_eval.photo_mood_batches",
+                "dev_eval.photo_mood_confirmations",
             ):
                 leaked = connection.execute(
                     "SELECT has_table_privilege(current_user, %s, 'SELECT'), "
@@ -1075,16 +1149,24 @@ class PhotoLifecycleGateway:
             )
         reservation = self._budget.reserve_job(identity=profile_id, now=time.monotonic())
         try:
-            job_id = self._job_service.create_job(profile_id=profile_id)
+            if self._new_jobs_use_moods:
+                job_id = self._mood_store.create_job(
+                    job_id=uuid.uuid4().hex + uuid.uuid4().hex, profile_id=profile_id
+                )
+            else:
+                job_id = self._job_service.create_job(profile_id=profile_id)
         except Exception:
             self._budget.release(reservation)
             raise
         self._reservations[job_id] = reservation
-        return {
+        created: dict[str, object] = {
             "job_id": job_id,
             "state": "queued",
             "consent_version": CURRENT_PHOTO_CONSENT_NOTICE.consent_version,
         }
+        if self._new_jobs_use_moods:
+            created["analysis_family"] = PHOTO_MOOD_FAMILY
+        return created
 
     def authorize_image_upload(self, *, job_id: str, profile_id: str, image_index: int) -> str:
         """Ownership and state gate that precedes any stream iteration."""
@@ -1222,11 +1304,14 @@ class PhotoLifecycleGateway:
                 (job_id, profile_id),
             ).fetchone()
             cleanup_pending = cleanup is None or bool(cleanup[0])
-        return {
+        result: dict[str, object] = {
             "state": state,
             "terminal_cause": cause,
             "cleanup_pending": cleanup_pending,
         }
+        if self._mood_store.family(job_id=job_id, profile_id=profile_id) == PHOTO_MOOD_FAMILY:
+            result["analysis_family"] = PHOTO_MOOD_FAMILY
+        return result
 
     def _durable_slot_inventory(
         self, connection: Any, *, job_id: str, profile_id: str
@@ -1360,17 +1445,20 @@ class PhotoLifecycleGateway:
                 for marker in ("reserved", "prepared"):
                     self._record_dispatch_marker(job_id, profile_id, marker, connection=connection)
             _hook("after_stage_a_commit")
-            # Stage B: the durable send boundary. The synthetic provider
-            # constructs no client, so client_constructed is never claimed.
+            # Stage B records intent before entering the provider seam.
+            # Provider client construction occurs inside that seam, so this
+            # layer never asserts that construction has already happened.
             self._record_dispatch_marker(job_id, profile_id, "send_boundary")
             _hook("after_send_boundary")
             # Stage C: provider work runs outside the transaction.
-            candidate_batches: list[list[dict[str, object]]]
+            candidate_batches: list[list[dict[str, object]] | PhotoMoodCandidateSet]
             failure: tuple[str, str] | None
             try:
                 candidate_batches = self._analyze_stored_images(
                     job_id=job_id, profile_id=profile_id
                 )
+            except PhotoLiveAnalysisUnavailable:
+                failure = ("provider_error", "PHOTO_ANALYSIS_UNAVAILABLE")
             except TimeoutError:
                 failure = ("timeout", "PHOTO_TIMEOUT")
             except PhotoUploadPreprocessingError:
@@ -1401,9 +1489,16 @@ class PhotoLifecycleGateway:
                     raise PhotoJobError("photo job is not available")
                 if failure is None:
                     for candidate_batch in candidate_batches:
+                        if isinstance(candidate_batch, PhotoMoodCandidateSet):
+                            self._mood_store.record_batch(
+                                connection, batch=candidate_batch, profile_id=profile_id
+                            )
+                            continue
+                        if not candidate_batch:
+                            continue
                         connection.execute(
-                            "SELECT dev_eval.record_photo_candidate_batch_v3"
-                            "(%s, %s, %s, %s, %s, %s)",
+                            "SELECT dev_eval.record_photo_candidate_batch_v4"
+                            "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
                             (
                                 job_id,
                                 profile_id,
@@ -1411,6 +1506,11 @@ class PhotoLifecycleGateway:
                                 [str(row["trait_id"]) for row in candidate_batch],
                                 [str(row["text_ko"]) for row in candidate_batch],
                                 [str(row["candidate_set_sha256"]) for row in candidate_batch],
+                                [row["semantic_id"] for row in candidate_batch],
+                                candidate_batch[0]["analysis_kind"],
+                                candidate_batch[0]["provider_id"],
+                                candidate_batch[0]["semantic_version"],
+                                candidate_batch[0]["image_index"],
                             ),
                         )
                 outcome = execute_terminal_deletion(
@@ -1433,25 +1533,40 @@ class PhotoLifecycleGateway:
             )
         self._release_job_bookkeeping(job_id)
         if failure is not None:
+            if failure[1] == "PHOTO_ANALYSIS_UNAVAILABLE":
+                raise PhotoLiveAnalysisUnavailable()
             raise PhotoJobError("photo analysis failed closed")
         return {"state": "succeeded"}
 
     def _analyze_stored_images(
         self, *, job_id: str, profile_id: str
-    ) -> list[list[dict[str, object]]]:
-        """One bounded 1..6 candidate batch per analyzed image.
+    ) -> list[list[dict[str, object]] | PhotoMoodCandidateSet]:
+        """One bounded candidate batch per image; empty observations are valid.
 
         Runs outside any database transaction: the durable slot inventory is
         read on a separate short-lived connection, provider calls hold no
         locks, and every outcome re-enters through the locked stage-C saga.
         """
 
+        family = self._mood_store.family(job_id=job_id, profile_id=profile_id)
+        mood_job = family == PHOTO_MOOD_FAMILY
+        # Old pending jobs may still be owned, read, or deleted after rollout,
+        # but production must never infer new M1–M6 candidates for them.
+        if not mood_job and not self._synthetic_test_mode:
+            raise PhotoLiveAnalysisUnavailable()
+        if (mood_job and self._mood_provider is None) or (not mood_job and self._provider is None):
+            raise PhotoLiveAnalysisUnavailable()
+
         with psycopg.connect(self._service_dsn, autocommit=True) as inventory_connection:
             inventory = self._durable_slot_inventory(
                 inventory_connection, job_id=job_id, profile_id=profile_id
             )
+        if not 1 <= len(inventory) <= 3:
+            raise PhotoLiveAnalysisUnavailable()
+        per_image_cap = 6 // len(inventory)
         job_directory = job_id
-        batches: list[list[dict[str, object]]] = []
+        batches: list[list[dict[str, object]] | PhotoMoodCandidateSet] = []
+        mood_images: dict[str, PhotoMoodCandidateSet] = {}
         root_fd = open_quarantine_root(self._quarantine_root)
         try:
             for image_index in sorted(inventory):
@@ -1463,24 +1578,83 @@ class PhotoLifecycleGateway:
                     profile_id=profile_id,
                     media_type=media_type,
                 )
+                if mood_job:
+                    from itda.domain.visual_mood import build_candidate_set
+
+                    image_digest = hashlib.sha256(sanitized).hexdigest()
+                    previous = mood_images.get(image_digest)
+                    if previous is None:
+                        assert self._mood_provider is not None
+                        mood_batch = self._mood_provider.analyze(
+                            image_png=sanitized, job_id=job_id, image_index=image_index
+                        )
+                        mood_batch = PhotoMoodCandidateSet.model_validate_json(
+                            mood_batch.model_dump_json()
+                        )
+                        if (
+                            mood_batch.job_id != job_id
+                            or mood_batch.image_index != image_index
+                            or mood_batch.payload_sha256 != image_digest
+                            or mood_batch.provider_id != self._mood_provider.provider_id
+                        ):
+                            raise PhotoLiveAnalysisUnavailable()
+                        mood_images[image_digest] = mood_batch
+                    else:
+                        # Identical sanitized images have one inference weight and
+                        # never trigger a second provider call or new observations.
+                        mood_batch = build_candidate_set(
+                            job_id=job_id,
+                            image_index=image_index,
+                            image_sha256=image_digest,
+                            observations=tuple(row.observation for row in previous.candidates),
+                            provider_id=previous.provider_id,
+                            analysis_kind=previous.analysis_kind,
+                            model=previous.model,
+                        )
+                    batches.append(mood_batch)
+                    del sanitized
+                    continue
+                assert self._provider is not None
                 candidate_set = self._provider.analyze(
                     image_png=sanitized,
-                    rubric_ko=_PUBLIC_RUBRIC_KO,
+                    rubric_ko=f"{_PUBLIC_RUBRIC_KO}. 최대 {per_image_cap}개 후보만 선택하세요.",
                     job_id=job_id,
                 )
+                if (
+                    candidate_set.schema_version != "photo-trait-candidates.v2"
+                    or candidate_set.provider_id != getattr(self._provider, "provider_id", None)
+                    or candidate_set.job_id != job_id
+                    or candidate_set.payload_sha256 != hashlib.sha256(sanitized).hexdigest()
+                ):
+                    raise PhotoLiveAnalysisUnavailable()
                 batches.append(
                     [
                         {
-                            "candidate_id": candidate.candidate_id,
+                            "candidate_id": canonical_sha256(
+                                {"candidate_id": candidate.candidate_id, "image_index": image_index}
+                            ),
                             "trait_id": candidate.trait_id,
                             "text_ko": candidate.text_ko,
                             "candidate_set_sha256": candidate_set.candidate_set_sha256,
+                            "semantic_id": candidate.semantic_id,
+                            "semantic_version": candidate_set.semantic_version,
+                            "analysis_kind": candidate_set.analysis_kind,
+                            "provider_id": candidate_set.provider_id,
+                            "image_index": image_index,
                         }
-                        for candidate in candidate_set.candidates
+                        # The public review/confirmation contract allows six
+                        # rows per job. Equal per-image caps preserve that
+                        # bound independently of image order or job identity.
+                        for candidate in sorted(
+                            candidate_set.candidates,
+                            key=lambda item: (item.trait_id, item.semantic_id or "", item.text_ko),
+                        )[:per_image_cap]
                     ]
                 )
         finally:
             os.close(root_fd)
+        if not mood_job and not any(batches):
+            raise PhotoLiveAnalysisUnavailable()
         return batches
 
     def _sanitized_bytes(
@@ -1528,6 +1702,8 @@ class PhotoLifecycleGateway:
     def read_traits(self, *, job_id: str, profile_id: str) -> dict[str, object]:
         self._acquire("poll", profile_id)
         row = self._read_owned(job_id=job_id, profile_id=profile_id)
+        if self._mood_store.family(job_id=job_id, profile_id=profile_id) == PHOTO_MOOD_FAMILY:
+            raise PhotoJobConflict("mood job cannot use trait review")
         candidates = self._candidate_store.list_for_job(job_id, profile_id)
         confirmed = self._confirmed_store.list_for_job(job_id, profile_id)
         return {
@@ -1548,6 +1724,8 @@ class PhotoLifecycleGateway:
 
         self._acquire("poll", profile_id)
         row = self._read_owned(job_id=job_id, profile_id=profile_id)
+        if self._mood_store.family(job_id=job_id, profile_id=profile_id) == PHOTO_MOOD_FAMILY:
+            raise PhotoJobConflict("mood job cannot use trait confirmation")
         if row["state"] != "succeeded":
             raise PhotoJobError("photo job is not available")
         candidate_rows = self._candidate_store.list_for_job(job_id, profile_id)
@@ -1680,18 +1858,75 @@ class PhotoLifecycleGateway:
             return reconcile_interrupted_jobs(connection, quarantine_root=self._quarantine_root)
 
 
+def _photo_provider_api_key() -> str:
+    """Read an explicit override or the shared deployment secret, without logs.
+
+    As with the scheduler's secret helper, a configured file is authoritative
+    over its paired environment value. An unreadable/malformed file fails closed
+    instead of trying a different credential. Regular-file and byte bounds also
+    avoid blocking on special files or materializing an oversized secret.
+    """
+    for variable, file_variable in (
+        ("ITDA_PHOTO_VLM_API_KEY", "ITDA_PHOTO_VLM_API_KEY_FILE"),
+        ("ZHIPUAI_API_KEY", "ITDA_ZHIPUAI_API_KEY_FILE"),
+    ):
+        path = os.environ.get(file_variable, "").strip()
+        if path:
+            try:
+                descriptor = os.open(path, os.O_RDONLY | os.O_NONBLOCK | os.O_CLOEXEC)
+                try:
+                    metadata = os.fstat(descriptor)
+                    if not stat.S_ISREG(metadata.st_mode) or metadata.st_size > 4098:
+                        return ""
+                    raw = os.read(descriptor, 4099)
+                finally:
+                    os.close(descriptor)
+                if len(raw) > 4098:
+                    return ""
+                value = raw.decode("utf-8").strip()
+            except (OSError, UnicodeError, ValueError):
+                return ""
+        else:
+            value = os.environ.get(variable, "").strip()
+            if not value:
+                continue
+        if (
+            not value
+            or not value.isascii()
+            or len(value) > 4096
+            or any(ord(character) <= 32 or ord(character) == 127 for character in value)
+        ):
+            return ""
+        return value
+    return ""
+
+
 @lru_cache(maxsize=2)
 def _lifecycle_for(
     dsn: str, quarantine_root: str, runtime_role: str, builder_role: str
 ) -> PhotoLifecycleGateway:
     engine = create_database_engine(dsn)
     factory = create_session_factory(engine)
+    mood_enabled = os.environ.get("ITDA_PHOTO_MOOD_ENABLED", "1").strip().casefold() in {
+        "true",
+        "1",
+    }
+    mood_provider: MoodProvider | None = None
+    if mood_enabled:
+        key = _photo_provider_api_key()
+        if key:
+            try:
+                mood_provider = GlmMoodProvider(api_key=key, explicit_opt_in=True)
+            except (ValueError, PhotoLiveAnalysisUnavailable):
+                mood_provider = None
     gateway = PhotoLifecycleGateway(
         factory=factory,
         service_dsn=dsn,
         quarantine_root=FilePath(quarantine_root),
         runtime_role=runtime_role,
         builder_role=builder_role,
+        mood_provider=mood_provider,
+        mood_enabled=mood_enabled,
     )
     gateway.verify_service_authority()
     return gateway
@@ -1742,6 +1977,9 @@ def create_photo_job(
         preference_profile_id=profile_id,
         state=PhotoJobPublicState.QUEUED,
         consent_version=str(created["consent_version"]),
+        analysis_family="photo-mood-v1"
+        if created.get("analysis_family") == PHOTO_MOOD_FAMILY
+        else None,
     )
 
 
@@ -1859,6 +2097,9 @@ def _traits_response(
             text_ko=str(row.text_ko),
             edited_text_ko=row.edited_text_ko,
             excluded=bool(row.excluded),
+            analysis_kind=getattr(row, "analysis_kind", "legacy"),
+            semantic_id=getattr(row, "semantic_id", None),
+            semantic_version=getattr(row, "semantic_version", None),
         )
         for row in candidate_rows
     )
@@ -1907,6 +2148,9 @@ def get_photo_job(
             else None
         ),
         cleanup_pending=bool(state["cleanup_pending"]),
+        analysis_family="photo-mood-v1"
+        if state.get("analysis_family") == PHOTO_MOOD_FAMILY
+        else None,
     )
 
 

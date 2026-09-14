@@ -1,0 +1,581 @@
+{
+  "assessed_at": "2026-09-11T17:12:20.243399Z",
+  "assessment_sha256": "e95bcbf5faad2fbd3dcfdc14d1663d361952bb2eda98ed924ec9342aadd365c0",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "에메랄드빛 바다, '제주에서 바다색이 가장 예쁜 3곳' 등 장소에 공유되는 이미지·이야기가 공식 개요에서 구체적으로 장소와 연결되어 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(에메랄드 해변, 서우봉 전망)을 현장에서 직접 경험할 수 있음을 근거가 보여준다. 사진 재현·촬영 문화까지는 근거가 없어 4단계 이상은 불가.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "구름다리 산책, 잔디밭 피크닉, 서우봉 등반, 야간 산책 등 자율적으로 선택·탐색할 기회가 확인된다. 일상 이탈이 방문 중심이라는 수준의 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "맑은 바다, 모래, 잔디밭, 유채꽃과 초록빛 오름 등 자연 환경 단서가 두드러지게 확인된다. 다만 실제 고요함·혼잡도는 확인되지 않아 4단계로 확정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "구름다리 산책, 서우봉 등반, 해수욕 등 구체적 참여·탐방 활동이 확인된다. 지속적 도전·집중 활동이 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "해수욕장과 서우봉(오름)의 자연 지형이 언급되지만, 확인된 문화유산·원형의 실물 접촉 근거는 없다. 오름은 자연 지형이며 유산 접촉의 중심이라는 근거 부족.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 풍경과 접근성을 소개할 뿐 함덕이라는 장소의 실제 역사·연혁·사건·인물 맥락을 제공하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다. 야자수·유채꽃 등 경관 묘사만으로 전승 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·역사와 연결된 해설·전시·학습 프로그램에 대한 근거가 없다. 전망 포인트 안내는 역사 해설이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+          "quote": {
+            "end": 325,
+            "method": "EXACT",
+            "original": "제주도 수많은 해수욕장 중에서도, 바다색이 가장 예쁜 3곳을 꼽는다면 단연 협재, 김녕, 그리고 함덕해수욕장이다",
+            "start": 263,
+            "submitted": "제주도 수많은 해수욕장 중에서도, 바다색이 가장 예쁜 3곳을 꼽는다면 단연 협재, 김녕, 그리고 함덕해수욕장이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "134a78e5788a234840e830431507dbe43f7316e1746b3532e2f0da9527c341fc"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "에메랄드빛 바다, '제주에서 바다색이 가장 예쁜 3곳' 등 장소에 공유되는 이미지·이야기가 공식 개요에서 구체적으로 장소와 연결되어 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "홍보·SNS·작품 등 매체를 통한 이미지 유통의 근거는 제공되지 않았다. 공식 소개문 자체가 유통의 내용·범위를 증명하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+          "quote": {
+            "end": 619,
+            "method": "EXACT",
+            "original": "서우봉에 오르면 함덕해수욕장을 한눈에 담을 수 있는 호사를 누릴 수 있다",
+            "start": 579,
+            "submitted": "서우봉에 오르면 함덕해수욕장을 한눈에 담을 수 있는 호사를 누릴 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "134a78e5788a234840e830431507dbe43f7316e1746b3532e2f0da9527c341fc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대표 장면(에메랄드 해변, 서우봉 전망)을 현장에서 직접 경험할 수 있음을 근거가 보여준다. 사진 재현·촬영 문화까지는 근거가 없어 4단계 이상은 불가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+          "quote": {
+            "end": 449,
+            "method": "EXACT",
+            "original": "피크닉 하기 좋은 잔디밭, 밤에도 안심하고 바다를 즐길 수 있는 산책로가 매력이어서",
+            "start": 403,
+            "submitted": "피크닉 하기 좋은 잔디밭, 밤에도 안심하고 바다를 즐길 수 있는 산책로가 매력이어서",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "134a78e5788a234840e830431507dbe43f7316e1746b3532e2f0da9527c341fc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "구름다리 산책, 잔디밭 피크닉, 서우봉 등반, 야간 산책 등 자율적으로 선택·탐색할 기회가 확인된다. 일상 이탈이 방문 중심이라는 수준의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+          "quote": {
+            "end": 261,
+            "method": "EXACT",
+            "original": "모래와 미역마저 투명하게 비춰주는 맑은 물과 하얀 파도가 그러하다",
+            "start": 225,
+            "submitted": "모래와 미역마저 투명하게 비춰주는 맑은 물과 하얀 파도가 그러하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "134a78e5788a234840e830431507dbe43f7316e1746b3532e2f0da9527c341fc"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "맑은 바다, 모래, 잔디밭, 유채꽃과 초록빛 오름 등 자연 환경 단서가 두드러지게 확인된다. 다만 실제 고요함·혼잡도는 확인되지 않아 4단계로 확정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+          "quote": {
+            "end": 401,
+            "method": "EXACT",
+            "original": "해수욕장 서쪽은 구름다리로 연결되어 있어 바다 위를 걷는 듯한 경험을 할 수 있다",
+            "start": 356,
+            "submitted": "해수욕장 서쪽은 구름다리로 연결되어 있어 바다 위를 걷는 듯한 경험을 할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "134a78e5788a234840e830431507dbe43f7316e1746b3532e2f0da9527c341fc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "구름다리 산책, 서우봉 등반, 해수욕 등 구체적 참여·탐방 활동이 확인된다. 지속적 도전·집중 활동이 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "'가족단위 피서지로 좋다'는 권장 서술과 야간개장만으로 교류·공동 활동 기회를 3단계로 두는 것은 반례(가족 방문 권장으로 유대감 추정 금지)에 부합할 위험이 있다. 함께 만들거나 교류하는 구체적 활동의 직접 근거가 부족해 단정을 유보한다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+            "quote": "입구부터 환영해 주는 키 큰 야자수들, 하얀 모래와 대조를 이루는 에메랄드빛 바다"
+          },
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+            "quote": "서우봉에 오르면 함덕해수욕장을 한눈에 담을 수 있는 호사를 누릴 수 있다"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "야자수, 하얀 모래, 에메랄드빛 바다, 계절마다 그림 같은 서우봉 풍경 등 이 장면에서 구별되는 시각적 성격이 공식 소개문에 구체적으로 묘사되어 있다. 대상 일치를 확인했으며, 실제 만족도는 단정하지 않는다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+              "quote": {
+                "end": 354,
+                "method": "EXACT",
+                "original": "물이 맑고 수심이 얕아서 가족단위 피서지로도 좋다",
+                "start": 327,
+                "submitted": "물이 맑고 수심이 얕아서 가족단위 피서지로도 좋다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "134a78e5788a234840e830431507dbe43f7316e1746b3532e2f0da9527c341fc"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 3,
+          "reason": "가족단위 이용, 피크닉, 야간개장 등 함께 머무는 교류 맥락이 확인된다. 그러나 공동 제작·자기표현 활동의 근거는 없어 낮은 단계.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "'가족단위 피서지로 좋다'는 권장 서술과 야간개장만으로 교류·공동 활동 기회를 3단계로 두는 것은 반례(가족 방문 권장으로 유대감 추정 금지)에 부합할 위험이 있다. 함께 만들거나 교류하는 구체적 활동의 직접 근거가 부족해 단정을 유보한다."
+        }
+      },
+      "reason": "'가족단위 피서지로 좋다'는 권장 서술과 야간개장만으로 교류·공동 활동 기회를 3단계로 두는 것은 반례(가족 방문 권장으로 유대감 추정 금지)에 부합할 위험이 있다. 함께 만들거나 교류하는 구체적 활동의 직접 근거가 부족해 단정을 유보한다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "8b29c319d183b5cea6e0ac7ce046da52998db98c47d6e326faf49d81b2523160",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2a422221cb8b0a1f69a21e6af8a515832968cde63bb047a8a178e2492c1d4a9e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6012900c4aec0dd4b422f66ac664ee638eea3e7594098dcd989212ab8b130aa7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126451",
+          "request_sha256": "5dba93966c6fa025a31c59a1a07cecd94d22b2b719078325675bf91994628d58",
+          "response_sha256": "827baac7acc2a0a39d7a94888509a21221c92231e508ae5b860656f101b56efa",
+          "retrieved_at": "2026-09-11T02:04:58.977278Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a263669d4ff9800de32ff6d94f3d0a09d812ff78e17597565225203c213e7ad8",
+          "source_uri": null
+        },
+        "record_sha256": "147d12ecb66d4ce14cf607df8a8fa35851d2058c257ff272568d9703ae7597b5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "음식점 / 화장실 / 편의점 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:558b3cfa09c825a9ca6ce0e0a48adb9950c5758d4b2120171f904549dae6bf91",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6012900c4aec0dd4b422f66ac664ee638eea3e7594098dcd989212ab8b130aa7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126451",
+          "request_sha256": "51f96f686ba0dce0e70cb8624d89f44d067688ea1ff1143f3c60f0835f77cee6",
+          "response_sha256": "bd2265a3db31c6a2d3e6b8d9c818e15572538b81424258f6e28bcf97a630ba10",
+          "retrieved_at": "2026-09-10T17:10:03.059694Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-07-24T07:34:02Z",
+          "source_record_sha256": "947f81be3462277b7fbc853246251cca7ed0aa42e0e7b084998eff8e15616d9a",
+          "source_uri": null
+        },
+        "record_sha256": "134a78e5788a234840e830431507dbe43f7316e1746b3532e2f0da9527c341fc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "제주올레 19코스를 걷다 보면 에메랄드빛 보석을 품고 있는 함덕해수욕장을 만날 수 있다. 제주시 조천읍 함덕리에 자리한 함덕해수욕장은 해수욕장 바로 옆에 우뚝 선 오름(서우봉) 덕분에 ‘함덕서 우봉해변’이라고도 불린다. 제주공항에서 불과 20㎞ 떨어졌지만, 이곳에 도착하는 순간 다른 나라에 온 것 같은 기분이 든다. 입구부터 환영해 주는 키 큰 야자수들, 하얀 모래와 대조를 이루는 에메랄드빛 바다, 모래와 미역마저 투명하게 비춰주는 맑은 물과 하얀 파도가 그러하다. 제주도 수많은 해수욕장 중에서도, 바다색이 가장 예쁜 3곳을 꼽는다면 단연 협재, 김녕, 그리고 함덕해수욕장이다. 물이 맑고 수심이 얕아서 가족단위 피서지로도 좋다. 해수욕장 서쪽은 구름다리로 연결되어 있어 바다 위를 걷는 듯한 경험을 할 수 있다. 피크닉 하기 좋은 잔디밭, 밤에도 안심하고 바다를 즐길 수 있는 산책로가 매력이어서 사계절 찾는 이들의 발길이 끊이지 않는다. 특히 여름에는 야간개장도 하고 있어 제주의 푸른 밤을 바다에서 즐길 수 있다. 바로 옆에 자리한 서우봉은 봄이 되면 노란 유채꽃으로 여름엔 초록빛으로 계절마다 그림 같은 풍경을 선사한다. 서우봉에 오르면 함덕해수욕장을 한눈에 담을 수 있는 호사를 누릴 수 있다. 날씨가 좋으면 한라산과 동쪽 오름들도 내려다볼 수 있는 최고의 전망 포인트이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8704cee934690046939719126ffce4b1f4e383564fa694ed4c3afc76b096aca8",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6012900c4aec0dd4b422f66ac664ee638eea3e7594098dcd989212ab8b130aa7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126451",
+          "request_sha256": "5dba93966c6fa025a31c59a1a07cecd94d22b2b719078325675bf91994628d58",
+          "response_sha256": "827baac7acc2a0a39d7a94888509a21221c92231e508ae5b860656f101b56efa",
+          "retrieved_at": "2026-09-11T02:04:58.977278Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9bb7ef53834533262812ca446cc29725cb005c7df8f4c1dc32c130540b9ddd13",
+          "source_uri": null
+        },
+        "record_sha256": "9bee02f11d47b43d13da4644d78d9011dd93f3f135b6cc891f96a034e54d6474",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "3d398b04ce1071f7fe218e3b968782e7cb1462700f08d4c0ce42d14f9bce394f",
+    "place": {
+      "address": "제주특별자치도 제주시 조천읍 조함해안로 519-10",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:6012900c4aec0dd4b422f66ac664ee638eea3e7594098dcd989212ab8b130aa7",
+      "name_ko": "함덕해수욕장 (함덕 서우봉 해변)",
+      "place_id": "public:korea:6012900c4aec0dd4b422f66ac664ee638eea3e7594098dcd989212ab8b130aa7",
+      "provider_content_id": "126451",
+      "region_code": "50110",
+      "region_name": "제주특별자치도 제주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

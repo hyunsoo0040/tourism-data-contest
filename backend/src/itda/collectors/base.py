@@ -253,6 +253,13 @@ def credential_material_present(raw_body: bytes, secret: str) -> bool:
 
 
 def _provider_result_fields(payload: object) -> tuple[object | None, object | None]:
+    if isinstance(payload, Mapping):
+        gateway = payload.get("OpenAPI_ServiceResponse")
+        header = gateway.get("cmmMsgHeader") if isinstance(gateway, Mapping) else None
+        if isinstance(header, Mapping) and "returnReasonCode" in header:
+            return header.get("returnReasonCode"), header.get("returnAuthMsg") or header.get(
+                "errMsg"
+            )
     stack = [payload]
     while stack:
         current = stack.pop()
@@ -315,11 +322,7 @@ def _parse_provider_xml_bytes(raw_body: bytes) -> tuple[object, object | None, o
         if not list(element)
     }
     code = values.get("returnReasonCode") or values.get("resultCode")
-    message = (
-        values.get("returnAuthMsg")
-        or values.get("errMsg")
-        or values.get("resultMsg")
-    )
+    message = values.get("returnAuthMsg") or values.get("errMsg") or values.get("resultMsg")
     return payload, code, message
 
 
@@ -444,8 +447,7 @@ class OfficialApiClient:
         obsolete_parameters = set(params).intersection(self.forbidden_parameter_names)
         if obsolete_parameters:
             raise CollectionError(
-                "caller supplied obsolete provider parameter: "
-                + sorted(obsolete_parameters)[0]
+                "caller supplied obsolete provider parameter: " + sorted(obsolete_parameters)[0]
             )
         reserved_parameters = set(params).intersection(self.common_parameters)
         if reserved_parameters:
@@ -460,9 +462,7 @@ class OfficialApiClient:
             "serviceKey": self._service_key,
         }
         secret_free_query = dict(
-            sorted(
-                httpx.QueryParams({**self.common_parameters, **params}).multi_items()
-            )
+            sorted(httpx.QueryParams({**self.common_parameters, **params}).multi_items())
         )
         url = f"{self.base_url}/{operation}"
         if (diagnostics is None) != (diagnostic_operation is None):
@@ -662,9 +662,7 @@ class OfficialApiClient:
                     wait_before_retry(attempt, retry_after=response.headers.get("retry-after"))
                     continue
                 outcome = "retryable_for_resume" if retryable_http else "http_error"
-                retry_disposition = (
-                    "RETRYABLE_FOR_RESUME" if retryable_http else "DO_NOT_RETRY"
-                )
+                retry_disposition = "RETRYABLE_FOR_RESUME" if retryable_http else "DO_NOT_RETRY"
                 if diagnostics is not None and diagnostic_operation is not None:
                     diagnostics.request_failed(
                         diagnostic_operation,
@@ -736,9 +734,7 @@ class OfficialApiClient:
                 ) from parse_error
 
             provider_outcome = (
-                "SUCCESS"
-                if provider_code is None
-                else classify_provider_result(provider_code)
+                "SUCCESS" if provider_code is None else classify_provider_result(provider_code)
             )
             retryable_provider = provider_outcome == "RETRYABLE_FOR_RESUME"
             terminal_provider = provider_outcome == "TERMINAL_OPERATOR_ACTION"

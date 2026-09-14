@@ -25,9 +25,9 @@ const CONFIDENCE_LABEL: Record<EvidenceConfidenceState, string> = {
 };
 
 const AXIS_COPY = {
-  HISTORY_TRADITION: { label: "역사·전통", className: "recommendation-axis--history" },
-  EMOTION_IMAGE: { label: "감성·이미지", className: "recommendation-axis--emotion" },
-  REST_IMMERSION: { label: "휴식·몰입", className: "recommendation-axis--rest" },
+  HISTORY_TRADITION: { label: "대상•원형형", className: "recommendation-axis--history" },
+  EMOTION_IMAGE: { label: "의미•이미지형", className: "recommendation-axis--emotion" },
+  REST_IMMERSION: { label: "자기•몰입형", className: "recommendation-axis--rest" },
 } as const;
 
 const CONDITION_LABEL = {

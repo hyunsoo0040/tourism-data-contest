@@ -15,6 +15,7 @@ from itda.contracts.mvp_public_catalog import (
     PublicPlaceCatalog,
     PublicPlaceRelations,
 )
+from itda.domain.canonical import canonical_sha256
 from itda.pipeline.daily_refresh import due_run_date, next_run_at, run_daily_refresh
 from tests.pipeline.test_daily_public_input import (
     SyntheticDailyProvider,
@@ -24,13 +25,15 @@ from tests.pipeline.test_daily_public_input import (
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 CATALOG = PublicPlaceCatalog.model_validate_json(
-    (REPO_ROOT / "artifacts/public/catalog/public-place-catalog-v1.json").read_bytes()
+    (REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-place-catalog-v1.json").read_bytes()
 )
 EVIDENCE = PublicEvidenceInventory.model_validate_json(
-    (REPO_ROOT / "artifacts/public/catalog/public-evidence-inventory-v1.json").read_bytes()
+    (
+        REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-evidence-inventory-v1.json"
+    ).read_bytes()
 )
 RELATIONS = PublicPlaceRelations.model_validate_json(
-    (REPO_ROOT / "artifacts/public/catalog/public-place-relations-v1.json").read_bytes()
+    (REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-place-relations-v1.json").read_bytes()
 )
 
 
@@ -276,6 +279,10 @@ def test_changed_run_scores_publishes_and_activates_release() -> None:
     assert outcome.failed_count == 0
     assert outcome.call_count == 1
     assert outcome.release_sha256 == store.published[0].release_sha256
+    assert outcome.quality_report is not None
+    assert outcome.quality_report["binding"]["release_sha256"] == outcome.release_sha256
+    assert outcome.quality_report["human_relevance"]["status"] == "unavailable"
+    assert outcome.quality_gate["status"] == "pass"
     assert len(store.plans) == 1
     assert len(store.reservations) == 1
     assert len(store.attempts) == 1
@@ -288,6 +295,62 @@ def test_changed_run_scores_publishes_and_activates_release() -> None:
             "expected_current": _bundled_release().release_sha256,
         }
     ]
+
+
+@pytest.mark.parametrize("failure", ("missing", "stale", "failed", "hash"))
+def test_quality_report_failure_preserves_active_release(
+    monkeypatch: pytest.MonkeyPatch,
+    failure: str,
+) -> None:
+    from itda.pipeline import daily_refresh
+
+    build_report = daily_refresh.build_release_consistency_report
+
+    def broken_report(*args, **kwargs):
+        if failure == "missing":
+            return None
+        report = build_report(*args, **kwargs)
+        if failure == "stale":
+            report["binding"]["release_sha256"] = "f" * 64
+        elif failure == "failed":
+            report["consistency"]["status"] = "fail"
+        report["report_sha256"] = (
+            "0" * 64
+            if failure == "hash"
+            else canonical_sha256(
+                {key: value for key, value in report.items() if key != "report_sha256"}
+            )
+        )
+        return report
+
+    monkeypatch.setattr(daily_refresh, "build_release_consistency_report", broken_report)
+    previous = _bundled_release()
+    store = SyntheticRefreshStore(previous=_baseline_snapshot())
+    outcome = run_daily_refresh(
+        run_date=date(2026, 9, 6),
+        collected_at=datetime(2026, 9, 5, 23, 0, tzinfo=UTC),
+        catalog=CATALOG,
+        evidence_inventory=EVIDENCE,
+        relations=RELATIONS,
+        provider=_changed_provider(),
+        store=store,
+        active_release_resolver=lambda: previous,
+        scoring_transport_factory=SyntheticScoringTransport,
+    )
+    assert outcome.status == DailyRefreshRunStatus.RELEASE_REJECTED
+    assert outcome.quality_gate["status"] == "reject"
+    assert outcome.safe_reason.startswith("QUALITY_")
+    assert store.finished[-1]["safe_reason"] == outcome.safe_reason
+    assert set(store.finished[-1]) <= {
+        "run_date",
+        "status",
+        "changed_count",
+        "failed_count",
+        "safe_reason",
+    }
+    assert store.activations == []
+    assert store.published == []
+    assert previous.release_sha256 == _bundled_release().release_sha256
 
 
 def test_terminal_scoring_error_stops_without_release_publish() -> None:
@@ -459,11 +522,9 @@ def test_scheduler_sleep_is_bounded_to_command_poll_interval(
     assert slept == [15.0]
 
 
-def test_scheduler_and_public_deploy_defaults_use_current_availability_authority(
+def test_historical_raw_scheduler_helper_requires_current_availability_authority(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    import ast
-
     from itda.contracts.mvp_daily_refresh import (
         DAILY_REFRESH_AUTHORITY,
         DAILY_REFRESH_AUTHORITY_V2,
@@ -478,20 +539,6 @@ def test_scheduler_and_public_deploy_defaults_use_current_availability_authority
     )
     with pytest.raises(RuntimeError, match="authority rejected"):
         run_daily_glm_refresh._validate_authority()
-
-    defaults = (REPO_ROOT / "deploy/env.example").read_text()
-    assert f"ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256={authority}" in defaults
-    deploy_script = (REPO_ROOT / "deploy/deploy-swarm-stack.sh").read_text()
-    assert f'"$ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256" = "{authority}"' in deploy_script
-    generator = ast.parse((REPO_ROOT / "scripts/generate_deploy_env.py").read_text())
-    constants = {
-        target.id: ast.literal_eval(node.value)
-        for node in generator.body
-        if isinstance(node, ast.Assign)
-        for target in node.targets
-        if isinstance(target, ast.Name) and target.id == "_DAILY_REFRESH_AUTHORITY_SHA256"
-    }
-    assert constants["_DAILY_REFRESH_AUTHORITY_SHA256"] == authority
 
 
 def test_deferred_glm_transport_resolves_secret_only_after_call_reservation(

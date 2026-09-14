@@ -50,6 +50,7 @@ from itda.operating.service import (
     ProviderPlace,
     parse_operating_snapshot,
 )
+from itda.pipeline.place_facts import intro_fact_lines
 
 _TAG = re.compile(r"<[^>]*>")
 _SPACE = re.compile(r"\s+")
@@ -398,8 +399,12 @@ def _daily_place_input(
         if operating is not None
         else ()
     )
-    excerpt = "\n".join((f"소개: {overview}", *(f"운영 정보: {row}" for row in operating_lines)))
-    excerpt = excerpt[:4_000]
+    intro_item = _validated_item(intro, provider_place)
+    fact_lines = intro_fact_lines(intro_item or {})
+    # Reserve space for supplied facts before truncating the overview. Source field
+    # labels stay stable when only provider retrieval metadata changes.
+    details = "\n".join((*fact_lines, *(f"운영 정보: {row}" for row in operating_lines)))[:2_400]
+    excerpt = "\n".join((f"소개: {overview[: 3_995 - len(details)]}", details)).rstrip()
     semantic_evidence_id = (
         f"evidence:{canonical_sha256({'place_id': place.place_id, 'excerpt': excerpt})}"
     )

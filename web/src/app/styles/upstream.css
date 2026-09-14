@@ -351,61 +351,52 @@
   }
 }
 
-/* The home photo feature introduces optional input without a call to action. */
-.up-main .photo-feature--intro {
+/* Photo mood introduction below the profile actions. */
+.up-quiz .profile-photo-intro {
+  margin-top: 28px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,255,255,.72)),
+    linear-gradient(120deg, rgba(255,107,53,.18), rgba(47,128,237,.14), rgba(18,184,134,.13));
+  box-shadow: 0 18px 48px rgba(24,32,51,.08);
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   gap: 48px;
   padding: 44px;
 }
 
-.up-main .photo-intro-copy h2 {
+.up-quiz .photo-intro-copy h2 {
+  margin: 0;
   font-size: clamp(30px, 3.3vw, 44px);
+  font-weight: 800;
+  letter-spacing: -.04em;
   line-height: 1.25;
 }
 
-.up-main .photo-intro-copy > p {
+.up-quiz .photo-intro-copy > p {
+  color: #607086;
+  line-height: 1.74;
+  word-break: keep-all;
   max-width: 510px;
   margin-top: 20px;
   font-size: 16px;
 }
 
-.up-main .photo-intro-note {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  margin-top: 24px;
-  color: #607086;
-}
-
-.up-main .photo-intro-note span {
-  border-left: 3px solid var(--brand);
-  padding-left: 9px;
-  color: #92513a;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.up-main .photo-intro-note small {
-  font-size: 13px;
-  line-height: 1.6;
-  word-break: keep-all;
-}
-
-.up-main .photo-mood-preview {
+.up-quiz .photo-mood-preview {
   min-width: 0;
   padding-block: 24px 8px;
 }
 
-.up-main .photo-mood-scenes {
+.up-quiz .photo-mood-scenes {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   gap: 10px;
 }
 
-.up-main .photo-mood-frame {
+.up-quiz .photo-mood-frame {
   min-width: 0;
   margin: 0;
   padding: 8px 8px 12px;
@@ -415,14 +406,14 @@
   box-shadow: 0 12px 24px rgba(39, 55, 47, .09);
 }
 
-.up-main .photo-mood-scene {
+.up-quiz .photo-mood-scene {
   position: relative;
   overflow: hidden;
   aspect-ratio: 3 / 4;
   border-radius: 2px;
 }
 
-.up-main .photo-mood-frame figcaption {
+.up-quiz .photo-mood-frame figcaption {
   padding-top: 12px;
   color: #526257;
   text-align: center;
@@ -431,26 +422,26 @@
   white-space: nowrap;
 }
 
-.up-main .photo-mood-frame--warm {
+.up-quiz .photo-mood-frame--warm {
   transform: rotate(-7deg) translateY(9px);
 }
 
-.up-main .photo-mood-frame--warm .photo-mood-scene {
+.up-quiz .photo-mood-frame--warm .photo-mood-scene {
   background: radial-gradient(circle at 65% 30%, #fff2c6 0 11%, transparent 12%),
     linear-gradient(175deg, #e9b38b, #f5d4a7 60%, #be9477 61%, #967858);
 }
 
-.up-main .photo-mood-frame--nature {
+.up-quiz .photo-mood-frame--nature {
   z-index: 1;
   transform: translateY(-14px) rotate(2deg);
 }
 
-.up-main .photo-mood-frame--nature .photo-mood-scene {
+.up-quiz .photo-mood-frame--nature .photo-mood-scene {
   background: linear-gradient(155deg, #dce9e0, #b3cbb9);
 }
 
-.up-main .photo-mood-frame--nature .photo-mood-scene::before,
-.up-main .photo-mood-frame--nature .photo-mood-scene::after {
+.up-quiz .photo-mood-frame--nature .photo-mood-scene::before,
+.up-quiz .photo-mood-frame--nature .photo-mood-scene::after {
   content: "";
   position: absolute;
   width: 160%;
@@ -462,54 +453,49 @@
   transform: rotate(30deg);
 }
 
-.up-main .photo-mood-frame--nature .photo-mood-scene::after {
+.up-quiz .photo-mood-frame--nature .photo-mood-scene::after {
   left: 5%;
   bottom: -40%;
   background: #456f5c;
   transform: rotate(-25deg);
 }
 
-.up-main .photo-mood-frame--open {
+.up-quiz .photo-mood-frame--open {
   transform: rotate(8deg) translateY(12px);
 }
 
-.up-main .photo-mood-frame--open .photo-mood-scene {
+.up-quiz .photo-mood-frame--open .photo-mood-scene {
   background: linear-gradient(#bad4df, #e5ece6 54%, #86b3bd 55%, #61949f 80%, #dcd7bd 81%);
 }
 
-.up-main .photo-mood-preview .photo-mood-caption {
-  margin: 32px 0 0;
-  text-align: center;
-  font-size: 13px;
-}
-
 @media (max-width: 920px) {
-  .up-main .photo-feature--intro {
+  .up-quiz .profile-photo-intro {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
     padding: 32px;
   }
 
-  .up-main .photo-mood-preview {
+  .up-quiz .photo-mood-preview {
     width: min(100%, 420px);
     justify-self: center;
   }
 }
 
 @media (max-width: 560px) {
-  .up-main .photo-feature--intro {
+  .up-quiz .profile-photo-intro {
+    border-radius: 18px;
     padding: 28px 24px;
   }
 
-  .up-main .photo-intro-copy > p {
+  .up-quiz .photo-intro-copy > p {
     font-size: 14px;
   }
 
-  .up-main .photo-mood-frame {
+  .up-quiz .photo-mood-frame {
     padding: 5px 5px 9px;
   }
 
-  .up-main .photo-mood-frame figcaption {
+  .up-quiz .photo-mood-frame figcaption {
     padding-top: 9px;
     font-size: 11px;
   }

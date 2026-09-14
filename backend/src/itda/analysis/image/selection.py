@@ -550,3 +550,114 @@ __all__ = [
     "gate_selection_assets",
     "select_representative_images",
 ]
+
+
+# The appearance-only public pipeline uses this additive, model-free selector.
+# Frozen historical SigLIP/selection functions and manifests above are unchanged.
+@dataclass(frozen=True, slots=True)
+class AppearanceSelectionFeature:
+    asset_id: str
+    original_sha256: str
+    perceptual_hash: str
+    color_signature: tuple[int, ...]
+    quality_score_milli: int
+    stratum: tuple[str, str]
+    scene_group: str | None
+
+
+def appearance_selection_feature(
+    *,
+    asset_id: str,
+    projection: ImageProjection,
+    stratum: tuple[str, str],
+    scene_group: str | None = None,
+) -> AppearanceSelectionFeature:
+    """Reuse perceptual hashing, adding visible-color distance to avoid false dedup."""
+    width, height = projection.width, projection.height
+    crop = min(width, height) * 1000 // max(width, height)
+    quality = min(1000, min(width, height) * 1000 // 960) * crop // 1000
+    with Image.open(BytesIO(projection.encoded_bytes)) as opened:
+        small = opened.convert("RGB").resize((32, 32))
+        histogram = small.histogram()
+        signature = tuple(
+            sum(histogram[channel * 256 + i : channel * 256 + i + 32])
+            for channel in range(3)
+            for i in range(0, 256, 32)
+        )
+    return AppearanceSelectionFeature(
+        asset_id,
+        projection.source_content_sha256,
+        _perceptual_hash(projection),
+        signature,
+        quality,
+        stratum,
+        scene_group,
+    )
+
+
+def appearance_distance(left: AppearanceSelectionFeature, right: AppearanceSelectionFeature) -> int:
+    phash = (int(left.perceptual_hash, 16) ^ int(right.perceptual_hash, 16)).bit_count()
+    color = sum(
+        abs(a - b) for a, b in zip(left.color_signature, right.color_signature, strict=True)
+    )
+    return phash * 1000 // 64 + color * 1000 // 6144
+
+
+def select_diverse_appearance(
+    features: tuple[AppearanceSelectionFeature, ...],
+    *,
+    maximum: int = 3,
+) -> tuple[tuple[str, ...], dict[str, tuple[str, str | None]]]:
+    """Select equal distinct scenes by quality, context coverage and visual distance."""
+    if not 1 <= maximum <= 3 or len({row.asset_id for row in features}) != len(features):
+        raise ValueError("appearance selection inventory or limit invalid")
+    ordered = sorted(
+        features, key=lambda row: (-row.quality_score_milli, row.original_sha256, row.asset_id)
+    )
+    survivors: list[AppearanceSelectionFeature] = []
+    rejected: dict[str, tuple[str, str | None]] = {}
+    for candidate in ordered:
+        duplicate = None
+        for prior in survivors:
+            if candidate.original_sha256 == prior.original_sha256:
+                duplicate = ("EXACT_DUPLICATE", prior.asset_id)
+                break
+            phash = (
+                int(candidate.perceptual_hash, 16) ^ int(prior.perceptual_hash, 16)
+            ).bit_count()
+            color = sum(
+                abs(a - b)
+                for a, b in zip(candidate.color_signature, prior.color_signature, strict=True)
+            )
+            if phash <= 6 and color <= 600:
+                duplicate = ("PERCEPTUAL_DUPLICATE", prior.asset_id)
+                break
+            if (
+                candidate.scene_group
+                and candidate.scene_group == prior.scene_group
+                and candidate.stratum == prior.stratum
+            ):
+                duplicate = ("SCENE_ALTERNATE", prior.asset_id)
+                break
+        if duplicate:
+            rejected[candidate.asset_id] = duplicate
+        else:
+            survivors.append(candidate)
+    selected: list[AppearanceSelectionFeature] = []
+    while survivors and len(selected) < maximum:
+
+        def preference(row: AppearanceSelectionFeature) -> tuple[int, int, int, str, str]:
+            return (
+                -int(bool(selected) and row.stratum not in {s.stratum for s in selected}),
+                -min((appearance_distance(row, s) for s in selected), default=0),
+                -row.quality_score_milli,
+                row.original_sha256,
+                row.asset_id,
+            )
+
+        chosen = min(survivors, key=preference)
+        selected.append(chosen)
+        survivors.remove(chosen)
+    for row in survivors:
+        rejected[row.asset_id] = ("CAPACITY_EXCLUDED", None)
+    return tuple(sorted(row.asset_id for row in selected)), rejected

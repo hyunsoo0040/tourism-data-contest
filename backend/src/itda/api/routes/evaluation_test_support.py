@@ -85,8 +85,7 @@ def get_synthetic_fixture(
     ):
         raise RuntimeError("Phase 3 synthetic fixture assignment is invalid")
     return projection | {
-        "assignment": assignment
-        | {"assignment_id": f"{_E2E_SOURCE_ASSIGNMENT_ID}-{attempt}"}
+        "assignment": assignment | {"assignment_id": f"{_E2E_SOURCE_ASSIGNMENT_ID}-{attempt}"}
     }
 
 
@@ -121,9 +120,7 @@ def prepare_profile_release_build_draft(
 
     if principal.role != "builder":
         raise HTTPException(status_code=403, detail="phase 3 builder capability required")
-    reviewed = repository.get_reviewed_evidence_manifest(
-        request.reviewed_evidence_manifest_sha256
-    )
+    reviewed = repository.get_reviewed_evidence_manifest(request.reviewed_evidence_manifest_sha256)
     candidate_sha256 = os.environ.get("ITDA_PHASE3_CANDIDATE_MANIFEST_SHA256")
     if (
         reviewed is None

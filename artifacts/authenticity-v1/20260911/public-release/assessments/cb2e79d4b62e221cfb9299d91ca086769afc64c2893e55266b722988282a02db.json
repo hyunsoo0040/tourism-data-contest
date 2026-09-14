@@ -1,0 +1,475 @@
+{
+  "assessed_at": "2026-09-11T18:24:29.660817Z",
+  "assessment_sha256": "cb2e79d4b62e221cfb9299d91ca086769afc64c2893e55266b722988282a02db",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "울산의 상징인 고래 벽화 등 지역 상징 이미지가 마을 곳곳에 부여되어 있고, 파스텔 톤 벽화 골목이라는 일관된 이미지가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "파스텔 톤 담장과 벽화, 계절별 꽃 군락 등 마을 전체의 시각적 성격이 구체적으로 서술되어 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "벽화 감상과 전망 포인트 등 대표 장면을 골목길 걷기로 직접 경험할 수 있으나, 촬영·재현 활동의 명시는 없어 중간 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "골목길과 둘레길을 자율적으로 걸으며 탐색하는 구조와, 카페·식당에서 머무는 여유가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "바다 전망, 시골 마을·밭 경관, 벽화 감상하며 휴식할 카페·식당 등 환경 단서와 머물 공간이 확인된다. 실제 고요함·혼잡은 단정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 2012년 이후 조성된 벽화 골목과 둘레길을 설명할 뿐, 확인된 실제 원형·유산의 접촉에 대한 근거가 없다. '오래된 마을'이라는 표현만으로 원형 접촉을 단정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "마을의 역사적 사건·인물·연혁에 대한 구체적 서사가 제공되지 않는다. 벽화 조성 사업(2012년)은 근현대 조성 경위이지 장소의 역사 맥락 탐구 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "주민들이 담장을 내어 협력한 조성 배경은 언급되지만, 이는 과거 조성 사업에 관한 서술이며 현재 지역 주체의 전승·생활문화와 방문객 경험의 실제 연결을 확인할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "벽화·유산에 연결된 해설·전시·학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed",
+          "quote": {
+            "end": 315,
+            "method": "EXACT",
+            "original": "울산의 상징인 고래를 비롯한 다양한 벽화들이 마을 곳곳을 장식하고 있다",
+            "start": 276,
+            "submitted": "울산의 상징인 고래를 비롯한 다양한 벽화들이 마을 곳곳을 장식하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74fbd73a7b5862c4fb4407b60ec4fc623bbc8a2d0131d008ae5faccfcac343dd"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "울산의 상징인 고래 벽화 등 지역 상징 이미지가 마을 곳곳에 부여되어 있고, 파스텔 톤 벽화 골목이라는 일관된 이미지가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "SNS·매체·작품 등을 통한 이미지 유통에 대한 근거가 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed",
+          "quote": {
+            "end": 117,
+            "method": "EXACT",
+            "original": "마을 담장이 파스텔 톤으로 색칠되고 벽화가 그려져 있어 전체적으로 화사하고 아늑한 분위기를 자아낸다",
+            "start": 62,
+            "submitted": "마을 담장이 파스텔 톤으로 색칠되고 벽화가 그려져 있어 전체적으로 화사하고 아늑한 분위기를 자아낸다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74fbd73a7b5862c4fb4407b60ec4fc623bbc8a2d0131d008ae5faccfcac343dd"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "파스텔 톤 담장과 벽화, 계절별 꽃 군락 등 마을 전체의 시각적 성격이 구체적으로 서술되어 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed",
+          "quote": {
+            "end": 364,
+            "method": "EXACT",
+            "original": "마을 골목길을 따라 올라가면 슬도 앞바다가 한눈에 내려다보이는 전망 포인트가 나타난다",
+            "start": 317,
+            "submitted": "마을 골목길을 따라 올라가면 슬도 앞바다가 한눈에 내려다보이는 전망 포인트가 나타난다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74fbd73a7b5862c4fb4407b60ec4fc623bbc8a2d0131d008ae5faccfcac343dd"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 2,
+      "reason": "벽화 감상과 전망 포인트 등 대표 장면을 골목길 걷기로 직접 경험할 수 있으나, 촬영·재현 활동의 명시는 없어 중간 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed",
+          "quote": {
+            "end": 92,
+            "method": "EXACT",
+            "original": "좁게 이어진 골목길을 따라 마을 담장이 파스텔 톤으로 색칠되고 벽화가 그려져 있어",
+            "start": 47,
+            "submitted": "좁게 이어진 골목길을 따라 마을 담장이 파스텔 톤으로 색칠되고 벽화가 그려져 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74fbd73a7b5862c4fb4407b60ec4fc623bbc8a2d0131d008ae5faccfcac343dd"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "골목길과 둘레길을 자율적으로 걸으며 탐색하는 구조와, 카페·식당에서 머무는 여유가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed",
+          "quote": {
+            "end": 438,
+            "method": "EXACT",
+            "original": "푸른 바다를 배경으로 평화로운 시골 마을과 밭이 펼쳐지며, 마을에는 작은 카페와 식당도 있어 벽화를 감상하며 휴식을 취할 수 있다",
+            "start": 366,
+            "submitted": "푸른 바다를 배경으로 평화로운 시골 마을과 밭이 펼쳐지며, 마을에는 작은 카페와 식당도 있어 벽화를 감상하며 휴식을 취할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74fbd73a7b5862c4fb4407b60ec4fc623bbc8a2d0131d008ae5faccfcac343dd"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "바다 전망, 시골 마을·밭 경관, 벽화 감상하며 휴식할 카페·식당 등 환경 단서와 머물 공간이 확인된다. 실제 고요함·혼잡은 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "벽화 감상·산책은 관람형 활동이며, 만들기·신체 활동 등 집중 참여 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "주민 협력은 과거 조성 배경 서술일 뿐, 방문객을 위한 교류·공동 활동·자기표현 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "17772c8edaec1233e43456495530077e3a5656e0cddcf23a940a2c117ae94d4e",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "96d7e15fcbe787b7e6190b4bc9ec6d96bff0b3198a0ef9d0b62d24e58b8cd30f",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:145e25ad51f7d99f340fd1c7f45abdbd4b719029b9798af5c73fba0cc9c825ed",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a46121af1a90f153bd6f118633d3fb0277bca420c8916d09104bb53f2c86f7d2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3084414",
+          "request_sha256": "1d75b8736e5acd9866b040a1ca80a976925f08a7bed1edeb0ad7088b6dcf9a78",
+          "response_sha256": "6c66e6147935fdcf76c37d99fe09a3d750c3a2e2e58350e7e9582602bb479e90",
+          "retrieved_at": "2026-09-10T08:04:20.963146Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-09T04:05:39Z",
+          "source_record_sha256": "c65b510d3cfb7614c807b42e0af2a5f088743f41568f174f159fd2606e4fe0be",
+          "source_uri": null
+        },
+        "record_sha256": "74fbd73a7b5862c4fb4407b60ec4fc623bbc8a2d0131d008ae5faccfcac343dd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "성끝마을은 울산 방어진항과 슬도항 사이의 낮은 언덕 위에 자리 잡은 작은 마을이다. 좁게 이어진 골목길을 따라 마을 담장이 파스텔 톤으로 색칠되고 벽화가 그려져 있어 전체적으로 화사하고 아늑한 분위기를 자아낸다. 오래된 마을이지만, 2012년 아름답고 특색 있는 마을길 조성 사업지로 선정된 이후 벽화 골목과 둘레길이 조성되었고, 지역 예술가들과 주민들의 협력으로 여러 차례 보수를 거쳐 오늘날의 모습을 갖추었다. 주민들이 자신의 집 담장을 벽화마을 조성에 기꺼이 내어 주며 힘을 합친 결과, 울산의 상징인 고래를 비롯한 다양한 벽화들이 마을 곳곳을 장식하고 있다. 마을 골목길을 따라 올라가면 슬도 앞바다가 한눈에 내려다보이는 전망 포인트가 나타난다. 푸른 바다를 배경으로 평화로운 시골 마을과 밭이 펼쳐지며, 마을에는 작은 카페와 식당도 있어 벽화를 감상하며 휴식을 취할 수 있다. 봄에는 인근 해안가 언덕에 노란 유채꽃이 만발하고, 5월에서 7월 사이에는 성끝마을 골목을 지나 성끝 4길에 하얀 샤스타데이지 군락이 아름답게 펼쳐져 계절마다 색다른 매력을 선사한다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f71e0ff17238557943a2320166760bd6640526e63e6d968e335b22608f98f15c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a46121af1a90f153bd6f118633d3fb0277bca420c8916d09104bb53f2c86f7d2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3084414",
+          "request_sha256": "859fbe8de303da9d00aafe5bda7afcb08d59f0aa0aab8adc5ee6d17dffe83402",
+          "response_sha256": "c9e98f5d7dfc29ee1d8cb4bc8e0a55d2527c55cd7f7c24aa06c8d22802d7ddd3",
+          "retrieved_at": "2026-09-10T08:26:32.159244Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "219fc00a4201d7b38cdc9f2a43e463cbd8175a5ccf21d0969f7ca700b42b72ca",
+          "source_uri": null
+        },
+        "record_sha256": "ef8fcd748c44892a385888bf6b31b22d960f095d639201b5dca0ce21ec8b3a1f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "1c344c0bde1e958341c4c99bd51b09f0847d57afa5f041ea3280642e88a554a0",
+    "place": {
+      "address": "울산광역시 동구 방어동 2-10",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:a46121af1a90f153bd6f118633d3fb0277bca420c8916d09104bb53f2c86f7d2",
+      "name_ko": "성끝 벽화 마을",
+      "place_id": "public:korea:a46121af1a90f153bd6f118633d3fb0277bca420c8916d09104bb53f2c86f7d2",
+      "provider_content_id": "3084414",
+      "region_code": "31170",
+      "region_name": "울산광역시 동구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

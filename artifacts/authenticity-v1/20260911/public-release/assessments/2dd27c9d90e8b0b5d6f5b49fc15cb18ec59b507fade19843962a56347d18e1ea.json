@@ -1,0 +1,943 @@
+{
+  "assessed_at": "2026-09-11T17:46:46.484907Z",
+  "assessment_sha256": "2dd27c9d90e8b0b5d6f5b49fc15cb18ec59b507fade19843962a56347d18e1ea",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 62
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'이국적', '압도적 분위기' 등 장소에 부여된 이미지·의미가 공식 개요에서 확인된다. 다만 여러 표현에서의 일관성까지는 확인이 제한적이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "영화 촬영지라는 매체 표현의 연결이 확인되나, 영화 제목이 누락되어 구체성이 제한적이고 반복적 유통 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:40d40e6671298dc2d91b7ebf6dad3adf84462c71bf1eb5e23b65192343fd19c6",
+            "appearance:74ec26a70732e804bae56649f048a79c8d1128361b1219efa19397dd651c9014",
+            "appearance:b1defcdbdbc844cf925c303ad9a38427d311d8d0458c08b86fc8f1f45b383b16"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "계절별 색 대비와 풍광의 시각적 성격이 구체적으로 제시되어 시각적 표현의 근거가 뚜렷하다.",
+      "value": 73
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "포토존, 일몰 풍경 등 대표 장면을 현장에서 관람·촬영할 수 있으나 참여형 재현 프로그램까지는 확인되지 않아 제한적 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "자차로 원하는 구간에 멈춰 구경하는 자율적 탐색 기회가 확인된다. 논밭 출입 제한으로 완전한 자유 탐색은 아니다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:73333066e84140d2576c5e3c67b317e24d33bdf2a706964500584ca96f22951a",
+            "appearance:9d131bb9491e4dab5466172552d4b64d6fc612d295006884863fc767b34a89cb",
+            "appearance:c97bab9c947439072a8f698f314e01e1b5ad0052e461f4a8fe002685b9d805dd"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "논밭, 해안, 유채꽃, 칠면초, 공원 등 자연 환경 단서와 산책·머무를 장면이 확인된다. 다만 실제 고요함·혼잡 수준은 확인 불가하다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "드라이브와 가벼운 산책이라는 참여 활동이 확인되나, 지속적 참여·도전형 프로그램은 확인되지 않는다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "풍력발전기는 현대 시설물이며 실제 원형·유산과의 접촉을 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "설치 대수, 최대 풍력발전기 연구·테스트 언급은 있으나 장소의 역사·연혁 맥락 제시 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "풍력이나 원형·유산에 연결된 해설·전시·학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5",
+          "quote": {
+            "end": 194,
+            "method": "EXACT",
+            "original": "드라이브를 하며 이국적인 풍력 발전단지를 즐기거나 잠시 들러 풍력발전기 주변을 가볍게 산책하며 압도적인 분위기를 느낄 수 있다.",
+            "start": 123,
+            "submitted": "드라이브를 하며 이국적인 풍력 발전단지를 즐기거나 잠시 들러 풍력발전기 주변을 가볍게 산책하며 압도적인 분위기를 느낄 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "92b63aab8908d966ad082872828e7eee23ba472c513e21693a037682428463af"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "'이국적', '압도적 분위기' 등 장소에 부여된 이미지·의미가 공식 개요에서 확인된다. 다만 여러 표현에서의 일관성까지는 확인이 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5",
+          "quote": {
+            "end": 210,
+            "method": "EXACT",
+            "original": "영화 의 촬영지이기도 하다.",
+            "start": 195,
+            "submitted": "영화 의 촬영지이기도 하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "92b63aab8908d966ad082872828e7eee23ba472c513e21693a037682428463af"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "영화 촬영지라는 매체 표현의 연결이 확인되나, 영화 제목이 누락되어 구체성이 제한적이고 반복적 유통 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5",
+          "quote": {
+            "end": 491,
+            "method": "EXACT",
+            "original": "봄이면 도로 중간중간에 펼쳐진 노란 유채꽃 배경과 여름이 되면 초록의 논 배경과 해안가의 칠면초가 만들어내는 붉은 배경, 가을이면 황금빛 들녘과 어우러지는 하얀 풍력발전기는 그 색 대비만으로도 사진 찍기 좋은 포토존이 된다.",
+            "start": 366,
+            "submitted": "봄이면 도로 중간중간에 펼쳐진 노란 유채꽃 배경과 여름이 되면 초록의 논 배경과 해안가의 칠면초가 만들어내는 붉은 배경, 가을이면 황금빛 들녘과 어우러지는 하얀 풍력발전기는 그 색 대비만으로도 사진 찍기 좋은 포토존이 된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "92b63aab8908d966ad082872828e7eee23ba472c513e21693a037682428463af"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "계절별 색 대비와 풍광의 시각적 성격이 구체적으로 제시되어 시각적 표현의 근거가 뚜렷하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5",
+          "quote": {
+            "end": 491,
+            "method": "EXACT",
+            "original": "그 색 대비만으로도 사진 찍기 좋은 포토존이 된다.",
+            "start": 463,
+            "submitted": "그 색 대비만으로도 사진 찍기 좋은 포토존이 된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "92b63aab8908d966ad082872828e7eee23ba472c513e21693a037682428463af"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 2,
+      "reason": "포토존, 일몰 풍경 등 대표 장면을 현장에서 관람·촬영할 수 있으나 참여형 재현 프로그램까지는 확인되지 않아 제한적 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5",
+          "quote": {
+            "end": 630,
+            "method": "EXACT",
+            "original": "차량을 이용하여 내가 원하는 구간에 멈춰 구경할 수 있으나 사진촬영을 하기 위해 논, 밭에 무단으로 들어가는 행동은 삼가야 한다.",
+            "start": 558,
+            "submitted": "차량을 이용하여 내가 원하는 구간에 멈춰 구경할 수 있으나 사진촬영을 하기 위해 논, 밭에 무단으로 들어가는 행동은 삼가야 한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "92b63aab8908d966ad082872828e7eee23ba472c513e21693a037682428463af"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "자차로 원하는 구간에 멈춰 구경하는 자율적 탐색 기회가 확인된다. 논밭 출입 제한으로 완전한 자유 탐색은 아니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5",
+          "quote": {
+            "end": 302,
+            "method": "EXACT",
+            "original": "들판을 지나 끝자락에 위치한 백수분등소공원에서 즐기는 풍력단지의 풍광 또한 색다르다.",
+            "start": 255,
+            "submitted": "들판을 지나 끝자락에 위치한 백수분등소공원에서 즐기는 풍력단지의 풍광 또한 색다르다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "92b63aab8908d966ad082872828e7eee23ba472c513e21693a037682428463af"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "논밭, 해안, 유채꽃, 칠면초, 공원 등 자연 환경 단서와 산책·머무를 장면이 확인된다. 다만 실제 고요함·혼잡 수준은 확인 불가하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5",
+          "quote": {
+            "end": 175,
+            "method": "EXACT",
+            "original": "드라이브를 하며 이국적인 풍력 발전단지를 즐기거나 잠시 들러 풍력발전기 주변을 가볍게 산책하며",
+            "start": 123,
+            "submitted": "드라이브를 하며 이국적인 풍력 발전단지를 즐기거나 잠시 들러 풍력발전기 주변을 가볍게 산책하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "92b63aab8908d966ad082872828e7eee23ba472c513e21693a037682428463af"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "드라이브와 가벼운 산책이라는 참여 활동이 확인되나, 지속적 참여·도전형 프로그램은 확인되지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "7e9e562faed1a362a8f58626c0337f117ce7134982d3f1ba899e5cd5e4d95089",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "a4f1277ec57a89d1ce33e887737221ce112e9f7036181cb2157dea9b02de9bb6",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 외관 요소는 거의 없으며, 풍력발전기와 전봇대 등 현대적 시설 위주로 보이나 저지대의 농경지 모습이 일부 자연스러운 농촌 외관을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0e605552a31188dd6f7607f5840765f8ccd9ebc09891408759381620ac10ad47",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5279e9cb7d5747980b49ad1bec9d453d6c137583f175399d88db7d87ba31ce63",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3535083_6",
+          "request_sha256": "0b09802d7205caec8f1d91cf5f198138d73725457da95f115037ef774004632d",
+          "response_sha256": "eafbe3bc348d3541faa97b6d70855b5c3000ca8ffdfa17f17763f4965b2d4068",
+          "retrieved_at": "2026-09-11T02:05:55.677918Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "943d3ccc0e12e58620e314bbe3b99784249c4da67830c1c614f4fae6f9b1e012",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/3535083_image2_1.jpg"
+        },
+        "record_sha256": "cc16e451514d76279748f174c7d408d815c25bb5e6a65ebe38e096348f14f572",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "푸른 하늘과 넓은 들판, 좌우에 배치된 흰 풍력발전기의 대칭적 구도가 안정적이고 개방적인 시각적 성격을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:40d40e6671298dc2d91b7ebf6dad3adf84462c71bf1eb5e23b65192343fd19c6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5279e9cb7d5747980b49ad1bec9d453d6c137583f175399d88db7d87ba31ce63",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3535083_6",
+          "request_sha256": "0b09802d7205caec8f1d91cf5f198138d73725457da95f115037ef774004632d",
+          "response_sha256": "eafbe3bc348d3541faa97b6d70855b5c3000ca8ffdfa17f17763f4965b2d4068",
+          "retrieved_at": "2026-09-11T02:05:55.677918Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "943d3ccc0e12e58620e314bbe3b99784249c4da67830c1c614f4fae6f9b1e012",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/3535083_image2_1.jpg"
+        },
+        "record_sha256": "a66635aaae8e621ca97f1dbbfaf7181f465137ab5cf4e1f30e8614722d6b8525",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "물이 고인 논, 트인 하늘, 넓은 습지-like 평야가 화면 대부분을 차지하며 자연 환경 단서가 뚜렷하다. 다만 인공 풍력·태양광 시설이 함께 눈에 띈다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:73333066e84140d2576c5e3c67b317e24d33bdf2a706964500584ca96f22951a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2f2a359d58df9186a15607d3a74102569001c7fbd733c13df5abaaba86584fdb",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영광군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3343959",
+          "request_sha256": "e8f6f4cd7efdf14753a2ade6bf7df59f206bc0a7e9b7d24cf9e3de17b5a9ee71",
+          "response_sha256": "5de2a2591e9c7649b7c15a349042c95a2591b012430d21de4d947bbad8fca295",
+          "retrieved_at": "2026-09-11T02:05:56.545865Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "834d4a25ac48d3c52d982357cecb83f5fb0d5c5c5a21dac8ca1c896e457f9daa",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/59/3343959.jpg"
+        },
+        "record_sha256": "fd421423e47552099e1485dbdc7f5bb2393fb14cdba99afcbcbd58d48bf006cb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘과 초록 논, 흰 풍력 터빈의 대비가 뚜렷하고 터빈들이 화면을 지배하는 구도로 시각적 인상이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:74ec26a70732e804bae56649f048a79c8d1128361b1219efa19397dd651c9014",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "80579b455e8d3f2e3695ac6dafaffe92dc5e18ae8cf98fcdf6d8a1ebaf01f206",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영광군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3401881",
+          "request_sha256": "e8f6f4cd7efdf14753a2ade6bf7df59f206bc0a7e9b7d24cf9e3de17b5a9ee71",
+          "response_sha256": "5de2a2591e9c7649b7c15a349042c95a2591b012430d21de4d947bbad8fca295",
+          "retrieved_at": "2026-09-11T02:05:56.545865Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "85db491b63e8e915a0088d0dc2f9a2f391df27338f6bbade1ccf08eb3c21f69a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/81/3401881.jpg"
+        },
+        "record_sha256": "b73fa6e12f00f0bf1ac9a4b275fa3cca3396cd114c3cd8bfcb6bf057b16e9281",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "트인 논, 먼 산 능선, 넓은 하늘 등 자연 경관 단서가 화면 대부분을 차지하며 매우 잘 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9d131bb9491e4dab5466172552d4b64d6fc612d295006884863fc767b34a89cb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "80579b455e8d3f2e3695ac6dafaffe92dc5e18ae8cf98fcdf6d8a1ebaf01f206",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영광군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3401881",
+          "request_sha256": "e8f6f4cd7efdf14753a2ade6bf7df59f206bc0a7e9b7d24cf9e3de17b5a9ee71",
+          "response_sha256": "5de2a2591e9c7649b7c15a349042c95a2591b012430d21de4d947bbad8fca295",
+          "retrieved_at": "2026-09-11T02:05:56.545865Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "85db491b63e8e915a0088d0dc2f9a2f391df27338f6bbade1ccf08eb3c21f69a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/81/3401881.jpg"
+        },
+        "record_sha256": "d590c9f59dcdb9013bb00a7fd8dc56a267b129ab48a7d31b1b4fed96256f610e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 요소는 거의 없으며 현대적 풍력 발전 시설과 논 위주이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b11ad933a0d27c0aef902f7c2c4dd5d8a680a8745fb71ab4d51149d5b35f10d7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "80579b455e8d3f2e3695ac6dafaffe92dc5e18ae8cf98fcdf6d8a1ebaf01f206",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영광군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3401881",
+          "request_sha256": "e8f6f4cd7efdf14753a2ade6bf7df59f206bc0a7e9b7d24cf9e3de17b5a9ee71",
+          "response_sha256": "5de2a2591e9c7649b7c15a349042c95a2591b012430d21de4d947bbad8fca295",
+          "retrieved_at": "2026-09-11T02:05:56.545865Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "85db491b63e8e915a0088d0dc2f9a2f391df27338f6bbade1ccf08eb3c21f69a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/81/3401881.jpg"
+        },
+        "record_sha256": "1a324ecbcf2d83e69cb8ed660503bd1c00fba7b9e8b80002ddc8ded7d363f955",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "무거운 먹구름이 장면을 지배하고, 수평선을 따라 늘어선 풍차 실루엣과 물에 반사된 논이 대비되어 절제된 색 속에 강한 구도적 인상을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b1defcdbdbc844cf925c303ad9a38427d311d8d0458c08b86fc8f1f45b383b16",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2f2a359d58df9186a15607d3a74102569001c7fbd733c13df5abaaba86584fdb",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영광군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3343959",
+          "request_sha256": "e8f6f4cd7efdf14753a2ade6bf7df59f206bc0a7e9b7d24cf9e3de17b5a9ee71",
+          "response_sha256": "5de2a2591e9c7649b7c15a349042c95a2591b012430d21de4d947bbad8fca295",
+          "retrieved_at": "2026-09-11T02:05:56.545865Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "834d4a25ac48d3c52d982357cecb83f5fb0d5c5c5a21dac8ca1c896e457f9daa",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/59/3343959.jpg"
+        },
+        "record_sha256": "cb386b66cb0d389af4e51e85707b406b0363878d8f01d5866795c19c5278ed6b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 재료나 옛 건축 외관은 뚜렷하지 않고, 논과 전봇대 정도만 반쯤 농경적 외관을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bed0c89b4b26d5047e182ddc1430196ff94823e615fdb4a5eef92a173e256f9b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2f2a359d58df9186a15607d3a74102569001c7fbd733c13df5abaaba86584fdb",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영광군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3343959",
+          "request_sha256": "e8f6f4cd7efdf14753a2ade6bf7df59f206bc0a7e9b7d24cf9e3de17b5a9ee71",
+          "response_sha256": "5de2a2591e9c7649b7c15a349042c95a2591b012430d21de4d947bbad8fca295",
+          "retrieved_at": "2026-09-11T02:05:56.545865Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "834d4a25ac48d3c52d982357cecb83f5fb0d5c5c5a21dac8ca1c896e457f9daa",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/59/3343959.jpg"
+        },
+        "record_sha256": "eda5d425ebcf4d6a38b034aef1fe88478219179c309deef891a1b2329e8edb62",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "논으로 보이는 넓은 녹색 들판, 먼 산맥, 트인 하늘 등 자연 경관이 화면 대부분을 차지하며 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c97bab9c947439072a8f698f314e01e1b5ad0052e461f4a8fe002685b9d805dd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5279e9cb7d5747980b49ad1bec9d453d6c137583f175399d88db7d87ba31ce63",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3535083_6",
+          "request_sha256": "0b09802d7205caec8f1d91cf5f198138d73725457da95f115037ef774004632d",
+          "response_sha256": "eafbe3bc348d3541faa97b6d70855b5c3000ca8ffdfa17f17763f4965b2d4068",
+          "retrieved_at": "2026-09-11T02:05:55.677918Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "943d3ccc0e12e58620e314bbe3b99784249c4da67830c1c614f4fae6f9b1e012",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/3535083_image2_1.jpg"
+        },
+        "record_sha256": "13aa335004155c532902094564951139f50db1427430f513eb2afd75d8cf0082",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2d8dd42f5363d1401e12d9f393fb0265e1e37274d1b3dec04e506808a06a55a3",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3019001",
+          "request_sha256": "2fe1cd9e62b115a0ffae3ab71e62875da8e9f35447b7ad15b61069429858aa06",
+          "response_sha256": "1ef674c197804e33c698f535aa3aaeb6cbf72f01b113201b2ce8d37369b7aa2f",
+          "retrieved_at": "2026-09-11T02:05:55.342658Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e696676990ddfc3273ba0d9a3e364f86a59e6f9342aeee9b5ec0e5854a49b9f2",
+          "source_uri": null
+        },
+        "record_sha256": "7ec5223098c0be23887abc5655a4546e14acbcf08218e3232cd5f7f3eb7425a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:96f7b333d0e2303a95eced83c2101de701b59e268d59eec91c8b6706a12107e5",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3019001",
+          "request_sha256": "3caa3f705974374cbf6596e58802e51dab09e09a676f84c45d21e79e71cfa346",
+          "response_sha256": "299f2f8d15da3e0e2e95d72eecc55fac7ff799656af9b2a3a31957adeb636b47",
+          "retrieved_at": "2026-09-10T17:15:43.374160Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "db5b5d488dcd84333bbf9929c460317b9707e1cdf2b72ee492b5c9e22442fc5f",
+          "source_uri": null
+        },
+        "record_sha256": "92b63aab8908d966ad082872828e7eee23ba472c513e21693a037682428463af",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "전국에서 손꼽히는 드라이브 코스인 백수해안도로를 달리다 보면 풍력발전단지를 만나게 된다. 논밭 사이로 하얀 풍력발전기 총 78기가 설치되어 있으며 이 중 우리나라 최대 크기의 풍력발전기가 연구 및 테스트 중이라고 한다. 드라이브를 하며 이국적인 풍력 발전단지를 즐기거나 잠시 들러 풍력발전기 주변을 가볍게 산책하며 압도적인 분위기를 느낄 수 있다. 영화 의 촬영지이기도 하다. 광활한 논 사이에 설치된 풍력 발전기의 풍경은 환한 대낮에도 멋진 풍광이지만, 들판을 지나 끝자락에 위치한 백수분등소공원에서 즐기는 풍력단지의 풍광 또한 색다르다. 해 질 녘 노을 진 바닷가를 배경으로 풍력발전기가 서있는 아름다운 풍경은 우리나라에서 보기 드문 일몰 풍경이다. 봄이면 도로 중간중간에 펼쳐진 노란 유채꽃 배경과 여름이 되면 초록의 논 배경과 해안가의 칠면초가 만들어내는 붉은 배경, 가을이면 황금빛 들녘과 어우러지는 하얀 풍력발전기는 그 색 대비만으로도 사진 찍기 좋은 포토존이 된다. 가까이에서 바라보면 풍력발전기의 프로펠러가 회전하는 소리가 비현실적으로 느껴지고 풍력발전기의 엄청난 크기에 압도된다. 차량을 이용하여 내가 원하는 구간에 멈춰 구경할 수 있으나 사진촬영을 하기 위해 논, 밭에 무단으로 들어가는 행동은 삼가야 한다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e835212f469b257e7be86b780babbefebeaf790fb4ed74bacf51e7dfc1c27e5a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3019001",
+          "request_sha256": "2fe1cd9e62b115a0ffae3ab71e62875da8e9f35447b7ad15b61069429858aa06",
+          "response_sha256": "1ef674c197804e33c698f535aa3aaeb6cbf72f01b113201b2ce8d37369b7aa2f",
+          "retrieved_at": "2026-09-11T02:05:55.342658Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3f2308e2f1f21bbed6ff4caf29083340150002778e919fbf9af4df8bdf513307",
+          "source_uri": null
+        },
+        "record_sha256": "8ae8263c41d0fcd3b886286d6a487ed8a5ff0fb45929be70a294a78ebe18acf4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "1ed20dd87cedf7c5fc74e8177e47794f1d60caf03a0f1a0f2211a07ccdaff970",
+    "place": {
+      "address": "전남광주통합특별시 영광군 염산면 송암리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+      "name_ko": "영광풍력발전단지",
+      "place_id": "public:korea:758bba2fa322f1f7ef13ca2c175e46c89a1b2b5d3f81c20331e6fcf937b06c38",
+      "provider_content_id": "3019001",
+      "region_code": "12830",
+      "region_name": "전남광주통합특별시 영광군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

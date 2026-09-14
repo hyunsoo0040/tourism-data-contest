@@ -1,0 +1,869 @@
+{
+  "assessed_at": "2026-09-11T19:50:40.048879Z",
+  "assessment_sha256": "eddab427cd44de63b0ad54941caf627b7eaaaf74f6a07ebf375a6fa67a0699e9",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b"
+      ],
+      "value": 88
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 66
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "국보 철조비로사나불좌상과 보물 삼층석탑이 절 내에 보존되어 있어 방문자가 확인된 원형·유산 실물과 직접 접촉할 수 있으며, 불상 봉안이 사찰 존재 이유의 중심이다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "창건 연도, 도선국사와 불상 이설 전설, 비보국찰 배경 등 이 장소 고유의 사건·인물 맥락이 구체적으로 제시된다. 다만 자료 자체는 해설 프로그램의 존재를 보장하지 않아 탐구 중심성까지는 근거가 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'피안에 이르렀다'는 불상 전설과 절 이름의 유래, 도선의 비보사찰 상징론 등 구체적 이야기가 장소에 연결되어 공유되는 상징적 의미를 확인할 수 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1d935d8484cb79fb17ce817ced7ff53ea074dc12db681fed59a654c48b9ea076",
+            "appearance:62d8df2da35bfb462232b2ebcfe83dbb8650561c141a6db3b2573c3b7ccaf55c",
+            "appearance:9ac67617e968a07fc5a40deef989161d8d2da3f386669d374c2a5240294b3391"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "repair 항목(E.c)을 제출 형식에 맞게 수정한다. 제안된 VISUAL_APPEARANCE는 해당 출처의 allowed_claims에 없어 허용된 VISUAL_EXPRESSION으로 대체하고, 문양·연꽃 봉오리 장식 등 구별되는 시각적 성격의 언급을 근거로 제한적 수준인 수준 2로 판단한다. 일관된 경관 연출이 장면을 지배하는 근거는 없다.",
+      "value": 56
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "과거 출입 통제구역이 해제되어 누구나 자유로이 출입할 수 있어 자율적 방문·탐색의 기회가 확인된다. 자유 탐색이 경험의 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:09fa344ca09dfccf582dfa36132c8fdc44a249c612a6bf2083ba6caf91d83771",
+            "appearance:3107f3de59003cf9755d417de9e7519f85a564cc3e1050af093c776a1185dfb0",
+            "appearance:d61aad2704750a6dc5788768745aaa5962d88c0e96a07aaf6919568fa4075df3"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "산중 사찰이라는 위치는 있으나 실제 자연 환경·고요함·머무를 환경의 근거가 직접 제공되지 않아 추정할 수 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a",
+          "quote": {
+            "end": 142,
+            "method": "EXACT",
+            "original": "국내에서 가장 오래된 도선국사가 제조한 국보인 철조비로사나불좌상과 보물로 지정된 높이 4.1m의 화강암 재료로 된 삼 층 석탑이 보존되어 있다",
+            "start": 63,
+            "submitted": "국내에서 가장 오래된 도선국사가 제조한 국보인 철조비로사나불좌상과 보물로 지정된 높이 4.1m의 화강암 재료로 된 삼 층 석탑이 보존되어 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a979e8e445ad2144a4b0b7bd1154a0d23d600a1228ecc015b96c860e5eb407c7"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 4,
+      "reason": "국보 철조비로사나불좌상과 보물 삼층석탑이 절 내에 보존되어 있어 방문자가 확인된 원형·유산 실물과 직접 접촉할 수 있으며, 불상 봉안이 사찰 존재 이유의 중심이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a",
+          "quote": {
+            "end": 55,
+            "method": "EXACT",
+            "original": "통일신라 경문왕 5년(865년)에 창건되었다",
+            "start": 31,
+            "submitted": "통일신라 경문왕 5년(865년)에 창건되었다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a979e8e445ad2144a4b0b7bd1154a0d23d600a1228ecc015b96c860e5eb407c7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 3,
+      "reason": "창건 연도, 도선국사와 불상 이설 전설, 비보국찰 배경 등 이 장소 고유의 사건·인물 맥락이 구체적으로 제시된다. 다만 자료 자체는 해설 프로그램의 존재를 보장하지 않아 탐구 중심성까지는 근거가 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "역사적 연혁은 있으나 현재 지역 주체의 전승 활동이나 생활문화와의 실제 지속적 연결에 대한 근거는 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "개요 텍스트 자체가 석탑 양식·창건 전설 등 유산 연결 설명을 담고 있으나, 이것이 관광 정보 서술이지 현장에서 해설·전시·탐구 수단이 실제 제공된다는 직접 근거는 없다. 현재 수준 2의 현장 제공 여부를 확인할 자료가 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a",
+          "quote": {
+            "end": 360,
+            "method": "EXACT",
+            "original": "당시 철조불상이 영원한 안식처인 피안에 이르렀다 하여 절 이름을 도피안사로 하였다",
+            "start": 315,
+            "submitted": "당시 철조불상이 영원한 안식처인 피안에 이르렀다 하여 절 이름을 도피안사로 하였다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a979e8e445ad2144a4b0b7bd1154a0d23d600a1228ecc015b96c860e5eb407c7"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "'피안에 이르렀다'는 불상 전설과 절 이름의 유래, 도선의 비보사찰 상징론 등 구체적 이야기가 장소에 연결되어 공유되는 상징적 의미를 확인할 수 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 작품·홍보·SNS 등 매체를 통해 재현·확산된다는 근거는 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a",
+          "quote": {
+            "end": 570,
+            "method": "EXACT",
+            "original": "탑신부는 각 면에 문양을 새겨 놓았으며, 탑의 꼭대기에는 연꽃 봉오리 모양의 장식이 있다.",
+            "start": 520,
+            "submitted": "탑신부는 각 면에 문양을 새겨 놓았으며, 탑의 꼭대기에는 연꽃 봉오리 모양의 장식이 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a979e8e445ad2144a4b0b7bd1154a0d23d600a1228ecc015b96c860e5eb407c7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "repair 항목(E.c)을 제출 형식에 맞게 수정한다. 제안된 VISUAL_APPEARANCE는 해당 출처의 allowed_claims에 없어 허용된 VISUAL_EXPRESSION으로 대체하고, 문양·연꽃 봉오리 장식 등 구별되는 시각적 성격의 언급을 근거로 제한적 수준인 수준 2로 판단한다. 일관된 경관 연출이 장면을 지배하는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험하거나 재현할 수 있는 활동에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a",
+          "quote": {
+            "end": 748,
+            "method": "EXACT",
+            "original": "전에는 민간인 출입 통제구역으로 민간인 출입이 제한되었으나, 현재는 누구나 자유로이 출입할 수 있다",
+            "start": 693,
+            "submitted": "전에는 민간인 출입 통제구역으로 민간인 출입이 제한되었으나, 현재는 누구나 자유로이 출입할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a979e8e445ad2144a4b0b7bd1154a0d23d600a1228ecc015b96c860e5eb407c7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "과거 출입 통제구역이 해제되어 누구나 자유로이 출입할 수 있어 자율적 방문·탐색의 기회가 확인된다. 자유 탐색이 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "산중 사찰이라는 위치는 있으나 실제 자연 환경·고요함·머무를 환경의 근거가 직접 제공되지 않아 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "참여·도전·몰입할 구체적 활동(템플스테이, 체험 등)에 대한 근거가 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a",
+              "quote": {
+                "end": 569,
+                "method": "EXACT",
+                "original": "탑신부는 각 면에 문양을 새겨 놓았으며, 탑의 꼭대기에는 연꽃 봉오리 모양의 장식이 있다",
+                "start": 520,
+                "submitted": "탑신부는 각 면에 문양을 새겨 놓았으며, 탑의 꼭대기에는 연꽃 봉오리 모양의 장식이 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a979e8e445ad2144a4b0b7bd1154a0d23d600a1228ecc015b96c860e5eb407c7"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.d",
+          "level": 2,
+          "reason": "석탑의 양식적 특징과 창건 전설, 비보국찰 의미 등 유산에 연결된 설명이 제공되나, 여러 자료·해설을 통한 심층 탐구 체계의 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.d",
+          "reason": "개요 텍스트 자체가 석탑 양식·창건 전설 등 유산 연결 설명을 담고 있으나, 이것이 관광 정보 서술이지 현장에서 해설·전시·탐구 수단이 실제 제공된다는 직접 근거는 없다. 현재 수준 2의 현장 제공 여부를 확인할 자료가 부족하다."
+        }
+      },
+      "reason": "개요 텍스트 자체가 석탑 양식·창건 전설 등 유산 연결 설명을 담고 있으나, 이것이 관광 정보 서술이지 현장에서 해설·전시·탐구 수단이 실제 제공된다는 직접 근거는 없다. 현재 수준 2의 현장 제공 여부를 확인할 자료가 부족하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "39eeaa73513d8072db990963470cdae121441ff3f4be35c8f427c068185d7c4a",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "겹겹의 산, 소나무와 활엽수림, 트인 하늘이 장면 대부분을 채워 자연 경관이 화면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:09fa344ca09dfccf582dfa36132c8fdc44a249c612a6bf2083ba6caf91d83771",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ccbbdd4ed99b1c84e8bc6220a440cc63900a5a728a3547d7e08b5b6e4a9f7349",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3493994_2",
+          "request_sha256": "d5e6a248f076bf4359604d232e8f8b68b8a5715ac2c18a63616bd7616547e391",
+          "response_sha256": "4bb336e561c309b1b4256d30c772e13f6521bbcae7a175dea42a72256ff556c7",
+          "retrieved_at": "2026-09-10T08:30:36.587340Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5507cb1e9175e4f04726fdf6c89ad2e9e5bd303a3d51bd513260671d766ea9e2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/94/3493994_image2_1.jpg"
+        },
+        "record_sha256": "4b7234510a09d4b07b3e99768edc4ea1dce10c2155c17b8320ecfe53b50f473d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "기와지붕과 단청 목조 건물이 화면 중심을 차지하고, 소박한 색채와 안정된 구도가 절 경관의 고요한 시각적 성격을 두드러지게 보여준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1d935d8484cb79fb17ce817ced7ff53ea074dc12db681fed59a654c48b9ea076",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ccbbdd4ed99b1c84e8bc6220a440cc63900a5a728a3547d7e08b5b6e4a9f7349",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3493994_2",
+          "request_sha256": "d5e6a248f076bf4359604d232e8f8b68b8a5715ac2c18a63616bd7616547e391",
+          "response_sha256": "4bb336e561c309b1b4256d30c772e13f6521bbcae7a175dea42a72256ff556c7",
+          "retrieved_at": "2026-09-10T08:30:36.587340Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5507cb1e9175e4f04726fdf6c89ad2e9e5bd303a3d51bd513260671d766ea9e2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/94/3493994_image2_1.jpg"
+        },
+        "record_sha256": "bcdbf24ba019444aa339ae14cb681930f1d41896bd2ab7bc66ede2af1639f6a3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "한옥 기와지붕, 단청과 붉은 문, 돌기단 등 전통적 재료와 구성이 장면의 중심 요소로 매우 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:21a8e06a446b620efea9bc1810f4d83ca6318744609fdf581d2ff03e4a087728",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ccbbdd4ed99b1c84e8bc6220a440cc63900a5a728a3547d7e08b5b6e4a9f7349",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3493994_2",
+          "request_sha256": "d5e6a248f076bf4359604d232e8f8b68b8a5715ac2c18a63616bd7616547e391",
+          "response_sha256": "4bb336e561c309b1b4256d30c772e13f6521bbcae7a175dea42a72256ff556c7",
+          "retrieved_at": "2026-09-10T08:30:36.587340Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5507cb1e9175e4f04726fdf6c89ad2e9e5bd303a3d51bd513260671d766ea9e2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/94/3493994_image2_1.jpg"
+        },
+        "record_sha256": "c9204a6ba43b6737462e23a325b66fb1991bf922c7d81c16196b3424832f098b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "뒤로 활엽수 숲과 나뭇가지, 흐린 하늘이 보이지만 계절상 잎이 없어 자연 단서는 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3107f3de59003cf9755d417de9e7519f85a564cc3e1050af093c776a1185dfb0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f6b99f167787e535214b00782f4c1927f4ba7e97afd5703177a0bfeb53582618",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3493990_6",
+          "request_sha256": "d5e6a248f076bf4359604d232e8f8b68b8a5715ac2c18a63616bd7616547e391",
+          "response_sha256": "4bb336e561c309b1b4256d30c772e13f6521bbcae7a175dea42a72256ff556c7",
+          "retrieved_at": "2026-09-10T08:30:36.587340Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0fadd74e93af35e4c2d7ff98abd6896f4c360f8ce742e5c38141182bb6b47c02",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/90/3493990_image2_1.jpg"
+        },
+        "record_sha256": "d511b328fe2e8f3a38603c9ba8c09bd6b9cdc480aa10679c52643154639f0882",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "전경의 노란 꽃 가지와 얕은 심도로 흐려진 한옥 구도가 뚜렷한 계절적 연출을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:62d8df2da35bfb462232b2ebcfe83dbb8650561c141a6db3b2573c3b7ccaf55c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "617886d4add779f4461ef4080634823d20a8d922ede679675a6e548b49283118",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3493991_5",
+          "request_sha256": "d5e6a248f076bf4359604d232e8f8b68b8a5715ac2c18a63616bd7616547e391",
+          "response_sha256": "4bb336e561c309b1b4256d30c772e13f6521bbcae7a175dea42a72256ff556c7",
+          "retrieved_at": "2026-09-10T08:30:36.587340Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "900b0f0ed4b15cf8a0ecca6a080318833a1d104a891c01365e6c414557d70765",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/91/3493991_image2_1.jpg"
+        },
+        "record_sha256": "e799594b4d1a76b1ff8ca5fa8b5b23619b5526afd6f583836862aacaff7b4207",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와지붕, 단청, 목조 판문 등 전통 한옥 건축 외관이 장면의 중심을 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:84e20ad4d60401a674c4372ff6d1dbeb22497692126995a977190af68a462987",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "617886d4add779f4461ef4080634823d20a8d922ede679675a6e548b49283118",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3493991_5",
+          "request_sha256": "d5e6a248f076bf4359604d232e8f8b68b8a5715ac2c18a63616bd7616547e391",
+          "response_sha256": "4bb336e561c309b1b4256d30c772e13f6521bbcae7a175dea42a72256ff556c7",
+          "retrieved_at": "2026-09-10T08:30:36.587340Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "900b0f0ed4b15cf8a0ecca6a080318833a1d104a891c01365e6c414557d70765",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/91/3493991_image2_1.jpg"
+        },
+        "record_sha256": "843e54ede5f564cb2434e48de08ec2072a88cb57e4ffab90a8e24135b52646b7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "풍경과 물고기 장식이 달린 청동 풍경이 전경을 지배하며, 얕은 심도로 배경을 흐릿하게 처리한 의도적 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9ac67617e968a07fc5a40deef989161d8d2da3f386669d374c2a5240294b3391",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f6b99f167787e535214b00782f4c1927f4ba7e97afd5703177a0bfeb53582618",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3493990_6",
+          "request_sha256": "d5e6a248f076bf4359604d232e8f8b68b8a5715ac2c18a63616bd7616547e391",
+          "response_sha256": "4bb336e561c309b1b4256d30c772e13f6521bbcae7a175dea42a72256ff556c7",
+          "retrieved_at": "2026-09-10T08:30:36.587340Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0fadd74e93af35e4c2d7ff98abd6896f4c360f8ce742e5c38141182bb6b47c02",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/90/3493990_image2_1.jpg"
+        },
+        "record_sha256": "21e02d4683de8920d1aa97c2f4297cce9501d4ffe40fcc25991b1e9860207fb0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "개나리로 보이는 꽃, 잔디 언덕, 활엽수 수림과 트인 하늘이 환경에서 큰 비중을 차지한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d61aad2704750a6dc5788768745aaa5962d88c0e96a07aaf6919568fa4075df3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "617886d4add779f4461ef4080634823d20a8d922ede679675a6e548b49283118",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3493991_5",
+          "request_sha256": "d5e6a248f076bf4359604d232e8f8b68b8a5715ac2c18a63616bd7616547e391",
+          "response_sha256": "4bb336e561c309b1b4256d30c772e13f6521bbcae7a175dea42a72256ff556c7",
+          "retrieved_at": "2026-09-10T08:30:36.587340Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "900b0f0ed4b15cf8a0ecca6a080318833a1d104a891c01365e6c414557d70765",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/91/3493991_image2_1.jpg"
+        },
+        "record_sha256": "960faa847dd0a290f6baf1f33f420e8512bb6efd728404a7286fb26c31055f0f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:547531f7337b14e80ce42b7381280bebb60c6edce4982ce8a135a3ef7df1a05a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "125759",
+          "request_sha256": "dbc49b9decec77b3473f9b665380d99f1a8ae2806716f17f7607fa21456fe248",
+          "response_sha256": "34a7e418708f6eb7007e33b7a4c090c94a65ac1bb6519a62349ee5ac35628758",
+          "retrieved_at": "2026-09-10T08:12:09.668011Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-09T00:36:31Z",
+          "source_record_sha256": "d3ba58980977f4f61f99131bd87a8d1c3734b1a428aa8a98dba691e95fd4b988",
+          "source_uri": null
+        },
+        "record_sha256": "a979e8e445ad2144a4b0b7bd1154a0d23d600a1228ecc015b96c860e5eb407c7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "철원의 도피안사는 강원도 철원군 동송읍에 위치한 사찰로 통일신라 경문왕 5년(865년)에 창건되었다. 절 내에는 국내에서 가장 오래된 도선국사가 제조한 국보인 철조비로사나불좌상과 보물로 지정된 높이 4.1m의 화강암 재료로 된 삼 층 석탑이 보존되어 있다. 도선국사가 높이 91cm의 철조비로사나불좌상을 제조하여 철원읍에 소재한 안양사에 봉안하기 위하여 여러 승려와 같이 가다가 잠시 쉬고 있을 때 이 불상이 갑자기 없어진 사건이 발생하였다. 그 부근 일대를 찾다가 현 위치에 그 불상이 있는 것을 발견하였다. 그 자리에 조그마한 암자를 짓고 이 불상을 모시고, 당시 철조불상이 영원한 안식처인 피안에 이르렀다 하여 절 이름을 도피안사로 하였다 한다. 도선은 이 절을 비보국찰[裨補國刹] 중의 하나로 삼았으며, 화개산이 마치 연꽃이 물에 떠 있는 연약한 모습을 나타내고 있기 때문에 석탑과 철불로 산세의 약점을 보완하여 국가의 내실을 굳게 다지고 외세의 침략에 대비하였다고 한다. 삼 층 석탑은 사찰 창건 당시에 세워진 것으로, 탑신부는 각 면에 문양을 새겨 놓았으며, 탑의 꼭대기에는 연꽃 봉오리 모양의 장식이 있다. 이 석탑은 1963년 보물 제112호로 지정되었다. 사찰에는 그 외에 철조비로사나불좌상이 모셔져 있는 대적광전, 사찰의 종을 매달아 두었던 종루각, 천 개의 작은 불상들을 모셔놓은 천불전 등 불교 관련 건물들이 있다. 전에는 민간인 출입 통제구역으로 민간인 출입이 제한되었으나, 현재는 누구나 자유로이 출입할 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5c75d5bf500bb04d9bbef10302b5d58b29517b9da932a2a7a0bd963b8fa2dcf9",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125759",
+          "request_sha256": "b91e92698c7007fecfc10c19fa6124f499ceca0be1daaad47bbddfbffcfa4cbe",
+          "response_sha256": "118fa2e7375eac11eb88715010fe882ce0c2d537135c06bb6a714c9317e1384b",
+          "retrieved_at": "2026-09-10T08:30:36.242130Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4172d26d9d9707aaf5820914670a827e981598a8ac4b0369413929020489758c",
+          "source_uri": null
+        },
+        "record_sha256": "659177084c9a212e9c943177ef9e8ea850ccc96baf7a17010edd1acdd53a9397",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "bd8818f5141a66239eb376640f7c439be808934cc99fdee7964cb0630b2daf5c",
+    "place": {
+      "address": "강원특별자치도 철원군 동송읍 도피동길 23",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+      "name_ko": "도피안사(철원)",
+      "place_id": "public:korea:fdf2e1af8588ef74af980b557be9d484d18f91434bebf9011603759dd2f3e309",
+      "provider_content_id": "125759",
+      "region_code": "51780",
+      "region_name": "강원특별자치도 철원군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

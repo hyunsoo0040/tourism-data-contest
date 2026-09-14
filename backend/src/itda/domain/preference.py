@@ -48,22 +48,21 @@ def score_axis(axis: ExperienceAxis, *answers: int) -> AxisScore:
 
 
 def score_axis_v2(axis: ExperienceAxis, accumulated: int) -> AxisScore:
-    """Map one axis's accumulated v2 matrix weights into integer basis points.
+    """Correct signed evidence for unequal positive-option frequencies.
 
-    Normalizes against the axis's attainable [min, max] accumulated weights
-    (AXIS_ATTAINABLE_BOUNDS) so 0 bp and 10_000 bp are attainable on every
-    axis; a fixed denominator would pin every never-chosen axis to a positive
-    floor and cap most axes below 100.
+    Keep independent 0..100 scores; do not renormalize by the observed winner
+    or by attainable maxima, which would undo inverse-frequency correction.
+    A negative net score is floored only after all answers have accumulated.
     """
 
     lower, upper = _attainable_bounds(axis)
     if type(accumulated) is not int or not lower <= accumulated <= upper:
         raise ValueError(
-            f"v2 accumulated weight for {axis.value} must be an integer "
-            f"from {lower} through {upper}"
+            f"accumulated weight for {axis.value} must be an integer from {lower} through {upper}"
         )
-    span = upper - lower
-    basis_points = ((accumulated - lower) * 10_000 + span // 2) // span
+    counts = cast(Mapping[str, int], SCORING_CONFIG_V2["positive_choice_counts"])
+    denominator = counts[axis.value]
+    basis_points = min(10_000, (max(0, accumulated) * 10_000 + denominator // 2) // denominator)
     return AxisScore(
         axis=axis,
         basis_points=basis_points,
@@ -93,7 +92,7 @@ def _content_addressed_profile_id(
     return f"profile:{hashlib.sha256(canonical).hexdigest()}"
 
 
-def _score_v2_answers(
+def score_choice_answers(
     answers: QuestionnaireAnswersV2,
 ) -> tuple[AxisScore, ...]:
     """Deterministically accumulate the reviewed matrix into three AxisScores."""
@@ -129,7 +128,7 @@ def calculate_preference(
 ) -> PreferenceProfile:
     """Calculate a byte-reproducible v2 profile from validated current-trip input."""
 
-    scores = _score_v2_answers(submission.answers)
+    scores = score_choice_answers(submission.answers)
     if len(scores) != 3:
         raise ValueError("scoring configuration must contain exactly three axes")
 

@@ -12,7 +12,9 @@ versions. The module fails only on the absent
 from __future__ import annotations
 
 import inspect
+from functools import partial
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -23,7 +25,22 @@ from itda.domain.canonical import canonical_json_bytes
 def _projection():
     import itda.domain.photo_projection as photo_projection
 
-    return photo_projection
+    # Immutable historical payloads explicitly replay v1. Active consumers
+    # use the v2 defaults exercised below; legacy replay confers no authority.
+    return SimpleNamespace(
+        PHOTO_PROJECTION_VERSION=photo_projection.LEGACY_PHOTO_PROJECTION_VERSION,
+        PhotoProjectionPolicy=partial(
+            photo_projection.PhotoProjectionPolicy, "photo-projection-v1"
+        ),
+        combine_confirmed_photo_traits=partial(
+            photo_projection.combine_confirmed_photo_traits,
+            projection_version="photo-projection-v1",
+        ),
+        project_photo_confirmed_profile=partial(
+            photo_projection.project_photo_confirmed_profile,
+            projection_version="photo-projection-v1",
+        ),
+    )
 
 
 def _mismatch_enum():
@@ -65,12 +82,10 @@ def test_projection_version_and_policy_are_frozen() -> None:
         if isinstance(value, (int, float)) and not isinstance(value, bool)
     }
     assert numeric_authority, "policy must expose integer weight authority"
-    assert all(
-        type(value) is int for value in numeric_authority.values()
-    ), "policy numeric authority must be integers only"
-    assert all(
-        "float" not in repr(value) for value in vars(policy).values()
+    assert all(type(value) is int for value in numeric_authority.values()), (
+        "policy numeric authority must be integers only"
     )
+    assert all("float" not in repr(value) for value in vars(policy).values())
 
 
 def test_policy_and_results_bind_canonical_digests() -> None:
@@ -147,9 +162,8 @@ def test_permutation_independence(images_count: int) -> None:
     reversed_input = projection.combine_confirmed_photo_traits(
         confirmed_traits=_traits(*reversed(values)), images_count=images_count
     )
-    assert (
-        canonical_json_bytes(forward.model_dump(mode="json"))
-        == canonical_json_bytes(reversed_input.model_dump(mode="json"))
+    assert canonical_json_bytes(forward.model_dump(mode="json")) == canonical_json_bytes(
+        reversed_input.model_dump(mode="json")
     ), "input order must not affect the projection result"
 
 
@@ -220,9 +234,7 @@ def test_travel_conditions_route_through_existing_projection_input() -> None:
         questionnaire_version="questionnaire-v1",
     )
     assert result.condition_targets is not None
-    assert tuple(row.condition_id for row in result.condition_targets) == tuple(
-        TravelConditionId
-    )
+    assert tuple(row.condition_id for row in result.condition_targets) == tuple(TravelConditionId)
     by_condition = {row.condition_id: row.value for row in result.condition_targets}
     assert by_condition[TravelConditionId.VISIT_DATE_TIME] == 100
     assert by_condition[TravelConditionId.COMPANIONS] == 75
@@ -299,7 +311,9 @@ class _RejectingTrait:
 
 
 def test_projection_module_never_imports_recommendation_authority() -> None:
-    source_path = inspect.getsourcefile(_projection())
+    import itda.domain.photo_projection as module
+
+    source_path = inspect.getsourcefile(module)
     assert source_path is not None
     source = Path(source_path).read_text(encoding="utf-8")
 
@@ -399,3 +413,68 @@ def test_v2_answers_validate_only_under_their_declared_version() -> None:
             answers=v2_answers,
             questionnaire_version="questionnaire-v9",
         )
+
+
+def test_v2_missing_dimensions_and_images_preserve_quiz_values() -> None:
+    from itda.db.photo_repositories import ProjectionTraitRow
+    from itda.domain.photo_projection import project_photo_confirmed_profile
+
+    original = {f"M{i}": i * 10 for i in range(1, 7)}
+    row = ProjectionTraitRow(
+        "M5",
+        "산책·장시간 체류",
+        100,
+        True,
+        observed=True,
+        semantic_version="photo-semantics-v2",
+        image_index=2,
+    )
+    result = project_photo_confirmed_profile(
+        confirmed_traits=(row,), images_count=3, no_photo_trait_values=original
+    )
+    assert result.projection_version == "photo-projection-v2"
+    assert result.photo_trait_values == ((MismatchTraitId.M5, 100),)
+    assert {target.trait_id.value: target.value for target in result.trait_targets} == original | {
+        "M5": 68
+    }
+
+
+def test_v2_untrusted_and_unsupported_rows_have_no_score_authority() -> None:
+    from itda.db.photo_repositories import ProjectionTraitRow
+    from itda.domain.photo_projection import project_photo_confirmed_profile
+
+    original = {f"M{i}": i * 10 for i in range(1, 7)}
+    rows = (
+        ProjectionTraitRow("M5", "legacy hash", 98, True),
+        ProjectionTraitRow("M3", "편집한 설명", None, True),
+    )
+    result = project_photo_confirmed_profile(
+        confirmed_traits=rows, images_count=1, no_photo_trait_values=original
+    )
+    assert result.photo_trait_values == ()
+    assert not result.blend_applied
+    assert {row.trait_id.value: row.value for row in result.trait_targets} == original
+
+
+def test_v2_retry_dedup_and_observed_image_averaging_are_order_independent() -> None:
+    from itda.db.photo_repositories import ProjectionTraitRow
+    from itda.domain.photo_projection import combine_confirmed_photo_traits
+
+    def row(value, index):
+        return ProjectionTraitRow(
+            "M5",
+            "관찰",
+            value,
+            True,
+            observed=True,
+            semantic_version="photo-semantics-v2",
+            image_index=index,
+        )
+
+    rows = (row(0, 1), row(100, 3))
+    original = combine_confirmed_photo_traits(confirmed_traits=rows, images_count=3)
+    replay = combine_confirmed_photo_traits(
+        confirmed_traits=(rows[1], rows[0], rows[1]), images_count=3
+    )
+    assert original.photo_trait_values == ((MismatchTraitId.M5, 50),)
+    assert replay.model_dump(mode="json") == original.model_dump(mode="json")

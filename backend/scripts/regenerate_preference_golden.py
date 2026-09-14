@@ -8,6 +8,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from itda.contracts.preference import QuestionnaireSubmission
+from itda.contracts.questionnaire_v2 import V2_SCORING_VERSION
 from itda.domain.preference import calculate_preference
 
 
@@ -20,12 +21,16 @@ def remap(likert: int) -> int:
 def main() -> None:
     fixture_path = Path(sys.argv[1])
     golden = json.loads(fixture_path.read_text(encoding="utf-8"))
+    is_v2 = golden["questionnaire_version"] == "questionnaire-v2"
     golden["questionnaire_version"] = "questionnaire-v2"
-    golden["scoring_version"] = "choice-bp-v2"
+    golden["scoring_version"] = V2_SCORING_VERSION
     created_at = datetime.fromisoformat(golden["created_at"]).astimezone(UTC)
     new_cases = []
     for case in golden["cases"]:
-        answers = {f"q{i}": remap(value) for i, value in enumerate(case["answers"], start=1)}
+        answers = {
+            f"q{i}": (value if is_v2 else remap(value))
+            for i, value in enumerate(case["answers"], start=1)
+        }
         answers.update({f"q{i}": 2 for i in range(len(case["answers"]) + 1, 13)})
         submission = QuestionnaireSubmission.model_validate(
             {

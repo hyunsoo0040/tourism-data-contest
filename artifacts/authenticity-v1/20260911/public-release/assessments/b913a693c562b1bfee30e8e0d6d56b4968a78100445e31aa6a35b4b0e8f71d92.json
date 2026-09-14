@@ -1,0 +1,919 @@
+{
+  "assessed_at": "2026-09-11T18:51:02.212692Z",
+  "assessment_sha256": "b913a693c562b1bfee30e8e0d6d56b4968a78100445e31aa6a35b4b0e8f71d92",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 61
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 76
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'옥천 제1경'이라는 지역에서 부여된 상징적 명소 이미지가 장소와 직접 연결되어 있으나, 그 의미가 여러 표현에서 반복 확인되지는 않아 제한적 수준으로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:058a9606617baf58f8cc7332f2d56f9af06879423c1bf29d4288ed8ac0bfe133",
+            "appearance:c655f9fcd04c18fefcf41601909a98183c9928d94ad76ac7be5570b02ab0225d",
+            "appearance:cbe8e785a0ccd0f14c5cff38b1224c0cba0813ac51ecb1eae6c37775461193cd"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 83
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "전망대에서 대표 장면(한반도 지형)을 관람하고 거울로 비춰보는 대표 체험이 확인되나, 촬영·참여형 재현이 중심이라는 근거는 없어 제한적 수준으로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "자율적으로 등산로·전망대·정상을 선택하며 걷는 자유 탐방 구조가 확인되지만, 자율 탐색이 방문 경험의 중심임을 보여주는 수준까진 근거가 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:8f8a6f59b60117bd57599a33ce4946a1acd4c4796ca1d3a0196299d67000577b",
+            "appearance:9edece998e9ccaca4da6e61fdd7f5970bcbdc7d3c4788497c93ab3ea2374f70c",
+            "appearance:db58ddcee7ad200d1e5bd15b59f96b2960f5d9fbf1899ab9f188306c18eb1542"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "무성한 숲, 소나무 숲, 평화로운 산골, 호젓한 산길 등 자연 환경 단서가 두드러지게 확인되나, 실제 고요함·혼잡도의 확정은 불가하여 수준 3으로 판단했다.",
+      "value": 79
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "1.4km 탐방로와 0.8km 등산로를 걷는 등산·탐방 활동의 구체적 기회가 확인되나, 지속적 참여·도전이 방문 경험의 중심임을 보여주는 근거는 제한적이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "둔주봉의 한반도 지형은 실제 한반도를 1/980로 축소한 지형 경관으로 확인된 문화유산 원형·실물이 아니며, 실제 유산과의 접촉을 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 지형·등산로 안내 중심이며 둔주봉 자체의 역사적 연혁·사건·인물 맥락에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 산골 정취 묘사만으로 실제 전승 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·전통에 연결된 해설·전시·탐구 프로그램에 대한 근거가 없다. 지형 설명은 역사 해설이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+          "quote": {
+            "end": 50,
+            "method": "EXACT",
+            "original": "둔주봉은 안남면 연주리 뒷산의 봉우리이자 옥천 제1경인 한반도 지형을 볼 수 있는 곳이다.",
+            "start": 0,
+            "submitted": "둔주봉은 안남면 연주리 뒷산의 봉우리이자 옥천 제1경인 한반도 지형을 볼 수 있는 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b50488a7597c09224247cc900d94be53abbb6afa9bef843b2288bdad759b61d7"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'옥천 제1경'이라는 지역에서 부여된 상징적 명소 이미지가 장소와 직접 연결되어 있으나, 그 의미가 여러 표현에서 반복 확인되지는 않아 제한적 수준으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·확산에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+          "quote": {
+            "end": 205,
+            "method": "EXACT",
+            "original": "이 지형의 길이는 실제 한반도를 1/980로 축소한 1.45㎞로 동·서가 바뀐 모습이지만 거울에 비춰보면 정말 한반도와 똑같다.",
+            "start": 134,
+            "submitted": "이 지형의 길이는 실제 한반도를 1/980로 축소한 1.45㎞로 동·서가 바뀐 모습이지만 거울에 비춰보면 정말 한반도와 똑같다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b50488a7597c09224247cc900d94be53abbb6afa9bef843b2288bdad759b61d7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "전망대에서 대표 장면(한반도 지형)을 관람하고 거울로 비춰보는 대표 체험이 확인되나, 촬영·참여형 재현이 중심이라는 근거는 없어 제한적 수준으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+          "quote": {
+            "end": 530,
+            "method": "EXACT",
+            "original": "이 구간을 지나고 나면 더 이상의 힘든 오르막 없이 산책을 즐기며 호젓한 산길을 걷는 여유로움이 정상까지 계속된다.",
+            "start": 466,
+            "submitted": "이 구간을 지나고 나면 더 이상의 힘든 오르막 없이 산책을 즐기며 호젓한 산길을 걷는 여유로움이 정상까지 계속된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b50488a7597c09224247cc900d94be53abbb6afa9bef843b2288bdad759b61d7"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+          "quote": {
+            "end": 320,
+            "method": "EXACT",
+            "original": "안남 면사무소 앞 주차장에 주차를 하고 안남 초등학교 정문 앞으로 이동하면 마을 어귀에서 탐방로는 시작된다.",
+            "start": 260,
+            "submitted": "안남 면사무소 앞 주차장에 주차를 하고 안남 초등학교 정문 앞으로 이동하면 마을 어귀에서 탐방로는 시작된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b50488a7597c09224247cc900d94be53abbb6afa9bef843b2288bdad759b61d7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "자율적으로 등산로·전망대·정상을 선택하며 걷는 자유 탐방 구조가 확인되지만, 자율 탐색이 방문 경험의 중심임을 보여주는 수준까진 근거가 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+          "quote": {
+            "end": 568,
+            "method": "EXACT",
+            "original": "둔주봉 가는 길은 솔향기 물씬 풍기는 소나무 숲이 인상적인 곳이다.",
+            "start": 531,
+            "submitted": "둔주봉 가는 길은 솔향기 물씬 풍기는 소나무 숲이 인상적인 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b50488a7597c09224247cc900d94be53abbb6afa9bef843b2288bdad759b61d7"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+          "quote": {
+            "end": 373,
+            "method": "EXACT",
+            "original": "고갯마루까지 1.4㎞는 평화로운 안남의 산골 정취가 물씬 풍기는 풍경을 즐기며 걸을 수 있다.",
+            "start": 321,
+            "submitted": "고갯마루까지 1.4㎞는 평화로운 안남의 산골 정취가 물씬 풍기는 풍경을 즐기며 걸을 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b50488a7597c09224247cc900d94be53abbb6afa9bef843b2288bdad759b61d7"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "무성한 숲, 소나무 숲, 평화로운 산골, 호젓한 산길 등 자연 환경 단서가 두드러지게 확인되나, 실제 고요함·혼잡도의 확정은 불가하여 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+          "quote": {
+            "end": 133,
+            "method": "EXACT",
+            "original": "무성한 숲 등산로를 지나 둔주봉 정상(384m)에 오르기 전, 전망대(275m)에서 보이는 한반도 지형은 굽이굽이 금강 줄기가 만들어 낸 절경이다.",
+            "start": 51,
+            "submitted": "무성한 숲 등산로를 지나 둔주봉 정상(384m)에 오르기 전, 전망대(275m)에서 보이는 한반도 지형은 굽이굽이 금강 줄기가 만들어 낸 절경이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b50488a7597c09224247cc900d94be53abbb6afa9bef843b2288bdad759b61d7"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "1.4km 탐방로와 0.8km 등산로를 걷는 등산·탐방 활동의 구체적 기회가 확인되나, 지속적 참여·도전이 방문 경험의 중심임을 보여주는 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+            "quote": "전망대(275m)에서 보이는 한반도 지형은 굽이굽이 금강 줄기가 만들어 낸 절경이다."
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+            "quote": "고만고만한 소나무들이 대나무처럼 곧게 자라고 있는 숲으로 운치 있게 난 길을 따라 걸으면 마음마저 상쾌해지는 곳이다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "전망대의 한반도 지형 절경, 소나무 숲 등 뚜렷한 시각적 성격의 장면이 설명에서 확인되지만, 연출이 전체를 지배한다는 수준의 근거는 없다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "c41d340559eb58f968aa3780e4609fee3d0cd4bca8f84e3c0c62b799777a249b",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": " convex 거울에 강과 산이 반사되는 역동적 구도가 장면 전체를 지배하며, 반사 속 풍경과 실제 정자·하늘이 대비를 이루는 강한 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:058a9606617baf58f8cc7332f2d56f9af06879423c1bf29d4288ed8ac0bfe133",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0326a9ca12d769d1b5af0bc54d21f8a823932147c82a639d04d5004889ea3d97",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547428_8",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "35a3dadceaea20a0c14e9ba02848e57ff01c4c414430e1bc6c0a1e2516de6162",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/28/3547428_image2_1.jpg"
+        },
+        "record_sha256": "3ebb884869e2dbb69aa487858a32e5681c576ce453899e9a92cd8f6253b17d50",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목재 계단과 흙길이 있으나 전통적 재료·공간 구성의 뚜렷한 특성은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:34bd314f12aeb4c1dcc005c9eef11c66acb2e1595f54d3e299cabfe955ab8c4f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c264fb6cab498fc176147bf173bd45fbec6c807c83a9c588ac4144983052dc9b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547422_7",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9911b0ea199175af122df1905995d2b66eb491618a3b29df5adccc6c87732ca7",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/22/3547422_image2_1.jpg"
+        },
+        "record_sha256": "04509f0d013964bcecebc477aba36d2da9fb8756e1bb7d2c53c7ce9f72c5cd14",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "강가 작은 마을의 낮은 지붕 건물들에서 전통적 외관 단서가 희미하게 보이나 매우 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7da40db24cd7697bc9c504d3afbd56f743106948b092ad4d1c70bbbc0ab8b9cb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "382d324767547a82ce86fbeaae51c98b687be6b19605e171bce4b19c7f887c4b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547417_4",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d903e5b79dde9205f99b43020071617053743c137740daa9e4fa2b2bee4760f6",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/17/3547417_image2_1.jpg"
+        },
+        "record_sha256": "a96d02b32f85dcd0ceab87da5d7cc5ad9fe9aa7a4a51fc9688404febf9583af2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "오른쪽 기와 지붕과 나무 기둥·목재 울타리 등 전통적으로 보이는 건축 외관 요소가 보통 수준으로 나타남.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8c82918e9911ae14503fb8f7ec2b3867030de75cef09e6ecb7b088eef63934dd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0326a9ca12d769d1b5af0bc54d21f8a823932147c82a639d04d5004889ea3d97",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547428_8",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "35a3dadceaea20a0c14e9ba02848e57ff01c4c414430e1bc6c0a1e2516de6162",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/28/3547428_image2_1.jpg"
+        },
+        "record_sha256": "3124dcabafbeac7c911e069137ba0be3d6ce322a9e1141136cdcc68eb949a763",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 나무, 덤불, 낙엽, 흙길 등 자연 숲 경관이 화면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8f8a6f59b60117bd57599a33ce4946a1acd4c4796ca1d3a0196299d67000577b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c264fb6cab498fc176147bf173bd45fbec6c807c83a9c588ac4144983052dc9b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547422_7",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9911b0ea199175af122df1905995d2b66eb491618a3b29df5adccc6c87732ca7",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/22/3547422_image2_1.jpg"
+        },
+        "record_sha256": "1d69d8f514c936ba5528f5d9a0835fb74ba9471a4174b6a627aff18a6779db56",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 강, 완만한 굽이, 녹지로 덮인 산과 들이 장면 전체를 지배하며 자연 경관 단서가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9edece998e9ccaca4da6e61fdd7f5970bcbdc7d3c4788497c93ab3ea2374f70c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "382d324767547a82ce86fbeaae51c98b687be6b19605e171bce4b19c7f887c4b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547417_4",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d903e5b79dde9205f99b43020071617053743c137740daa9e4fa2b2bee4760f6",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/17/3547417_image2_1.jpg"
+        },
+        "record_sha256": "ee55c124840f02e1946d4433ab1956bd3a09340c65f9aae73e278e8d0fa9c2a3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "굽이치는 강의 곡선과 빽빽한 녹색 산림, 구름 낀 하늘이 대비되는 항공 구도로 시각적 인상이 강하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c655f9fcd04c18fefcf41601909a98183c9928d94ad76ac7be5570b02ab0225d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "382d324767547a82ce86fbeaae51c98b687be6b19605e171bce4b19c7f887c4b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547417_4",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d903e5b79dde9205f99b43020071617053743c137740daa9e4fa2b2bee4760f6",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/17/3547417_image2_1.jpg"
+        },
+        "record_sha256": "2fd8d3e57cbcb205c1c4326302622763e2f8158a94f025077626560c8725ece0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "중앙 계단과 흙길이 소실점으로 수렴하는 대칭형 구도, 짙은 녹색과 흙색의 대비, 숲빛 반영이 조화롭게 연출된 장면.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cbe8e785a0ccd0f14c5cff38b1224c0cba0813ac51ecb1eae6c37775461193cd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c264fb6cab498fc176147bf173bd45fbec6c807c83a9c588ac4144983052dc9b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547422_7",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9911b0ea199175af122df1905995d2b66eb491618a3b29df5adccc6c87732ca7",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/22/3547422_image2_1.jpg"
+        },
+        "record_sha256": "069320f4cc2de469d40f6319bbfabf1ea067dbef7f88bd7f151e015e3ba6f46e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "거울 반사 속 굽이치는 강, 능선, 울창한 산림과 배경의 푸른 하늘·나무 등 자연 경관 단서가 매우 풍부하게 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:db58ddcee7ad200d1e5bd15b59f96b2960f5d9fbf1899ab9f188306c18eb1542",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0326a9ca12d769d1b5af0bc54d21f8a823932147c82a639d04d5004889ea3d97",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3547428_8",
+          "request_sha256": "70115f5974776c9b9ac7de14e989bda3b99a24ef7ba8f81473cede8d20b1cee4",
+          "response_sha256": "ee1ac5068b91273b45ea76d745d7764f4d7eb32b0a1b394f3437f33b1dd7c208",
+          "retrieved_at": "2026-09-11T02:09:49.596268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "35a3dadceaea20a0c14e9ba02848e57ff01c4c414430e1bc6c0a1e2516de6162",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/28/3547428_image2_1.jpg"
+        },
+        "record_sha256": "8c18938a067e36898b95e3c931d59ed077a97600f9ade8bad050c577b1b49556",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:981b13540de62c24d4938dc2faa769388084ea88648d1a9d911bcf490ccae71c",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2610563",
+          "request_sha256": "7abf70067147021650ce83ea869d3ab3412e1a7d7238ed3ef7dcd67f33fa21be",
+          "response_sha256": "198aba230431ccb9fea2075e992dd11c5dd2f654cab740121de76ee73a99619e",
+          "retrieved_at": "2026-09-10T16:54:16.954947Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-30T02:27:46Z",
+          "source_record_sha256": "a38e791c3349b3f051aceed1502aa4ef2eb1facc7068e1cbb0371b558b9f32d7",
+          "source_uri": null
+        },
+        "record_sha256": "b50488a7597c09224247cc900d94be53abbb6afa9bef843b2288bdad759b61d7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "둔주봉은 안남면 연주리 뒷산의 봉우리이자 옥천 제1경인 한반도 지형을 볼 수 있는 곳이다. 무성한 숲 등산로를 지나 둔주봉 정상(384m)에 오르기 전, 전망대(275m)에서 보이는 한반도 지형은 굽이굽이 금강 줄기가 만들어 낸 절경이다. 이 지형의 길이는 실제 한반도를 1/980로 축소한 1.45㎞로 동·서가 바뀐 모습이지만 거울에 비춰보면 정말 한반도와 똑같다. 그 풍광을 마주하는 순간 절로 나오는 탄성과 함께 말로 표현할 수 없는 감동이 몰려오는 곳이다. 안남 면사무소 앞 주차장에 주차를 하고 안남 초등학교 정문 앞으로 이동하면 마을 어귀에서 탐방로는 시작된다. 고갯마루까지 1.4㎞는 평화로운 안남의 산골 정취가 물씬 풍기는 풍경을 즐기며 걸을 수 있다. 등산로 입구에서 둔주봉 정상까지의 거리는 0.8㎞ 남짓 된다. 등산로 입구에서 쉼터가 있는 곳까지 0.27㎞ 구간을 지나고 시작되는 오르막 구간은 0.07㎞ 구간. 이 구간을 지나고 나면 더 이상의 힘든 오르막 없이 산책을 즐기며 호젓한 산길을 걷는 여유로움이 정상까지 계속된다. 둔주봉 가는 길은 솔향기 물씬 풍기는 소나무 숲이 인상적인 곳이다. 고만고만한 소나무들이 대나무처럼 곧게 자라고 있는 숲으로 운치 있게 난 길을 따라 걸으면 마음마저 상쾌해지는 곳이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c98791d7c9340e0dedadbed6415df8b82f727753d9884ba273689095dd276d23",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2610563",
+          "request_sha256": "6df669dfa062bc8142b26ea1a34b1fda9c1fffa6776b9823e4ce7b3f910dcf9a",
+          "response_sha256": "3a4d36f2889f75795535e41860759c74b3f2591094beb4d2357a701f2cdb7224",
+          "retrieved_at": "2026-09-11T02:09:49.262770Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fe5a60f71fe01aaf188b7a5833f56d638da38c76088342b7d4918cf244046e07",
+          "source_uri": null
+        },
+        "record_sha256": "6533ba25d03044a571d5ef2cffd2ecc6d1ef61eed20871466fc14271e87c4c26",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "515a299ca1d883dcee663a32ec431b04cb52ddf16a54cff8f38ded198b3f6edb",
+    "place": {
+      "address": "충청북도 옥천군 안남면 연주길 148-18",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+      "name_ko": "둔주봉",
+      "place_id": "public:korea:c093849cb8c1894307da76fd1b675b362f8249df1c019615fb8f9b83f870475c",
+      "provider_content_id": "2610563",
+      "region_code": "43730",
+      "region_name": "충청북도 옥천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -30,23 +30,18 @@ from itda.pipeline.mvp_public_catalog import (
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 SOURCE_UNIVERSE = (
-    REPO_ROOT
-    / "artifacts/catalog/optional-media-v2/policy"
-    / "573e21213f7c0d157e33c7a510b9bcdb612dd517dfc70ba506ef7281ca0e9243"
-    / "projected-candidates.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/source-universe/projected-candidates.json"
 )
-OFFICIAL_PERMISSION_ROOT = (
-    REPO_ROOT / "artifacts/public/catalog/official-permission-snapshots"
-)
+OFFICIAL_PERMISSION_ROOT = REPO_ROOT / "artifacts/public/catalog/official-permission-snapshots"
 V5_RESULT_PATH = (
     REPO_ROOT
-    / "artifacts/public/catalog/mvp-public-enrichment-runs"
+    / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-runs"
     / "7a70a63b472980b12afa17250be87aab7cefc1d26204ffb65ddb858f8c6aaeb9"
     / "result.json"
 )
 V6_RESULT_PATH = (
     REPO_ROOT
-    / "artifacts/public/catalog/mvp-public-enrichment-runs"
+    / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-runs"
     / "adad3f9b0b308aac2827258c9a9275f7fc01b9d20a6ebf4e43e4fb38a2fa414e"
     / "result.json"
 )
@@ -269,9 +264,7 @@ def test_real_enrichment_materializes_exact_byte_stable_public_100() -> None:
     assert catalog.evidence_inventory_sha256 == inventory.inventory_sha256
     assert relations.catalog_sha256 == catalog.catalog_sha256
     source_ids = {
-        crosswalk.source_id
-        for place in catalog.places
-        for crosswalk in place.provider_crosswalk
+        crosswalk.source_id for place in catalog.places for crosswalk in place.provider_crosswalk
     }
     assert len(source_ids) == 100
     assert all(place.pool == "PUBLIC" for place in catalog.places)
@@ -501,9 +494,7 @@ def test_inspect_tracked_binds_exact_official_permissions(
         )
 
     assert prepare_mvp_public_catalog.main(argv) == 2
-    report = prepare_mvp_public_catalog.CatalogGapReport.model_validate_json(
-        output.read_bytes()
-    )
+    report = prepare_mvp_public_catalog.CatalogGapReport.model_validate_json(output.read_bytes())
     assert report.strict_rights_state == "PERMISSION_METADATA_VERIFIED"
     assert report.permission_metadata_present is True
     assert "strict_rights_state=permission_metadata_verified" in capsys.readouterr().out

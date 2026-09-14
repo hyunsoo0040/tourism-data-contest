@@ -1,0 +1,870 @@
+{
+  "assessed_at": "2026-09-11T16:39:47.710922Z",
+  "assessment_sha256": "f99e447b9ce20676a721c51bd462aeb16ad3eff5ddfa02cc05ef1896a431509c",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 53
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "실제 존재가 확인된 문화재 지정 건물로 외부에서 원형 건축물을 관람할 수 있다. 다만 '내부는 방문객들에게 개방하지 않고 있다'고 명시되어 접촉이 제한적이므로 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소 자체의 건립 연혁, 거주 선교사, 재료 출처(대구읍성 철거 시 성돌), 이후 변천(동산병원 인수, 박물관 개원)까지 구체적인 역사 맥락이 제시되므로 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "대구 개신교 선교와 근대 건축을 상징하는 장소라는 의미가 공식 서술에서 부여되어 있다. 다만 이야기의 반복적 표현·확산 근거는 부족하여 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:e1ee48b056861088be57df075fe7bb0cc75bd1280e501edfcc2054f06a1cea4a",
+            "appearance:fc859f400b35e330ffb03ada1e32e3506aa575cde9d2bed97dee91e8d127a5ea",
+            "appearance:fd500dc18095623e33fcda6b7210a772c0bca9e3be3508c5edfb31d052f053b9"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "기존 인용의 claim이 VISUAL_APPEARANCE였으나 E.c는 VISUAL_EXPRESSION을 요구하므로 동일 서술을 허용된 VISUAL_EXPRESSION claim으로 수정했다. 붉은 벽돌·박공지붕 등 한·양 절충의 시각적 성격이 확인되지만 경관을 지배하는 연출이라는 근거까지는 없어 수준 2.",
+      "value": 56
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:292cdf7ee16423fd4eecb77da7434a8b301f49886b1eac704cc5c376f16e3ff5",
+            "appearance:be0e95f8d9a11d8c92a1555fa2e23bdaf7662dc7943c36b58231e09818a5e361",
+            "appearance:e44dce8096c7695feb4e981733205a8fb969c5115e4258d252ba296d48b51253"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "청라언덕 동산, 이팝나무, 사과나무 후손목 등 자연·환경 단서가 확인된다. 다만 실제 고요함·혼잡·머무름 환경은 확인할 수 없어 수준 2.",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+          "quote": {
+            "end": 136,
+            "method": "EXACT",
+            "original": "1906~1910년경 지상 2층, 지하 1층으로 건립된 서양식 건물이며 동산(현 청라언덕) 위에 서남향으로 자리 잡고",
+            "start": 71,
+            "submitted": "1906~1910년경 지상 2층, 지하 1층으로 건립된 서양식 건물이며 동산(현 청라언덕) 위에 서남향으로 자리 잡고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb"
+        },
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+          "quote": {
+            "end": 245,
+            "method": "EXACT",
+            "original": "1989년 6월 15일 대구광역시 유형문화재로 지정되었다.",
+            "start": 213,
+            "submitted": "1989년 6월 15일 대구광역시 유형문화재로 지정되었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 2,
+      "reason": "실제 존재가 확인된 문화재 지정 건물로 외부에서 원형 건축물을 관람할 수 있다. 다만 '내부는 방문객들에게 개방하지 않고 있다'고 명시되어 접촉이 제한적이므로 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+          "quote": {
+            "end": 70,
+            "method": "EXACT",
+            "original": "이주택은 1893년부터 대구를 찾아와서 선교활동을 하던 미국인 선교사들(스윗즈, 핸드슨, 아키베드 캠벨 등)이 거주한 집이다.",
+            "start": 0,
+            "submitted": "이주택은 1893년부터 대구를 찾아와서 선교활동을 하던 미국인 선교사들(스윗즈, 핸드슨, 아키베드 캠벨 등)이 거주한 집이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb"
+        },
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+          "quote": {
+            "end": 212,
+            "method": "EXACT",
+            "original": "1907년(대구읍성 철거 때)에 가져온 안산암의 성돌로 기초를 만들고 그 위에 붉은 벽돌을 쌓은 벽돌조 2층의 한·양 절충식 건물이다.",
+            "start": 137,
+            "submitted": "1907년(대구읍성 철거 때)에 가져온 안산암의 성돌로 기초를 만들고 그 위에 붉은 벽돌을 쌓은 벽돌조 2층의 한·양 절충식 건물이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 3,
+      "reason": "이 장소 자체의 건립 연혁, 거주 선교사, 재료 출처(대구읍성 철거 시 성돌), 이후 변천(동산병원 인수, 박물관 개원)까지 구체적인 역사 맥락이 제시되므로 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "과거 선교사 거주라는 역사 사실은 있으나 현재 지역 주체의 전승·생활문화와의 지속적 연결을 보여주는 근거는 없다. 과거 유산의 기록이 현재 전승을 의미하지는 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "선교박물관 전시(성경, 선교 유물, 사진 자료 등)가 언급되지만, '내부는 방문객들에게 개방하지 않고 있다'는 문장과 충돌하여 현재 방문자가 해설·전시를 실제 탐구할 수 있는지 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+          "quote": {
+            "end": 710,
+            "method": "EXACT",
+            "original": "대구의 개신교 선교사와 당시의 건축 상황을 살펴볼 수 있는 중요한 건물이다.",
+            "start": 668,
+            "submitted": "대구의 개신교 선교사와 당시의 건축 상황을 살펴볼 수 있는 중요한 건물이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "대구 개신교 선교와 근대 건축을 상징하는 장소라는 의미가 공식 서술에서 부여되어 있다. 다만 이야기의 반복적 표현·확산 근거는 부족하여 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보, SNS 등 매체를 통한 장소 이미지의 재현·유통에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+          "quote": {
+            "end": 211,
+            "method": "EXACT",
+            "original": "그 위에 붉은 벽돌을 쌓은 벽돌조 2층의 한·양 절충식 건물이다",
+            "start": 176,
+            "submitted": "그 위에 붉은 벽돌을 쌓은 벽돌조 2층의 한·양 절충식 건물이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+          "quote": {
+            "end": 434,
+            "method": "EXACT",
+            "original": "지붕은 한식기와를 이은 박공지붕으로",
+            "start": 415,
+            "submitted": "지붕은 한식기와를 이은 박공지붕으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "기존 인용의 claim이 VISUAL_APPEARANCE였으나 E.c는 VISUAL_EXPRESSION을 요구하므로 동일 서술을 허용된 VISUAL_EXPRESSION claim으로 수정했다. 붉은 벽돌·박공지붕 등 한·양 절충의 시각적 성격이 확인되지만 경관을 지배하는 연출이라는 근거까지는 없어 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없고, 내부 비개방으로 이미지 재현 경험 가능성도 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "내부 비개방으로 자율적 탐색이 제한됨을 암시하지만, 자율 탐색·선택의 기회나 그 제한을 직접 다룬 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+          "quote": {
+            "end": 848,
+            "method": "EXACT",
+            "original": "계절의 여왕으로 불리는 오월이 오면 청라언덕에 이팝나무가 200년 넘게 흰쌀밥 꽃을 피우는 등 볼거리 가득한 곳이다.",
+            "start": 783,
+            "submitted": "계절의 여왕으로 불리는 오월이 오면 청라언덕에 이팝나무가 200년 넘게 흰쌀밥 꽃을 피우는 등 볼거리 가득한 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "청라언덕 동산, 이팝나무, 사과나무 후손목 등 자연·환경 단서가 확인된다. 다만 실제 고요함·혼잡·머무름 환경은 확인할 수 없어 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "만들기·체험·탐방 등 참여형 활동 기회에 관한 근거가 없다. 전시 서술만으로 실제 참여 가능성을 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "73156fca62fe42a1aa22f6d9f9f0e35a5c6fb73db92ca8c1d56b44c218806e26",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 잔디밭, 침엽수와 활엽수 녹지가 화면 앞뒤를 풍부하게 채움",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:292cdf7ee16423fd4eecb77da7434a8b301f49886b1eac704cc5c376f16e3ff5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9cbaf2efe41bd648b7630a60e92d5132612cc15ba08e7a7b3a7d98657a9585cf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585416_2",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6ee6a9449e1af59901c1758e13a9a74e3bc9b03db3a24435f2b23ca06884edbd",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/16/3585416_image2_1.JPG"
+        },
+        "record_sha256": "c77681f53527388acdb2b54effe123fc51befe465f682e84cff48e94bbd9310f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "기와지붕과 처마, 전통적 지붕선이 뚜렷하게 드러나 전통 외관 특성이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9593b32187a07112bd7fae94fa2e54f416706a8cb7939fe0618b2f13236d9662",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b84190a1d8401ccc9624e7ddd5b1c7b4ea589e08866d59fdef8f9b3d6a0f8a54",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585415_1",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f597de6e5f647b1d2c7d6ecce231cb14422de57e48380480a23a8f2d65557fae",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/15/3585415_image2_1.JPG"
+        },
+        "record_sha256": "b24d27021d4cea9f0608c0133f43e40400333293c40ee2a6b5de0bd68451a27d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "기와지붕과 격자 창의 한옥식 건물과 돌담, 석재 길 등 전통적 외관 재료가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a4bb379d15231f62825a99453bdf74b43e376b1bbb3c6dd9d0a22da66e6a9b03",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c9891dd9f258f9865c3b44880d137bb370162cccb882fbeba1fe0b2478b0164b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585418_4",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff9425190f574bfb651940aa154b09e1ffc5fbd83a12ef5ddd7fb77cdc35fa1f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/18/3585418_image2_1.JPG"
+        },
+        "record_sha256": "809de09420cd592b5668a42e2c64e34280307daa5798edb7877e62a9dca22ff2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "기와지붕과 적벽돌이 결합된 구식 건축 외관이 뚜렷이 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b1b0ee9654d1878193cd21de2bd0e4cd301a9ccc7d7ae025a0e6cfa18eb12e26",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9cbaf2efe41bd648b7630a60e92d5132612cc15ba08e7a7b3a7d98657a9585cf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585416_2",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6ee6a9449e1af59901c1758e13a9a74e3bc9b03db3a24435f2b23ca06884edbd",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/16/3585416_image2_1.JPG"
+        },
+        "record_sha256": "f36451612462e10c0279819f747145b8d283e5bf31162865e436410e069f5443",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 수목, 관목, 잔디 등 자연 요소가 화면 전체를 지배하며 트인 녹지 환경이 뚜렷이 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:be0e95f8d9a11d8c92a1555fa2e23bdaf7662dc7943c36b58231e09818a5e361",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c9891dd9f258f9865c3b44880d137bb370162cccb882fbeba1fe0b2478b0164b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585418_4",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff9425190f574bfb651940aa154b09e1ffc5fbd83a12ef5ddd7fb77cdc35fa1f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/18/3585418_image2_1.JPG"
+        },
+        "record_sha256": "8e382c80395e6f588a053bba302b2f0e550e984316541cb50f525177147ddad1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "잔디 프레임과 첨탑 대비 구도, 맑은 하늘과 따뜻한 벽돌 색의 연출이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e1ee48b056861088be57df075fe7bb0cc75bd1280e501edfcc2054f06a1cea4a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9cbaf2efe41bd648b7630a60e92d5132612cc15ba08e7a7b3a7d98657a9585cf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585416_2",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6ee6a9449e1af59901c1758e13a9a74e3bc9b03db3a24435f2b23ca06884edbd",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/16/3585416_image2_1.JPG"
+        },
+        "record_sha256": "eae95cf15239c11373c9741af3169c35e8632dee19ca3694ee430b90af21ca6f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 잔디밭, 소나무와 수목이 화면 가득 배치되어 자연 환경 단서가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e44dce8096c7695feb4e981733205a8fb969c5115e4258d252ba296d48b51253",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b84190a1d8401ccc9624e7ddd5b1c7b4ea589e08866d59fdef8f9b3d6a0f8a54",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585415_1",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f597de6e5f647b1d2c7d6ecce231cb14422de57e48380480a23a8f2d65557fae",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/15/3585415_image2_1.JPG"
+        },
+        "record_sha256": "e190e9bf5b0eacdb41c5799487a939f68e73e90ce345b9cd5e305edd85d35d7d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "맑고 깊은 청색 하늘, 한옥기와와 붉은 벽돌, 뒤의 첨탑이 대비되는 구성으로 시각적 개성이 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fc859f400b35e330ffb03ada1e32e3506aa575cde9d2bed97dee91e8d127a5ea",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b84190a1d8401ccc9624e7ddd5b1c7b4ea589e08866d59fdef8f9b3d6a0f8a54",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585415_1",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f597de6e5f647b1d2c7d6ecce231cb14422de57e48380480a23a8f2d65557fae",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/15/3585415_image2_1.JPG"
+        },
+        "record_sha256": "f86cf840a00c1658c8fb453fcd17d7ab4b570bf0eb53f981a75866c43cafe3ff",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "풍부한 녹색과 따뜻한 햇빛, 석재 산책로가 중앙 소실점으로 이어지는 안정된 구도로 시각적으로 잘 연출된 장면이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fd500dc18095623e33fcda6b7210a772c0bca9e3be3508c5edfb31d052f053b9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c9891dd9f258f9865c3b44880d137bb370162cccb882fbeba1fe0b2478b0164b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585418_4",
+          "request_sha256": "2163a4c9284c56b42bf4e4788479e46fe160b089c8dc72d10cac2f2ccb1ead6a",
+          "response_sha256": "ea1a9ea770101256b85095ad467e121af080eda2757cb54bdf50185e4a6207af",
+          "retrieved_at": "2026-09-10T08:22:01.555882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff9425190f574bfb651940aa154b09e1ffc5fbd83a12ef5ddd7fb77cdc35fa1f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/18/3585418_image2_1.JPG"
+        },
+        "record_sha256": "fec34e7cd811233f6b36e28bcf970ab7fad3f394b43e0eb7a318ba65398302f7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a657e0a7ddcd9cbba6f8d8faf24b344cce50048ec3704f35ffcf666f87071437",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1613870",
+          "request_sha256": "4c180ae47b61467344ae6ac3698167b6b25c1b3ad5a372b068df0caf81e1ac86",
+          "response_sha256": "f01a8d09271ed6b94b878d9fdf33b0667231ee75df95ead922ba0c9cb74214f7",
+          "retrieved_at": "2026-09-10T05:31:41.615467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-17T05:21:13Z",
+          "source_record_sha256": "e83ef05228ccf927bd5771c39018c2cff49383b7d8ed943787dcb61a55fffad9",
+          "source_uri": null
+        },
+        "record_sha256": "c650b662572c7880a9ba80e95311aff2b2931cf570ad99e13a9bfa112f57b2eb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "이주택은 1893년부터 대구를 찾아와서 선교활동을 하던 미국인 선교사들(스윗즈, 핸드슨, 아키베드 캠벨 등)이 거주한 집이다. 1906~1910년경 지상 2층, 지하 1층으로 건립된 서양식 건물이며 동산(현 청라언덕) 위에 서남향으로 자리 잡고 1907년(대구읍성 철거 때)에 가져온 안산암의 성돌로 기초를 만들고 그 위에 붉은 벽돌을 쌓은 벽돌조 2층의 한·양 절충식 건물이다. 1989년 6월 15일 대구광역시 유형문화재로 지정되었다. 1981년 8월 동산병원에서 인수하여 사택으로 사용하면서 한식 기와를 함석으로 교체하고, 내부 마감재 일부를 교체하였다. 평면 구성은 남쪽 우측부에 현관으로 이어지는 베란다를 두고, 현관 홀을 통하여 거실과 응접실을 직접 연결하였다. 거실을 중심으로 침실, 계단실, 욕실, 부엌, 식당 등을 배치하였고 지붕은 한식기와를 이은 박공지붕으로 남쪽과 북쪽이 쇠드(Shed)형이었으나 함석으로 개선되었다. 1999년 10월 1일 계명대학교 동산의료원 개원 100주년을 맞이하여 선교박물관으로 개원하여. 1층에는 각종 성경과 선교 유물 기독교 전래 과정 등의 사진 자료와 2층은 성막 모형 및 이스라엘 현지에서 구입한 구약, 신약 관련 소품들이 전시되어 있다. 선교사스윗즈주택은 미국인들의 주거 양식과 생활양식, 한·양 절충의 건축 수법을 잘 보여 주고 있으며, 대구의 개신교 선교사와 당시의 건축 상황을 살펴볼 수 있는 중요한 건물이다. 청라언덕에는 선교사블레어주택, 챔니스주택을 비롯한 대구제일교회, 동무생각 노래비와 한국 최초의 서양 사과나무의 3세 자손목 특히 계절의 여왕으로 불리는 오월이 오면 청라언덕에 이팝나무가 200년 넘게 흰쌀밥 꽃을 피우는 등 볼거리 가득한 곳이다. 사유지인 건물로, 내부는 방문객들에게 개방하지 않고 있다."
+      }
+    ],
+    "parent_source_sha256": "ce3c083dc92fb4a31c7026e9d10bc9296ac92a826e44235662a9e6e405a192a1",
+    "place": {
+      "address": "대구광역시 중구 달구벌대로 2029",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+      "name_ko": "선교사스윗즈주택",
+      "place_id": "public:korea:41c46b9b7e88a43d040793e2f8fa53010ec7945bcca05992c67ffaff7fead2db",
+      "provider_content_id": "1613870",
+      "region_code": "27110",
+      "region_name": "대구광역시 중구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

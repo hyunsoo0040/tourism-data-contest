@@ -1,0 +1,783 @@
+{
+  "assessed_at": "2026-09-11T19:27:55.530482Z",
+  "assessment_sha256": "2b1bff05b8ead0e2f1030b60fff683c5e52ab59ac1d6de99f926a04b58d53afd",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bde0b7bd490340be2d887af96e0113bb66a7396b5ae7126c8f7408ad386abb06"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "공식 소개에서 이 장소가 방송·공연 촬영지로 매체를 통해 이미지화되고 있음을 명시한다. 매체 표현의 반복·유통 규모까지는 확인되지 않아 수준 2~3 수준 중 제시된 표현 근거에 따라 낮은 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bde0b7bd490340be2d887af96e0113bb66a7396b5ae7126c8f7408ad386abb06"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1e78ea53e54d4b65e49ef95db1f50196c8cc18486ef2e7cb626a02c20cfe05c0",
+            "appearance:1f05a4c86a70bf1f4cfb1fc2a3013c77f16d124ecebff4d6d3fb83e6c37063c5",
+            "appearance:4e06e087d4cda87b56098e3f28e2362d20ab0f0b27cb6340292e1eff2929d2a6"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "독특한 외관과 감각적인 디자인이 장소의 시각적 성격을 표현한다는 공식 서술이 있어 구별되는 시각적 성격을 확인할 수 있다. 장면을 지배하는 일관된 연출까지의 근거는 없어 수준 3으로 판단한다.",
+      "value": 79
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:335124b04f834eef9b311ffe521b38e9c5fb0f60399128970d97ed6b2efa2177",
+            "appearance:7bd0341caa79c72fc9182a85a44f1c0b2dd8c774d0792b9bbf2c8a2b535ca692"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연·시각적 저자극·머무를 환경의 단서가 부족하다. '편안한 휴게 공간' 언급은 실내 라운지 일부에 관한 것으로 회복 환경 전반을 판단할 근거가 되지 못한다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bde0b7bd490340be2d887af96e0113bb66a7396b5ae7126c8f7408ad386abb06"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "스마트마이스 라운지에서 VR/AR, 게임 등 구체적 참여 체험 기회를 명시하므로 참여·몰입 활동을 지원한다. 지속적 도전 활동의 중심이라는 근거까지는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료는 송도컨벤시아를 국제 수준의 컨벤션센터로 소개할 뿐, 확인된 원형·유산과의 접촉에 관한 근거가 없다. 컨벤션센터라는 시설 규모 정보만으로 유산 접촉을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "자료에는 건물 규모와 시설 구성만 있고 이 장소의 실제 역사·연혁·사건·인물 맥락에 대한 설명이 없어 역사 맥락의 구체성을 평가할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 관한 언급이 자료에 없다. 컨벤션센터의 MICE 기능만으로 실제 전승의 지속을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 없다. VR·홀로그램 체험은 인천 명소 소개용 콘텐츠로, 이 장소 자체의 유산 해설로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "장소에 사회적으로 부여된 상징적 의미의 구체적 내용에 대한 근거가 없다. 촬영지로 주목받는다는 서술만으로 공유되는 의미의 내용을 확정하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:bde0b7bd490340be2d887af96e0113bb66a7396b5ae7126c8f7408ad386abb06",
+          "quote": {
+            "end": 329,
+            "method": "EXACT",
+            "original": "각종 방송이나 공연 등의 촬영지로도 주목받고 있다.",
+            "start": 301,
+            "submitted": "각종 방송이나 공연 등의 촬영지로도 주목받고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4152d04399c678ea4d934b0f4ed133c6032a03e137deb1e06b24af869410a3e"
+        }
+      ],
+      "flags": [],
+      "key": "E.b",
+      "level": 2,
+      "reason": "공식 소개에서 이 장소가 방송·공연 촬영지로 매체를 통해 이미지화되고 있음을 명시한다. 매체 표현의 반복·유통 규모까지는 확인되지 않아 수준 2~3 수준 중 제시된 표현 근거에 따라 낮은 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:bde0b7bd490340be2d887af96e0113bb66a7396b5ae7126c8f7408ad386abb06",
+          "quote": {
+            "end": 289,
+            "method": "EXACT",
+            "original": "태백산맥을 모티브로 한 독특한 외관과 고급스러운 내부 인테리어 등 국내에서 흔히 볼 수 없는 감각적인 디자인을 자랑한다.",
+            "start": 222,
+            "submitted": "태백산맥을 모티브로 한 독특한 외관과 고급스러운 내부 인테리어 등 국내에서 흔히 볼 수 없는 감각적인 디자인을 자랑한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4152d04399c678ea4d934b0f4ed133c6032a03e137deb1e06b24af869410a3e"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "독특한 외관과 감각적인 디자인이 장소의 시각적 성격을 표현한다는 공식 서술이 있어 구별되는 시각적 성격을 확인할 수 있다. 장면을 지배하는 일관된 연출까지의 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현할 수 있다는 근거가 없다. 촬영지라는 사실만으로 방문자의 이미지 재현 경험을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색이나 일상 이탈을 지원하는 경험에 대한 직접 근거가 없다. 인접한 센트럴파크나 나들이 언급은 자유·여유의 실제 기회를 확정하기에 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연·시각적 저자극·머무를 환경의 단서가 부족하다. '편안한 휴게 공간' 언급은 실내 라운지 일부에 관한 것으로 회복 환경 전반을 판단할 근거가 되지 못한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:bde0b7bd490340be2d887af96e0113bb66a7396b5ae7126c8f7408ad386abb06",
+          "quote": {
+            "end": 620,
+            "method": "EXACT",
+            "original": "인터랙티브 미디어월, VR/AR, 게임, 홀로그램 등 다양한 스마트 콘텐츠를 활용한 체험 공간을 갖추고 있다.",
+            "start": 559,
+            "submitted": "인터랙티브 미디어월, VR/AR, 게임, 홀로그램 등 다양한 스마트 콘텐츠를 활용한 체험 공간을 갖추고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4152d04399c678ea4d934b0f4ed133c6032a03e137deb1e06b24af869410a3e"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "스마트마이스 라운지에서 VR/AR, 게임 등 구체적 참여 체험 기회를 명시하므로 참여·몰입 활동을 지원한다. 지속적 도전 활동의 중심이라는 근거까지는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 관한 근거가 없다. MICE 행사 개최 기능은 주최 측 행사일 뿐 방문자 관계·표현 경험의 지원 요소로 보기 어렵다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "0af2b78c7cf22bdac6c26491292077f9eaf5c35090479d3426044cf98d0b512b",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "38b599b14d49ee84e0e75b47a3f9f51190b3e1d00c18cdcd5d8f9caebfdd614a",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "유리·금속 중심의 현대적 컨벤션 외관으로 전통적 재료나 공간 구성의 특성은 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0920a1f6764f382372e91a015126514c4cb31b5cdb57e63fc2cb2e4227fec221",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35400c52d7eb9587fdece3ad73377df3ec1b2c10193aa3354220c564c5085dba",
+        "match_basis": [
+          "공식 촬영지역 인천광역시 연수구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1940521",
+          "request_sha256": "0697dcd6745caba4c8235a338674b994172ce142352daa6fee322ba085f58e96",
+          "response_sha256": "e99bf9ce8429879318085cfd8b51a6b0a5cc0a90a053141576f7afbaa2a1f772",
+          "retrieved_at": "2026-09-10T08:29:31.737217Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "82357849f2edcdad4aefe4059a65e367cdc79f321fa6616607f431307bfabc86",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/21/1940521.jpg"
+        },
+        "record_sha256": "93e77ab2dcf922ef9c166a9cddbfc26cd512593a9a6b4c57f9461bc2ea6041f8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "첨절된 지붕이 반복되는 극적인 현대 건축 형태가 장면을 지배하며, 파란 간판과 유리 파사드가 강한 시각적 연출을 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1e78ea53e54d4b65e49ef95db1f50196c8cc18486ef2e7cb626a02c20cfe05c0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35400c52d7eb9587fdece3ad73377df3ec1b2c10193aa3354220c564c5085dba",
+        "match_basis": [
+          "공식 촬영지역 인천광역시 연수구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1940521",
+          "request_sha256": "0697dcd6745caba4c8235a338674b994172ce142352daa6fee322ba085f58e96",
+          "response_sha256": "e99bf9ce8429879318085cfd8b51a6b0a5cc0a90a053141576f7afbaa2a1f772",
+          "retrieved_at": "2026-09-10T08:29:31.737217Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "82357849f2edcdad4aefe4059a65e367cdc79f321fa6616607f431307bfabc86",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/21/1940521.jpg"
+        },
+        "record_sha256": "12387b5bb1fc86ff03585fbb0ae977b0bc1cd7256b26e4acc96118a0df0d1a64",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "수평 줄무늬 금속 패널의 대형 지붕 곡선과 독특한 건축 형태가 장면을 지배하며, 조각 오브제와 깃대가 구도에 리듬을 더함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1f05a4c86a70bf1f4cfb1fc2a3013c77f16d124ecebff4d6d3fb83e6c37063c5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b18f9b8958c1e36a1cda2820ebb2055b26a29ee32889fada282646ad7a2fb84b",
+        "match_basis": [
+          "공식 촬영지역 인천광역시 연수구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1940509",
+          "request_sha256": "0697dcd6745caba4c8235a338674b994172ce142352daa6fee322ba085f58e96",
+          "response_sha256": "e99bf9ce8429879318085cfd8b51a6b0a5cc0a90a053141576f7afbaa2a1f772",
+          "retrieved_at": "2026-09-10T08:29:31.737217Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "81a09a0458a540fca0bdd1073cc7bbf51524a48857c138f19a2cb4c2ca6da8f3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/09/1940509.jpg"
+        },
+        "record_sha256": "148f3731219f5885f4a37f7fc381fa29478b9e7822886c47f0da4e8310f9246b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 금속·유리 재질의 컨벤션센터형 건축으로 전통적 외관·재료의 시각적 특성은 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2090db279df1b8f7a59e0af82a90f6e00284bf3237b66a991077aff8357d7a94",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b18f9b8958c1e36a1cda2820ebb2055b26a29ee32889fada282646ad7a2fb84b",
+        "match_basis": [
+          "공식 촬영지역 인천광역시 연수구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1940509",
+          "request_sha256": "0697dcd6745caba4c8235a338674b994172ce142352daa6fee322ba085f58e96",
+          "response_sha256": "e99bf9ce8429879318085cfd8b51a6b0a5cc0a90a053141576f7afbaa2a1f772",
+          "retrieved_at": "2026-09-10T08:29:31.737217Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "81a09a0458a540fca0bdd1073cc7bbf51524a48857c138f19a2cb4c2ca6da8f3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/09/1940509.jpg"
+        },
+        "record_sha256": "69f003bb8ded90f795cef84249e2b6ed795bb50cd918574a6eeda163ff61b404",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "유리 너머로 나무 녹지와 하늘이 일부 보이나, 실내 구조가 중심이라 자연 환경 단서는 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:335124b04f834eef9b311ffe521b38e9c5fb0f60399128970d97ed6b2efa2177",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "bb4d2096fcf6b2e2ca328bbd84c59808e36cd115c1df3f50a8bcffcf77e75a7a",
+        "match_basis": [
+          "공식 촬영지역 인천광역시 연수구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1940494",
+          "request_sha256": "0697dcd6745caba4c8235a338674b994172ce142352daa6fee322ba085f58e96",
+          "response_sha256": "e99bf9ce8429879318085cfd8b51a6b0a5cc0a90a053141576f7afbaa2a1f772",
+          "retrieved_at": "2026-09-10T08:29:31.737217Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ffd592c3482cbdb2adf23323a5383ff3729a770c0a21369cc43ea5c85098c297",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/94/1940494.jpg"
+        },
+        "record_sha256": "339682c93603ac8563c62c099532b5521f2bb8bf3c05ac47db4a61f17ce1681c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "경사진 대형 지붕의 반복된 늑골 구조와 광대한 유리 커튼월이 장면 전체를 지배하는 강한 현대적 조형성을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4e06e087d4cda87b56098e3f28e2362d20ab0f0b27cb6340292e1eff2929d2a6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "bb4d2096fcf6b2e2ca328bbd84c59808e36cd115c1df3f50a8bcffcf77e75a7a",
+        "match_basis": [
+          "공식 촬영지역 인천광역시 연수구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1940494",
+          "request_sha256": "0697dcd6745caba4c8235a338674b994172ce142352daa6fee322ba085f58e96",
+          "response_sha256": "e99bf9ce8429879318085cfd8b51a6b0a5cc0a90a053141576f7afbaa2a1f772",
+          "retrieved_at": "2026-09-10T08:29:31.737217Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ffd592c3482cbdb2adf23323a5383ff3729a770c0a21369cc43ea5c85098c297",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/94/1940494.jpg"
+        },
+        "record_sha256": "0ac68b6c11c082db2d3ac526fbf03f48e59db6f0c56100ff110534d58659c2eb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "건물 앞 소규모 침엽수 녹지와 하늘 구름이 보이나, 전체는 넓은 포장 광장이 중심이라 자연 단서는 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7bd0341caa79c72fc9182a85a44f1c0b2dd8c774d0792b9bbf2c8a2b535ca692",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b18f9b8958c1e36a1cda2820ebb2055b26a29ee32889fada282646ad7a2fb84b",
+        "match_basis": [
+          "공식 촬영지역 인천광역시 연수구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1940509",
+          "request_sha256": "0697dcd6745caba4c8235a338674b994172ce142352daa6fee322ba085f58e96",
+          "response_sha256": "e99bf9ce8429879318085cfd8b51a6b0a5cc0a90a053141576f7afbaa2a1f772",
+          "retrieved_at": "2026-09-10T08:29:31.737217Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "81a09a0458a540fca0bdd1073cc7bbf51524a48857c138f19a2cb4c2ca6da8f3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/09/1940509.jpg"
+        },
+        "record_sha256": "441b58854f0e15d2042f2dd770ad7d6729ba89d34bf484a09719ee7fb72afbd6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "유리, 금속, 현대 철골 구조 중심으로 전통적 외관·재료의 시각적 특성은 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f67df6ddf5eeccd269ebd4c753d40c4bcbe04ef6364d50d86043dd2f507e82bc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "bb4d2096fcf6b2e2ca328bbd84c59808e36cd115c1df3f50a8bcffcf77e75a7a",
+        "match_basis": [
+          "공식 촬영지역 인천광역시 연수구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1940494",
+          "request_sha256": "0697dcd6745caba4c8235a338674b994172ce142352daa6fee322ba085f58e96",
+          "response_sha256": "e99bf9ce8429879318085cfd8b51a6b0a5cc0a90a053141576f7afbaa2a1f772",
+          "retrieved_at": "2026-09-10T08:29:31.737217Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ffd592c3482cbdb2adf23323a5383ff3729a770c0a21369cc43ea5c85098c297",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/94/1940494.jpg"
+        },
+        "record_sha256": "0efdd65034472367d0c0baee3f027654f45a89deb1b57485d7e7005c5b7829b7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1edc315beedadb6fa443568e09b52a59c825e1334fa1c59c6dc8107132b18c48",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "742171",
+          "request_sha256": "7f8e30d64a933eb1b525342c2e54ec61b44e94f8ca34355c48233ff7343e83f6",
+          "response_sha256": "f314c6a0874c9c19525c093e1d1a9b7dbd2e3ccaa9499964e53da428279ca403",
+          "retrieved_at": "2026-09-10T08:29:30.212818Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "cd0d7c26e9da02193fd5d87adb6aeba767fd48037b39c15451c099ccb398d583",
+          "source_uri": null
+        },
+        "record_sha256": "9ce027509e60e397d191709b3a81daa1c9fd1970404ab9c0ee43c1fbb5170105",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "영어, 중국어 표지판"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:bde0b7bd490340be2d887af96e0113bb66a7396b5ae7126c8f7408ad386abb06",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "742171",
+          "request_sha256": "0ba80daa69f3a7a51a576846c22152a87975eaad6bf434b5a2664699e21b1be7",
+          "response_sha256": "5e04c1ba65da95441ac75ad54c4d52c4f35f67dd878796dfa002bdd866390408",
+          "retrieved_at": "2026-09-10T07:40:00.592622Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-08-25T00:18:35Z",
+          "source_record_sha256": "d7d3a4dd23bda7c64a36d1b4e9c9e33289c00f976023c2a1d99b73330fad8247",
+          "source_uri": null
+        },
+        "record_sha256": "e4152d04399c678ea4d934b0f4ed133c6032a03e137deb1e06b24af869410a3e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "국제 수준의 컨벤션센터인 송도컨벤시아는 지하 1층, 지상 4층, 연면적 117,163㎡ 규모이다. 전시장은 총면적 17,021㎡로, 최대 900개 부스를 설치할 수 있으며, 두 개의 볼룸에는 최대 3,000명을 수용할 수 있다. 또한, 30명부터 500명 단위까지 수용 가능한 중소회의실을 최대 35실까지 동시에 운영할 수 있어, 국내외 MICE 행사를 개최하기에 최적의 장소이다. 송도컨벤시아는 태백산맥을 모티브로 한 독특한 외관과 고급스러운 내부 인테리어 등 국내에서 흔히 볼 수 없는 감각적인 디자인을 자랑한다. 이러한 특징 덕분에 각종 방송이나 공연 등의 촬영지로도 주목받고 있다. 일반 대중이 즐길 수 있는 행사도 수시로 열리며, 관련 시설도 잘 갖추어져 있어 나들이 삼아 들르기에도 좋은 장소이다. 다양한 음식점과 카페는 물론, 곳곳에 소소한 즐길 거리도 마련되어 있다. 송도컨벤시아 및 인천의 명소를 VR로 체험할 수 있는 코너, 입체적인 영상으로 인천을 즐기는 3D 홀로그램 존 등이 대표적이다. 그중에서도 ‘스마트마이스 라운지’는 특히 인기가 높다. 이곳은 편안한 휴게 공간과 함께 인터랙티브 미디어월, VR/AR, 게임, 홀로그램 등 다양한 스마트 콘텐츠를 활용한 체험 공간을 갖추고 있다. 또한, 송도컨벤시아는 송도 센트럴파크와도 바로 인접해 있어 함께 여행하기에 더욱 좋은 장소이다."
+      }
+    ],
+    "parent_source_sha256": "012294a6e22ae8acd88b6ab62a97fa885fc1bcb17e81a072eb5c112b23b13a9a",
+    "place": {
+      "address": "인천광역시 연수구 센트럴로 123",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+      "name_ko": "송도컨벤시아",
+      "place_id": "public:korea:e5c220fb4d57188d96e272337586d691ea8ab6e106efb11b7f94514f5ae8369c",
+      "provider_content_id": "742171",
+      "region_code": "28185",
+      "region_name": "인천광역시 연수구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

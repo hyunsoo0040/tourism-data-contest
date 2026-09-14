@@ -1,0 +1,886 @@
+{
+  "assessed_at": "2026-09-11T19:00:51.402293Z",
+  "assessment_sha256": "d0f1b93193f89563e476ad58186e1d62920d6b46cd0322ae91a55d2d757f2d1d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "확인된 유산 정자로, 여러 차례 중수 기록과 함께 현존 건물의 관람이 가능함을 제시한다. 1955년 고쳐 지은 사실로 보아 원형 그대로는 아니므로 상위 등급은 유보하고, 유산 건물의 실제 접촉 수준(2)으로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "건립·중수 연혁과 인물(배환)의 출생지, 과거 급제, 관력 등 이 장소에 연결된 구체적 역사 맥락이 제시된다. 다만 해설이 관람자에게 어떻게 제공되는지는 명시되지 않아 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "도깨비 전설과 정자 이름 유래가 장소에 연결된 구체적 이야기·의미로 제시된다. 이야기가 여러 표현·매체로 일관되게 유통되는지는 근거가 없어 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:031b13722142b83a0c5a848aa815cfbb446b88dca8aa78bcf9b3cdc7ea99c381",
+            "appearance:21ba8a9c0b8417b41c33729fe1c12c9487813c8c49a6f66de3f0e09786937f47",
+            "appearance:3c884fd7deee89953b6168e13a38c7b804dca38dc1e86569e5809c401edac469"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "절벽 위 입지와 강·들판을 내려다보는 경관 등 구별되는 시각적 성격이 확인된다. 건물 구조(마루·온돌방·툇마루) 묘사도 있으나 경관 연출이 장면을 지배한다는 수준의 근거는 없어 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:25366267f1014cd0608ea317ab825be0360e3be812e3e407fc6f47fe75baa568",
+            "appearance:d0a02597c8c97793f05ac51ebed9e41c734be7ebe4849a2e0b3ac14b9a7ab632",
+            "appearance:ed704261efc8ff96c0275d8f5f263523fcdddc8fb7bb0aa3bcdee1139e70ea1b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안 앵커는 '자연·시각적 저자극 환경이 두드러짐'(수준 4)인데, 근거는 강과 들판을 내려다보는 자연 단서의 확인 수준이며 판단 사유 스스로 실제 고요함·저자극성 확인 불가를 인정한다. 자연 단서 확인(수준 3)은 되지만 '두드러짐'을 직접 뒷받침하는 관찰·확인 근거가 부족하여 현재 제안 수준 기준으로는 확정할 수 없다.",
+      "value": 92
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991",
+          "quote": {
+            "end": 56,
+            "method": "EXACT",
+            "original": "낙암정은 조선시대의 문신 배환을 기리기 위해 문종 1년(1451) 흥해 배씨 후손들이 지은 정자이다.",
+            "start": 0,
+            "submitted": "낙암정은 조선시대의 문신 배환을 기리기 위해 문종 1년(1451) 흥해 배씨 후손들이 지은 정자이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f6f99ead6206eabc0400764f08dbce440c50694aab5a29b1273faa0335653c24"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 2,
+      "reason": "확인된 유산 정자로, 여러 차례 중수 기록과 함께 현존 건물의 관람이 가능함을 제시한다. 1955년 고쳐 지은 사실로 보아 원형 그대로는 아니므로 상위 등급은 유보하고, 유산 건물의 실제 접촉 수준(2)으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991",
+          "quote": {
+            "end": 162,
+            "method": "EXACT",
+            "original": "배환은 흥해 배씨 중 안동 지역에 처음으로 정착한 배상지의 둘째 아들이다.",
+            "start": 121,
+            "submitted": "배환은 흥해 배씨 중 안동 지역에 처음으로 정착한 배상지의 둘째 아들이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f6f99ead6206eabc0400764f08dbce440c50694aab5a29b1273faa0335653c24"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 3,
+      "reason": "건립·중수 연혁과 인물(배환)의 출생지, 과거 급제, 관력 등 이 장소에 연결된 구체적 역사 맥락이 제시된다. 다만 해설이 관람자에게 어떻게 제공되는지는 명시되지 않아 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "건립 주체가 흥해 배씨 후손들이라는 점에서 가문 연원은 확인되나, 현재 지역 주체의 전승·생활문화 활동이 지속되는지에 대한 근거가 없다. 과거 유래만으로 현재의 전승을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "개요에 역사 서사가 기술되어 있으나, 이것이 현장 해설·전시·탐구 프로그램으로 방문자에게 제공되는지는 확인할 수 없다. 텍스트 자체의 서술만으로 해설 제공 경험을 확정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991",
+          "quote": {
+            "end": 409,
+            "method": "EXACT",
+            "original": "낙암정의 자리는 도깨비가 정해 주었다는 이야기가 전해진다.",
+            "start": 377,
+            "submitted": "낙암정의 자리는 도깨비가 정해 주었다는 이야기가 전해진다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f6f99ead6206eabc0400764f08dbce440c50694aab5a29b1273faa0335653c24"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 3,
+      "reason": "도깨비 전설과 정자 이름 유래가 장소에 연결된 구체적 이야기·의미로 제시된다. 이야기가 여러 표현·매체로 일관되게 유통되는지는 근거가 없어 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "장소 이미지의 매체적 재현·확산(작품, 홍보, SNS 등)에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991",
+          "quote": {
+            "end": 301,
+            "method": "EXACT",
+            "original": "낙암정은 낙동강 옆 절벽에 세워져 낙동강과 강 건너 넓은 계평 들판의 아름다운 경관이 한눈에 내려다보인다.",
+            "start": 242,
+            "submitted": "낙암정은 낙동강 옆 절벽에 세워져 낙동강과 강 건너 넓은 계평 들판의 아름다운 경관이 한눈에 내려다보인다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f6f99ead6206eabc0400764f08dbce440c50694aab5a29b1273faa0335653c24"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "절벽 위 입지와 강·들판을 내려다보는 경관 등 구별되는 시각적 성격이 확인된다. 건물 구조(마루·온돌방·툇마루) 묘사도 있으나 경관 연출이 장면을 지배한다는 수준의 근거는 없어 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 직접 경험하거나 재현하는 활동의 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색·여유·자기 선택을 지원한다는 근거가 없다. 무료라는 사실만으로 자유·여유를 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "제안 앵커는 '자연·시각적 저자극 환경이 두드러짐'(수준 4)인데, 근거는 강과 들판을 내려다보는 자연 단서의 확인 수준이며 판단 사유 스스로 실제 고요함·저자극성 확인 불가를 인정한다. 자연 단서 확인(수준 3)은 되지만 '두드러짐'을 직접 뒷받침하는 관찰·확인 근거가 부족하여 현재 제안 수준 기준으로는 확정할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "참여·도전·몰입할 구체적 활동의 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "3dbfdb9756619eeeeba9a9cd65bdffbbe7b3e6deafd230b363bd2f6c216dc633",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991",
+              "quote": {
+                "end": 301,
+                "method": "EXACT",
+                "original": "낙동강과 강 건너 넓은 계평 들판의 아름다운 경관이 한눈에 내려다보인다.",
+                "start": 261,
+                "submitted": "낙동강과 강 건너 넓은 계평 들판의 아름다운 경관이 한눈에 내려다보인다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f6f99ead6206eabc0400764f08dbce440c50694aab5a29b1273faa0335653c24"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "강과 넓은 들판을 내려다보는 자연 환경 단서가 확인된다. 툇마루 등 머물 공간 단서도 있으나 실제 고요함·혼잡·심리적 회복은 확인할 수 없어 3으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "제안 앵커는 '자연·시각적 저자극 환경이 두드러짐'(수준 4)인데, 근거는 강과 들판을 내려다보는 자연 단서의 확인 수준이며 판단 사유 스스로 실제 고요함·저자극성 확인 불가를 인정한다. 자연 단서 확인(수준 3)은 되지만 '두드러짐'을 직접 뒷받침하는 관찰·확인 근거가 부족하여 현재 제안 수준 기준으로는 확정할 수 없다."
+        }
+      },
+      "reason": "제안 앵커는 '자연·시각적 저자극 환경이 두드러짐'(수준 4)인데, 근거는 강과 들판을 내려다보는 자연 단서의 확인 수준이며 판단 사유 스스로 실제 고요함·저자극성 확인 불가를 인정한다. 자연 단서 확인(수준 3)은 되지만 '두드러짐'을 직접 뒷받침하는 관찰·확인 근거가 부족하여 현재 제안 수준 기준으로는 확정할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "bbd7c7620697d07a536f22aa88d398277a236a955b791f60501e8d3899d56e81",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "기와 지붕의 전통 누각이 울창한 초록 숲 속에 배치된 구도가 인상적이며, 흐린 하늘과 풍부한 녹색 대비가 두드러진 시각적 성격을 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:031b13722142b83a0c5a848aa815cfbb446b88dca8aa78bcf9b3cdc7ea99c381",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3c9d11b5e2c2ffa6fb2a4e32bca1476a8b51c45a3ec0a828727b1f1ef7104102",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552979_4",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1a3dbf1423c8a16fb4d2cfd3d115ffa0e8f58686e4027fdfd5a68e84e08fe77c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/79/3552979_image2_1.jpg"
+        },
+        "record_sha256": "740004d4f4ff1e93e98ce5b2eb004ad6db85a42b10f0b7e4bd04fea81d0c0def",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흙벽의 따뜻한 노란색과 기와 지붕의 회색 대비가 뚜렷하고, 휘어진 처마와 대칭적 구도가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:21ba8a9c0b8417b41c33729fe1c12c9487813c8c49a6f66de3f0e09786937f47",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7abcca252f531586e001a80662f78e3ad50941d7b6677a83763e4c18f40117fd",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552983_3",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a6beafc00968c66609c67205a0bf0a7a7bb4b4f54bd3bd539a6a8a37e60734c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/3552983_image2_1.jpg"
+        },
+        "record_sha256": "0626c1b72f11e4e15d320e5074d467bccd2d7e5bf84e102a645c122ea0a8c0df",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "울창한 나무, 잔디밭, 풀로 덮인 비탈이 건물을 둘러싸며 자연 환경 단서가 풍부함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:25366267f1014cd0608ea317ab825be0360e3be812e3e407fc6f47fe75baa568",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7abcca252f531586e001a80662f78e3ad50941d7b6677a83763e4c18f40117fd",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552983_3",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a6beafc00968c66609c67205a0bf0a7a7bb4b4f54bd3bd539a6a8a37e60734c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/3552983_image2_1.jpg"
+        },
+        "record_sha256": "277f4936dc9994b541c0b6bb9bd5f4858bd0cf59535a2c51588cb2a5877836d0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "기와지붕의 곡선과 나무 기둥·난간의 질감이 뚜렷하며, 잔디밭과 숲의 대비가 화면을 지배하는 구성이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3c884fd7deee89953b6168e13a38c7b804dca38dc1e86569e5809c401edac469",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e54718ebd479027f7bddc40bca995bb0a7e95568a205fe4a525b9bad008c5bb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552982_2",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b7c487f9b267f20bf2c4ac589fb5d023de6861a25d89bf7742a4819c0a168c74",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/82/3552982_image2_1.jpg"
+        },
+        "record_sha256": "b12e95db86652b950b06ed43e33f5bce0a0d650466a086dba1a64dbf1b46352c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와 지붕, 목재 기둥과 격자문 창, 흙벽, 돌기단 등 전통 외관 요소가 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5b4f0a1507614a15f03f9b33bd7b604fbcb3ad45b5cbcb38a14aaaf6338d3c0f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7abcca252f531586e001a80662f78e3ad50941d7b6677a83763e4c18f40117fd",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552983_3",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a6beafc00968c66609c67205a0bf0a7a7bb4b4f54bd3bd539a6a8a37e60734c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/3552983_image2_1.jpg"
+        },
+        "record_sha256": "f96f54879eb117d20f15da32601119aa20e3d7e54de474de0677d9d5bd6eff35",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와지붕, 처마, 목조 누각 형태, 돌기단 등 전통 한옥 외관이 장면의 중심으로 강하게 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6d106aa5aa7f8394a34c4571722fa5974780960f0876901a060ccc96b68e4e4c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e54718ebd479027f7bddc40bca995bb0a7e95568a205fe4a525b9bad008c5bb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552982_2",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b7c487f9b267f20bf2c4ac589fb5d023de6861a25d89bf7742a4819c0a168c74",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/82/3552982_image2_1.jpg"
+        },
+        "record_sha256": "c193efc82d7bba2e808ca537702edbc32885246f8e4067594178b713d861d730",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "한옥 기와 지붕, 처마 곡선, 목조 재질의 누각과 작은 문루가 전통 외관의 시각적 특성을 뚜렷하게 보여준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9964a45802c2d333c91e7d595a9966de49c3c305d85597e91e1f91c24e0b4147",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3c9d11b5e2c2ffa6fb2a4e32bca1476a8b51c45a3ec0a828727b1f1ef7104102",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552979_4",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1a3dbf1423c8a16fb4d2cfd3d115ffa0e8f58686e4027fdfd5a68e84e08fe77c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/79/3552979_image2_1.jpg"
+        },
+        "record_sha256": "5bed690c7594d214755b1accd5170615e3015bc882b46df87e84e61191432a4b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "건물 뒤편을 메운 울창한 숲과 넓은 잔디밭이 화면 대부분을 차지하며 자연 환경 단서가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d0a02597c8c97793f05ac51ebed9e41c734be7ebe4849a2e0b3ac14b9a7ab632",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e54718ebd479027f7bddc40bca995bb0a7e95568a205fe4a525b9bad008c5bb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552982_2",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b7c487f9b267f20bf2c4ac589fb5d023de6861a25d89bf7742a4819c0a168c74",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/82/3552982_image2_1.jpg"
+        },
+        "record_sha256": "ba5f074a8710aadf9e5f78e02d6f243163f8ae222832242dc01b381e125e5ce6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "산 전체를 뒤덮은 울창한 숲, 넓은 잔디밭, 트인 녹지 배경이 장면을 지배하며 자연 환경 단서가 매우 강하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ed704261efc8ff96c0275d8f5f263523fcdddc8fb7bb0aa3bcdee1139e70ea1b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3c9d11b5e2c2ffa6fb2a4e32bca1476a8b51c45a3ec0a828727b1f1ef7104102",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3552979_4",
+          "request_sha256": "f45ab78992f28421fc8cec7d7eb712486e2d933df8cd7b25b9ce48fb12f78a15",
+          "response_sha256": "74a65105478cc94f4b81bac419fd535281366a823dd9f24055b8a2ae6620e236",
+          "retrieved_at": "2026-09-11T02:10:24.810855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1a3dbf1423c8a16fb4d2cfd3d115ffa0e8f58686e4027fdfd5a68e84e08fe77c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/79/3552979_image2_1.jpg"
+        },
+        "record_sha256": "c2bf05689bd59151823de8311ffa7c9e3ffba948f66d580378118ad39ef0d76f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:0b664fb73ca99b582351ebdd820dbe25d3e857cc30783426534d2e8471864991",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126995",
+          "request_sha256": "9b0c655f759f3c93d70127ae4039a244d0fc94b615fe2979df51f3f1015e9a54",
+          "response_sha256": "3217a5fbef25361d8454d558598f3ffb378531a8d7a2110bc38663b7018eca8b",
+          "retrieved_at": "2026-09-10T17:07:11.995786Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-15T05:51:24Z",
+          "source_record_sha256": "c752cfac77ff9b30bf6859ea6281a9bf262b5931dd7a265f13b7b30d8b267753",
+          "source_uri": null
+        },
+        "record_sha256": "f6f99ead6206eabc0400764f08dbce440c50694aab5a29b1273faa0335653c24",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "낙암정은 조선시대의 문신 배환을 기리기 위해 문종 1년(1451) 흥해 배씨 후손들이 지은 정자이다. 선조 8년(1575)과 순조 13년(1813)에 다시 지었고, 고종 18년(1881)과 1955년에 고쳐 지었다. 배환은 흥해 배씨 중 안동 지역에 처음으로 정착한 배상지의 둘째 아들이다. 지금의 안동시 서후면 금계리 지역에서 태어났으며, 태종 1년(1401) 문과에 급제한 후 여러 관직을 거쳐 황해·충청·전라도 관찰사를 지냈다 낙암정은 낙동강 옆 절벽에 세워져 낙동강과 강 건너 넓은 계평 들판의 아름다운 경관이 한눈에 내려다보인다. 왼쪽에 마루가 있고 오른쪽에 온돌방이 있으며, 앞면에는 난간을 두른 툇마루가 있다. 일반적인 정자에 비해서 누마루 아래 기둥이 짧다. 낙암정의 자리는 도깨비가 정해 주었다는 이야기가 전해진다. 하루는 배환이 선비들과 술을 마시다가 거나하게 취해 낙동강 옆 백사장에서 잠이 들어 버렸다. 마침 지나가던 도깨비들이 배환이 죽은 줄로 알고 좋은 묫자리를 찾아 묻어 주기로 하였다. 도깨비들은 배환을 메고 강가의 가파른 절벽을 오르다가 지금의 낙암정 자리에 배환을 묻어 주고자 하였다. 배환은 그제야 잠에서 깼으나 계속 죽은 체하면서 듣고 있었다. 그때 한 도깨비가 이곳은 묫자리보다는 정자를 지을 터라고 하며 다른 곳을 찾자고 하였다. 도깨비들이 한눈을 파는 사이, 배환이 “네 이놈들! 내가 죽긴 왜 죽느냐!” 하고 크게 호통을 치며 일어났다. 놀란 도깨비들은 사라지고, 그 소동에 절벽 위에 있던 큰 바위가 굴러 떨어져 정자를 짓기 좋은 터가 만들어졌다. ‘낙암정’이라는 이름은 이 이야기에서 비롯되었다고 한다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:31745d069cd6943ff433e7baa00aecf106564389c2d57e3451863eda62643832",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126995",
+          "request_sha256": "4bd2929cd4e82a7e7e5cce7ee8ecc91fbcd4c8fd7990f10f154d968f7ec7e3b6",
+          "response_sha256": "ee0d32d53cd311ba1b8b654beba3c320679e3ca401361f63e0bdf1023c30a163",
+          "retrieved_at": "2026-09-11T02:10:24.487206Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "255abc09244b3ab5839cd0db3c6075325c6561c9a776c6bd2873278640772d18",
+          "source_uri": null
+        },
+        "record_sha256": "8de2e1ca49b71dcf3aa1eef27c4f4ab0425fda03f6f68388710de5a830b407fe",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "0afd9837ed6382263a1147dd817f26f3c92bdc2c4760f08a180e931515c76002",
+    "place": {
+      "address": "경상북도 안동시 남후면 풍산단호로 895",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+      "name_ko": "낙암정",
+      "place_id": "public:korea:ca2d534afcaecf515060c8f58206ed2ce2d984c836c06c5a7572755f00f15562",
+      "provider_content_id": "126995",
+      "region_code": "47170",
+      "region_name": "경상북도 안동시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

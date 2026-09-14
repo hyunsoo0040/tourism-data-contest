@@ -1,0 +1,735 @@
+{
+  "assessed_at": "2026-09-11T16:15:11.594929Z",
+  "assessment_sha256": "6140b2ee41fdb976834bc12b0e9d4f6b2f7df4906c77f5741734c3d8c34e0269",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "value": 64
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 32
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:52f5e0ffc5cc36aa36f8c386d59761d815dbe75a647c32f5dba262eeadbe082d",
+            "appearance:f7e363efe3c95367b49c2a97f5751e38d16f5de7bd140c0416e60af56a13fa64"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 63,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "보행통로 전체를 벽화와 공공미술 전시 공간으로 전환했다는 직접 서술이 있어 시각적 표현의 존재는 확인된다. 다만 그 성격이 장소 이미지를 지배하는 수준인지는 알 수 없어 제한적 표현 수준으로 평가한다.",
+      "value": 53
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "여행 토퍼 대여, SNS 연계 인증샷 이벤트, 아트투어 등 방문자가 장소 장면을 직접 경험하고 재현(촬영·참여)할 수 있는 활동이 명시되어 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "열린 갤러리를 걸으며 즐긴다는 서술은 자율적으로 둘러보는 탐색 기회를 시사하지만, 통로라는 제한된 공간 특성상 제한적인 자유 선택 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:85e48a99d55b840a9839768ff917dd70a26037541e9007b00ac1fe98254031a7",
+            "appearance:e377d0188ed8e0970c37844a33129bb126ff86da20db76ca22fcc7c6e95c951a"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 13,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "개요는 지하 보행통로 내 스마트 편의시설·미디어월·팝업 부스를 설명할 뿐, 자연 환경이나 시각적 저자극·머무를 환경에 대한 근거가 없다. '한강과 인접'은 센터 자체의 회복 환경을 의미하지 않는다.",
+      "value": 13
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 관광안내센터·지하 보행통로·미디어월·팝업 체험을 설명할 뿐, 확인된 실제 원형·유산과의 접촉에 대한 근거가 없다. 관광특구 지정 사실은 유산 접촉 경험을 의미하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소 자체의 역사·연혁·사건·인물 맥락을 다루는 설명이 개요에 없다. 관광통역안내사 상주는 일반 여행 상담 지원이지 이 장소의 역사 탐구 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 대한 근거가 없다. K-패션&뷰티 팝업은 현대 상업 체험이며 전통 전승 활동이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 제공 근거가 없다. AI 피부 진단, 퍼스널 컬러 컨설팅, 아트투어 언급은 원형 맥락의 역사 해설임을 확인해주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "장소에 사회적으로 부여된 구체적 이미지·상징적 의미의 내용이 개요에 제시되지 않았다. '관광특구 거점'이라는 기능적 서술은 공유된 의미의 내용을 확인해주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "SNS 연계 인증샷 이벤트 언급은 매체 연계 활동의 존재를 알리지만, 장소 이미지가 매체에서 재현·확산되는 구체적 내용과 강도에 대한 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c",
+          "quote": {
+            "end": 369,
+            "method": "EXACT",
+            "original": "이동 통로 전체를 ‘피카소 벽화’와 공공미술 전시 공간으로 전환하여 걸으며 즐기는 열린 갤러리를 구현했다.",
+            "start": 310,
+            "submitted": "이동 통로 전체를 ‘피카소 벽화’와 공공미술 전시 공간으로 전환하여 걸으며 즐기는 열린 갤러리를 구현했다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "22781a88370b6c1ff32c8b33666fa2dd933966c41c915d230917f1118adec6d9"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "보행통로 전체를 벽화와 공공미술 전시 공간으로 전환했다는 직접 서술이 있어 시각적 표현의 존재는 확인된다. 다만 그 성격이 장소 이미지를 지배하는 수준인지는 알 수 없어 제한적 표현 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c",
+          "quote": {
+            "end": 523,
+            "method": "EXACT",
+            "original": "여행 토퍼 대여 및 SNS 연계 인증샷 이벤트, 예술 결합형 아트투어 등 방문객이 직접 참여하고 즐기는",
+            "start": 466,
+            "submitted": "여행 토퍼 대여 및 SNS 연계 인증샷 이벤트, 예술 결합형 아트투어 등 방문객이 직접 참여하고 즐기는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "22781a88370b6c1ff32c8b33666fa2dd933966c41c915d230917f1118adec6d9"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "여행 토퍼 대여, SNS 연계 인증샷 이벤트, 아트투어 등 방문자가 장소 장면을 직접 경험하고 재현(촬영·참여)할 수 있는 활동이 명시되어 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c",
+          "quote": {
+            "end": 368,
+            "method": "EXACT",
+            "original": "걸으며 즐기는 열린 갤러리를 구현했다",
+            "start": 348,
+            "submitted": "걸으며 즐기는 열린 갤러리를 구현했다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "22781a88370b6c1ff32c8b33666fa2dd933966c41c915d230917f1118adec6d9"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "열린 갤러리를 걸으며 즐긴다는 서술은 자율적으로 둘러보는 탐색 기회를 시사하지만, 통로라는 제한된 공간 특성상 제한적인 자유 선택 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "개요는 지하 보행통로 내 스마트 편의시설·미디어월·팝업 부스를 설명할 뿐, 자연 환경이나 시각적 저자극·머무를 환경에 대한 근거가 없다. '한강과 인접'은 센터 자체의 회복 환경을 의미하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "체험 콘텐츠의 존재는 확인되지만 팝업 부스 기반 단기·상담형 진단 활동이어서 '지속적으로 참여·도전할 활동'(수준 3)에 해당한다고 보기 어렵다. 제한된 체험 기회 수준이 상한이다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "관광통역안내사 상담은 서비스 이용이지 공동 활동·자기표현 기회가 아니며, 아트투어의 공동 창작 성격도 근거가 없다. '함께 만들거나 자신을 표현할 활동이 풍부'(수준 3)는 뒷받침되지 않는다. 제한된 공동 활동 수준이 상한이다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "bc94d309be2d4f355b211f2b55b930cf461b212e36a2083ffc9df9908ead209f",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c",
+              "quote": {
+                "end": 464,
+                "method": "EXACT",
+                "original": "‘K-패션&뷰티 코칭스테이션’ 팝업 부스를 통해 AI 피부·두피 진단, 퍼스널 컬러 컨설팅, 뷰티 컬러링 등의 전문적인 체험 콘텐츠를 제공하며",
+                "start": 385,
+                "submitted": "‘K-패션&뷰티 코칭스테이션’ 팝업 부스를 통해 AI 피부·두피 진단, 퍼스널 컬러 컨설팅, 뷰티 컬러링 등의 전문적인 체험 콘텐츠를 제공하며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "22781a88370b6c1ff32c8b33666fa2dd933966c41c915d230917f1118adec6d9"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "AI 피부·두피 진단, 퍼스널 컬러 컨설팅, 뷰티 컬러링, 아트투어 등 구체적 참여 활동이 명시되어 있다. 단기 팝업·상담 형태라 지속적 도전 활동 중심이라고 단정하기는 어렵다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.c",
+          "reason": "체험 콘텐츠의 존재는 확인되지만 팝업 부스 기반 단기·상담형 진단 활동이어서 '지속적으로 참여·도전할 활동'(수준 3)에 해당한다고 보기 어렵다. 제한된 체험 기회 수준이 상한이다."
+        }
+      },
+      "reason": "체험 콘텐츠의 존재는 확인되지만 팝업 부스 기반 단기·상담형 진단 활동이어서 '지속적으로 참여·도전할 활동'(수준 3)에 해당한다고 보기 어렵다. 제한된 체험 기회 수준이 상한이다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c",
+              "quote": {
+                "end": 212,
+                "method": "EXACT",
+                "original": "영어·중국어·일본어 서비스가 가능한 전문 관광통역안내사가 상주해 국내외 방문객의 여행 상담을 원스톱으로 지원한다",
+                "start": 150,
+                "submitted": "영어·중국어·일본어 서비스가 가능한 전문 관광통역안내사가 상주해 국내외 방문객의 여행 상담을 원스톱으로 지원한다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "22781a88370b6c1ff32c8b33666fa2dd933966c41c915d230917f1118adec6d9"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 3,
+          "reason": "관광통역안내사와의 상담, 예술 결합형 아트투어 등 교류 기회가 명시되어 있다. 다만 자기표현·공동 창작 활동의 깊이에 대한 근거는 부족하여 구체적 교류 기회 수준으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "관광통역안내사 상담은 서비스 이용이지 공동 활동·자기표현 기회가 아니며, 아트투어의 공동 창작 성격도 근거가 없다. '함께 만들거나 자신을 표현할 활동이 풍부'(수준 3)는 뒷받침되지 않는다. 제한된 공동 활동 수준이 상한이다."
+        }
+      },
+      "reason": "관광통역안내사 상담은 서비스 이용이지 공동 활동·자기표현 기회가 아니며, 아트투어의 공동 창작 성격도 근거가 없다. '함께 만들거나 자신을 표현할 활동이 풍부'(수준 3)는 뒷받침되지 않는다. 제한된 공동 활동 수준이 상한이다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "dd3f4d21d02c3878e98b22602ad75d62705ec66a9e60b4d10016fc2f4cc514d7",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "내부 조명이 켜진 백색 관람장 진열대와 청색 톤 디지털 키오스크 화면이 정돈된 현대적 구성을 이루지만, 전반적으로 차분하고 기능적인 연출로 시각적 성격은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:52f5e0ffc5cc36aa36f8c386d59761d815dbe75a647c32f5dba262eeadbe082d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "47255e333495379c06f50e5cb3c354e3004fecc56df6a6b0d83d5f4ac87cdbfd",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4061276_4",
+          "request_sha256": "b013eec5f9c2a4aed8a4d180a419a18103111acd2d9a3530a0b45523d62c7b4a",
+          "response_sha256": "7f35fed0ee483feba7651d8ebfda346f80fee27f6da6b853971d49c88170f642",
+          "retrieved_at": "2026-09-10T08:20:43.787668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c0a1a45cca30b5bc31c1a0ac9a8150ef5290b0cda9798a8585d55eeab763569d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/4061276_image2_1.jpg"
+        },
+        "record_sha256": "568eee61f64dda9d97c68d143ffdfcd74a6462226b47f3a2cc6856cbc3690961",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "흰 벽면과 현대적 안내센터 인테리어가 중심이며, 전통 외관·재료·공간 구성의 시각적 특성은 컷아웃 일러스트 속 건물 표현 외에 뚜렷하지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5ded883497526033729eb6816559e98461848d8d491060d985beb634f60a93b3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c3d195da4900d596c61c1f26f4ccc8dd62e8e7f09b9444da645a3a14b948d6c4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4061281_1",
+          "request_sha256": "b013eec5f9c2a4aed8a4d180a419a18103111acd2d9a3530a0b45523d62c7b4a",
+          "response_sha256": "7f35fed0ee483feba7651d8ebfda346f80fee27f6da6b853971d49c88170f642",
+          "retrieved_at": "2026-09-10T08:20:43.787668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2d42f4168f0bb8efa855de229d92c5e9665071e947ede74fbaa2e83d8c56619c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/81/4061281_image2_1.jpg"
+        },
+        "record_sha256": "8ef9f550c2dd9d9ab7f0330ae5131b1b88c5bf4f8ad5a81c864860ef6afd2b21",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "실내 안내센터 공간으로 자연 경관은 거의 보이지 않고, 배경에 작은 화분 녹색 식물 정도만 환경 단서로 확인됨.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:85e48a99d55b840a9839768ff917dd70a26037541e9007b00ac1fe98254031a7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c3d195da4900d596c61c1f26f4ccc8dd62e8e7f09b9444da645a3a14b948d6c4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4061281_1",
+          "request_sha256": "b013eec5f9c2a4aed8a4d180a419a18103111acd2d9a3530a0b45523d62c7b4a",
+          "response_sha256": "7f35fed0ee483feba7651d8ebfda346f80fee27f6da6b853971d49c88170f642",
+          "retrieved_at": "2026-09-10T08:20:43.787668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2d42f4168f0bb8efa855de229d92c5e9665071e947ede74fbaa2e83d8c56619c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/81/4061281_image2_1.jpg"
+        },
+        "record_sha256": "29afd0acca138adf6e7d786221164f6eaa16e343800a7b11cfd28baa77e1866d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "백색 현대적 진열장과 디지털 스크린 중심으로 전통적 외관·재료·공간 구성의 특성이 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d0d4c599e8086f37a768c9a4dce0c981d2cb04d727d797a908a6350fc645269c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "47255e333495379c06f50e5cb3c354e3004fecc56df6a6b0d83d5f4ac87cdbfd",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4061276_4",
+          "request_sha256": "b013eec5f9c2a4aed8a4d180a419a18103111acd2d9a3530a0b45523d62c7b4a",
+          "response_sha256": "7f35fed0ee483feba7651d8ebfda346f80fee27f6da6b853971d49c88170f642",
+          "retrieved_at": "2026-09-10T08:20:43.787668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c0a1a45cca30b5bc31c1a0ac9a8150ef5290b0cda9798a8585d55eeab763569d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/4061276_image2_1.jpg"
+        },
+        "record_sha256": "1146827dd3be5d4d3faccb8e03b040fbcf112adc1030e006664d8cd59bb27fde",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지, 물, 자연 경관 등 자연 환경 단서가 전혀 보이지 않는 실내 안내 공간이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e377d0188ed8e0970c37844a33129bb126ff86da20db76ca22fcc7c6e95c951a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "47255e333495379c06f50e5cb3c354e3004fecc56df6a6b0d83d5f4ac87cdbfd",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4061276_4",
+          "request_sha256": "b013eec5f9c2a4aed8a4d180a419a18103111acd2d9a3530a0b45523d62c7b4a",
+          "response_sha256": "7f35fed0ee483feba7651d8ebfda346f80fee27f6da6b853971d49c88170f642",
+          "retrieved_at": "2026-09-10T08:20:43.787668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c0a1a45cca30b5bc31c1a0ac9a8150ef5290b0cda9798a8585d55eeab763569d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/4061276_image2_1.jpg"
+        },
+        "record_sha256": "587e2b7710b2e45646e2bee9a44fe22e5d467a32a3151dc873cf050056c80db1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "화려한 무지개색 홀로그램 관광 기념 컷아웃이 전경을 차지하며, 채도 높은 색과 반짝이는 질감으로 시선을 강하게 끄는 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f7e363efe3c95367b49c2a97f5751e38d16f5de7bd140c0416e60af56a13fa64",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c3d195da4900d596c61c1f26f4ccc8dd62e8e7f09b9444da645a3a14b948d6c4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4061281_1",
+          "request_sha256": "b013eec5f9c2a4aed8a4d180a419a18103111acd2d9a3530a0b45523d62c7b4a",
+          "response_sha256": "7f35fed0ee483feba7651d8ebfda346f80fee27f6da6b853971d49c88170f642",
+          "retrieved_at": "2026-09-10T08:20:43.787668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2d42f4168f0bb8efa855de229d92c5e9665071e947ede74fbaa2e83d8c56619c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/81/4061281_image2_1.jpg"
+        },
+        "record_sha256": "6e7f9749e1de8c3534755c58d3ed4e580f059e08e8b12cdc38843a7724e1a7b6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3be2cfb567d9d420424515f6351bddc102c2b806bf369df79ed8ddf9240d9a4c",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "4061724",
+          "request_sha256": "9a7132dbd48e18e5dfe08201e1a79f707f1cedd64c5347f0d8e95e24c11ce4cc",
+          "response_sha256": "49dbcd370dc07062f6a3d391d9d0a57a0383f996f6e14ae809a949b9de9928f8",
+          "retrieved_at": "2026-09-10T08:16:26.744267Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-02T09:10:35Z",
+          "source_record_sha256": "d9daa45a448fca5a4594c30231b5f621dd9f32b1803d9a71b24df07c7a48f501",
+          "source_uri": null
+        },
+        "record_sha256": "22781a88370b6c1ff32c8b33666fa2dd933966c41c915d230917f1118adec6d9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "고속터미널역에서 반포한강공원까지 이어지는 지하 공공보행통로 안에 서울 8번째이자 한강과 인접한 최초의 관광특구인 고터·세빛 관광특구의 거점 안내 공간이 자리한다. 고터·세빛 관광안내센터는 서초구·서울관광재단·서울시관광협회가 협력해 운영하는 스마트 관광 안내 공간으로, 영어·중국어·일본어 서비스가 가능한 전문 관광통역안내사가 상주해 국내외 방문객의 여행 상담을 원스톱으로 지원한다. 내부에는 최신 관광 정보를 실시간으로 제공하는 대형 미디어 월과 관광안내 키오스크·관광안내 책자·와우패스 기기·무인 동전 환전기 등 스마트 관광 편의시설이 갖추어져 있다. 이동 통로 전체를 ‘피카소 벽화’와 공공미술 전시 공간으로 전환하여 걸으며 즐기는 열린 갤러리를 구현했다. 또한 지역 인프라를 활용한 ‘K-패션&뷰티 코칭스테이션’ 팝업 부스를 통해 AI 피부·두피 진단, 퍼스널 컬러 컨설팅, 뷰티 컬러링 등의 전문적인 체험 콘텐츠를 제공하며, 여행 토퍼 대여 및 SNS 연계 인증샷 이벤트, 예술 결합형 아트투어 등 방문객이 직접 참여하고 즐기는 완성도 높은 문화·체험 중심의 복합 관광 허브로 운영되고 있다."
+      }
+    ],
+    "parent_source_sha256": "38dc6f225afba7825459b842e24278a924685c7cea508ccaa464440d0469d91c",
+    "place": {
+      "address": "서울특별시 서초구 반포대로 333 (반포동, 래미안 원베일리)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+      "name_ko": "고터 세빛 관광안내센터",
+      "place_id": "public:korea:29828d13f391fe6dee9280dd962c83fbe5b5265d71cbc6e02823c4c84ecc714e",
+      "provider_content_id": "4061724",
+      "region_code": "11650",
+      "region_name": "서울특별시 서초구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

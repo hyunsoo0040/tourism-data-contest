@@ -1,0 +1,1003 @@
+{
+  "assessed_at": "2026-09-11T17:07:05.098430Z",
+  "assessment_sha256": "d568de47fa0a661d3342163b10eac98ce0eed7b0a8ed3bbed7498d19a9128a97",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 57
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 70
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'작은 동강'이라는 공유된 이미지가 이 장소에 부여되어 있음이 공식 소개에서 확인된다. 이미지의 내용이 확인되지만 방문 경험의 중심이라는 근거까지는 없어 수준 2로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2137ff14d5a6b945e99883552956f74a84315e6a59848e77bdc3e88bb14ffb13",
+            "appearance:47c4e20b5533d33a8f59b4cd76c0d6f6c2bfb29ac8d114b07316cea99f17b2ac"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 63,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "절벽 사이 강물, 백사장, 다양한 경관 등 장소를 구별하는 시각적 성격이 공식 소개로 확인된다. 경관이 장면 전체를 지배한다는 근거는 없어 수준 3.",
+      "value": 72
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "축제에서 뗏목 재현, 래프팅 등 대표 장면(강·물놀이 이미지)을 직접 체험할 수 있음이 확인된다. 정기 축제 시기에 한정되고 이미지 재현이 방문 경험의 중심이라는 근거는 없어 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "언제 어디서든 낚시, 강변 곳곳 백사장, 오토캠핑 등 방문자가 자신의 방식으로 머물고 탐색할 기회가 확인된다. 자율 탐색이 방문 경험의 중심이라는 근거는 없어 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1d18e03e119f40b2f160a85aae1c5468748471a74d03321af4a1eef7c0f5a19e",
+            "appearance:2c4059a9d372b6b68775d9a3f132e2ee06b54f81c48d281427ef3f3e7cb1f4c6",
+            "appearance:85d2b22471164bddde277393367b19d82fa1a9aff9e5894dc9f967c927df7c69"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "자연 발생 유원지, 강과 절벽·백사장, 숲속 오토캠핑 등 자연 환경 단서가 확인된다. 그러나 실제 고요함이나 혼잡 정도에 대한 정보는 없어 회복 환경이 지배한다고 보기 어렵고 수준 3로 판단.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+            "evidence:282be1bc71c21c01291d35472202266005c2341a1855190641460e1649d9c386"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "래프팅이라는 구체적 참여·신체 활동이 명시되고 수상레저 체험이 공식 안내로 확인된다. 지속적 도전 활동이 방문의 중심이라는 근거까지는 없어 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "면민의 날과 함께 열리는 축제, 남녀노소가 함께하는 물놀이 행사 등 공동 활동 기회가 확인된다. 연중 상시적 교류·자기표현의 근거는 없어 수준 2.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 자연 발생 유원지, 백사장, 래프팅 등 자연 경관과 레저를 설명할 뿐, 확인된 문화유산 원형이나 실물 유산과의 접촉에 대한 내용이 없다. 부재는 낮음의 근거가 아니므로 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개발 연혁(래프팅 관광지로 개발)은 언급되지만 이 장소의 실제 역사적 사건·인물 맥락에 대한 설명은 없다. 역사 맥락의 탐구를 지원하는 근거가 부족하여 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "부남 면민의 날과 연계한 축제가 언급되지만, 이것이 지역 주체의 실제 전승·생활문화의 지속과 연결되는지에 대한 구체적 근거는 제공되지 않아 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 내용이 근거에 없다. 별자리 탐험 등은 일반 체험이므로 유산 해설로 보기 어렵다. UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 357,
+            "method": "EXACT",
+            "original": "래프팅 명소인 강원도 동강을 빗대어 작은 동강이라고 불린다",
+            "start": 325,
+            "submitted": "래프팅 명소인 강원도 동강을 빗대어 작은 동강이라고 불린다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'작은 동강'이라는 공유된 이미지가 이 장소에 부여되어 있음이 공식 소개에서 확인된다. 이미지의 내용이 확인되지만 방문 경험의 중심이라는 근거까지는 없어 수준 2로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "'잘 알려져 있으며'라는 표현은 인지도를 암시할 뿐 특정 매체를 통한 이미지 재현·유통의 근거는 없다. SNS·작품·홍보 매체 정보가 부재하므로 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 301,
+            "method": "EXACT",
+            "original": "우뚝 솟은 절벽 사이로 강물이 흐르고 있어",
+            "start": 278,
+            "submitted": "우뚝 솟은 절벽 사이로 강물이 흐르고 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 92,
+            "method": "EXACT",
+            "original": "다양한 경관과 아름다운 경치를 간직하고 있어",
+            "start": 68,
+            "submitted": "다양한 경관과 아름다운 경치를 간직하고 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "절벽 사이 강물, 백사장, 다양한 경관 등 장소를 구별하는 시각적 성격이 공식 소개로 확인된다. 경관이 장면 전체를 지배한다는 근거는 없어 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 468,
+            "method": "EXACT",
+            "original": "다음날에는 뗏목 재현 및 래프팅, 물 나르기, 물풍선 터트리기, 강변 마라톤 등",
+            "start": 424,
+            "submitted": "다음날에는 뗏목 재현 및 래프팅, 물 나르기, 물풍선 터트리기, 강변 마라톤 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "축제에서 뗏목 재현, 래프팅 등 대표 장면(강·물놀이 이미지)을 직접 체험할 수 있음이 확인된다. 정기 축제 시기에 한정되고 이미지 재현이 방문 경험의 중심이라는 근거는 없어 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 545,
+            "method": "EXACT",
+            "original": "유원지에서는 언제 어디서든 낚시를 할 수 있어 야영객의 인기를 끌고 있으며",
+            "start": 504,
+            "submitted": "유원지에서는 언제 어디서든 낚시를 할 수 있어 야영객의 인기를 끌고 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "언제 어디서든 낚시, 강변 곳곳 백사장, 오토캠핑 등 방문자가 자신의 방식으로 머물고 탐색할 기회가 확인된다. 자율 탐색이 방문 경험의 중심이라는 근거는 없어 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 92,
+            "method": "EXACT",
+            "original": "대표적인 자연 발생 유원지로 다양한 경관과 아름다운 경치를 간직하고 있어",
+            "start": 52,
+            "submitted": "대표적인 자연 발생 유원지로 다양한 경관과 아름다운 경치를 간직하고 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 276,
+            "method": "EXACT",
+            "original": "인근의 부남면 체육공원 안쪽으로 오토캠핑장도 갖추고 있다",
+            "start": 245,
+            "submitted": "인근의 부남면 체육공원 안쪽으로 오토캠핑장도 갖추고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "자연 발생 유원지, 강과 절벽·백사장, 숲속 오토캠핑 등 자연 환경 단서가 확인된다. 그러나 실제 고요함이나 혼잡 정도에 대한 정보는 없어 회복 환경이 지배한다고 보기 어렵고 수준 3로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 131,
+            "method": "EXACT",
+            "original": "무주군에서 레저 스포츠로 인기를 얻고 있는 래프팅 관광지로 개발하였다",
+            "start": 93,
+            "submitted": "무주군에서 레저 스포츠로 인기를 얻고 있는 래프팅 관광지로 개발하였다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:282be1bc71c21c01291d35472202266005c2341a1855190641460e1649d9c386",
+          "quote": {
+            "end": 4,
+            "method": "EXACT",
+            "original": "수상레저",
+            "start": 0,
+            "submitted": "수상레저",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "1077cdfb81121a45c12da9335bbeb6a0ce6b675399bd458b2f1ece793692767d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "래프팅이라는 구체적 참여·신체 활동이 명시되고 수상레저 체험이 공식 안내로 확인된다. 지속적 도전 활동이 방문의 중심이라는 근거까지는 없어 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 395,
+            "method": "EXACT",
+            "original": "매년 여름 부남 강변 축제가 부남 면민의 날 행사와 동시에 열린다",
+            "start": 359,
+            "submitted": "매년 여름 부남 강변 축제가 부남 면민의 날 행사와 동시에 열린다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        },
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+          "quote": {
+            "end": 502,
+            "method": "EXACT",
+            "original": "남녀노소가 즐길 수 있는 다채로운 물놀이 행사 등이 진행된다",
+            "start": 469,
+            "submitted": "남녀노소가 즐길 수 있는 다채로운 물놀이 행사 등이 진행된다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "면민의 날과 함께 열리는 축제, 남녀노소가 함께하는 물놀이 행사 등 공동 활동 기회가 확인된다. 연중 상시적 교류·자기표현의 근거는 없어 수준 2.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "807bdc304f842b2d5e83c77d1822167333fe0e8ca2a1502efff1310333979a98",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "3a548656e5a04c800060ac47d6a0905e4ec935b81d89d4d52d8849039479740a",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "석재 축소 수로와 곡선형 목재 교량이 전통적 외관을 연상시키지만 자연석이 아닌 시공된 재료로 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:04cd921f56a1427cd7d6dc9e11ea27c534cc2ff771b65fe3abf3aebaa21ec98f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3f082fe1284ac353d2f526dda579e86b99b294be54847e2833f6d95ed67ef5e8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3536326_4",
+          "request_sha256": "1db695058cdfb323664c1cdc9f23270025a5740b0ea23589cdeb4a0ba8f87fbb",
+          "response_sha256": "c15ddb2a085428d2fc2fbf199e2670abbfedbcd7bd6791804922465cb94ad00e",
+          "retrieved_at": "2026-09-10T08:23:17.570346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9bd4829086e22d631a6d07e0b05867cb8c37206479d3fdcf7cc0e3ac6776f608",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/26/3536326_image2_1.jpg"
+        },
+        "record_sha256": "5be1f228bc9341303bf12121930b2b76abc0af3bedd0857db7bcca8556287ec3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 산 전체가 배경을 지배하고, 넓은 잔디 녹지가 화면 대부분을 차지해 자연 환경 단서가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1d18e03e119f40b2f160a85aae1c5468748471a74d03321af4a1eef7c0f5a19e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a6317870b47b143d4d522dd4b7e5f6a68e4f38c0ced256528b2d113f267b220a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3536321_3",
+          "request_sha256": "1db695058cdfb323664c1cdc9f23270025a5740b0ea23589cdeb4a0ba8f87fbb",
+          "response_sha256": "c15ddb2a085428d2fc2fbf199e2670abbfedbcd7bd6791804922465cb94ad00e",
+          "retrieved_at": "2026-09-10T08:23:17.570346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2de92837929bb8b0c96f1f20352e719ee4ef5cd620e9c2b7a70372aa278859cb",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/21/3536321_image2_1.jpg"
+        },
+        "record_sha256": "e3f964d4a56d52586ad30e0b97e95fd6562fb1456652f320398bd6578b8b726b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘과 흰 구름, 울창한 녹색 산림과 갈색 목교, 돌 수로가 대비되며 중앙 다리를 향한 대칭적 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2137ff14d5a6b945e99883552956f74a84315e6a59848e77bdc3e88bb14ffb13",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3f082fe1284ac353d2f526dda579e86b99b294be54847e2833f6d95ed67ef5e8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3536326_4",
+          "request_sha256": "1db695058cdfb323664c1cdc9f23270025a5740b0ea23589cdeb4a0ba8f87fbb",
+          "response_sha256": "c15ddb2a085428d2fc2fbf199e2670abbfedbcd7bd6791804922465cb94ad00e",
+          "retrieved_at": "2026-09-10T08:23:17.570346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9bd4829086e22d631a6d07e0b05867cb8c37206479d3fdcf7cc0e3ac6776f608",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/26/3536326_image2_1.jpg"
+        },
+        "record_sha256": "879e3966bab8341f8d9322b4ee999c98f2977dc2e9a7a48df2c1deb8ceb12dc0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "잔디밭이 화면을 지배하고 뒤로 울창한 나무와 산들이 시야를 채워 자연 경관이 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2c4059a9d372b6b68775d9a3f132e2ee06b54f81c48d281427ef3f3e7cb1f4c6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e65caba54409f83f55e770128c7c578ee861cab2c858b0a58a41f81c6c188efe",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3536327_5",
+          "request_sha256": "1db695058cdfb323664c1cdc9f23270025a5740b0ea23589cdeb4a0ba8f87fbb",
+          "response_sha256": "c15ddb2a085428d2fc2fbf199e2670abbfedbcd7bd6791804922465cb94ad00e",
+          "retrieved_at": "2026-09-10T08:23:17.570346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a25f125b9093851fedfb80c3247d654acaa1964092e890b7c743c4bd6a72f72",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/27/3536327_image2_1.jpg"
+        },
+        "record_sha256": "90469d16b0a58a95d61212468642f429f7e97f005455d118d2a404ee3be2d4a1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "푸른 하늘과 흰 구름, 넓은 잔디밭과 둘러싸인 산림의 대비가 평범하지만 개방감 있는 구성을 이룸. 특별한 연출은 두드러지지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:47c4e20b5533d33a8f59b4cd76c0d6f6c2bfb29ac8d114b07316cea99f17b2ac",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e65caba54409f83f55e770128c7c578ee861cab2c858b0a58a41f81c6c188efe",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3536327_5",
+          "request_sha256": "1db695058cdfb323664c1cdc9f23270025a5740b0ea23589cdeb4a0ba8f87fbb",
+          "response_sha256": "c15ddb2a085428d2fc2fbf199e2670abbfedbcd7bd6791804922465cb94ad00e",
+          "retrieved_at": "2026-09-10T08:23:17.570346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a25f125b9093851fedfb80c3247d654acaa1964092e890b7c743c4bd6a72f72",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/27/3536327_image2_1.jpg"
+        },
+        "record_sha256": "6f43beb10e2fba8d56f253e336372001ff90f45c5fc7fd7c9c6eb715c7668d1f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "기념비로 보이는 석비 정도의 단서만 있고 전통 외관·재료의 시각적 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4e88ad7e6c29c0a0b7c005b2dd1d37e15f6ed366b0a157853cc8b6a56a4ba116",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a6317870b47b143d4d522dd4b7e5f6a68e4f38c0ced256528b2d113f267b220a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3536321_3",
+          "request_sha256": "1db695058cdfb323664c1cdc9f23270025a5740b0ea23589cdeb4a0ba8f87fbb",
+          "response_sha256": "c15ddb2a085428d2fc2fbf199e2670abbfedbcd7bd6791804922465cb94ad00e",
+          "retrieved_at": "2026-09-10T08:23:17.570346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2de92837929bb8b0c96f1f20352e719ee4ef5cd620e9c2b7a70372aa278859cb",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/21/3536321_image2_1.jpg"
+        },
+        "record_sha256": "6e48000bc0a856e95b68a1b0f779dfa82f0c50da1d6dcd34961c13aa6a8f5be5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 외관이나 재료의 시각적 단서는 거의 보이지 않으며, 배경의 작은 구조물만 희미하게 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6c1a830913cd18aa75c1e4751a6e882b6c5c9da21f0ea0f8ee35c374b710f83f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e65caba54409f83f55e770128c7c578ee861cab2c858b0a58a41f81c6c188efe",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3536327_5",
+          "request_sha256": "1db695058cdfb323664c1cdc9f23270025a5740b0ea23589cdeb4a0ba8f87fbb",
+          "response_sha256": "c15ddb2a085428d2fc2fbf199e2670abbfedbcd7bd6791804922465cb94ad00e",
+          "retrieved_at": "2026-09-10T08:23:17.570346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a25f125b9093851fedfb80c3247d654acaa1964092e890b7c743c4bd6a72f72",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/27/3536327_image2_1.jpg"
+        },
+        "record_sha256": "98729c5e25d6867cc61c2ffabb3ccd509395273fb91fac8ddf9e59ce30c10795",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "뒷산의 울창한 숲, 잔디와 자갈 하상, 작은 시냇물, 원경의 산들이 장면 전체를 지배하는 자연 환경이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:85d2b22471164bddde277393367b19d82fa1a9aff9e5894dc9f967c927df7c69",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3f082fe1284ac353d2f526dda579e86b99b294be54847e2833f6d95ed67ef5e8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3536326_4",
+          "request_sha256": "1db695058cdfb323664c1cdc9f23270025a5740b0ea23589cdeb4a0ba8f87fbb",
+          "response_sha256": "c15ddb2a085428d2fc2fbf199e2670abbfedbcd7bd6791804922465cb94ad00e",
+          "retrieved_at": "2026-09-10T08:23:17.570346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9bd4829086e22d631a6d07e0b05867cb8c37206479d3fdcf7cc0e3ac6776f608",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/26/3536326_image2_1.jpg"
+        },
+        "record_sha256": "84e0c3e9d53154e44e82af40ec3da7a6c777b45b0ce9c847d8704c94512995c3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:021df3516874c3c5699856bde30d50fdeca3f7b5de6cc07e6f905dc72d88b761",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1624882",
+          "request_sha256": "6f7fb898e8d9726b0124e92d48c43e51f972cccf75e0b5a63bbae6b38df2dd80",
+          "response_sha256": "d9b4d7759ebbcb648b01042c613e07b73b7d8d1ad53d2e19bad0132bba1ed1bd",
+          "retrieved_at": "2026-09-10T07:33:44.002880Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-09-18T05:12:01Z",
+          "source_record_sha256": "af30ff704a0d46a17410da9a903fb3230320c6e745d922b030e261d018272919",
+          "source_uri": null
+        },
+        "record_sha256": "926d3b4de34df3921263a22d333d091c36100084ec06d877a9c779425cf29534",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무주군 부남면 대소리와 대유리, 굴암리를 거쳐 길이 약 13.5㎞의 금강천이 흐른다. 이곳은 대표적인 자연 발생 유원지로 다양한 경관과 아름다운 경치를 간직하고 있어 무주군에서 레저 스포츠로 인기를 얻고 있는 래프팅 관광지로 개발하였다. 대소 마을 강변을 비롯한 봉길 마을 백사장, 한티 마을 강변, 상굴 마을 강변, 하굴암 마을 백사장 등 강변 곳곳에 백사장이 형성되어 있다. 주차장과 화장실 등의 기본적인 편의 시설이 갖추어져 있으며 인근의 부남면 체육공원 안쪽으로 오토캠핑장도 갖추고 있다. 우뚝 솟은 절벽 사이로 강물이 흐르고 있어 여름철 래프팅 명소로도 잘 알려져 있으며 래프팅 명소인 강원도 동강을 빗대어 작은 동강이라고 불린다. 매년 여름 부남 강변 축제가 부남 면민의 날 행사와 동시에 열린다. 행사 전날 전야제로 별자리 탐험 행사가 유명하며 다음날에는 뗏목 재현 및 래프팅, 물 나르기, 물풍선 터트리기, 강변 마라톤 등 남녀노소가 즐길 수 있는 다채로운 물놀이 행사 등이 진행된다. 유원지에서는 언제 어디서든 낚시를 할 수 있어 야영객의 인기를 끌고 있으며 인근 부남면 체육공원은 숲속에 차를 갖고 들어가 오토캠핑을 할 수 있다는 점도 매력적이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:282be1bc71c21c01291d35472202266005c2341a1855190641460e1649d9c386",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "1624882",
+          "request_sha256": "6ee7c55fc0006e99efdee8d8f860fcbb756a96e5f44dfcd9e0b49965a8cb13e3",
+          "response_sha256": "c5f7853a7460bd79eb896852a143f00cb60d48bad8381456ca1f4f7da0109d21",
+          "retrieved_at": "2026-09-10T07:33:44.342000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "61f9876304b7253a44207489cf26483ed29dc394d0fc8db6a300f29ec97b5b1f",
+          "source_uri": null
+        },
+        "record_sha256": "1077cdfb81121a45c12da9335bbeb6a0ce6b675399bd458b2f1ece793692767d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "수상레저"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:72b9b40091b537b533d42917d24bcfe974600c5a806b7af1d8918bd3ba00ba8f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1624882",
+          "request_sha256": "6ee7c55fc0006e99efdee8d8f860fcbb756a96e5f44dfcd9e0b49965a8cb13e3",
+          "response_sha256": "e72811acfb6c6ae8d21bd6db62cd337c676b4da85ceb9fcdda7966b61aee1505",
+          "retrieved_at": "2026-09-10T08:23:17.233452Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ecde9cf8ab390c4845555b92884fc41f6fba7cc11ffbfc5efca7f83b01f62554",
+          "source_uri": null
+        },
+        "record_sha256": "1a8f4100d7f9a0902336858787dc2b3a24a973e743ce2990d3c4c727a9e56abd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:74b284d032b7686493610079149fa1543a79b5f95a11df94cf844bd35565c588",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1624882",
+          "request_sha256": "6ee7c55fc0006e99efdee8d8f860fcbb756a96e5f44dfcd9e0b49965a8cb13e3",
+          "response_sha256": "e72811acfb6c6ae8d21bd6db62cd337c676b4da85ceb9fcdda7966b61aee1505",
+          "retrieved_at": "2026-09-10T08:23:17.233452Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4ac7f8277f660b7868b0d3b99711d48d70d3b4073d67583258c5e003af04861f",
+          "source_uri": null
+        },
+        "record_sha256": "1deba1b18807fbd0276b9cf3d3d9e7b87daf271c145747223ea07db47ab6ee0b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "오토 캠핑장"
+      }
+    ],
+    "parent_source_sha256": "7dfe4b674b118c7a123f9e7c6878fd825fc8feb55c5976b369870448c6ab3a68",
+    "place": {
+      "address": "전북특별자치도 무주군 부남면 대소리",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+      "name_ko": "부남강변 유원지",
+      "place_id": "public:korea:5ba90cd3265082114923fdbca2aa8e9056ea024fee2c3605997d3dc0600703d3",
+      "provider_content_id": "1624882",
+      "region_code": "52730",
+      "region_name": "전북특별자치도 무주군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -116,9 +116,9 @@ class FailedPlace(StrictContract):
 
 class MvpReleaseLineage(StrictContract):
     model: Literal["glm-5.3-flash"] = "glm-5.3-flash"
-    endpoint: Literal[
+    endpoint: Literal["https://api.z.ai/api/coding/paas/v4/chat/completions"] = (
         "https://api.z.ai/api/coding/paas/v4/chat/completions"
-    ] = "https://api.z.ai/api/coding/paas/v4/chat/completions"
+    )
     prompt_sha256: Sha256
     response_schema_sha256: Sha256
     source_sha256: Sha256

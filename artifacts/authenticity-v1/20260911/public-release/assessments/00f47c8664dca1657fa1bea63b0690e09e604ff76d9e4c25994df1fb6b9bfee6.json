@@ -1,0 +1,648 @@
+{
+  "assessed_at": "2026-09-11T18:09:58.866723Z",
+  "assessment_sha256": "00f47c8664dca1657fa1bea63b0690e09e604ff76d9e4c25994df1fb6b9bfee6",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "마대산에 김삿갓의 생가터·묘역 등 실제 유적이 자리하고 방문객이 함께 볼 수 있다고 명시되어 원형·유산과의 접촉이 가능하나, 유적 탐구가 경험의 중심이라고까지 단정하기는 어려워 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소와 연결된 김삿갓(김병연)이라는 인물과 그 방랑 생활이라는 구체적 역사·인물 맥락이 제공되지만, 여러 맥락을 심층적으로 연결하는 설명까지의 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "마대산에는 방랑시인 김삿갓의 문학적 감성이라는 구체적 이미지·이야기와 300대 명산이라는 상징이 연결되어 있으며, 유적·경관·동강 전망 등 여러 표현에서 일관된 의미가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "동강 전망, 장목수림, 가을 단풍, 기암괴석 등 뚜렷한 시각적 성격이 확인되지만 일관된 연출이 장면을 지배한다고까지 보기는 어렵다. E.c의 텍스트 claim은 VISUAL_EXPRESSION이므로 repair 중 VISUAL_EXPRESSION 인용만 채택하고 VISUAL_APPEARANCE 인용은 제외했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "정상의 동강 전망, 돌탑·성황당 등 대표 장면을 현장에서 직접 경험할 수 있으나, 촬영·참여를 통한 재현이 경험의 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "생가에서 정상까지 이어지는 등산로가 제공되어 방문객이 자신의 방식으로 탐색할 자율적 기회가 확인되지만, 자유로운 탐색이 경험의 중심이라는 근거는 부족하다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "맑은 계곡, 수림, 단풍 등 자연 환경 단서가 구체적으로 확인되지만, 실제 고요함·혼잡 수준이나 회복 효과를 단정할 수는 없어 수준 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "4.39km 등산로라는 구체적 신체 활동·탐방 기회가 확인된다. 다만 등산 이외의 다양한 참여 활동이나 지속적 도전 활동이 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 149,
+            "method": "EXACT",
+            "original": "김병연의 유적지가 자리하고 있는 곳으로 그의 생가터, 묘역 등을 함께 볼 수 있으며",
+            "start": 103,
+            "submitted": "김병연의 유적지가 자리하고 있는 곳으로 그의 생가터, 묘역 등을 함께 볼 수 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 2,
+      "reason": "마대산에 김삿갓의 생가터·묘역 등 실제 유적이 자리하고 방문객이 함께 볼 수 있다고 명시되어 원형·유산과의 접촉이 가능하나, 유적 탐구가 경험의 중심이라고까지 단정하기는 어려워 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 122,
+            "method": "EXACT",
+            "original": "평생 삿갓을 쓰고 팔도를 떠돌며 방랑 생활을 했던 일명 김삿갓 김병연의 유적지가 자리하고 있는 곳",
+            "start": 68,
+            "submitted": "평생 삿갓을 쓰고 팔도를 떠돌며 방랑 생활을 했던 일명 김삿갓 김병연의 유적지가 자리하고 있는 곳",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "이 장소와 연결된 김삿갓(김병연)이라는 인물과 그 방랑 생활이라는 구체적 역사·인물 맥락이 제공되지만, 여러 맥락을 심층적으로 연결하는 설명까지의 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "김삿갓 유적과 관련한 지역 주체의 현재 전승·생활문화 활동이 지속되고 있다는 근거가 제공되지 않았다. 유적의 존재만으로 현재 전승을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유적·역사에 연결된 해설·전시·학습 프로그램에 대한 구체적 근거가 없다. 인근 김삿갓문학관 언급은 시설 이용 안내일 뿐 마대산에서의 해설 제공을 확인하지 못한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 566,
+            "method": "EXACT",
+            "original": "평생을 방랑시인으로 살았던 김삿갓의 문학적 감성을 마주하게 된다",
+            "start": 531,
+            "submitted": "평생을 방랑시인으로 살았던 김삿갓의 문학적 감성을 마주하게 된다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 61,
+            "method": "EXACT",
+            "original": "한국의 산하가 선정한 300대 명산에 포함되어 있다",
+            "start": 33,
+            "submitted": "한국의 산하가 선정한 300대 명산에 포함되어 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "마대산에는 방랑시인 김삿갓의 문학적 감성이라는 구체적 이미지·이야기와 300대 명산이라는 상징이 연결되어 있으며, 유적·경관·동강 전망 등 여러 표현에서 일관된 의미가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "장소의 이미지가 매체(작품·홍보·SNS 등)를 통해 재현·유통된다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 237,
+            "method": "EXACT",
+            "original": "해발 1,052m의 정상에서 내려다보는 동강과 햇빛을 가리는 장목수림, 그리고 아름다운 계곡풍경이 유명하다",
+            "start": 178,
+            "submitted": "해발 1,052m의 정상에서 내려다보는 동강과 햇빛을 가리는 장목수림, 그리고 아름다운 계곡풍경이 유명하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "동강 전망, 장목수림, 가을 단풍, 기암괴석 등 뚜렷한 시각적 성격이 확인되지만 일관된 연출이 장면을 지배한다고까지 보기는 어렵다. E.c의 텍스트 claim은 VISUAL_EXPRESSION이므로 repair 중 VISUAL_EXPRESSION 인용만 채택하고 VISUAL_APPEARANCE 인용은 제외했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 338,
+            "method": "EXACT",
+            "original": "등산로 초입이 되는 김삿갓 묘역 앞에는 수십개의 돌탑과 성황당이 있어 관광객의 눈길을 끈다",
+            "start": 288,
+            "submitted": "등산로 초입이 되는 김삿갓 묘역 앞에는 수십개의 돌탑과 성황당이 있어 관광객의 눈길을 끈다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 530,
+            "method": "EXACT",
+            "original": "마대산의 아름다운 계곡에서 기암괴석들 사이로 보이는 동강을 내려다보면",
+            "start": 492,
+            "submitted": "마대산의 아름다운 계곡에서 기암괴석들 사이로 보이는 동강을 내려다보면",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "정상의 동강 전망, 돌탑·성황당 등 대표 장면을 현장에서 직접 경험할 수 있으나, 촬영·참여를 통한 재현이 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 286,
+            "method": "EXACT",
+            "original": "마대산 등산로는 김삿갓 생가에서 시작해 정상까지 이어지며, 최단코스는 4.39km이다",
+            "start": 239,
+            "submitted": "마대산 등산로는 김삿갓 생가에서 시작해 정상까지 이어지며, 최단코스는 4.39km이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "생가에서 정상까지 이어지는 등산로가 제공되어 방문객이 자신의 방식으로 탐색할 자율적 기회가 확인되지만, 자유로운 탐색이 경험의 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 459,
+            "method": "EXACT",
+            "original": "유적지 내에 흐르는 곡동천은 여름철에는 유리알처럼 맑고 풍부한 수량이 기암괴석 사이로 넘쳐흐르고",
+            "start": 406,
+            "submitted": "유적지 내에 흐르는 곡동천은 여름철에는 유리알처럼 맑고 풍부한 수량이 기암괴석 사이로 넘쳐흐르고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "맑은 계곡, 수림, 단풍 등 자연 환경 단서가 구체적으로 확인되지만, 실제 고요함·혼잡 수준이나 회복 효과를 단정할 수는 없어 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+          "quote": {
+            "end": 286,
+            "method": "EXACT",
+            "original": "마대산 등산로는 김삿갓 생가에서 시작해 정상까지 이어지며, 최단코스는 4.39km이다",
+            "start": 239,
+            "submitted": "마대산 등산로는 김삿갓 생가에서 시작해 정상까지 이어지며, 최단코스는 4.39km이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "4.39km 등산로라는 구체적 신체 활동·탐방 기회가 확인된다. 다만 등산 이외의 다양한 참여 활동이나 지속적 도전 활동이 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "bf170ceb8703386feba1287b0369bd2375a3e0165da0741e98a1cf0fcb729b51",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:203f98df0fd80c729ee818df57e2306eec7598b1890a31b02b00f4182efe0b09",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9511b484fedc94343ec6be5630d475a70651b97fa5d638f4994814bfc94d0cb0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127299",
+          "request_sha256": "3c6ff86e815bc23a8ecbb72b406a1f1d91e0f9363b184f1f238fdac4fe6ac83f",
+          "response_sha256": "726fdbffe46191fe81b9284944a2f46fdaf7a98a66b5c94aeac75fc286761813",
+          "retrieved_at": "2026-09-10T17:18:21.003950Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-02-19T07:07:59Z",
+          "source_record_sha256": "4540af0337d8092f91f34200cca43eef83e30549a680b580c9c9d752e03c3fc6",
+          "source_uri": null
+        },
+        "record_sha256": "e63b2927141b0b92af96d7732ee7b88f07b5c945e7f1272d30769e94e21ad122",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "영월군 김삿갓면과 충북 단양군 영춘면 경계에 있는 산으로, 한국의 산하가 선정한 300대 명산에 포함되어 있다. 마대산은 평생 삿갓을 쓰고 팔도를 떠돌며 방랑 생활을 했던 일명 김삿갓 김병연의 유적지가 자리하고 있는 곳으로 그의 생가터, 묘역 등을 함께 볼 수 있으며 선낙골 계곡의 가을 단풍이 매우 아름다운 산이다. 해발 1,052m의 정상에서 내려다보는 동강과 햇빛을 가리는 장목수림, 그리고 아름다운 계곡풍경이 유명하다. 마대산 등산로는 김삿갓 생가에서 시작해 정상까지 이어지며, 최단코스는 4.39km이다. 등산로 초입이 되는 김삿갓 묘역 앞에는 수십개의 돌탑과 성황당이 있어 관광객의 눈길을 끈다. 근처에 있는 김삿갓 유적지는 노루목에 있다. 산맥의 형상이 노루가 엎드려 있는 듯한 모습이라 하여 노루목이라 불린다. 유적지 내에 흐르는 곡동천은 여름철에는 유리알처럼 맑고 풍부한 수량이 기암괴석 사이로 넘쳐흐르고 가을에는 형형색색 단풍이 아름다워 감탄을 자아내게 한다. 마대산의 아름다운 계곡에서 기암괴석들 사이로 보이는 동강을 내려다보면 평생을 방랑시인으로 살았던 김삿갓의 문학적 감성을 마주하게 된다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:254340c73334e03ce8f20ee2bcb8ea0d9461c47155c7f5bc340ea83a7e80e30f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9511b484fedc94343ec6be5630d475a70651b97fa5d638f4994814bfc94d0cb0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127299",
+          "request_sha256": "13f94786c03e5ae97016d32f8a672bb370452e270e55fff5c9d7331da8b1c94b",
+          "response_sha256": "a772b37b9f0e5a8ddea490da4e4e8f04a48436f3dda63b4bf30e0d58476b23db",
+          "retrieved_at": "2026-09-11T02:07:46.346176Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b7b6b1416d04b268696bc01ad08733875e61c17e6187e8a5dca8bb478e94618",
+          "source_uri": null
+        },
+        "record_sha256": "ad0b9d8ba2e29b181611030f8fd8977300fc73bbe033bd86835f396ff095c8f7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "없음(김삿갓문학관 시설 이용)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7441f7dac8e4219d06b2a5841332a9f2143857ff3942792ab1fc7305a887d71b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9511b484fedc94343ec6be5630d475a70651b97fa5d638f4994814bfc94d0cb0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127299",
+          "request_sha256": "13f94786c03e5ae97016d32f8a672bb370452e270e55fff5c9d7331da8b1c94b",
+          "response_sha256": "a772b37b9f0e5a8ddea490da4e4e8f04a48436f3dda63b4bf30e0d58476b23db",
+          "retrieved_at": "2026-09-11T02:07:46.346176Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4241ca849ce5784f8b8616e56a8c8f3d0cfa2e941e75b31af181add9c0b52ca0",
+          "source_uri": null
+        },
+        "record_sha256": "041f93825c1777093653fc64198c0445c4d23dbdf8d3d19a5e83c06e0435c0a3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "없음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:84ff68dd20a06d2a4ea14f4cff877fb5c6de7cde8009f0acbd7e83af644a39b5",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9511b484fedc94343ec6be5630d475a70651b97fa5d638f4994814bfc94d0cb0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127299",
+          "request_sha256": "13f94786c03e5ae97016d32f8a672bb370452e270e55fff5c9d7331da8b1c94b",
+          "response_sha256": "a772b37b9f0e5a8ddea490da4e4e8f04a48436f3dda63b4bf30e0d58476b23db",
+          "retrieved_at": "2026-09-11T02:07:46.346176Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "db4a8b393091e68c6e0f21d704f86e4def8f0bea010635cc9406242127c93ed1",
+          "source_uri": null
+        },
+        "record_sha256": "473097a88371bcbb3601e82ebae816100b8699122a1034e6fab9fa852dfcf29e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "불가"
+      }
+    ],
+    "parent_source_sha256": "ba29c0321ac673aae9c8d503328bf50cbfc38f52e3933e331b6c029ebe976861",
+    "place": {
+      "address": "강원특별자치도 영월군 김삿갓면 김삿갓로 216-22",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:9511b484fedc94343ec6be5630d475a70651b97fa5d638f4994814bfc94d0cb0",
+      "name_ko": "마대산",
+      "place_id": "public:korea:9511b484fedc94343ec6be5630d475a70651b97fa5d638f4994814bfc94d0cb0",
+      "provider_content_id": "127299",
+      "region_code": "51750",
+      "region_name": "강원특별자치도 영월군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

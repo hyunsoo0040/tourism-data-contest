@@ -1,0 +1,742 @@
+{
+  "assessed_at": "2026-09-11T15:50:39.337354Z",
+  "assessment_sha256": "68937578110efe322d357a006ddc77db93efe64b41bc7b6e605ad243a385e9ed",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c66d7913661ae5bce01ce7b710a5188e7b360a3c60b2a7ed2da1d7e1b8c44534"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소에 '미래를 함께하는 따뜻한 금융'이라는 기업 철학과 청년 예술인 지원·사회공헌의 이미지가 부여되어 있다는 공식 서술이 있다. 다만 방문 경험의 중심이라는 근거까지는 없어 수준 2(구체적 이미지·이야기의 연결)로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:28afcfbb96b48ef6a8afc618efe7429efafa71bf3e685f18ae68beb4449c3429",
+            "appearance:b14df520c4fc6e6a3dd41c1cdd79912d6aad63b9020269b6f272718d9f22d256",
+            "appearance:e8cab63296c0cb1a2f5e04e720deb8cd5bf55fe3eab9f89973c1d424ed37b227"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출 등 시각적 표현에 대한 서술이 개관문에 없다. 콘서트홀과 갤러리 구성만으로 시각적 성격을 판단할 수 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:b73744b4e3a81886a77b54aaadf4918d44e6aad5fe0211a914d4a17ca64394cf",
+            "appearance:da6a1873359f188d428db324cd42b4b7d1ea0920cea4fdf2c4fa0b4c9756ad14",
+            "appearance:dd4158673f1cb02e5088035ee1c10ff6fdffeb368c9dfe3606de8e2488abaeec"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연·저자극·머무를 환경에 대한 단서가 개관문에 전혀 없다. 도심 은행 별관 부지라는 사실만으로 환경을 추정하지 않는다.",
+      "value": 0
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개관문은 2008년 신한은행 강남별관에 조성된 복합문화공간 설립 취지를 설명할 뿐, 이 장소에서 확인된 원형·문화유산과의 접촉 근거가 없다. 은행별관 건물의 원형성이나 유산 가치에 대한 서술이 없어 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관 연도(2008년)와 설립 취지만 있을 뿐, 이 장소 자체의 역사적 사건·인물·연혁에 대한 구체적 서사가 제시되지 않는다. 설립 연도만으로 역사 맥락 탐구 경험을 인정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다. 기업 메세나 시设施라는 설명만으로 실제 전통의 지속을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "공연과 전시 운영은 언급되지만, 원형·유산·전통에 연결된 해설·탐구 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c66d7913661ae5bce01ce7b710a5188e7b360a3c60b2a7ed2da1d7e1b8c44534",
+          "quote": {
+            "end": 555,
+            "method": "EXACT",
+            "original": "신한은행의 ‘미래를 함께하는 따뜻한 금융’이라는 철학을 문화예술 영역에서 실천해 나가는 중심지로 자리매김하고 있다.",
+            "start": 491,
+            "submitted": "신한은행의 ‘미래를 함께하는 따뜻한 금융’이라는 철학을 문화예술 영역에서 실천해 나가는 중심지로 자리매김하고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "64e66eb081684528016fa290f458ace8027687aa3ac5e82532589a14c46c900a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "이 장소에 '미래를 함께하는 따뜻한 금융'이라는 기업 철학과 청년 예술인 지원·사회공헌의 이미지가 부여되어 있다는 공식 서술이 있다. 다만 방문 경험의 중심이라는 근거까지는 없어 수준 2(구체적 이미지·이야기의 연결)로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출 등 시각적 표현에 대한 서술이 개관문에 없다. 콘서트홀과 갤러리 구성만으로 시각적 성격을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있는지에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "별도의 외부 대관 없이 운영한다는 점은 자율 탐색의 제한 여부를 직접 뒷받침하지 않으며, 자율적 선택·탐색 기회에 대한 근거 자체가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연·저자극·머무를 환경에 대한 단서가 개관문에 전혀 없다. 도심 은행 별관 부지라는 사실만으로 환경을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "콘서트홀 공연과 갤러리 전시가 언급되지만 관람객의 참여·몰입형 활동 기회에 대한 구체적 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "'지역사회와 함께 동반 성장'이라는 표현은 기업의 자기 서술일 뿐, 방문자 간 교류·공동 활동·자기표현의 기회에 대한 실질적 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "04f64c6b00cc4b9b4634b8d3c15284ba4ce5e809ecce1fe17641d5844b34053d",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "c44ddd6471e054677c92fd157c867c996fdb841b66dfe40acd9fd8479ce45fba",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "어두운 실내 공간에서 터널 속 차량 영상이 대형 스크린에 투사되고, 수직 스크린과 중앙 의자가 대비되는 연출적 구도가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:28afcfbb96b48ef6a8afc618efe7429efafa71bf3e685f18ae68beb4449c3429",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1cbe8f42acaa9a6fafa42165f6b7c3f84bcc10e26de1bf70e0ea5508953b754a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503423_5",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2f97f6ec412a4f3b4df65195292a03287ad9acc26a5213372afde9451ac2e730",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/23/3503423_image2_1.jpg"
+        },
+        "record_sha256": "a31baab73c571095e431f215377988ac126ace366038b73013344f8869d7284b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "흰 벽체, 원목 바닥, 현대적 스크린과 가구 등 현대적 미디어 전시 공간으로 전통적 외관·재료·구성이 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:578f2a88bad5f020bfc9e5e1f7670037e038e6d55f6d033af66c1952052b7143",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1cbe8f42acaa9a6fafa42165f6b7c3f84bcc10e26de1bf70e0ea5508953b754a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503423_5",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2f97f6ec412a4f3b4df65195292a03287ad9acc26a5213372afde9451ac2e730",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/23/3503423_image2_1.jpg"
+        },
+        "record_sha256": "e0994e5034d3a1d958375cfc5ca1f66d00b5c12d2250a647a71657d515d2532c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대적인 갤러리 마감과 조명이 지배적이며 전통 재료나 전통적 공간 구성의 단서는 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5c5910956189fb82f2d922266af0f7f9632f1a66f39bae13087e56ebcffc46f2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3ac7f4b45c875e6b1d291d506c5e8f8fdf9b85cdc0ef799b04deca4a96a8dcb2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503422_4",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f12f571fee2a6b1717593f7fa6cb9e3efb4efc585b5216c96c1588752d3861c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/22/3503422_image2_1.jpg"
+        },
+        "record_sha256": "e6d182d8419fb935fc7b58872eeb5d057fb63f14e47b21452ad646f020ed9711",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "대칭 구도 중앙의 날개 달린 조형물과 바닥 반사, 밝은 조명이 연출적 인상을 강하게 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b14df520c4fc6e6a3dd41c1cdd79912d6aad63b9020269b6f272718d9f22d256",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3ac7f4b45c875e6b1d291d506c5e8f8fdf9b85cdc0ef799b04deca4a96a8dcb2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503422_4",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f12f571fee2a6b1717593f7fa6cb9e3efb4efc585b5216c96c1588752d3861c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/22/3503422_image2_1.jpg"
+        },
+        "record_sha256": "92417d0483aa34c57e3fe93d442c2147d15422f3227fbccf3b3b6b666fbf608f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 공연장 내부로 창문이나 녹지, 자연 경관 등 자연 환경 단서가 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b73744b4e3a81886a77b54aaadf4918d44e6aad5fe0211a914d4a17ca64394cf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f8fad9623cf4d2dd4a40be766206026c0aaa0fb5d17815044860614dfc875f23",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503421_3",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8c6e237e0031b284ce0be5180d7dd9a7d11251672f1afbb558dc18b24674f3c9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/21/3503421_image2_1.jpg"
+        },
+        "record_sha256": "fd151d4fb173df1ed5a2910027ed6aebc00fc3d6eabc6da0232e2b3e0bc378c3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "원목 바닥과 목재 마감에서 따뜻한 재질감은 있으나 전반적으로 현대적 극장 구성이며 전통적 외관 요소는 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ca573931e3fed2634b31818d56b1ab6a0e08e137929784e3b4afc3320b130209",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f8fad9623cf4d2dd4a40be766206026c0aaa0fb5d17815044860614dfc875f23",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503421_3",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8c6e237e0031b284ce0be5180d7dd9a7d11251672f1afbb558dc18b24674f3c9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/21/3503421_image2_1.jpg"
+        },
+        "record_sha256": "35545e243ee86a214a6c448b8281b5c794ecdfdeae097096841376901804f03f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "밀폐된 전시실 내부로 녹지, 물, 자연 경관 등 환경 단서가 보이지 않음. 영상 속 배경은 실제 환경 단서가 아님.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:da6a1873359f188d428db324cd42b4b7d1ea0920cea4fdf2c4fa0b4c9756ad14",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1cbe8f42acaa9a6fafa42165f6b7c3f84bcc10e26de1bf70e0ea5508953b754a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503423_5",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2f97f6ec412a4f3b4df65195292a03287ad9acc26a5213372afde9451ac2e730",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/23/3503423_image2_1.jpg"
+        },
+        "record_sha256": "8ce16a89896da15fb6d6dd667fe22210a4622d2961f70fd13c466511c60caae5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 화랑 공간으로 녹지·물·자연 경관 등 자연 환경 단서가 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:dd4158673f1cb02e5088035ee1c10ff6fdffeb368c9dfe3606de8e2488abaeec",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3ac7f4b45c875e6b1d291d506c5e8f8fdf9b85cdc0ef799b04deca4a96a8dcb2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503422_4",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f12f571fee2a6b1717593f7fa6cb9e3efb4efc585b5216c96c1588752d3861c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/22/3503422_image2_1.jpg"
+        },
+        "record_sha256": "d39ecabe008af436ee3e70956c30a079e18bbc58038a58fa8434566dac1782b6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "무대 조명과 대칭 구도, 따뜻한 우드톤 벽면과 원형 무대 바닥이 극장 특유의 연출된 시각 성격을 강하게 드러냄.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e8cab63296c0cb1a2f5e04e720deb8cd5bf55fe3eab9f89973c1d424ed37b227",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f8fad9623cf4d2dd4a40be766206026c0aaa0fb5d17815044860614dfc875f23",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3503421_3",
+          "request_sha256": "0e19bec917411909d3f80117cbb3d93a9c8c6fb80e615e85c39df3c0c8ebde16",
+          "response_sha256": "4f0e09c57b3b5d049ea9ef9e0df3fe0d12b6c341366f6830ce3e48f751fcfda7",
+          "retrieved_at": "2026-09-11T02:01:29.428098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8c6e237e0031b284ce0be5180d7dd9a7d11251672f1afbb558dc18b24674f3c9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/21/3503421_image2_1.jpg"
+        },
+        "record_sha256": "110316a1ae2f784f152b6d3435aae6417994cbdd21799b039a33f838442ae021",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c66d7913661ae5bce01ce7b710a5188e7b360a3c60b2a7ed2da1d7e1b8c44534",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3076069",
+          "request_sha256": "3d90149ce5c43d601cb15744fa6ff552cd8eae0850bd2f3bc5c0b213755d6ed2",
+          "response_sha256": "9f7db0634fdf324a1ef7ae0d95fd29c80e74c756329c257264c21dcbb07b08bc",
+          "retrieved_at": "2026-09-10T17:13:05.453628Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-12T00:08:40Z",
+          "source_record_sha256": "b2f5b7db1f93109127e730a34b69392b0bdfc0185621cd74fdb651e22bfe4272",
+          "source_uri": null
+        },
+        "record_sha256": "64e66eb081684528016fa290f458ace8027687aa3ac5e82532589a14c46c900a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "신한아트홀은 신한은행이 문화예술을 통하여 사회적 가치 창출을 실현하고자 2008년 역삼동 신한은행 강남별관에 조성한 복합문화공간이다. 임직원과 고객들의 문화예술 향유와 지역사회 문화 인프라 확충에 기여하고자 설립된 신한아트홀은 사회공헌 철학이 예술을 통해 구현을 위하여 조성된 신한은행의 대표적인 메세나 시설이다. 신한아트홀은 음악 공연을 위한 콘서트홀과 시각예술 전시를 위한 신한갤러리로 구성되어 있으며 별도의 외부 대관 없이 미래세대 문화예술 인재 발굴 및 육성에 집중하고 있는 점이 특징이다. 신한은행은 신한아트홀을 통하여 청소년 및 청년 예술인들에게 창작의 기회를 제공하고 창의성과 예술적인 역량을 키워갈 수 있는 지원 환경을 조성함으로써 잠재력 있는 젊은 예술가들이 꿈을 펼칠 수 있도록 돕고 있다. 이 공간은 단순한 공연장이나 전시장을 넘어 예술적 가능성을 가진 청년예술인들의 꿈을 실현하고 지역사회와 함께 동반 성장하는 열린 문화공간으로써의 역할을 수행하고 있으며 신한은행의 ‘미래를 함께하는 따뜻한 금융’이라는 철학을 문화예술 영역에서 실천해 나가는 중심지로 자리매김하고 있다."
+      }
+    ],
+    "parent_source_sha256": "d216ff883110b1a95acf105ff21d7c8062c8f96eabb1e40181919d8a049fc707",
+    "place": {
+      "address": "서울특별시 강남구 역삼로 251 (역삼동)",
+      "category": "문화시설",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+      "name_ko": "신한아트홀",
+      "place_id": "public:korea:13470547e311693173affe3103300c160b17705a07e207065a7d583cd76a6952",
+      "provider_content_id": "3076069",
+      "region_code": "11680",
+      "region_name": "서울특별시 강남구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

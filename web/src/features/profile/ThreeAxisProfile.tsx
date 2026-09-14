@@ -1,55 +1,54 @@
-import type { RefObject } from "react";
+import { useMemo, type RefObject } from "react";
 
 import type { PreferenceProfile } from "../../api/api";
+import { PROFILE_AXIS_ORDER, projectDisplayScores } from "./displayScores";
 
 type Axis = PreferenceProfile["scores"][number]["axis"];
 
 const AXIS_COPY: Record<Axis, { label: string; subtitle: string; className: string }> = {
   HISTORY_TRADITION: {
-    label: "역사·전통",
+    label: "대상•원형형",
     subtitle: "이야기와 전통의 흔적",
     className: "axis-score--history",
   },
   EMOTION_IMAGE: {
-    label: "감성·이미지",
+    label: "의미•이미지형",
     subtitle: "마음속에 그려온 모습",
     className: "axis-score--emotion",
   },
   REST_IMMERSION: {
-    label: "휴식·몰입",
+    label: "자기•몰입형",
     subtitle: "나를 온전히 마주하는 순간",
     className: "axis-score--rest",
   },
 };
 
-const AXIS_ORDER: Axis[] = ["HISTORY_TRADITION", "EMOTION_IMAGE", "REST_IMMERSION"];
-
 export function ThreeAxisProfile({
   scores,
   headingRef,
+  tieBreak = PROFILE_AXIS_ORDER,
 }: {
   scores: readonly PreferenceProfile["scores"][number][];
   headingRef?: RefObject<HTMLHeadingElement | null>;
+  tieBreak?: readonly Axis[];
 }) {
-  const byAxis = new Map(scores.map((score) => [score.axis, score]));
+  const display = useMemo(() => projectDisplayScores(scores, tieBreak), [scores, tieBreak]);
 
   return (
-    <section className="profile-field" aria-labelledby="axis-profile-title" aria-describedby="axis-independence-note">
+    <section className="profile-field" aria-labelledby="axis-profile-title">
       <div className="profile-field__heading">
         <p className="eyebrow">세 가지 경험</p>
         <h2 id="axis-profile-title" ref={headingRef} tabIndex={-1}>
           이번 여행에서 기대하는 시간
         </h2>
       </div>
-      <p id="axis-independence-note" className="axis-independence-note">
-        세 점수는 당신이 여행에서 끌리는 ‘진짜다움’을 보여줍니다. 각 점수는 서로 독립적으로 산정됩니다.
-      </p>
+      {display === null ? <p role="status">아직 점수로 표시할 여행 기대가 없어요.</p> : null}
       <div className="axis-score-list">
-        {AXIS_ORDER.map((axis) => {
-          const score = byAxis.get(axis);
-          if (!score) return null;
+        {PROFILE_AXIS_ORDER.map((axis) => {
+          if (display === null) return null;
+          const value = display[axis];
           const copy = AXIS_COPY[axis];
-          const valueLabel = `${copy.label} ${score.display_score}점 / 100점`;
+          const valueLabel = `${copy.label} ${value}점 / 100점`;
           return (
             <article className={`axis-score ${copy.className}`} key={axis}>
               <div className="axis-score__copy">
@@ -57,7 +56,7 @@ export function ThreeAxisProfile({
                   <h3>{copy.label}</h3>
                   <p>{copy.subtitle}</p>
                 </div>
-                <strong>{score.display_score}</strong>
+                <strong>{value}</strong>
               </div>
               <div
                 className="axis-meter"
@@ -65,9 +64,9 @@ export function ThreeAxisProfile({
                 aria-label={valueLabel}
                 aria-valuemin={0}
                 aria-valuemax={100}
-                aria-valuenow={score.display_score}
+                aria-valuenow={value}
               >
-                <span className="axis-meter__fill" style={{ width: `${score.display_score}%` }}>
+                <span className="axis-meter__fill" style={{ width: `${value}%` }}>
                   <span className="axis-meter__marker" />
                 </span>
               </div>

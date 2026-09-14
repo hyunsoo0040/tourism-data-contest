@@ -1,0 +1,717 @@
+{
+  "assessed_at": "2026-09-11T17:46:46.211563Z",
+  "assessment_sha256": "6959fedcd01ee5462ca221a9a922ada7ab84003c80eaad2ce8db48fa30430c79",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 83
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 88
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소에 '최고의 명품 드라이브 코스', '거제 9경'이라는 구체적 이미지와 의미가 공공 설명에서 일관되게 부여되고 있어 공유되는 상징적 의미를 확인할 수 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:95cc1a5b7d565f57bae4a1ac76d15cebc398b571a75b21ed5180881051f06083"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대소병대도 전망이라는 대표 장면을 홍포 전망대에서 직접 경험하고 사진으로 담는 재현 활동이 이루어지는 것으로 확인되나, 이것이 방문 경험의 전체 중심이라고 단정하기는 어렵다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "걷기·자전거·드라이브 등 방문자가 자신의 방식으로 자율적으로 탐색할 수 있는 기회가 확인되나, 자율 탐색이 방문 경험의 절대적 중심이라 단정하기는 어렵다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:ffebf73b7041056d190a568027b3ba60526bca90f43e50309d29bf97047c3b27"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료는 해안도로의 경관과 드라이브 코스 소개에 집중되어 있으며, 확인된 실제 원형·문화유산과의 접촉에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소 자체의 역사적 사건·인물·연혁에 대한 설명이 제공된 자료에 없어 구체적 역사 맥락 경험을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "여차마을과 홍포항의 활기가 언급되지만 이것이 지역 주체의 전승·생활문화와의 실제 연결 경험임을 뒷받침할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+          "quote": {
+            "end": 77,
+            "method": "EXACT",
+            "original": "우리나라에서 가장 아름다운 해안도로 중 하나인 거제도 남단의 [여차-홍포간 해안도로]는 바다를 감상하기에 가장 좋은 드라이브 코스로 꼽히며",
+            "start": 0,
+            "submitted": "우리나라에서 가장 아름다운 해안도로 중 하나인 거제도 남단의 [여차-홍포간 해안도로]는 바다를 감상하기에 가장 좋은 드라이브 코스로 꼽히며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "이 장소에 '최고의 명품 드라이브 코스', '거제 9경'이라는 구체적 이미지와 의미가 공공 설명에서 일관되게 부여되고 있어 공유되는 상징적 의미를 확인할 수 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "사진작가의 방문 언급은 있으나 특정 매체를 통한 이미지 재현·확산의 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+          "quote": {
+            "end": 849,
+            "method": "EXACT",
+            "original": "운해에 둘러싸인 대소병대도를 사진에 담으려는 사진작가들의 발길이 끊이지 않는 곳이기도 하다",
+            "start": 799,
+            "submitted": "운해에 둘러싸인 대소병대도를 사진에 담으려는 사진작가들의 발길이 끊이지 않는 곳이기도 하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+          "quote": {
+            "end": 625,
+            "method": "EXACT",
+            "original": "특히 홍포 전망대에서 바라보는 대소병대도 전망은 그중에서도 백미이다.",
+            "start": 587,
+            "submitted": "특히 홍포 전망대에서 바라보는 대소병대도 전망은 그중에서도 백미이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대소병대도 전망이라는 대표 장면을 홍포 전망대에서 직접 경험하고 사진으로 담는 재현 활동이 이루어지는 것으로 확인되나, 이것이 방문 경험의 전체 중심이라고 단정하기는 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+          "quote": {
+            "end": 400,
+            "method": "EXACT",
+            "original": "비포장길이 남아있어 걷기를 좋아하는 여행객들, 자전거를 사랑하는 동호인들이 즐겨 찾는다.",
+            "start": 351,
+            "submitted": "비포장길이 남아있어 걷기를 좋아하는 여행객들, 자전거를 사랑하는 동호인들이 즐겨 찾는다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+          "quote": {
+            "end": 586,
+            "method": "EXACT",
+            "original": "가만히 서서 아름다운 바다를 만끽해야 하는 길이다.",
+            "start": 558,
+            "submitted": "가만히 서서 아름다운 바다를 만끽해야 하는 길이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "걷기·자전거·드라이브 등 방문자가 자신의 방식으로 자율적으로 탐색할 수 있는 기회가 확인되나, 자율 탐색이 방문 경험의 절대적 중심이라 단정하기는 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다. 사진작가 방문 언급만으로 관계 형성 경험을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+            "quote": "푸른 바다 한가운데 크고 작은 초록의 섬들이 점을 찍듯 모여 앉은 광경은 마치 합성이라도 한 듯한 착각을 불러일으키는 아름다운 모습"
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+            "quote": "다도해를 품은 푸르디푸른 남쪽 바다가 세상에서 가장 아름다운 경치를 만들어내고 있고"
+          }
+        ],
+        "key": "E.c",
+        "level": 4,
+        "reason": "일출·일몰, 푸른 바다, 섬들의 경관 등 시각적 성격이 장면을 지배하며 일관된 경관 표현이 두드러진다고 공식 설명에서 확인된다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+              "quote": {
+                "end": 486,
+                "method": "EXACT",
+                "original": "바다에는 대병대도, 소병대도, 대매물도, 소매물도, 어유도, 가왕도, 가익도, 국도 등 아름다운 섬들이 보석처럼 박혀있어 조망의 즐거움을 가득 선사한다.",
+                "start": 401,
+                "submitted": "바다에는 대병대도, 소병대도, 대매물도, 소매물도, 어유도, 가왕도, 가익도, 국도 등 아름다운 섬들이 보석처럼 박혀있어 조망의 즐거움을 가득 선사한다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 4,
+          "reason": "산허리와 해안 절벽, 다도해의 푸른 바다와 무인도 군락 등 자연 환경 단서가 도로 전 구간의 장면을 지배한다고 확인된다. 다만 실제 고요함·혼잡 수준은 추정하지 않는다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    },
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+              "quote": {
+                "end": 400,
+                "method": "EXACT",
+                "original": "비포장길이 남아있어 걷기를 좋아하는 여행객들, 자전거를 사랑하는 동호인들이 즐겨 찾는다.",
+                "start": 351,
+                "submitted": "비포장길이 남아있어 걷기를 좋아하는 여행객들, 자전거를 사랑하는 동호인들이 즐겨 찾는다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+              "quote": {
+                "end": 911,
+                "method": "EXACT",
+                "original": "여차마을과 망산 등산로 입구를 지나 2.6km 지점에서 홍포 전망대를 만날 수 있다.",
+                "start": 864,
+                "submitted": "여차마을과 망산 등산로 입구를 지나 2.6km 지점에서 홍포 전망대를 만날 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "3.5km 구간의 걷기·자전거 라이딩, 망산 등산로 등 신체 활동과 탐방의 기회가 확인된다. 이 활동이 방문 경험의 중심이라고 단정하기에는 근거가 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "69802671bbf5e312c54d4df64594eb34219f3453805e33aab74dfe7c7623a26e",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "진한 청록 바다, 짙은 소나무 그늘, 채색 보도블록 등 채도 높은 색채와 곡선 도로 구도가 장면을 지배하며 넓은 화각 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:95cc1a5b7d565f57bae4a1ac76d15cebc398b571a75b21ed5180881051f06083",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8890d11af7cd890932e916da4f734ecab79e948af96783d33b4fd556f16d3b4d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:05c6b1535cbb2cd3bc2ee60d6f36ea0e5dac9e0a64a02fc41f32fde4321171fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3017959_2",
+          "request_sha256": "976a21325788c59d6d79695aa94ddc3f698a873e511da7bdabf4c11b006a98ed",
+          "response_sha256": "86ea305bb9f5c90ef83b39a1ff8fb9d6f337d6cfeedd8fd55a17426ebda00e5a",
+          "retrieved_at": "2026-09-10T08:18:53.921509Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6e4d99e382fbc24f964d9b48aeeca60c673cd0d8f5188406be88e718a508f5c9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/59/3017959_image2_1.jpg"
+        },
+        "record_sha256": "4569eaa685ba6d2ca57c206ade26a2cf2e7b9937bce686037995284b8a0bffec",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "해안 도로와 저주택 마을 정도만 보이며 전통적 재료나 공간 구성의 시각적 특성은 거의 드러나지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9cdc3115d950f85522b66cce8f7a45fa3619879512ce1276c5795f17696b37a1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8890d11af7cd890932e916da4f734ecab79e948af96783d33b4fd556f16d3b4d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:05c6b1535cbb2cd3bc2ee60d6f36ea0e5dac9e0a64a02fc41f32fde4321171fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3017959_2",
+          "request_sha256": "976a21325788c59d6d79695aa94ddc3f698a873e511da7bdabf4c11b006a98ed",
+          "response_sha256": "86ea305bb9f5c90ef83b39a1ff8fb9d6f337d6cfeedd8fd55a17426ebda00e5a",
+          "retrieved_at": "2026-09-10T08:18:53.921509Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6e4d99e382fbc24f964d9b48aeeca60c673cd0d8f5188406be88e718a508f5c9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/59/3017959_image2_1.jpg"
+        },
+        "record_sha256": "e85d7b971ca14d6d3945e446f45ac5846d9211ac0e1931f2615a55f703df16ea",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "바다, 연록한 산 능선, 가로수林 등 자연 경관 요소가 화면 대부분을 차지하며 트인 자연 배경이 장면을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ffebf73b7041056d190a568027b3ba60526bca90f43e50309d29bf97047c3b27",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8890d11af7cd890932e916da4f734ecab79e948af96783d33b4fd556f16d3b4d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:05c6b1535cbb2cd3bc2ee60d6f36ea0e5dac9e0a64a02fc41f32fde4321171fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3017959_2",
+          "request_sha256": "976a21325788c59d6d79695aa94ddc3f698a873e511da7bdabf4c11b006a98ed",
+          "response_sha256": "86ea305bb9f5c90ef83b39a1ff8fb9d6f337d6cfeedd8fd55a17426ebda00e5a",
+          "retrieved_at": "2026-09-10T08:18:53.921509Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6e4d99e382fbc24f964d9b48aeeca60c673cd0d8f5188406be88e718a508f5c9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/59/3017959_image2_1.jpg"
+        },
+        "record_sha256": "0d3635df7c3825e356796890fd1133921718e6839d0362724bff5b505f955469",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:33582d0b014e11fed3fffd71516b7d463b7cbc3cd7f3aaf6273a793fb33575ed",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:05c6b1535cbb2cd3bc2ee60d6f36ea0e5dac9e0a64a02fc41f32fde4321171fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2652447",
+          "request_sha256": "1875108b6d31551b7cbc952ed72689ca9c7e93934a960f57f5d8c67fe7a44906",
+          "response_sha256": "cc43b899c44aa4f45a915366a291699c59d74c99111d339562ed328b5adcd645",
+          "retrieved_at": "2026-09-10T07:39:15.646532Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-18T02:23:45Z",
+          "source_record_sha256": "5591d706278f5398407f19f873a13699684b0a52e023484fbb8b44f0cadd9771",
+          "source_uri": null
+        },
+        "record_sha256": "89144d416b3927a03b9af0f5bd2818a91ba500ea25f58a49b57bef425f4035f4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "우리나라에서 가장 아름다운 해안도로 중 하나인 거제도 남단의 [여차-홍포간 해안도로]는 바다를 감상하기에 가장 좋은 드라이브 코스로 꼽히며, 아침에는 장엄한 일출이, 저녁에는 환상적인 일몰을 한곳에서 만날 수 있는 곳으로도 유명하다. 여차 몽돌 해수욕장에서부터 시작되는 해안도로의 약 3.5㎞ 구간은 거제의 해안 변 중 가장 경관이 빼어난 곳으로 일부는 비포장도로이다. 한쪽으로는 산허리를, 또 한쪽으로는 해안가 절벽을 끼고 달리는 이 해안도로는 풍광이 아름다워 최고의 명품 드라이브 코스로 꼽힌다. 중간에 비포장길이 남아 있지만 승용차로 가기엔 그다지 불편하지 않으며, 아름다운 만큼 더 안전에 유의해야 하는 길이기도 하다. 비포장길이 남아있어 걷기를 좋아하는 여행객들, 자전거를 사랑하는 동호인들이 즐겨 찾는다. 바다에는 대병대도, 소병대도, 대매물도, 소매물도, 어유도, 가왕도, 가익도, 국도 등 아름다운 섬들이 보석처럼 박혀있어 조망의 즐거움을 가득 선사한다. 다도해를 품은 푸르디푸른 남쪽 바다가 세상에서 가장 아름다운 경치를 만들어내고 있고 그 아름다움은 천천히 거제 바다를 감상하고 가만히 서서 아름다운 바다를 만끽해야 하는 길이다. 특히 홍포 전망대에서 바라보는 대소병대도 전망은 그중에서도 백미이다. 대소병대도는 대병대도 5개 섬과 소병대도는 3개 섬을 합쳐 모두 8개의 무인도가 모여 있는 곳이다. 푸른 바다 한가운데 크고 작은 초록의 섬들이 점을 찍듯 모여 앉은 광경은 마치 합성이라도 한 듯한 착각을 불러일으키는 아름다운 모습으로 보는 이들의 감탄을 자아낸다. 이곳은 만선의 꿈을 안고 출항하는 고깃배와 운해에 둘러싸인 대소병대도를 사진에 담으려는 사진작가들의 발길이 끊이지 않는 곳이기도 하다. 해안도로 초입에 자리한 여차마을과 망산 등산로 입구를 지나 2.6km 지점에서 홍포 전망대를 만날 수 있다. 전망대를 기준으로 동쪽은 천장산(해발 275m)이 여차마을을 품고 있고, 남쪽으로 대병대도, 소병대도, 대매물도, 소매물도, 어유도, 가왕도, 가익도, 국도 등이 바다에 점점이 떠 있다. 쪽빛 바다에 오롯이 솟은 섬들은 손에 잡힐 듯 가깝다. 눈을 멀리 두면 대마도까지 볼 수 있을 정도로 조망이 환상적이다. 여차∼홍포 해안도로는 일부 급경사면을 제외하고 대부분 흙길이다. 전망대에서 서쪽으로 2.4㎞ 떨어진 홍포항도 일몰 명소 중 하나이며, 고깃배가 들어오는 아침마다 시끌벅적한 포구는 활기가 넘친다. 해안도로로 향하는 길은 두 가지다. 1018번 지방도로를 타고 거제면과 동부면, 남부면, 홍포항 쪽으로 방향을 잡으면 서부 지역 해안과 내륙을 둘러볼 수 있다. 14번 국도를 따르면 장승포항과 구조라해수욕장, 학동흑진주몽돌해변, 해금강 입구를 거쳐 동부 지역 해안을 구경할 수 있다. 여차∼홍포 해안도로를 으뜸으로 꼽는 것은 주변 풍광이 유독 아름답기 때문이고, 거제 9경에 이름을 올릴 만큼 자타가 공인하는 명품 해안도로이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:39d19633d1238b79d26d1a3ba7c439bf90dd022bbf7a33d593032659d50c933f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:05c6b1535cbb2cd3bc2ee60d6f36ea0e5dac9e0a64a02fc41f32fde4321171fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2652447",
+          "request_sha256": "7207c9b544241c14439e7289950032f2202b815c5de86e0ba7e9d304dd5b2ee0",
+          "response_sha256": "ba5b4ed17fb5b47ae67b441bdad9fc813dcf26811182713952bc4b0e4137d5fb",
+          "retrieved_at": "2026-09-10T08:18:52.579391Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bdfa68de0f6dc51d0467ddd4d0be49bef2559928fad10da2bb2bff3a6350400c",
+          "source_uri": null
+        },
+        "record_sha256": "b8bdde01da6d4c6d5f8d80038dda581b4e7d5455609aeab7c07d791671e67a6d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "여차-홍포 해안도로 전망대"
+      }
+    ],
+    "parent_source_sha256": "c64a99df84c7f494bbde868b151df4225069539f18c79bd222779eb60c01608d",
+    "place": {
+      "address": "경상남도 거제시 남부면 다포리",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:05c6b1535cbb2cd3bc2ee60d6f36ea0e5dac9e0a64a02fc41f32fde4321171fd",
+      "name_ko": "여차,홍포간 해안도로",
+      "place_id": "public:korea:05c6b1535cbb2cd3bc2ee60d6f36ea0e5dac9e0a64a02fc41f32fde4321171fd",
+      "provider_content_id": "2652447",
+      "region_code": "48310",
+      "region_name": "경상남도 거제시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,994 @@
+{
+  "assessed_at": "2026-09-11T17:24:28.972831Z",
+  "assessment_sha256": "04db7d73d7481e9f30ba16d1480e31d01842a3e65049d4837024d33ccb0efa27",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 56
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 76
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "철새 명소라는 이미지가 장소에 연결되어 있으나, 여러 표현에서 일관된 의미가 확인된다고 보기에는 근거가 단일하여 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:6371b1b1e554700b75acd7fa173747ea789711401c0a2e1bf5c4cd90293acfc2",
+            "appearance:902c966151f5a318f00c2ba6d7594c9a5424ed5f891cfec136f0378497dbb6a5",
+            "appearance:fa65a729765a7e5943f841c63b3d20ca94cb97c4e0c3c9b86f038c72debcf95b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "앵커는 수준 3 '장면에서 구별되는 시각적 성격'이나, 근거는 '일품이다' 등 홍보성 서술뿐이고 판단 사유 스스로도 장면을 지배하는 연출로 보기에 근거가 제한적이라고 명시하여 현재 수준을 직접 뒷받침하지 못한다.",
+      "value": 67
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "철새 장관 감상이라는 대표 장면을 현장에서 관람할 수 있다고 하나, 촬영·재현 등 적극적 체험의 근거는 없어 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책로, 자전거길, 전망대 탐방 등 방문자가 자신의 방식으로 선택·탐색할 수 있는 기회가 구체적으로 제시된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0575b558beafb00beef76b71390d21682360e1b2baf2b3b00586c8e7b5163a1a",
+            "appearance:214677e21c25cd50260bf51526f208d16feccd9dfb48939640a9111aef872917",
+            "appearance:639ad21f4c8c0708504805918abf992779a30e876fced194e19ffba75c64ff29"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "갈대밭, 강 하구, 철새, 아침 안개 등 자연 환경 단서가 구체적으로 확인된다. 다만 실제 고요함·혼잡 수준은 확인되지 않아 수준 3까지로 평가한다.",
+      "value": 77
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "금강하구둑은 현대에 만들어진 수리시설로 설명되며, 확인된 원형·문화유산과의 접촉을 뒷받침하는 근거가 없다. 낮음에 대한 직접 서술도 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 지리적 위치와 시설 소개만 담고 있어 이 장소의 실제 역사·사건·인물 맥락을 제시하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 철새 도래는 자연 현상이며 실제 전승 활동의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "조류생태전시관 언급이 있으나 원형·유산·전통에 연결된 해설·학습 내용에 대한 구체적 근거가 부족하여 수준을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd",
+          "quote": {
+            "end": 43,
+            "method": "EXACT",
+            "original": "해마다 금강하구둑을 찾아오는 철새들을 볼 수 있는 명소이다",
+            "start": 11,
+            "submitted": "해마다 금강하구둑을 찾아오는 철새들을 볼 수 있는 명소이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "15c3545fdedb6eaab2c038c3faef62131e7abac4db7943d10bf2654618aaba04"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "철새 명소라는 이미지가 장소에 연결되어 있으나, 여러 표현에서 일관된 의미가 확인된다고 보기에는 근거가 단일하여 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보 매체, SNS 등 장소 이미지의 매체적 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "앵커는 수준 3 '장면에서 구별되는 시각적 성격'이나, 근거는 '일품이다' 등 홍보성 서술뿐이고 판단 사유 스스로도 장면을 지배하는 연출로 보기에 근거가 제한적이라고 명시하여 현재 수준을 직접 뒷받침하지 못한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd",
+          "quote": {
+            "end": 43,
+            "method": "EXACT",
+            "original": "해마다 금강하구둑을 찾아오는 철새들을 볼 수 있는 명소이다",
+            "start": 11,
+            "submitted": "해마다 금강하구둑을 찾아오는 철새들을 볼 수 있는 명소이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "15c3545fdedb6eaab2c038c3faef62131e7abac4db7943d10bf2654618aaba04"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "철새 장관 감상이라는 대표 장면을 현장에서 관람할 수 있다고 하나, 촬영·재현 등 적극적 체험의 근거는 없어 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd",
+          "quote": {
+            "end": 505,
+            "method": "EXACT",
+            "original": "뒤편 산책로를 따라 전망대까지 걸어 올라가면 금강 하구와 건너편 군산이 한눈에 들어와 일대를 조망하기에 그만이다",
+            "start": 443,
+            "submitted": "뒤편 산책로를 따라 전망대까지 걸어 올라가면 금강 하구와 건너편 군산이 한눈에 들어와 일대를 조망하기에 그만이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "15c3545fdedb6eaab2c038c3faef62131e7abac4db7943d10bf2654618aaba04"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "산책로, 자전거길, 전망대 탐방 등 방문자가 자신의 방식으로 선택·탐색할 수 있는 기회가 구체적으로 제시된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd",
+          "quote": {
+            "end": 212,
+            "method": "EXACT",
+            "original": "드넓은 갈대밭과 농경지를 품고 있는 금강 하구에는 가창오리, 청둥오리를 비롯해 검은머리물떼새 등 희귀 조류와 수만 마리 철새들이 날아와 장관을 이룬다",
+            "start": 129,
+            "submitted": "드넓은 갈대밭과 농경지를 품고 있는 금강 하구에는 가창오리, 청둥오리를 비롯해 검은머리물떼새 등 희귀 조류와 수만 마리 철새들이 날아와 장관을 이룬다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "15c3545fdedb6eaab2c038c3faef62131e7abac4db7943d10bf2654618aaba04"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "갈대밭, 강 하구, 철새, 아침 안개 등 자연 환경 단서가 구체적으로 확인된다. 다만 실제 고요함·혼잡 수준은 확인되지 않아 수준 3까지로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "앵커는 수준 3 '지속적으로 참여·도전할 활동'이나, 판단 사유가 스스로 '지속적 도전 활동의 근거는 제한적'이라 명시한다. 자전거길·놀이시설은 수준 2 참여 활동에 해당하며 현재 앵커 수준을 직접 뒷받침하지 못한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "앵커는 수준 2 '구체적인 교류·표현 기회'이나, 근거는 데이트 인기라는 인상 서술뿐이고 판단 사유도 공동 활동·자기표현 근거가 부족하다고 인정한다. 연인 대상 인기가 곧 구체적 교류 기회의 제공이라 단정하기 어렵다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "3c298d11370f6d712b637902a9b331483b4fd331bf80c88190814beda0189c3d",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd",
+              "quote": {
+                "end": 264,
+                "method": "EXACT",
+                "original": "이른 아침 안개가 피어오르는 풍경도 좋고, 해질 무렵 낙조와 함께 바라보는 풍광도 일품이다",
+                "start": 214,
+                "submitted": "이른 아침 안개가 피어오르는 풍경도 좋고, 해질 무렵 낙조와 함께 바라보는 풍광도 일품이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "15c3545fdedb6eaab2c038c3faef62131e7abac4db7943d10bf2654618aaba04"
+            }
+          ],
+          "flags": [],
+          "key": "E.c",
+          "level": 2,
+          "reason": "안개, 낙조, 갈대밭 등 시각적 표현 요소가 언급되지만 장면을 지배하는 일관된 연출이라고 보기에는 근거가 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "E.c",
+          "reason": "앵커는 수준 3 '장면에서 구별되는 시각적 성격'이나, 근거는 '일품이다' 등 홍보성 서술뿐이고 판단 사유 스스로도 장면을 지배하는 연출로 보기에 근거가 제한적이라고 명시하여 현재 수준을 직접 뒷받침하지 못한다."
+        }
+      },
+      "reason": "앵커는 수준 3 '장면에서 구별되는 시각적 성격'이나, 근거는 '일품이다' 등 홍보성 서술뿐이고 판단 사유 스스로도 장면을 지배하는 연출로 보기에 근거가 제한적이라고 명시하여 현재 수준을 직접 뒷받침하지 못한다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd",
+              "quote": {
+                "end": 606,
+                "method": "EXACT",
+                "original": "나란히 이어지는 자전거길을 따라 하이킹을 즐기는 여행자도 많다",
+                "start": 572,
+                "submitted": "나란히 이어지는 자전거길을 따라 하이킹을 즐기는 여행자도 많다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "15c3545fdedb6eaab2c038c3faef62131e7abac4db7943d10bf2654618aaba04"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "자전거길 하이킹, 산책로 걷기, 놀이시설(썰매장, 바이킹, 회전목마) 등 구체적 참여 활동이 제시된다. 지속적 도전 활동이라는 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "앵커는 수준 3 '지속적으로 참여·도전할 활동'이나, 판단 사유가 스스로 '지속적 도전 활동의 근거는 제한적'이라 명시한다. 자전거길·놀이시설은 수준 2 참여 활동에 해당하며 현재 앵커 수준을 직접 뒷받침하지 못한다."
+        }
+      },
+      "reason": "앵커는 수준 3 '지속적으로 참여·도전할 활동'이나, 판단 사유가 스스로 '지속적 도전 활동의 근거는 제한적'이라 명시한다. 자전거길·놀이시설은 수준 2 참여 활동에 해당하며 현재 앵커 수준을 직접 뒷받침하지 못한다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd",
+              "quote": {
+                "end": 570,
+                "method": "EXACT",
+                "original": "금강하구둑 관광지 앞 강변 산책로에는 아기자기한 카페들과 김인전공원이 있어 데이트를 즐기려는 연인들에게 인기 있다",
+                "start": 507,
+                "submitted": "금강하구둑 관광지 앞 강변 산책로에는 아기자기한 카페들과 김인전공원이 있어 데이트를 즐기려는 연인들에게 인기 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "15c3545fdedb6eaab2c038c3faef62131e7abac4db7943d10bf2654618aaba04"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "데이트 명소라는 교류 기회가 언급되나, 공동 제작·자기표현 활동의 구체적 근거는 부족하여 제한적 교류 기회 수준으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "앵커는 수준 2 '구체적인 교류·표현 기회'이나, 근거는 데이트 인기라는 인상 서술뿐이고 판단 사유도 공동 활동·자기표현 근거가 부족하다고 인정한다. 연인 대상 인기가 곧 구체적 교류 기회의 제공이라 단정하기 어렵다."
+        }
+      },
+      "reason": "앵커는 수준 2 '구체적인 교류·표현 기회'이나, 근거는 데이트 인기라는 인상 서술뿐이고 판단 사유도 공동 활동·자기표현 근거가 부족하다고 인정한다. 연인 대상 인기가 곧 구체적 교류 기회의 제공이라 단정하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "42c6b8494e2bdd073e3e4c682f2779345e7b93ec7c92cd0976e133a83fe66be8",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "잔디, 소나무, 활엽수와 함께 배경에 넓은 수면과 강변 경관이 트이게 보여 자연 환경 단서가 뚜렷함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0575b558beafb00beef76b71390d21682360e1b2baf2b3b00586c8e7b5163a1a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ab627c8a89b6c070d484ed49ea8c0c7a4747f752c8b4e90ef20c42a36ee49f64",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438995_3",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6791dad2795d7d9bf595bb24919db6620e4ae34711e33cc1f43f61da26556bc9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/95/3438995_image2_1.png"
+        },
+        "record_sha256": "e63c1310260a39c7fd4322fdc23d90ac6b70aaad8824c21c753335c8cc3530d8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 잔디밭, 큰 나무, 뒤쪽 숲 언덕과 파란 하늘·구름 등 자연 환경 단서가 넓게 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:214677e21c25cd50260bf51526f208d16feccd9dfb48939640a9111aef872917",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2b3898bd6fead22db822fdce7a959b566854bd28ad89803eb896adb637c4d313",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438989_6",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a46c1b8bd29e110e54df0006408c1618da02f29580766678c29759b9e06ed9fe",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3438989_image2_1.png"
+        },
+        "record_sha256": "f6e6c7ff9004d6b75f945cb6ff1332c91ee1c637308f4716d8f92750afc5df67",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "소나무와 벽돌 포장이 일부 전통적 정취를 주지만 조형물과 전봇대 등 현대적 요소가 있어 전통 외관은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:300b568d2a7ec11b95080253490b158be195afcaa68781af001d892450fc0e30",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ab627c8a89b6c070d484ed49ea8c0c7a4747f752c8b4e90ef20c42a36ee49f64",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438995_3",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6791dad2795d7d9bf595bb24919db6620e4ae34711e33cc1f43f61da26556bc9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/95/3438995_image2_1.png"
+        },
+        "record_sha256": "04c7eeadd4e2fd70b810cb6d277dee5012baa001bbbe85d8866faaf93117202c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 재료나 구성의 뚜렷한 요소는 보이지 않으며, 논과 녹색 수목 등 농촌 외관이 일부 겨우 암시될 뿐이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:53e854157636b55232f7b9e6cda2121075c0141ae15a32274acafdc1222fa3f4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5235d5e2edfb7241f1b9c63c3de7cadaa5528d5a32710ecfa8c8c7a98032bd7a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438993_2",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3ffae19dbdf00651699bffe1b86e704f2c8b5c70ee34b7d879fc4587d968a316",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3438993_image2_1.png"
+        },
+        "record_sha256": "a69127b4565dce2a30b7fd9bd3c4765ca2395bbea3408498488e1ee0cac16d73",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘과 큰 흰 구름, 넓게 펼쳐진 황금빛 들판의 대비가 뚜렷하고, 수평 구도와 넓은 원경이 개방적인 시각적 인상을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6371b1b1e554700b75acd7fa173747ea789711401c0a2e1bf5c4cd90293acfc2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5235d5e2edfb7241f1b9c63c3de7cadaa5528d5a32710ecfa8c8c7a98032bd7a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438993_2",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3ffae19dbdf00651699bffe1b86e704f2c8b5c70ee34b7d879fc4587d968a316",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3438993_image2_1.png"
+        },
+        "record_sha256": "730edbc3f3c08db32d8f1c8dd98a585a96af32c69aa7e680f675c47054ea888d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "황금색 논 들판이 화면 대부분을 차지하고 트인 하늘, 원경의 낮은 산과 수목이 자연 경관을 지배적으로 보여준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:639ad21f4c8c0708504805918abf992779a30e876fced194e19ffba75c64ff29",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5235d5e2edfb7241f1b9c63c3de7cadaa5528d5a32710ecfa8c8c7a98032bd7a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438993_2",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3ffae19dbdf00651699bffe1b86e704f2c8b5c70ee34b7d879fc4587d968a316",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3438993_image2_1.png"
+        },
+        "record_sha256": "cb1021b9126af5ac36322bd5c4c376e67624ceefe481d4e6bc4a4742a5d65c5b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "백조 조형물과 푸른 하늘의 큰 구름, 소나무가 함께 어우러진 화사하고 안정적인 구도가 보통 수준으로 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:902c966151f5a318f00c2ba6d7594c9a5424ed5f891cfec136f0378497dbb6a5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ab627c8a89b6c070d484ed49ea8c0c7a4747f752c8b4e90ef20c42a36ee49f64",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438995_3",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6791dad2795d7d9bf595bb24919db6620e4ae34711e33cc1f43f61da26556bc9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/95/3438995_image2_1.png"
+        },
+        "record_sha256": "a558d9fb9979e5c578a9d16d3d42ec621b693903de58db7635655b9b729751ab",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "네덜란드식 풍차 형태의 목재 판 재현 외관이 보이나, 주변은 현대적 공원·유원지 시설과 혼재하여 전통 외관의 두드러짐은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bab0cebe7cfe50e02ff4e6756316f042c319cf3c76a45c2275a12ce65eb0e8b8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2b3898bd6fead22db822fdce7a959b566854bd28ad89803eb896adb637c4d313",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438989_6",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a46c1b8bd29e110e54df0006408c1618da02f29580766678c29759b9e06ed9fe",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3438989_image2_1.png"
+        },
+        "record_sha256": "9a63f2e0107f3eb95c7f941e639163d4b9cb6a27879fac713e6dd8067c94a638",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰 풍차 구조물이 하늘과 구름을 배경으로 장면의 중심을 지배하며, 곡선형 보도와 초원, 나무 프레임이 구도에 연출적으로 작용한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fa65a729765a7e5943f841c63b3d20ca94cb97c4e0c3c9b86f038c72debcf95b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2b3898bd6fead22db822fdce7a959b566854bd28ad89803eb896adb637c4d313",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3438989_6",
+          "request_sha256": "e3e8ebae6d184aac62e1b67f6300ae6b08078071d288e1b598efa0bd33184ec1",
+          "response_sha256": "e88607041baefc4bc7d4c5af698e9fa141d14c28f41144c5138429d0cbd7dda4",
+          "retrieved_at": "2026-09-11T02:05:29.601171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a46c1b8bd29e110e54df0006408c1618da02f29580766678c29759b9e06ed9fe",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3438989_image2_1.png"
+        },
+        "record_sha256": "bbb20f6426890bce77d951e3e24c7bb7671e5e880341069b1ae3e3e57206de0b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6cfbc23e318299cd09051d11a4bb3da2780bb706ddbab1d71c2f0243d699b1fd",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2945279",
+          "request_sha256": "ad438b2baf8860e6bd204f1c0a0afb8212e57be659c5573b73ea5f094249674f",
+          "response_sha256": "52e265488ba6942d60ef135ca3b055e8bb964822b6f2d8163ae355a1b1fcadda",
+          "retrieved_at": "2026-09-10T16:53:49.566977Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-07-31T00:42:26Z",
+          "source_record_sha256": "832f17da2b5a1ff265581b6f559c5a678b7e32af8f93ef65c19c1f40a04e6689",
+          "source_uri": null
+        },
+        "record_sha256": "15c3545fdedb6eaab2c038c3faef62131e7abac4db7943d10bf2654618aaba04",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "금강하구둑 관광지는 해마다 금강하구둑을 찾아오는 철새들을 볼 수 있는 명소이다. 금강하구둑은 장엄하게 흐르는 금강이 바다를 만나 품을 넓히는 곳에 만들어진 대규모 수리시설로, 충남 서천과 전북 군산을 잇는 교량 역할도 하고 있다. 드넓은 갈대밭과 농경지를 품고 있는 금강 하구에는 가창오리, 청둥오리를 비롯해 검은머리물떼새 등 희귀 조류와 수만 마리 철새들이 날아와 장관을 이룬다. 이른 아침 안개가 피어오르는 풍경도 좋고, 해질 무렵 낙조와 함께 바라보는 풍광도 일품이다. 철새가 찾지 않는 계절이라도 금강 하구의 넉넉하고 여유로운 풍경을 감상하려는 여행자들이 끊이지 않는다. 사계절썰매장과 바이킹, 회전목마 등 놀이시설이 있는 드림랜드와 게임월드, 자동차극장으로 이루어진 금강하구둑 관광지는 식당과 주차장 등 편의시설을 잘 갖추어 금강하구둑을 돌아보며 즐거운 시간을 보내기 좋다. 특히, 뒤편 산책로를 따라 전망대까지 걸어 올라가면 금강 하구와 건너편 군산이 한눈에 들어와 일대를 조망하기에 그만이다. 금강하구둑 관광지 앞 강변 산책로에는 아기자기한 카페들과 김인전공원이 있어 데이트를 즐기려는 연인들에게 인기 있다. 나란히 이어지는 자전거길을 따라 하이킹을 즐기는 여행자도 많다. 금강 하구를 따라 조성된 긴 산책로를 천천히 걸으며 햇살에 반짝이는 강변 풍경을 감상하고 조금 더 걸어 조류생태전시관까지 함께 둘러볼 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9efcb18f2980379e5876a77c1a7b6d8cbeaee210d4867b51399c222f6d3f6c70",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2945279",
+          "request_sha256": "eed4db65186a3b186390f93128ab7b91a1d42fc3ec7e9c6a7bb68b6cc3da7b9b",
+          "response_sha256": "e7c1aaa442dfef3bd78aeaeed93a25c506365588c95629d680a20482b1b9d3ea",
+          "retrieved_at": "2026-09-11T02:05:29.262319Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3326314931a54551a7ff2567ca5af9b5b313806c1a3c37deacf9c184c7176751",
+          "source_uri": null
+        },
+        "record_sha256": "04ae2697c900dd90d66cc86ef661a70e8ea4d0b4b3f99f131476709ace92ad6d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "시설별 상이"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f4df0c5ce5e6f1646b44408245b083c12a2190748d01f7a1c4a0e1b71ebafb9d",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2945279",
+          "request_sha256": "eed4db65186a3b186390f93128ab7b91a1d42fc3ec7e9c6a7bb68b6cc3da7b9b",
+          "response_sha256": "e7c1aaa442dfef3bd78aeaeed93a25c506365588c95629d680a20482b1b9d3ea",
+          "retrieved_at": "2026-09-11T02:05:29.262319Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "28fe54204b067c12ed5892898d5dccdc319a95b97f3fa8a7ffaf2c508c816443",
+          "source_uri": null
+        },
+        "record_sha256": "6fc1cfb6885873d11541569db064cbb18fb33f4ec5f7303980bfd12cb6ebb1a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "575d358b0ccfb4580f7c9b2b04c4740f9bb5adbfb9891554f138a07d7185a2d8",
+    "place": {
+      "address": "충청남도 서천군 마서면 장산로855번길 56-2",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+      "name_ko": "금강하구둑 관광지",
+      "place_id": "public:korea:6d701a5b7a5376c4327704dd450cc59835fe5855a012148a8c7b92fd666291fd",
+      "provider_content_id": "2945279",
+      "region_code": "44770",
+      "region_name": "충청남도 서천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

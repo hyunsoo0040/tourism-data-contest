@@ -1,0 +1,879 @@
+{
+  "assessed_at": "2026-09-11T17:06:24.365685Z",
+  "assessment_sha256": "f95a7e211d02e8151da701cea9f8569b640510d4d05d779ed0adc641c52d6202",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:89ed8d08627649b2e7cf430e03076e94386df28d282c0a81b71fdd0cfd187429"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "호림박물관 소속 시설로 확인된 실제 문화유산(국보·보물 포함) 소장이 명시되어 원형·유산 접촉을 지원하나, 신사분관에서 어떤 실물이 전시되는지 구체적 확인이 없어 관람 수준으로 제한한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:89ed8d08627649b2e7cf430e03076e94386df28d282c0a81b71fdd0cfd187429"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "설립자와 설립·개관 연혁이 소개되어 장소 관련 역사 맥락의 간단한 이해가 가능하나, 신사분관 자체의 구체적 사건·인물 탐구 중심이라는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fa28984ffd798cf53cfaa9b51f0aa80f36277fa15714317cf9e5829b00cde3",
+            "evidence:89ed8d08627649b2e7cf430e03076e94386df28d282c0a81b71fdd0cfd187429"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "오디오 가이드와 큐레이터 전시설명, 주제 전시가 유산 해설·학습 기회를 제공하나 해설이 소장품·전시에 연결된다는 범위까지이며 깊은 탐구 중심임을 확인할 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:05553e254fefc42cffb8bfe41021dcded04f64cf542797beebc577ec23b8ac8b",
+            "appearance:3ad02fd062d5e4f869a41a87790e5796b15fda81d180af1df325f0e18f96f08e",
+            "appearance:990962c780e86d6c814fd752bbb32f9b0353fea97ea3a52483be74a04cba90b6"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "신사분관의 외관·경관·연출 등 시각적 표현에 대한 정보가 없다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:3e9060cef55c6e12a3aeeee386e2c602869fedcd33c9ce9412df02a8e9eb47be",
+            "appearance:79fe4553195d37edcc3b673c566008095cce6eb1090b270cb03c0325a15328c6",
+            "appearance:9f1db08be15486cf28337ca61c97715194bb9b54cccca9f28768ddd614ea32a2"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연·저자극·머무를 환경에 대한 정보가 제공되지 않았다.",
+      "value": 0
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:89ed8d08627649b2e7cf430e03076e94386df28d282c0a81b71fdd0cfd187429",
+          "quote": {
+            "end": 328,
+            "method": "EXACT",
+            "original": "호림박물관은 도자, 금속, 나무, 서화, 전적 등 1만 9천 여 점의 문화유산을 소장하고 있으며",
+            "start": 275,
+            "submitted": "호림박물관은 도자, 금속, 나무, 서화, 전적 등 1만 9천 여 점의 문화유산을 소장하고 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f819cd39da2e910e1010e82f23353f942356775b2f0c84f4e8100e9cfade510a"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "H.a",
+      "level": 2,
+      "reason": "호림박물관 소속 시설로 확인된 실제 문화유산(국보·보물 포함) 소장이 명시되어 원형·유산 접촉을 지원하나, 신사분관에서 어떤 실물이 전시되는지 구체적 확인이 없어 관람 수준으로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:89ed8d08627649b2e7cf430e03076e94386df28d282c0a81b71fdd0cfd187429",
+          "quote": {
+            "end": 149,
+            "method": "EXACT",
+            "original": "윤장섭 선생은 1981년 7월 재단법인 성보문화재단을 설립하고, 이어서 1982년 10월 서울시 강남구 대치동에 호림박물관을 개관하였다.",
+            "start": 73,
+            "submitted": "윤장섭 선생은 1981년 7월 재단법인 성보문화재단을 설립하고, 이어서 1982년 10월 서울시 강남구 대치동에 호림박물관을 개관하였다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f819cd39da2e910e1010e82f23353f942356775b2f0c84f4e8100e9cfade510a"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "설립자와 설립·개관 연혁이 소개되어 장소 관련 역사 맥락의 간단한 이해가 가능하나, 신사분관 자체의 구체적 사건·인물 탐구 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "설립 목적에 민족문화 계승이 언급되지만 신사분관에서 지역 주체의 실제 전승·생활문화와 연결되는 활동의 근거는 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:37fa28984ffd798cf53cfaa9b51f0aa80f36277fa15714317cf9e5829b00cde3",
+          "quote": {
+            "end": 45,
+            "method": "EXACT",
+            "original": "오디오 가이드(1층 로비 안내데스크)전시설명(큐레이터) : 11:00, 15:00",
+            "start": 0,
+            "submitted": "오디오 가이드(1층 로비 안내데스크)전시설명(큐레이터) : 11:00, 15:00",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8455dc00e9d33625ea93cd5ec64cf76c5331dc83efdecb2c4f71cdc73336a3f1"
+        },
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:89ed8d08627649b2e7cf430e03076e94386df28d282c0a81b71fdd0cfd187429",
+          "quote": {
+            "end": 513,
+            "method": "EXACT",
+            "original": "호림박물관은 개관 이후 수준 높은 소장품을 바탕으로 다양한 주제의 전시를 열어왔다.",
+            "start": 467,
+            "submitted": "호림박물관은 개관 이후 수준 높은 소장품을 바탕으로 다양한 주제의 전시를 열어왔다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f819cd39da2e910e1010e82f23353f942356775b2f0c84f4e8100e9cfade510a"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "오디오 가이드와 큐레이터 전시설명, 주제 전시가 유산 해설·학습 기회를 제공하나 해설이 소장품·전시에 연결된다는 범위까지이며 깊은 탐구 중심임을 확인할 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'한국 미술의 아름다움과 가치를 널리 알리는' 목적이 있으나 신사분관에 사회적으로 공유되는 구체적 이미지·상징이 부여되었다는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "신사분관의 외관·경관·연출 등 시각적 표현에 대한 정보가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "예약 운영과 오디오 가이드가 있으나 자율 탐색·여유·자기 선택 기회를 뒷받침하는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연·저자극·머무를 환경에 대한 정보가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "전시 관람 외에 만들기·신체 활동 등 참여·몰입 활동의 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "571b85b9c71e9fd8c3820a7ea66d45b2641f95a912db465d9915448f130d1673",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "48956ca74abf296a0f96891834c2cad0c9d714c8fe884ac1bf67972f685d2f2f",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "어두운 배경 속 금빛 필사본에 집중되는 극적인 조명과 대각선 원근 구도가 장면 전체를 지배하며 강한 연출성을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:05553e254fefc42cffb8bfe41021dcded04f64cf542797beebc577ec23b8ac8b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2b959db09c056ac85ec49a3a5057471234d8c8acf4f69ed1b8b0084d86e447a1",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507858_4",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6c249e01faca6d2126682521a056245d1288791847cd8388e9af020829eec85b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/58/3507858_image2_1.jpg"
+        },
+        "record_sha256": "6f51b7ca567111b27370f29b30841b32c1c821d5db2d23683decf02aa16e1222",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "어두운 배경에 스포트라이트가 도자기에만 집중되는 극적인 명암 연출이 장면 전체를 지배하며, 깊이감 있는 구도와 반사 효과가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3ad02fd062d5e4f869a41a87790e5796b15fda81d180af1df325f0e18f96f08e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5ce6de276cbb94b3a48854fab8c87198351c3dcb56dc9a8188736fd53a2e6566",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507857_3",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e8a3a3965ee0d4ebf25761818c252d88677c3e241d18fb2bc57157f7b735a250",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/57/3507857_image2_1.jpg"
+        },
+        "record_sha256": "3a25a286af7a765e758af98c0f1259aeffc242ac7c0edbfb1e261bac6c35bda3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3e9060cef55c6e12a3aeeee386e2c602869fedcd33c9ce9412df02a8e9eb47be",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2b959db09c056ac85ec49a3a5057471234d8c8acf4f69ed1b8b0084d86e447a1",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507858_4",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6c249e01faca6d2126682521a056245d1288791847cd8388e9af020829eec85b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/58/3507858_image2_1.jpg"
+        },
+        "record_sha256": "dd732414ec3648295e975eb4b9fb7fdedcaec5639bfc2693b7947a196a1f1ac1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "청자·분청사기로 보이는 전통 도자기와 유백색 병형 용기 등 전통적 형태와 재질이 명확히 드러나며 전시장 구성도 고전적 분위기를 강화한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:497fd75e462c13e7fa65c80f238b1f042693aa85d4f59eb2d27b3abd30b41e82",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5ce6de276cbb94b3a48854fab8c87198351c3dcb56dc9a8188736fd53a2e6566",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507857_3",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e8a3a3965ee0d4ebf25761818c252d88677c3e241d18fb2bc57157f7b735a250",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/57/3507857_image2_1.jpg"
+        },
+        "record_sha256": "dc15f2d3729247f163a0282c2ec677ad8adcbecfb1e1c98ce6bfcc2878d80e65",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시 공간으로 녹지·물·자연 경관 등 자연 환경 단서가 전혀 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:79fe4553195d37edcc3b673c566008095cce6eb1090b270cb03c0325a15328c6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e75f3e9491bb0db4413a896e195a95ed94b886319a40727f3a1c1f58e43d7e91",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507859_5",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6f0e756b01d5cc175d4e46c4c8e88638fb8a75f40ab854f99c7b5ed3a5310228",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/59/3507859_image2_1.jpg"
+        },
+        "record_sha256": "7f3f2c35458ff5ef7a594c6eafbb607e7266efa23fdf17a6b8aa7947d73e1c4d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "갛은 짙은 종이에 금색 글자로 쓰인 전통 필사본과 기와자기 전시 케이스 등 전통적 외관 요소가 장면의 중심을 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7fe87ad81028cd61a160a9f45477763492eba144a1106d35c133c7b41dc02f68",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2b959db09c056ac85ec49a3a5057471234d8c8acf4f69ed1b8b0084d86e447a1",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507858_4",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6c249e01faca6d2126682521a056245d1288791847cd8388e9af020829eec85b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/58/3507858_image2_1.jpg"
+        },
+        "record_sha256": "4dc56e4122e3ba67829fcba97b0fc930316035a341d379be8a612282e4dd1b54",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "조명이 달 항아리에 집중되어 은은한 명암과 그림자가 장면 전체를 지배하는 극적으로 연출된 조명 구도가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:990962c780e86d6c814fd752bbb32f9b0353fea97ea3a52483be74a04cba90b6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e75f3e9491bb0db4413a896e195a95ed94b886319a40727f3a1c1f58e43d7e91",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507859_5",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6f0e756b01d5cc175d4e46c4c8e88638fb8a75f40ab854f99c7b5ed3a5310228",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/59/3507859_image2_1.jpg"
+        },
+        "record_sha256": "2de8011af53b3bc6e3df930d25c4603f89a63970f5fd11bab922aa52f6f72c63",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 전혀 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9f1db08be15486cf28337ca61c97715194bb9b54cccca9f28768ddd614ea32a2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5ce6de276cbb94b3a48854fab8c87198351c3dcb56dc9a8188736fd53a2e6566",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507857_3",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e8a3a3965ee0d4ebf25761818c252d88677c3e241d18fb2bc57157f7b735a250",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/57/3507857_image2_1.jpg"
+        },
+        "record_sha256": "b013d400a5cea0708702abf11d38a8b9a25766c8a340236f4ae416af0bf155fd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "백자 달 항아리라는 전통 도자기가 중앙에 배치되어 전통 재료와 조형의 시각적 특성이 장면을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ad2d8a4e446e5c964dc8daeab0536bface1967c7c0bfaab7675c278f9bbe003b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e75f3e9491bb0db4413a896e195a95ed94b886319a40727f3a1c1f58e43d7e91",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3507859_5",
+          "request_sha256": "2f8fac5a19ed901e4215d196e6329b35580fe4aefa59101e237a009dbdcf85fe",
+          "response_sha256": "d35e99e441fc88d66da4f50c57fba4595877cbef0d70a910d305efdbf21cda98",
+          "retrieved_at": "2026-09-11T02:04:42.147315Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6f0e756b01d5cc175d4e46c4c8e88638fb8a75f40ab854f99c7b5ed3a5310228",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/59/3507859_image2_1.jpg"
+        },
+        "record_sha256": "d90b00e72a74dc9450b23d5d539d99faf59e4d9e9c84ff0e965f10928c64baa1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:37fa28984ffd798cf53cfaa9b51f0aa80f36277fa15714317cf9e5829b00cde3",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "753941",
+          "request_sha256": "8ceea4b3602b809f7ffdd8529be1d3cb17cee49c0be26ce3b5ff4c93cb09441b",
+          "response_sha256": "3a0f6cef5ad5367395333bb9b77b8228366119e73c9954c216f00f6f07e8aa9b",
+          "retrieved_at": "2026-09-11T02:04:41.468287Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0d08902fd77b2aa357ee1b4564fc78d8a9f523a8572980011d01a20e204c0694",
+          "source_uri": null
+        },
+        "record_sha256": "8455dc00e9d33625ea93cd5ec64cf76c5331dc83efdecb2c4f71cdc73336a3f1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "오디오 가이드(1층 로비 안내데스크)전시설명(큐레이터) : 11:00, 15:00"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:84fd16a1316c10a6733c87664c2a9b0930d71ef65934c4488e3d5aeb9d0a8dc6",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "753941",
+          "request_sha256": "8ceea4b3602b809f7ffdd8529be1d3cb17cee49c0be26ce3b5ff4c93cb09441b",
+          "response_sha256": "3a0f6cef5ad5367395333bb9b77b8228366119e73c9954c216f00f6f07e8aa9b",
+          "retrieved_at": "2026-09-11T02:04:41.468287Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "49e40060b90ed3a457fe84f43ae12d20c526c11bff7a89eaa86a1292879034b4",
+          "source_uri": null
+        },
+        "record_sha256": "cccd66d22b5d3269215120b2be6af52c78bf5e6f5741f563902de5174c46a095",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "홈페이지 및 전화예약"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:89ed8d08627649b2e7cf430e03076e94386df28d282c0a81b71fdd0cfd187429",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "753941",
+          "request_sha256": "c28f4d1166b5d0541d3561544690448d5ebc63b7e1ce68566e06559b24cd1c50",
+          "response_sha256": "3753dddc9a5d474e04a34b5d4159c2f31557f9945735f67e27c3dfae9acca0c0",
+          "retrieved_at": "2026-09-10T17:22:38.667844Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-18T01:10:05Z",
+          "source_record_sha256": "cf3bdd786a067843072be20156f76a3d81cf7f352c76496db43fc38eabed42dc",
+          "source_uri": null
+        },
+        "record_sha256": "f819cd39da2e910e1010e82f23353f942356775b2f0c84f4e8100e9cfade510a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "호림박물관은 호림 윤장섭(1922~2016) 선생이 출연한 문화유산과 기금을 기반으로 민족문화의 계승과 발전을 위하여 설립되었다. 윤장섭 선생은 1981년 7월 재단법인 성보문화재단을 설립하고, 이어서 1982년 10월 서울시 강남구 대치동에 호림박물관을 개관하였다. 그 후 서울시 관악구 신림동에 박물관을 확장·신축하여 1999년 5월에 재개관하였다. 2009년 6월에는 시민들에게 더 가까이 다가가고자 문화의 중심지로 떠오르고 있는 강남구 신사동 호림아트센터 내에 신사분관을 개관하였다. 호림박물관은 도자, 금속, 나무, 서화, 전적 등 1만 9천 여 점의 문화유산을 소장하고 있으며, 이 가운데 62건의 문화유산이 국보(8건)와 보물(54건)로, 11건의 문화유산이 서울특별시 유형문화유산으로 지정되어 있다. 호림박물관의 소장품은 다양함과 질적인 면에서 높이 평가를 받고 있으며, 한국미술사 연구에 중요한 기초자료가 되고 있다. 호림박물관은 개관 이후 수준 높은 소장품을 바탕으로 다양한 주제의 전시를 열어왔다. 이를 통해서 한국 미술의 아름다움과 가치를 널리 알리는 데에 힘을 쏟고 있다. 지속적인 수집과 전시를 바탕으로 새로운 미술문화를 만들어가는 미래지향적인 문화공간이 되고자 한다."
+      }
+    ],
+    "parent_source_sha256": "0cc4b0cbb27c4861fcc828f3594ebd0241b5c29e7ea4232133b28fa1afbe17ca",
+    "place": {
+      "address": "서울특별시 강남구 도산대로 317 (신사동)",
+      "category": "문화시설",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+      "name_ko": "호림박물관 신사분관",
+      "place_id": "public:korea:5af56594b62eb9c340822b7eff77deea9782dd7d9e19ee4b8352241838bdeaf9",
+      "provider_content_id": "753941",
+      "region_code": "11680",
+      "region_name": "서울특별시 강남구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,609 @@
+{
+  "assessed_at": "2026-09-11T19:11:10.150278Z",
+  "assessment_sha256": "6ffe746db3b2fcbe159e6d16ed52b95b0b3bea6d813a39835a0b0c6be5e07cfb",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 42
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "value": 38
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "롯데 식품 브랜드를 주제로 한 체험 공간이라는 이미지가 장소에 일관되게 부여되어 있다. 기업 브랜드 의미의 표현은 확인되나 그것이 방문 경험의 중심이라는 수준의 근거는 부족해 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "스위트파크라는 테마 공간의 시각적 연출이 언급되지만, 색·형태·경관의 구체적 표현에 대한 묘사가 제한적이어서 수준 1로 평가한다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "테마 캐릭터·열기구 여행 등 브랜드 이미지의 대표 장면을 현장 프로그램에서 경험한다는 근거가 있으나, 촬영·재현 활동이 중심이라는 근거는 없어 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "역할 체험, 제품 시식, 생산 과정 견학 등 구체적 참여 활동이 확인된다. 다만 지속적 도전·몰입이 방문 경험의 중심이라는 수준의 근거는 부족해 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "캐릭터·진행자와 함께하는 단체 프로그램 형태가 확인되지만, 교류·공동 제작·자기표현의 기회에 대한 구체적 근거는 제한적이어서 수준 1로 평가한다.",
+      "value": 25
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료는 롯데 식품 제품을 주제로 한 기업 체험 시설을 설명할 뿐, 확인된 원형·유산과의 접촉에 대한 근거가 없다. 제품 모형 전시는 문화유산이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관·운영 주체 등 시설 정보는 있으나 이 장소의 실제 역사·사건·인물 맥락을 다루는 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "기업 제품 체험 프로그램에 대한 설명만 있으며, 지역 주체의 전승·생활문화와의 실제 연결을 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "식품 과학·치아 건강 학습은 일반 교육 체험이며 원형·유산·전통에 연결된 해설·탐구가 아니므로 H.d의 근거로 삼을 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135",
+          "quote": {
+            "end": 149,
+            "method": "EXACT",
+            "original": "롯데의 식품을 주제로 한 스위트파크의 다양한 체험 공간에서 아이들에게 친숙한 가나 초콜릿, 칠성 사이다",
+            "start": 92,
+            "submitted": "롯데의 식품을 주제로 한 스위트파크의 다양한 체험 공간에서 아이들에게 친숙한 가나 초콜릿, 칠성 사이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e33a96599d1b254426416319cbc197ae1afb7922f02d18bcce031b3f403a1d98"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "롯데 식품 브랜드를 주제로 한 체험 공간이라는 이미지가 장소에 일관되게 부여되어 있다. 기업 브랜드 의미의 표현은 확인되나 그것이 방문 경험의 중심이라는 수준의 근거는 부족해 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "홈페이지 안내 언급만 있을 뿐, 작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·확산에 대한 구체적 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135",
+          "quote": {
+            "end": 293,
+            "method": "EXACT",
+            "original": "초콜릿, 사이다, 아이스크림, 햄버거가 가득한 스위트파크에서 다양한 체험을 진행한다",
+            "start": 247,
+            "submitted": "초콜릿, 사이다, 아이스크림, 햄버거가 가득한 스위트파크에서 다양한 체험을 진행한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e33a96599d1b254426416319cbc197ae1afb7922f02d18bcce031b3f403a1d98"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 1,
+      "reason": "스위트파크라는 테마 공간의 시각적 연출이 언급되지만, 색·형태·경관의 구체적 표현에 대한 묘사가 제한적이어서 수준 1로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135",
+          "quote": {
+            "end": 245,
+            "method": "EXACT",
+            "original": "스위트파크의 요정 위티와 함께하는 환상적인 열기구 여행을 시작으로",
+            "start": 209,
+            "submitted": "스위트파크의 요정 위티와 함께하는 환상적인 열기구 여행을 시작으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e33a96599d1b254426416319cbc197ae1afb7922f02d18bcce031b3f403a1d98"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "테마 캐릭터·열기구 여행 등 브랜드 이미지의 대표 장면을 현장 프로그램에서 경험한다는 근거가 있으나, 촬영·재현 활동이 중심이라는 근거는 없어 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "Value error, UNKNOWN_IS_NOT_LOW_OR_CITED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경·시각적 저자극·머무를 환경에 대한 근거가 제공되지 않았다. 실내 체험 시설이라는 사실만으로 회복 환경을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135",
+          "quote": {
+            "end": 354,
+            "method": "EXACT",
+            "original": "식품연구원이 되어 식품 속에 숨겨진 과학을 찾아내고 제품을 개발하는 체험을 한다",
+            "start": 310,
+            "submitted": "식품연구원이 되어 식품 속에 숨겨진 과학을 찾아내고 제품을 개발하는 체험을 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e33a96599d1b254426416319cbc197ae1afb7922f02d18bcce031b3f403a1d98"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "역할 체험, 제품 시식, 생산 과정 견학 등 구체적 참여 활동이 확인된다. 다만 지속적 도전·몰입이 방문 경험의 중심이라는 수준의 근거는 부족해 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135",
+          "quote": {
+            "end": 255,
+            "method": "EXACT",
+            "original": "스위트파크의 요정 위티와 함께하는 환상적인 열기구 여행을 시작으로, 초콜릿, 사이다",
+            "start": 209,
+            "submitted": "스위트파크의 요정 위티와 함께하는 환상적인 열기구 여행을 시작으로, 초콜릿, 사이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e33a96599d1b254426416319cbc197ae1afb7922f02d18bcce031b3f403a1d98"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 1,
+      "reason": "캐릭터·진행자와 함께하는 단체 프로그램 형태가 확인되지만, 교류·공동 제작·자기표현의 기회에 대한 구체적 근거는 제한적이어서 수준 1로 평가한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "FACET_SCHEMA_REJECTED",
+      "key": "R.a",
+      "proposed": {
+        "basis": "INSUFFICIENT",
+        "citations": [
+          {
+            "claim": "AUTONOMOUS_ACTIVITY",
+            "evidence_id": "evidence:09986571615530e3eb450dd7e8a53f67c04e7995521d3cc40c2f6d2cdc41cffe",
+            "quote": "인터넷 예약 필수(매월 1일 오전 11시부터 온라인으로 다음달 예약 진행)"
+          }
+        ],
+        "key": "R.a",
+        "level": null,
+        "reason": "제공 근거는 예약 필수·지정 일정 운영과 정해진 견학 프로그램 진행만 보여준다. 이는 자율 탐색·자기 선택 기회를 지지하는 근거도, 자율 탐색이 제한된다고 직접 명시한 근거도 아니므로 0(EXPLICIT_LOW)이 아닌 UNKNOWN으로 판단한다.",
+        "state": "UNKNOWN",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "Value error, UNKNOWN_IS_NOT_LOW_OR_CITED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "f04fffc6e2488c98072b19c1c4814ba1f223f571ec7248b0f0277c4616836bf5",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:09986571615530e3eb450dd7e8a53f67c04e7995521d3cc40c2f6d2cdc41cffe",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d50d60c3156c96ba75aa32a36d569231d383e4b239edc609ee22989c02c7f3b3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2751331",
+          "request_sha256": "4b990e50f841982e447a0c74db7b1deafa4e8eefddb615c0182dd3df3b618c19",
+          "response_sha256": "fdcb21a0568235fd0cb2328b10d878b1753b0ba7cb553eb4e43a07b810418908",
+          "retrieved_at": "2026-09-10T08:28:39.707334Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f0a18a45ae7f1ae323c5f53e7730484ceecd03375e8ac5147a6e4e8f2c09e09e",
+          "source_uri": null
+        },
+        "record_sha256": "6bdf167d3a4a77c6502b6f872dc4a17c9878646eb9cbf1b22ae37f3774c8b5a5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "인터넷 예약 필수(매월 1일 오전 11시부터 온라인으로 다음달 예약 진행)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:34fd4edb8ccaa1353a4c65ed8f1a2edc418b465560fe656d18ac3ada52e6b80b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d50d60c3156c96ba75aa32a36d569231d383e4b239edc609ee22989c02c7f3b3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2751331",
+          "request_sha256": "4b990e50f841982e447a0c74db7b1deafa4e8eefddb615c0182dd3df3b618c19",
+          "response_sha256": "fdcb21a0568235fd0cb2328b10d878b1753b0ba7cb553eb4e43a07b810418908",
+          "retrieved_at": "2026-09-10T08:28:39.707334Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f509387e83f56d36d77fa09df5a7c0d027844ff7c749f368240dce21132dd2b4",
+          "source_uri": null
+        },
+        "record_sha256": "0683c4d60f158b5c67daeef8f65bf044d2b7aad86301e6b3573ca8611cc6f1a3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "식품 견학"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:551b3e68acf32338faac23ada1b0935efbdf914ced3955c327183c585cd46e1b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d50d60c3156c96ba75aa32a36d569231d383e4b239edc609ee22989c02c7f3b3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2751331",
+          "request_sha256": "4b990e50f841982e447a0c74db7b1deafa4e8eefddb615c0182dd3df3b618c19",
+          "response_sha256": "fdcb21a0568235fd0cb2328b10d878b1753b0ba7cb553eb4e43a07b810418908",
+          "retrieved_at": "2026-09-10T08:28:39.707334Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b1725503ead3e7fd207ae2a6178a5a20d09a47cd9c442671302567e1bd27869c",
+          "source_uri": null
+        },
+        "record_sha256": "748e62fc924536cfc3e9d9815ed6f14dc1f03a2d50db515b26e2b1112acd1441",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "롯데제과 생산 과자 및 과자 모형"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:91f77902d9786809a7298b9d1a8f8f55d6950da1b00820b59a69bc468affa50f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d50d60c3156c96ba75aa32a36d569231d383e4b239edc609ee22989c02c7f3b3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2751331",
+          "request_sha256": "4b990e50f841982e447a0c74db7b1deafa4e8eefddb615c0182dd3df3b618c19",
+          "response_sha256": "fdcb21a0568235fd0cb2328b10d878b1753b0ba7cb553eb4e43a07b810418908",
+          "retrieved_at": "2026-09-10T08:28:39.707334Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "769ade9a7a0de74528b87ae587aee18a99a90ebcc539adf92e00c3c1560cda28",
+          "source_uri": null
+        },
+        "record_sha256": "d567d3c0c4284b22672f62ca804265da1969703211f9f7ca4e641ae03fc38533",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "불가"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ad1de84395af0e4a4cbbe8dac49dae7674538814df1f66e81a65e8de9a73b135",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d50d60c3156c96ba75aa32a36d569231d383e4b239edc609ee22989c02c7f3b3",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2751331",
+          "request_sha256": "cfa15104218be0b1506a5cf079944b65e2f17ac63523bf23f8cfb23bd3578c91",
+          "response_sha256": "d6108864af6dcd609f15fbe0f4e10156ee231916184b3a49ff2573af4cb668b3",
+          "retrieved_at": "2026-09-10T08:11:15.405396Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-27T09:27:51Z",
+          "source_record_sha256": "bf78d3f6b07e38f76cc235232003c976b0d884f51432932b18a5130db82b6f0d",
+          "source_uri": null
+        },
+        "record_sha256": "e33a96599d1b254426416319cbc197ae1afb7922f02d18bcce031b3f403a1d98",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "롯데어린이식품체험관 스위트파크는 롯데 그룹 식품사의 연구개발과 품질 안전 관리를 담당하는 롯데중앙연구소가 운영하는 어린이 대상 Edutainment 체험 시설이다. 롯데의 식품을 주제로 한 스위트파크의 다양한 체험 공간에서 아이들에게 친숙한 가나 초콜릿, 칠성 사이다, 의성 마늘햄, 롯데리아 햄버거 등을 활용해 맛있고 신기한 체험을 할 수 있는 견학 프로그램을 제공한다. 스위트파크의 요정 위티와 함께하는 환상적인 열기구 여행을 시작으로, 초콜릿, 사이다, 아이스크림, 햄버거가 가득한 스위트파크에서 다양한 체험을 진행한다. 롯데중앙연구소 체험존에서는 식품연구원이 되어 식품 속에 숨겨진 과학을 찾아내고 제품을 개발하는 체험을 한다. 자일리톨 치아건강 교육존은 자일리톨 껌에 숨겨진 치아 건강에 대한 비밀을 파헤치며, 올바른 치아 건강 유지 방법에 대해 학습할 수 있다. 체험을 진행하며 초콜릿, 젤리, 자일리톨 등의 제품을 직접 먹어보며 즐길 수 있는 에듀테이션 공간으로, 맛있는 식품이 어떻게 만들어지는지를 알아가며 그 속에 숨겨진 과학을 배우고, 어린이들이 꼭 알아야 할 올바르고 건강한 식생활까지 학습할 수 있다. 스위트파크는 롯데식품사 및 연구소의 사회공헌 차원으로 무료로 운영되고 있다. 사전에 예약한 인원만 입장할 수 있으며, 예약 방법과 일정 등 자세한 사항은 롯데스위트파크 홈페이지를 참고하면 된다."
+      }
+    ],
+    "parent_source_sha256": "9664b6d140d515c837e11f34acbf2c379d30e0453bc27f0abeba94dbaa0f8927",
+    "place": {
+      "address": "서울특별시 강서구 마곡중앙로 201 (마곡동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:d50d60c3156c96ba75aa32a36d569231d383e4b239edc609ee22989c02c7f3b3",
+      "name_ko": "스위트파크 롯데 어린이 식품체험관",
+      "place_id": "public:korea:d50d60c3156c96ba75aa32a36d569231d383e4b239edc609ee22989c02c7f3b3",
+      "provider_content_id": "2751331",
+      "region_code": "11500",
+      "region_name": "서울특별시 강서구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

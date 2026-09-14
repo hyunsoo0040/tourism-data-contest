@@ -57,8 +57,10 @@ def _legacy_v1_profile(
     questionnaire_version: str = "questionnaire-v1",
     answers: QuestionnaireAnswersV1 | QuestionnaireAnswersV2 | None = None,
 ) -> PreferenceProfile:
-    answers = answers if answers is not None else QuestionnaireAnswersV1.model_validate(
-        _legacy_v1_answers()
+    answers = (
+        answers
+        if answers is not None
+        else QuestionnaireAnswersV1.model_validate(_legacy_v1_answers())
     )
     answers_by_number = {
         question.ordinal: _legacy_v1_answers()[question.question_id]
@@ -70,8 +72,11 @@ def _legacy_v1_profile(
             axis,
             *(answers_by_number[number] for number in axis_questions[axis]),  # type: ignore[arg-type]
         )
-        for axis in (ExperienceAxis.HISTORY_TRADITION, ExperienceAxis.EMOTION_IMAGE,
-                     ExperienceAxis.REST_IMMERSION)
+        for axis in (
+            ExperienceAxis.HISTORY_TRADITION,
+            ExperienceAxis.EMOTION_IMAGE,
+            ExperienceAxis.REST_IMMERSION,
+        )
     )
     return PreferenceProfile(
         profile_id="profile:v1-coupling-evidence",
@@ -136,9 +141,11 @@ def test_legacy_persisted_v1_profile_still_validates_and_replays() -> None:
 
 def test_v1_profile_with_v2_answers_is_rejected() -> None:
     with pytest.raises(ValidationError, match="QuestionnaireAnswersV1"):
-        _legacy_v1_profile(answers=QuestionnaireAnswersV2.model_validate(
-            {f"q{number}": 2 for number in range(1, 13)}
-        ))
+        _legacy_v1_profile(
+            answers=QuestionnaireAnswersV2.model_validate(
+                {f"q{number}": 2 for number in range(1, 13)}
+            )
+        )
 
 
 @pytest.mark.parametrize(
@@ -146,7 +153,7 @@ def test_v1_profile_with_v2_answers_is_rejected() -> None:
     [
         ("schema_version", "preference-profile-v2"),
         ("schema_version", "preference-profile-v9"),
-        ("scoring_version", "choice-bp-v2"),
+        ("scoring_version", "choice-distribution-v3"),
         ("scoring_version", "scoring-v1"),
         ("description_template_version", "current-trip-expectation-v2"),
         ("config_hash", "a" * 64),
@@ -170,7 +177,34 @@ def test_canonical_v2_bounds_are_exact_and_differ_per_axis() -> None:
     from itda.contracts.questionnaire_v2 import AXIS_ATTAINABLE_BOUNDS
 
     assert dict(AXIS_ATTAINABLE_BOUNDS) == {
-        "HISTORY_TRADITION": (12, 48),
-        "EMOTION_IMAGE": (12, 42),
-        "REST_IMMERSION": (12, 45),
+        "HISTORY_TRADITION": (-1, 12),
+        "EMOTION_IMAGE": (0, 10),
+        "REST_IMMERSION": (0, 11),
     }
+
+
+@pytest.mark.parametrize("copy_revision", ["original", "20260908", "20260913"])
+def test_stored_choice_profile_keeps_original_scores_and_hash(copy_revision: str) -> None:
+    from itda.contracts.preference import (
+        LEGACY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+        PREVIOUS_COPY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+        PREVIOUS_TERMINOLOGY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+    )
+
+    historical = {
+        "original": LEGACY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+        "20260908": PREVIOUS_COPY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+        "20260913": PREVIOUS_TERMINOLOGY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+    }[copy_revision]
+
+    payload = _legacy_v1_profile().model_dump(mode="json")
+    payload.update({key: value for key, value in historical.items() if key != "answers_type"})
+    payload["questionnaire_version"] = "questionnaire-v2"
+    payload["answers"] = {f"q{i}": 1 for i in range(1, 13)}
+    restored = PreferenceProfile.model_validate(payload)
+    assert restored.scoring_version == historical["scoring_version"]
+    assert restored.model_dump(mode="json") == payload
+    # Unknown configuration hashes remain invalid for every historical revision.
+    payload["config_hash"] = "a" * 64
+    with pytest.raises(ValidationError, match="config_hash"):
+        PreferenceProfile.model_validate(payload)

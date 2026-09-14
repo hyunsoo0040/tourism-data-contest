@@ -273,11 +273,16 @@ def _confirmed_projection_fixture(
     *,
     profile_id: str,
     included_flags: list[bool],
+    semantic_kind: str | None = None,
+    semantic_text: str = "산책·장시간 체류",
 ) -> tuple[str, str, dict[str, object]]:
     job_id = secrets.token_hex(32)
     draft_digest = secrets.token_hex(32)
     stored_name = secrets.token_hex(16)
     batch = _candidate_batch(job_id, count=len(included_flags))
+    if semantic_kind is not None:
+        batch["trait_ids"] = ["M5"]
+        batch["texts_ko"] = [semantic_text]
     _insert_queued_job(connection, job_id=job_id, profile_id=profile_id)
     connection.execute(
         "SELECT dev_eval.reserve_photo_image_slot_v3(%s, %s, 1, %s, 'image/jpeg')",
@@ -296,7 +301,12 @@ def _confirmed_projection_fixture(
         cause="success",
     )
     connection.execute(
-        "SELECT dev_eval.record_photo_candidate_batch_v3(%s, %s, %s, %s, %s, %s)",
+        "SELECT dev_eval.record_photo_candidate_batch_v3(%s, %s, %s, %s, %s, %s)"
+        if semantic_kind is None
+        else (
+            "SELECT dev_eval.record_photo_candidate_batch_v4"
+            "(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        ),
         (
             job_id,
             profile_id,
@@ -304,10 +314,23 @@ def _confirmed_projection_fixture(
             batch["trait_ids"],
             batch["texts_ko"],
             batch["candidate_set_sha256s"],
+        )
+        + (
+            ()
+            if semantic_kind is None
+            else (
+                ["M5.long_stay"],
+                semantic_kind,
+                "fixture-semantic" if semantic_kind == "semantic" else "synthetic-photo-analyzer",
+                "photo-semantics-v2",
+                1,
+            )
         ),
     )
     for candidate_id, included in zip(
-        batch["candidate_ids"], included_flags, strict=True  # type: ignore[arg-type]
+        batch["candidate_ids"],
+        included_flags,
+        strict=True,  # type: ignore[arg-type]
     ):
         if not included:
             connection.execute(
@@ -1560,6 +1583,47 @@ def test_receipt_idempotency_binds_to_exact_draft_only(
         assert first is not None
 
 
+def test_semantic_projection_roundtrip_and_untrusted_legacy(phase6_schema: dict[str, str]) -> None:
+    from itda.db.photo_repositories import PhotoRecommendationProjectionReader
+    from itda.db.session import create_database_engine, create_session_factory
+
+    engine = create_database_engine(phase6_schema["job"])
+    reader = PhotoRecommendationProjectionReader(create_session_factory(engine))
+    try:
+        with psycopg.connect(phase6_schema["job"], autocommit=True) as connection:
+            values = []
+            for index, phrase in enumerate(("산책·장시간 체류", "산책·장시간   체류")):
+                owner = f"semantic-roundtrip-{index}"
+                job, _, _ = _confirmed_projection_fixture(
+                    connection,
+                    profile_id=owner,
+                    included_flags=[True],
+                    semantic_kind="semantic",
+                    semantic_text=phrase,
+                )
+                value = reader.read(job, owner).traits[0]
+                assert value.observed and value.image_index == 1
+                values.append(value.value)
+            assert values == [100, 100]
+            for kind, phrase in (
+                ("synthetic", "산책·장시간 체류"),
+                ("semantic", "지원하지 않는 편집 문구"),
+                (None, "기존 태그"),
+            ):
+                owner = f"untrusted-{kind}-{secrets.token_hex(4)}"
+                job, _, _ = _confirmed_projection_fixture(
+                    connection,
+                    profile_id=owner,
+                    included_flags=[True],
+                    semantic_kind=kind,
+                    semantic_text=phrase,
+                )
+                value = reader.read(job, owner).traits[0]
+                assert value.value is None and not value.observed
+    finally:
+        engine.dispose()
+
+
 def test_recommendation_projection_returns_only_owned_included_traits(
     phase6_schema: dict[str, str],
 ) -> None:
@@ -1745,6 +1809,9 @@ def test_unexpected_service_execute_grant_would_be_rejected(
         "dev_eval.commit_photo_image_slot_v3(text,text,integer,text,integer)",
         "dev_eval.read_photo_image_slots_v3(text,text)",
         "dev_eval.read_photo_recommendation_projection_v1(text,text)",
+        "dev_eval.read_photo_recommendation_projection_v2(text,text)",
+        "dev_eval.list_photo_candidates_v3(text,text)",
+        "dev_eval.record_photo_candidate_batch_v4(text,text,text[],text[],text[],text[],text[],text,text,text,integer)",
     }
     with psycopg.connect(phase6_schema["job"]) as connection:
         photo_functions = connection.execute(

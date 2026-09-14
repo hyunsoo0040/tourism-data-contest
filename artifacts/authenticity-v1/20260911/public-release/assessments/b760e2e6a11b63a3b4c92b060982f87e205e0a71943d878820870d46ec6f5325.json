@@ -1,0 +1,993 @@
+{
+  "assessed_at": "2026-09-11T17:29:00.417438Z",
+  "assessment_sha256": "b760e2e6a11b63a3b4c92b060982f87e205e0a71943d878820870d46ec6f5325",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 83
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "마을 명칭(구병, 우복동)의 유래와 자연마을 구성(느진모기, 된모기, 웃멍어모기) 등 간단한 연혁이 공식 소개文에서 확인된다. 구체적 사건·인물 맥락의 탐구는 아니므로 수준 2의 간단한 소개로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "아담한 산촌 마을, 노송과 메밀꽃이라는 이미지가 마을과 연결되어 소개된다. 여러 표현에서 일관되게 확인되는 수준까지는 아니므로 간단한 이미지 연결(수준 2)로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:129deb6a57ad63d634049b9fcd7d0a5063257f5c8662d32daaef0d07b137faa6",
+            "appearance:241f3d4a39c5f3feb95ea3efa9fd3ee5e7c3f82d171ab6b9331205af214889c3",
+            "appearance:76fd76c893ac838c24a98df9fad64ec38cda09aad26aadff8553615070c40f3c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "팜스테이 운영으로 방문자가 여유롭게 농촌에 머무며 자신의 방식으로 마을을 경험할 여지가 확인된다. 계절별 채취 활동 선택도 자율성을 뒷받침하나, 일상 이탈이 방문 경험의 중심이라 단정하기는 어려워 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:6666f77e8a8dc89fc188051e8d8ab3250d77726843ad1ad61d143c7f369b9d96",
+            "appearance:e3862d8bed353cef23fac10d82df1ccf7fd8f6a2107f42a2753377612cdacb8d",
+            "appearance:f6cf5d627bcb8a3c25bc9ae15dfe6dc543689723926b1b19381cc4d6f6516b53"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "QUOTE_NOT_IN_BOUND_SOURCE",
+      "value": 83
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4feb1669883c414b406b61f3d621aff6fede5663e7cc59528ba671e589e6fb26",
+            "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "계절별 채취, 메밀묵·옥수수엿 만들기, 야생화 심기, 쿠키·수제청 만들기 등 다양한 참여형 체험이 확인된다. 여러 과정에 걸친 지속적 참여 활동이 마을 방문의 주요 내용이므로 수준 4로 평가한다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "토속음식 만들기와 팜스테이 등에서 함께 참여하고 농가와 교류하는 구체적 기회가 확인된다. 공동 활동이 풍부하거나 방문 경험의 중심이라는 수준까지의 근거는 부족하여 수준 3으로 평가한다.",
+      "value": 75
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 산촌 마을의 지형과 명칭 유래, 농촌 체험을 다룰 뿐 확인된 원형·문화유산의 실물 접촉에 대한 언급이 없다. 지형이 소의 자궁과 같다는 설명은 자연 지형 묘사이며 유산 접촉의 근거로 삼기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3",
+          "quote": {
+            "end": 114,
+            "method": "EXACT",
+            "original": "그 지형이 소의 자궁과 같다 하여 우복동[牛福洞 ]으로 불려지기도 한다. 구병산 밑이 되므로 구병이라는 명칭이 생겼다.",
+            "start": 48,
+            "submitted": "그 지형이 소의 자궁과 같다 하여 우복동[牛福洞 ]으로 불려지기도 한다. 구병산 밑이 되므로 구병이라는 명칭이 생겼다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5720330202f241a6cba3853551417cc3a9443051de37f7c8894bcc24d4c3e5e8"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 2,
+      "reason": "마을 명칭(구병, 우복동)의 유래와 자연마을 구성(느진모기, 된모기, 웃멍어모기) 등 간단한 연혁이 공식 소개文에서 확인된다. 구체적 사건·인물 맥락의 탐구는 아니므로 수준 2의 간단한 소개로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "메밀묵·옥수수엿 만들기 등 토속음식 체험이 언급되나, 이것이 지역 주체에 의한 실제 전승·생활문화의 지속임을 확인하는 근거는 없다. 체험 프로그램 제공만으로 실제 전승 연결을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "명칭 유래 설명이 있으나 이는 마을 소개 수준이며, 원형·유산·전통에 연결된 해설·학습 프로그램이 제공된다는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3",
+          "quote": {
+            "end": 265,
+            "method": "EXACT",
+            "original": "노송이 우거지고 산비탈에 메밀꽃이 피어나는 보은군 구병리마을은 그리 크지 않은 아담한 마을이다.",
+            "start": 212,
+            "submitted": "노송이 우거지고 산비탈에 메밀꽃이 피어나는 보은군 구병리마을은 그리 크지 않은 아담한 마을이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5720330202f241a6cba3853551417cc3a9443051de37f7c8894bcc24d4c3e5e8"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "아담한 산촌 마을, 노송과 메밀꽃이라는 이미지가 마을과 연결되어 소개된다. 여러 표현에서 일관되게 확인되는 수준까지는 아니므로 간단한 이미지 연결(수준 2)로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보 매체, SNS 등 이 장소의 이미지가 매체를 통해 재현·확산된다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 직접 경험하거나 재현할 수 있다는 근거가 없다. 이미지 체험 관련 서술이 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3",
+          "quote": {
+            "end": 398,
+            "method": "EXACT",
+            "original": "총 6개 농가가 옹기종기 모여 팜스테이를 구성하고 도시민을 기다리고 있다.",
+            "start": 357,
+            "submitted": "총 6개 농가가 옹기종기 모여 팜스테이를 구성하고 도시민을 기다리고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5720330202f241a6cba3853551417cc3a9443051de37f7c8894bcc24d4c3e5e8"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "팜스테이 운영으로 방문자가 여유롭게 농촌에 머무며 자신의 방식으로 마을을 경험할 여지가 확인된다. 계절별 채취 활동 선택도 자율성을 뒷받침하나, 일상 이탈이 방문 경험의 중심이라 단정하기는 어려워 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "QUOTE_NOT_IN_BOUND_SOURCE",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3",
+          "quote": {
+            "end": 489,
+            "method": "EXACT",
+            "original": "봄에는 복분자, 딸기가 여름에는 각종 버섯이 채취된다. 그리고 가을에는 머루·다래 등도 채취할 수 있다고 한다.",
+            "start": 427,
+            "submitted": "봄에는 복분자, 딸기가 여름에는 각종 버섯이 채취된다. 그리고 가을에는 머루·다래 등도 채취할 수 있다고 한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5720330202f241a6cba3853551417cc3a9443051de37f7c8894bcc24d4c3e5e8"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:4feb1669883c414b406b61f3d621aff6fede5663e7cc59528ba671e589e6fb26",
+          "quote": {
+            "end": 29,
+            "method": "EXACT",
+            "original": "야생화심기 체험 / 쿠키 만들기 / 수제청 만들기 등",
+            "start": 0,
+            "submitted": "야생화심기 체험 / 쿠키 만들기 / 수제청 만들기 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a431aa589a885ca6a35df00f4ed503bae5050bd84fb324da85512d4e57349e0f"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 4,
+      "reason": "계절별 채취, 메밀묵·옥수수엿 만들기, 야생화 심기, 쿠키·수제청 만들기 등 다양한 참여형 체험이 확인된다. 여러 과정에 걸친 지속적 참여 활동이 마을 방문의 주요 내용이므로 수준 4로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3",
+          "quote": {
+            "end": 602,
+            "method": "EXACT",
+            "original": "손이 많이 가는 메밀묵 만들기는 주부들은 물론 어린이나 남자들까지 함께 참가할 수 있다.",
+            "start": 553,
+            "submitted": "손이 많이 가는 메밀묵 만들기는 주부들은 물론 어린이나 남자들까지 함께 참가할 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5720330202f241a6cba3853551417cc3a9443051de37f7c8894bcc24d4c3e5e8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 3,
+      "reason": "토속음식 만들기와 팜스테이 등에서 함께 참여하고 농가와 교류하는 구체적 기회가 확인된다. 공동 활동이 풍부하거나 방문 경험의 중심이라는 수준까지의 근거는 부족하여 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3",
+            "quote": "노송이 우거지고 산비탈에 메밀꽃이 피어나는 보은군 구병리마을은 그리 크지 않은 아담한 마을이다."
+          }
+        ],
+        "key": "E.c",
+        "level": 2,
+        "reason": "노송, 산비탈의 메밀꽃, 아담한 산촌 경관 등 시각적 경관 단서가 공식 서술에서 확인되어 제한된 시각적 성격을 볼 수 있다. 경관이 장면을 지배한다는 근거는 없으므로 수준 2로 평가한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "QUOTE_NOT_IN_BOUND_SOURCE",
+      "key": "R.b",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "ENVIRONMENT",
+            "evidence_id": "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3",
+            "quote": "지친 도시 생활에서 활력을 찾고 자연과 벗하며 한가로이 농촌을 체험하고 싶다면 이곳을 권한다."
+          }
+        ],
+        "key": "R.b",
+        "level": 3,
+        "reason": "구병산 자락 산촌, 노송과 메밀꽃, 산비탈 개간 밭 등 자연 환경 단서가 공식 서술에서 확인된다. 다만 실제 고요함·혼잡·심리적 회복까지는 확정할 수 없으므로 자연 환경 단서가 확인된 수준 3으로 평가한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "QUOTE_NOT_IN_BOUND_SOURCE"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "27d59f761aed745f7b6b13b080db23df77ecf1beebdec1704bafbbd48445c2de",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "맑은 푸른 하늘과 밝은 햇빛 아래 갈색·녹색·금빛 색조가 대비되며, 산사면과 독장이 어우러진 구성이 시각적으로 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:129deb6a57ad63d634049b9fcd7d0a5063257f5c8662d32daaef0d07b137faa6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "69d0ce3c8d4633dced423028bd4dc46f46c9a9812639bff695a68bde4a59f15e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585367_4",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "360992407b81fd5734675f3849ac1eea63f976972ba69be45d859cd1c4cd9b88",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/67/3585367_image2_1.jpg"
+        },
+        "record_sha256": "ad11f09b5c16d906ead119c952689ac69fa88257330a20aa4d104b9a54f69a36",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "맑고 푸른 하늘과 건조한 갈색·녹색 산과 마을이 어우러진 드론 시점의 넓은 풍경 구도가 시각적으로 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:241f3d4a39c5f3feb95ea3efa9fd3ee5e7c3f82d171ab6b9331205af214889c3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "204d52d99eb72ce11d7d4eb4f3e24cd17ac0ba5e63b3676854791ddf10cfc05e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585362_2",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "db285be18b9f235f10ff1fe33d9542feb9e65618ac7b22cd1c66f0acdf6e099e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/62/3585362_image2_1.jpg"
+        },
+        "record_sha256": "307a84103f7d2e188611adb88692dac3c8f9d139da24e5746db6bbddc9a1d70f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "겨울철 산 능선과 침엽수, 계곡 지형이 장면 전체를 지배하며 트인 자연 배경이 광범위하게 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6666f77e8a8dc89fc188051e8d8ab3250d77726843ad1ad61d143c7f369b9d96",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "204d52d99eb72ce11d7d4eb4f3e24cd17ac0ba5e63b3676854791ddf10cfc05e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585362_2",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "db285be18b9f235f10ff1fe33d9542feb9e65618ac7b22cd1c66f0acdf6e099e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/62/3585362_image2_1.jpg"
+        },
+        "record_sha256": "df5bf23db1fed8e440d254e6400cdeb05e5e82cb8f2f133b103450dd51602042",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "현대적 벽돌과 회색 패널의 대각선 구성, 큰 유리창, 녹색 간판이 역동적이고 세련된 외관을 연출하며 장면에서 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:76fd76c893ac838c24a98df9fad64ec38cda09aad26aadff8553615070c40f3c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "74938d757ff49d0f915f56e0c7c5f1b0797a52639fbd8ceea9122ea262c321bc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585364_3",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5e2727951ee9ef46af3e4e68b9a001f9913872a0258fd907f78c96dfd7e90416",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3585364_image2_1.jpg"
+        },
+        "record_sha256": "cb9ee39aa47da322da272fd800f565b8e180a0e738d22fd1753e47ba7cd99976",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "잔디를 심은 돌포장, 우물 형태의 돌 구조물, 저택 지붕 정자 등 전통적 외관 단서가 일부 보이나 전체는 현대적 건축이 지배.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:93acc2ffa4ebd03644960b5cc9ae8c193e04134bcbc939556b7fef25b262518f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "74938d757ff49d0f915f56e0c7c5f1b0797a52639fbd8ceea9122ea262c321bc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585364_3",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5e2727951ee9ef46af3e4e68b9a001f9913872a0258fd907f78c96dfd7e90416",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3585364_image2_1.jpg"
+        },
+        "record_sha256": "bb26dffd08c19c8bc3067177e6410e40f1ce030c9774b3ce2129986015d5a1c5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "산골 마을 형태는 보이나 주택들은 현대적 지붕과 재료가 많아 전통 외관의 두드러짐은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9b7d3b83c7edceb2ba246231a3d98029fda8fe1e7676c4a7c5a47d06968c95b5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "204d52d99eb72ce11d7d4eb4f3e24cd17ac0ba5e63b3676854791ddf10cfc05e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585362_2",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "db285be18b9f235f10ff1fe33d9542feb9e65618ac7b22cd1c66f0acdf6e099e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/62/3585362_image2_1.jpg"
+        },
+        "record_sha256": "e5c58d78a61fc822c3208403f61ac900a85939a456874d483e1e20d459fa2f33",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "흙으로 빚은 듯한 옹기 독이 야외에 줄지어 놓인 전통적 장독대 외관이 뚜렷하게 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c3ccc5c0300272e691676d62c528e9479a0dc5fa82f4477470748e6e6532a44e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "69d0ce3c8d4633dced423028bd4dc46f46c9a9812639bff695a68bde4a59f15e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585367_4",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "360992407b81fd5734675f3849ac1eea63f976972ba69be45d859cd1c4cd9b88",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/67/3585367_image2_1.jpg"
+        },
+        "record_sha256": "6fb34379c603629e2a8961ee6b448b569a8384440aadb3066d7d7c16aa3a4277",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "암벽과 나무로 뒤덮인 험준한 산이 화면 대부분을 차지하고, 트인 자연 경관과 녹지가 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e3862d8bed353cef23fac10d82df1ccf7fd8f6a2107f42a2753377612cdacb8d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "69d0ce3c8d4633dced423028bd4dc46f46c9a9812639bff695a68bde4a59f15e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585367_4",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "360992407b81fd5734675f3849ac1eea63f976972ba69be45d859cd1c4cd9b88",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/67/3585367_image2_1.jpg"
+        },
+        "record_sha256": "eb84c0f759cfeccfca82e9cc862913e2adfa28647694cc643fd91c8b02f212b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "배경에 소나무 등 녹지와 하늘이 보이고 나무 그늘이 드리워져 있으나 건물과 포장 공간이 장면의 중심.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f6cf5d627bcb8a3c25bc9ae15dfe6dc543689723926b1b19381cc4d6f6516b53",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "74938d757ff49d0f915f56e0c7c5f1b0797a52639fbd8ceea9122ea262c321bc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3585364_3",
+          "request_sha256": "f055e7cf888ca7b54435c1799514829060b3e7d84d80a5dacdc174ecd7a102a5",
+          "response_sha256": "9c93d947c2b50e47d45cf5087f2009b869337a8bfe2c6c4b2222c480b78ce242",
+          "retrieved_at": "2026-09-11T02:05:42.870472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5e2727951ee9ef46af3e4e68b9a001f9913872a0258fd907f78c96dfd7e90416",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3585364_image2_1.jpg"
+        },
+        "record_sha256": "07ff6e32930a0010bda3208f1f8aaf0810adc6631db00eb2af0b39f14af673bc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4feb1669883c414b406b61f3d621aff6fede5663e7cc59528ba671e589e6fb26",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "128383",
+          "request_sha256": "60090e08082be0fdf9d0268367fc48124caa0b4fca6b7f12fc8f63a804e6730b",
+          "response_sha256": "cbb6e296017bebb662494afdff83d2b25ec15eb774ffdd7b696c0fb4dd02ddc1",
+          "retrieved_at": "2026-09-10T17:03:08.131967Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d33c5d206cdb7f55886b699863410cc7a9f3dc3d239f510812808f58098bf5fa",
+          "source_uri": null
+        },
+        "record_sha256": "a431aa589a885ca6a35df00f4ed503bae5050bd84fb324da85512d4e57349e0f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "야생화심기 체험 / 쿠키 만들기 / 수제청 만들기 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:544c43ddd10eb6cb7023c18546c70af75c8318f389c5a1044684f3651cdf25e4",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128383",
+          "request_sha256": "60090e08082be0fdf9d0268367fc48124caa0b4fca6b7f12fc8f63a804e6730b",
+          "response_sha256": "bb369869ea4a4cf14c1e1df0b2ef4f38288f065daa5d5ef7eb0880cb01405a62",
+          "retrieved_at": "2026-09-11T02:05:42.538927Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7952106f3596d10ebd83ec687cacb80a1a7130952d8affed56ff206a602b361a",
+          "source_uri": null
+        },
+        "record_sha256": "87116c02ce1c78e73fda64b92388d79492fe06c8c32eef6e793000ef2cd90497",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6d833af75b3285c201147e475623397d0121a54a640371d99fa4dddde537b9d3",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "128383",
+          "request_sha256": "2722a245875b1e8cd4ae435b043875b2d848da80a70a99b1c5b8d098a557a2a8",
+          "response_sha256": "317b1d06755550dcf16bfb39d8b333c690478ca33418e9351fc5aa04b25298d3",
+          "retrieved_at": "2026-09-10T17:03:07.448563Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-17T05:14:48Z",
+          "source_record_sha256": "0d2762b1c248a5d4c70d38313533857d9be2b7c476dde99b7ce057a6041a89ae",
+          "source_uri": null
+        },
+        "record_sha256": "5720330202f241a6cba3853551417cc3a9443051de37f7c8894bcc24d4c3e5e8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "충청북도 보은군 속리산면에 있는 마을로 구병산 자락에 아늑하게 놓여있는 산촌마을이다. 그 지형이 소의 자궁과 같다 하여 우복동[牛福洞 ]으로 불려지기도 한다. 구병산 밑이 되므로 구병이라는 명칭이 생겼다. 자연마을로는 느진모기, 된모기, 웃멍어모기 등이 있다. 된모기는 산밑에 바짝 붙어있는 마을이다. 웃멍어모기는 구병리에서 으뜸 되는 마을로 모양이 소의 멍에처럼 생겼다 한다. 노송이 우거지고 산비탈에 메밀꽃이 피어나는 보은군 구병리마을은 그리 크지 않은 아담한 마을이다. 지친 도시 생활에서 활력을 찾고 자연과 벗하며 한가로이 농촌을 체 험하고 싶다면 이곳을 권한다. 여느 산간 마을처럼 산자락을 개간한 밭이 주종을 이루는 이 마을은 총 6개 농가가 옹기종기 모여 팜스테이를 구성하고 도시민을 기다리고 있다. 농사 체험은 산간 마을답게 채취가 주종을 이루는데 봄에는 복분자, 딸기가 여름에는 각종 버섯이 채취된다. 그리고 가을에는 머루·다래 등도 채취할 수 있다고 한다. 이곳은 특히 토속음식 체험 프로그램을 마련하고 있는데 메밀묵 만들기와 옥수수 엿 만들기를 손수 해 볼 수 있다. 손이 많이 가는 메밀묵 만들기는 주부들은 물론 어린이나 남자들까지 함께 참가할 수 있다. 여러 과정을 거쳐 시식을 한다면 손수 만든 것이라 더욱 맛이 좋을 것이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e03a88c0b4c8b8d17d4c954eac83c76bc8ba49283ad8208e41db69e2c13c6cbc",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128383",
+          "request_sha256": "60090e08082be0fdf9d0268367fc48124caa0b4fca6b7f12fc8f63a804e6730b",
+          "response_sha256": "bb369869ea4a4cf14c1e1df0b2ef4f38288f065daa5d5ef7eb0880cb01405a62",
+          "retrieved_at": "2026-09-11T02:05:42.538927Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dc2d51d2692231a21e3eea005756992c040d978cb41f75cbff633ced323cc23c",
+          "source_uri": null
+        },
+        "record_sha256": "79d98e2084effaab8ee37477bfcb0975ecbb7013b539f469482b61f49cef654a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "3954734f6bdaf1b5b1c6f7466e3df4312e36d5152c34f89338957760e1fd0aaa",
+    "place": {
+      "address": "충청북도 보은군 속리산면 삼가구병길 152",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+      "name_ko": "구병리아름마을",
+      "place_id": "public:korea:71f415c1202fdbecb54c2edba563b85f5e0140d20bf5aca3e85fb4465b3da59e",
+      "provider_content_id": "128383",
+      "region_code": "43720",
+      "region_name": "충청북도 보은군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

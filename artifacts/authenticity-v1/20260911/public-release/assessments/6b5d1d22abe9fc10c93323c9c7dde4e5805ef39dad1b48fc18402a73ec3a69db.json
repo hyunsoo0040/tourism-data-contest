@@ -1,0 +1,570 @@
+{
+  "assessed_at": "2026-09-11T18:01:05.196272Z",
+  "assessment_sha256": "6b5d1d22abe9fc10c93323c9c7dde4e5805ef39dad1b48fc18402a73ec3a69db",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 계곡이 '여름 물놀이 명소'이자 '지역민들에게 오랫동안 사랑받아온 유원지'라는 공유된 장소 이미지가 공식 소개에 명시되어 있다. 단순한 이미지 표현 수준이며 여러 매체·표현에서의 일관성까지는 확인되지 않아 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "여름 물놀이 명소라는 대표 이미지를 방문객이 사방댐을 활용한 물놀이 공간에서 직접 경험할 수 있다고 명시되어 있다. 다만 촬영·참여를 통한 이미지 재현이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "트레킹·등산 코스에서 자유롭게 쉬었다 가거나, 나무 그늘 쉼터를 선착순으로 이용하는 등 방문자가 자신의 방식으로 활동을 선택할 수 있는 기회가 확인된다. 자율 탐색이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "계곡 물, 나무 그늘, 산림욕장, 정자·평상 등 머물며 쉴 수 있는 자연 환경 단서가 공식 소개에 확인된다. 다만 실제 고요함이나 혼잡 수준에 대한 정보가 없고 환경이 장면 전체를 지배한다고 단정하기 어려워 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "물놀이와 트레킹·등산 등 구체적인 신체 참여 활동의 기회가 확인된다. 그러나 지속적인 도전·몰입 활동이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료는 계곡과 물놀이 시설을 소개할 뿐, 확인된 원형·문화유산과의 접촉에 대한 근거가 없다. 자연 계곡 자체가 문화유산임을 뒷받침하는 내용도 없어 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소의 실제 역사·사건·인물 맥락을 다루는 설명이 자료에 없다. '오랫동안 사랑받아온'이라는 표현만으로 구체적 역사 맥락을 제공한다고 볼 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "청년회가 시설을 운영·관리한다는 내용이 있으나 이는 관리 주체에 관한 정보이며, 지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통과 연결된 해설이나 학습 프로그램에 대한 언급이 자료에 없어 판단 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+          "quote": {
+            "end": 80,
+            "method": "EXACT",
+            "original": "지역민들에게 오랫동안 사랑받아온 유원지이며 해남군 구수골에 있는 계곡으로 여름 물놀이 명소로 알려진 곳이다",
+            "start": 21,
+            "submitted": "지역민들에게 오랫동안 사랑받아온 유원지이며 해남군 구수골에 있는 계곡으로 여름 물놀이 명소로 알려진 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "df716f6676de8b788d32db6d10b012a9afe89bd2bb563fc10e19c1577e41c855"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "이 계곡이 '여름 물놀이 명소'이자 '지역민들에게 오랫동안 사랑받아온 유원지'라는 공유된 장소 이미지가 공식 소개에 명시되어 있다. 단순한 이미지 표현 수준이며 여러 매체·표현에서의 일관성까지는 확인되지 않아 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지를 유통하는 매체(작품, 홍보물, SNS 등)에 대한 근거가 자료에 없다. '명소로 알려진' 표현은 유통 매체 자체를 확인해 주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+          "quote": {
+            "end": 115,
+            "method": "EXACT",
+            "original": "이곳은 계곡물을 막아 만든 사방댐을 물놀이 공간으로 활용하고",
+            "start": 82,
+            "submitted": "이곳은 계곡물을 막아 만든 사방댐을 물놀이 공간으로 활용하고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "df716f6676de8b788d32db6d10b012a9afe89bd2bb563fc10e19c1577e41c855"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "여름 물놀이 명소라는 대표 이미지를 방문객이 사방댐을 활용한 물놀이 공간에서 직접 경험할 수 있다고 명시되어 있다. 다만 촬영·참여를 통한 이미지 재현이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+          "quote": {
+            "end": 374,
+            "method": "EXACT",
+            "original": "트레킹을 하거나 등산하다 흐르는 물에 발을 담그며 쉬었다가 가기도 한다",
+            "start": 335,
+            "submitted": "트레킹을 하거나 등산하다 흐르는 물에 발을 담그며 쉬었다가 가기도 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "df716f6676de8b788d32db6d10b012a9afe89bd2bb563fc10e19c1577e41c855"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "트레킹·등산 코스에서 자유롭게 쉬었다 가거나, 나무 그늘 쉼터를 선착순으로 이용하는 등 방문자가 자신의 방식으로 활동을 선택할 수 있는 기회가 확인된다. 자율 탐색이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+          "quote": {
+            "end": 142,
+            "method": "EXACT",
+            "original": "정자와 평상 등 다양한 쉼터를 제공해 주고 있다",
+            "start": 116,
+            "submitted": "정자와 평상 등 다양한 쉼터를 제공해 주고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "df716f6676de8b788d32db6d10b012a9afe89bd2bb563fc10e19c1577e41c855"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+          "quote": {
+            "end": 447,
+            "method": "EXACT",
+            "original": "나무 그늘이 있는 쉼터 시설을 선착순으로 이용할 수 있다",
+            "start": 416,
+            "submitted": "나무 그늘이 있는 쉼터 시설을 선착순으로 이용할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "df716f6676de8b788d32db6d10b012a9afe89bd2bb563fc10e19c1577e41c855"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "계곡 물, 나무 그늘, 산림욕장, 정자·평상 등 머물며 쉴 수 있는 자연 환경 단서가 공식 소개에 확인된다. 다만 실제 고요함이나 혼잡 수준에 대한 정보가 없고 환경이 장면 전체를 지배한다고 단정하기 어려워 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+          "quote": {
+            "end": 237,
+            "method": "EXACT",
+            "original": "신나는 물놀이 후 편안하게 쉬거나 식사하기 위해서는 부담되지 않는 가격이며",
+            "start": 196,
+            "submitted": "신나는 물놀이 후 편안하게 쉬거나 식사하기 위해서는 부담되지 않는 가격이며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "df716f6676de8b788d32db6d10b012a9afe89bd2bb563fc10e19c1577e41c855"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+          "quote": {
+            "end": 348,
+            "method": "EXACT",
+            "original": "트레킹을 하거나 등산하다",
+            "start": 335,
+            "submitted": "트레킹을 하거나 등산하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "df716f6676de8b788d32db6d10b012a9afe89bd2bb563fc10e19c1577e41c855"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "물놀이와 트레킹·등산 등 구체적인 신체 참여 활동의 기회가 확인된다. 그러나 지속적인 도전·몰입 활동이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "어른들과 아이들이 함께 이용하기 좋다는 표현과 청년회 운영 내용이 있으나, 이는 교류·공동 활동·자기표현의 기회를 직접 보여주는 근거로 보기 어렵다. 관계 형성 활동에 대한 명확한 근거가 없어 판단할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+            "quote": "두륜산 자락에 있는 현산면 봉동계곡은"
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+            "quote": "계곡의 물줄기를 따라 울창한 산림욕장이 있어"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "두륜산 자락의 계곡, 사방댐 물놀이 공간, 정자·평상, 울창한 산림욕장 등 장면에서 구별되는 시각적 성격이 공식 소개에 묘사되어 있다. 다만 경관 연출이 장면 전체를 지배한다는 수준의 근거는 없어 수준 3으로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "2e34d2d6cffcb34d1fafad56b9a8600d7a224b6063bcc4b724f34ce4cecfdc7c",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:16b941a4b0b4ec99d308f5666870e75f1f1a0e384996448da406f30a7dd32f79",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8ebfb15d75444b8338fac898f82c3c2797d3136ad91ef59909a54788e3be7206",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3077120",
+          "request_sha256": "923825f146e71d6faab5797da8aa974965556cd4adfab145c97e9cd9ad87c778",
+          "response_sha256": "2554a5ddf748fe253a3c37a3245a64b50783fd7b04626233183b4889b7550481",
+          "retrieved_at": "2026-09-10T16:59:05.897512Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "96272752d426ed66e6fe23e1b8dfa552c05f803ab7f7c8977f304306ef327324",
+          "source_uri": null
+        },
+        "record_sha256": "df716f6676de8b788d32db6d10b012a9afe89bd2bb563fc10e19c1577e41c855",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "두륜산 자락에 있는 현산면 봉동계곡은 지역민들에게 오랫동안 사랑받아온 유원지이며 해남군 구수골에 있는 계곡으로 여름 물놀이 명소로 알려진 곳이다. 이곳은 계곡물을 막아 만든 사방댐을 물놀이 공간으로 활용하고 정자와 평상 등 다양한 쉼터를 제공해 주고 있다. 입장료는 무료이지만 주차비가 있으며 이곳의 시설을 이용할 때 이용료를 부담해야 한다. 하지만 신나는 물놀이 후 편안하게 쉬거나 식사하기 위해서는 부담되지 않는 가격이며 시설을 이용하지 않을 경우는 주차비 3,000원만 내면 된다. 매년 여름방학 시즌인 7월과 8월에만 한시적으로 운영되며 ‘바다가 내려다보이는 산 자락길’ 코스에 속해 있어서 트레킹을 하거나 등산하다 흐르는 물에 발을 담그며 쉬었다가 가기도 한다. 물놀이장을 이용하기 위해서는 다리에 있는 매표소를 지나 주차하여야 하며 나무 그늘이 있는 쉼터 시설을 선착순으로 이용할 수 있다. 주차장 뒤쪽으로는 탈의실과 화장실, 샤워실, 개수대 등이 갖추어져 있으며 청년회에서 운영하는 곳이라 깨끗하게 관리되고 있다. 계곡의 물줄기를 따라 울창한 산림욕장이 있어 어른들과 아이들 모두 시원한 여름을 나기 좋은 곳이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6c381ab663b90da065ceae428c5e445a02f3cdf3b53ec2a3edefad24800cad91",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8ebfb15d75444b8338fac898f82c3c2797d3136ad91ef59909a54788e3be7206",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3077120",
+          "request_sha256": "1454d2549404f9ac9275a25442ee588c05d25ca23c4ad2405ee1bb27025653f2",
+          "response_sha256": "b56d3ee37e79d47d273133e0079c2eefafb3de06a1321867ccadc8bd12cf5c78",
+          "retrieved_at": "2026-09-11T02:07:27.327700Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ed20c5f3747014747ffc7d89ab17748a75ea142f9460024805fac42ddf838a48",
+          "source_uri": null
+        },
+        "record_sha256": "03c4fa2bfb0fec9bd0339d9426d40cea3e323daec1e54bbfc560b37eb3e97f3f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[입장료]- 무료[대여료]- 정자 50,000 ~ 80,000원- 평상 20,000 ~ 30,000원- 텐트 20,000원- 탁자 10,000원"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8d36e14974e66c1040de7a0c7b53315d1747a33eeba145b4496874d1eafeafb3",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8ebfb15d75444b8338fac898f82c3c2797d3136ad91ef59909a54788e3be7206",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3077120",
+          "request_sha256": "1454d2549404f9ac9275a25442ee588c05d25ca23c4ad2405ee1bb27025653f2",
+          "response_sha256": "b56d3ee37e79d47d273133e0079c2eefafb3de06a1321867ccadc8bd12cf5c78",
+          "retrieved_at": "2026-09-11T02:07:27.327700Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f716bb401fcd7dc0fb1b8f8064fce52bf2ae8622384b0baf397fb826edbf18ad",
+          "source_uri": null
+        },
+        "record_sha256": "90eea060f7ee7af0722fd6249d5bee841e1ac38635cdc382eda0c704929f9eed",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음(남녀 구분)"
+      }
+    ],
+    "parent_source_sha256": "7869ef718ddc543b5b889ad591ce665cdd5f86844aa0c8aef255be4adade1284",
+    "place": {
+      "address": "전남광주통합특별시 해남군 현산면 황산리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:8ebfb15d75444b8338fac898f82c3c2797d3136ad91ef59909a54788e3be7206",
+      "name_ko": "구수골 봉동계곡",
+      "place_id": "public:korea:8ebfb15d75444b8338fac898f82c3c2797d3136ad91ef59909a54788e3be7206",
+      "provider_content_id": "3077120",
+      "region_code": "12790",
+      "region_name": "전남광주통합특별시 해남군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

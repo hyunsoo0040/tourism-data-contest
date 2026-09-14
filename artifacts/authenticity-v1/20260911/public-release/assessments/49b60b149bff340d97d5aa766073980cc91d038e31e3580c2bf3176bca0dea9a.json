@@ -1,0 +1,693 @@
+{
+  "assessed_at": "2026-09-11T17:02:51.506451Z",
+  "assessment_sha256": "49b60b149bff340d97d5aa766073980cc91d038e31e3580c2bf3176bca0dea9a",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'감귤이 맛있기로 소문난' 지역 이미지, '소담하고 아늑한 감성'이라는 표현 등 장소에 부여된 이미지·의미가 확인된다. 단일 이미지 수준으로 수준 2로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "SNS 감성 사진 언급으로 이 장소의 이미지가 SNS 매체와 연결되어 유통됨을 엿볼 수 있다. 반복되는 유통의 근거는 부족해 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "다양한 포토존과 SNS 감성 사진 촬영으로 대표 이미지를 직접 경험·재현할 수 있다. 재현이 방문 목적의 중심이라기보다 체험의 부가 요소로 안내되어 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "직접 수확·에이드 만들기, 인근 오름 방문 등 선택지가 소개되나 자율 탐색이 방문 경험의 중심이라는 근거는 부족해 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "감귤밭·오름 전망·머무를 파라솔 테이블 등 자연 환경 단서가 확인된다. 실제 고요함·혼잡은 확인 불가하나 환경 단서가 뚜렷해 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:52c5599808de59d9d1459cefd94b904ca88d2f902b31a45d029dc5ffacceaedf",
+            "evidence:77b29a1d9079f7ea75e8c487c933a233111ee6866f61693fd52c5028c65a7f34",
+            "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "감귤 따기·청 담아 에이드 만들기 등 구체적 참여·수확 활동이 확인된다. 단일 유형의 체험이며 지속적 도전 활동의 근거는 부족해 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 관광 농장의 감귤 체험·카페·포토존 안내일 뿐, 확인된 원형·유산과의 접촉에 대한 정보가 없다. 감귤 재배지 자체가 문화유산임을 뒷받침하는 자료도 없어 평가 불가.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 체험 상품·카페·재배 방식(타이백 원단)을 소개하지만 이 장소의 역사·연혁·사건·인물 맥락은 제시하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "상업 감귤 체험 농장이라는 안내만 있고 지역 주체의 전승·생활문화와의 실제 연결(농가 전통, 지속된 지역 문화)에 대한 근거가 없다. 재배 방식 소개는 전승의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "타이백 원단 재배 방식에 대한 한 줄 설명은 있으나 원형·유산·전통에 연결된 해설·탐구 프로그램의 근거는 불충분하다. Odii 등 해설 자료도 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 34,
+            "method": "EXACT",
+            "original": "달달미깡감귤밭은 감귤이 맛있기로 소문난 남원읍에 위치해 있다.",
+            "start": 0,
+            "submitted": "달달미깡감귤밭은 감귤이 맛있기로 소문난 남원읍에 위치해 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 257,
+            "method": "EXACT",
+            "original": "초록색 감귤나무와 빨간 지붕이 특색인 카페 자체만으로도 소담하고 아늑한 감성을 자극한다.",
+            "start": 208,
+            "submitted": "초록색 감귤나무와 빨간 지붕이 특색인 카페 자체만으로도 소담하고 아늑한 감성을 자극한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'감귤이 맛있기로 소문난' 지역 이미지, '소담하고 아늑한 감성'이라는 표현 등 장소에 부여된 이미지·의미가 확인된다. 단일 이미지 수준으로 수준 2로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 338,
+            "method": "EXACT",
+            "original": "창가 앞 포토존에서 예쁜 SNS 감성 사진은 덤으로 건질 수 있다.",
+            "start": 301,
+            "submitted": "창가 앞 포토존에서 예쁜 SNS 감성 사진은 덤으로 건질 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "SNS 감성 사진 언급으로 이 장소의 이미지가 SNS 매체와 연결되어 유통됨을 엿볼 수 있다. 반복되는 유통의 근거는 부족해 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 139,
+            "method": "EXACT",
+            "original": "감귤밭 곳곳에 다양한 포토존이 있어 감귤 체험을 하며 멋진 사진도 남길 수 있다.",
+            "start": 94,
+            "submitted": "감귤밭 곳곳에 다양한 포토존이 있어 감귤 체험을 하며 멋진 사진도 남길 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 338,
+            "method": "EXACT",
+            "original": "창가 앞 포토존에서 예쁜 SNS 감성 사진은 덤으로 건질 수 있다.",
+            "start": 301,
+            "submitted": "창가 앞 포토존에서 예쁜 SNS 감성 사진은 덤으로 건질 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "다양한 포토존과 SNS 감성 사진 촬영으로 대표 이미지를 직접 경험·재현할 수 있다. 재현이 방문 목적의 중심이라기보다 체험의 부가 요소로 안내되어 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 628,
+            "method": "EXACT",
+            "original": "직접 청을 담아 에이드를 만들어 먹는 것도 가능하다.",
+            "start": 599,
+            "submitted": "직접 청을 담아 에이드를 만들어 먹는 것도 가능하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 418,
+            "method": "EXACT",
+            "original": "도보로 12분 정도면 도착하니 관심이 있다면 감귤 체험 후 오름도 함께 다녀와도 좋겠다.",
+            "start": 369,
+            "submitted": "도보로 12분 정도면 도착하니 관심이 있다면 감귤 체험 후 오름도 함께 다녀와도 좋겠다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "직접 수확·에이드 만들기, 인근 오름 방문 등 선택지가 소개되나 자율 탐색이 방문 경험의 중심이라는 근거는 부족해 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 93,
+            "method": "EXACT",
+            "original": "주변에 건물도 없고 깨끗하게 관리가 잘 되어있어 상업적이지 않은 느낌이라 방문객들의 반응도 상당히 좋다.",
+            "start": 35,
+            "submitted": "주변에 건물도 없고 깨끗하게 관리가 잘 되어있어 상업적이지 않은 느낌이라 방문객들의 반응도 상당히 좋다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 368,
+            "method": "EXACT",
+            "original": "맞은편에는 걸서악(걸세오름)이 병풍처럼 펼쳐져 있는데",
+            "start": 339,
+            "submitted": "맞은편에는 걸서악(걸세오름)이 병풍처럼 펼쳐져 있는데",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 203,
+            "method": "EXACT",
+            "original": "전망대에서 주변 풍경을 한눈에 담고 파라솔 테이블에 앉아 감귤 체험에서 직접 수확한 귤을 먹으면서 힐링해도 좋다.",
+            "start": 140,
+            "submitted": "전망대에서 주변 풍경을 한눈에 담고 파라솔 테이블에 앉아 감귤 체험에서 직접 수확한 귤을 먹으면서 힐링해도 좋다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "감귤밭·오름 전망·머무를 파라솔 테이블 등 자연 환경 단서가 확인된다. 실제 고요함·혼잡은 확인 불가하나 환경 단서가 뚜렷해 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:77b29a1d9079f7ea75e8c487c933a233111ee6866f61693fd52c5028c65a7f34",
+          "quote": {
+            "end": 28,
+            "method": "EXACT",
+            "original": "청귤따기체험 / 타이벡감귤체험 / 한라봉따기체험 등",
+            "start": 0,
+            "submitted": "청귤따기체험 / 타이벡감귤체험 / 한라봉따기체험 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d3e9a1c313a20f4d6c50ab57fde1feb89fdbc265693128e594e901785f126e6d"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:52c5599808de59d9d1459cefd94b904ca88d2f902b31a45d029dc5ffacceaedf",
+          "quote": {
+            "end": 20,
+            "method": "EXACT",
+            "original": "하우스감귤따기체험3KG 20,000원",
+            "start": 0,
+            "submitted": "하우스감귤따기체험3KG 20,000원",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "94fbc86ad36db57a55b0ae5975ef18bc6b1fa8462caedca9b42c497ba6b61024"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+          "quote": {
+            "end": 628,
+            "method": "EXACT",
+            "original": "직접 청을 담아 에이드를 만들어 먹는 것도 가능하다.",
+            "start": 599,
+            "submitted": "직접 청을 담아 에이드를 만들어 먹는 것도 가능하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "감귤 따기·청 담아 에이드 만들기 등 구체적 참여·수확 활동이 확인된다. 단일 유형의 체험이며 지속적 도전 활동의 근거는 부족해 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 명시적 근거가 없다. '방문객들의 반응도 상당히 좋다'는 만족 언급은 관계 활동의 제공을 입증하지 못한다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+            "quote": "초록색 감귤나무와 빨간 지붕이 특색인 카페"
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+            "quote": "모든 나무 아래는 눈이 내린 듯 하얀색 타이백원단이 깔려 있는데"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "초록 감귤나무·빨간 지붕·하얀 타이백원단 등 분명한 외관·경관의 시각적 성격이 확인된다. 일관된 연출이 장면을 지배한다고까지 단정할 근거는 부족해 수준 3.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "5e87b5fceed808206f73c480e3df02e78c3da76bc1146e823380921c9c7ba7ff",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:52c5599808de59d9d1459cefd94b904ca88d2f902b31a45d029dc5ffacceaedf",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5842434bb324950b737ccfb02445d958e7b24423d7bf631b404abb04fe92d65d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3027466",
+          "request_sha256": "6d04728536d968005bdd723d20f8e9ee3700511753365221314c9b804fd80703",
+          "response_sha256": "2e24de3fd835f69d3ed56b35cc469641ee3a077ddaf081eb8caa9c1196f76578",
+          "retrieved_at": "2026-09-11T02:04:32.727918Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9218c76f68c75e5ac82f4ebf95821b135e4fecf076ef6c97a84abac15e66f6a7",
+          "source_uri": null
+        },
+        "record_sha256": "94fbc86ad36db57a55b0ae5975ef18bc6b1fa8462caedca9b42c497ba6b61024",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "하우스감귤따기체험3KG 20,000원 ※ 체험 별로 상이함, 자세한 사항은 전화 문의"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:62a4ea9dfe6f32b2ce241d33aa6719f30d659681d6c13bb76fda669afeecc20a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5842434bb324950b737ccfb02445d958e7b24423d7bf631b404abb04fe92d65d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3027466",
+          "request_sha256": "6d04728536d968005bdd723d20f8e9ee3700511753365221314c9b804fd80703",
+          "response_sha256": "2e24de3fd835f69d3ed56b35cc469641ee3a077ddaf081eb8caa9c1196f76578",
+          "retrieved_at": "2026-09-11T02:04:32.727918Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "60821df6310c714f638853301891d99a866641830f2190d293534ecfcd3f9389",
+          "source_uri": null
+        },
+        "record_sha256": "4dc0270b1733954ddfe50cca65819968bb4b6eae5d70c8daee977e643f616b0e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:77b29a1d9079f7ea75e8c487c933a233111ee6866f61693fd52c5028c65a7f34",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5842434bb324950b737ccfb02445d958e7b24423d7bf631b404abb04fe92d65d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "3027466",
+          "request_sha256": "6d04728536d968005bdd723d20f8e9ee3700511753365221314c9b804fd80703",
+          "response_sha256": "bdafd31a0b0b6bb04aa8085f23bb9e37aa596e6ee3c62ad7fceda8372f864aa4",
+          "retrieved_at": "2026-09-10T17:17:13.722738Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5f620b80484083b64aea5f9b0023653d28d3dffc3cf76ac774769f19da332a43",
+          "source_uri": null
+        },
+        "record_sha256": "d3e9a1c313a20f4d6c50ab57fde1feb89fdbc265693128e594e901785f126e6d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "청귤따기체험 / 타이벡감귤체험 / 한라봉따기체험 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d236e5780126a4066d53fbacef1198adefef2ef68f9f896e0f470017468382aa",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5842434bb324950b737ccfb02445d958e7b24423d7bf631b404abb04fe92d65d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3027466",
+          "request_sha256": "09cf7297df7efad5133a34f361c95abefba7fb5fe11ce2dc9730a75f1d7a2ae6",
+          "response_sha256": "264c5be97e66c9450c06d62ab8b6f4de45628abf5b16867e2c47e7265b0d738d",
+          "retrieved_at": "2026-09-10T17:17:13.378823Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-05-14T07:33:05Z",
+          "source_record_sha256": "4d3d660de2942a34b54b4e6768de616689c9607a8ae23a739fc948c1e1e12988",
+          "source_uri": null
+        },
+        "record_sha256": "43f83eb6210819a1652d859825dbb118e760cd20d1d8b851ae7c4cf915c8bbc8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "달달미깡감귤밭은 감귤이 맛있기로 소문난 남원읍에 위치해 있다. 주변에 건물도 없고 깨끗하게 관리가 잘 되어있어 상업적이지 않은 느낌이라 방문객들의 반응도 상당히 좋다. 감귤밭 곳곳에 다양한 포토존이 있어 감귤 체험을 하며 멋진 사진도 남길 수 있다. 전망대에서 주변 풍경을 한눈에 담고 파라솔 테이블에 앉아 감귤 체험에서 직접 수확한 귤을 먹으면서 힐링해도 좋다. 또한, 초록색 감귤나무와 빨간 지붕이 특색인 카페 자체만으로도 소담하고 아늑한 감성을 자극한다. 감귤 체험 후 예쁜 감귤밭이 보이는 뷰 맛집 카페에서 다양한 음료를 마시며, 창가 앞 포토존에서 예쁜 SNS 감성 사진은 덤으로 건질 수 있다. 맞은편에는 걸서악(걸세오름)이 병풍처럼 펼쳐져 있는데 도보로 12분 정도면 도착하니 관심이 있다면 감귤 체험 후 오름도 함께 다녀와도 좋겠다. 모든 나무 아래는 눈이 내린 듯 하얀색 타이백원단이 깔려 있는데, 이것은 햇빛을 반사시켜 더욱 많은 빛을 감귤나무가 받게 해서 당도를 높이는 재배 방식이라고 한다. 9월 초가 지나면서부터 그다음 해 1월까지 본격적으로 타이벡감귤체험이 시작된다고 한다. 한여름 8월 한 달 정도 기간 동안에는 청귤 체험도 가능하다고 하니, 직접 청을 담아 에이드를 만들어 먹는 것도 가능하다."
+      }
+    ],
+    "parent_source_sha256": "3ae139dea9714dfebeccfdcadc399cd2b8eadd1c71ef9b5c2da975ceb6aa7a1d",
+    "place": {
+      "address": "제주 제주시 애월읍 광령리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:5842434bb324950b737ccfb02445d958e7b24423d7bf631b404abb04fe92d65d",
+      "name_ko": "달달미깡감귤밭",
+      "place_id": "public:korea:5842434bb324950b737ccfb02445d958e7b24423d7bf631b404abb04fe92d65d",
+      "provider_content_id": "3027466",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

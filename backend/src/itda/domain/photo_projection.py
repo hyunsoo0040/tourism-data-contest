@@ -16,11 +16,13 @@ from typing import Final, Protocol
 from itda.contracts.place_profile import MismatchTraitId
 from itda.contracts.recommendation import TravelConditionId
 from itda.domain.canonical import canonical_sha256
+from itda.domain.photo_semantics import PHOTO_SEMANTIC_VERSION
 from itda.domain.recommendation_projection import (
     project_traveler_condition_targets,
 )
 
-PHOTO_PROJECTION_VERSION: Final[str] = "photo-projection-v1"
+PHOTO_PROJECTION_VERSION: Final[str] = "photo-projection-v2"
+LEGACY_PHOTO_PROJECTION_VERSION: Final[str] = "photo-projection-v1"
 
 NO_PHOTO_BLEND_BP: Final[int] = 6_500
 PHOTO_BLEND_BP: Final[int] = 3_500
@@ -33,7 +35,7 @@ class _ConfirmedTraitRow(Protocol):
     def trait_id(self) -> str: ...
 
     @property
-    def value(self) -> int: ...
+    def value(self) -> int | None: ...
 
     @property
     def included(self) -> bool: ...
@@ -65,14 +67,21 @@ def _require_value(value: object, *, trait_id: str) -> int:
     return value
 
 
-def _confirmed_rows(confirmed_traits: Sequence[_ConfirmedTraitRow]) -> tuple[
-    tuple[str, int], ...
-]:
+def _confirmed_rows(
+    confirmed_traits: Sequence[_ConfirmedTraitRow], *, legacy: bool = False
+) -> tuple[tuple[str, int, int], ...]:
     """Normalize confirmed rows into strict (trait_id, value) pairs."""
 
-    pairs: list[tuple[str, int]] = []
+    pairs: list[tuple[str, int, int]] = []
+    seen: set[tuple[str, int, int]] = set()
     for row in confirmed_traits:
         if getattr(row, "included", True) is not True:
+            continue
+        if not legacy and (
+            getattr(row, "observed", False) is not True
+            or getattr(row, "semantic_version", None) != PHOTO_SEMANTIC_VERSION
+            or row.value is None
+        ):
             continue
         trait_id = row.trait_id
         if not isinstance(trait_id, str) or trait_id not in (
@@ -80,14 +89,21 @@ def _confirmed_rows(confirmed_traits: Sequence[_ConfirmedTraitRow]) -> tuple[
         ):
             raise ValueError(f"unknown confirmed trait id: {trait_id!r}")
         value = _require_value(row.value, trait_id=trait_id)
-        pairs.append((trait_id, value))
+        image_index = getattr(row, "image_index", 1)
+        if type(image_index) is not int or not 1 <= image_index <= 3:
+            raise ValueError("confirmed image index must be 1..3")
+        pair = (trait_id, value, image_index)
+        if legacy or pair not in seen:
+            pairs.append(pair)
+        seen.add(pair)
     return tuple(pairs)
 
 
 def _aggregate_equal_shares(
-    pairs: Sequence[tuple[str, int]],
+    pairs: Sequence[tuple[str, int, int]],
     *,
     images_count: int,
+    legacy: bool = False,
 ) -> dict[str, int]:
     """Aggregate confirmed values with equal per-image integer shares.
 
@@ -97,23 +113,36 @@ def _aggregate_equal_shares(
     normalization restores the 0-100 integer scale independent of input order.
     """
 
-    numerator_by_trait: dict[str, int] = {}
-    for trait_id, value in pairs:
-        numerator_by_trait[trait_id] = numerator_by_trait.get(trait_id, 0) + value
-    return {
-        trait_id: _half_up(numerator_by_trait[trait_id], images_count)
-        for trait_id in sorted(numerator_by_trait)
-    }
+    by_trait_image: dict[str, dict[int, list[int]]] = {}
+    for trait_id, value, image_index in pairs:
+        if not legacy and image_index > images_count:
+            raise ValueError("confirmed image index exceeds images_count")
+        by_trait_image.setdefault(trait_id, {}).setdefault(image_index, []).append(value)
+    result: dict[str, int] = {}
+    for trait_id, images in sorted(by_trait_image.items()):
+        if legacy:
+            result[trait_id] = _half_up(
+                sum(sum(values) for values in images.values()), images_count
+            )
+        else:
+            # Equal observed-image shares; an unobserved image is not a zero.
+            per_image = [_half_up(sum(values), len(values)) for values in images.values()]
+            result[trait_id] = _half_up(sum(per_image), len(per_image))
+    return result
 
 
 class PhotoProjectionPolicy:
-    """Frozen integer policy identity for photo-projection-v1."""
+    """Versioned integer policy; v1 remains available for historical replay."""
 
+    projection_version: str
     no_photo_blend_bp: int
     photo_blend_bp: int
     per_image_share_unit: int
 
-    def __init__(self) -> None:
+    def __init__(self, projection_version: str = PHOTO_PROJECTION_VERSION) -> None:
+        if projection_version not in (PHOTO_PROJECTION_VERSION, LEGACY_PHOTO_PROJECTION_VERSION):
+            raise ValueError("unsupported photo projection version")
+        object.__setattr__(self, "projection_version", projection_version)
         object.__setattr__(self, "no_photo_blend_bp", NO_PHOTO_BLEND_BP)
         object.__setattr__(self, "photo_blend_bp", PHOTO_BLEND_BP)
         object.__setattr__(self, "per_image_share_unit", 1)
@@ -126,14 +155,20 @@ class PhotoProjectionPolicy:
 
     @property
     def policy_sha256(self) -> str:
-        return canonical_sha256(
-            {
-                "projection_version": PHOTO_PROJECTION_VERSION,
-                "no_photo_blend_bp": self.no_photo_blend_bp,
-                "photo_blend_bp": self.photo_blend_bp,
-                "per_image_share_unit": self.per_image_share_unit,
-            }
-        )
+        payload: dict[str, object] = {
+            "projection_version": self.projection_version,
+            "no_photo_blend_bp": self.no_photo_blend_bp,
+            "photo_blend_bp": self.photo_blend_bp,
+            "per_image_share_unit": self.per_image_share_unit,
+        }
+        if self.projection_version == PHOTO_PROJECTION_VERSION:
+            payload.update(
+                semantic_version=PHOTO_SEMANTIC_VERSION,
+                aggregation="equal-observed-image-means",
+                missing="preserve-quiz",
+                retries="deduplicate-observation",
+            )
+        return canonical_sha256(payload)
 
 
 class PhotoTraitTarget:
@@ -166,9 +201,9 @@ class PhotoConditionTarget:
     __slots__ = ("condition_id", "value")
 
     condition_id: TravelConditionId
-    value: int
+    value: int | None
 
-    def __init__(self, condition_id: TravelConditionId, value: int) -> None:
+    def __init__(self, condition_id: TravelConditionId, value: int | None) -> None:
         object.__setattr__(self, "condition_id", condition_id)
         object.__setattr__(self, "value", value)
 
@@ -261,17 +296,20 @@ class PhotoProjectionResult:
 
 
 def _canonical_input_sha256(
-    pairs: Sequence[tuple[str, int]],
+    pairs: Sequence[tuple[str, int, int]],
     *,
     images_count: int,
     no_photo_trait_values: Mapping[str, int] | None,
     trip_conditions: Mapping[str, object] | None,
     answers: Mapping[str, int] | None,
+    projection_version: str,
 ) -> str:
     return canonical_sha256(
         {
-            "projection_version": PHOTO_PROJECTION_VERSION,
-            "confirmed_traits": sorted(pairs),
+            "projection_version": projection_version,
+            "confirmed_traits": sorted((trait, value) for trait, value, _image in pairs)
+            if projection_version == LEGACY_PHOTO_PROJECTION_VERSION
+            else sorted(pairs),
             "images_count": images_count,
             "no_photo_trait_values": dict(sorted(no_photo_trait_values.items()))
             if no_photo_trait_values is not None
@@ -288,32 +326,35 @@ def combine_confirmed_photo_traits(
     *,
     confirmed_traits: Sequence[_ConfirmedTraitRow],
     images_count: int,
+    projection_version: str = PHOTO_PROJECTION_VERSION,
 ) -> PhotoProjectionResult:
     """Aggregate confirmed included trait values across 1-3 images."""
 
-    policy = PhotoProjectionPolicy()
+    policy = PhotoProjectionPolicy(projection_version)
     count = _require_images_count(images_count)
-    pairs = _confirmed_rows(confirmed_traits)
-    aggregated = _aggregate_equal_shares(pairs, images_count=count)
+    legacy = projection_version == LEGACY_PHOTO_PROJECTION_VERSION
+    pairs = _confirmed_rows(confirmed_traits, legacy=legacy)
+    aggregated = _aggregate_equal_shares(pairs, images_count=count, legacy=legacy)
     photo_trait_values = tuple(
-        (MismatchTraitId(trait_id), value)
-        for trait_id, value in sorted(aggregated.items())
+        (MismatchTraitId(trait_id), value) for trait_id, value in sorted(aggregated.items())
     )
     input_sha256 = _canonical_input_sha256(
-        pairs, images_count=count, no_photo_trait_values=None, trip_conditions=None,
+        pairs,
+        images_count=count,
+        no_photo_trait_values=None,
+        trip_conditions=None,
         answers=None,
+        projection_version=projection_version,
     )
     output_sha256 = canonical_sha256(
         {
-            "projection_version": PHOTO_PROJECTION_VERSION,
+            "projection_version": projection_version,
             "input_sha256": input_sha256,
-            "photo_trait_values": [
-                [trait.value, value] for trait, value in photo_trait_values
-            ],
+            "photo_trait_values": [[trait.value, value] for trait, value in photo_trait_values],
         }
     )
     return PhotoProjectionResult(
-        projection_version=PHOTO_PROJECTION_VERSION,
+        projection_version=projection_version,
         policy_sha256=policy.policy_sha256,
         input_sha256=input_sha256,
         output_sha256=output_sha256,
@@ -347,6 +388,7 @@ def project_photo_confirmed_profile(
     trip_conditions: Mapping[str, object] | None = None,
     answers: Mapping[str, int] | None = None,
     questionnaire_version: str | None = None,
+    projection_version: str = PHOTO_PROJECTION_VERSION,
 ) -> PhotoProjectionResult:
     """Blend confirmed photo traits into the no-photo expectation profile.
 
@@ -359,20 +401,20 @@ def project_photo_confirmed_profile(
     generation the answers were captured under.
     """
 
-    policy = PhotoProjectionPolicy()
+    policy = PhotoProjectionPolicy(projection_version)
     count = _require_images_count(images_count)
-    pairs = _confirmed_rows(confirmed_traits)
-    aggregated = _aggregate_equal_shares(pairs, images_count=count)
+    legacy = projection_version == LEGACY_PHOTO_PROJECTION_VERSION
+    pairs = _confirmed_rows(confirmed_traits, legacy=legacy)
+    aggregated = _aggregate_equal_shares(pairs, images_count=count, legacy=legacy)
     photo_trait_values = tuple(
-        (MismatchTraitId(trait_id), value)
-        for trait_id, value in sorted(aggregated.items())
+        (MismatchTraitId(trait_id), value) for trait_id, value in sorted(aggregated.items())
     )
 
     no_photo = _require_no_photo_values(no_photo_trait_values)
     total_bp = NO_PHOTO_BLEND_BP + PHOTO_BLEND_BP
     blended: dict[MismatchTraitId, int] = {}
     for member in MismatchTraitId:
-        if not photo_trait_values:
+        if not photo_trait_values or (not legacy and member.value not in aggregated):
             # Zero confirmed traits reproduce the original no-photo profile.
             blended[member] = no_photo[member]
             continue
@@ -381,9 +423,7 @@ def project_photo_confirmed_profile(
             PHOTO_BLEND_BP * photo_value + NO_PHOTO_BLEND_BP * no_photo[member],
             total_bp,
         )
-    trait_targets = tuple(
-        PhotoTraitTarget(member, blended[member]) for member in MismatchTraitId
-    )
+    trait_targets = tuple(PhotoTraitTarget(member, blended[member]) for member in MismatchTraitId)
 
     condition_targets: tuple[PhotoConditionTarget, ...] | None = None
     if trip_conditions is not None:
@@ -406,14 +446,13 @@ def project_photo_confirmed_profile(
         no_photo_trait_values=no_photo_trait_values,
         trip_conditions=trip_conditions,
         answers=answers,
+        projection_version=projection_version,
     )
     output_sha256 = canonical_sha256(
         {
-            "projection_version": PHOTO_PROJECTION_VERSION,
+            "projection_version": projection_version,
             "input_sha256": input_sha256,
-            "photo_trait_values": [
-                [trait.value, value] for trait, value in photo_trait_values
-            ],
+            "photo_trait_values": [[trait.value, value] for trait, value in photo_trait_values],
             "trait_targets": [row.model_dump(mode="json") for row in trait_targets],
             "condition_targets": (
                 [row.model_dump(mode="json") for row in condition_targets]
@@ -423,7 +462,7 @@ def project_photo_confirmed_profile(
         }
     )
     return PhotoProjectionResult(
-        projection_version=PHOTO_PROJECTION_VERSION,
+        projection_version=projection_version,
         policy_sha256=policy.policy_sha256,
         input_sha256=input_sha256,
         output_sha256=output_sha256,

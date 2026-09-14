@@ -1,0 +1,582 @@
+{
+  "assessed_at": "2026-09-11T17:55:44.985612Z",
+  "assessment_sha256": "31c279a1e689bd9048a97973ae153d40bb5027d1fcb0caf03e88c01d37a820d9",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.b",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.c"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7ee15a0ce82ed3b39703bbd5a0fd5841775e6d48fe030d65c8e2b2b9e12c9341"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'별과 우주를 주제로 한 테마공원'이라는 명확한 주제 이미지가 장소에 부여되어 있으며 시설 구성이 이를 뒷받침한다. 다만 여러 표현·장면에서 일관된 의미가 확인되는 수준까진 근거가 부족해 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7af0fbe748cf0f2b32d9007e93a2c4fd98f3b092892c54d4ff93369e61431ef7",
+            "evidence:7ee15a0ce82ed3b39703bbd5a0fd5841775e6d48fe030d65c8e2b2b9e12c9341"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "우주비행사 훈련 체험, 별자리 드로잉, 라이트 스케치 등 우주 이미지를 현장에서 직접 경험·재현할 수 있는 활동이 확인된다. 재현이 방문 경험의 중심이라는 근거까지는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7af0fbe748cf0f2b32d9007e93a2c4fd98f3b092892c54d4ff93369e61431ef7",
+            "evidence:7ee15a0ce82ed3b39703bbd5a0fd5841775e6d48fe030d65c8e2b2b9e12c9341"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "중력 체험, 드로잉, 4D 체험, 망원경 천체 관측, 캠프 등 구체적 참여·탐방 활동이 다수 확인된다. 단, 실제 몰입이나 지속적 도전의 정도는 확인 불가해 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료는 테마공원형 시설(스페이스 타워, 천문대 등)을 설명할 뿐, 이 장소가 접촉하는 확인된 문화유산·원형이 전혀 언급되지 않는다. 근거 부족으로 판단하지 않고 UNKNOWN 처리한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개원 연도(2004년 11월)와 시설 구성만 있을 뿐, 이 장소의 구체적 역사·사건·인물 맥락에 대한 서사는 제공되지 않는다. 개관 연도만으로 역사 경험을 평가할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 관한 정보가 자료에 없다. 천문 체험은 전통 전승이 아니므로 단정할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "천문·우주 과학 해설과 전시(전시실, 천체투영실)는 존재하지만, 이는 원형·유산·전통과 연결된 역사 탐구가 아니라 일반 과학 학습에 해당한다. 해당 평가 기준상 H를 부여할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:7ee15a0ce82ed3b39703bbd5a0fd5841775e6d48fe030d65c8e2b2b9e12c9341",
+          "quote": {
+            "end": 45,
+            "method": "EXACT",
+            "original": "예천 천문 우주센터는 2004년 11월 개원한 별과 우주를 주제로 한 테마공원으로",
+            "start": 0,
+            "submitted": "예천 천문 우주센터는 2004년 11월 개원한 별과 우주를 주제로 한 테마공원으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6f046dc754f7a1eb899e0a4dd7f5f8e20a74b08c471474fca9be4e82a68cccb1"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'별과 우주를 주제로 한 테마공원'이라는 명확한 주제 이미지가 장소에 부여되어 있으며 시설 구성이 이를 뒷받침한다. 다만 여러 표현·장면에서 일관된 의미가 확인되는 수준까진 근거가 부족해 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보물, SNS 등 매체를 통한 장소 이미지의 재현·확산에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "시설 목록(스페이스 타워, 스타하우스 등)은 있으나 외관·경관·연출의 시각적 성격에 대한 구체적 서술이 없어 시각적 표현을 평가할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:7ee15a0ce82ed3b39703bbd5a0fd5841775e6d48fe030d65c8e2b2b9e12c9341",
+          "quote": {
+            "end": 132,
+            "method": "EXACT",
+            "original": "스페이스 타워는 우주비행사 훈련 체험, 4D영상관, 미디어 전시, 체험실 등으로 구성되어 있다.",
+            "start": 79,
+            "submitted": "스페이스 타워는 우주비행사 훈련 체험, 4D영상관, 미디어 전시, 체험실 등으로 구성되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6f046dc754f7a1eb899e0a4dd7f5f8e20a74b08c471474fca9be4e82a68cccb1"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:7af0fbe748cf0f2b32d9007e93a2c4fd98f3b092892c54d4ff93369e61431ef7",
+          "quote": {
+            "end": 25,
+            "method": "EXACT",
+            "original": "4D 체험 / 라이트드로잉 / 천문우주캠프 등",
+            "start": 0,
+            "submitted": "4D 체험 / 라이트드로잉 / 천문우주캠프 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "1cec49db894898d54a9483294863aa8f38d0ed7033257fa5369e85658941b4d0"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "우주비행사 훈련 체험, 별자리 드로잉, 라이트 스케치 등 우주 이미지를 현장에서 직접 경험·재현할 수 있는 활동이 확인된다. 재현이 방문 경험의 중심이라는 근거까지는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율 탐색·자기 선택·여유로운 이용 방식에 관한 정보가 자료에 없다. 체험 프로그램과 요금 정보만으로 자율성을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "휴게실 언급과 자연·저자극 환경에 대한 직접 서술이 없다. 회복 환경 단서를 확인할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:7ee15a0ce82ed3b39703bbd5a0fd5841775e6d48fe030d65c8e2b2b9e12c9341",
+          "quote": {
+            "end": 328,
+            "method": "EXACT",
+            "original": "주 관측실에서는 컴퓨터로 자동제어되는 연구용 등급인 508㎜(20인치)의 반사망원경으로 우주의 모습을 관찰할 수 있으며",
+            "start": 262,
+            "submitted": "주 관측실에서는 컴퓨터로 자동제어되는 연구용 등급인 508㎜(20인치)의 반사망원경으로 우주의 모습을 관찰할 수 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6f046dc754f7a1eb899e0a4dd7f5f8e20a74b08c471474fca9be4e82a68cccb1"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:7af0fbe748cf0f2b32d9007e93a2c4fd98f3b092892c54d4ff93369e61431ef7",
+          "quote": {
+            "end": 25,
+            "method": "EXACT",
+            "original": "4D 체험 / 라이트드로잉 / 천문우주캠프 등",
+            "start": 0,
+            "submitted": "4D 체험 / 라이트드로잉 / 천문우주캠프 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "1cec49db894898d54a9483294863aa8f38d0ed7033257fa5369e85658941b4d0"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:7ee15a0ce82ed3b39703bbd5a0fd5841775e6d48fe030d65c8e2b2b9e12c9341",
+          "quote": {
+            "end": 196,
+            "method": "EXACT",
+            "original": "1층은 가변중력기를 이용한 중력 변화 체험을 할 수 있고 3층은 별자리 드로잉, 라이트 스케치를 할 수 있는 체험",
+            "start": 133,
+            "submitted": "1층은 가변중력기를 이용한 중력 변화 체험을 할 수 있고 3층은 별자리 드로잉, 라이트 스케치를 할 수 있는 체험",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6f046dc754f7a1eb899e0a4dd7f5f8e20a74b08c471474fca9be4e82a68cccb1"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "중력 체험, 드로잉, 4D 체험, 망원경 천체 관측, 캠프 등 구체적 참여·탐방 활동이 다수 확인된다. 단, 실제 몰입이나 지속적 도전의 정도는 확인 불가해 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "천문우주캠프가 공동 활동일 가능성은 있으나, 교류·자기표현 기회의 구체적 내용이 자료에 제공되지 않아 추측 없이는 판단할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "73f32e8347eddd5684778195a0d3343702908289369f6822e3a895cf27457554",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "bcdc80bb6b131baf98704aa6ba19e1b0d58bb1b075e64a79fdecad42010584e6",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3673225d9f77e89af4aa42138ac5378eee0f8f531aeca3d86fad5be41aa8361b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8ab656128d5a3dc8d7095518893c2b0ff8ca053f8f0b3a2862843c83ce87269b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128182",
+          "request_sha256": "3978dd8b4d1679db4def4ad0c477fa986717d2ae97058e4073a93ebb82ebeb74",
+          "response_sha256": "f706533907c85bb4f09ad40b7fef44196c02a8bad3a05467c58ea52e22db3454",
+          "retrieved_at": "2026-09-10T08:25:24.431518Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7c87dadab558ad4bec419d894322988b22e39bf46301773d58aec713086cf059",
+          "source_uri": null
+        },
+        "record_sha256": "c8ef2b6824b28c0839153012cf60ca5ff93cc259a35d5ace35b09af923d913b5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5b9c6b55ee34bd9655624089040f35c518ec50a85502df39b9e8f5364eadd6d3",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8ab656128d5a3dc8d7095518893c2b0ff8ca053f8f0b3a2862843c83ce87269b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128182",
+          "request_sha256": "3978dd8b4d1679db4def4ad0c477fa986717d2ae97058e4073a93ebb82ebeb74",
+          "response_sha256": "f706533907c85bb4f09ad40b7fef44196c02a8bad3a05467c58ea52e22db3454",
+          "retrieved_at": "2026-09-10T08:25:24.431518Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7229d6ed16b93754f93cf9462d4160d4b406d0404049f4a71dc66ec1780653d2",
+          "source_uri": null
+        },
+        "record_sha256": "d6018ae00b4d139e365931c89dbabb73416a8e6cc11950ee8386c225ec98fcc2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "전시실 / 4D영상관 / 미디어전시실 / 체험실 / 별관측실 / 휴게실 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7af0fbe748cf0f2b32d9007e93a2c4fd98f3b092892c54d4ff93369e61431ef7",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8ab656128d5a3dc8d7095518893c2b0ff8ca053f8f0b3a2862843c83ce87269b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "128182",
+          "request_sha256": "3978dd8b4d1679db4def4ad0c477fa986717d2ae97058e4073a93ebb82ebeb74",
+          "response_sha256": "dd9d8f46042dc7f4999f0f6dc797df49a134eeee67157ac2b7f1929b717b138b",
+          "retrieved_at": "2026-09-09T16:41:22.303067Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c909e2f9a1750203b98f73059d1f4e86592e5f594cd4208cf95a8021fb017b92",
+          "source_uri": null
+        },
+        "record_sha256": "1cec49db894898d54a9483294863aa8f38d0ed7033257fa5369e85658941b4d0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "4D 체험 / 라이트드로잉 / 천문우주캠프 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7ee15a0ce82ed3b39703bbd5a0fd5841775e6d48fe030d65c8e2b2b9e12c9341",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8ab656128d5a3dc8d7095518893c2b0ff8ca053f8f0b3a2862843c83ce87269b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "128182",
+          "request_sha256": "3ae14afb81d368dcd29f18cb9bf8bafb46c092e3ddce2c0fec6cd567f4421575",
+          "response_sha256": "3389ed34f83408d8fd272ac1e4aaf44107ea6077cb8d4f539533fc97c0120d57",
+          "retrieved_at": "2026-09-09T16:41:21.950526Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-02-20T05:51:54Z",
+          "source_record_sha256": "7fc09840ae070a0926923e578580483423598973e824573c24fe0ca2d64fa491",
+          "source_uri": null
+        },
+        "record_sha256": "6f046dc754f7a1eb899e0a4dd7f5f8e20a74b08c471474fca9be4e82a68cccb1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "예천 천문 우주센터는 2004년 11월 개원한 별과 우주를 주제로 한 테마공원으로 스페이스 타워, 천문대, 스타하우스 등의 시설을 갖추었다. 스페이스 타워는 우주비행사 훈련 체험, 4D영상관, 미디어 전시, 체험실 등으로 구성되어 있다. 1층은 가변중력기를 이용한 중력 변화 체험을 할 수 있고 3층은 별자리 드로잉, 라이트 스케치를 할 수 있는 체험, 4층은 4D 영상 체험을 할 수 있다. 별천문대에는 주 관측실과 보조관측실, 천체투영실, 관측자 숙소 등이 있다. 주 관측실에서는 컴퓨터로 자동제어되는 연구용 등급인 508㎜(20인치)의 반사망원경으로 우주의 모습을 관찰할 수 있으며 보조관측실에서는 4연식 태양 전용 망원경으로 태양의 자기폭풍 현상인 흑점, 태양면을 뚫고 나오는 거대한 불기둥 홍염 등을 관찰할 수 있다. 천체투영실은 디지털 천체투영기 겸 동영상 투영기가 설치된 우주극장으로 천장의 반구형 돔 스크린에 계절별 별자리를 비롯하여 천문우주 관련 영상물이 상영된다. 이 밖에 실물 운석 등이 전시된 전시실 겸 강당이 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a06807984f4d935f5c270dd4090ce36476a0974bca6b1a1780c359c3d40163da",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8ab656128d5a3dc8d7095518893c2b0ff8ca053f8f0b3a2862843c83ce87269b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128182",
+          "request_sha256": "3978dd8b4d1679db4def4ad0c477fa986717d2ae97058e4073a93ebb82ebeb74",
+          "response_sha256": "f706533907c85bb4f09ad40b7fef44196c02a8bad3a05467c58ea52e22db3454",
+          "retrieved_at": "2026-09-10T08:25:24.431518Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "292ee39fb314e524cb064b4f9c96406294edf3db49fd611be97a833f9d2fe3a2",
+          "source_uri": null
+        },
+        "record_sha256": "bfd420b6b158cdcf80667b224687f84a1035221dbff8b6c67e4c5ed15d88f3d1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "- 주간체험 (우주환경체험관) 8,000원 - 야간천체관측 8,000원"
+      }
+    ],
+    "parent_source_sha256": "90231d341248bdd0b7572e73939b4b193ac231230a3e1cafbb8b06723e950bcd",
+    "place": {
+      "address": "경상북도 예천군 충효로 1078",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:8ab656128d5a3dc8d7095518893c2b0ff8ca053f8f0b3a2862843c83ce87269b",
+      "name_ko": "예천천문우주센터",
+      "place_id": "public:korea:8ab656128d5a3dc8d7095518893c2b0ff8ca053f8f0b3a2862843c83ce87269b",
+      "provider_content_id": "128182",
+      "region_code": "47900",
+      "region_name": "경상북도 예천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

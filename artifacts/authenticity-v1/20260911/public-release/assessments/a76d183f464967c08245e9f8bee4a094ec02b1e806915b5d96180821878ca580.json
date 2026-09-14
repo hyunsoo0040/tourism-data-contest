@@ -1,0 +1,460 @@
+{
+  "assessed_at": "2026-09-11T16:20:26.064271Z",
+  "assessment_sha256": "a76d183f464967c08245e9f8bee4a094ec02b1e806915b5d96180821878ca580",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'무주군을 대표하는 경승지'라는 공식 서술과 33경이라는 명승 체계가 장소에 부여된 공유된 이미지·의미의 기본 표현으로 제한적으로 지원한다. 수준은 간단한 이미지 연결 정도인 2로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "계곡, 맑은 물, 단풍, 설경 등 사계절의 시각적 경관이 공식 개요에서 구체적으로 묘사되어 장면에서 구별되는 시각적 성격을 지원한다. 연출이 장면을 지배한다는 수준까지는 확인이 어려워 3.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "계곡 구간을 따라 33개 경을 순회하는 구조는 방문자가 자신의 방식으로 여러 지점을 선택·탐색할 자율 탐색 기회를 지원한다. 일상 이탈 경험이 중심이라는 수준의 근거는 없어 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "계곡, 수풀, 맑은 물 등 자연 환경 단서가 공식 개요에서 확인된다. 다만 실제 고요함이나 혼잡도는 확인되지 않아 환경이 두드러진 수준인 3까지로 제한.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요가 경승지 33곳의 존재와 명칭을 나열하지만, 각 경이 확인된 실제 원형·유산의 실물·공간 탐구를 지원하는지에 대한 근거는 없다. 백련사 등 일부가 유래를 가질 수 있으나 접촉의 실질이 확인되지 않아 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "33경 지정 사실과 각 경의 한자 명칭이 있으나 사건·인물 등 구체적 역사 맥락 설명은 제공되지 않는다. 역사 서사가 부재하여 명시적 낮음도 아니고 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 언급이 없다. 백련사라는 사찰 이름만으로 현재 전승 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "경승지 명칭 나열은 있으나 유산·전통에 연결된 해설·전시·학습 프로그램의 근거가 없다. UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923",
+          "quote": {
+            "end": 69,
+            "method": "EXACT",
+            "original": "무주 구천동 33경은 무주군을 대표하는 경승지로 나제통문에서 백련사까지 이어지는 구간에 있는 경승지 33곳을 지정한 곳이다.",
+            "start": 0,
+            "submitted": "무주 구천동 33경은 무주군을 대표하는 경승지로 나제통문에서 백련사까지 이어지는 구간에 있는 경승지 33곳을 지정한 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ab6cb652a8559b386bfcca0e2992fd4e88332a0dee7623d0c56db40fa0a41fb5"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'무주군을 대표하는 경승지'라는 공식 서술과 33경이라는 명승 체계가 장소에 부여된 공유된 이미지·의미의 기본 표현으로 제한적으로 지원한다. 수준은 간단한 이미지 연결 정도인 2로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보 매체, SNS 등 장소 이미지의 매체적 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923",
+          "quote": {
+            "end": 177,
+            "method": "EXACT",
+            "original": "구천동 33경의 명소들이 계곡을 따라 여름철의 무성한 수풀과 맑은 물은 삼복더위를 잊게 해 주며, 온 산을 붉게 물들이는 가을철의 단풍과 겨울철 설경 등 사시사철 아름다운 경치를 볼 수 있다.",
+            "start": 70,
+            "submitted": "구천동 33경의 명소들이 계곡을 따라 여름철의 무성한 수풀과 맑은 물은 삼복더위를 잊게 해 주며, 온 산을 붉게 물들이는 가을철의 단풍과 겨울철 설경 등 사시사철 아름다운 경치를 볼 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ab6cb652a8559b386bfcca0e2992fd4e88332a0dee7623d0c56db40fa0a41fb5"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "계곡, 맑은 물, 단풍, 설경 등 사계절의 시각적 경관이 공식 개요에서 구체적으로 묘사되어 장면에서 구별되는 시각적 성격을 지원한다. 연출이 장면을 지배한다는 수준까지는 확인이 어려워 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 직접 경험하거나 재현하는 체험 요소에 대한 근거가 없다. 경관 감상 서술만으로 재현 체험을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923",
+          "quote": {
+            "end": 68,
+            "method": "EXACT",
+            "original": "나제통문에서 백련사까지 이어지는 구간에 있는 경승지 33곳을 지정한 곳이다",
+            "start": 27,
+            "submitted": "나제통문에서 백련사까지 이어지는 구간에 있는 경승지 33곳을 지정한 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ab6cb652a8559b386bfcca0e2992fd4e88332a0dee7623d0c56db40fa0a41fb5"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "계곡 구간을 따라 33개 경을 순회하는 구조는 방문자가 자신의 방식으로 여러 지점을 선택·탐색할 자율 탐색 기회를 지원한다. 일상 이탈 경험이 중심이라는 수준의 근거는 없어 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923",
+          "quote": {
+            "end": 123,
+            "method": "EXACT",
+            "original": "계곡을 따라 여름철의 무성한 수풀과 맑은 물은 삼복더위를 잊게 해 주며",
+            "start": 84,
+            "submitted": "계곡을 따라 여름철의 무성한 수풀과 맑은 물은 삼복더위를 잊게 해 주며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ab6cb652a8559b386bfcca0e2992fd4e88332a0dee7623d0c56db40fa0a41fb5"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "계곡, 수풀, 맑은 물 등 자연 환경 단서가 공식 개요에서 확인된다. 다만 실제 고요함이나 혼잡도는 확인되지 않아 환경이 두드러진 수준인 3까지로 제한.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "탐방로 이용 자체가 집중 활동이라 단정하기는 어렵고, 만들기·신체 활동 등 구체적 참여·도전 프로그램의 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현의 기회에 대한 언급이 없다. UNKNOWN.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "7e08d5bf969ca46cf0888052766a53cfb08b13464c183bbb01fd0e8a1fd810e2",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "d76dd6554c53e81d5e2eca5e2ca335d72d5dc0869f7567f9c6169eb035a4ed67",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1775783287fa58a57daf11cd16ee5824aff37aa093a2b1e7aef1710799ef5ecf",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2fd7bbcb5a61ad0fcaa38ba48a4c87581749fdba528318a3ed6315b17d0dce51",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127031",
+          "request_sha256": "41e9c4211e134a6392b567c7c66b9f86f8f8ad577df9c3cd10a9e8c266cc56b9",
+          "response_sha256": "cc02ee10f8b2ce4eee39144d5a1d92d505e2b242ed60de0f3a6b061b87865738",
+          "retrieved_at": "2026-09-11T02:02:44.857724Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2c984fb5e14d1482c35aea27d47014f275682afa51f48a7f6495f438850573cf",
+          "source_uri": null
+        },
+        "record_sha256": "dd00c69b373e3f5b43e60067e34892ceaf8c416ddbe64481b5a0dda92776e216",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f6c67e0be6a4ca7c9d549529e3f567c25d186337fe7fdee86dbd8853f76a6923",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2fd7bbcb5a61ad0fcaa38ba48a4c87581749fdba528318a3ed6315b17d0dce51",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127031",
+          "request_sha256": "8e361a599ba28b6d1cf54b751c6612a532e175ba3b9721a8653198065e282805",
+          "response_sha256": "2ab50ccfa9c8b7d89fc5acccba5a65a9812df744ab6c728b66692c312358f109",
+          "retrieved_at": "2026-09-10T16:44:45.104900Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-03-17T12:37:31Z",
+          "source_record_sha256": "e2842ec9c59b68b73ba430167388f050b5a5bbec2e1659831096ce9c1f53a0b3",
+          "source_uri": null
+        },
+        "record_sha256": "ab6cb652a8559b386bfcca0e2992fd4e88332a0dee7623d0c56db40fa0a41fb5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무주 구천동 33경은 무주군을 대표하는 경승지로 나제통문에서 백련사까지 이어지는 구간에 있는 경승지 33곳을 지정한 곳이다. 구천동 33경의 명소들이 계곡을 따라 여름철의 무성한 수풀과 맑은 물은 삼복더위를 잊게 해 주며, 온 산을 붉게 물들이는 가을철의 단풍과 겨울철 설경 등 사시사철 아름다운 경치를 볼 수 있다. 무주 구천동 33경으로는 제1경 라제통문(羅濟通門), 제2경 은구암(隱龜岩), 제3경 청금대(聽琴臺), 제4경 와룡담(臥龍潭), 제5경 학소대(鶴巢臺), 제6경 일사대(一士臺), 제7경 함벽소(涵碧沼), 제8경 가의암(可意岩), 제9경 추월담(秋月潭), 제10경 만조탄(晩釣灘), 제11경 파회(巴洄), 제12경 수심대(水心臺), 제13경 세심대(洗心臺), 제14경 수경대(水鏡臺), 제15경 월하탄(月下灘), 제16경 인월담(印月潭), 제17경 사자담(獅子潭), 제18경 청류동(淸流洞), 제19경 비파담(琵琶潭), 제20경 다연대(茶煙臺), 제21경 구월담(九月潭), 제22경 금포탄(琴浦灘), 제23경 호탄암(虎嘆岩), 제24경 청류계(淸流溪), 제25경 안심대(安心臺), 제26경 신양담(新陽潭), 제27경 명경담(明鏡潭), 제28경 구천폭포(九千瀑布), 제29경 백련담(白蓮潭), 제30경 연화폭(蓮花瀑), 제31경 이속대(離俗臺), 제32경 백련사(白蓮寺), 제33경 향적봉(香積峰)이 있다."
+      }
+    ],
+    "parent_source_sha256": "7f758624597097853739b412701b7aa7385799437b537e8b005f9a004039302c",
+    "place": {
+      "address": "전북특별자치도 무주군 설천면 백련사길 580",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:2fd7bbcb5a61ad0fcaa38ba48a4c87581749fdba528318a3ed6315b17d0dce51",
+      "name_ko": "무주 구천동 33경",
+      "place_id": "public:korea:2fd7bbcb5a61ad0fcaa38ba48a4c87581749fdba528318a3ed6315b17d0dce51",
+      "provider_content_id": "127031",
+      "region_code": "52730",
+      "region_name": "전북특별자치도 무주군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

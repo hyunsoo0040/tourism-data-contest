@@ -1,0 +1,823 @@
+{
+  "assessed_at": "2026-09-11T16:16:20.401518Z",
+  "assessment_sha256": "b5e3a509b57b5de56e3ef5082867c1a04d4f2ac19e4c24d5d526815eed6b4688",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b",
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 73
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 83
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "왕인 박사, 도선 국사 등 구체적 역사 인물과 유적(월남사지, 모전석탑)의 맥락이 제시되어 이 장소의 역사를 이해할 수 있으나, 심층 사료 기반 탐구 수준까지의 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "유적과 역사적 인물에 대한 소개가 있으나 공식 해설프로그램·전시 같은 체계적 탐구 지원의 근거는 부족해 짧은 역사 안내 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'달 뜨는 산', '호남의 소금강산' 등 사회적으로 공유되는 이미지와 별칭이 장소에 연결되어 구체적 의미가 부여된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:ac5455028638cba2439aec700ef60f78b6033ee1959a6b4c4ceb89a7826422ab",
+            "appearance:c8548284577d0b9ddc077d10069375148d4d0332ed3d939a3739aa943299de51"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "기암괴석, 갈대밭, 일몰, 사계절 절경 등 시각적 성격의 표현이 개요 전반에서 일관되게 확인되어 시각적 표현이 장면을 지배한다고 볼 수 있다. 픽셀 전용인 VISUAL_APPEARANCE 인용은 제외했다.",
+      "value": 94
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "구름다리 같은 대표 장면을 현장에서 직접 경험할 수 있으나, 촬영·재현 프로그램 등 이미지 재현 체험의 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "국립공원 등산로를 통해 구정봉, 천황봉, 폭포 등을 자율적으로 탐방할 수 있는 기회가 제시되지만, 탐색이 방문 경험의 중심이라는 근거까지는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2136e1b4229c20040e37de0361d634a1e2c76a8bff53ac0af265492cff3e7918",
+            "appearance:9ec88d640025dbb90ba12b497aaa30bb39dd44c5c098d36ecc965a24c6194513"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "계곡·폭포·갈대밭·일몰 등 자연 단서의 존재는 확인되나, 이는 수준 3 '자연·환경 단서를 확인'에 해당한다. 제안된 수준 4 '자연·시각적 저자극 환경이 두드러짐'은 원문이 직접 뒷받침하지 않으며, 제안 사유 스스로도 '두드러진 수준으로 단정하지 않는다'고 명시하고 있어 앵커와 모순된다. 현재 수준의 근거가 없어 REJECTED이며, 필요시 수준 3으로 재제안되어야 한다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "등산, 5km 구정봉 탐방, 지상 120m 구름다리 통과 등 신체적 참여·도전 활동의 구체적 기회가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "국보급 실물 문화유산(도갑사 해탈문, 무위사 극락전, 마애여래좌상)의 관람 가능성은 원문이 직접 뒷받침하므로 수준 3은 성립한다. 그러나 수준 4는 '원형·유산과의 접촉이 방문 경험의 중심'을 요구하는데, 원문은 경관·절경·구름다리 등을 함께 강조할 뿐 유산 접촉이 방문 경험의 중심이라고 명시하지 않는다. 현재 제안된 수준 4의 앵커와의 대조에서 근거가 부족하여 UNCERTAIN으로 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+          "quote": {
+            "end": 199,
+            "method": "EXACT",
+            "original": "이곳은 백제 왕인 박사와 신라 말 도선 국사의 탄생지로도 유명하다.",
+            "start": 162,
+            "submitted": "이곳은 백제 왕인 박사와 신라 말 도선 국사의 탄생지로도 유명하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 3,
+      "reason": "왕인 박사, 도선 국사 등 구체적 역사 인물과 유적(월남사지, 모전석탑)의 맥락이 제시되어 이 장소의 역사를 이해할 수 있으나, 심층 사료 기반 탐구 수준까지의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 현재 전승·생활문화와의 실제 연결을 뒷받침하는 근거가 없다. 사찰·유적의 존재만으로 현재 전승 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+          "quote": {
+            "end": 609,
+            "method": "EXACT",
+            "original": "금릉경포대 부근에는 월남사지와 모전석탑 등 고즈넉한 유적이 남아 있어 역사의 숨결을 느끼게 한다",
+            "start": 556,
+            "submitted": "금릉경포대 부근에는 월남사지와 모전석탑 등 고즈넉한 유적이 남아 있어 역사의 숨결을 느끼게 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "유적과 역사적 인물에 대한 소개가 있으나 공식 해설프로그램·전시 같은 체계적 탐구 지원의 근거는 부족해 짧은 역사 안내 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+          "quote": {
+            "end": 160,
+            "method": "EXACT",
+            "original": "'수석의 전시장’이라 불리며, '호남의 소금강산'이라는 별칭을 갖고 있다",
+            "start": 120,
+            "submitted": "'수석의 전시장’이라 불리며, '호남의 소금강산'이라는 별칭을 갖고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "'달 뜨는 산', '호남의 소금강산' 등 사회적으로 공유되는 이미지와 별칭이 장소에 연결되어 구체적 의미가 부여된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 특정 매체(작품, 홍보, SNS)를 통해 재현·확산된다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+          "quote": {
+            "end": 135,
+            "method": "EXACT",
+            "original": "천황봉(810.7m)을 중심으로 기암괴석이 병풍처럼 펼쳐져 있어 '수석의 전시장’이라 불리며",
+            "start": 84,
+            "submitted": "천황봉(810.7m)을 중심으로 기암괴석이 병풍처럼 펼쳐져 있어 '수석의 전시장’이라 불리며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 4,
+      "reason": "기암괴석, 갈대밭, 일몰, 사계절 절경 등 시각적 성격의 표현이 개요 전반에서 일관되게 확인되어 시각적 표현이 장면을 지배한다고 볼 수 있다. 픽셀 전용인 VISUAL_APPEARANCE 인용은 제외했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+          "quote": {
+            "end": 445,
+            "method": "EXACT",
+            "original": "월출산의 명물인 구름다리는 지상 120m 높이에 건설되어 아찔한 스릴을 선사한다.",
+            "start": 400,
+            "submitted": "월출산의 명물인 구름다리는 지상 120m 높이에 건설되어 아찔한 스릴을 선사한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 2,
+      "reason": "구름다리 같은 대표 장면을 현장에서 직접 경험할 수 있으나, 촬영·재현 프로그램 등 이미지 재현 체험의 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+          "quote": {
+            "end": 360,
+            "method": "EXACT",
+            "original": "도갑사를 지나 5㎞ 정도 오르면 9개의 단지 모양 구멍에 항상 물이 고여 있어 용이 살았다는 구정봉에 이르며",
+            "start": 300,
+            "submitted": "도갑사를 지나 5㎞ 정도 오르면 9개의 단지 모양 구멍에 항상 물이 고여 있어 용이 살았다는 구정봉에 이르며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "국립공원 등산로를 통해 구정봉, 천황봉, 폭포 등을 자율적으로 탐방할 수 있는 기회가 제시되지만, 탐색이 방문 경험의 중심이라는 근거까지는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "계곡·폭포·갈대밭·일몰 등 자연 단서의 존재는 확인되나, 이는 수준 3 '자연·환경 단서를 확인'에 해당한다. 제안된 수준 4 '자연·시각적 저자극 환경이 두드러짐'은 원문이 직접 뒷받침하지 않으며, 제안 사유 스스로도 '두드러진 수준으로 단정하지 않는다'고 명시하고 있어 앵커와 모순된다. 현재 수준의 근거가 없어 REJECTED이며, 필요시 수준 3으로 재제안되어야 한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+          "quote": {
+            "end": 445,
+            "method": "EXACT",
+            "original": "월출산의 명물인 구름다리는 지상 120m 높이에 건설되어 아찔한 스릴을 선사한다.",
+            "start": 400,
+            "submitted": "월출산의 명물인 구름다리는 지상 120m 높이에 건설되어 아찔한 스릴을 선사한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "등산, 5km 구정봉 탐방, 지상 120m 구름다리 통과 등 신체적 참여·도전 활동의 구체적 기회가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현 기회에 대한 근거가 제공되지 않았다. 관광객 방문 언급만으로 관계 형성을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+              "quote": {
+                "end": 295,
+                "method": "EXACT",
+                "original": "도갑사 해탈문(국보), 무위사 극락전(국보), 마애여래좌상(국보) 등 귀중한 문화유산이 산 곳곳에 산재해 있다",
+                "start": 234,
+                "submitted": "도갑사 해탈문(국보), 무위사 극락전(국보), 마애여래좌상(국보) 등 귀중한 문화유산이 산 곳곳에 산재해 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+            }
+          ],
+          "flags": [],
+          "key": "H.a",
+          "level": 4,
+          "reason": "공원 내에 국보급 실물 문화유산(도갑사 해탈문, 무위사 극락전, 마애여래좌상)이 산재하며 방문자가 직접 관람·탐구할 수 있어 원형·유산 접촉이 경험의 중심이라 볼 수 있다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "H.a",
+          "reason": "국보급 실물 문화유산(도갑사 해탈문, 무위사 극락전, 마애여래좌상)의 관람 가능성은 원문이 직접 뒷받침하므로 수준 3은 성립한다. 그러나 수준 4는 '원형·유산과의 접촉이 방문 경험의 중심'을 요구하는데, 원문은 경관·절경·구름다리 등을 함께 강조할 뿐 유산 접촉이 방문 경험의 중심이라고 명시하지 않는다. 현재 제안된 수준 4의 앵커와의 대조에서 근거가 부족하여 UNCERTAIN으로 남긴다."
+        }
+      },
+      "reason": "국보급 실물 문화유산(도갑사 해탈문, 무위사 극락전, 마애여래좌상)의 관람 가능성은 원문이 직접 뒷받침하므로 수준 3은 성립한다. 그러나 수준 4는 '원형·유산과의 접촉이 방문 경험의 중심'을 요구하는데, 원문은 경관·절경·구름다리 등을 함께 강조할 뿐 유산 접촉이 방문 경험의 중심이라고 명시하지 않는다. 현재 제안된 수준 4의 앵커와의 대조에서 근거가 부족하여 UNCERTAIN으로 남긴다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+              "quote": {
+                "end": 501,
+                "method": "EXACT",
+                "original": "칠치폭포의 장관과 가을이면 미왕재에 펼쳐지는 은빛 갈대밭은 월출산의 빼놓을 수 없는 절경이다.",
+                "start": 449,
+                "submitted": "칠치폭포의 장관과 가을이면 미왕재에 펼쳐지는 은빛 갈대밭은 월출산의 빼놓을 수 없는 절경이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "계곡, 폭포, 갈대밭, 일몰 등 자연 환경 단서가 확인되나 실제 고요함·저자극성·회복 효과는 확정할 수 없어 두드러진 수준으로 단정하지 않는다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.b",
+          "reason": "계곡·폭포·갈대밭·일몰 등 자연 단서의 존재는 확인되나, 이는 수준 3 '자연·환경 단서를 확인'에 해당한다. 제안된 수준 4 '자연·시각적 저자극 환경이 두드러짐'은 원문이 직접 뒷받침하지 않으며, 제안 사유 스스로도 '두드러진 수준으로 단정하지 않는다'고 명시하고 있어 앵커와 모순된다. 현재 수준의 근거가 없어 REJECTED이며, 필요시 수준 3으로 재제안되어야 한다."
+        }
+      },
+      "reason": "계곡·폭포·갈대밭·일몰 등 자연 단서의 존재는 확인되나, 이는 수준 3 '자연·환경 단서를 확인'에 해당한다. 제안된 수준 4 '자연·시각적 저자극 환경이 두드러짐'은 원문이 직접 뒷받침하지 않으며, 제안 사유 스스로도 '두드러진 수준으로 단정하지 않는다'고 명시하고 있어 앵커와 모순된다. 현재 수준의 근거가 없어 REJECTED이며, 필요시 수준 3으로 재제안되어야 한다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "cf283fa9aed8338a1c10e948e9e28e52f7bef68a9bb3d5cd8b59f5a5a8026358",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "웅장한 암석 산 능선, 논·녹지, 개화 나무 등 자연 경관 요소가 장면 대부분을 차지하며 강하게 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2136e1b4229c20040e37de0361d634a1e2c76a8bff53ac0af265492cff3e7918",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "90733020b761a5dc435f15cee2c399fc98fab2d117bc94f36f6bd69ba7df3cbb",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영암군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1014268",
+          "request_sha256": "b89e5699e53581ec19a9139fbefcf33fc397624ed1d9bd95a61077279663569e",
+          "response_sha256": "064655cfba254131db978f7281f3a3f2a5c3d970e253a6379d53f28223f0d979",
+          "retrieved_at": "2026-09-11T02:02:37.566750Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f35280d21e72416d9843f98330529ff517a20b505606e681554d611e8579e357",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/68/1014268.jpg"
+        },
+        "record_sha256": "92e821cb149c9e98078e7eed30f3a052e4b1ca6152a5289bcd8becd0f78c6b8c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "웅장한 암산과 자갈 숲, 개화한 나무 가지 등 자연 경관이 장면 전체를 채움.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9ec88d640025dbb90ba12b497aaa30bb39dd44c5c098d36ecc965a24c6194513",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3a3c4bb58604a0d337ad4d9fa951a4fe25a9ca7bff136b0c51e6d609caceaedc",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영암군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1014272",
+          "request_sha256": "b89e5699e53581ec19a9139fbefcf33fc397624ed1d9bd95a61077279663569e",
+          "response_sha256": "064655cfba254131db978f7281f3a3f2a5c3d970e253a6379d53f28223f0d979",
+          "retrieved_at": "2026-09-11T02:02:37.566750Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fc1d0810ae725661b5f0adbe315a121ad89a2ec8c806a2be1344be493644d266",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/72/1014272.jpg"
+        },
+        "record_sha256": "73b2583ea53d8b802c66e0d7d44be564dc32386c5162b9a3a98ff44469db6660",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "중간 지점에 낮은 전통식 지붕의 건물 외관이 작게 보이나 시각적 비중은 약하고, 대부분은 자연 및 도로·가로등 등 현대적 요소다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a1ac6d6cc06ca0e036e024c58a4815c4ad61596a85cbac4a34ab9f56ccf82e65",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "90733020b761a5dc435f15cee2c399fc98fab2d117bc94f36f6bd69ba7df3cbb",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영암군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1014268",
+          "request_sha256": "b89e5699e53581ec19a9139fbefcf33fc397624ed1d9bd95a61077279663569e",
+          "response_sha256": "064655cfba254131db978f7281f3a3f2a5c3d970e253a6379d53f28223f0d979",
+          "retrieved_at": "2026-09-11T02:02:37.566750Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f35280d21e72416d9843f98330529ff517a20b505606e681554d611e8579e357",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/68/1014268.jpg"
+        },
+        "record_sha256": "3ed17b90b07bd7dab2bf358bf929e1cff9eb721cafa0fe3ed206262a89b9530c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "봉우리의 역동적인 암석 능선이 화면을 지배하고, 상단의 벚꽃 가지가 프레임으로 구도에 리듬을 더해 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ac5455028638cba2439aec700ef60f78b6033ee1959a6b4c4ceb89a7826422ab",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3a3c4bb58604a0d337ad4d9fa951a4fe25a9ca7bff136b0c51e6d609caceaedc",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영암군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1014272",
+          "request_sha256": "b89e5699e53581ec19a9139fbefcf33fc397624ed1d9bd95a61077279663569e",
+          "response_sha256": "064655cfba254131db978f7281f3a3f2a5c3d970e253a6379d53f28223f0d979",
+          "retrieved_at": "2026-09-11T02:02:37.566750Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fc1d0810ae725661b5f0adbe315a121ad89a2ec8c806a2be1344be493644d266",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/72/1014272.jpg"
+        },
+        "record_sha256": "647e65f8b61f46c8de2323e42d300b93d4ace242236ce33ee1fecb31b2d18d99",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "화면 왼쪽과 오른쪽의 분홍빛 개화 나무가 프레임을 감싸고, 안개 낀 청회색 암봉이 배경을 지배하는 대비 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c8548284577d0b9ddc077d10069375148d4d0332ed3d939a3739aa943299de51",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "90733020b761a5dc435f15cee2c399fc98fab2d117bc94f36f6bd69ba7df3cbb",
+        "match_basis": [
+          "공식 촬영지역 전남광주통합특별시 영암군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1014268",
+          "request_sha256": "b89e5699e53581ec19a9139fbefcf33fc397624ed1d9bd95a61077279663569e",
+          "response_sha256": "064655cfba254131db978f7281f3a3f2a5c3d970e253a6379d53f28223f0d979",
+          "retrieved_at": "2026-09-11T02:02:37.566750Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f35280d21e72416d9843f98330529ff517a20b505606e681554d611e8579e357",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/68/1014268.jpg"
+        },
+        "record_sha256": "8f436e76d5d4b814e4a567d5b1671c52e3dc67c0d9357deea02a5c29439c371a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1bdd00964e662e0b78903a0b512bbc20e163df4925bb869a8bcbddf7145dbb9f",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127672",
+          "request_sha256": "59a013e86b681d69c9001e0642dfd6335679abf1cb4e30f207ad0207d7bbecd4",
+          "response_sha256": "a25aedfc405405e26cf94a1631a75f2e101b5c494c01af136061f32d225cfc98",
+          "retrieved_at": "2026-09-10T16:49:30.307873Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "950c1d21dd3546a5dd9e0ab8c37a8a32bc627401eb0aa375284db443606bd0c4",
+          "source_uri": null
+        },
+        "record_sha256": "e4db034ae8e897e54d39a64aa6af76dea72f57178c905fafadd30624cd8d1e39",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "월출산은 ‘달 뜨는 산’이라는 이름에 걸맞게 아름다운 경관과 유수한 문화자원, 남도의 향토적 정서가 조화를 이룬 한반도 최남단의 산악형 국립공원이다. 천황봉(810.7m)을 중심으로 기암괴석이 병풍처럼 펼쳐져 있어 '수석의 전시장’이라 불리며, '호남의 소금강산'이라는 별칭을 갖고 있다. 이곳은 백제 왕인 박사와 신라 말 도선 국사의 탄생지로도 유명하다. 천황봉 남쪽에는 무위사가, 서쪽에는 도갑사가 자리하고 있다. 도갑사 해탈문(국보), 무위사 극락전(국보), 마애여래좌상(국보) 등 귀중한 문화유산이 산 곳곳에 산재해 있다. 특히 도갑사를 지나 5㎞ 정도 오르면 9개의 단지 모양 구멍에 항상 물이 고여 있어 용이 살았다는 구정봉에 이르며, 그 아래로 500m쯤 내려가면 거대한 마애여래좌상을 만날 수 있다. 월출산의 명물인 구름다리는 지상 120m 높이에 건설되어 아찔한 스릴을 선사한다. 또한 칠치폭포의 장관과 가을이면 미왕재에 펼쳐지는 은빛 갈대밭은 월출산의 빼놓을 수 없는 절경이다. 서해를 배경으로 붉게 물드는 일몰 풍경은 말로 다 표현할 수 없을 정도로 아름답다. 남쪽 계곡의 금릉경포대 부근에는 월남사지와 모전석탑 등 고즈넉한 유적이 남아 있어 역사의 숨결을 느끼게 한다. 월출산은 봄의 철쭉부터 겨울의 설경까지 사시사철 독특한 매력을 자랑하며 관광객의 발길을 이끌고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c43f5d25a394c578c298d4632a7adba7d0f6fd7cc9c9e3c79a078dbe7a06c35c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127672",
+          "request_sha256": "aa3a6d5e5d379cec719901f5233b2d3a9d07a8eed7183da12b799a1f2e02ef0e",
+          "response_sha256": "5c3c51bc142ad0970a44a79dec8dc0f8e5aa0dd9964292f17bf790417b15102c",
+          "retrieved_at": "2026-09-11T02:02:36.168084Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "358fde191b1b873f3b95e3964623a450706e9be6cf09914770b8608c06877e60",
+          "source_uri": null
+        },
+        "record_sha256": "9f25e1ecb9a52cdead1c2d63c6e539e6bf230254f5857e9dd62edf565b98b8ac",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "f1c212752bb57c4d8b01cc646d6ea035898838cd7627a1a4a59b504dd5983349",
+    "place": {
+      "address": "전남광주통합특별시 영암군 영암읍 천황사로 280-43",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+      "name_ko": "월출산국립공원",
+      "place_id": "public:korea:2a7e40bda49f33ef46020a60297c37aa9e6a41f8480b4094dc034e5324fc2fa4",
+      "provider_content_id": "127672",
+      "region_code": "12800",
+      "region_name": "전남광주통합특별시 영암군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

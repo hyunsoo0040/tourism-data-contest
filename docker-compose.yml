@@ -27,6 +27,10 @@ services:
     image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
     command: ["python", "-m", "itda.cli.deploy_database"]
     environment:
+      ITDA_AUTHENTICITY_RELEASE_DIR: /app/artifacts/authenticity/current
+      ITDA_AUTHENTICITY_RELEASE_SHA256: ${ITDA_AUTHENTICITY_RELEASE_SHA256:?PUBLIC release hash is required}
+      ITDA_AUTHENTICITY_EXPECTED_PLACES: ${ITDA_AUTHENTICITY_EXPECTED_PLACES:?PUBLIC place count is required}
+      ITDA_AUTHENTICITY_PREVIOUS_RELEASE_SHA256: ${ITDA_AUTHENTICITY_PREVIOUS_RELEASE_SHA256:-NONE}
       ITDA_POSTGRES_ADMIN_DSN: "dbname=${ITDA_POSTGRES_DB:?} user=${ITDA_POSTGRES_ADMIN_USER:?} password=${ITDA_POSTGRES_ADMIN_PASSWORD:?} host=postgres port=5432 sslmode=disable"
       ITDA_POSTGRES_DB: ${ITDA_POSTGRES_DB:?}
       ITDA_RUNTIME_ROLE: ${ITDA_RUNTIME_ROLE:?}
@@ -38,6 +42,7 @@ services:
       ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD: ${ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD:?}
       ITDA_PHOTO_SERVICE_PASSWORD: ${ITDA_PHOTO_SERVICE_PASSWORD:?}
       ITDA_PROFILE_SESSION_SERVICE_PASSWORD: ${ITDA_PROFILE_SESSION_SERVICE_PASSWORD:?}
+      ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD: ${ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD:?}
     depends_on:
       postgres:
         condition: service_healthy
@@ -53,28 +58,53 @@ services:
       - -c
       - |
         import os
-        root = "/var/lib/itda/photo-quarantine"
-        os.makedirs(root, mode=0o700, exist_ok=True)
-        os.chown(root, 10001, 10001)
-        os.chmod(root, 0o700)
+        for root in ("/var/lib/itda/photo-quarantine", "/var/lib/itda/model-sessions", "/var/lib/itda/grounded-daily"):
+            os.makedirs(root, mode=0o700, exist_ok=True)
+            os.chown(root, 10001, 10001)
+            os.chmod(root, 0o700)
     restart: "no"
     network_mode: none
     volumes:
       - itda_photo_quarantine:/var/lib/itda/photo-quarantine
+      - itda_model_sessions:/var/lib/itda/model-sessions
+      - itda_grounded_daily:/var/lib/itda/grounded-daily
 
   backend:
     image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
     environment:
+      ITDA_AUTHENTICITY_RELEASE_SHA256: ${ITDA_AUTHENTICITY_RELEASE_SHA256:?PUBLIC release hash is required}
+      ITDA_AUTHENTICITY_EXPECTED_PLACES: ${ITDA_AUTHENTICITY_EXPECTED_PLACES:?PUBLIC place count is required}
+      ITDA_AUTHENTICITY_ALLOW_DEVELOPMENT: "0"
+      ITDA_AUTHENTICITY_PHOTO_ENABLED: ${ITDA_AUTHENTICITY_PHOTO_ENABLED:-1}
       ITDA_DATABASE_URL: "dbname=${ITDA_POSTGRES_DB:?} user=${ITDA_RUNTIME_ROLE:?} password=${ITDA_RUNTIME_PASSWORD:?} host=postgres port=5432 sslmode=disable"
+      ITDA_AUTHENTICITY_DATABASE_URL: "dbname=${ITDA_POSTGRES_DB:?} user=${ITDA_RUNTIME_ROLE:?} password=${ITDA_RUNTIME_PASSWORD:?} host=postgres port=5432 sslmode=disable"
       ITDA_PROFILE_SESSION_DATABASE_URL: "dbname=${ITDA_POSTGRES_DB:?} user=itda_current_profile_session_service password=${ITDA_PROFILE_SESSION_SERVICE_PASSWORD:?} host=postgres port=5432 sslmode=disable"
       ITDA_PHOTO_SERVICE_DATABASE_URL: "dbname=${ITDA_POSTGRES_DB:?} user=itda_photo_service password=${ITDA_PHOTO_SERVICE_PASSWORD:?} host=postgres port=5432 sslmode=disable"
       ITDA_PHOTO_QUARANTINE_ROOT: /var/lib/itda/photo-quarantine
+      ITDA_PHOTO_MOOD_ENABLED: ${ITDA_PHOTO_MOOD_ENABLED:-1}
+      ITDA_MODEL_SESSION_LOCK_DIR: /var/lib/itda/model-sessions
+      ITDA_MODEL_SESSION_LIMIT: ${ITDA_MODEL_SESSION_LIMIT:-5}
+      ZHIPUAI_API_KEY: ${ZHIPUAI_API_KEY:-}
+      ITDA_PHOTO_VLM_ENABLED: ${ITDA_PHOTO_VLM_ENABLED:-0}
+      ITDA_PHOTO_VLM_ENDPOINT: ${ITDA_PHOTO_VLM_ENDPOINT:-https://api.z.ai/api/coding/paas/v4/chat/completions}
+      ITDA_PHOTO_VLM_MODEL: ${ITDA_PHOTO_VLM_MODEL:-glm-5.3-flash}
+      ITDA_PHOTO_VLM_API_KEY: ${ITDA_PHOTO_VLM_API_KEY:-}
+      ITDA_PHOTO_VLM_API_KEY_FILE: ${ITDA_PHOTO_VLM_API_KEY_FILE:-}
       ITDA_RUNTIME_ROLE: ${ITDA_RUNTIME_ROLE:?}
       ITDA_LABEL_BUILDER_ROLE: ${ITDA_LABEL_BUILDER_ROLE:?}
       ITDA_CANONICAL_APP_ORIGIN: https://${APP_DOMAIN:?APP_DOMAIN is required}
       ITDA_PROFILE_SESSION_KEYRING: ${ITDA_PROFILE_SESSION_KEYRING:?}
       ITDA_PROFILE_SESSION_CURRENT_KID: ${ITDA_PROFILE_SESSION_CURRENT_KID:?}
       ITDA_API_BIND_HOST: 0.0.0.0
+      ITDA_GROUNDED_RECOMMENDATIONS_ENABLED: ${ITDA_GROUNDED_RECOMMENDATIONS_ENABLED:-0}
+      ITDA_TOURISM_ENABLED: ${ITDA_TOURISM_ENABLED:-0}
+      ITDA_OPERATING_INFORMATION_ENABLED: ${ITDA_OPERATING_INFORMATION_ENABLED:-0}
+      TOUR_API_SERVICE_KEY: ${TOUR_API_SERVICE_KEY:-}
+      ITDA_PUBLIC_PLACE_CATALOG_PATH: /app/artifacts/national/current/catalog.json
+      ITDA_TOURISM_RELATED_MONTH: ${ITDA_TOURISM_RELATED_MONTH:-}
+      ITDA_TOURISM_VISITOR_START: ${ITDA_TOURISM_VISITOR_START:-}
+      ITDA_TOURISM_VISITOR_END: ${ITDA_TOURISM_VISITOR_END:-}
+      ITDA_TOURISM_DEMAND_MONTH: ${ITDA_TOURISM_DEMAND_MONTH:-}
       TZ: UTC
     depends_on:
       migrate:
@@ -82,18 +112,53 @@ services:
       quarantine-init:
         condition: service_completed_successfully
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/v1/questionnaires/current', timeout=3).read()"]
-      interval: 10s
-      timeout: 5s
-      retries: 20
-      start_period: 20s
+      test: ["CMD", "python", "-m", "itda.cli.authenticity_health"]
+      interval: 15s
+      timeout: 40s
+      retries: 12
+      start_period: 90s
     restart: unless-stopped
     stop_grace_period: 15s
     volumes:
       - itda_photo_quarantine:/var/lib/itda/photo-quarantine
+      - itda_model_sessions:/var/lib/itda/model-sessions
     networks:
       - app
       - data
+      - model-egress
+
+  daily-glm-refresh:
+    image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
+    command: ["python", "-m", "itda.cli.run_daily_glm_refresh"]
+    environment:
+      ITDA_DAILY_GLM_REFRESH_DATABASE_URL: "dbname=${ITDA_POSTGRES_DB:?} user=itda_daily_glm_refresh_service password=${ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD:?ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD is required} host=postgres port=5432 sslmode=disable"
+      ITDA_GROUNDED_DAILY_ENABLED: ${ITDA_GROUNDED_DAILY_ENABLED:-0}
+      ITDA_GROUNDED_DAILY_WORKERS: ${ITDA_GROUNDED_DAILY_WORKERS:-4}
+      ITDA_GROUNDED_DAILY_OUTPUT_ROOT: /var/lib/itda/grounded-daily/national/runs
+      ITDA_GROUNDED_DAILY_CACHE_ROOT: /var/lib/itda/grounded-daily/national/cache
+      ITDA_GROUNDED_DAILY_GATE_FILE: ${ITDA_GROUNDED_DAILY_GATE_FILE:-}
+      ITDA_GROUNDED_DAILY_REPORT_DIR: ${ITDA_GROUNDED_DAILY_REPORT_DIR:-}
+      TOUR_API_SERVICE_KEY: ${TOUR_API_SERVICE_KEY:-}
+      ZHIPUAI_API_KEY: ${ZHIPUAI_API_KEY:-}
+      ITDA_MODEL_SESSION_LOCK_DIR: /var/lib/itda/model-sessions
+      ITDA_MODEL_SESSION_LIMIT: ${ITDA_MODEL_SESSION_LIMIT:-5}
+      ITDA_PUBLIC_PLACE_CATALOG_PATH: /app/artifacts/national/current/catalog.json
+      TZ: UTC
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      quarantine-init:
+        condition: service_completed_successfully
+    deploy:
+      replicas: ${ITDA_GROUNDED_DAILY_REPLICAS:-0}
+    restart: unless-stopped
+    stop_grace_period: 15s
+    volumes:
+      - itda_model_sessions:/var/lib/itda/model-sessions
+      - itda_grounded_daily:/var/lib/itda/grounded-daily
+    networks:
+      - data
+      - model-egress
 
   web:
     image: ${WEB_IMAGE:?WEB_IMAGE is required}
@@ -106,7 +171,7 @@ services:
       backend:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/start').then(r => { if (!r.ok) process.exit(1) }).catch(() => process.exit(1))"]
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/trip').then(r => { if (!r.ok) process.exit(1) }).catch(() => process.exit(1))"]
       interval: 10s
       timeout: 5s
       retries: 20
@@ -114,6 +179,7 @@ services:
     restart: unless-stopped
     networks:
       - frontend
+      - app
 
   caddy:
     image: docker.io/library/caddy:2.10.2-alpine@sha256:d8c17a862962def15cde69863a3a463f25a2664942eafd7bdbf050e9c3116b83
@@ -142,11 +208,15 @@ services:
 volumes:
   itda_postgres_data:
   itda_photo_quarantine:
+  itda_model_sessions:
+  itda_grounded_daily:
   itda_caddy_data:
   itda_caddy_config:
 
 networks:
   edge:
+  # Provider egress only; backend still publishes no host ports.
+  model-egress:
   frontend:
     internal: true
   app:

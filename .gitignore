@@ -39,6 +39,7 @@ gsd-core/
 .codegraph/
 .code-review-graph/
 .diagnostics/
+.impeccable/
 /artifacts/reports/
 /artifacts/restricted/catalog/**
 /artifacts/synthetic/phase4/
@@ -81,6 +82,10 @@ coverage/
 playwright-report/
 test-results/
 .next/
+.next-mock/
+.next-*/
+.next-authenticity/
+.next-authenticity-build/
 *.tsbuildinfo
 
 # OS, editor, build, and temporary files
@@ -117,9 +122,16 @@ vendor/
 tmp/
 temp/
 
+# Collection caches, local rehearsals and reports stay local. Only the reviewed
+# PUBLIC release is needed to build the API image from a clean checkout.
+/artifacts/**
+!/artifacts/authenticity-v1/
+!/artifacts/authenticity-v1/20260911/
+!/artifacts/authenticity-v1/20260911/public-release/
+!/artifacts/authenticity-v1/20260911/public-release/*.json
+!/artifacts/authenticity-v1/20260911/public-release/assessments/
+!/artifacts/authenticity-v1/20260911/public-release/assessments/*.json
+
 # Keep source, tests, contracts, fixtures, runtime catalog data, public assets,
 # licenses, dependency locks, CI, and deployment configuration trackable.
 # Ignore rules do not remove files that are already tracked by Git.
-
-# Isolated local UI mock build
-.next-mock/

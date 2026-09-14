@@ -1,0 +1,765 @@
+{
+  "assessed_at": "2026-09-11T18:09:47.016218Z",
+  "assessment_sha256": "fe78947e25139c77339745b683a32fb1b287be872b6cee5359e4a257121e9e9e",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "옛 서울대 농생대 건물을 리모델링하며 옛 모습을 보존했다는 공식 소개로, 원형 건축물의 제한적 접촉은 확인되나 실물 탐구가 중심이라는 근거는 없어 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소 자체의 연혁(서울대 농생대 이전, 유휴부지 활용, 2016년 개장)과 건물명의 유래를 구체적으로 설명하여 사건·맥락 제시 수준으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "건물명에 연도와 역사를 담아 간단한 역사 안내 요소가 확인되나, 전시·해설 프로그램 등 깊은 탐구 제공의 근거는 없어 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "장소에 '과거와 현재가 만나 미래를 꿈꾸는 공간'이라는 이미지와 의미가 부여되어 있다는 공식 서술이 있어 간단한 의미 연결 수준으로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:39cfa211a9e5e3954afbaa732285f16f4058e916a92f3d0b1e940103e2154e30",
+            "appearance:b0499c21edea052b66ceba162ef3265ba33bec78191043c246d1c18325754d30"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "'울창한 숲과 자연, 다양한 문화 예술이 어우러진'이라는 서술은 전반적 성격 소개일 뿐 외관·경관·연출의 시각적 표현을 구체적으로 확인할 근거가 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:864dd097a16892685f2b921630fd09520292bd15f88253c81a249da4a367b7a0",
+            "appearance:a76bd66bb7c8831940c9dc137663b9913b5fdc3723097763fbc63499525a8f68"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 25,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "대규모 부지 내 울창한 숲과 자연이 두드러진다는 공식 서술로 자연 환경 단서는 확인된다. 다만 실제 고요함이나 혼잡은 알 수 없어 수준 3으로 판단했다.",
+      "value": 63
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507",
+          "quote": {
+            "end": 362,
+            "method": "EXACT",
+            "original": "서울대학교 농생대 부지의 건물들이 건축적으로 시대별 역사를 잘 간직하고 있다는 점을 살려 최대한 옛 모습을 보존하며 조성하였다",
+            "start": 292,
+            "submitted": "서울대학교 농생대 부지의 건물들이 건축적으로 시대별 역사를 잘 간직하고 있다는 점을 살려 최대한 옛 모습을 보존하며 조성하였다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "563a6ff486305456e8ddfd1c9462a0c388b11ab2090d97f59c13dbc8c2866951"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.a",
+      "level": 2,
+      "reason": "옛 서울대 농생대 건물을 리모델링하며 옛 모습을 보존했다는 공식 소개로, 원형 건축물의 제한적 접촉은 확인되나 실물 탐구가 중심이라는 근거는 없어 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507",
+          "quote": {
+            "end": 203,
+            "method": "EXACT",
+            "original": "2003년 서울대학교 농업생명과학대학이 관악캠퍼스로 이전하면서 유휴공간으로 남았던 교정과 건물들을 경기도와 경기문화재단이 문화 예술 복합문화공간으로 조성",
+            "start": 118,
+            "submitted": "2003년 서울대학교 농업생명과학대학이 관악캠퍼스로 이전하면서 유휴공간으로 남았던 교정과 건물들을 경기도와 경기문화재단이 문화 예술 복합문화공간으로 조성",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "563a6ff486305456e8ddfd1c9462a0c388b11ab2090d97f59c13dbc8c2866951"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "H.b",
+      "level": 3,
+      "reason": "이 장소 자체의 연혁(서울대 농생대 이전, 유휴부지 활용, 2016년 개장)과 건물명의 유래를 구체적으로 설명하여 사건·맥락 제시 수준으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 뒷받침하는 근거가 없다. 과거 교육기관 부지라는 사실만으로 현재 전승 활동을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507",
+          "quote": {
+            "end": 478,
+            "method": "EXACT",
+            "original": "생활1980, 청년1981, 디자인1978 등 상상캠퍼스의 건물 이름은 건물의 특성을 반영한 한글 이름과 건물 조성 연도를 조합한 것",
+            "start": 404,
+            "submitted": "생활1980, 청년1981, 디자인1978 등 상상캠퍼스의 건물 이름은 건물의 특성을 반영한 한글 이름과 건물 조성 연도를 조합한 것",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "563a6ff486305456e8ddfd1c9462a0c388b11ab2090d97f59c13dbc8c2866951"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "건물명에 연도와 역사를 담아 간단한 역사 안내 요소가 확인되나, 전시·해설 프로그램 등 깊은 탐구 제공의 근거는 없어 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507",
+          "quote": {
+            "end": 522,
+            "method": "EXACT",
+            "original": "과거와 현재가 만나 미래를 꿈꿀 수 있는 공간이 되고자 하는 바람을 담았다",
+            "start": 481,
+            "submitted": "과거와 현재가 만나 미래를 꿈꿀 수 있는 공간이 되고자 하는 바람을 담았다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "563a6ff486305456e8ddfd1c9462a0c388b11ab2090d97f59c13dbc8c2866951"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "장소에 '과거와 현재가 만나 미래를 꿈꾸는 공간'이라는 이미지와 의미가 부여되어 있다는 공식 서술이 있어 간단한 의미 연결 수준으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·유통에 관한 근거가 제공되지 않았다. 방송·작품·SNS 표현 등의 언급이 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "'울창한 숲과 자연, 다양한 문화 예술이 어우러진'이라는 서술은 전반적 성격 소개일 뿐 외관·경관·연출의 시각적 표현을 구체적으로 확인할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현할 수 있다는 근거가 없다. 사진 촬영 명소, 상징 장면 등의 언급이 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507",
+          "quote": {
+            "end": 33,
+            "method": "EXACT",
+            "original": "울창한 숲과 자연, 다양한 문화 예술이 어우러진 복합문화공간",
+            "start": 0,
+            "submitted": "울창한 숲과 자연, 다양한 문화 예술이 어우러진 복합문화공간",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "563a6ff486305456e8ddfd1c9462a0c388b11ab2090d97f59c13dbc8c2866951"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507",
+          "quote": {
+            "end": 262,
+            "method": "EXACT",
+            "original": "총 대지면적 152,070㎡의 숲과 건물로 이루어진 캠퍼스 부지",
+            "start": 227,
+            "submitted": "총 대지면적 152,070㎡의 숲과 건물로 이루어진 캠퍼스 부지",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "563a6ff486305456e8ddfd1c9462a0c388b11ab2090d97f59c13dbc8c2866951"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "대규모 부지 내 울창한 숲과 자연이 두드러진다는 공식 서술로 자연 환경 단서는 확인된다. 다만 실제 고요함이나 혼잡은 알 수 없어 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "'다양한 문화 예술'이라는 일반 서술만으로 만들기·신체 활동 등 구체적 참여·몰입 활동의 기회를 확인할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 관한 구체적 근거가 제공되지 않았다. 복합문화공간이라는 지칭만으로 유대 활동을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "f853172e57cfcf4c4fe579d798761e7e1ebac1e79eafaf8d48632b715d86c280",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507",
+              "quote": {
+                "end": 402,
+                "method": "EXACT",
+                "original": "실제로 경기상상캠퍼스 곳곳에서 옛 캠퍼스의 모습들을 발견하실 수 있다",
+                "start": 364,
+                "submitted": "실제로 경기상상캠퍼스 곳곳에서 옛 캠퍼스의 모습들을 발견하실 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "563a6ff486305456e8ddfd1c9462a0c388b11ab2090d97f59c13dbc8c2866951"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 2,
+          "reason": "넓은 부지에서 옛 캠퍼스의 흔적을 스스로 둘러보고 발견하도록 안내하고 있어 자율 탐색 기회는 확인되나, 그것이 경험의 중심이라는 근거는 없어 수준 2로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "1ad234b1d2746b1423cf2702f10ade588aeafa928ad81a2b96443bfc520c6958",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "파스텔톤의 구름·태양·열기구 벽 데코, 연두색 방석과 노란 커튼 등 밝고 경쾌한 실내 연출이 보이나 전체적으로는 기능적 사무·생활 공간의 인상이 크다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:39cfa211a9e5e3954afbaa732285f16f4058e916a92f3d0b1e940103e2154e30",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08bf007fd0bf3434aad45d703cfe6bb69f7b4cb0e9f90ae074521200414035a9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3456857_13",
+          "request_sha256": "2b12115ad07d5bd5d52926cd623776131445beb4dd9e302b29736f2b4a147fe4",
+          "response_sha256": "59f962afa7b5f0abb6e0ed26dec2ee22707d69ad2e373e1a14392d033773d518",
+          "retrieved_at": "2026-09-10T08:25:56.394116Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dd2b4bba0d93fe4125400ad5492aed29fe8719c3fe2e56d70ae55c9b89f8aa79",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/57/3456857_image2_1.jpg"
+        },
+        "record_sha256": "8116d262c23f396538c9c7b2edaa944cb17d2a2eaf81f0ed092a6aec46812e67",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "벽돌 마감과 단순한 창문 배열의 근대 학교식 건축 외관이 약간 보이나 전통적 재료·구성은 두드러지지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:617293e4801f656e224da04a28ed9c62b07f97bc449436655a1a67bfb5e53806",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "585aa857895ce882b15bb67853e8cc537c16e15ed007066af347daaeaff22b68",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100174_1",
+          "request_sha256": "2b12115ad07d5bd5d52926cd623776131445beb4dd9e302b29736f2b4a147fe4",
+          "response_sha256": "59f962afa7b5f0abb6e0ed26dec2ee22707d69ad2e373e1a14392d033773d518",
+          "retrieved_at": "2026-09-10T08:25:56.394116Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7a67390ae4fbaa7f972acac23e05ccd0319b2df74c65763d1e59e142d29c9767",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/74/4100174_image2_1.jpg"
+        },
+        "record_sha256": "30646f633becf60a572d279e9a65b3b35a9f68a1484f7b4ec30d11e81127741c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "창문은 커튼으로 가려져 있고 녹지·물·자연 경관 등 자연 환경 단서는 직접 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:864dd097a16892685f2b921630fd09520292bd15f88253c81a249da4a367b7a0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08bf007fd0bf3434aad45d703cfe6bb69f7b4cb0e9f90ae074521200414035a9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3456857_13",
+          "request_sha256": "2b12115ad07d5bd5d52926cd623776131445beb4dd9e302b29736f2b4a147fe4",
+          "response_sha256": "59f962afa7b5f0abb6e0ed26dec2ee22707d69ad2e373e1a14392d033773d518",
+          "retrieved_at": "2026-09-10T08:25:56.394116Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dd2b4bba0d93fe4125400ad5492aed29fe8719c3fe2e56d70ae55c9b89f8aa79",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/57/3456857_image2_1.jpg"
+        },
+        "record_sha256": "0edb0cb226f65c8d14fa94ac2d8ff8716e36cf4e1210fe8b6283b93f7160fd0f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "밝은 목재 수납장이 일부 전통적 재료 느낌을 주지만 전반적으로 현대적 마감과 가전제품이 있는 실내로 전통 외관은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8d229e89833f7657d9aef64fc6a366af7e4a89ffb8d5acc7b6292f269ab4aae7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08bf007fd0bf3434aad45d703cfe6bb69f7b4cb0e9f90ae074521200414035a9",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3456857_13",
+          "request_sha256": "2b12115ad07d5bd5d52926cd623776131445beb4dd9e302b29736f2b4a147fe4",
+          "response_sha256": "59f962afa7b5f0abb6e0ed26dec2ee22707d69ad2e373e1a14392d033773d518",
+          "retrieved_at": "2026-09-10T08:25:56.394116Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dd2b4bba0d93fe4125400ad5492aed29fe8719c3fe2e56d70ae55c9b89f8aa79",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/57/3456857_image2_1.jpg"
+        },
+        "record_sha256": "7f193a5685ae6b2bdde657cd7a231d9794bcfe419c4a36047e05a5433fe7746e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "왼쪽의 무성한 큰 나무, 오른쪽 녹지와 들판이 보이나 도로와 건물이 전경의 상당 부분을 차지.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a76bd66bb7c8831940c9dc137663b9913b5fdc3723097763fbc63499525a8f68",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "585aa857895ce882b15bb67853e8cc537c16e15ed007066af347daaeaff22b68",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100174_1",
+          "request_sha256": "2b12115ad07d5bd5d52926cd623776131445beb4dd9e302b29736f2b4a147fe4",
+          "response_sha256": "59f962afa7b5f0abb6e0ed26dec2ee22707d69ad2e373e1a14392d033773d518",
+          "retrieved_at": "2026-09-10T08:25:56.394116Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7a67390ae4fbaa7f972acac23e05ccd0319b2df74c65763d1e59e142d29c9767",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/74/4100174_image2_1.jpg"
+        },
+        "record_sha256": "ac14e24d12f252381bef73255f894cc1bdf3807d2dbb1c21e85b7a81a901869d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "밝은 주광색 하늘 아래 벽돌과 크림색 외벽의 2층 건물, 청색 자전거도로가 균형 잡힌 구도를 이루며 보통 수준의 시각적 성격을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b0499c21edea052b66ceba162ef3265ba33bec78191043c246d1c18325754d30",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "585aa857895ce882b15bb67853e8cc537c16e15ed007066af347daaeaff22b68",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100174_1",
+          "request_sha256": "2b12115ad07d5bd5d52926cd623776131445beb4dd9e302b29736f2b4a147fe4",
+          "response_sha256": "59f962afa7b5f0abb6e0ed26dec2ee22707d69ad2e373e1a14392d033773d518",
+          "retrieved_at": "2026-09-10T08:25:56.394116Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7a67390ae4fbaa7f972acac23e05ccd0319b2df74c65763d1e59e142d29c9767",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/74/4100174_image2_1.jpg"
+        },
+        "record_sha256": "12f94c8d41cf7bad99a23a806684854f460f1d2a50e9ae4bf261fda50c9be0c5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c292ce94f6858d02ad3d030816215c25ab8402e9155b0b51ed7457af4cd61507",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2747132",
+          "request_sha256": "56868e93982d3b3baa4caadda99bfc93f1da0a3e297178f701b58996d9a3a912",
+          "response_sha256": "18bc14c70fd6919117b396f216fb67d513e66b102754087bdc49aa52bd2235db",
+          "retrieved_at": "2026-09-10T08:01:24.430353Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-08-18T07:19:21Z",
+          "source_record_sha256": "aaae352f7fdb0a8c7d354dd3888a2e1a3ddb331d810526ea52b5a7dcf3a6edb3",
+          "source_uri": null
+        },
+        "record_sha256": "563a6ff486305456e8ddfd1c9462a0c388b11ab2090d97f59c13dbc8c2866951",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "울창한 숲과 자연, 다양한 문화 예술이 어우러진 복합문화공간 미래를 실험하고 삶의 문화를 창조하는 경기상상캠퍼스는 옛 서울대학교 농업생명과학대학 유휴부지 건물들을 리모델링하여 조성된 문화 예술 복합문화공간이다. 2003년 서울대학교 농업생명과학대학이 관악캠퍼스로 이전하면서 유휴공간으로 남았던 교정과 건물들을 경기도와 경기문화재단이 문화 예술 복합문화공간으로 조성하여 2016년 6월 11일 문을 열었다. 총 대지면적 152,070㎡의 숲과 건물로 이루어진 캠퍼스 부지 내 8개 건물들을 순차적으로 리모델링을 진행하였다. 서울대학교 농생대 부지의 건물들이 건축적으로 시대별 역사를 잘 간직하고 있다는 점을 살려 최대한 옛 모습을 보존하며 조성하였다. 실제로 경기상상캠퍼스 곳곳에서 옛 캠퍼스의 모습들을 발견하실 수 있다. 생활1980, 청년1981, 디자인1978 등 상상캠퍼스의 건물 이름은 건물의 특성을 반영한 한글 이름과 건물 조성 연도를 조합한 것으로 과거와 현재가 만나 미래를 꿈꿀 수 있는 공간이 되고자 하는 바람을 담았다."
+      }
+    ],
+    "parent_source_sha256": "21154322b9ec5778c0cb8443ad31261cd0be28f94559d2fe722ed61633084315",
+    "place": {
+      "address": "경기도 수원시 권선구 서둔로 166 (서둔동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+      "name_ko": "경기상상캠퍼스",
+      "place_id": "public:korea:95dfc64c7e87b89085a69ee870e26e44e5fcf4df67f9be25d57e90dc3d53e877",
+      "provider_content_id": "2747132",
+      "region_code": "41113",
+      "region_name": "경기도 수원시 권선구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

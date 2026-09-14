@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 from collections.abc import Iterable, Mapping, Sequence
-from typing import Literal
+from typing import Literal, Protocol, cast
 
 from itda.contracts.base import DataSplit, ExperienceAxis
 from itda.contracts.phase5_recovery_policy import (
@@ -31,6 +31,7 @@ from itda.contracts.recommendation import (
     DiversityCandidateScore,
     DiversityStep,
     DuplicateDecision,
+    EvidenceSnippet,
     ExplanationLink,
     MismatchGuidance,
     MismatchGuidanceState,
@@ -296,6 +297,12 @@ def _mismatch_guidance(
     )
 
 
+def _legacy_condition_difference(expected: int | None, actual: int | None) -> int:
+    if expected is None or actual is None:
+        raise RecommendationKernelError("LEGACY_CONDITION_VALUE_MISSING")
+    return abs(expected - actual)
+
+
 def _score_candidate(
     *,
     preference: RecommendationPreference,
@@ -308,8 +315,8 @@ def _score_candidate(
             axis=expected.axis,
             expected_value=expected.value,
             place_value=actual.value,
-            absolute_difference=abs(expected.value - actual.value),
-            fit_score=100 - abs(expected.value - actual.value),
+            absolute_difference=_legacy_condition_difference(expected.value, actual.value),
+            fit_score=100 - _legacy_condition_difference(expected.value, actual.value),
         )
         for expected, actual in zip(preference.axis_targets, candidate.axis_scores, strict=True)
     )
@@ -325,11 +332,11 @@ def _score_candidate(
             condition_id=expected.condition_id,
             expected_value=expected.value,
             place_value=actual.value,
-            absolute_difference=abs(expected.value - actual.value),
-            fit_score=100 - abs(expected.value - actual.value),
+            absolute_difference=_legacy_condition_difference(expected.value, actual.value),
+            fit_score=100 - _legacy_condition_difference(expected.value, actual.value),
             total_score_weight_bp=_condition_weight(config, expected.condition_id),
             weighted_numerator=(
-                (100 - abs(expected.value - actual.value))
+                (100 - _legacy_condition_difference(expected.value, actual.value))
                 * _condition_weight(config, expected.condition_id)
             ),
         )
@@ -427,9 +434,9 @@ def _explanations(
     )[:2]
     axis_by_id = {row.axis: row for row in candidate.axis_scores}
     axis_labels = {
-        ExperienceAxis.HISTORY_TRADITION: "역사·전통",
-        ExperienceAxis.EMOTION_IMAGE: "감성·이미지",
-        ExperienceAxis.REST_IMMERSION: "휴식·몰입",
+        ExperienceAxis.HISTORY_TRADITION: "대상•원형형",
+        ExperienceAxis.EMOTION_IMAGE: "의미•이미지형",
+        ExperienceAxis.REST_IMMERSION: "자기•몰입형",
     }
     result = []
     for row in best_axes:
@@ -602,7 +609,7 @@ def rank_recommendations(
                 contribution=contribution,
                 axis_scores=candidate.axis_scores,
                 explanations=explanations,
-                evidence=item_evidence,
+                evidence=cast(tuple[EvidenceSnippet, ...], item_evidence),
                 reference_date=candidate.reference_date,
                 image_state=candidate.image_state,
             )
@@ -711,7 +718,7 @@ def _scenario_preference(
         "GROUP_TRANSIT": (50, 100, 0, 50, 50, 50),
         "OUTDOOR_LOW_CROWD": (50, 50, 50, 100, 100, 0),
         "UNDECIDED": (0, 0, 0, 0, 50, 50),
-    }.get(variant)
+    }.get(str(variant))
     if condition_values is None:
         raise RecommendationKernelError("ACTIVATION_SCENARIO_INVALID")
     axes = tuple(
@@ -736,13 +743,17 @@ def _contribution_digest(run: RecommendationRun) -> str:
     )
 
 
+class _ScenarioSource(Protocol):
+    def read_text(self, encoding: str) -> str: ...
+
+
 def evaluate_activation_scenarios(
     *,
     candidates: tuple[RecommendationCandidate, ...],
     release_sha256: str,
     canonical_membership_sha256: str,
     base_preference: RecommendationPreference,
-    scenario_source: object | None = None,
+    scenario_source: _ScenarioSource | None = None,
     config: RecommendationConfig = CANONICAL_RECOMMENDATION_CONFIG,
     cannot_coappear_authority: CannotCoappearAuthority | None = None,
     created_at: object | None = None,

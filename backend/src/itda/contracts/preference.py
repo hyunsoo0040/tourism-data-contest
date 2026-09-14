@@ -36,12 +36,29 @@ VERSION_BOUND_BY_QUESTIONNAIRE_V1: dict[str, object] = {
     "config_hash": "bc24c1ca59272397bf0dad41be34cf536b6cb6215d3148567d09fbebd749b09c",
     "answers_type": "QuestionnaireAnswersV1",
 }
-VERSION_BOUND_BY_QUESTIONNAIRE_V2: dict[str, object] = {
+LEGACY_VERSION_BOUND_BY_QUESTIONNAIRE_V2: dict[str, object] = {
     "schema_version": "preference-profile-v2",
     "scoring_version": "choice-bp-v2",
     "description_template_version": "current-trip-expectation-v1",
     "config_hash": "3531142763d74474f702a20bb4590068696b446b77391dbd2ca17d8ee5ac7563",
     "answers_type": "QuestionnaireAnswersV2",
+}
+
+PREVIOUS_COPY_VERSION_BOUND_BY_QUESTIONNAIRE_V2: dict[str, object] = {
+    **LEGACY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+    "scoring_version": "choice-distribution-v3",
+    "config_hash": "d3483106d7a3293a91211b4f05301079dc44b1bfc28ab593f84195f8f318d8f3",
+}
+
+PREVIOUS_TERMINOLOGY_VERSION_BOUND_BY_QUESTIONNAIRE_V2: dict[str, object] = {
+    **PREVIOUS_COPY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+    "config_hash": "de3b691fee11be3ad7060f40a6e363b20dab40bf4ffe9b80974450ee18b66d2f",
+}
+
+
+VERSION_BOUND_BY_QUESTIONNAIRE_V2: dict[str, object] = {
+    **PREVIOUS_TERMINOLOGY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+    "config_hash": "818c8c3d9ef9ea1fb131daf4792a1b5e05e7e6a0f7694f87b379d6bae88b7a1b",
 }
 
 
@@ -179,15 +196,22 @@ class PreferenceProfile(StrictContract):
             bound = VERSION_BOUND_BY_QUESTIONNAIRE_V1
             answers_type: type = QuestionnaireAnswersV1
         elif self.questionnaire_version == QUESTIONNAIRE_VERSION_V2:
-            bound = VERSION_BOUND_BY_QUESTIONNAIRE_V2
+            if self.scoring_version == "choice-bp-v2":
+                bound = LEGACY_VERSION_BOUND_BY_QUESTIONNAIRE_V2
+            elif self.config_hash == PREVIOUS_COPY_VERSION_BOUND_BY_QUESTIONNAIRE_V2["config_hash"]:
+                bound = PREVIOUS_COPY_VERSION_BOUND_BY_QUESTIONNAIRE_V2
+            elif self.config_hash == (
+                PREVIOUS_TERMINOLOGY_VERSION_BOUND_BY_QUESTIONNAIRE_V2["config_hash"]
+            ):
+                bound = PREVIOUS_TERMINOLOGY_VERSION_BOUND_BY_QUESTIONNAIRE_V2
+            else:
+                bound = VERSION_BOUND_BY_QUESTIONNAIRE_V2
             answers_type = QuestionnaireAnswersV2
         else:
             raise ValueError(f"unsupported questionnaire_version: {self.questionnaire_version}")
         if not isinstance(self.answers, answers_type):
             expected = bound["answers_type"]
-            raise ValueError(
-                f"{self.questionnaire_version} profiles require {expected} answers"
-            )
+            raise ValueError(f"{self.questionnaire_version} profiles require {expected} answers")
         for field_name in ("schema_version", "scoring_version", "config_hash"):
             if getattr(self, field_name) != bound[field_name]:
                 raise ValueError(

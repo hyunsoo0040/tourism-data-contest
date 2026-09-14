@@ -1,0 +1,792 @@
+{
+  "assessed_at": "2026-09-11T16:21:41.772071Z",
+  "assessment_sha256": "5cd5950de17e9de88308c08687d8df1180ec07607eb7bc63c036d26ff5af6a3e",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.a"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 25
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "조선 후기 제작 전통 목가구와 옛 가옥 10채 등 확인된 유산을 관람·탐구할 수 있다고 공식 소개에 명시되어 있다. 실물 유산 접촉이 관람 경험의 중심이므로 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "국빈 방문지, '서울의 대표적인 탐방지', 기업이 선호하는 문화 공간 등 사회적으로 부여된 장소 이미지가 구체적으로 서술되어 있다. 여러 표현에서 일관된 의미가 확인되므로 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "옛 가옥 10채, 꽃담, 마당 등 전통적 경관과 시각적 장면이 뚜렷이 표현된다고 공식 소개에서 확인되며, '가장 아름다운 박물관'이라는 평가도 시각적 성격을 뒷받침한다. 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2017feb44d84545b61a6b21f827b0a5077d2f65be47249c829ab96b8e3e9951e",
+            "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "모든 관람이 사전 예약제이며 가이드 투어 방식(그룹 20명)으로만 관람하도록 명시되어 자율적 탐색·자기 선택이 구조적으로 제한됨을 직접 확인할 수 있다. 수준 0(EXPLICIT_LOW)이다.",
+      "value": 0
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "언덕 위치, 가구와 자연이 어우러진 전시 환경, 마당 등 환경 단서가 확인된다. 그러나 실제 고요함·회복 환경이 지배한다고 확정할 근거는 부족하여 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+          "quote": {
+            "end": 117,
+            "method": "EXACT",
+            "original": "조선 후기에 제작된 전통 목가구를 재료별(먹감나무, 단풍나무, 오동나무, 느티나무, 소나무, 종이 등), 종류별(사랑방, 안방, 부엌 등), 지역 특성 별로 분류 전시",
+            "start": 24,
+            "submitted": "조선 후기에 제작된 전통 목가구를 재료별(먹감나무, 단풍나무, 오동나무, 느티나무, 소나무, 종이 등), 종류별(사랑방, 안방, 부엌 등), 지역 특성 별로 분류 전시",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+        },
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+          "quote": {
+            "end": 202,
+            "method": "EXACT",
+            "original": "한국의 옛 가옥 10채와 더불어 실내 장식, 꽃담, 굴뚝, 마당 등 한국의 전통 주(住) 생활 문화를 총체적으로 보여주고 있다",
+            "start": 132,
+            "submitted": "한국의 옛 가옥 10채와 더불어 실내 장식, 꽃담, 굴뚝, 마당 등 한국의 전통 주(住) 생활 문화를 총체적으로 보여주고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 3,
+      "reason": "조선 후기 제작 전통 목가구와 옛 가옥 10채 등 확인된 유산을 관람·탐구할 수 있다고 공식 소개에 명시되어 있다. 실물 유산 접촉이 관람 경험의 중심이므로 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "앵커는 '그 장소의 사건·인물 맥락 제시'(수준 3)이나, 인용은 가구의 재료·종류·지역별 분류 전시 소개일 뿐 이 장소 자체의 사건·인물 중심 역사 맥락을 보여주지 못한다. 판단 사유 스스로 수준 2의 한계를 인정하므로 제안된 수준의 앵커는 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "전통 주생활 문화를 '보여준다'는 서술은 박물관적 전시이며, 앵커 '확인된 전승·생활문화를 관람'(수준 3)에 필요한 지역 주체의 실제 전승과의 연결이 확인되지 않는다. 다만 수준 2(전승 흔적의 제한적 접촉)로 낮추는 근거도 자료에 명시되지 않아 확정이 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "앵커는 '여러 자료·해설로 역사 맥락을 탐구'(수준 4)이지만, 인용된 가이드 투어는 유산에 연결된 설명·전시(수준 3)에 해당한다. 다양한 자료를 통한 심층 역사 맥락 탐구라는 수준까지는 근거가 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+          "quote": {
+            "end": 692,
+            "method": "EXACT",
+            "original": "서울의 대표적인 탐방지이자 정부 부처를 비롯한 기업 등이 선호하는 문화 공간으로 각광을 받고 있다",
+            "start": 638,
+            "submitted": "서울의 대표적인 탐방지이자 정부 부처를 비롯한 기업 등이 선호하는 문화 공간으로 각광을 받고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "국빈 방문지, '서울의 대표적인 탐방지', 기업이 선호하는 문화 공간 등 사회적으로 부여된 장소 이미지가 구체적으로 서술되어 있다. 여러 표현에서 일관된 의미가 확인되므로 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "앵커는 '반복되는 매체 표현과 유통의 근거'(수준 4)이나, CNN 선정과 BTS 인터뷰는 각각 확인된 일회성 매체 사례로 반복적 유통의 근거를 보여주지 못한다. 판단 사유도 이를 명시적으로 인정하고 있다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+          "quote": {
+            "end": 202,
+            "method": "EXACT",
+            "original": "한국의 옛 가옥 10채와 더불어 실내 장식, 꽃담, 굴뚝, 마당 등 한국의 전통 주(住) 생활 문화를 총체적으로 보여주고 있다",
+            "start": 132,
+            "submitted": "한국의 옛 가옥 10채와 더불어 실내 장식, 꽃담, 굴뚝, 마당 등 한국의 전통 주(住) 생활 문화를 총체적으로 보여주고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "옛 가옥 10채, 꽃담, 마당 등 전통적 경관과 시각적 장면이 뚜렷이 표현된다고 공식 소개에서 확인되며, '가장 아름다운 박물관'이라는 평가도 시각적 성격을 뒷받침한다. 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현(촬영 등)할 수 있다는 근거는 제공되지 않았다. 유명 인사 방문·매체 노출 사실만으로 이미지 재현 경험을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:2017feb44d84545b61a6b21f827b0a5077d2f65be47249c829ab96b8e3e9951e",
+          "quote": {
+            "end": 51,
+            "method": "EXACT",
+            "original": "모든 관람 사전 예약제로 운영, 온라인 예약 필수(15명 이상 단체관람은 전화로 예약 필수)",
+            "start": 0,
+            "submitted": "모든 관람 사전 예약제로 운영, 온라인 예약 필수(15명 이상 단체관람은 전화로 예약 필수)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e963610adfa8d71aae784ffbbfa955960cab9e96f7a093ca03573ef8330ec077"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+          "quote": {
+            "end": 307,
+            "method": "EXACT",
+            "original": "가이드 투어(한 그룹에 20명 최대 인원)로 관람방식을 택하고 있으며",
+            "start": 269,
+            "submitted": "가이드 투어(한 그룹에 20명 최대 인원)로 관람방식을 택하고 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 0,
+      "reason": "모든 관람이 사전 예약제이며 가이드 투어 방식(그룹 20명)으로만 관람하도록 명시되어 자율적 탐색·자기 선택이 구조적으로 제한됨을 직접 확인할 수 있다. 수준 0(EXPLICIT_LOW)이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+          "quote": {
+            "end": 23,
+            "method": "EXACT",
+            "original": "서울 성북동 언덕에 위치한 한국가구박물관은",
+            "start": 0,
+            "submitted": "서울 성북동 언덕에 위치한 한국가구박물관은",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+          "quote": {
+            "end": 264,
+            "method": "EXACT",
+            "original": "가구와 자연과 어우러진 한국의 집문화(housing culture)를 보여주기에",
+            "start": 220,
+            "submitted": "가구와 자연과 어우러진 한국의 집문화(housing culture)를 보여주기에",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "언덕 위치, 가구와 자연이 어우러진 전시 환경, 마당 등 환경 단서가 확인된다. 그러나 실제 고요함·회복 환경이 지배한다고 확정할 근거는 부족하여 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "가이드 투어 관람 외에 만들기·신체 활동 등 참여·몰입형 활동에 대한 근거가 제공되지 않았다. 활동 부재가 명시된 것은 아니므로 0이 아닌 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다. 단체 예약·가이드 투어 운영 사실만으로 관계 형성 경험을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "9a0639bbac7861e214e6961118847d29b467a5e3137ba7221dbe72af18c7b3d3",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+              "quote": {
+                "end": 130,
+                "method": "EXACT",
+                "original": "재료별(먹감나무, 단풍나무, 오동나무, 느티나무, 소나무, 종이 등), 종류별(사랑방, 안방, 부엌 등), 지역 특성 별로 분류 전시하고 있는 특수박물관이다",
+                "start": 43,
+                "submitted": "재료별(먹감나무, 단풍나무, 오동나무, 느티나무, 소나무, 종이 등), 종류별(사랑방, 안방, 부엌 등), 지역 특성 별로 분류 전시하고 있는 특수박물관이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 2,
+          "reason": "가구의 재료·종류·지역 특성 분류와 전통 주생활 문화 소개가 있으나, 이 장소 자체의 사건·인물 중심의 구체적 역사 맥락 제시는 제한적이다. 수준 2 정도의 근거이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "앵커는 '그 장소의 사건·인물 맥락 제시'(수준 3)이나, 인용은 가구의 재료·종류·지역별 분류 전시 소개일 뿐 이 장소 자체의 사건·인물 중심 역사 맥락을 보여주지 못한다. 판단 사유 스스로 수준 2의 한계를 인정하므로 제안된 수준의 앵커는 뒷받침되지 않는다."
+        }
+      },
+      "reason": "앵커는 '그 장소의 사건·인물 맥락 제시'(수준 3)이나, 인용은 가구의 재료·종류·지역별 분류 전시 소개일 뿐 이 장소 자체의 사건·인물 중심 역사 맥락을 보여주지 못한다. 판단 사유 스스로 수준 2의 한계를 인정하므로 제안된 수준의 앵커는 뒷받침되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "LIVING_TRADITION",
+              "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+              "quote": {
+                "end": 202,
+                "method": "EXACT",
+                "original": "실내 장식, 꽃담, 굴뚝, 마당 등 한국의 전통 주(住) 생활 문화를 총체적으로 보여주고 있다",
+                "start": 150,
+                "submitted": "실내 장식, 꽃담, 굴뚝, 마당 등 한국의 전통 주(住) 생활 문화를 총체적으로 보여주고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.c",
+          "level": 2,
+          "reason": "전통 주생활 문화를 보여준다고 하지만 이는 박물관적 전시·재현이며, 지역 주체의 현재 전승 활동과의 직접 연결 근거는 없다. 전승의 흔적을 제한적으로 접하는 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.c",
+          "reason": "전통 주생활 문화를 '보여준다'는 서술은 박물관적 전시이며, 앵커 '확인된 전승·생활문화를 관람'(수준 3)에 필요한 지역 주체의 실제 전승과의 연결이 확인되지 않는다. 다만 수준 2(전승 흔적의 제한적 접촉)로 낮추는 근거도 자료에 명시되지 않아 확정이 어렵다."
+        }
+      },
+      "reason": "전통 주생활 문화를 '보여준다'는 서술은 박물관적 전시이며, 앵커 '확인된 전승·생활문화를 관람'(수준 3)에 필요한 지역 주체의 실제 전승과의 연결이 확인되지 않는다. 다만 수준 2(전승 흔적의 제한적 접촉)로 낮추는 근거도 자료에 명시되지 않아 확정이 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:d7582fb25c462e45686ceb80ffd763e2526c45121d4c8447936386aef041164d",
+              "quote": {
+                "end": 5,
+                "method": "EXACT",
+                "original": "가이드투어",
+                "start": 0,
+                "submitted": "가이드투어",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "4ec0f158b11340530df16aaf408c87eb19d4c345e7c5ddf24812e6dd4aa2bc3f"
+            },
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+              "quote": {
+                "end": 307,
+                "method": "EXACT",
+                "original": "가구와 자연과 어우러진 한국의 집문화(housing culture)를 보여주기에 적합한 가이드 투어(한 그룹에 20명 최대 인원)로 관람방식을 택하고 있으며",
+                "start": 220,
+                "submitted": "가구와 자연과 어우러진 한국의 집문화(housing culture)를 보여주기에 적합한 가이드 투어(한 그룹에 20명 최대 인원)로 관람방식을 택하고 있으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+            }
+          ],
+          "flags": [],
+          "key": "H.d",
+          "level": 3,
+          "reason": "전통 가구·집문화에 연결된 해설을 제공하는 가이드 투어가 기본 관람 방식으로 명시되어 유산 해설 기회가 확인된다. 깊은 탐구가 중심이라고까지 보기는 어려워 수준 3이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.d",
+          "reason": "앵커는 '여러 자료·해설로 역사 맥락을 탐구'(수준 4)이지만, 인용된 가이드 투어는 유산에 연결된 설명·전시(수준 3)에 해당한다. 다양한 자료를 통한 심층 역사 맥락 탐구라는 수준까지는 근거가 없다."
+        }
+      },
+      "reason": "앵커는 '여러 자료·해설로 역사 맥락을 탐구'(수준 4)이지만, 인용된 가이드 투어는 유산에 연결된 설명·전시(수준 3)에 해당한다. 다양한 자료를 통한 심층 역사 맥락 탐구라는 수준까지는 근거가 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+              "quote": {
+                "end": 637,
+                "method": "EXACT",
+                "original": "2011년 CNN에서 ‘서울에서 가장 아름다운 박물관’으로 선정된 바 있으며 최근 3월에는 세계적인 주목을 받고 있는 BTS의 인터뷰 장소가 되기도 하는 등",
+                "start": 550,
+                "submitted": "2011년 CNN에서 ‘서울에서 가장 아름다운 박물관’으로 선정된 바 있으며 최근 3월에는 세계적인 주목을 받고 있는 BTS의 인터뷰 장소가 되기도 하는 등",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.b",
+          "level": 3,
+          "reason": "CNN 선정, BTS 인터뷰 장소 등 매체를 통해 장소 이미지가 재현·확산된 확인된 사례가 공식 소개에 명시되어 있다. 반복적 유통 근거까지는 부족해 수준 3으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.b",
+          "reason": "앵커는 '반복되는 매체 표현과 유통의 근거'(수준 4)이나, CNN 선정과 BTS 인터뷰는 각각 확인된 일회성 매체 사례로 반복적 유통의 근거를 보여주지 못한다. 판단 사유도 이를 명시적으로 인정하고 있다."
+        }
+      },
+      "reason": "앵커는 '반복되는 매체 표현과 유통의 근거'(수준 4)이나, CNN 선정과 BTS 인터뷰는 각각 확인된 일회성 매체 사례로 반복적 유통의 근거를 보여주지 못한다. 판단 사유도 이를 명시적으로 인정하고 있다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "599ff114a3bb6be72b53c82b2dfc3321150bc84abff56f2fba5acb137cfd6b6c",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2017feb44d84545b61a6b21f827b0a5077d2f65be47249c829ab96b8e3e9951e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3004b7c397ceece7a1134f1b555a80cb4a68c49f47e86c442cf1c4df860187b2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2554064",
+          "request_sha256": "15b621bd5373d71d056275c01e731847c23ef99f9818b8f23881ebec22e7b0b3",
+          "response_sha256": "1115274a820da52df514a6d30753441b43a5591ea32271e18b13c64eb019ceb4",
+          "retrieved_at": "2026-09-11T02:02:45.870920Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7cb7697e9c5e9abf1ddb54c5ec3d57c7c8500e28677222eb8a052e6545036716",
+          "source_uri": null
+        },
+        "record_sha256": "e963610adfa8d71aae784ffbbfa955960cab9e96f7a093ca03573ef8330ec077",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "모든 관람 사전 예약제로 운영, 온라인 예약 필수(15명 이상 단체관람은 전화로 예약 필수)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2e77447be254742e501985030a87d39a719719c1f7a6247c35154433018a1a6a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3004b7c397ceece7a1134f1b555a80cb4a68c49f47e86c442cf1c4df860187b2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2554064",
+          "request_sha256": "08ebeb33e0ec1e55bce97bafa346196452e1ab9dc2a456998b2cbbe9fb519b7d",
+          "response_sha256": "259cb1f886d900d0b72db115a01467475caee6cf0630d8886dc7b5a4edabd26a",
+          "retrieved_at": "2026-09-10T17:00:54.827873Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-07-28T04:58:17Z",
+          "source_record_sha256": "aae569607295c35a993135a6640c0d1d4664d89e733026128dd61766c4125a5f",
+          "source_uri": null
+        },
+        "record_sha256": "96e5c3bcef206cc26f9b4f2dbe593a46305d673e6cc3432c4069935ef3c28d57",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "서울 성북동 언덕에 위치한 한국가구박물관은 조선 후기에 제작된 전통 목가구를 재료별(먹감나무, 단풍나무, 오동나무, 느티나무, 소나무, 종이 등), 종류별(사랑방, 안방, 부엌 등), 지역 특성 별로 분류 전시하고 있는 특수박물관이다. 한국의 옛 가옥 10채와 더불어 실내 장식, 꽃담, 굴뚝, 마당 등 한국의 전통 주(住) 생활 문화를 총체적으로 보여주고 있다. 박물관의 전시와 운영에 있어 가구와 자연과 어우러진 한국의 집문화(housing culture)를 보여주기에 적합한 가이드 투어(한 그룹에 20명 최대 인원)로 관람방식을 택하고 있으며 가구라는 옛 생활기물을 유리 보관함 밖, 방 구조의 전시장에 전시하여 관람객들에게 아름다운 전통문화 경험을 제공하고 있다. 2010년 G20 서울정상회의의 20개국 정상 배우자의 공식 오찬지로 선정된 이후, 중국의 시진핑 주석 내외를 비롯하여 독일 대통령, 헝가리 총리, 싱가포르 총리, 벨기에 국왕 내외, 스웨덴 국왕, IMF총재, 영화배우 브래드 피트, 빅토리아 베컴 등 국빈 및 세계적인 인사들의 발걸음이 끊이지 않았다. 또한 2011년 CNN에서 ‘서울에서 가장 아름다운 박물관’으로 선정된 바 있으며 최근 3월에는 세계적인 주목을 받고 있는 BTS의 인터뷰 장소가 되기도 하는 등 서울의 대표적인 탐방지이자 정부 부처를 비롯한 기업 등이 선호하는 문화 공간으로 각광을 받고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:cc11ea207db395b08b77974262184b910ed709178d2e5a69492746ba642301c5",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3004b7c397ceece7a1134f1b555a80cb4a68c49f47e86c442cf1c4df860187b2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2554064",
+          "request_sha256": "15b621bd5373d71d056275c01e731847c23ef99f9818b8f23881ebec22e7b0b3",
+          "response_sha256": "1115274a820da52df514a6d30753441b43a5591ea32271e18b13c64eb019ceb4",
+          "retrieved_at": "2026-09-11T02:02:45.870920Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4b5b64941f3f54cdb3011d59f5260296a0e137aa7687208cbecb5c7a255b2031",
+          "source_uri": null
+        },
+        "record_sha256": "5d8ba2c568a84b158ec4e03bd35571de283d2a2423a0ad2b2b7cdfa5860e6b64",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "외국어 안내(영어) 가능"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d7582fb25c462e45686ceb80ffd763e2526c45121d4c8447936386aef041164d",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3004b7c397ceece7a1134f1b555a80cb4a68c49f47e86c442cf1c4df860187b2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "2554064",
+          "request_sha256": "15b621bd5373d71d056275c01e731847c23ef99f9818b8f23881ebec22e7b0b3",
+          "response_sha256": "d9b9ececc340d891269fa40d9864e503db6764215589e3c3f045dac1962b6ce9",
+          "retrieved_at": "2026-09-10T17:00:55.186762Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0540615e2dd848352f89e8489e3ca7dd5a1e9ed549b75cb681fcdce40621e96c",
+          "source_uri": null
+        },
+        "record_sha256": "4ec0f158b11340530df16aaf408c87eb19d4c345e7c5ddf24812e6dd4aa2bc3f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "가이드투어"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e99973adaed6d5020aa6df2fc0dda3f3f0430fd10bc688bd2cb12238950dcef0",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3004b7c397ceece7a1134f1b555a80cb4a68c49f47e86c442cf1c4df860187b2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2554064",
+          "request_sha256": "15b621bd5373d71d056275c01e731847c23ef99f9818b8f23881ebec22e7b0b3",
+          "response_sha256": "1115274a820da52df514a6d30753441b43a5591ea32271e18b13c64eb019ceb4",
+          "retrieved_at": "2026-09-11T02:02:45.870920Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8dc952cb6bb22039bbb9586b2b5b56e55d98a9a5b30dfaacb7cb25bd9fde9a23",
+          "source_uri": null
+        },
+        "record_sha256": "6790f8f54a27f1b02666470b8929bd6c6c87a867a6837a237cf9623f1cf3372f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "20,000원"
+      }
+    ],
+    "parent_source_sha256": "8ea34e510d7da732a782e6813d1c452371d249eb262c8331e2f5ddcc81735785",
+    "place": {
+      "address": "서울특별시 성북구 대사관로 121 (성북동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:3004b7c397ceece7a1134f1b555a80cb4a68c49f47e86c442cf1c4df860187b2",
+      "name_ko": "한국가구박물관",
+      "place_id": "public:korea:3004b7c397ceece7a1134f1b555a80cb4a68c49f47e86c442cf1c4df860187b2",
+      "provider_content_id": "2554064",
+      "region_code": "11290",
+      "region_name": "서울특별시 성북구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

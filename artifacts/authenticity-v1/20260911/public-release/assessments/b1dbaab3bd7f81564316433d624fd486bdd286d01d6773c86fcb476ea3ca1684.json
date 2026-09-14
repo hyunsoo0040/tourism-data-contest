@@ -1,0 +1,715 @@
+{
+  "assessed_at": "2026-09-11T17:35:49.730336Z",
+  "assessment_sha256": "b1dbaab3bd7f81564316433d624fd486bdd286d01d6773c86fcb476ea3ca1684",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c"
+      ],
+      "value": 33
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:94bce89b4b882117e2c2737d812ea623639553375fdfcbb15384f215e3d7d819"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소에 '드라마 메이퀸 촬영지'라는 이미지가 부여되어 있다. 촬영지 이미지가 간단히 연결된 수준이며 여러 표현에서 일관된 의미가 확인되지 않아 낮은 수준으로 평가.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:94bce89b4b882117e2c2737d812ea623639553375fdfcbb15384f215e3d7d819"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "드라마라는 단일 매체에서 이 장소의 이미지가 표현된 근거가 있다. 반복되는 매체 표현·유통의 추가 근거는 없어 한 매체의 표현 수준인 1로 평가.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "장미원, 단풍원, 폭포원 등 주제별 정원과 색·식물 경관이 확인되나, 일관된 시각적 성격이 장면을 지배한다는 근거는 부족해 제한적 표현 수준인 2로 평가.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "다양한 주제 정원과 길이 있어 자율적으로 선택·탐색할 기회가 확인된다. 자신의 방식으로 여유롭게 탐색한다는 구체 근거는 제한적이어서 2 수준으로 평가.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "산림휴양 공간, 다양한 수목과 자생식물, 자연환경 보존 지향이 확인되어 자연 환경 단서가 두드러진다. 실제 고요함·혼잡은 확인할 수 없으나 환경 단서 자체는 뚜렷해 3으로 평가.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078",
+            "evidence:5fc78e5150419421c703cd24f414784793f2e42c87fa0caac81fcc1d847f18c9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "숲해설·환경교육 등 다양한 참여 프로그램과 말타기, 말먹이주기, 눈썰매장 등 신체 활동이 확인된다. 참여·도전 활동이 방문 경험의 중심이라는 근거까지는 없어 3 수준으로 평가.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요에 '암각화폭포원'이라는 시설명이 있으나 실제 암각화 유산의 원형 접촉인지, 재현 조경인지 확인할 근거가 없다. 확인된 실제 원형·유산 접촉을 뒷받침하는 자료가 없어 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 수목원 자체의 역사·연혁·사건·인물 맥락을 다루는 서술이 제공되지 않았다. 개관 연도나 설립 배경에 대한 구체 정보가 없어 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. '자생식물 보존 및 복원'은 식물 보전 활동이며 전통 전승의 실제 지속을 확인할 수 없어 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "'숲해설프로그램', '자연생태프로그램' 등이 언급되지만 이는 일반 자연 해설이며 원형·유산·전통에 연결된 역사 해설·탐구인지 확인할 근거가 없어 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:94bce89b4b882117e2c2737d812ea623639553375fdfcbb15384f215e3d7d819",
+          "quote": {
+            "end": 13,
+            "method": "EXACT",
+            "original": "드라마 ‘메이퀸’ 촬영지",
+            "start": 0,
+            "submitted": "드라마 ‘메이퀸’ 촬영지",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "975046d0563a800793dc01ca615375d35eb47b28533cbe122c878c1c32e25b61"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 1,
+      "reason": "이 장소에 '드라마 메이퀸 촬영지'라는 이미지가 부여되어 있다. 촬영지 이미지가 간단히 연결된 수준이며 여러 표현에서 일관된 의미가 확인되지 않아 낮은 수준으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:94bce89b4b882117e2c2737d812ea623639553375fdfcbb15384f215e3d7d819",
+          "quote": {
+            "end": 13,
+            "method": "EXACT",
+            "original": "드라마 ‘메이퀸’ 촬영지",
+            "start": 0,
+            "submitted": "드라마 ‘메이퀸’ 촬영지",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "975046d0563a800793dc01ca615375d35eb47b28533cbe122c878c1c32e25b61"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 1,
+      "reason": "드라마라는 단일 매체에서 이 장소의 이미지가 표현된 근거가 있다. 반복되는 매체 표현·유통의 추가 근거는 없어 한 매체의 표현 수준인 1로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078",
+          "quote": {
+            "end": 118,
+            "method": "EXACT",
+            "original": "로즈메리길, 유실수원, 배롱나무원, 침엽수원, 단풍원, 암각화폭포원, 무궁화원, 온실",
+            "start": 71,
+            "submitted": "로즈메리길, 유실수원, 배롱나무원, 침엽수원, 단풍원, 암각화폭포원, 무궁화원, 온실",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "87f9d5ade2375f70af70aba82e0827a99a4c0d113f26d013034f9f46404b9a8d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "장미원, 단풍원, 폭포원 등 주제별 정원과 색·식물 경관이 확인되나, 일관된 시각적 성격이 장면을 지배한다는 근거는 부족해 제한적 표현 수준인 2로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "'촬영지'라는 사실만으로 드라마 관련 대표 장면·상징을 현장에서 직접 경험할 수 있다고 추정하기는 부족하다. 촬영지 조성물, 구도 재현 가능성 등 현재 수준을 뒷받침하는 근거가 원문에 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078",
+          "quote": {
+            "end": 140,
+            "method": "EXACT",
+            "original": "로즈메리길, 유실수원, 배롱나무원, 침엽수원, 단풍원, 암각화폭포원, 무궁화원, 온실, 체험학습장, 수생식물원등의 주요 시설",
+            "start": 71,
+            "submitted": "로즈메리길, 유실수원, 배롱나무원, 침엽수원, 단풍원, 암각화폭포원, 무궁화원, 온실, 체험학습장, 수생식물원등의 주요 시설",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "87f9d5ade2375f70af70aba82e0827a99a4c0d113f26d013034f9f46404b9a8d"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "다양한 주제 정원과 길이 있어 자율적으로 선택·탐색할 기회가 확인된다. 자신의 방식으로 여유롭게 탐색한다는 구체 근거는 제한적이어서 2 수준으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078",
+          "quote": {
+            "end": 67,
+            "method": "EXACT",
+            "original": "동해 남부지방의 산림휴양 문화공간으로 다양한 수목과 자생식물을 식재한 자연학습과 학술연구를 위한 공간",
+            "start": 11,
+            "submitted": "동해 남부지방의 산림휴양 문화공간으로 다양한 수목과 자생식물을 식재한 자연학습과 학술연구를 위한 공간",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "87f9d5ade2375f70af70aba82e0827a99a4c0d113f26d013034f9f46404b9a8d"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078",
+          "quote": {
+            "end": 423,
+            "method": "EXACT",
+            "original": "자연환경울 최대한 보존하고 식물의 특성, 이용객의 편의 및 토지활용 등을 고려한 통합적이고 체계적인 식물수목원을 지향",
+            "start": 358,
+            "submitted": "자연환경울 최대한 보존하고 식물의 특성, 이용객의 편의 및 토지활용 등을 고려한 통합적이고 체계적인 식물수목원을 지향",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "87f9d5ade2375f70af70aba82e0827a99a4c0d113f26d013034f9f46404b9a8d"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "산림휴양 공간, 다양한 수목과 자생식물, 자연환경 보존 지향이 확인되어 자연 환경 단서가 두드러진다. 실제 고요함·혼잡은 확인할 수 없으나 환경 단서 자체는 뚜렷해 3으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:5fc78e5150419421c703cd24f414784793f2e42c87fa0caac81fcc1d847f18c9",
+          "quote": {
+            "end": 48,
+            "method": "EXACT",
+            "original": "숲해설 프로그램 / 진로체험 프로그램 / 환경교육 프로그램 / 말타기 / 말먹이주기 등",
+            "start": 0,
+            "submitted": "숲해설 프로그램 / 진로체험 프로그램 / 환경교육 프로그램 / 말타기 / 말먹이주기 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c059bab21d7c48e61613e4453c47478d3ba5e6b2b93753b2a616bb7a41a6c943"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078",
+          "quote": {
+            "end": 303,
+            "method": "EXACT",
+            "original": "유치부부터 초. 중. 고등학생, 일반인을 대상으로 자연생태프로그램과 진로체험 프로그램, 환경교육프로그램, 숲해설프로그램을 운영하고 있다",
+            "start": 228,
+            "submitted": "유치부부터 초. 중. 고등학생, 일반인을 대상으로 자연생태프로그램과 진로체험 프로그램, 환경교육프로그램, 숲해설프로그램을 운영하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "87f9d5ade2375f70af70aba82e0827a99a4c0d113f26d013034f9f46404b9a8d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "숲해설·환경교육 등 다양한 참여 프로그램과 말타기, 말먹이주기, 눈썰매장 등 신체 활동이 확인된다. 참여·도전 활동이 방문 경험의 중심이라는 근거까지는 없어 3 수준으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "프로그램 운영 언급은 있으나 교류·공동 활동·자기표현의 기회를 직접 보여주는 근거가 없다. 일반 체험 프로그램 존재만으로 관계·자기표현을 추정할 수 없어 UNKNOWN.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:94bce89b4b882117e2c2737d812ea623639553375fdfcbb15384f215e3d7d819",
+              "quote": {
+                "end": 13,
+                "method": "EXACT",
+                "original": "드라마 ‘메이퀸’ 촬영지",
+                "start": 0,
+                "submitted": "드라마 ‘메이퀸’ 촬영지",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "975046d0563a800793dc01ca615375d35eb47b28533cbe122c878c1c32e25b61"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 2,
+          "reason": "촬영지라는 점에서 드라마 관련 대표 장면을 현장에서 관람할 수 있을 것으로 보이나, 촬영 구도 재현·참여 체험에 대한 명시적 근거는 없어 제한적 관람 수준인 2로 평가.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE",
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "'촬영지'라는 사실만으로 드라마 관련 대표 장면·상징을 현장에서 직접 경험할 수 있다고 추정하기는 부족하다. 촬영지 조성물, 구도 재현 가능성 등 현재 수준을 뒷받침하는 근거가 원문에 없다."
+        }
+      },
+      "reason": "'촬영지'라는 사실만으로 드라마 관련 대표 장면·상징을 현장에서 직접 경험할 수 있다고 추정하기는 부족하다. 촬영지 조성물, 구도 재현 가능성 등 현재 수준을 뒷받침하는 근거가 원문에 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "e0f8d391850de0399173c803f52ebdc9f9f82c14a96436ae851073af70e82dc0",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:0d36dea513b2de497ec4b469e990a67988f7b9bb84a4500358f71515675ec96e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:785ac6936f989d0310c01b91ded9cb2a0cb028dbecc79a7640082b1cdccae146",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1395991",
+          "request_sha256": "f541a017c2bcfdbbcc6b5b0268b3255cf0070a90e285c51c5c34678c7643304e",
+          "response_sha256": "14dcf8c3e4e0f4c31cd1be298ba50efd5a9788072f0cb531ab828bd2b33df63f",
+          "retrieved_at": "2026-09-10T08:24:28.487330Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "60dddbc7a2b46c98fe60970257c139d15f048d4c0ef37c04734eec69a92b43b8",
+          "source_uri": null
+        },
+        "record_sha256": "9da0a89b59539a8b164c265bd0a977c22331e096a40329ef352998a0d3193102",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "전시온실 / 유실수원 / 장미원 / 한반도테마정원 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2868cd304e56022191050c63d25c722ee0e635f792086fb2bc9b65bc336b2078",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:785ac6936f989d0310c01b91ded9cb2a0cb028dbecc79a7640082b1cdccae146",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1395991",
+          "request_sha256": "1e8a1e2a428b876d9f515999160129b1dde82d0fb5009b92356f9af5b651024c",
+          "response_sha256": "53b464f42640a4fb67160a27b8568c3d625468a6f092ce5d4aef0c764c322199",
+          "retrieved_at": "2026-09-10T07:51:17.581919Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-20T07:49:56Z",
+          "source_record_sha256": "c4586c1e2a439845eaebbde5e03bca61b2b3a0c0c01da2d483ed2f2aa79657a3",
+          "source_uri": null
+        },
+        "record_sha256": "87f9d5ade2375f70af70aba82e0827a99a4c0d113f26d013034f9f46404b9a8d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "울산테마식물수목원은 동해 남부지방의 산림휴양 문화공간으로 다양한 수목과 자생식물을 식재한 자연학습과 학술연구를 위한 공간이다. 로즈메리길, 유실수원, 배롱나무원, 침엽수원, 단풍원, 암각화폭포원, 무궁화원, 온실, 체험학습장, 수생식물원등의 주요 시설과 휴게실, 하늘전망대, 갤러리, 카페 등의 부대시설이 있다. 이외에도 파충류 체험장, 쉼터, 조각공원, 여름 이벤트장, 눈썰매장, 놀이광장이 있다. 또한, 유치부부터 초. 중. 고등학생, 일반인을 대상으로 자연생태프로그램과 진로체험 프로그램, 환경교육프로그램, 숲해설프로그램을 운영하고 있다. 이밖에도 말타기, 말먹이 주기 체험도 가능하다. 기존 위락시설 위주의 유사 식물원과 차별화시켜 자연환경울 최대한 보존하고 식물의 특성, 이용객의 편의 및 토지활용 등을 고려한 통합적이고 체계적인 식물수목원을 지향하고 있다. 사라져 가는 우리 식물의 번식 및 관리를 통하여 자생지 외에서 보존 관리함으로써 희귀 및 멸종위기식물의 영구보존 및 복원을 추진하고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:28e18d33c0c0930aaa62ab7af7811d5a6a1e554c3cc1f9fcf3426197d966b570",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:785ac6936f989d0310c01b91ded9cb2a0cb028dbecc79a7640082b1cdccae146",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1395991",
+          "request_sha256": "f541a017c2bcfdbbcc6b5b0268b3255cf0070a90e285c51c5c34678c7643304e",
+          "response_sha256": "14dcf8c3e4e0f4c31cd1be298ba50efd5a9788072f0cb531ab828bd2b33df63f",
+          "retrieved_at": "2026-09-10T08:24:28.487330Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7ed1c2eb4a0a9650b2f8466814254025938b23f135425480b1b586b60522568b",
+          "source_uri": null
+        },
+        "record_sha256": "aa343ab7f29a64ca65c800a6b22d47583d71b8e44be5022206bcb7cbb41f090d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5fc78e5150419421c703cd24f414784793f2e42c87fa0caac81fcc1d847f18c9",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:785ac6936f989d0310c01b91ded9cb2a0cb028dbecc79a7640082b1cdccae146",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "1395991",
+          "request_sha256": "f541a017c2bcfdbbcc6b5b0268b3255cf0070a90e285c51c5c34678c7643304e",
+          "response_sha256": "750788c64a01fb567f9a94a017448cd1dd9b11b06234817a0eaa55ad17a6667f",
+          "retrieved_at": "2026-09-10T07:51:17.943185Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5ddd2f1f783ab756c31c09e920d6929d48816335abb34f32b29ce7f7604e558f",
+          "source_uri": null
+        },
+        "record_sha256": "c059bab21d7c48e61613e4453c47478d3ba5e6b2b93753b2a616bb7a41a6c943",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "숲해설 프로그램 / 진로체험 프로그램 / 환경교육 프로그램 / 말타기 / 말먹이주기 등 ※ 자세한 사항은 홈페이지 참조 요망"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:93d118556b0ab46fc76afce603d965f69adc3eae4237a4be9eb90bcec4d6e3cf",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:785ac6936f989d0310c01b91ded9cb2a0cb028dbecc79a7640082b1cdccae146",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1395991",
+          "request_sha256": "f541a017c2bcfdbbcc6b5b0268b3255cf0070a90e285c51c5c34678c7643304e",
+          "response_sha256": "14dcf8c3e4e0f4c31cd1be298ba50efd5a9788072f0cb531ab828bd2b33df63f",
+          "retrieved_at": "2026-09-10T08:24:28.487330Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d3592b545c326b316384dd2c5098e53b59ae29789a7b027a9bbe8c2e2dd78001",
+          "source_uri": null
+        },
+        "record_sha256": "c988094d02f5cf48986374a474977bd05b89c55e766e06452c249aec2743e9db",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "※ 시설별 상이하므로 홈페이지 참고"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:94bce89b4b882117e2c2737d812ea623639553375fdfcbb15384f215e3d7d819",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:785ac6936f989d0310c01b91ded9cb2a0cb028dbecc79a7640082b1cdccae146",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1395991",
+          "request_sha256": "f541a017c2bcfdbbcc6b5b0268b3255cf0070a90e285c51c5c34678c7643304e",
+          "response_sha256": "14dcf8c3e4e0f4c31cd1be298ba50efd5a9788072f0cb531ab828bd2b33df63f",
+          "retrieved_at": "2026-09-10T08:24:28.487330Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9e5df81d727306ed03b55eb4775c9f659ce46e76bca2bdec565aab4d657948c2",
+          "source_uri": null
+        },
+        "record_sha256": "975046d0563a800793dc01ca615375d35eb47b28533cbe122c878c1c32e25b61",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "드라마 ‘메이퀸’ 촬영지"
+      }
+    ],
+    "parent_source_sha256": "9245540a09744ee0c65a6a1b011d0e784ea62310b1b2260ffa616ebcdb20dad9",
+    "place": {
+      "address": "울산광역시 동구 쇠평길 33-1",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:785ac6936f989d0310c01b91ded9cb2a0cb028dbecc79a7640082b1cdccae146",
+      "name_ko": "울산테마식물수목원",
+      "place_id": "public:korea:785ac6936f989d0310c01b91ded9cb2a0cb028dbecc79a7640082b1cdccae146",
+      "provider_content_id": "1395991",
+      "region_code": "31170",
+      "region_name": "울산광역시 동구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

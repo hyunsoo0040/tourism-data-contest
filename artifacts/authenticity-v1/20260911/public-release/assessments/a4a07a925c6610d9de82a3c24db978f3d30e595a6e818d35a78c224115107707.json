@@ -1,0 +1,932 @@
+{
+  "assessed_at": "2026-09-11T18:44:55.827742Z",
+  "assessment_sha256": "a4a07a925c6610d9de82a3c24db978f3d30e595a6e818d35a78c224115107707",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.b",
+        "H.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.d"
+      ],
+      "value": 66
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "조상들이 쓰던 실물 유물 수만 점을 전시한다고 명시되어 원형·유물 접촉 기회가 있으나, 전시 관람 수준으로 탐구 중심성은 낮아 수준 2로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "테마별 전시를 통한 옛 생활 안내가 있으나 심층 해설·탐구 프로그램의 근거는 부족하여 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'추억'이라는 이미지가 장소 의미로 반복적으로 연결되나 다층적 상징 체계의 근거는 부족.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:86528bc1060216fb18259f192dbe4349447097e2ff3708d5f84519f6ab884622",
+            "appearance:8bed9352861f7dd7d54d38e3de6f84ec2df462027e4121ecab42aa80a165451d",
+            "appearance:a46c99eddd2f87b9542e6f66b15b97518a3a0b3e3a15204496127a59876ae949"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안된 인용의 claim(VISUAL_APPEARANCE)이 해당 출처의 allowed_claims에 포함되지 않아 수리할 수 없음. 정원 소나무·야생화 서술은 픽셀 전용 외관 묘사일 뿐 장소 이미지의 표현(VISUAL_EXPRESSION)임을 뒷받침하는 공개 근거가 부족하여 UNKNOWN 처리.",
+      "value": 83
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "넓은 대지의 정원과 5개 관을 자율적으로 둘러볼 수 있는 환경이 확인되나 자율 탐색 중심 경험이라는 근거는 부족.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:8db0716de8a17c68d3de730e7bbfffc37bd4f85c327b588b5bc6a627bf7362b8",
+            "appearance:bd47a46ccd31bd38bb46fe935241245452d45eadbf49542bbdc72df58f9cf5ba"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 63,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "소나무숲·야생화 정원 등 자연 환경 단서가 확인되나 실제 고요함·회복 효과는 확인 불가하여 수준 3.",
+      "value": 72
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "음악회·예절교육 등 공동 활동 기회가 있으나 교류·자기표현의 깊이나 풍부함에 대한 근거는 제한적.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+          "quote": {
+            "end": 122,
+            "method": "EXACT",
+            "original": "우리 조상들의 삶을 생생히 볼 수 있는 옛 물건과 과거 생활상을 재현한 4개의 테마별 전시관",
+            "start": 71,
+            "submitted": "우리 조상들의 삶을 생생히 볼 수 있는 옛 물건과 과거 생활상을 재현한 4개의 테마별 전시관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 2,
+      "reason": "조상들이 쓰던 실물 유물 수만 점을 전시한다고 명시되어 원형·유물 접촉 기회가 있으나, 전시 관람 수준으로 탐구 중심성은 낮아 수준 2로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "수준 2 앵커는 '그 장소의 사건·인물 맥락 제시'인데, 인용은 옛 생활상의 재현 장면(대장간, 서당 등)에 관한 것으로 이 박물관 자체의 역사·사건·인물 맥락과는 다른 주제. 판단 사유 스스로 장소 자체의 구체적 역사 확인이 없다고 인정하여 현재 앵커 수준이 뒷받침되지 않음.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "민속물 재현과 예절교육이 있으나 지역 주체의 실제 전승·생활문화 지속 활동과의 연결을 확인할 근거가 없음.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+          "quote": {
+            "end": 220,
+            "method": "EXACT",
+            "original": "조상들이 쓰던 물건 수만 점이 추억의 세계로 안내하는 제1관 종합관",
+            "start": 183,
+            "submitted": "조상들이 쓰던 물건 수만 점이 추억의 세계로 안내하는 제1관 종합관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "테마별 전시를 통한 옛 생활 안내가 있으나 심층 해설·탐구 프로그램의 근거는 부족하여 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+          "quote": {
+            "end": 555,
+            "method": "EXACT",
+            "original": "추억에 빠지는 시간을 보낼 수 있다",
+            "start": 536,
+            "submitted": "추억에 빠지는 시간을 보낼 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'추억'이라는 이미지가 장소 의미로 반복적으로 연결되나 다층적 상징 체계의 근거는 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체·작품·SNS 등을 통한 장소 이미지 유통에 대한 근거가 제공되지 않음.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "제안된 인용의 claim(VISUAL_APPEARANCE)이 해당 출처의 allowed_claims에 포함되지 않아 수리할 수 없음. 정원 소나무·야생화 서술은 픽셀 전용 외관 묘사일 뿐 장소 이미지의 표현(VISUAL_EXPRESSION)임을 뒷받침하는 공개 근거가 부족하여 UNKNOWN 처리.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "수준 3 앵커는 '촬영·참여로 이미지나 장면을 재현'이나, 인용된 꼬마신관 전시는 방문자가 관람하는 장면일 뿐 촬영·참여를 통한 재현의 근거가 없음. 판단 사유도 재현 참여 근거 부족을 인정하여 앵커와 내용이 불일치.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+          "quote": {
+            "end": 64,
+            "method": "EXACT",
+            "original": "3,300㎡(2천여 평)의 넓은 대지 위에 조성되었다",
+            "start": 35,
+            "submitted": "3,300㎡(2천여 평)의 넓은 대지 위에 조성되었다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "넓은 대지의 정원과 5개 관을 자율적으로 둘러볼 수 있는 환경이 확인되나 자율 탐색 중심 경험이라는 근거는 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+          "quote": {
+            "end": 181,
+            "method": "EXACT",
+            "original": "120여 그루의 분재형 소나무숲, 수백 종의 야생화, 고풍스러운 탑들이 어우러진 정원으로 이루어져 있다",
+            "start": 124,
+            "submitted": "120여 그루의 분재형 소나무숲, 수백 종의 야생화, 고풍스러운 탑들이 어우러진 정원으로 이루어져 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "소나무숲·야생화 정원 등 자연 환경 단서가 확인되나 실제 고요함·회복 효과는 확인 불가하여 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "제시된 앵커는 '지속적으로 참여·도전할 활동'(수준 3)이나 판단 사유는 '구체적인 참여·활동'(수준 2)에 해당한다고 서술하여 앵커와 근거 수준이 어긋남. 또한 사유 내 제출 인용과 원문 불일치를 시정했다는 기술이 있어 신뢰성 확인이 필요. 체험 프로그램 자체는 원문에 확인되나 앵커 수준 판정이 불명확하여 UNCERTAIN.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+          "quote": {
+            "end": 424,
+            "method": "EXACT",
+            "original": "각종 소음악회, 다도 등의 예절교육이 이뤄지는 제4관 아트홀",
+            "start": 391,
+            "submitted": "각종 소음악회, 다도 등의 예절교육이 이뤄지는 제4관 아트홀",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 2,
+      "reason": "음악회·예절교육 등 공동 활동 기회가 있으나 교류·자기표현의 깊이나 풍부함에 대한 근거는 제한적.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+              "quote": {
+                "end": 348,
+                "method": "EXACT",
+                "original": "수많은 민속 생활용품을 활용해 대장간, 우물가, 안방, 시장, 거리, 학교, 만홧가게, 서당, 한약방, 옹기장수 등 옛 생활상을 생생하게 재현한 제3관 테마관",
+                "start": 260,
+                "submitted": "수많은 민속 생활용품을 활용해 대장간, 우물가, 안방, 시장, 거리, 학교, 만홧가게, 서당, 한약방, 옹기장수 등 옛 생활상을 생생하게 재현한 제3관 테마관",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.b",
+          "level": 2,
+          "reason": "옛 생활상을 장면별로 제시하나, 이는 재현된 생활상이지 이 장소 자체의 구체적 역사·사건·인물 맥락 설명은 확인되지 않아 수준 2.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "H.b",
+          "reason": "수준 2 앵커는 '그 장소의 사건·인물 맥락 제시'인데, 인용은 옛 생활상의 재현 장면(대장간, 서당 등)에 관한 것으로 이 박물관 자체의 역사·사건·인물 맥락과는 다른 주제. 판단 사유 스스로 장소 자체의 구체적 역사 확인이 없다고 인정하여 현재 앵커 수준이 뒷받침되지 않음."
+        }
+      },
+      "reason": "수준 2 앵커는 '그 장소의 사건·인물 맥락 제시'인데, 인용은 옛 생활상의 재현 장면(대장간, 서당 등)에 관한 것으로 이 박물관 자체의 역사·사건·인물 맥락과는 다른 주제. 판단 사유 스스로 장소 자체의 구체적 역사 확인이 없다고 인정하여 현재 앵커 수준이 뒷받침되지 않음."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+              "quote": {
+                "end": 258,
+                "method": "EXACT",
+                "original": "귀여운 꼬마신랑의 첫날밤 모습이 웃음을 자아내는 제2관 꼬마신랑관",
+                "start": 222,
+                "submitted": "귀여운 꼬마신랑의 첫날밤 모습이 웃음을 자아내는 제2관 꼬마신랑관",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 3,
+          "reason": "대표 장면(꼬마신랑 첫날밤 등 옛 생활상 재현)을 현장에서 직접 관람·경험할 수 있으나 재현 참여의 근거는 부족.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "E.d",
+          "reason": "수준 3 앵커는 '촬영·참여로 이미지나 장면을 재현'이나, 인용된 꼬마신관 전시는 방문자가 관람하는 장면일 뿐 촬영·참여를 통한 재현의 근거가 없음. 판단 사유도 재현 참여 근거 부족을 인정하여 앵커와 내용이 불일치."
+        }
+      },
+      "reason": "수준 3 앵커는 '촬영·참여로 이미지나 장면을 재현'이나, 인용된 꼬마신관 전시는 방문자가 관람하는 장면일 뿐 촬영·참여를 통한 재현의 근거가 없음. 판단 사유도 재현 참여 근거 부족을 인정하여 앵커와 내용이 불일치."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+              "quote": {
+                "end": 535,
+                "method": "EXACT",
+                "original": "야생화 배우기, 널뛰기, 제기차기, 그네 타기 등 다양한 체험 프로그램도 마련되어 있어",
+                "start": 487,
+                "submitted": "야생화 배우기, 널뛰기, 제기차기, 그네 타기 등 다양한 체험 프로그램도 마련되어 있어",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "제안된 인용이 출처 원문과 일치하지 않아(QUOTE_NOT_IN_BOUND_SOURCE) 실제 존재하는 구절로 수정하여 수리. 야생화 배우기, 널뛰기, 제기차기, 그네 타기 등 구체적 참여 체험 활동이 확인되어 수준 3(구체적인 참여·활동)에 해당. 지속적 도전·몰입 활동이라는 근거는 없어 상향하지 않음.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.c",
+          "reason": "제시된 앵커는 '지속적으로 참여·도전할 활동'(수준 3)이나 판단 사유는 '구체적인 참여·활동'(수준 2)에 해당한다고 서술하여 앵커와 근거 수준이 어긋남. 또한 사유 내 제출 인용과 원문 불일치를 시정했다는 기술이 있어 신뢰성 확인이 필요. 체험 프로그램 자체는 원문에 확인되나 앵커 수준 판정이 불명확하여 UNCERTAIN."
+        }
+      },
+      "reason": "제시된 앵커는 '지속적으로 참여·도전할 활동'(수준 3)이나 판단 사유는 '구체적인 참여·활동'(수준 2)에 해당한다고 서술하여 앵커와 근거 수준이 어긋남. 또한 사유 내 제출 인용과 원문 불일치를 시정했다는 기술이 있어 신뢰성 확인이 필요. 체험 프로그램 자체는 원문에 확인되나 앵커 수준 판정이 불명확하여 UNCERTAIN."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "08d746529931a4e225315b3b6c6ac9cc5675d4a02da51f9e979eeb26c5d17145",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "따뜻한 주황·황토색 조명과 벽, 랜턴 간판, 소품들로 채워진 회랑이 강한 연출적 분위기를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:86528bc1060216fb18259f192dbe4349447097e2ff3708d5f84519f6ab884622",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0b4501c37ae063be3a8759eb9ac82f9a5496a3d6d4b5dddb9e97983340d0fc6d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3565976_5",
+          "request_sha256": "71cfdbb979361b8e8cd257588ac708bf2cf0cbba82c3c299bd54ebed59d3da92",
+          "response_sha256": "246e419b571f5d61bffec7cf4abe66ef30e2efd85cfa7ba82100ad7caf305cab",
+          "retrieved_at": "2026-09-10T08:27:30.788960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "cfbecfac1a2f3282b8d2293c6a19b73990c9aafdb0c518b775feee7050386d3e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/3565976_image2_1.jpg"
+        },
+        "record_sha256": "5b2a19cfc98e743cc7e12bc89720ab1f44c9e78b1f689076dbaa1c65684b0230",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "소박한 석등·조형물과 백색 난간, 곡선형 통로가 화면을 이끌며 기발하게 꾸며진 정원 연출이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8bed9352861f7dd7d54d38e3de6f84ec2df462027e4121ecab42aa80a165451d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "78e439e2f345ee5baa49e87fa2291c9cacb4a5c09b0f76dde04e782130b03f04",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3565970_7",
+          "request_sha256": "71cfdbb979361b8e8cd257588ac708bf2cf0cbba82c3c299bd54ebed59d3da92",
+          "response_sha256": "246e419b571f5d61bffec7cf4abe66ef30e2efd85cfa7ba82100ad7caf305cab",
+          "retrieved_at": "2026-09-10T08:27:30.788960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "52b2b65b2661d5afe8a074e74cfd8a567e470df8d1d049a6cc1caa5b4b067763",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/70/3565970_image2_1.jpg"
+        },
+        "record_sha256": "b6196d829817a6577b0e4b266aa3cc5ac880dcf09c84ec5209c607eaafe0029e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "용착한 소나무, 우거진 수관, 이끼와 덤불, 바위 등 녹지가 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8db0716de8a17c68d3de730e7bbfffc37bd4f85c327b588b5bc6a627bf7362b8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "78e439e2f345ee5baa49e87fa2291c9cacb4a5c09b0f76dde04e782130b03f04",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3565970_7",
+          "request_sha256": "71cfdbb979361b8e8cd257588ac708bf2cf0cbba82c3c299bd54ebed59d3da92",
+          "response_sha256": "246e419b571f5d61bffec7cf4abe66ef30e2efd85cfa7ba82100ad7caf305cab",
+          "retrieved_at": "2026-09-10T08:27:30.788960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "52b2b65b2661d5afe8a074e74cfd8a567e470df8d1d049a6cc1caa5b4b067763",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/70/3565970_image2_1.jpg"
+        },
+        "record_sha256": "d58a0e2aa3f2596ce7e2d950427721b3f314480b4bf2e9148d814036b4ef07e5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘과 밝은 채도의 잔디, 소나무와 산의 대비가 선명하고 구도가 트인 정원 풍경으로 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a46c99eddd2f87b9542e6f66b15b97518a3a0b3e3a15204496127a59876ae949",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7859c2b08c07333962d9eec6348cb2a9cca68ae8553294f9730e36f15e0b95de",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3565977_8",
+          "request_sha256": "71cfdbb979361b8e8cd257588ac708bf2cf0cbba82c3c299bd54ebed59d3da92",
+          "response_sha256": "246e419b571f5d61bffec7cf4abe66ef30e2efd85cfa7ba82100ad7caf305cab",
+          "retrieved_at": "2026-09-10T08:27:30.788960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9baa932c12679b8ab9efa8520b35587e456237791a8b8903b8f55aec6e0e31df",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/77/3565977_image2_1.jpg"
+        },
+        "record_sha256": "fb310b5cf0d9075b8879664130d930f05c220e312b988154dc7d6ca5540e23a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "돌로 만든 전통형 석탑·석등이 여럿 배치되어 전통적 재료와 조형의 외관이 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a8fe13b187d22f3998433c991c5cbedd1a662f411450c10c045b39a694cd34cc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "78e439e2f345ee5baa49e87fa2291c9cacb4a5c09b0f76dde04e782130b03f04",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3565970_7",
+          "request_sha256": "71cfdbb979361b8e8cd257588ac708bf2cf0cbba82c3c299bd54ebed59d3da92",
+          "response_sha256": "246e419b571f5d61bffec7cf4abe66ef30e2efd85cfa7ba82100ad7caf305cab",
+          "retrieved_at": "2026-09-10T08:27:30.788960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "52b2b65b2661d5afe8a074e74cfd8a567e470df8d1d049a6cc1caa5b4b067763",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/70/3565970_image2_1.jpg"
+        },
+        "record_sha256": "b12566bc967dad1f3b5d2cf8ff7f724120a206d0282fe4139dd47eadb7d75ba0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "창 너머 약간의 녹색과 나무 기둥 정도만 보이고 자연 경관 단서는 미약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bd47a46ccd31bd38bb46fe935241245452d45eadbf49542bbdc72df58f9cf5ba",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0b4501c37ae063be3a8759eb9ac82f9a5496a3d6d4b5dddb9e97983340d0fc6d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3565976_5",
+          "request_sha256": "71cfdbb979361b8e8cd257588ac708bf2cf0cbba82c3c299bd54ebed59d3da92",
+          "response_sha256": "246e419b571f5d61bffec7cf4abe66ef30e2efd85cfa7ba82100ad7caf305cab",
+          "retrieved_at": "2026-09-10T08:27:30.788960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "cfbecfac1a2f3282b8d2293c6a19b73990c9aafdb0c518b775feee7050386d3e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/3565976_image2_1.jpg"
+        },
+        "record_sha256": "76f8643f4fe3c828bd0abb474d811cb9f736c8eac6e0dee8a837af954b97599f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "기와·흙벽으로 보이는 건물, 항아리(장독대), 돌로 만든 탁자와 석등 등 전통적으로 보이는 외관 요소가 뚜렷하게 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d7f1fe764e7c5a3f37c28a21cd69d67ad1c273367a72d8c597a5e1bf6ff722bb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7859c2b08c07333962d9eec6348cb2a9cca68ae8553294f9730e36f15e0b95de",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3565977_8",
+          "request_sha256": "71cfdbb979361b8e8cd257588ac708bf2cf0cbba82c3c299bd54ebed59d3da92",
+          "response_sha256": "246e419b571f5d61bffec7cf4abe66ef30e2efd85cfa7ba82100ad7caf305cab",
+          "retrieved_at": "2026-09-10T08:27:30.788960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9baa932c12679b8ab9efa8520b35587e456237791a8b8903b8f55aec6e0e31df",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/77/3565977_image2_1.jpg"
+        },
+        "record_sha256": "0bd763d5c8025321a843480b993e36f8c4da48f7ed656d81208b946046795676",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "황토 벽, 한문 랜턴, 옛 간판, 목재 마차바퀴 등 전통적 외관 요소가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:edb005661cb7ced6916e04c895e9160182b3414ecb89aaf6dd06499ace2c93e9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0b4501c37ae063be3a8759eb9ac82f9a5496a3d6d4b5dddb9e97983340d0fc6d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3565976_5",
+          "request_sha256": "71cfdbb979361b8e8cd257588ac708bf2cf0cbba82c3c299bd54ebed59d3da92",
+          "response_sha256": "246e419b571f5d61bffec7cf4abe66ef30e2efd85cfa7ba82100ad7caf305cab",
+          "retrieved_at": "2026-09-10T08:27:30.788960Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "cfbecfac1a2f3282b8d2293c6a19b73990c9aafdb0c518b775feee7050386d3e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/3565976_image2_1.jpg"
+        },
+        "record_sha256": "ab43baa1ae1bb1562f4c04bb596dcdc49ee693e82e4745fba6eed6508ea6bbc2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:92a650beea1934057b72f49ce444798941ed1c0713474cdc53143260767fd939",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "130650",
+          "request_sha256": "1db9bc14b11b0cb5286977da7de7227cd34cda3538f46005ec4427508c2ec850",
+          "response_sha256": "2ed1ffa0cecb3a73ddb911e754aaea26cd64c4293a9291e0c4a3ce4bb900242a",
+          "retrieved_at": "2026-09-10T07:59:55.754056Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-09T01:49:15Z",
+          "source_record_sha256": "93447f6c9a8e7ad41327028ceedda21cfd0c358d5cc4e9e3ac95d961a69ddb64",
+          "source_uri": null
+        },
+        "record_sha256": "7856a80bbef9d21a6cf496ee244aa318ffdc839581b7a311384a37879f5fb2fa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "1999년 개관한 사설 민속박물관으로 장흥유원지 초입에 위치며 3,300㎡(2천여 평)의 넓은 대지 위에 조성되었다. 박물관은 우리 조상들의 삶을 생생히 볼 수 있는 옛 물건과 과거 생활상을 재현한 4개의 테마별 전시관, 120여 그루의 분재형 소나무숲, 수백 종의 야생화, 고풍스러운 탑들이 어우러진 정원으로 이루어져 있다. 조상들이 쓰던 물건 수만 점이 추억의 세계로 안내하는 제1관 종합관, 귀여운 꼬마신랑의 첫날밤 모습이 웃음을 자아내는 제2관 꼬마신랑관, 수많은 민속 생활용품을 활용해 대장간, 우물가, 안방, 시장, 거리, 학교, 만홧가게, 서당, 한약방, 옹기장수 등 옛 생활상을 생생하게 재현한 제3관 테마관, 옛 풍경을 재현한 작은 미니어처들과 멋진 세계의 각종 탈들이 전시돼 있고 각종 소음악회, 다도 등의 예절교육이 이뤄지는 제4관 아트홀로 구성되어 있다. 아울러 첨단 기자재를 갖춰 중요 회의 및 시청각 교육 장소로 활용되는 제5관 다담관이 있다. 야생화 배우기, 널뛰기, 제기차기, 그네 타기 등 다양한 체험 프로그램도 마련되어 있어 추억에 빠지는 시간을 보낼 수 있다."
+      }
+    ],
+    "parent_source_sha256": "e7f93f03e2ce521126eeac4533f1975409ff6a1919e722abfcbd02538a31f58b",
+    "place": {
+      "address": "경기도 양주시 장흥면 권율로 83-5",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+      "name_ko": "청암민속박물관",
+      "place_id": "public:korea:b957a9c10b50f2a571b2cb9e9266cfe8e501e270f52a08a7e30b6c712e033bae",
+      "provider_content_id": "130650",
+      "region_code": "41630",
+      "region_name": "경기도 양주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,501 @@
+{
+  "assessed_at": "2026-09-11T15:58:43.708296Z",
+  "assessment_sha256": "32ddd2f49050fa7908ee8a94a0954f6f6c845d0e70aabb41772c4a98c3418c6a",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "영산 5경이라는 공유된 이미지·의미가 장소와 연결되어 소개되므로 간단한 이미지 표현 수준으로 지원.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "노을, 갈대숲, 황금물결 등 제한적이지만 구체적인 시각적 표현 단서가 제시된다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 경관과 명소를 직접 둘러보고 감상할 수 있다는 관람 수준의 근거는 있으나 재현·촬영 등 체험 근거는 부족.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "133km 노선을 자전거로 자율적으로 달리고 쉬어가며 탐색할 선택 기회가 제시된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "강변, 갈대숲, 평야 등 자연 환경 단서가 확인되나 실제 고요함·회복까지는 단정할 수 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "자전거 라이딩이라는 신체 참여 활동의 구체적 기회가 확인되나 지속적 도전 수준까진 근거가 부족.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 자전거길 노선과 경관을 소개할 뿐 확인된 실제 원형·유산의 접촉을 뒷받침하는 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "영산 5경 명칭이 언급되지만 그 장소의 실제 역사·사건·인물 맥락 제시는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "안내센터와 안전 교육장 언급은 있으나 유산·전통에 연결된 해설·탐구 제공 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313",
+          "quote": {
+            "end": 193,
+            "method": "EXACT",
+            "original": "자전거 길을 달리면서 중간중간 쉬어가면서 영산 5경을 만날 수 있는데 영산강의 아름다운 경관을 즐길 수 있는 5곳의 절경이다.",
+            "start": 123,
+            "submitted": "자전거 길을 달리면서 중간중간 쉬어가면서 영산 5경을 만날 수 있는데 영산강의 아름다운 경관을 즐길 수 있는 5곳의 절경이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ee776f62058d945dfacab00b00d6b915ede44c21e0e7bee7f8529b4258d26612"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "영산 5경이라는 공유된 이미지·의미가 장소와 연결되어 소개되므로 간단한 이미지 표현 수준으로 지원.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 유통에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313",
+          "quote": {
+            "end": 218,
+            "method": "EXACT",
+            "original": "1경은 저녁노을이 물든 아름다운 영산석조이고",
+            "start": 194,
+            "submitted": "1경은 저녁노을이 물든 아름다운 영산석조이고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ee776f62058d945dfacab00b00d6b915ede44c21e0e7bee7f8529b4258d26612"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "노을, 갈대숲, 황금물결 등 제한적이지만 구체적인 시각적 표현 단서가 제시된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313",
+          "quote": {
+            "end": 454,
+            "method": "EXACT",
+            "original": "승촌보, 죽산보도 감상하고 죽녹원, 메타세쿼이아, 갓바위 등 관광지와 도시를 두루 둘러볼 수 있으며",
+            "start": 399,
+            "submitted": "승촌보, 죽산보도 감상하고 죽녹원, 메타세쿼이아, 갓바위 등 관광지와 도시를 두루 둘러볼 수 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ee776f62058d945dfacab00b00d6b915ede44c21e0e7bee7f8529b4258d26612"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "대표 경관과 명소를 직접 둘러보고 감상할 수 있다는 관람 수준의 근거는 있으나 재현·촬영 등 체험 근거는 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313",
+          "quote": {
+            "end": 513,
+            "method": "EXACT",
+            "original": "영산강 자전거길 안내센터에서 무료로 자전거 대여도 가능하고",
+            "start": 481,
+            "submitted": "영산강 자전거길 안내센터에서 무료로 자전거 대여도 가능하고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ee776f62058d945dfacab00b00d6b915ede44c21e0e7bee7f8529b4258d26612"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "133km 노선을 자전거로 자율적으로 달리고 쉬어가며 탐색할 선택 기회가 제시된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313",
+          "quote": {
+            "end": 269,
+            "method": "EXACT",
+            "original": "강위로 잔잔한 바람이 갈대숲에 스며들어 은은하게 마디마디 스치게 하는 곡강의 그림자",
+            "start": 223,
+            "submitted": "강위로 잔잔한 바람이 갈대숲에 스며들어 은은하게 마디마디 스치게 하는 곡강의 그림자",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ee776f62058d945dfacab00b00d6b915ede44c21e0e7bee7f8529b4258d26612"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "강변, 갈대숲, 평야 등 자연 환경 단서가 확인되나 실제 고요함·회복까지는 단정할 수 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313",
+          "quote": {
+            "end": 479,
+            "method": "EXACT",
+            "original": "풍부한 라이딩 투어 길이다",
+            "start": 465,
+            "submitted": "풍부한 라이딩 투어 길이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ee776f62058d945dfacab00b00d6b915ede44c21e0e7bee7f8529b4258d26612"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "자전거 라이딩이라는 신체 참여 활동의 구체적 기회가 확인되나 지속적 도전 수준까진 근거가 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "e226c0c92c583da4cf4cc75a5d1e05daad1e89b3422040158a73185f2c6add3a",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "a418eb2445ed5a4915084799602c50fb7129eb086d797f21d025795ee07c8d68",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b278eefb7ed6a7694960687fbdd88cd3b8a238ab73d7f5cee329eab5a1b7f313",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1b34b0b4f073551b50c4237ba1c27560d3f5f4233271da27a978da5b292ac368",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2675030",
+          "request_sha256": "086d12de6f818e9838f6b35b0edd2257044ee3595863c0733f7f8f1c4de519b8",
+          "response_sha256": "de62714dc4069826148405010129516a62a1ed7d66ea1f0792e6d96df3c4e560",
+          "retrieved_at": "2026-09-10T05:43:52.442588Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "d60060408ada7654d13169166682337fb38e33a9cbfe9355347ee62f04940354",
+          "source_uri": null
+        },
+        "record_sha256": "ee776f62058d945dfacab00b00d6b915ede44c21e0e7bee7f8529b4258d26612",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "영산강 자전거길은 담양댐 물문화관부터 목포 영산강하구인 인근 황포돛단배 매표소까지 영산강변을 따라 총 133km가 조성돼 있다. 코스는 승촌보-나주대교-영산포-황포돛배-앙암바위-천연염색 박물관-죽산보-영산 나루마을이다. 자전거 길을 달리면서 중간중간 쉬어가면서 영산 5경을 만날 수 있는데 영산강의 아름다운 경관을 즐길 수 있는 5곳의 절경이다. 1경은 저녁노을이 물든 아름다운 영산석조이고 2경은 강위로 잔잔한 바람이 갈대숲에 스며들어 은은하게 마디마디 스치게 하는 곡강의 그림자가 잠깐 쉬었다 가는 식영정이다. 3경은 황포돛배와 석관정에서 바라보는 석관귀범이고, 4경은 봄날 꽃의 향연을 만끽할 수 있는 나주 죽산보의 죽산춘효이다. 5경은 영산포구에서 바라보는 황금물결 일렁이는 나주평야의 금성상운을 말한다. 승촌보, 죽산보도 감상하고 죽녹원, 메타세쿼이아, 갓바위 등 관광지와 도시를 두루 둘러볼 수 있으며 먹거리도 다양하고 풍부한 라이딩 투어 길이다. 영산강 자전거길 안내센터에서 무료로 자전거 대여도 가능하고 안내센터 앞에는 자전거 안전 교육장도 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b89c3502efc17d2eab709274c405be2abe03201be274d84e3eb076d0402e7dac",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1b34b0b4f073551b50c4237ba1c27560d3f5f4233271da27a978da5b292ac368",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2675030",
+          "request_sha256": "84cba903d86315f8d8e13c83d0c6f15ccbb72283fe39348ac11de53ffbbea731",
+          "response_sha256": "0b9a651df770b834fe6ea23b2913b3d5651d8a2e45ee9bf14fd527140ddb5104",
+          "retrieved_at": "2026-09-10T08:19:56.943110Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ad7944c94f326880d7462ef611699bb7d35c6ffca7089e42e958be43d5a6d1b2",
+          "source_uri": null
+        },
+        "record_sha256": "ec38ca160f19aad175cb3001185d66c82df9fad7c2eff48613d3b6c3279bf59c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "0d0ab45600a1de6e8233c1f2f74e8465eeb51529a7cc5ae63bbeea5948d1d0da",
+    "place": {
+      "address": "전남광주통합특별시 서구 서창둑길 377",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:1b34b0b4f073551b50c4237ba1c27560d3f5f4233271da27a978da5b292ac368",
+      "name_ko": "영산강 자전거길",
+      "place_id": "public:korea:1b34b0b4f073551b50c4237ba1c27560d3f5f4233271da27a978da5b292ac368",
+      "provider_content_id": "2675030",
+      "region_code": "12240",
+      "region_name": "전남광주통합특별시 서구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

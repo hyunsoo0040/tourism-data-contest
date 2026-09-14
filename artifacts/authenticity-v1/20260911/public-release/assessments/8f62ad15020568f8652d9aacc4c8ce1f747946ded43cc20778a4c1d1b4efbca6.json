@@ -1,0 +1,519 @@
+{
+  "assessed_at": "2026-09-11T17:59:52.077990Z",
+  "assessment_sha256": "8f62ad15020568f8652d9aacc4c8ce1f747946ded43cc20778a4c1d1b4efbca6",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'벚꽃 산책길로 유명하다'는 표현과 벚꽃 터널이라는 이미지가 장소와 연결된 공유 이미지를 보여준다. 그러나 구체적 상징 의미의 내용이 두텁지 않아 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "벚꽃 터널을 직접 걸으며 대표 장면을 경험할 수 있다는 근거가 있다. 그러나 촬영·참여를 통한 이미지 재현이 방문 경험의 중심이라는 근거는 부족해 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "윗길·아랫길, 데크길 등 산책로를 스스로 선택해 걸을 수 있는 자율적 탐색 기회가 확인된다. 다만 축제 기간 붐빔 언급이 있어 자유 탐색이 경험의 중심이라는 수준까지는 근거가 없어 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "물길, 폭포 쉼터, 데크길 등 머물며 쉴 수 있는 자연·환경 단서가 확인된다. 다만 꽃축제 기간 발 디딜 틈이 없다는 혼잡 언급이 있어 환경이 장면을 지배한다고 보기 어렵고 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "벚꽃 산책이라는 신체 활동 기회가 확인되나 지속적 참여·도전 활동이라는 근거는 부족해 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "충주댐 벚꽃길 개요는 벚나무 산책로와 물길, 조형물을 설명할 뿐 확인된 실제 원형·문화유산의 접촉 경험에 대한 근거가 없다. 충주댐이라는 시설 존재만으로 유산 접촉 경험을 단정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "제공된 개요에는 이 장소의 역사적 사건·인물·연혁에 대한 구체적 서사가 없다. 물 문화관 건립 이전에 고양이가 살았다는 언급은 역사 맥락 탐구로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 뒷받침하는 근거가 없다. 고양이 조형물 유래 설명은 실제 지속되는 전통의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "개요에는 산책과 경치 감상이 중심이며 벚꽃길의 역사·원형에 연결된 해설·학습 제공 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+          "quote": {
+            "end": 154,
+            "method": "EXACT",
+            "original": "중간쯤에서 윗길은 물 문화관으로 가는 벚꽃 산책길로 유명하고 아랫길은 충주댐 취수문비 방향으로 벚꽃 터널을 걸을 수 있는 곳이다",
+            "start": 83,
+            "submitted": "중간쯤에서 윗길은 물 문화관으로 가는 벚꽃 산책길로 유명하고 아랫길은 충주댐 취수문비 방향으로 벚꽃 터널을 걸을 수 있는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c27dbe2784a453aa746f11ab2a952d762c026d92bfdc9d11fb0945f5a3a217ec"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'벚꽃 산책길로 유명하다'는 표현과 벚꽃 터널이라는 이미지가 장소와 연결된 공유 이미지를 보여준다. 그러나 구체적 상징 의미의 내용이 두텁지 않아 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "개요에 '유명하다'는 표현이 있으나 특정 매체(작품, 홍보, SNS)를 통한 이미지 재현·유통의 확인된 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+          "quote": {
+            "end": 154,
+            "method": "EXACT",
+            "original": "아랫길은 충주댐 취수문비 방향으로 벚꽃 터널을 걸을 수 있는 곳이다",
+            "start": 117,
+            "submitted": "아랫길은 충주댐 취수문비 방향으로 벚꽃 터널을 걸을 수 있는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c27dbe2784a453aa746f11ab2a952d762c026d92bfdc9d11fb0945f5a3a217ec"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "벚꽃 터널을 직접 걸으며 대표 장면을 경험할 수 있다는 근거가 있다. 그러나 촬영·참여를 통한 이미지 재현이 방문 경험의 중심이라는 근거는 부족해 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+          "quote": {
+            "end": 154,
+            "method": "EXACT",
+            "original": "윗길은 물 문화관으로 가는 벚꽃 산책길로 유명하고 아랫길은 충주댐 취수문비 방향으로 벚꽃 터널을 걸을 수 있는 곳이다",
+            "start": 89,
+            "submitted": "윗길은 물 문화관으로 가는 벚꽃 산책길로 유명하고 아랫길은 충주댐 취수문비 방향으로 벚꽃 터널을 걸을 수 있는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c27dbe2784a453aa746f11ab2a952d762c026d92bfdc9d11fb0945f5a3a217ec"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "윗길·아랫길, 데크길 등 산책로를 스스로 선택해 걸을 수 있는 자율적 탐색 기회가 확인된다. 다만 축제 기간 붐빔 언급이 있어 자유 탐색이 경험의 중심이라는 수준까지는 근거가 없어 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+          "quote": {
+            "end": 478,
+            "method": "EXACT",
+            "original": "중간에 폭포 쉼터에서 시원함도 느껴보고 군데군데 나타나는 고양이 조형물들을 감상하기에도 좋다",
+            "start": 427,
+            "submitted": "중간에 폭포 쉼터에서 시원함도 느껴보고 군데군데 나타나는 고양이 조형물들을 감상하기에도 좋다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c27dbe2784a453aa746f11ab2a952d762c026d92bfdc9d11fb0945f5a3a217ec"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+          "quote": {
+            "end": 333,
+            "method": "EXACT",
+            "original": "충주댐이 흐르는 물길 옆으로 데크길이 조성되어 있어 편하게 둘러볼 수 있고",
+            "start": 292,
+            "submitted": "충주댐이 흐르는 물길 옆으로 데크길이 조성되어 있어 편하게 둘러볼 수 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c27dbe2784a453aa746f11ab2a952d762c026d92bfdc9d11fb0945f5a3a217ec"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "물길, 폭포 쉼터, 데크길 등 머물며 쉴 수 있는 자연·환경 단서가 확인된다. 다만 꽃축제 기간 발 디딜 틈이 없다는 혼잡 언급이 있어 환경이 장면을 지배한다고 보기 어렵고 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+          "quote": {
+            "end": 116,
+            "method": "EXACT",
+            "original": "중간쯤에서 윗길은 물 문화관으로 가는 벚꽃 산책길로 유명하고",
+            "start": 83,
+            "submitted": "중간쯤에서 윗길은 물 문화관으로 가는 벚꽃 산책길로 유명하고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c27dbe2784a453aa746f11ab2a952d762c026d92bfdc9d11fb0945f5a3a217ec"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "벚꽃 산책이라는 신체 활동 기회가 확인되나 지속적 참여·도전 활동이라는 근거는 부족해 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회를 뒷받침하는 근거가 없다. 카페 언급은 관계 형성 활동의 직접 근거로 보기 어렵다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+            "quote": "하얀색 벚꽃도 많지만 댐 물길을 따라 분홍빛 겹벚꽃도 터널을 이루며 피어난다"
+          },
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+            "quote": "벚꽃뿐 아니라 개나리와 목련까지 봄의 향연을 느낄 수 있다"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "하얀·분홍빛 벚꽃 터널, 개나리·목련 등 뚜렷한 색과 경관의 시각적 성격이 장면을 이루는 것으로 확인된다. 시각적 연출이 장면 전체를 지배한다는 수준까지는 근거가 부족해 수준 3이다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "3a6494ecedf3e75fe1fc3dde845004c39593185f153842248e5dd763407583d7",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:29c572a1738c3654078dacfef50b9585931f639b72aeae0261b9309d96b72a43",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8e0bdbc5be73a5d2299915b4b1230a7c43ce93dc9be9ded09185a3659dab348a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3075171",
+          "request_sha256": "4f80d85885f2ea79d29d0e2e68960673bc7ccce7ef9bf816e43ccbd968d61295",
+          "response_sha256": "fdb968f32d1ee80e100b6eab7bbee1cb46353932ee5c475478e46ca828a68248",
+          "retrieved_at": "2026-09-10T17:06:55.408237Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-04-29T05:00:38Z",
+          "source_record_sha256": "395dae28ea60c4a614b7b6ab18f542c5fe12a0a1fbdcf42e5f22377f676beea0",
+          "source_uri": null
+        },
+        "record_sha256": "c27dbe2784a453aa746f11ab2a952d762c026d92bfdc9d11fb0945f5a3a217ec",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "아름드리 벚나무가 가득하고 능수버들까지 파릇한 잎새를 뽐내는 충주댐 벚꽃길은 충주댐 북쪽 도로인 충원교부터 충주댐 발전소까지의 차로를 이르는 것으로 중간쯤에서 윗길은 물 문화관으로 가는 벚꽃 산책길로 유명하고 아랫길은 충주댐 취수문비 방향으로 벚꽃 터널을 걸을 수 있는 곳이다. 이곳에는 하얀색 벚꽃도 많지만 댐 물길을 따라 분홍빛 겹벚꽃도 터널을 이루며 피어난다. 꽃축제 기간에는 발 디딜 틈이 없다는 이곳은 봄이면 화려한 자태를 뽐내는 벚꽃으로 아름답기 그지없고 꽃과 함께 흐르는 물길을 바라보기만 해도 좋은 곳이다. 충주댐이 흐르는 물길 옆으로 데크길이 조성되어 있어 편하게 둘러볼 수 있고 벚꽃뿐 아니라 개나리와 목련까지 봄의 향연을 느낄 수 있다. 벚꽃길 옆으로 물 문화관이 있고 2층에 카페가 있는데 산책 중 쉴 겸 주변 경치를 바라보기 좋은 곳이다. 중간에 폭포 쉼터에서 시원함도 느껴보고 군데군데 나타나는 고양이 조형물들을 감상하기에도 좋다. 물 문화관을 짓기 전 이곳에 고양이들이 많이 살고 있었던 곳이라 고양이 조형물이 많은 듯하다. 충주댐 벚꽃길을 걸으며 봄이 오는 모습을 바라볼 수 있는 곳이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:bc7a63eed4787391225cbf3bca315268b3cd5619fdf913cf490c4901ee9907e0",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8e0bdbc5be73a5d2299915b4b1230a7c43ce93dc9be9ded09185a3659dab348a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3075171",
+          "request_sha256": "e2b0063b957a628c0a843ec24efc3e3e1646d36dc7132af67e1889d76db82679",
+          "response_sha256": "1cd040a88b22b6cd7972bc373d91d83135b1d4d643b8a1486b168745d23d91a2",
+          "retrieved_at": "2026-09-11T02:07:23.950247Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "af6070f32b6dcccb6e4a9633d7318a9d3916e9d0234b4aae7f32120109c30331",
+          "source_uri": null
+        },
+        "record_sha256": "257185dd56f49ce1a93de4f71ad2e93bff780ef48ee92ce971605b258dc364eb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "fd5b4c8099f14f2affa2af776806be554a05947ec83209c65e8a08c3e34d6cf7",
+    "place": {
+      "address": "충청북도 충주시 동량면 조동리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:8e0bdbc5be73a5d2299915b4b1230a7c43ce93dc9be9ded09185a3659dab348a",
+      "name_ko": "충주댐 벚꽃길",
+      "place_id": "public:korea:8e0bdbc5be73a5d2299915b4b1230a7c43ce93dc9be9ded09185a3659dab348a",
+      "provider_content_id": "3075171",
+      "region_code": "43130",
+      "region_name": "충청북도 충주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

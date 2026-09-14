@@ -21,14 +21,23 @@ from urllib.parse import urlsplit
 from fastapi import Cookie, Depends, HTTPException, Request, Security
 from fastapi.security import APIKeyHeader
 from sqlalchemy import Engine, text
+from sqlalchemy.orm import Session, sessionmaker
 
+from itda.application.grounded_recommendations import GroundedRecommendationService
 from itda.application.preferences import PreferenceService
 from itda.application.recommendations import RecommendationService
+from itda.application.source_grounding import SourceGroundingService
+from itda.catalog_paths import NATIONAL_CATALOG_PATH, is_national_candidate, is_national_catalog
 from itda.contracts.base import ExperienceAxis, StableId, StrictContract
+from itda.contracts.mvp_public_catalog import PublicPlaceCatalog
 from itda.contracts.preference import PreferenceProfile
+from itda.contracts.recommendation import (
+    QUALITY_RECOMMENDATION_CONFIG,
+    RecommendationErrorDetail,
+    RecommendationPublicReason,
+)
 from itda.db.evaluation_repositories import EvaluationRepository
-from itda.db.mvp_release_overlay import ActiveReleaseOverlayResolver, DailyReleaseOverlayReader
-from itda.db.mvp_scored_release import resolve_active_mvp_scored_release
+from itda.db.mvp_release_overlay import DailyReleaseOverlayReader
 from itda.db.photo_repositories import PhotoRecommendationProjectionReader
 from itda.db.recommendation_repositories import RecommendationRunRepository
 from itda.db.repositories import ProfileRepository
@@ -39,6 +48,7 @@ from itda.operating.service import (
     TourApiOperatingProvider,
 )
 from itda.pipeline.offline_guard import require_live_collection_allowed
+from itda.tourism.registry import ProductionTourismRegistry
 
 DATABASE_URL_ENVIRONMENT_VARIABLE = "ITDA_DATABASE_URL"
 PROFILE_SESSION_DATABASE_URL_ENVIRONMENT_VARIABLE = "ITDA_PROFILE_SESSION_DATABASE_URL"
@@ -562,7 +572,7 @@ def _operating_information_service() -> OperatingInformationService | None:
     catalog_path = Path(
         os.environ.get(
             "ITDA_PUBLIC_PLACE_CATALOG_PATH",
-            "artifacts/public/catalog/public-place-catalog-v1.json",
+            str(NATIONAL_CATALOG_PATH),
         )
     )
     timeout_seconds = float(os.environ.get("ITDA_OPERATING_INFORMATION_TIMEOUT_SECONDS", "1.5"))
@@ -579,33 +589,141 @@ def _operating_information_service() -> OperatingInformationService | None:
     )
 
 
+def _source_grounding_service(
+    factory: sessionmaker[Session],
+    catalog: PublicPlaceCatalog,
+) -> SourceGroundingService | None:
+    """Staged until the complete v5 evaluation/promotion gate has passed."""
+    if os.environ.get("ITDA_SOURCE_GROUNDING_ENABLED", "").strip().casefold() not in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }:
+        return None
+    from urllib.parse import unquote
+
+    from itda.collectors.kto_accessibility import KorWithService2Client
+    from itda.db.source_snapshot_repositories import SourceSnapshotRepository
+    from itda.tourism.accessibility import AccessibilityService, CanonicalTourismPlace
+    from itda.tourism.settings import TourismSettings
+
+    key_path = os.environ.get("ITDA_TOUR_API_SERVICE_KEY_FILE")
+    credential = (
+        Path(key_path).read_text(encoding="utf-8").strip()
+        if key_path
+        else os.environ.get("TOUR_API_SERVICE_KEY", "").strip()
+    )
+    settings = TourismSettings(
+        enabled=bool(credential),
+        timeout_seconds=float(os.environ.get("ITDA_TOURISM_TIMEOUT_SECONDS", "3")),
+    )
+    client = (
+        KorWithService2Client(service_key=unquote(credential), policy=settings.request_policy())
+        if credential
+        else None
+    )
+    places = tuple(
+        CanonicalTourismPlace(
+            place_id=p.place_id,
+            name_ko=p.name_ko,
+            address=p.address_ko,
+            latitude=p.latitude,
+            longitude=p.longitude,
+        )
+        for p in catalog.places
+    )
+    return SourceGroundingService(
+        accessibility=AccessibilityService(client=client, places=places, settings=settings),
+        store=SourceSnapshotRepository(factory),
+    )
+
+
 @lru_cache(maxsize=4)
 def _recommendation_service_for_dsn(
     dsn: str,
     photo_service_dsn: str | None = None,
-) -> RecommendationService:
+) -> RecommendationService | GroundedRecommendationService:
+    if os.environ.get("ITDA_GROUNDED_CANDIDATE_SHA256", "").strip():
+        raise ValueError("activate a measured grounded release before serving new recommendations")
+    setting = os.environ.get("ITDA_GROUNDED_RECOMMENDATIONS_ENABLED", "1").strip().casefold() or "1"
+    if setting not in {"1", "true", "yes", "on", "0", "false", "no", "off"}:
+        raise ValueError("invalid grounded recommendation setting")
+    enabled = setting in {"1", "true", "yes", "on"}
+    try:
+        catalog = PublicPlaceCatalog.model_validate_json(
+            Path(
+                os.environ.get(
+                    "ITDA_PUBLIC_PLACE_CATALOG_PATH",
+                    str(NATIONAL_CATALOG_PATH),
+                )
+            ).read_bytes()
+        )
+        if not is_national_catalog(catalog):
+            raise ValueError("retired catalog cannot create new recommendations")
+    except (OSError, ValueError):
+        detail = RecommendationErrorDetail(
+            code=RecommendationPublicReason.NO_ACTIVE_SCORED_RELEASE,
+            message_ko="새 전국 여행지 데이터를 준비하고 있어요.",
+        )
+        raise HTTPException(status_code=503, detail=detail.model_dump(mode="json")) from None
     engine = create_database_engine(dsn)
     factory = create_session_factory(engine)
     photo_reader = None
     if photo_service_dsn is not None:
         photo_engine = create_database_engine(photo_service_dsn)
-        photo_reader = PhotoRecommendationProjectionReader(
-            create_session_factory(photo_engine)
-        )
-    release_resolver = ActiveReleaseOverlayResolver(
-        overlay_reader=DailyReleaseOverlayReader(factory),
-        bundled_resolver=resolve_active_mvp_scored_release,
-    )
-    return RecommendationService(
+        photo_reader = PhotoRecommendationProjectionReader(create_session_factory(photo_engine))
+
+    # Historical run snapshots remain readable, but no archived MVP release
+    # is an active destination catalog for this production service.
+    def release_resolver() -> None:
+        return None
+
+    tourism_registry = ProductionTourismRegistry.from_catalog(catalog)
+    legacy = RecommendationService(
         profile_repository=ProfileRepository(factory),
         recommendation_repository=RecommendationRunRepository(factory),
         release_resolver=release_resolver,
         photo_projection_reader=photo_reader,
         operating_information_service=_operating_information_service(),
+        source_grounding_service=_source_grounding_service(factory, catalog),
+        tourism_registry=tourism_registry,
+        config=QUALITY_RECOMMENDATION_CONFIG,
+        catalog=catalog,
+    )
+    from itda.db.assessment_release import AssessmentReleaseRepository
+    from itda.db.grounded_run_repositories import GroundedRunRepository
+    from itda.db.photo_mood_repositories import PhotoMoodRepository
+    from itda.db.source_snapshot_repositories import SourceSnapshotRepository
+
+    pair_store = AssessmentReleaseRepository(factory)
+
+    def current_national_candidate():
+        candidate = pair_store.load_active()
+        return (
+            candidate
+            if candidate is not None and is_national_candidate(candidate, catalog)
+            else None
+        )
+
+    mood_reader = None
+    if photo_service_dsn is not None:
+        mood_reader = PhotoMoodRepository(
+            create_session_factory(create_database_engine(photo_service_dsn))
+        )
+    return GroundedRecommendationService(
+        legacy=legacy,
+        profiles=ProfileRepository(factory),
+        runs=GroundedRunRepository(factory),
+        sources=SourceSnapshotRepository(factory),
+        candidate_resolver=current_national_candidate,
+        registry=tourism_registry,
+        mood_reader=mood_reader,
+        enabled=enabled,
     )
 
 
-def get_recommendation_service() -> RecommendationService:
+def get_recommendation_service() -> RecommendationService | GroundedRecommendationService:
     dsn = os.environ.get(DATABASE_URL_ENVIRONMENT_VARIABLE)
     if not dsn:
         raise RuntimeError(

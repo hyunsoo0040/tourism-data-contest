@@ -4,6 +4,7 @@ import questionnaire from "../../../../contracts/questionnaire-v2.json";
 import golden from "../../../../fixtures/synthetic/preference-golden.json";
 import type { PreferenceProfile, QuestionnaireDefinition } from "../../api/api";
 import { currentProfileReferenceRecordSchema, profileReferenceRecordSchema } from "../schemas";
+import { projectDisplayScores } from "../../features/profile/displayScores";
 import { pickResultForProfile } from "./resultProjection";
 
 const definition = questionnaire as unknown as QuestionnaireDefinition;
@@ -21,7 +22,7 @@ describe("server-scored quiz result", () => {
       const winner = [...scores].sort((a, b) => b.basis_points - a.basis_points)[0]!;
       const result = pickResultForProfile(definition, profile);
       expect(result.name).toBe(definition.result_types.find((type) => type.axis === winner.axis)!.name_ko);
-      expect(result.match).toBe(winner.display_score);
+      expect(result.match).toBe(projectDisplayScores(scores, definition.axis_tie_break)![winner.axis]);
       expect(result.keywords.length).toBeLessThanOrEqual(6);
     });
   }
@@ -35,7 +36,7 @@ describe("server-scored quiz result", () => {
         { axis: "REST_IMMERSION", basis_points: 1800, display_score: 18 },
       ],
     } as PreferenceProfile;
-    expect(pickResultForProfile(definition, profile)).toMatchObject({ name: "구성적 진정성", match: 36 });
+    expect(pickResultForProfile(definition, profile)).toMatchObject({ name: "구성적 진정성", match: 41 });
   });
 
   it("retains old choice-scoring references without treating them as new results", () => {

@@ -1,0 +1,479 @@
+{
+  "assessed_at": "2026-09-11T18:23:37.596882Z",
+  "assessment_sha256": "65437b47addc9912575f74afc1cf2b8ef8568cc25f982a9c261d8d2e05da3383",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 83
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "바위산·절벽·사계절 풍경 등 장소에 연결된 이미지가 간단히 표현되어 있으나 일관된 상징적 의미의 반복 확인은 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "절벽·완사면·단풍·설경·얼음 동굴 등 장면에서 구별되는 시각적 성격이 구체적으로 묘사되나 그 연출이 장면을 지배한다는 수준의 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "여러 등산 코스를 스스로 선택해 탐색할 수 있는 자율적 탐색 기회가 확인되나, 일상 이탈이 경험의 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "계곡·이끼·산꽃·희귀 식물 등 자연 환경 단서가 구체적으로 확인된다. 실제 고요함·회복 효과는 단정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "정상·서봉을 섭렵하고 다일(1박) 일정의 등산 코스 등 지속적 신체 활동과 도전이 방문 경험의 중심으로 제공된다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "장산이 자연 산으로 확인되나, 확인된 문화유산·원형 실물과의 접촉 근거는 없다. 자연 지형이 유산 접촉을 대리하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 지리적 위치·해발·등산 코스를 설명할 뿐 장산 자체의 역사·사건·인물 서사를 다루지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "역사·유산 해설이나 학습 프로그램에 대한 언급이 없다. 지형 묘사는 원형 맥락의 해설이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b",
+          "quote": {
+            "end": 108,
+            "method": "EXACT",
+            "original": "남쪽과 서쪽은 바위와 절벽지대로 이루어져 경관이 매우 수려하다",
+            "start": 74,
+            "submitted": "남쪽과 서쪽은 바위와 절벽지대로 이루어져 경관이 매우 수려하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0f535ebed4ff0c21a7a8ccedf6a6b792810014729e03dbb712ec2f43cd4ee8ef"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "바위산·절벽·사계절 풍경 등 장소에 연결된 이미지가 간단히 표현되어 있으나 일관된 상징적 의미의 반복 확인은 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "장산의 이미지를 유통하는 매체·작품·홍보에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b",
+          "quote": {
+            "end": 174,
+            "method": "EXACT",
+            "original": "사계절 각양각색의 아름다운 풍경을 감상할 수 있다",
+            "start": 147,
+            "submitted": "사계절 각양각색의 아름다운 풍경을 감상할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0f535ebed4ff0c21a7a8ccedf6a6b792810014729e03dbb712ec2f43cd4ee8ef"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "절벽·완사면·단풍·설경·얼음 동굴 등 장면에서 구별되는 시각적 성격이 구체적으로 묘사되나 그 연출이 장면을 지배한다는 수준의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 이미지·구도·이야기를 현장에서 재현·체험하는 내용에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b",
+          "quote": {
+            "end": 288,
+            "method": "EXACT",
+            "original": "장산에는 여러 가지 등산 코스가 있다",
+            "start": 268,
+            "submitted": "장산에는 여러 가지 등산 코스가 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0f535ebed4ff0c21a7a8ccedf6a6b792810014729e03dbb712ec2f43cd4ee8ef"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "여러 등산 코스를 스스로 선택해 탐색할 수 있는 자율적 탐색 기회가 확인되나, 일상 이탈이 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b",
+          "quote": {
+            "end": 219,
+            "method": "EXACT",
+            "original": "여름에는 칠랑이계곡과 이끼계곡, 가을에는 단풍과 노루삼",
+            "start": 189,
+            "submitted": "여름에는 칠랑이계곡과 이끼계곡, 가을에는 단풍과 노루삼",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0f535ebed4ff0c21a7a8ccedf6a6b792810014729e03dbb712ec2f43cd4ee8ef"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "계곡·이끼·산꽃·희귀 식물 등 자연 환경 단서가 구체적으로 확인된다. 실제 고요함·회복 효과는 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b",
+          "quote": {
+            "end": 464,
+            "method": "EXACT",
+            "original": "어평을 들머리로 하는 코스로, 장산동봉에서 다음날 장산과 서봉을 거쳐 꼴두바위 쪽으로 하산하는 코스",
+            "start": 409,
+            "submitted": "어평을 들머리로 하는 코스로, 장산동봉에서 다음날 장산과 서봉을 거쳐 꼴두바위 쪽으로 하산하는 코스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0f535ebed4ff0c21a7a8ccedf6a6b792810014729e03dbb712ec2f43cd4ee8ef"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 4,
+      "reason": "정상·서봉을 섭렵하고 다일(1박) 일정의 등산 코스 등 지속적 신체 활동과 도전이 방문 경험의 중심으로 제공된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 제공되지 않았다. 야영장 존재만으로 관계 활동을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "8cd65f967c971c1fd4d69779232110743d959fd91652b1dc1e46efb4c05d9989",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "a859a9fbc1e333ba7843a5d08dcf6451402ec8e20d44f362fb2f9640d437373e",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:40b2ee589398df6da6d1fb2f09801131f57d9045cc9b4040e40be242259c534b",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a417c04e492c3a555886d6f7d1ff7141170b4b48f5cfb74a06012ee165621152",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127298",
+          "request_sha256": "c06acb1d1bfb6b8343e08e9b963d24a61f5e5143644f652349f51273c46851ab",
+          "response_sha256": "d8fd3b41f0b3556d29f09a27cee9fda3b2357f4581c709e8549a223db9f89d2a",
+          "retrieved_at": "2026-09-10T16:58:55.427537Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-02-12T08:17:22Z",
+          "source_record_sha256": "8c710502316b6eefc8cad3a9af7ce4f26ba5b697a45a98b2677c5cc346f7ebf5",
+          "source_uri": null
+        },
+        "record_sha256": "0f535ebed4ff0c21a7a8ccedf6a6b792810014729e03dbb712ec2f43cd4ee8ef",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "장산은 해발 1408.8m로 태백시와 상동읍 구래리 사이에 위치한 산이다. 백두대간의 함백산에서 서남쪽으로 가지를 뻗은 바위산으로, 남쪽과 서쪽은 바위와 절벽지대로 이루어져 경관이 매우 수려하다. 또한 북쪽과 동쪽은 완사면으로 성벽처럼 위용을 자랑한다. 장산에는 사계절 각양각색의 아름다운 풍경을 감상할 수 있다. 봄에는 산나물과 산꽃, 여름에는 칠랑이계곡과 이끼계곡, 가을에는 단풍과 노루삼, 겨울에는 설경과 얼음 동굴 등 계절에 맞는 산세의 변화를 만끽하며 등산할 수 있다. 장산에는 여러 가지 등산 코스가 있다. 가장 짧은 코스는 꼴두바위주차장에서 시작해서 망경사에서 서봉, 이끼계곡을 거쳐 장산야영장으로 가는 코스로, 이 코스는 장산의 정상과 서봉을 섭렵할 수 있고 칠랑이계곡의 아름다운 풍경을 즐길 수 있다. 다른 코스는 어평을 들머리로 하는 코스로, 장산동봉에서 다음날 장산과 서봉을 거쳐 꼴두바위 쪽으로 하산하는 코스이다. 이 코스는 장산의 우백호인 함백산과 태백산을 조망할 수 있고, 박새와 바위양지꽃 등의 희귀 식물을 볼 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9b41fa8d89edfb39830b8aa2c59704f12685206d651cb5190141f606f997b568",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a417c04e492c3a555886d6f7d1ff7141170b4b48f5cfb74a06012ee165621152",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127298",
+          "request_sha256": "676d15c718a52cc803e642c1f89862d292b9152a800cb6794b05a6ddb45a58be",
+          "response_sha256": "3cf20e7fa583d8ff40e53c1de8de57ebdd615e37153a8dfdedfe638c6fab3b7a",
+          "retrieved_at": "2026-09-11T02:08:30.085656Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0968c9a0964fe7a4ca51ff6716cc017ae6ddaa61fe6e54d0158c7ada32c5ddf0",
+          "source_uri": null
+        },
+        "record_sha256": "ab3a98357894ea34431d3ce3e0874abe2fb914345787fb39ef87c78f8576e46b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "b425cd3785b9b50253f1d5bc9be39bb05212a8873418211656bb3b7b76e4b166",
+    "place": {
+      "address": "강원특별자치도 영월군 상동읍 구래리 산 1-16",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:a417c04e492c3a555886d6f7d1ff7141170b4b48f5cfb74a06012ee165621152",
+      "name_ko": "장산(영월)",
+      "place_id": "public:korea:a417c04e492c3a555886d6f7d1ff7141170b4b48f5cfb74a06012ee165621152",
+      "provider_content_id": "127298",
+      "region_code": "51750",
+      "region_name": "강원특별자치도 영월군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

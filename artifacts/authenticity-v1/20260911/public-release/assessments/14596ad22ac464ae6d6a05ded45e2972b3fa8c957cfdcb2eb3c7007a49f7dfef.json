@@ -1,0 +1,603 @@
+{
+  "assessed_at": "2026-09-11T18:37:00.743438Z",
+  "assessment_sha256": "14596ad22ac464ae6d6a05ded45e2972b3fa8c957cfdcb2eb3c7007a49f7dfef",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "매립지 부지가 시민과 함께 가꾼 생태녹지로 변화했다는 이야기가 장소에 부여된 의미로 제시되지만, 여러 매체·장면에서 일관되게 확인되는 근거는 제한적이라 중위 하단으로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "계절별 꽃밭, 수생식물원, 메타세쿼이아길, 징검다리길 등 시각적으로 구별되는 경관 표현이 개관에서 확인된다. 다만 일관된 연출이 장면 전체를 지배한다는 수준의 근거는 없어 3으로 판단했다. 원래 제안은 증거의 allowed_claims에 없는 VISUAL_APPEARANCE를 사용했으므로, 승인된 VISUAL_EXPRESSION으로 교정했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "축구장 60개 규모의 녹지에서 산책·휴식이 제공되고, 테마식물지구·징검다리길 등 여러 주제 공간을 자율적으로 둘러볼 수 있다는 근거가 있다. 그러나 일상 이탈이 방문 경험의 중심이라는 근거까지는 없어 3으로 판단했다. '무료'는 4자 미만이며 자율 탐색의 근거가 아니므로 인용에서 제외했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "대규모 도시숲, 습지생태지구, 녹음 쉼터, 메타세쿼이아길 등 자연·저자극 환경 단서가 공간 전반을 지배한다고 확인되어 4로 판단했다. 다만 실제 고요함·혼잡까지는 단정하지 않는다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:78c586406e775366baa2a227c1c26c4f84c3eccbcb7c87cc55ad63fc3a107185",
+            "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "견학프로그램, 환경교육, 국화축제 시민참여 프로그램 등 구체적 참여 활동이 확인된다. 지속적 도전·몰입 활동이 중심이라는 근거는 없어 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "국화축제의 시민참여 프로그램이 교류 기회로 확인되지만, 그 내용·범위가 구체적이지 않고 자기표현 활동의 근거는 없어 제한적 공동 활동 수준인 2로 판단했다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료에 확인된 원형·문화유산 실물과의 접촉에 대한 근거가 없다. 연탄재 야적장 부지의 생태공원 전환 서사는 유산 접촉의 직접 근거로 삼을 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "부지의 과거 용도(연탄재 야적장)와 조성 주체는 언급되지만, 그 장소의 구체적 역사 맥락을 탐구하게 하는 역사·출처 해설의 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역주민이 함께 가꾼다는 서술이 있으나 이는 조성 과정 묘사일 뿐, 지역 주체의 실제 전승·생활문화와의 지속적 연결을 확인하는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "환경교육의 장이라는 표현이 있으나, 이는 일반 생태 교육이며 원형·유산·전통에 연결된 역사 해설·탐구 자료는 제시되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55",
+          "quote": {
+            "end": 122,
+            "method": "EXACT",
+            "original": "과거 연탄재 야적장이었던 부지를 수도권매립지관리공사와 지역주민이 함께 가꾸어 꽃과 나무가 어우러진 생태녹지로 탈바꿈시켜",
+            "start": 56,
+            "submitted": "과거 연탄재 야적장이었던 부지를 수도권매립지관리공사와 지역주민이 함께 가꾸어 꽃과 나무가 어우러진 생태녹지로 탈바꿈시켜",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e4ee542964a150bac02b08a000d0719e5333027a13f7fda01e7fef1bd9bbc67"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "매립지 부지가 시민과 함께 가꾼 생태녹지로 변화했다는 이야기가 장소에 부여된 의미로 제시되지만, 여러 매체·장면에서 일관되게 확인되는 근거는 제한적이라 중위 하단으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "국화축제가 사랑받는다는 서술 외에 작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·유통을 확인할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55",
+          "quote": {
+            "end": 337,
+            "method": "EXACT",
+            "original": "9~11월에는 핑크뮬리로 물든 꽃밭이 펼쳐져 풍성한 생태계를 감상할 수 있다",
+            "start": 295,
+            "submitted": "9~11월에는 핑크뮬리로 물든 꽃밭이 펼쳐져 풍성한 생태계를 감상할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e4ee542964a150bac02b08a000d0719e5333027a13f7fda01e7fef1bd9bbc67"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "계절별 꽃밭, 수생식물원, 메타세쿼이아길, 징검다리길 등 시각적으로 구별되는 경관 표현이 개관에서 확인된다. 다만 일관된 연출이 장면 전체를 지배한다는 수준의 근거는 없어 3으로 판단했다. 원래 제안은 증거의 allowed_claims에 없는 VISUAL_APPEARANCE를 사용했으므로, 승인된 VISUAL_EXPRESSION으로 교정했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현(촬영 참여 등)할 수 있다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55",
+          "quote": {
+            "end": 158,
+            "method": "EXACT",
+            "original": "수도권 시민들에게 산책과 휴식, 환경교육의 장을 제공하고 있다",
+            "start": 124,
+            "submitted": "수도권 시민들에게 산책과 휴식, 환경교육의 장을 제공하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e4ee542964a150bac02b08a000d0719e5333027a13f7fda01e7fef1bd9bbc67"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "축구장 60개 규모의 녹지에서 산책·휴식이 제공되고, 테마식물지구·징검다리길 등 여러 주제 공간을 자율적으로 둘러볼 수 있다는 근거가 있다. 그러나 일상 이탈이 방문 경험의 중심이라는 근거까지는 없어 3으로 판단했다. '무료'는 4자 미만이며 자율 탐색의 근거가 아니므로 인용에서 제외했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55",
+          "quote": {
+            "end": 52,
+            "method": "EXACT",
+            "original": "축구장 60개 규모의 대규모 녹지공간으로 조성된 도시숲",
+            "start": 22,
+            "submitted": "축구장 60개 규모의 대규모 녹지공간으로 조성된 도시숲",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e4ee542964a150bac02b08a000d0719e5333027a13f7fda01e7fef1bd9bbc67"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55",
+          "quote": {
+            "end": 423,
+            "method": "EXACT",
+            "original": "시원한 녹음이 드리운 참나무 쉼터, 물 위를 걷는 듯한 징검다리길, 피톤치드가 가득한 메타세쿼이아길",
+            "start": 368,
+            "submitted": "시원한 녹음이 드리운 참나무 쉼터, 물 위를 걷는 듯한 징검다리길, 피톤치드가 가득한 메타세쿼이아길",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e4ee542964a150bac02b08a000d0719e5333027a13f7fda01e7fef1bd9bbc67"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 4,
+      "reason": "대규모 도시숲, 습지생태지구, 녹음 쉼터, 메타세쿼이아길 등 자연·저자극 환경 단서가 공간 전반을 지배한다고 확인되어 4로 판단했다. 다만 실제 고요함·혼잡까지는 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:78c586406e775366baa2a227c1c26c4f84c3eccbcb7c87cc55ad63fc3a107185",
+          "quote": {
+            "end": 17,
+            "method": "EXACT",
+            "original": "수도권매립지관리공사 견학프로그램",
+            "start": 0,
+            "submitted": "수도권매립지관리공사 견학프로그램",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "581385972eade4c4bfa62cdd70d7f8ef0becd818baa789eb81c85669951954b9"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55",
+          "quote": {
+            "end": 507,
+            "method": "EXACT",
+            "original": "매년 가을에는 드림파크 국화축제가 열려 다채로운 시민참여 프로그램이 함께 진행되어",
+            "start": 462,
+            "submitted": "매년 가을에는 드림파크 국화축제가 열려 다채로운 시민참여 프로그램이 함께 진행되어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e4ee542964a150bac02b08a000d0719e5333027a13f7fda01e7fef1bd9bbc67"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "견학프로그램, 환경교육, 국화축제 시민참여 프로그램 등 구체적 참여 활동이 확인된다. 지속적 도전·몰입 활동이 중심이라는 근거는 없어 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55",
+          "quote": {
+            "end": 507,
+            "method": "EXACT",
+            "original": "드림파크 국화축제가 열려 다채로운 시민참여 프로그램이 함께 진행되어",
+            "start": 470,
+            "submitted": "드림파크 국화축제가 열려 다채로운 시민참여 프로그램이 함께 진행되어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e4ee542964a150bac02b08a000d0719e5333027a13f7fda01e7fef1bd9bbc67"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "국화축제의 시민참여 프로그램이 교류 기회로 확인되지만, 그 내용·범위가 구체적이지 않고 자기표현 활동의 근거는 없어 제한적 공동 활동 수준인 2로 판단했다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "81c1bc8be1b3ddbe81efde1bb7c0752849e6249f72bad537d2da4de3f2cdc3fb",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6ef37261082bb543f5e87d1fada5c29c80315afe9c0c150c7a1bd657258bc100",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b2507318e1ee317e166b74b232363b43912d409a64dac67a15aaed1bfa2c5fd0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1325945",
+          "request_sha256": "7f3a994532278b98f563f9f90207e08a9821e5d8b69ab2d45b3e8394fbb18bc5",
+          "response_sha256": "f40b32432f5f2510e5f5a8116c2fae8d25a92a2270ec8219799fab039a43f6ff",
+          "retrieved_at": "2026-09-10T08:27:12.413751Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c6f37545b4ca96891669a0cef9c96d86f4227228e58e7db71892ea0e36f76e10",
+          "source_uri": null
+        },
+        "record_sha256": "d39e79e5bedb720b6d1474d554ee911285b903243181e06b8365c0ee5542b0d5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:78c586406e775366baa2a227c1c26c4f84c3eccbcb7c87cc55ad63fc3a107185",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b2507318e1ee317e166b74b232363b43912d409a64dac67a15aaed1bfa2c5fd0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "1325945",
+          "request_sha256": "7f3a994532278b98f563f9f90207e08a9821e5d8b69ab2d45b3e8394fbb18bc5",
+          "response_sha256": "c170f846a2532fe5b06a1feea48486f92a71182a0b3d49d3921a5f331393e617",
+          "retrieved_at": "2026-09-10T07:59:45.597084Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b7dc7dabbac6f7443a7f4d1cede2019ba35900ee2f1d094358161c41eb9f8a01",
+          "source_uri": null
+        },
+        "record_sha256": "581385972eade4c4bfa62cdd70d7f8ef0becd818baa789eb81c85669951954b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "수도권매립지관리공사 견학프로그램"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b62992b625ea3c285b1dd48dcbd574d5351a819c58b70b466dc2869587557186",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b2507318e1ee317e166b74b232363b43912d409a64dac67a15aaed1bfa2c5fd0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1325945",
+          "request_sha256": "7f3a994532278b98f563f9f90207e08a9821e5d8b69ab2d45b3e8394fbb18bc5",
+          "response_sha256": "f40b32432f5f2510e5f5a8116c2fae8d25a92a2270ec8219799fab039a43f6ff",
+          "retrieved_at": "2026-09-10T08:27:12.413751Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ba380d1e674e21b75ecc9248ee83f89efe030c471015b9b08c33a7ef60c80c5c",
+          "source_uri": null
+        },
+        "record_sha256": "ad6040b5043e104d579a725723bc58631bac212f2fae40a0d41d375ad0e9ea79",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fca48857d5af18830fd6c1648b6d73d53cd06236128e20ac414be43c82c3df55",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b2507318e1ee317e166b74b232363b43912d409a64dac67a15aaed1bfa2c5fd0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1325945",
+          "request_sha256": "7199e7d1d3e295b9e1278fddbe13487ae9a16c4313d2d5bf6f2c1b1cebffeb43",
+          "response_sha256": "36d5d5368e5f69718eb659a7aae84c0f1d2458fff350031bb13a8b2bb178bf58",
+          "retrieved_at": "2026-09-10T07:59:45.250890Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "d77febda8289667ce0cfd1ae21f5be06bcdd7bf45dc13b3fa329e505afd0c714",
+          "source_uri": null
+        },
+        "record_sha256": "6e4ee542964a150bac02b08a000d0719e5333027a13f7fda01e7fef1bd9bbc67",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "드림파크 야생화단지는 수도권매립지 내에 축구장 60개 규모의 대규모 녹지공간으로 조성된 도시숲이다. 과거 연탄재 야적장이었던 부지를 수도권매립지관리공사와 지역주민이 함께 가꾸어 꽃과 나무가 어우러진 생태녹지로 탈바꿈시켜, 수도권 시민들에게 산책과 휴식, 환경교육의 장을 제공하고 있다. 드림파크 야생화단지는 테마식물지구, 야생초화지구, 습지생태지구 등 다양한 주제 공간으로 구성되어 있으며, 약 300여 종의 식물이 식재되어 있어 사계절 내내 다채로운 자연을 즐길 수 있다. 4월에는 벚꽃과 수선화, 5~6월에는 작약과 수국, 9~11월에는 핑크뮬리로 물든 꽃밭이 펼쳐져 풍성한 생태계를 감상할 수 있다. 이 밖에도 연꽃과 벗풀, 꽃창포가 있는 수생식물원, 시원한 녹음이 드리운 참나무 쉼터, 물 위를 걷는 듯한 징검다리길, 피톤치드가 가득한 메타세쿼이아길 등이 조성되어 있어 방문객들에게 특별한 휴식 경험을 선사한다. 또한 매년 가을에는 드림파크 국화축제가 열려 다채로운 시민참여 프로그램이 함께 진행되어 나들이객들에게 큰 사랑을 받고 있다."
+      }
+    ],
+    "parent_source_sha256": "b1c1013cb510f8d7a512b67ea1ba2039a899f5773873ea2673d9edea87ac8485",
+    "place": {
+      "address": "인천광역시 검단구 자원순환로 170 (백석동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:b2507318e1ee317e166b74b232363b43912d409a64dac67a15aaed1bfa2c5fd0",
+      "name_ko": "수도권매립지 드림파크 야생화단지",
+      "place_id": "public:korea:b2507318e1ee317e166b74b232363b43912d409a64dac67a15aaed1bfa2c5fd0",
+      "provider_content_id": "1325945",
+      "region_code": "28290",
+      "region_name": "인천광역시 검단구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

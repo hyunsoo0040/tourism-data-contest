@@ -1,0 +1,951 @@
+{
+  "assessed_at": "2026-09-11T18:32:32.295186Z",
+  "assessment_sha256": "ba6f0736c32fd2808edb7610a4cdd717a1088668c5418a6c4e63b512eaf04f72",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b",
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 69
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "개요가 이 장소(월송정)의 창건·중건·철거·재건 연혁과 화랑 유래 설화를 구체적 사건·인물과 연결해 제시하므로 역사 맥락 이해를 지원한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "공식 개요가 정자의 역사 연혁과 이름 유래를 유산·전통과 연결해 설명하므로 짧은 역사 안내 수준의 해설은 확인되지만, 현장에서의 심층 탐구 체계까지는 근거가 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "일출 명소라는 구체적 이미지와 사적지·관동팔경이라는 상징적 의미가 이 장소에 연결되어 있음을 공식 개요가 확인한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "일출 광경이 널리 알려져 관광객과 사진작가가 찾는다고 명시되어 이미지의 유통 흔적이 확인되지만, 구체적 매체·작품과의 연결 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:142fa3bf54702316c8d602c2f6a652673852c9070525effe3a0d8e994c699d50",
+            "appearance:34e525c3c92864d03da90833e513944d29e8c7c5c31fdc0e523ccee2e484c045",
+            "appearance:ec56b09f8b8bcadc27f796a572af7d4d7366547176c6aa7fe8eeda00cb674818"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "해송 숲, 푸른 바다, 일출 장면 등 이 장소의 구별되는 시각적 성격이 공식 서술로 확인된다.",
+      "value": 77
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 이미지인 일출 장면을 현장에서 직접 목격하고 사진작가들이 찾는다고 하여 촬영·재현 기회가 확인되므로 대표 장면 경험을 지원한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:37aba8da5fbdcf61ac636b2dfeb91e12fa110558e4bf37cb93b4b37dca942286",
+            "appearance:c230ae12918818edb67934f8d58401591909d99ca6eb8cabc6eeabf05eabd6df",
+            "appearance:dbeaef845ba43e121f2e4d4ffa3500aa590824e6b726f50c12e15a0a8b214f1b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "해송 숲과 동해 바다라는 자연 환경 단서가 공식 서술로 확인되지만, 실제 고요함·혼잡·심리적 회복까지는 단정할 수 없어 수준 3으로 판단한다.",
+      "value": 77
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요에 따르면 현재 건물은 1980년 고려시대 양식을 본떠 지은 재현 건축물로, 확인된 원형 실물과의 접촉 근거는 없으나 원형 접촉 부재를 직접 명시하지도 않아 수준 판단이 불가하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc",
+          "quote": {
+            "end": 101,
+            "method": "EXACT",
+            "original": "고려시대에 창건되었고, 조선 중기 때 관찰사 박원종이 중건하였으나, 낡고 무너져서 유적만 남았던 곳을 1933년 향인 황만영 등이 다시 중건하였다.",
+            "start": 19,
+            "submitted": "고려시대에 창건되었고, 조선 중기 때 관찰사 박원종이 중건하였으나, 낡고 무너져서 유적만 남았던 곳을 1933년 향인 황만영 등이 다시 중건하였다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f860ddd5d2225f26b1b54f61f35a9ed3e63d34bed7bdf62eb6c1d132fe1ffef2"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 3,
+      "reason": "개요가 이 장소(월송정)의 창건·중건·철거·재건 연혁과 화랑 유래 설화를 구체적 사건·인물과 연결해 제시하므로 역사 맥락 이해를 지원한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "화랑이 달을 즐겼다는 설화와 월송 유래가 언급되지만 이는 옛 유래 서사일 뿐, 현재 지역 주체의 전승·생활문화와의 실제 연결을 확인하는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc",
+          "quote": {
+            "end": 316,
+            "method": "EXACT",
+            "original": "월송정은 신라의 영랑, 술랑, 남속, 안양이라는 네 화랑이 울창한 소나무 숲에서 달을 즐겼다 해서 월송정이라고도 하고",
+            "start": 251,
+            "submitted": "월송정은 신라의 영랑, 술랑, 남속, 안양이라는 네 화랑이 울창한 소나무 숲에서 달을 즐겼다 해서 월송정이라고도 하고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f860ddd5d2225f26b1b54f61f35a9ed3e63d34bed7bdf62eb6c1d132fe1ffef2"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "공식 개요가 정자의 역사 연혁과 이름 유래를 유산·전통과 연결해 설명하므로 짧은 역사 안내 수준의 해설은 확인되지만, 현장에서의 심층 탐구 체계까지는 근거가 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc",
+          "quote": {
+            "end": 535,
+            "method": "EXACT",
+            "original": "인근에 있는 망양정과 함께 우리나라 동해안에서 몇 안 되는 일출 명소로 유명한 곳이다.",
+            "start": 487,
+            "submitted": "인근에 있는 망양정과 함께 우리나라 동해안에서 몇 안 되는 일출 명소로 유명한 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f860ddd5d2225f26b1b54f61f35a9ed3e63d34bed7bdf62eb6c1d132fe1ffef2"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "일출 명소라는 구체적 이미지와 사적지·관동팔경이라는 상징적 의미가 이 장소에 연결되어 있음을 공식 개요가 확인한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc",
+          "quote": {
+            "end": 486,
+            "method": "EXACT",
+            "original": "월송정의 소나무와 푸른 바다를 배경으로 솟아오르는 일출 광경은 널리 알려져서 관광객과 사진작가들이 많이 찾는 곳으로",
+            "start": 422,
+            "submitted": "월송정의 소나무와 푸른 바다를 배경으로 솟아오르는 일출 광경은 널리 알려져서 관광객과 사진작가들이 많이 찾는 곳으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f860ddd5d2225f26b1b54f61f35a9ed3e63d34bed7bdf62eb6c1d132fe1ffef2"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "일출 광경이 널리 알려져 관광객과 사진작가가 찾는다고 명시되어 이미지의 유통 흔적이 확인되지만, 구체적 매체·작품과의 연결 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc",
+          "quote": {
+            "end": 417,
+            "method": "EXACT",
+            "original": "정자 주변에는 해송이 숲을 이루고 있으며, 푸른 동해 바다를 바라보면 금방 가슴이 확 트이는 기분을 느낄 수 있는 곳이다.",
+            "start": 349,
+            "submitted": "정자 주변에는 해송이 숲을 이루고 있으며, 푸른 동해 바다를 바라보면 금방 가슴이 확 트이는 기분을 느낄 수 있는 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f860ddd5d2225f26b1b54f61f35a9ed3e63d34bed7bdf62eb6c1d132fe1ffef2"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "해송 숲, 푸른 바다, 일출 장면 등 이 장소의 구별되는 시각적 성격이 공식 서술로 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc",
+          "quote": {
+            "end": 486,
+            "method": "EXACT",
+            "original": "월송정의 소나무와 푸른 바다를 배경으로 솟아오르는 일출 광경은 널리 알려져서 관광객과 사진작가들이 많이 찾는 곳으로",
+            "start": 422,
+            "submitted": "월송정의 소나무와 푸른 바다를 배경으로 솟아오르는 일출 광경은 널리 알려져서 관광객과 사진작가들이 많이 찾는 곳으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f860ddd5d2225f26b1b54f61f35a9ed3e63d34bed7bdf62eb6c1d132fe1ffef2"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대표 이미지인 일출 장면을 현장에서 직접 목격하고 사진작가들이 찾는다고 하여 촬영·재현 기회가 확인되므로 대표 장면 경험을 지원한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "무료·운영 정보만 있을 뿐 방문자의 자율적 탐색·여유·선택 기회를 뒷받침하는 내용은 제공되지 않는다. 무료 여부는 자유나 여유의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc",
+          "quote": {
+            "end": 417,
+            "method": "EXACT",
+            "original": "정자 주변에는 해송이 숲을 이루고 있으며, 푸른 동해 바다를 바라보면 금방 가슴이 확 트이는 기분을 느낄 수 있는 곳이다.",
+            "start": 349,
+            "submitted": "정자 주변에는 해송이 숲을 이루고 있으며, 푸른 동해 바다를 바라보면 금방 가슴이 확 트이는 기분을 느낄 수 있는 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f860ddd5d2225f26b1b54f61f35a9ed3e63d34bed7bdf62eb6c1d132fe1ffef2"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "해송 숲과 동해 바다라는 자연 환경 단서가 공식 서술로 확인되지만, 실제 고요함·혼잡·심리적 회복까지는 단정할 수 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "관람·일출 감상 언급 외에 만들기·신체 활동·탐방 등 지속적으로 참여·집중할 활동 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회를 제공한다는 내용이 자료에 없으며, 관광객 방문 언급만으로 유대감이나 교류를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "b762973b7204407c970843b963a51f2a6e6af33aa07b5ecf2ad6a09fcfa0cfa3",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "9ad80e20bd19354e1889ac445069097ff41641a3a06b161cf465168b695f561d",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "주홍 기둥과 녹청 단청, 기와 지붕의 대비가 강렬하고 저각도 구도가 건물을 장려적으로 보이게 하는 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:142fa3bf54702316c8d602c2f6a652673852c9070525effe3a0d8e994c699d50",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4bad27b8f264dbbd4bb3affa35925900c358f35e1016bcab03be65a1a037c643",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500528_4",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6e7ccd0e9a5d8331b8fdd108702b377b18e8294abdd67d093c7c3c906a14999f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/28/3500528_image2_1.jpg"
+        },
+        "record_sha256": "f131742023e8c49d6e2e1c306e83b1e5d902c4f67dac0d701bca1b3f1d6d5e39",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 요소는 보이지 않고 해수욕장과 부표만 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1d57b516e68a2c756efd30eb27b49217fc451ed2810cb334a97ff6b184b78506",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ff5a5685096877597849f711fa339c87f953ef91d3cf8d2bae2beef56f91863d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500527_3",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2fabd2ef5efe5d3cbc16b26d6287db74a14122ed0b178bd076394bf685ee2e79",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/27/3500527_image2_1.jpg"
+        },
+        "record_sha256": "8afbc38ae1d6d88d55b8c3f460e73fb42da7d5cae445ac50037bb8596069e20f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "단청으로 채색된 기둥과 천장의 화려한 색채, 따뜻한 햇빛과 그림자의 대비가 장면 전체를 지배하며 강한 연출성을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:34e525c3c92864d03da90833e513944d29e8c7c5c31fdc0e523ccee2e484c045",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0c69f35615309abbf53ec4b14e347589cdd8560c2b57c3c9bc2ceffca098bc7c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500525_1",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4f5de68446cf592e496217a49eb57f66b6dce0c04c3616d7176e67ac7cfd5063",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/25/3500525_image2_1.jpg"
+        },
+        "record_sha256": "664d2dfde84fd31dcd7dfe67aae4feb05d57c9925259108f2f0e5758b5ffc2a7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "울창한 소나무 숲이 배경을 채우고 건물 사이로 바다가 보이는 트인 자연 경관이 뚜렷함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:37aba8da5fbdcf61ac636b2dfeb91e12fa110558e4bf37cb93b4b37dca942286",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4bad27b8f264dbbd4bb3affa35925900c358f35e1016bcab03be65a1a037c643",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500528_4",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6e7ccd0e9a5d8331b8fdd108702b377b18e8294abdd67d093c7c3c906a14999f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/28/3500528_image2_1.jpg"
+        },
+        "record_sha256": "7bd381a00b01b45152771616985af9da1ea56379620d7431cc8bdd0605289dc0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "처마, 공포, 단청, 기와, 목조 누각 구조 등 전통 외관 요소가 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7c2894835232ce25fb6bfe516aa555ec807815511570683c0eb212e8b15f38a1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4bad27b8f264dbbd4bb3affa35925900c358f35e1016bcab03be65a1a037c643",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500528_4",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6e7ccd0e9a5d8331b8fdd108702b377b18e8294abdd67d093c7c3c906a14999f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/28/3500528_image2_1.jpg"
+        },
+        "record_sha256": "d7f7c44aba14d432eb765856e74f11adf2bd881e4150f7d2cce28da380c40b78",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "단청, 격자 난간, 널판 마루 등 전통 목조 건축 외관이 장면의 중심을 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9930f392a6a490bff4efebea081ffe7b4d02b63624f6956ab64d08098555674b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0c69f35615309abbf53ec4b14e347589cdd8560c2b57c3c9bc2ceffca098bc7c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500525_1",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4f5de68446cf592e496217a49eb57f66b6dce0c04c3616d7176e67ac7cfd5063",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/25/3500525_image2_1.jpg"
+        },
+        "record_sha256": "3c147372975ba01af59147923b4f4a1655204e0ff49cc860321dbf219edd6d6d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "개방된 누각 너머로 울창한 소나무 숲이 시야 대부분을 채워 뚜렷한 자연 배경을 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c230ae12918818edb67934f8d58401591909d99ca6eb8cabc6eeabf05eabd6df",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0c69f35615309abbf53ec4b14e347589cdd8560c2b57c3c9bc2ceffca098bc7c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500525_1",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4f5de68446cf592e496217a49eb57f66b6dce0c04c3616d7176e67ac7cfd5063",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/25/3500525_image2_1.jpg"
+        },
+        "record_sha256": "3668dfdc7d5606447b5c4077b1350581744bab3ebaa0eb285a8cceb1a4890201",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "바다와 모래사장, 밀려오는 파도가 장면 전체를 지배하며 트인 자연 경관이 화면 대부분을 차지함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:dbeaef845ba43e121f2e4d4ffa3500aa590824e6b726f50c12e15a0a8b214f1b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ff5a5685096877597849f711fa339c87f953ef91d3cf8d2bae2beef56f91863d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500527_3",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2fabd2ef5efe5d3cbc16b26d6287db74a14122ed0b178bd076394bf685ee2e79",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/27/3500527_image2_1.jpg"
+        },
+        "record_sha256": "fc33bc8efbc0bb6f7b4c90286081d9930682168c790f252108260de6562bf52a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "파도의 흰 거품과 청록·파란 바다, 넓은 하늘이 대비를 이루며 안정된 수평 구도를 보이지만 특수한 연출까지는 아님.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ec56b09f8b8bcadc27f796a572af7d4d7366547176c6aa7fe8eeda00cb674818",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ff5a5685096877597849f711fa339c87f953ef91d3cf8d2bae2beef56f91863d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500527_3",
+          "request_sha256": "07d9e470754d3d6db45b1c598b2ac5dff79ae119d1e85b6ef9a5c9c2db362cc6",
+          "response_sha256": "b3a185fcda8d0abd080a9e7508f56a6ab6fcce927d062a71e26b32118728f3bf",
+          "retrieved_at": "2026-09-10T08:26:58.489193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2fabd2ef5efe5d3cbc16b26d6287db74a14122ed0b178bd076394bf685ee2e79",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/27/3500527_image2_1.jpg"
+        },
+        "record_sha256": "d77f90ff45a03ec9cd7b373c9088bd62541fdcbd9a1b68c585b467e694b21c0c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:012554f21a9eca4bfecc5271da66e800b2d227339c2427e1210a4f8586e60f94",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126220",
+          "request_sha256": "5e1b1755d73ac40796de6a91e064e811cefe3a47ff7883cc31ffb7d6a3dd6eac",
+          "response_sha256": "58dba91838f055a8cf729cdad9019277ac5fb00bb0d9107bfb5113cf59b8fece",
+          "retrieved_at": "2026-09-10T08:26:57.810603Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a42c2dbd397dcd6aad480ba9775a917ae798d94af06db512c22994e3d1aa9324",
+          "source_uri": null
+        },
+        "record_sha256": "324c818879639570204c321c821864d5ae3ff18a5c14150c1a089d8f2abef93f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5dd144ee40e8bc3eedc43e0174033d7d83b73f817f611b5baf0f61f2c9e11fbc",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126220",
+          "request_sha256": "10b10e512220ac0241e7d6172439f42803578f2d4e307f27d5be90cf90e5bba5",
+          "response_sha256": "99170ed214cc557ae02d594ac190e4f33311baa980b5972f2ab39c9e9210d50d",
+          "retrieved_at": "2026-09-10T08:10:53.484799Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-23T05:30:00Z",
+          "source_record_sha256": "2adc880fcba81ed8a073e5685ba9d27949c44f08af06c3057994fe073aaec634",
+          "source_uri": null
+        },
+        "record_sha256": "f860ddd5d2225f26b1b54f61f35a9ed3e63d34bed7bdf62eb6c1d132fe1ffef2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "사적지 관동팔경의 하나인 월송정은 고려시대에 창건되었고, 조선 중기 때 관찰사 박원종이 중건하였으나, 낡고 무너져서 유적만 남았던 곳을 1933년 향인 황만영 등이 다시 중건하였다. 그 후 일제 말기 월송 주둔 해군이 적기 내습의 목표가 된다 하여 철거하였다. 1964년 4월 재일교포로 구성된 금강회가 철근콘크리트 정자를 신축하였으나 옛 모습을 살필 길 없어 1979년에 헐어 버리고, 1980년에 고려시대의 양식을 본떠서 지금의 건물을 세웠다. 월송정은 신라의 영랑, 술랑, 남속, 안양이라는 네 화랑이 울창한 소나무 숲에서 달을 즐겼다 해서 월송정이라고도 하고, 월국에서 송묘를 가져다 심었다 하여 월송이라고도 한다. 정자 주변에는 해송이 숲을 이루고 있으며, 푸른 동해 바다를 바라보면 금방 가슴이 확 트이는 기분을 느낄 수 있는 곳이다. 특히, 월송정의 소나무와 푸른 바다를 배경으로 솟아오르는 일출 광경은 널리 알려져서 관광객과 사진작가들이 많이 찾는 곳으로 인근에 있는 망양정과 함께 우리나라 동해안에서 몇 안 되는 일출 명소로 유명한 곳이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:62bb8af4d4f61832cd4f484865cdf2427f0d01f6977adfc7d20077c156cebe43",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126220",
+          "request_sha256": "5e1b1755d73ac40796de6a91e064e811cefe3a47ff7883cc31ffb7d6a3dd6eac",
+          "response_sha256": "58dba91838f055a8cf729cdad9019277ac5fb00bb0d9107bfb5113cf59b8fece",
+          "retrieved_at": "2026-09-10T08:26:57.810603Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "49ca3c897bd06cfc99fa7d510882b423dea9dd2802a79000426c330703424292",
+          "source_uri": null
+        },
+        "record_sha256": "f06e715f6b1815dcb6c04a400bb47955c4f0cf2a360e8c76eefca9bca2ae5501",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "d0b195c769faac7732d668676f74b73ba7e5cdebe4a7e1d32407dc02384ab8a8",
+    "place": {
+      "address": "경상북도 울진군 평해읍 월송정로 517",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+      "name_ko": "월송정",
+      "place_id": "public:korea:ad64da245b0605f19ff1aca37ce6aeb40691f71d3d6aa769347da570fa745113",
+      "provider_content_id": "126220",
+      "region_code": "47930",
+      "region_name": "경상북도 울진군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

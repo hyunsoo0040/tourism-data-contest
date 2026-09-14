@@ -1,0 +1,647 @@
+{
+  "assessed_at": "2026-09-11T16:37:03.566789Z",
+  "assessment_sha256": "f31016d88d7316754ce9837e75bc9fb5b63577ea8b191c5ca7a641a58e58f9c2",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 56
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "옛 고갯길 자체는 실재하며 방문자가 오르내리며 접촉할 수 있으나, 고개 위 상용정은 태풍 복구 사업(2002~2003)으로 새로 지은 전통 양식 건축물로 유산 실물은 아니다. 원형 접촉은 고갯길에 국한되어 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소의 명칭 유래와 옛 이름(답마령)을 소개하지만 전설적 서사 수준이며, 구체적 사건·인물 맥락의 심층 탐구로 이어지는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "영화 <집으로> 촬영지라는 구체적 이미지와 '정겨운 시골'의 의미가 장소에 연결되어 있으나, 이것이 방문 경험의 중심이라는 근거까지는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "영화라는 매체를 통해 장소 이미지가 재현·확산되었음이 명시되어 있다. 반복되는 유통이나 방문 목적의 중심이라는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "전통 양식의 팔각정, 구불구불한 2차선 도로, 민주지산의 풍광 등 이 장소에서 구별되는 시각적 성격이 확인된다. 일관된 연출이 장면 전체를 지배한다는 근거는 없어 3 수준이다. repair 항목을 반환하되, 출처의 허용 claim은 VISUAL_EXPRESSION이므로 이를 사용했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "영화 속 장면을 떠올리며 관람·체험할 수 있다고 하나, 촬영 구도 재현이나 참여형 재현 활동의 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "드라이브 코스로서 자신의 방식으로 고갯길을 탐색할 여지가 확인되나, 자율 탐색이 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "해발 800m 고갯길과 민주지산 숲길 등 자연 환경 단서가 구체적으로 확인된다. 다만 실제 고요함이나 혼잡도는 확인되지 않아 3 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "라이딩이라는 신체 활동 기회가 확인되지만, 이것이 장소가 제공하는 구조화된 참여 프로그램인지 방문자의 자발적 활동인지 불명확하고 지속적 도전 활동의 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 78,
+            "method": "EXACT",
+            "original": "도마령은 영동군 황간에서 전북 무주로 넘어가는 고갯길이다. 영동 최고봉 민주지산(해발 1,241m) 자락에 있는 해발 800m의 높은 고갯길",
+            "start": 0,
+            "submitted": "도마령은 영동군 황간에서 전북 무주로 넘어가는 고갯길이다. 영동 최고봉 민주지산(해발 1,241m) 자락에 있는 해발 800m의 높은 고갯길",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 2,
+      "reason": "옛 고갯길 자체는 실재하며 방문자가 오르내리며 접촉할 수 있으나, 고개 위 상용정은 태풍 복구 사업(2002~2003)으로 새로 지은 전통 양식 건축물로 유산 실물은 아니다. 원형 접촉은 고갯길에 국한되어 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 138,
+            "method": "EXACT",
+            "original": "칼을 든 장수가 말을 타고 이곳을 넘었다고 해서 도마령이라 이름 지었고, 답마령이라는 옛 이름도 전해진다",
+            "start": 80,
+            "submitted": "칼을 든 장수가 말을 타고 이곳을 넘었다고 해서 도마령이라 이름 지었고, 답마령이라는 옛 이름도 전해진다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "이 장소의 명칭 유래와 옛 이름(답마령)을 소개하지만 전설적 서사 수준이며, 구체적 사건·인물 맥락의 심층 탐구로 이어지는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승 활동이나 생활문화와의 실제 연결을 뒷받침하는 근거가 제공되지 않았다. 전통 목조 구조라는 건축 사실만으로 현재의 전승을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "고갯길·전통과 연결된 해설, 전시, 학습 프로그램에 관한 근거가 없다. 명칭 유래 문장은 해설 체계의 존재를 확인해 주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 535,
+            "method": "EXACT",
+            "original": "영화 <집으로>의 촬영지로 시골 풍경과 정겨운 인심이 가득한 영화의 한 장면이 떠오르는 곳이다",
+            "start": 483,
+            "submitted": "영화 <집으로>의 촬영지로 시골 풍경과 정겨운 인심이 가득한 영화의 한 장면이 떠오르는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "영화 <집으로> 촬영지라는 구체적 이미지와 '정겨운 시골'의 의미가 장소에 연결되어 있으나, 이것이 방문 경험의 중심이라는 근거까지는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 497,
+            "method": "EXACT",
+            "original": "영화 <집으로>의 촬영지로",
+            "start": 483,
+            "submitted": "영화 <집으로>의 촬영지로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "영화라는 매체를 통해 장소 이미지가 재현·확산되었음이 명시되어 있다. 반복되는 유통이나 방문 목적의 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 592,
+            "method": "EXACT",
+            "original": "구불거리는 도로 주변으로 민주지산의 수려한 풍광이 펼쳐져",
+            "start": 561,
+            "submitted": "구불거리는 도로 주변으로 민주지산의 수려한 풍광이 펼쳐져",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "전통 양식의 팔각정, 구불구불한 2차선 도로, 민주지산의 풍광 등 이 장소에서 구별되는 시각적 성격이 확인된다. 일관된 연출이 장면 전체를 지배한다는 근거는 없어 3 수준이다. repair 항목을 반환하되, 출처의 허용 claim은 VISUAL_EXPRESSION이므로 이를 사용했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 535,
+            "method": "EXACT",
+            "original": "정겨운 인심이 가득한 영화의 한 장면이 떠오르는 곳이다",
+            "start": 505,
+            "submitted": "정겨운 인심이 가득한 영화의 한 장면이 떠오르는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "영화 속 장면을 떠올리며 관람·체험할 수 있다고 하나, 촬영 구도 재현이나 참여형 재현 활동의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 481,
+            "method": "EXACT",
+            "original": "구불구불 굽이진 도로가 드라이브 코스로 최근 명성을 얻고 있다",
+            "start": 447,
+            "submitted": "구불구불 굽이진 도로가 드라이브 코스로 최근 명성을 얻고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "드라이브 코스로서 자신의 방식으로 고갯길을 탐색할 여지가 확인되나, 자율 탐색이 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 638,
+            "method": "EXACT",
+            "original": "민주지산의 숲길에서 라이딩을 즐기는 사람들도 많다",
+            "start": 611,
+            "submitted": "민주지산의 숲길에서 라이딩을 즐기는 사람들도 많다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "해발 800m 고갯길과 민주지산 숲길 등 자연 환경 단서가 구체적으로 확인된다. 다만 실제 고요함이나 혼잡도는 확인되지 않아 3 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+          "quote": {
+            "end": 638,
+            "method": "EXACT",
+            "original": "민주지산의 숲길에서 라이딩을 즐기는 사람들도 많다",
+            "start": 611,
+            "submitted": "민주지산의 숲길에서 라이딩을 즐기는 사람들도 많다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "라이딩이라는 신체 활동 기회가 확인되지만, 이것이 장소가 제공하는 구조화된 참여 프로그램인지 방문자의 자발적 활동인지 불명확하고 지속적 도전 활동의 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현의 기회에 관한 근거가 제공되지 않았다. '정겨운 인심'이라는 표현은 유대 활동의 존재를 확인해 주지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "b27ece80f7771a2e688745bdf0fe52c5783fb11d78856972a1541cb63dc8f783",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:0136318d25450655b0ac6f73a592ff8d39f80cec21534b1a896aeccbc470b9da",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3ff36b2e0b28623a52935a882548d241f096ff44115bfb01879f840c1395f5ab",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "756447",
+          "request_sha256": "fb917126a6d2923dcc67275eabaf18c89de01afc8c93c72adececb069bce20a5",
+          "response_sha256": "558a346678d78bb3d7b554b67979628c0991d3714fea3f924e111797d2a6e258",
+          "retrieved_at": "2026-09-10T08:21:52.075380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0e11fdc79c5d20082cc673820ab56daa447a2ca1a3fb564915624b712ace8b23",
+          "source_uri": null
+        },
+        "record_sha256": "aef099ef389da7cbff68d29075900a316973fe859735ffef80a4f5a0daf11aa0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3a48a2e0d6f1a86a7a43106dec0ab6036ee71645ed19fa2078ee5cb8ed2fdf9f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3ff36b2e0b28623a52935a882548d241f096ff44115bfb01879f840c1395f5ab",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "756447",
+          "request_sha256": "fb917126a6d2923dcc67275eabaf18c89de01afc8c93c72adececb069bce20a5",
+          "response_sha256": "558a346678d78bb3d7b554b67979628c0991d3714fea3f924e111797d2a6e258",
+          "retrieved_at": "2026-09-10T08:21:52.075380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b2a1e1e1ea45439896c1cb55a943f57d98e9af01eb8757732a0e524fa8b8cf7",
+          "source_uri": null
+        },
+        "record_sha256": "24541180b828ddcb983f79a8b5f9872e429089ee305c89b64638243b51f018a6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "영화 <집으로>"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7841dab74c4c0f845e53172a278b95de0ddb336ed1568fe12b0221ebb1298461",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3ff36b2e0b28623a52935a882548d241f096ff44115bfb01879f840c1395f5ab",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "756447",
+          "request_sha256": "f82ada7fdee962fbdfc33c888f71079bc46af1e3b90cdd89606a401fb7f67dd7",
+          "response_sha256": "a4d1e2180bfe3d356e62c0e2d75efc5ece6e1e7573752f15420feb318daf410e",
+          "retrieved_at": "2026-09-10T08:16:28.092160Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-15T08:15:22Z",
+          "source_record_sha256": "fe7f1bf50b238aa8b590e26149b5a78487fa8beaf7d30fa840555cfc90b82e69",
+          "source_uri": null
+        },
+        "record_sha256": "5c209790340619c71d3ba66a05fd3bd1d518bc8029aa18a5183c21229c5da0dc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "도마령은 영동군 황간에서 전북 무주로 넘어가는 고갯길이다. 영동 최고봉 민주지산(해발 1,241m) 자락에 있는 해발 800m의 높은 고갯길로 칼을 든 장수가 말을 타고 이곳을 넘었다고 해서 도마령이라 이름 지었고, 답마령이라는 옛 이름도 전해진다. 도마령에 가면 고갯마루 위에 정자 상용정이 있다. 2002년과 2003년 태풍으로 영동군 곳곳이 재해를 입었는데 이때 복구 사업을 하면서 상용정을 세웠다. 상용정은 한국 전통 목조 구조로 시공하여 그 웅장함을 더하였다. 목재는 우리나라 소나무를 사용하였으며 화강암 암장 초석에는 우리나라 대표적 국악기인 대금을 형상화하였는데 국악의 고장 영동의 명소임을 암시하는 대목이다. 전통 양식의 멋스러운 이 팔각정의 풍광은 이루 말할 수 없이 시원하고 고개를 오르내리는 도마령 길은 구절양장 춤을 추며 상촌으로 용화로 뻗어 가는데 그 풍경이 조화롭다. 또한 구불구불 굽이진 도로가 드라이브 코스로 최근 명성을 얻고 있다. 영화 <집으로>의 촬영지로 시골 풍경과 정겨운 인심이 가득한 영화의 한 장면이 떠오르는 곳이다. 비포장도로를 포장해서 2차선 도로가 되었고 구불거리는 도로 주변으로 민주지산의 수려한 풍광이 펼쳐져 눈이 즐겁고 마음이 편안해진다. 민주지산의 숲길에서 라이딩을 즐기는 사람들도 많다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8760f78b5212914907c926b3f41fac8d040f90ad9743b24853b1691a648be86b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3ff36b2e0b28623a52935a882548d241f096ff44115bfb01879f840c1395f5ab",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "756447",
+          "request_sha256": "fb917126a6d2923dcc67275eabaf18c89de01afc8c93c72adececb069bce20a5",
+          "response_sha256": "558a346678d78bb3d7b554b67979628c0991d3714fea3f924e111797d2a6e258",
+          "retrieved_at": "2026-09-10T08:21:52.075380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "52d17ad7a459c665cd9a3bfff6defdcd4953f3fe9c917405d2c5ab542762c393",
+          "source_uri": null
+        },
+        "record_sha256": "07074580d1d512c62c966154491b7c3e1823ec5ab38272fae6b784f64795b92b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "8f836b4d1265287a8c02b7646b769ebee6f6519ccbf7cdf3603a460c4f27b652",
+    "place": {
+      "address": "충청북도 영동군 상촌면 고자리",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:3ff36b2e0b28623a52935a882548d241f096ff44115bfb01879f840c1395f5ab",
+      "name_ko": "도마령(전망대)",
+      "place_id": "public:korea:3ff36b2e0b28623a52935a882548d241f096ff44115bfb01879f840c1395f5ab",
+      "provider_content_id": "756447",
+      "region_code": "43740",
+      "region_name": "충청북도 영동군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

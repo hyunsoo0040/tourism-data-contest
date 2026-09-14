@@ -1,0 +1,743 @@
+{
+  "assessed_at": "2026-09-11T15:54:22.199896Z",
+  "assessment_sha256": "3d0e5a166b52f42da07c9b29ed2aa4b991e492f98eb671ee22c7f7a3fccce049",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 49
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 41
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'도심 속 숲의 여유'라는 구체적 이미지·의미가 이 장소에 연결되어 공식 소개에서 일관되게 표현된다. 다만 여러 표현·장면에서의 확인은 제한적이어서 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:518de034d05495f3895f2a3706267d181f8d49e49113973e6e0c67928c733dad",
+            "appearance:adb5d2055bd88a87a134f460f3d6b4da05e8fc87626ce4dad79ed4149e859ccb"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 38,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "공식 개요는 배봉산 자연경관을 보존하며 숲과 결합된 공간임을 설명하여 이 장소의 시각적 표현 단서를 제공한다. 그러나 외관·경관·연출이 장면을 지배한다는 근거는 없어 제한된 색·빛·형태의 표현 수준(level 2)으로 판단한다. 원 제안의 VISUAL_APPEARANCE는 E.c의 인가된 텍스트 claim이 아니므로 VISUAL_EXPRESSION으로 교정했다.",
+      "value": 47
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "일상 이탈과 산책로를 통한 자율적 접근·이용이 제시되지만, 여유롭게 자신의 방식으로 탐색한다는 구체적 근거는 제한적이어서 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:3e8aeca0513915966fb2bcf643635b809b1c15109b91ed8cbb55a5bcbd074d2c",
+            "appearance:cff21735e42cb6cc800226cd5cdb2066eb7c30ff18d470cb6b24aaa87d49e814"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 13,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안된 앵커 '자연·시각적 저자극 환경이 두드러짐'은 자체 reason(고요함·혼잡 미확인, 수준 3 언급)과 불일치하고, 근거는 '힐링·편안한 환경' 중심의 홍보성 개요문이다. 실제 자연 단서의 두드러짐이 현장에서 확인되지 않아 확정할 수 없다.",
+      "value": 13
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "숲 체험 활동과 다양한 프로그램 운영이 확인되어 구체적 참여 기회가 있으나, 지속적 도전·몰입 활동이 방문 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "지역 주민과 방문객이 함께하는 프로그램·행사라는 교류 기회가 확인되나, 공동 제작·자기표현이 풍부하다는 근거는 제한적이어서 수준 2로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 자연과 도서관 결합 공간을 소개할 뿐, 확인된 문화유산·역사적 원형과의 접촉에 대한 근거가 없다. 배봉산 자연경관은 유산 원형 접촉으로 판단할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에 이 장소의 역사·연혁·사건·인물 맥락에 대한 설명이 없다. 근거 부족으로 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 대한 언급이 없다. '지역 주민과 방문객들이 문화와 자연을 만끽'이라는 문구는 전승 활동의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "프로그램은 어린이 대상 자연·책 교육이며, 유산·전통·원형에 연결된 해설·탐구 제공에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354",
+          "quote": {
+            "end": 87,
+            "method": "EXACT",
+            "original": "서울의 중심에 위치한 자연과 도서관이 결합된 독특한 공간으로, 도심 속에서 숲의 여유로움을 느끼며 책을 즐길 수 있는 특별한 장소이다",
+            "start": 13,
+            "submitted": "서울의 중심에 위치한 자연과 도서관이 결합된 독특한 공간으로, 도심 속에서 숲의 여유로움을 느끼며 책을 즐길 수 있는 특별한 장소이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d1fbf73e25d9154e65d112306d4b3ddecfd5eada9ce21936e2ba24c5884322c5"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'도심 속 숲의 여유'라는 구체적 이미지·의미가 이 장소에 연결되어 공식 소개에서 일관되게 표현된다. 다만 여러 표현·장면에서의 확인은 제한적이어서 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354",
+          "quote": {
+            "end": 130,
+            "method": "EXACT",
+            "original": "이 도서관은 배봉산의 자연경관을 보존하면서, 책과 함께하는 힐링을 제공한다",
+            "start": 89,
+            "submitted": "이 도서관은 배봉산의 자연경관을 보존하면서, 책과 함께하는 힐링을 제공한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d1fbf73e25d9154e65d112306d4b3ddecfd5eada9ce21936e2ba24c5884322c5"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "공식 개요는 배봉산 자연경관을 보존하며 숲과 결합된 공간임을 설명하여 이 장소의 시각적 표현 단서를 제공한다. 그러나 외관·경관·연출이 장면을 지배한다는 근거는 없어 제한된 색·빛·형태의 표현 수준(level 2)으로 판단한다. 원 제안의 VISUAL_APPEARANCE는 E.c의 인가된 텍스트 claim이 아니므로 VISUAL_EXPRESSION으로 교정했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험하거나 재현(촬영·참여)할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354",
+          "quote": {
+            "end": 537,
+            "method": "EXACT",
+            "original": "바쁜 일상에서 잠시 벗어나 휴식과 학습을 동시에 할 수 있는 최적의 장소이다",
+            "start": 495,
+            "submitted": "바쁜 일상에서 잠시 벗어나 휴식과 학습을 동시에 할 수 있는 최적의 장소이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d1fbf73e25d9154e65d112306d4b3ddecfd5eada9ce21936e2ba24c5884322c5"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "일상 이탈과 산책로를 통한 자율적 접근·이용이 제시되지만, 여유롭게 자신의 방식으로 탐색한다는 구체적 근거는 제한적이어서 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "제안된 앵커 '자연·시각적 저자극 환경이 두드러짐'은 자체 reason(고요함·혼잡 미확인, 수준 3 언급)과 불일치하고, 근거는 '힐링·편안한 환경' 중심의 홍보성 개요문이다. 실제 자연 단서의 두드러짐이 현장에서 확인되지 않아 확정할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354",
+          "quote": {
+            "end": 340,
+            "method": "EXACT",
+            "original": "특히, 어린이들을 위한 프로그램과 숲 체험 활동은 어린이들에게 자연과 책의 중요성을 알리는 기회를 제공한다",
+            "start": 281,
+            "submitted": "특히, 어린이들을 위한 프로그램과 숲 체험 활동은 어린이들에게 자연과 책의 중요성을 알리는 기회를 제공한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d1fbf73e25d9154e65d112306d4b3ddecfd5eada9ce21936e2ba24c5884322c5"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "숲 체험 활동과 다양한 프로그램 운영이 확인되어 구체적 참여 기회가 있으나, 지속적 도전·몰입 활동이 방문 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354",
+          "quote": {
+            "end": 279,
+            "method": "EXACT",
+            "original": "다양한 프로그램과 행사도 운영하여, 지역 주민과 방문객들이 문화와 자연을 동시에 만끽할 수 있게 한다",
+            "start": 223,
+            "submitted": "다양한 프로그램과 행사도 운영하여, 지역 주민과 방문객들이 문화와 자연을 동시에 만끽할 수 있게 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d1fbf73e25d9154e65d112306d4b3ddecfd5eada9ce21936e2ba24c5884322c5"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 2,
+      "reason": "지역 주민과 방문객이 함께하는 프로그램·행사라는 교류 기회가 확인되나, 공동 제작·자기표현이 풍부하다는 근거는 제한적이어서 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354",
+              "quote": {
+                "end": 211,
+                "method": "EXACT",
+                "original": "산책로와 숲속을 거닐며 도서관으로 향할 수 있는 접근성 덕분에 방문객은 자연 속에서 책을 읽거나 학습할 수 있는 편안한 환경을 경험할 수 있다",
+                "start": 132,
+                "submitted": "산책로와 숲속을 거닐며 도서관으로 향할 수 있는 접근성 덕분에 방문객은 자연 속에서 책을 읽거나 학습할 수 있는 편안한 환경을 경험할 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d1fbf73e25d9154e65d112306d4b3ddecfd5eada9ce21936e2ba24c5884322c5"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "숲·산책로·자연경관 보존 등 자연 환경 단서가 공간 경험의 핵심으로 확인된다. 다만 실제 고요함·혼잡 수준은 확인되지 않아 수준 3으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "제안된 앵커 '자연·시각적 저자극 환경이 두드러짐'은 자체 reason(고요함·혼잡 미확인, 수준 3 언급)과 불일치하고, 근거는 '힐링·편안한 환경' 중심의 홍보성 개요문이다. 실제 자연 단서의 두드러짐이 현장에서 확인되지 않아 확정할 수 없다."
+        }
+      },
+      "reason": "제안된 앵커 '자연·시각적 저자극 환경이 두드러짐'은 자체 reason(고요함·혼잡 미확인, 수준 3 언급)과 불일치하고, 근거는 '힐링·편안한 환경' 중심의 홍보성 개요문이다. 실제 자연 단서의 두드러짐이 현장에서 확인되지 않아 확정할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "fff4b5cffd66da4069b85e19e507b6208d69a074ec241a7c4c8a71ebe47b2603",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "계단 옆에 소량의 수목과 낙엽이 보이지만 자연 경관은 매우 제한적.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3e8aeca0513915966fb2bcf643635b809b1c15109b91ed8cbb55a5bcbd074d2c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "06319e21c2c034240af4500cb5ea15605ee72806766c62b634c3ba2968324776",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3455789_8",
+          "request_sha256": "51c7fd6435b4c99bb87d3cb63e894f220d7d42ec73ea2248c7a265a6bca834e1",
+          "response_sha256": "e42d337d35c7e3ddbfd0b2a45faa030b010b61609e992e442758df173ffe6ea0",
+          "retrieved_at": "2026-09-10T08:19:47.441537Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f8108c1f21635b7b3a52623bd75ae65cebcc8ce9c0a8391d042968e06fc5cd6e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3455789_image2_1.jpg"
+        },
+        "record_sha256": "21eea549cbf3d6812a594c0ed1c2fca6378c018515cb35100f071d1dad32a909",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대식 벽돌 건물, 인터폰, 점자블록 등 전통적 외관·재료의 특성이 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:47485387fb42aa4c456a1ce53d75b48161ff4d0ff237dfb10c0c10be63ca9e9a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "06319e21c2c034240af4500cb5ea15605ee72806766c62b634c3ba2968324776",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3455789_8",
+          "request_sha256": "51c7fd6435b4c99bb87d3cb63e894f220d7d42ec73ea2248c7a265a6bca834e1",
+          "response_sha256": "e42d337d35c7e3ddbfd0b2a45faa030b010b61609e992e442758df173ffe6ea0",
+          "retrieved_at": "2026-09-10T08:19:47.441537Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f8108c1f21635b7b3a52623bd75ae65cebcc8ce9c0a8391d042968e06fc5cd6e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3455789_image2_1.jpg"
+        },
+        "record_sha256": "be09730156ffb17ebedbabdfacf19411dc3a1bd5040d8618c9592dc03dee8a27",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 1,
+          "reason": "회색 벽돌과 연회색 보도블록, 노란 점자블록의 대비가 있으나 전반적으로 무난한 도시 배경이며 연출이 두드러지지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:518de034d05495f3895f2a3706267d181f8d49e49113973e6e0c67928c733dad",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "06319e21c2c034240af4500cb5ea15605ee72806766c62b634c3ba2968324776",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3455789_8",
+          "request_sha256": "51c7fd6435b4c99bb87d3cb63e894f220d7d42ec73ea2248c7a265a6bca834e1",
+          "response_sha256": "e42d337d35c7e3ddbfd0b2a45faa030b010b61609e992e442758df173ffe6ea0",
+          "retrieved_at": "2026-09-10T08:19:47.441537Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f8108c1f21635b7b3a52623bd75ae65cebcc8ce9c0a8391d042968e06fc5cd6e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3455789_image2_1.jpg"
+        },
+        "record_sha256": "35039a1e0d2facd789b8a12f73f384740f6cbad9cd26473b0d291ee177f6d2d1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "브라운 계열 패널과 기하학적 직조 무늬, 금속 손잡이가 정갈하고 세련된 실내 분위기를 형성하나 강한 연출감까지는 아님.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:adb5d2055bd88a87a134f460f3d6b4da05e8fc87626ce4dad79ed4149e859ccb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b68d2439e14baabf74556d49416722d5db4905073e1c5059855b8af9816b11df",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3455788_16",
+          "request_sha256": "51c7fd6435b4c99bb87d3cb63e894f220d7d42ec73ea2248c7a265a6bca834e1",
+          "response_sha256": "e42d337d35c7e3ddbfd0b2a45faa030b010b61609e992e442758df173ffe6ea0",
+          "retrieved_at": "2026-09-10T08:19:47.441537Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f5ae65b184549fa07d8fbbfe18a7a44e20cfe184ac8153c3ecef839470f92513",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/88/3455788_image2_1.jpg"
+        },
+        "record_sha256": "ea10b0cdf054f77f437c2cae8f0c6e23a7464dbea5471216b7049abfc1ce9e2f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cff21735e42cb6cc800226cd5cdb2066eb7c30ff18d470cb6b24aaa87d49e814",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b68d2439e14baabf74556d49416722d5db4905073e1c5059855b8af9816b11df",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3455788_16",
+          "request_sha256": "51c7fd6435b4c99bb87d3cb63e894f220d7d42ec73ea2248c7a265a6bca834e1",
+          "response_sha256": "e42d337d35c7e3ddbfd0b2a45faa030b010b61609e992e442758df173ffe6ea0",
+          "retrieved_at": "2026-09-10T08:19:47.441537Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f5ae65b184549fa07d8fbbfe18a7a44e20cfe184ac8153c3ecef839470f92513",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/88/3455788_image2_1.jpg"
+        },
+        "record_sha256": "ec6e9ebc66c98ea811a3207da4c228bb9a37d8b03e42721a9adf1c4440cab74a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "벽면의 반복 기하 무늬 패턴이 전통 문양을 연상시키지만 현대식 엘리베이터 마감재로 전통 외관의 비중은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ec6afd0eb98e25e720e31536f46e2a4aec2b50c382bf18ba99b8c8ac36752834",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b68d2439e14baabf74556d49416722d5db4905073e1c5059855b8af9816b11df",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3455788_16",
+          "request_sha256": "51c7fd6435b4c99bb87d3cb63e894f220d7d42ec73ea2248c7a265a6bca834e1",
+          "response_sha256": "e42d337d35c7e3ddbfd0b2a45faa030b010b61609e992e442758df173ffe6ea0",
+          "retrieved_at": "2026-09-10T08:19:47.441537Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f5ae65b184549fa07d8fbbfe18a7a44e20cfe184ac8153c3ecef839470f92513",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/88/3455788_image2_1.jpg"
+        },
+        "record_sha256": "95b19e38edb45b4016e81b111c4369c56e228773fd70d7335965bfd4bcdb8f10",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3e133f2c492a948eaee3688b48ca1f1957e7bab11004f762f626c9ec9d73c354",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3456336",
+          "request_sha256": "6a61fa6486ef92ca91d1925a0ffea9b46eb4c819cbfd240159fd0793e7f87477",
+          "response_sha256": "4bb655b740af70a80bbb08cdfe3e2e3cffe76700a201093afb3dcbc82a18c6c7",
+          "retrieved_at": "2026-09-10T07:58:21.827389Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2024-12-23T01:56:28Z",
+          "source_record_sha256": "52d8f8a8c463ba7d85565c62ece62ba771d42c6d69de90b1e6958262bd810b62",
+          "source_uri": null
+        },
+        "record_sha256": "d1fbf73e25d9154e65d112306d4b3ddecfd5eada9ce21936e2ba24c5884322c5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "서울 배봉산숲속도서관은 서울의 중심에 위치한 자연과 도서관이 결합된 독특한 공간으로, 도심 속에서 숲의 여유로움을 느끼며 책을 즐길 수 있는 특별한 장소이다. 이 도서관은 배봉산의 자연경관을 보존하면서, 책과 함께하는 힐링을 제공한다. 산책로와 숲속을 거닐며 도서관으로 향할 수 있는 접근성 덕분에 방문객은 자연 속에서 책을 읽거나 학습할 수 있는 편안한 환경을 경험할 수 있다. 배봉산숲속도서관은 다양한 프로그램과 행사도 운영하여, 지역 주민과 방문객들이 문화와 자연을 동시에 만끽할 수 있게 한다. 특히, 어린이들을 위한 프로그램과 숲 체험 활동은 어린이들에게 자연과 책의 중요성을 알리는 기회를 제공한다. 또한, 도서관 내에는 다양한 분야의 도서들이 마련되어 있어, 문화와 지식을 사랑하는 사람들에게 매력적인 공간으로 자리잡고 있다. 이 도서관은 단순히 책을 읽는 장소가 아니라, 자연과 함께하는 특별한 독서 경험을 제공하는 문화 공간이다. 자연과 책이 어우러진 힐링 공간으로, 바쁜 일상에서 잠시 벗어나 휴식과 학습을 동시에 할 수 있는 최적의 장소이다."
+      }
+    ],
+    "parent_source_sha256": "7f9bd95e99e9611dc8eb5bc97a8ab33fa784c223b48c6eb5fecc8dcc6d9bfc2f",
+    "place": {
+      "address": "서울특별시 동대문구 전농로16길 97 (전농동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+      "name_ko": "배봉산숲속도서관",
+      "place_id": "public:korea:17364bd7f5f0b81f79a362c944e14029fbee8d8f9f797afcafe90e0077abe537",
+      "provider_content_id": "3456336",
+      "region_code": "11230",
+      "region_name": "서울특별시 동대문구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

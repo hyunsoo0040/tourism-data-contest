@@ -1,0 +1,981 @@
+{
+  "assessed_at": "2026-09-11T19:25:39.933494Z",
+  "assessment_sha256": "07a545e5bd278c0e0e29df333e96116be9fa4826b32fa2b01952262a4360f0d9",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2d2d6eed5a92e74e55bcb954f45ed2dd2793d7f1ba4e3fbe128690ec714faa7b",
+            "appearance:6f65fb802a0da88818e611201686d1e6ba432d31cdf1ac117b2617b186650d67",
+            "appearance:a02bded640027e217543ab6c7b596cbdad8864cfc263148e30fe55fa3b88eb82"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "계곡·폭포·기암 명봉 등 경관 언급이 있으나 이는 자연 환경 서술이지 장소 이미지의 일관된 시각적 연출·표현에 대한 근거로 보기 어렵습니다.",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b01fd09f47ac1cd8746bbd72946d24fb8841012c3b17d9d73642d23fd80f118d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책로, 갈거 계곡, 산악자전거 임도, 야영 데크 등 방문자가 자신의 방식으로 탐색·이용할 수 있는 시설이 확인됩니다. 다만 자율 탐색이 방문 경험의 중심이라는 근거는 없어 수준 2로 판단합니다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b01fd09f47ac1cd8746bbd72946d24fb8841012c3b17d9d73642d23fd80f118d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:5ea6bd4a779ad5530f45711639821b51de84f49edc658055639b7137c35015ee",
+            "appearance:af6f4d54a0885c4c37b8e5ac8669098d9caa029c1555d846700fa7944e8a07bf",
+            "appearance:d95c4dfca11a30d50f46c1a2b3e8ef453b9b5ba8f38122ee42bd4cff933ddb8f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "계곡의 맑은 물, 폭포, 산악 환경 등 자연 환경 단서와 숙박·머무를 시설이 공식 설명으로 확인됩니다. 다만 실제 고요함·심리적 회복은 확정할 수 없어 수준 3으로 판단합니다.",
+      "value": 73
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6456b2d47c3845d95977037998fc9cda7335de636111e640b2710e24da8399e1",
+            "evidence:b01fd09f47ac1cd8746bbd72946d24fb8841012c3b17d9d73642d23fd80f118d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "목공 체험, 숲체험·숲해설 프로그램, 등산·산악자전거 등 구체적 참여 활동의 존재가 확인됩니다. 지속적 도전·몰입 규모에 대한 근거는 없어 수준 2로 판단합니다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공 자료는 휴양림 시설과 자연경관을 소개할 뿐 이 장소의 확인된 원형·문화유산과의 접촉 근거가 없습니다. 주변 금당사·마이산 언급은 인근 타 장소이므로 본 장소에 적용하지 않습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "운장산의 지리적 위치와 규모 설명은 있으나 이 휴양림 자체의 역사·연혁·사건·인물 맥락에 대한 구체적 서사는 제공되지 않습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 자료에 없습니다. '휴양림'이라는 명칭만으로 실제 전승을 추정할 수 없습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "숲해설 프로그램이 언급되나 그 내용이 원형·유산·전통과 연결된 역사적 해설인지에 대한 근거가 없어 문화유산 해설로 판단할 수 없습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "이 장소에 사회적으로 부여된 특정 이미지·상징적 의미의 내용을 보여주는 근거가 자료에 없습니다. 방문객이 많다는 서술은 의미의 내용이 아닙니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보물, SNS 등 매체를 통한 장소 이미지의 재현·유통 근거가 제공되지 않았습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "계곡·폭포·기암 명봉 등 경관 언급이 있으나 이는 자연 환경 서술이지 장소 이미지의 일관된 시각적 연출·표현에 대한 근거로 보기 어렵습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현(촬영 포인트 등)할 수 있다는 근거가 자료에 없습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:b01fd09f47ac1cd8746bbd72946d24fb8841012c3b17d9d73642d23fd80f118d",
+          "quote": {
+            "end": 482,
+            "method": "EXACT",
+            "original": "산악자전거를 탈 수 있는 임도도 마련되어 있다.",
+            "start": 456,
+            "submitted": "산악자전거를 탈 수 있는 임도도 마련되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e3783426c1dca846db8951bd120838c65aa3edec1f0bcba79fde6e5f24067691"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "산책로, 갈거 계곡, 산악자전거 임도, 야영 데크 등 방문자가 자신의 방식으로 탐색·이용할 수 있는 시설이 확인됩니다. 다만 자율 탐색이 방문 경험의 중심이라는 근거는 없어 수준 2로 판단합니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:b01fd09f47ac1cd8746bbd72946d24fb8841012c3b17d9d73642d23fd80f118d",
+          "quote": {
+            "end": 277,
+            "method": "EXACT",
+            "original": "휴양림 내에 있는 약 7㎞에 달하는 갈거 계곡에는 연중 맑은 물이 흐르고, 제방바위와 마당바위, 학의소, 정밀폭포는 빼어난 경관을 자랑해 가족 단위 혹은 단체 이용객이 휴양을 목적으로 즐겨 찾는다.",
+            "start": 167,
+            "submitted": "휴양림 내에 있는 약 7㎞에 달하는 갈거 계곡에는 연중 맑은 물이 흐르고, 제방바위와 마당바위, 학의소, 정밀폭포는 빼어난 경관을 자랑해 가족 단위 혹은 단체 이용객이 휴양을 목적으로 즐겨 찾는다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e3783426c1dca846db8951bd120838c65aa3edec1f0bcba79fde6e5f24067691"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "계곡의 맑은 물, 폭포, 산악 환경 등 자연 환경 단서와 숙박·머무를 시설이 공식 설명으로 확인됩니다. 다만 실제 고요함·심리적 회복은 확정할 수 없어 수준 3으로 판단합니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:b01fd09f47ac1cd8746bbd72946d24fb8841012c3b17d9d73642d23fd80f118d",
+          "quote": {
+            "end": 538,
+            "method": "EXACT",
+            "original": "휴양림에서는 에코백 만들기, 열쇠고리 만들기 등의 목재 체험과 숲 속 체험프로그램도 운영하고 있다.",
+            "start": 483,
+            "submitted": "휴양림에서는 에코백 만들기, 열쇠고리 만들기 등의 목재 체험과 숲 속 체험프로그램도 운영하고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e3783426c1dca846db8951bd120838c65aa3edec1f0bcba79fde6e5f24067691"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:6456b2d47c3845d95977037998fc9cda7335de636111e640b2710e24da8399e1",
+          "quote": {
+            "end": 21,
+            "method": "EXACT",
+            "original": "숲체험 프로그램 / 숲해설 프로그램 등",
+            "start": 0,
+            "submitted": "숲체험 프로그램 / 숲해설 프로그램 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e96d4bfc20aa1451552ccbb166aa84bc8be36dbe6577f70f810f6cd00044a509"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "목공 체험, 숲체험·숲해설 프로그램, 등산·산악자전거 등 구체적 참여 활동의 존재가 확인됩니다. 지속적 도전·몰입 규모에 대한 근거는 없어 수준 2로 판단합니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "가족·단체 이용 언급이 있으나 교류·공동 제작·자기표현 활동을 직접 제공한다는 근거는 없습니다. 이용객 유형만으로 유대 활동을 추정하지 않습니다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "8fb83fcbc074a9f3e7f87ace4c16ea1339caa8603fdf469db1f4e8e5f3c619c0",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "잔잔한 녹색 톤과 흰 자갈 바닥, 텐트의 노란색 대비가 보통 수준의 시각적 성격을 보이며 정돈된 구도다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2d2d6eed5a92e74e55bcb954f45ed2dd2793d7f1ba4e3fbe128690ec714faa7b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a4a5cac4d3890a45d2c15399fac34e5708d3e4e1f1afcfacd800b4d4c8f6265b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561377_7",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e5170cb5300f2dfca061e512520226abe60d04a3d59e3a1a95e38a2f798450dc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/77/3561377_image2_1.jpg"
+        },
+        "record_sha256": "293198535d65432966e5d30d05328c1da0b900c044b74d071e383bf477794cef",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "울창한 숲과 뒤덮인 산 전체가 배경을 지배하고, 길가 나무와 잔디 비탈이 자연 환경 단서를 풍부하게 보여줌.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5ea6bd4a779ad5530f45711639821b51de84f49edc658055639b7137c35015ee",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "18e7c1fafe6e54a6ea6818c7da309561ec958a47c4244f9dece81f724ae137d4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561380_2",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4ec390aa28ed910a177630436cb75f8e70e9abd0b9a4a9172c64f49d958e12f8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/80/3561380_image2_1.jpg"
+        },
+        "record_sha256": "ee873111c279048605a4c241a5ee5b13c4dcaf5b48ba2e54740d9ed238215f11",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "원목 판넬의 따뜻한 주황빛 건물이 구불길과 녹색 산 비탈 위에서 강한 대비를 이루며 시각적으로 두드러짐. 사선 지붕과 나무 난간의 반복 구도도 연출적임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6f65fb802a0da88818e611201686d1e6ba432d31cdf1ac117b2617b186650d67",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "18e7c1fafe6e54a6ea6818c7da309561ec958a47c4244f9dece81f724ae137d4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561380_2",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4ec390aa28ed910a177630436cb75f8e70e9abd0b9a4a9172c64f49d958e12f8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/80/3561380_image2_1.jpg"
+        },
+        "record_sha256": "55d04761c443bf2042bc3e4e905e0c715f7f8be6e1a1e8741ec3b6e5954df470",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "밝은 실내에 원목 가구와 녹색 의자, 채색된 보드 등이 조화를 이루며 교육 공간 특유의 정돈된 시각 구성이 보이나 극적인 연출은 아니다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a02bded640027e217543ab6c7b596cbdad8864cfc263148e30fe55fa3b88eb82",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2a686a0ce9343f9de68575ec781ed2f305e714232f34a80c293cc813a5eb37d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561381_3",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "258606b219517b38280c84fd669514fb344a2ac97b3d877e0657b80b0349d5e2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/81/3561381_image2_1.jpg"
+        },
+        "record_sha256": "e21ebdeb58ed247a69509d9958ad618461fba5d0e51c2721edc533000c58120e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 숲이 장면 전체 배경을 지배하며 자연 환경 단서가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:af6f4d54a0885c4c37b8e5ac8669098d9caa029c1555d846700fa7944e8a07bf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a4a5cac4d3890a45d2c15399fac34e5708d3e4e1f1afcfacd800b4d4c8f6265b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561377_7",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e5170cb5300f2dfca061e512520226abe60d04a3d59e3a1a95e38a2f798450dc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/77/3561377_image2_1.jpg"
+        },
+        "record_sha256": "f12155121f2c91b68d98c61b179f2d9b6bf4f86686b3761bab48cf3a347e35fb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "돌담 석축과 목재 외장이 자연 친화적 느낌을 주지만, 전반적 외관은 현대적 콘테이너형 숙박 시설로 전통 외관의 두드러짐은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d64f5b6cf2666561aceff58f82065c6ba813d7b7f489c6a34941f0c0cea9365e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "18e7c1fafe6e54a6ea6818c7da309561ec958a47c4244f9dece81f724ae137d4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561380_2",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4ec390aa28ed910a177630436cb75f8e70e9abd0b9a4a9172c64f49d958e12f8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/80/3561380_image2_1.jpg"
+        },
+        "record_sha256": "683a9211c6e185bd1e3f4c0d8a3d402daf12cda63d1ba14b387548a22febac99",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "긴 창 너머로 울창한 나무와 숲 배경이 보이지만 실내 중심 구도라 자연 단서의 비중은 제한적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d95c4dfca11a30d50f46c1a2b3e8ef453b9b5ba8f38122ee42bd4cff933ddb8f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2a686a0ce9343f9de68575ec781ed2f305e714232f34a80c293cc813a5eb37d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561381_3",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "258606b219517b38280c84fd669514fb344a2ac97b3d877e0657b80b0349d5e2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/81/3561381_image2_1.jpg"
+        },
+        "record_sha256": "47285b253cc3374e77f2c89c71f991baea52e3865951b03d2baaa1ed075b0b1a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "원목 선반과 소품, 자연물 전시 등이 온화한 분위기를 주지만 전통 건축 재료나 구성의 뚜렷한 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e0916407e683648a07c2adeaae438e1c6c2f047c79e45321ed1daac405b71f51",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2a686a0ce9343f9de68575ec781ed2f305e714232f34a80c293cc813a5eb37d3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561381_3",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "258606b219517b38280c84fd669514fb344a2ac97b3d877e0657b80b0349d5e2",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/81/3561381_image2_1.jpg"
+        },
+        "record_sha256": "bb424e73bdda1c80a034a4b91d2bd251b514f565655d95d0983c008ca29562e0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목재 데크와 통나무 울타리 등 자연재료 느낌이 약간 보이나 전통 외관은 뚜렷하지 않다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f029aae126bbbde970c951ca87ad989e76af589df82d0aa45a74d6dd0a37e68e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a4a5cac4d3890a45d2c15399fac34e5708d3e4e1f1afcfacd800b4d4c8f6265b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561377_7",
+          "request_sha256": "85e00b1b2f0bf5c1b393864070aefce5d2c524e3cb27b6f457b7c71c141528ba",
+          "response_sha256": "14399123d681130ece11dbda9290a03d90e5e95517813d22e96e3751cd487543",
+          "retrieved_at": "2026-09-10T08:29:25.468684Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e5170cb5300f2dfca061e512520226abe60d04a3d59e3a1a95e38a2f798450dc",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/77/3561377_image2_1.jpg"
+        },
+        "record_sha256": "6afc1b36e0c6e0bead6b7074ee1f877070a84b44754a757f50fdd91980fa9b5a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:09b4e976ad58708487b3461ae9e3bf5c8688eac8dfd7019df34fd10b9b06d4a8",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127169",
+          "request_sha256": "afe0d630e0378d5852690952febca01d2c2b33803f41dc1cf467900ea3fdc56f",
+          "response_sha256": "c2745efc545a5340e5de699d45d76f6f859474a7648004e02b9e4d7be78be603",
+          "retrieved_at": "2026-09-10T08:29:24.797957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "58cdf05903870adf8a7b5b7a1c4790dd134901b949bd0164b709a0a167967a81",
+          "source_uri": null
+        },
+        "record_sha256": "422bca8c2bce3942d011f794ea44514d4a8ddac6a55045889abc9409d3e5dc79",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "숲속의 집, 휴양관, 연립동, 야영장 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6456b2d47c3845d95977037998fc9cda7335de636111e640b2710e24da8399e1",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "127169",
+          "request_sha256": "afe0d630e0378d5852690952febca01d2c2b33803f41dc1cf467900ea3fdc56f",
+          "response_sha256": "333fe56397cbf907acb330272fb38a25b6831f707b9ace8ca027541e0155a1f8",
+          "retrieved_at": "2026-09-09T16:37:52.860602Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2b94d231f8840717f09603e36202c49056555a70dd1270573ba4ac2d537eac50",
+          "source_uri": null
+        },
+        "record_sha256": "e96d4bfc20aa1451552ccbb166aa84bc8be36dbe6577f70f810f6cd00044a509",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "숲체험 프로그램 / 숲해설 프로그램 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6fa6a96f15056b0d2c6e4014838e583e9ed1974900efb4c49c6601d8a56aec0f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127169",
+          "request_sha256": "afe0d630e0378d5852690952febca01d2c2b33803f41dc1cf467900ea3fdc56f",
+          "response_sha256": "c2745efc545a5340e5de699d45d76f6f859474a7648004e02b9e4d7be78be603",
+          "retrieved_at": "2026-09-10T08:29:24.797957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "31af930038df9157fb01afff5f7acc882a6f78ef4aa60019bb5a69ae33eea092",
+          "source_uri": null
+        },
+        "record_sha256": "45f03dcb84e66b74c6165c242e9b463fa79b2678169bcb75a41c5ee862b4ab12",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[숲속의집/연립동] - 성수기 82,000~173,000원 - 비성수기 45,000~98,000원 [휴양관] - 성수기 60,000~134,000원 - 비성수기 36,000~75,000원 [야영데크] - 15,000~16,500원"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7291dae8a6570be4927be6549ca4f31c5e8e9805347fa452aab6ffc50136d642",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127169",
+          "request_sha256": "afe0d630e0378d5852690952febca01d2c2b33803f41dc1cf467900ea3fdc56f",
+          "response_sha256": "c2745efc545a5340e5de699d45d76f6f859474a7648004e02b9e4d7be78be603",
+          "retrieved_at": "2026-09-10T08:29:24.797957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "40724c25ebbabe46980ec98efb16935e849d122f9856bd381365ff4f8528eb5d",
+          "source_uri": null
+        },
+        "record_sha256": "3df4f5e8c9205c73931b77920ae906c3abb6102d2d31831eebdd80b52533c082",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b01fd09f47ac1cd8746bbd72946d24fb8841012c3b17d9d73642d23fd80f118d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127169",
+          "request_sha256": "9969635dc23b828c6b7569227406a4126d5a56a8a6eb76709a4136fe10499172",
+          "response_sha256": "b45a571e762d970595a9bb44621be0bbcddaec22a8a9634ae503f1377b2f7ddc",
+          "retrieved_at": "2026-09-09T16:37:52.514464Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-04T06:29:23Z",
+          "source_record_sha256": "6b5c714ba8bfa6a9c5ddd796992dcdf1a8f30b8c53c716809f89d981adefff2c",
+          "source_uri": null
+        },
+        "record_sha256": "e3783426c1dca846db8951bd120838c65aa3edec1f0bcba79fde6e5f24067691",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "진안군 정천면, 주천면, 부귀면과 완주군 동상면에 걸쳐 있는 해발 1,126m의 운장산은 호남 노령의 여러 봉우리와 연결된 제1봉이다. 특히 해발 1,002m에 자리하고 있는 구봉산은 9개의 기암 명봉으로 이루어져 있으며, 구름다리(길이 100m)가 생긴 이후로 1일 등산 코스로도 각광받고 있다. 휴양림 내에 있는 약 7㎞에 달하는 갈거 계곡에는 연중 맑은 물이 흐르고, 제방바위와 마당바위, 학의소, 정밀폭포는 빼어난 경관을 자랑해 가족 단위 혹은 단체 이용객이 휴양을 목적으로 즐겨 찾는다. 운장산 자연휴양림의 총면적은 19.58㎢이고, 1일 최대 수용 인원은 300~600명이다. 숙박시설, 숲속 수련장, 산책로, 족구장, 주차장 등을 갖추고 있다. 숙박 시설은 총 객실이 25개로, 4인실에서 8~9인실까지 다양한 크기로 마련되어 있으며, 그 외에 야영객들을 위한 20동의 야영 데크도 갖추고 있다. 또한 산악자전거를 탈 수 있는 임도도 마련되어 있다. 휴양림에서는 에코백 만들기, 열쇠고리 만들기 등의 목재 체험과 숲 속 체험프로그램도 운영하고 있다. 대전광역시나 전라북도 전주시 등 주변 대도시로부터의 접근성이 좋으며, 주변에 금당사, 마이산도립 공원과 수선루, 와룡암이 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b7f2c49c77bf36513d50c3d0891dc5aec41cc98f860b0c5acc51aac644ebb228",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127169",
+          "request_sha256": "afe0d630e0378d5852690952febca01d2c2b33803f41dc1cf467900ea3fdc56f",
+          "response_sha256": "c2745efc545a5340e5de699d45d76f6f859474a7648004e02b9e4d7be78be603",
+          "retrieved_at": "2026-09-10T08:29:24.797957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "78328876215ff9da266ff8502bc8b69028c6313b399ff39e3a729f19690df0b9",
+          "source_uri": null
+        },
+        "record_sha256": "c8651d73af6ba8dba966ba2ba4fe6d47bb170bea4fe24967ce208c6a40a976ad",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[어른] - 개인 1,000원 - 단체 800원 [청소년] - 개인 600원 - 단체 500원 [어린이] - 개인 300원 - 단체 200원 ※ 동절기(12월~3월)에는 입장료 면제"
+      }
+    ],
+    "parent_source_sha256": "420a862de3ea27459aabbdedec008551b43d7e40d38eeaf4abad6f6c01567236",
+    "place": {
+      "address": "전북특별자치도 진안군 정천면 휴양림길 77",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+      "name_ko": "국립 운장산자연휴양림",
+      "place_id": "public:korea:e458f5928c29aeba2c003861710108d1da98f7992903a4394b504982cfd4e40d",
+      "provider_content_id": "127169",
+      "region_code": "52720",
+      "region_name": "전북특별자치도 진안군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,812 @@
+{
+  "assessed_at": "2026-09-11T17:43:49.834745Z",
+  "assessment_sha256": "025db0c7b58c7875f0bc75fd69fe8e3cda6a64679133c8dc2681f2be62af207e",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.a",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.b",
+        "H.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 53
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 68
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소(월명사, 부산 기장)의 창건 연도·창건자·기도처 전설 등 연혁을 간단히 소개하므로 역사 맥락의 기본 수준 지원. 깊은 탐구 자료는 확인되지 않는다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.c",
+      "missing_channels": [],
+      "reason": "인근 마을 주민들에게 전해지는 약수 전승과 불교미술 작가의 현장 활동이 확인되어 제한적이나 실제 지역 전승·생활문화와 연결된다. 그러나 이것이 방문 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'해와 달의 조화', '자연의 흐름을 거스르지 않는 소탈한 사찰'이라는 구체적 이미지가 장소와 연결되어 있으나, 이 의미의 경험이 방문의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:38b6dc5c376f2ebfacf1434991ab182608733e4dd1a6f8a41c0121a091ca0dc1",
+            "appearance:db98b10ea9d58afc2c5cd832292b2d10865b83fd81a120daa490c4bb28e12ca8"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "해당 출처의 허용 claim은 VISUAL_APPEARANCE를 포함하지 않으므로 E.c 텍스트 근거는 VISUAL_EXPRESSION으로 표기한다. 소탈한 경내 분위기와 나한상·동자상 등 이 장소에서 구별되는 시각적 성격이 확인되나, 장면을 지배하는 일관된 연출이라는 근거는 없어 수준 2로 평가한다.",
+      "value": 56
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "호젓한 산책코스로 자율적으로 탐색할 수 있는 기회가 확인된다. 다만 자유로운 탐색이 방문 경험의 중심이라고 단정하기는 어렵다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0fa4ecc76c7ea2565fd3cb6a80515a33bcda7a47f611533c4278188ee233fe20",
+            "appearance:8ec905971c84fe2993a3c435e5dbf139fe5429559503b1a77f109205db62343a"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 88,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "산 자락의 호젓한 위치, 약수, 낙조 등 자연·저자극 환경 단서가 두드러지게 확인된다. 실제 고요함·혼잡이나 회복 효과를 확정하지는 않는다.",
+      "value": 78
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "산책·등반이라는 신체 참여 활동의 기회가 확인되나, 지속적 도전이나 집중 활동의 중심이라는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "ABSENCE_OF_EVIDENCE_IS_NOT_ZERO",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+          "quote": {
+            "end": 439,
+            "method": "EXACT",
+            "original": "1882년 범어사의 김법성 스님이 창건한 수행도량으로만 알려져 있을 뿐",
+            "start": 400,
+            "submitted": "1882년 범어사의 김법성 스님이 창건한 수행도량으로만 알려져 있을 뿐",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fdc380ca2d2f40cf36fcd4671f2eca60153849a13c4b008186effd01bd59347f"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 2,
+      "reason": "이 장소(월명사, 부산 기장)의 창건 연도·창건자·기도처 전설 등 연혁을 간단히 소개하므로 역사 맥락의 기본 수준 지원. 깊은 탐구 자료는 확인되지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "LIVING_TRADITION",
+          "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+          "quote": {
+            "end": 517,
+            "method": "EXACT",
+            "original": "경내 샘에서 솟아나는 오랜 효험의 약수가 인근 마을 사람들의 입을 통해 명약으로 알려져 있고",
+            "start": 466,
+            "submitted": "경내 샘에서 솟아나는 오랜 효험의 약수가 인근 마을 사람들의 입을 통해 명약으로 알려져 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fdc380ca2d2f40cf36fcd4671f2eca60153849a13c4b008186effd01bd59347f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.c",
+      "level": 2,
+      "reason": "인근 마을 주민들에게 전해지는 약수 전승과 불교미술 작가의 현장 활동이 확인되어 제한적이나 실제 지역 전승·생활문화와 연결된다. 그러나 이것이 방문 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "제공된 자료에 원형·유산에 연결된 해설·전시·탐구 프로그램의 근거가 없다. 부재의 명시도 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+          "quote": {
+            "end": 629,
+            "method": "EXACT",
+            "original": "일광산의 해와 월명사의 달이 어우러져 조화를 이룬 곳이라",
+            "start": 598,
+            "submitted": "일광산의 해와 월명사의 달이 어우러져 조화를 이룬 곳이라",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fdc380ca2d2f40cf36fcd4671f2eca60153849a13c4b008186effd01bd59347f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'해와 달의 조화', '자연의 흐름을 거스르지 않는 소탈한 사찰'이라는 구체적 이미지가 장소와 연결되어 있으나, 이 의미의 경험이 방문의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체(작품·홍보·SNS 등)를 통한 장소 이미지의 유통에 대한 근거가 제공되지 않았다. '알려지지 않은' 서술만으로는 유통의 확인이 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+          "quote": {
+            "end": 328,
+            "method": "EXACT",
+            "original": "경내 뜰 곳곳에서 아기자기하고 소탈한 면면들을 발견할 수 있는",
+            "start": 294,
+            "submitted": "경내 뜰 곳곳에서 아기자기하고 소탈한 면면들을 발견할 수 있는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fdc380ca2d2f40cf36fcd4671f2eca60153849a13c4b008186effd01bd59347f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "해당 출처의 허용 claim은 VISUAL_APPEARANCE를 포함하지 않으므로 E.c 텍스트 근거는 VISUAL_EXPRESSION으로 표기한다. 소탈한 경내 분위기와 나한상·동자상 등 이 장소에서 구별되는 시각적 성격이 확인되나, 장면을 지배하는 일관된 연출이라는 근거는 없어 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다. 상징 이미지(해와 달)의 언급만으로 체험 기회를 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+          "quote": {
+            "end": 736,
+            "method": "EXACT",
+            "original": "경내로부터 시작되는 가파르지도 험하지도 않은 호젓한 산책코스를 이용하는 등반객들의 쉼터로 이용되곤 한다",
+            "start": 679,
+            "submitted": "경내로부터 시작되는 가파르지도 험하지도 않은 호젓한 산책코스를 이용하는 등반객들의 쉼터로 이용되곤 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fdc380ca2d2f40cf36fcd4671f2eca60153849a13c4b008186effd01bd59347f"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "호젓한 산책코스로 자율적으로 탐색할 수 있는 기회가 확인된다. 다만 자유로운 탐색이 방문 경험의 중심이라고 단정하기는 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+          "quote": {
+            "end": 293,
+            "method": "EXACT",
+            "original": "일광산 자락에 자리한 월명사는 비록 넉넉한 사세는 갖추지 않았지만",
+            "start": 257,
+            "submitted": "일광산 자락에 자리한 월명사는 비록 넉넉한 사세는 갖추지 않았지만",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fdc380ca2d2f40cf36fcd4671f2eca60153849a13c4b008186effd01bd59347f"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "산 자락의 호젓한 위치, 약수, 낙조 등 자연·저자극 환경 단서가 두드러지게 확인된다. 실제 고요함·혼잡이나 회복 효과를 확정하지는 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+          "quote": {
+            "end": 736,
+            "method": "EXACT",
+            "original": "호젓한 산책코스를 이용하는 등반객들의 쉼터로 이용되곤 한다",
+            "start": 704,
+            "submitted": "호젓한 산책코스를 이용하는 등반객들의 쉼터로 이용되곤 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fdc380ca2d2f40cf36fcd4671f2eca60153849a13c4b008186effd01bd59347f"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "산책·등반이라는 신체 참여 활동의 기회가 확인되나, 지속적 도전이나 집중 활동의 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 직접 근거가 없다. 작가 활동은 관계 프로그램이라고 볼 수 없고 신도가 적다는 서술만으로 부재를 확정할 수도 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "ABSENCE_OF_EVIDENCE_IS_NOT_ZERO",
+      "key": "H.a",
+      "proposed": {
+        "basis": "EXPLICIT_LOW",
+        "citations": [
+          {
+            "claim": "HERITAGE_FACT",
+            "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+            "quote": "이렇다 할 기록이나 추정할 만한 유물도 없다"
+          }
+        ],
+        "key": "H.a",
+        "level": 0,
+        "reason": "개요가 이 장소(월명사)에 대해 확인된 기록·유물이 없음을 직접 명시하므로, 실제 원형·유산과의 접촉은 낮음으로 평가한다. 사찰의 존재만으로 유산 실물 접촉을 추정하지 않는다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "ABSENCE_OF_EVIDENCE_IS_NOT_ZERO"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "f9841bcc69e528515fdec2fefb69cd1f6c23f4aedb156abf4652c0e0d83aed70",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "잔디 바닥, 다양한 관목과 수림, 울창한 숲 배경이 화면 대부분을 차지해 자연 환경 단서가 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0fa4ecc76c7ea2565fd3cb6a80515a33bcda7a47f611533c4278188ee233fe20",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d182ca579a46f8f08a09c430f19264f89a8fcfa093c454eebb596860103cc289",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561191_5",
+          "request_sha256": "9106393b63567099db40a8d561f0c52e7ca178dbfc2887a9cc2a1849c38065b4",
+          "response_sha256": "6e0f3b47d4661b8e65eceb6e23f2a024f8b3e874aab866c62a0bbaf065714792",
+          "retrieved_at": "2026-09-10T08:24:51.734853Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b74e2f3d243150a7f04f4728926d27f159542c0567de5d0f5fc2997a48063e4a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/91/3561191_image2_1.jpg"
+        },
+        "record_sha256": "9a036221d443fe0de60506c97393077466795c3f49437a170d504c6d5ee105dd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "바위 틈에 안치된 채색 불상이 화려한 금색 광배와 붉은·녹색 채색으로 시선을 집중시키며, 자연석과 대비되는 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:38b6dc5c376f2ebfacf1434991ab182608733e4dd1a6f8a41c0121a091ca0dc1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0670c9c30102cb98b579f8f6d3d6badd8060eaf9c0fc280de83b1c571d342786",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561190_3",
+          "request_sha256": "9106393b63567099db40a8d561f0c52e7ca178dbfc2887a9cc2a1849c38065b4",
+          "response_sha256": "6e0f3b47d4661b8e65eceb6e23f2a024f8b3e874aab866c62a0bbaf065714792",
+          "retrieved_at": "2026-09-10T08:24:51.734853Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e782cf0b9ab063df56f42b6acd7b930f3964c4168c09a30e14e1aaa793665d83",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/90/3561190_image2_1.jpg"
+        },
+        "record_sha256": "0be0dcd4fe49a7ba64c7b722d799f98c27d152d47f488e96945231ba58bf61a9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "거대한 암반과 덩굴, 활엽수 녹지가 배경 전체를 덮어 자연 환경 단서가 매우 풍부함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8ec905971c84fe2993a3c435e5dbf139fe5429559503b1a77f109205db62343a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0670c9c30102cb98b579f8f6d3d6badd8060eaf9c0fc280de83b1c571d342786",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561190_3",
+          "request_sha256": "9106393b63567099db40a8d561f0c52e7ca178dbfc2887a9cc2a1849c38065b4",
+          "response_sha256": "6e0f3b47d4661b8e65eceb6e23f2a024f8b3e874aab866c62a0bbaf065714792",
+          "retrieved_at": "2026-09-10T08:24:51.734853Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e782cf0b9ab063df56f42b6acd7b930f3964c4168c09a30e14e1aaa793665d83",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/90/3561190_image2_1.jpg"
+        },
+        "record_sha256": "ea20f2f26423354ff88a2e37100f25562ea715fdc3a0329adfa762620e6bafbb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "다층 지붕의 석탑, 조각된 기단, 옹기 등 전통적으로 보이는 재료와 형태가 두드러지게 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a60eac8a71e211162cf9f5db32fbd12d030636a67c3476f96e4338b09a3daec9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d182ca579a46f8f08a09c430f19264f89a8fcfa093c454eebb596860103cc289",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561191_5",
+          "request_sha256": "9106393b63567099db40a8d561f0c52e7ca178dbfc2887a9cc2a1849c38065b4",
+          "response_sha256": "6e0f3b47d4661b8e65eceb6e23f2a024f8b3e874aab866c62a0bbaf065714792",
+          "retrieved_at": "2026-09-10T08:24:51.734853Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b74e2f3d243150a7f04f4728926d27f159542c0567de5d0f5fc2997a48063e4a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/91/3561191_image2_1.jpg"
+        },
+        "record_sha256": "3dfaac5c89ff6dd5eaae5b9b972f1fedcf7bde9a6b81fbcffa088e9c485d76b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "돌담 쌓기, 석조 향로, 불상, 돌로 된 봉안터 등 전통 사찰 외관의 재료와 구성이 뚜렷이 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b9607cc06b300cb774c9bc6d376a8355a379a679be35c4333846987e15fbba71",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0670c9c30102cb98b579f8f6d3d6badd8060eaf9c0fc280de83b1c571d342786",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561190_3",
+          "request_sha256": "9106393b63567099db40a8d561f0c52e7ca178dbfc2887a9cc2a1849c38065b4",
+          "response_sha256": "6e0f3b47d4661b8e65eceb6e23f2a024f8b3e874aab866c62a0bbaf065714792",
+          "retrieved_at": "2026-09-10T08:24:51.734853Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e782cf0b9ab063df56f42b6acd7b930f3964c4168c09a30e14e1aaa793665d83",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/90/3561190_image2_1.jpg"
+        },
+        "record_sha256": "e8bca6c0b3fad345ee988c9dc41e018614bcc260526fd7d6bf89afe12f8d3ad4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "중앙에 석탑을 정중앙 구도로 배치해 시선이 집중되며, 자연 초록과 회백색 석재의 대비가 뚜렷하고 채도 낮은 차분한 색조가 화면 전체의 정적인 성격을 이끈다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:db98b10ea9d58afc2c5cd832292b2d10865b83fd81a120daa490c4bb28e12ca8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d182ca579a46f8f08a09c430f19264f89a8fcfa093c454eebb596860103cc289",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3561191_5",
+          "request_sha256": "9106393b63567099db40a8d561f0c52e7ca178dbfc2887a9cc2a1849c38065b4",
+          "response_sha256": "6e0f3b47d4661b8e65eceb6e23f2a024f8b3e874aab866c62a0bbaf065714792",
+          "retrieved_at": "2026-09-10T08:24:51.734853Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b74e2f3d243150a7f04f4728926d27f159542c0567de5d0f5fc2997a48063e4a",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/91/3561191_image2_1.jpg"
+        },
+        "record_sha256": "8b5435713f86d2c3e2c34f685a64196b186e5cecb7f25be0c88ca95887c6e61c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:44f5b918dabf0458eb42d95d927adf5b1187895b5a44af548cc764e20d702ddf",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "347229",
+          "request_sha256": "a53825d8e9da2091728c856fd5c82297d96f39cf89566ccb87dfe6aae59ec433",
+          "response_sha256": "09ee68da821006efcffaa67fc1d99db73c083172e421662c96babae8ccc91b02",
+          "retrieved_at": "2026-09-10T08:14:43.451765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-04T05:43:48Z",
+          "source_record_sha256": "8dfedeb5e385786bd0408a3cdc63fdc718b18a7681f9963d740151acc0bc3136",
+          "source_uri": null
+        },
+        "record_sha256": "fdc380ca2d2f40cf36fcd4671f2eca60153849a13c4b008186effd01bd59347f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "월명사는 부산 기장군 일광면 일광산 자락에 위치해 있다. 들머리는 한센병 환자 공동체마을인 ‘삼덕마을'로부터 시작된다. 부산에서 14번 국도를 따라 반송동을 거쳐 기장, 일광면으로 접어들어도 되고 부산 도심을 통과한 후 경치 좋은 해운대를 거쳐 송정, 기장, 일광면으로 향해도 좋다. 일광 바다 바로 뒤편, 병풍처럼 버티고 앉은 일광산(日光山)은 해 떨어지는 낙조가 특히 아름답다 하여 일광팔경 가운데 하나인 일광낙조(日光落照)로 이름난 곳이다. 바로 이곳, 일광산 자락에 자리한 월명사는 비록 넉넉한 사세는 갖추지 않았지만 경내 뜰 곳곳에서 아기자기하고 소탈한 면면들을 발견할 수 있는 그리 알려지지 않은 태고종 사찰이다. 전해오는 일설에 따르면 예로부터 불상을 모시고 치성을 드린 기도처였다고는 하나 현재로서는 1882년 범어사의 김법성 스님이 창건한 수행도량으로만 알려져 있을 뿐 이렇다 할 기록이나 추정할 만한 유물도 없다. 경내 샘에서 솟아나는 오랜 효험의 약수가 인근 마을 사람들의 입을 통해 명약으로 알려져 있고, 월명사(月明寺)와 친분이 있는 불교미술 작가들이 이곳에서 작품활동을 하는 터라 경내 곳곳에서 나한상과 동자상들을 심심찮게 볼 수 있어 좋다. 일광산의 해와 월명사의 달이 어우러져 조화를 이룬 곳이라 자연의 흐름을 거스르지 않은 채 있는 그대로 앉아있는 월명사는 현재 신도는 많지 않으나 경내로부터 시작되는 가파르지도 험하지도 않은 호젓한 산책코스를 이용하는 등반객들의 쉼터로 이용되곤 한다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5cf8b3fd0126eba4481803df5b5d7b0939dac50d503df120cb99a2d37bfde7f8",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "347229",
+          "request_sha256": "75aa70bd7b7f2564f63f963127527d1bbfbadceb109e8269bf81debbacde6fee",
+          "response_sha256": "e2419ccd1e332c2f4c0021b65e3b3b1f6cead0e5c6fac042d493667caaa0a794",
+          "retrieved_at": "2026-09-10T08:24:51.406842Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "04ddcb4b2b0e7b45b3d6c528ec2d3d817223ee6cd7ded974f820655e895b7147",
+          "source_uri": null
+        },
+        "record_sha256": "9d79827a1b5f875ca994df8ecaf2e40d79b66d22d3a49439cf26cbaa2a72487f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "08292c5c8396e1badae255b48c27dd810e322551ceee3fd1b5790abff7668b9a",
+    "place": {
+      "address": "부산광역시 기장군 일광면 참샘길 124",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+      "name_ko": "월명사(부산)",
+      "place_id": "public:korea:805793443b8554c8fc76a32008486299bcdc6f3cc03704a8652add1b68dc81f4",
+      "provider_content_id": "347229",
+      "region_code": "26710",
+      "region_name": "부산광역시 기장군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

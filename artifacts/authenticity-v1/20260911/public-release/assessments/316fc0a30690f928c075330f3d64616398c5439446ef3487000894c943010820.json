@@ -1,0 +1,844 @@
+{
+  "assessed_at": "2026-09-11T18:20:54.226118Z",
+  "assessment_sha256": "316fc0a30690f928c075330f3d64616398c5439446ef3487000894c943010820",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 83
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "대상 일치(강릉 오죽헌) 확인. 조선초기 건물이 보물로 지정되어 실물 원형을 관람할 수 있으며, 율곡 이이의 출생지라는 점에서 유산 접촉이 방문 경험의 중심이라 볼 수 있다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "율곡 이이·사임당 등 구체적 인물과 장소의 역사적 연계가 제시되고, 경내 문성사·어제각 등 관련 건물 맥락이 소개되어 그 장소의 실제 역사 이해를 지원한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "율곡기념관 전시와 시립박물관의 향토민속관·역사문화관 전시가 유산·전통에 연결된 설명·탐구 기회를 제공한다. 다층 해설 프로그램까지의 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "율곡·사임당 관련 명소라는 사회적으로 공유된 이미지가 장소에 부여되어 있으나, 그 의미의 표현·재현 경험에 대한 구체적 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:c45fae8d24d581ce7a35c67dcba84e46f7e23c9c96675a0f73f2a2a9955238fd",
+            "appearance:e33f4343113eec4da2339da1abf05fc6e5bb66e9d208e8228d4fcd781e33517b",
+            "appearance:f7414bbc8aaf07bd2bbd799378f32bf2861bb83e2e09211bd4ad44f095a3beee"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출 등 시각적 표현에 대한 묘사가 제공된 자료에 없다. 전통 건물이라는 사실만으로 시각적 성격의 표현 강도를 판단하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:080edfe519184ddd92fe2c2581aa816623e654eb368065287be18533ce9a9183",
+            "appearance:0b0876c4742814e84d802a19e9e3765e7feacb6991489e63667495d774fd6fe4",
+            "appearance:51eec3943970b87a1e20e5949ad308901afc5a017ddb2d47a79b8fa089605230"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연 환경·저자극·머무를 환경에 대한 직접적 서술이 없다. 오죽(검은 대숲)이라는 이름만으로 회복 환경을 추정하지 않는다.",
+      "value": 67
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2",
+          "quote": {
+            "end": 144,
+            "method": "EXACT",
+            "original": "오죽헌은 조선초기의 건축물로 건축사적인 면에서 그 중요성을 인정받아 보물로 지정되었다. 이곳 오죽헌 몽룡실에서 율곡 이이가 태어났다.",
+            "start": 70,
+            "submitted": "오죽헌은 조선초기의 건축물로 건축사적인 면에서 그 중요성을 인정받아 보물로 지정되었다. 이곳 오죽헌 몽룡실에서 율곡 이이가 태어났다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2a4dc8a75743e24edc392cdda32e77680f0cdd0292fd548017159fd8fe52291a"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 4,
+      "reason": "대상 일치(강릉 오죽헌) 확인. 조선초기 건물이 보물로 지정되어 실물 원형을 관람할 수 있으며, 율곡 이이의 출생지라는 점에서 유산 접촉이 방문 경험의 중심이라 볼 수 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2",
+          "quote": {
+            "end": 47,
+            "method": "EXACT",
+            "original": "조선시대의 대학자 율곡 이이와 관련하여 유명해진 강릉 지역의 대표적인 유적지인 오죽헌",
+            "start": 0,
+            "submitted": "조선시대의 대학자 율곡 이이와 관련하여 유명해진 강릉 지역의 대표적인 유적지인 오죽헌",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2a4dc8a75743e24edc392cdda32e77680f0cdd0292fd548017159fd8fe52291a"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 3,
+      "reason": "율곡 이이·사임당 등 구체적 인물과 장소의 역사적 연계가 제시되고, 경내 문성사·어제각 등 관련 건물 맥락이 소개되어 그 장소의 실제 역사 이해를 지원한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "1962년부터 현재까지의 제곡제 봉행으로 지속 전승의 존재는 확인되나, 원문에 주최 주체(지역 주체)와 방문자의 경험 방식이 명시되지 않아 '실제 지역 주체의 지속 활동을 경험' 수준 3까지 직접 뒷받침되지 않는다. 상위 한계로 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2",
+          "quote": {
+            "end": 254,
+            "method": "EXACT",
+            "original": "율곡기념관에는 사임당, 율곡, 매창, 옥산의 예술적 면모를 살펴볼 수 있는 유작들이 전시되어 있다.",
+            "start": 199,
+            "submitted": "율곡기념관에는 사임당, 율곡, 매창, 옥산의 예술적 면모를 살펴볼 수 있는 유작들이 전시되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2a4dc8a75743e24edc392cdda32e77680f0cdd0292fd548017159fd8fe52291a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 3,
+      "reason": "율곡기념관 전시와 시립박물관의 향토민속관·역사문화관 전시가 유산·전통에 연결된 설명·탐구 기회를 제공한다. 다층 해설 프로그램까지의 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2",
+          "quote": {
+            "end": 47,
+            "method": "EXACT",
+            "original": "율곡 이이와 관련하여 유명해진 강릉 지역의 대표적인 유적지인 오죽헌",
+            "start": 10,
+            "submitted": "율곡 이이와 관련하여 유명해진 강릉 지역의 대표적인 유적지인 오죽헌",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2a4dc8a75743e24edc392cdda32e77680f0cdd0292fd548017159fd8fe52291a"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "율곡·사임당 관련 명소라는 사회적으로 공유된 이미지가 장소에 부여되어 있으나, 그 의미의 표현·재현 경험에 대한 구체적 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체 작품·홍보·SNS 등 장소 이미지의 유통 경로에 대한 근거가 제공되지 않았다. 유명하다는 서술만으로 유통 강도를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출 등 시각적 표현에 대한 묘사가 제공된 자료에 없다. 전통 건물이라는 사실만으로 시각적 성격의 표현 강도를 판단하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있는지에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "경내 여러 시설이 있어 자율 탐색 여지를 추정할 수 있으나, 자율적 선택·탐색을 직접 지원한다는 근거는 명시되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경·저자극·머무를 환경에 대한 직접적 서술이 없다. 오죽(검은 대숲)이라는 이름만으로 회복 환경을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "관람·전시 중심으로 서술되어 있고 만들기·탐방 등 참여·집중 활동의 기회에 대한 근거가 없다. 제곡제 봉행의 방문자 참여 여부도 명시되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 명시적 근거가 없다. 추모 제례가 봉행된다는 사실만으로 방문자 간 교류나 참여를 추정하지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "02695a56a7095a79c88f0eb1e155d6ffea8270c923a3a436f98039f08cc07a8c",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "LIVING_TRADITION",
+              "evidence_id": "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2",
+              "quote": {
+                "end": 302,
+                "method": "EXACT",
+                "original": "1962년부터 현재까지 매년 율곡을 추모하는 대현 이율곡선생 제곡제를 봉행하고 있다.",
+                "start": 255,
+                "submitted": "1962년부터 현재까지 매년 율곡을 추모하는 대현 이율곡선생 제곡제를 봉행하고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "2a4dc8a75743e24edc392cdda32e77680f0cdd0292fd548017159fd8fe52291a"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.c",
+          "level": 3,
+          "reason": "60년 이상 현재까지 지속되는 추모 제례가 확인되어 이 장소에 연결된 실제 전승 활동이 존재한다. 방문자가 직접 참여하는지는 명시되지 않아 관람 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.c",
+          "reason": "1962년부터 현재까지의 제곡제 봉행으로 지속 전승의 존재는 확인되나, 원문에 주최 주체(지역 주체)와 방문자의 경험 방식이 명시되지 않아 '실제 지역 주체의 지속 활동을 경험' 수준 3까지 직접 뒷받침되지 않는다. 상위 한계로 남긴다."
+        }
+      },
+      "reason": "1962년부터 현재까지의 제곡제 봉행으로 지속 전승의 존재는 확인되나, 원문에 주최 주체(지역 주체)와 방문자의 경험 방식이 명시되지 않아 '실제 지역 주체의 지속 활동을 경험' 수준 3까지 직접 뒷받침되지 않는다. 상위 한계로 남긴다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "39cf006aa24f11ab71d0a74bb0c73019387a04303aa691f2e9ce3ac1d653cd05",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "건물 뒤편으로 울창한 소나무 숲과 녹지가 넓게 보여 자연 환경 단서가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:080edfe519184ddd92fe2c2581aa816623e654eb368065287be18533ce9a9183",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0f7a07976c6fdcd9e5f6e5c79a78b498fc4ba2e77b39058b060900bf68ef44b5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3527140_2",
+          "request_sha256": "886b95696d7ee09d987633e5d1b6e518d3d2560bdea905c182edc5c83d98d34d",
+          "response_sha256": "533b592cca99564f2816d15f71da62de35c3de75006d2389aae1caea7d8c1d63",
+          "retrieved_at": "2026-09-11T02:08:19.524618Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3c077afa8ffaeb43175f952a9608aa6037b5936998b029c5774708b2d5cecb8b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/40/3527140_image2_1.jpg"
+        },
+        "record_sha256": "b8e394f2a0c8bbde0b2d764de2146e2e5b992028ab2167c53ecdf9444e20f789",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "잔디 언덕, 푸른 수목, 화사한 꽃, 트인 하늘과 구름 등 자연 환경 단서가 넓게 자리함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0b0876c4742814e84d802a19e9e3765e7feacb6991489e63667495d774fd6fe4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a93efbbe2dc88a9933c0c3079bcf36bc3970b2097d88328f9a843a755857b5f3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3527139_1",
+          "request_sha256": "886b95696d7ee09d987633e5d1b6e518d3d2560bdea905c182edc5c83d98d34d",
+          "response_sha256": "533b592cca99564f2816d15f71da62de35c3de75006d2389aae1caea7d8c1d63",
+          "retrieved_at": "2026-09-11T02:08:19.524618Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b898cdfccb3e314457e76a143ea896e5982a69b0401ebddefa86ef6d2e8481c1",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/39/3527139_image2_1.jpg"
+        },
+        "record_sha256": "24caa68fd1a316ffbe7f1039ef9de58f82bfd3642019e55dbf2f6a54ee218b94",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "작품 속에 덩굴, 잎, 오이·수박 같은 과채류, 잠자리 등 자연 소재가 그려져 있으나 이는 그림 안의 표현이며 실제 자연 경관은 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:51eec3943970b87a1e20e5949ad308901afc5a017ddb2d47a79b8fa089605230",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b47952bce2b63d28aee090d5238291b909bdfdfbc9759e5b12b54729a60081e7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3527142_4",
+          "request_sha256": "886b95696d7ee09d987633e5d1b6e518d3d2560bdea905c182edc5c83d98d34d",
+          "response_sha256": "533b592cca99564f2816d15f71da62de35c3de75006d2389aae1caea7d8c1d63",
+          "retrieved_at": "2026-09-11T02:08:19.524618Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a8e2ea62446c2803989a2806073e4d53c8713e7b9e3a3da3837ef72a710506e1",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/42/3527142_image2_1.jpg"
+        },
+        "record_sha256": "def271adc0671d3c97e90cdf4c7fa6f099b13a1df50ba4225cb99aabe510af92",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "두 개의 전통 화폭(과일·곤충 소재)과 금빛 전통 문양 장식 테두리가 관람대 위에 전시되어 전통적 외관이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9039f7acc8f7ede131d05de10be8b06b7e9121a4fb9d4c829732ab27de3ef779",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b47952bce2b63d28aee090d5238291b909bdfdfbc9759e5b12b54729a60081e7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3527142_4",
+          "request_sha256": "886b95696d7ee09d987633e5d1b6e518d3d2560bdea905c182edc5c83d98d34d",
+          "response_sha256": "533b592cca99564f2816d15f71da62de35c3de75006d2389aae1caea7d8c1d63",
+          "retrieved_at": "2026-09-11T02:08:19.524618Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a8e2ea62446c2803989a2806073e4d53c8713e7b9e3a3da3837ef72a710506e1",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/42/3527142_image2_1.jpg"
+        },
+        "record_sha256": "aeff41af71d48b76bbf4e9d6ec2d3f98e587b74997ff98e244373240f570fa53",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와 지붕, 흙벽, 목재 기둥, 돌담과 대지 등 전통 한옥 외관이 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bf0f5450c655e7bae1829fb9c6845ef6e345b2c912580f3e617c89a517f4cbf6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0f7a07976c6fdcd9e5f6e5c79a78b498fc4ba2e77b39058b060900bf68ef44b5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3527140_2",
+          "request_sha256": "886b95696d7ee09d987633e5d1b6e518d3d2560bdea905c182edc5c83d98d34d",
+          "response_sha256": "533b592cca99564f2816d15f71da62de35c3de75006d2389aae1caea7d8c1d63",
+          "retrieved_at": "2026-09-11T02:08:19.524618Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3c077afa8ffaeb43175f952a9608aa6037b5936998b029c5774708b2d5cecb8b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/40/3527140_image2_1.jpg"
+        },
+        "record_sha256": "fa8200d455eba420689cb5a00e1b893855c040ed4fed1144aede5b1c37f168a5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "중앙의 한옥 누각이 대칭 구도로 강조되고, 붉은 기와 문과 분홍 꽃나무, 넓은 석양 바닥이 조화를 이루며 장면의 시각적 성격이 뚜렷함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c45fae8d24d581ce7a35c67dcba84e46f7e23c9c96675a0f73f2a2a9955238fd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a93efbbe2dc88a9933c0c3079bcf36bc3970b2097d88328f9a843a755857b5f3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3527139_1",
+          "request_sha256": "886b95696d7ee09d987633e5d1b6e518d3d2560bdea905c182edc5c83d98d34d",
+          "response_sha256": "533b592cca99564f2816d15f71da62de35c3de75006d2389aae1caea7d8c1d63",
+          "retrieved_at": "2026-09-11T02:08:19.524618Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b898cdfccb3e314457e76a143ea896e5982a69b0401ebddefa86ef6d2e8481c1",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/39/3527139_image2_1.jpg"
+        },
+        "record_sha256": "b1e4e73937ff52a53db798dfe4fb34feabb9129671c48816361bc15e463f029f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "기와 지붕의 곡선과 한옥 대칭 구도, 흰 벽과 목재의 대비가 뚜렷해 전통 건축의 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e33f4343113eec4da2339da1abf05fc6e5bb66e9d208e8228d4fcd781e33517b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0f7a07976c6fdcd9e5f6e5c79a78b498fc4ba2e77b39058b060900bf68ef44b5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3527140_2",
+          "request_sha256": "886b95696d7ee09d987633e5d1b6e518d3d2560bdea905c182edc5c83d98d34d",
+          "response_sha256": "533b592cca99564f2816d15f71da62de35c3de75006d2389aae1caea7d8c1d63",
+          "retrieved_at": "2026-09-11T02:08:19.524618Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3c077afa8ffaeb43175f952a9608aa6037b5936998b029c5774708b2d5cecb8b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/40/3527140_image2_1.jpg"
+        },
+        "record_sha256": "2dd901bf500456563ddb15f46468e46c1c5ba5ea1aed61025bb56f85e056cc36",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "빛바랜 한황색 바탕 위 은은한 채색의 전통 화폭이 대각선 구도로 크게 배치되어 화면을 지배하며, 밝은 전시 배경과의 색 대비가 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f7414bbc8aaf07bd2bbd799378f32bf2861bb83e2e09211bd4ad44f095a3beee",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b47952bce2b63d28aee090d5238291b909bdfdfbc9759e5b12b54729a60081e7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3527142_4",
+          "request_sha256": "886b95696d7ee09d987633e5d1b6e518d3d2560bdea905c182edc5c83d98d34d",
+          "response_sha256": "533b592cca99564f2816d15f71da62de35c3de75006d2389aae1caea7d8c1d63",
+          "retrieved_at": "2026-09-11T02:08:19.524618Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a8e2ea62446c2803989a2806073e4d53c8713e7b9e3a3da3837ef72a710506e1",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/42/3527142_image2_1.jpg"
+        },
+        "record_sha256": "967e9cffb8483aedc1de1c45f399c53c925c6b7a41f990f37891e7e3834744da",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8ae5c975be72d0bc3d8085b37f9c169b5b3af599c0ff1da52f3cfa8625294d65",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129784",
+          "request_sha256": "987fa7ab12ec5c698b98214db182534ceb4026f5465fe78b49d9835e3ae3e355",
+          "response_sha256": "ea4e4d1eb0dbc73b543c6e0ff5d7dbeb0843d8a064e0df6496df6b5be6ad04ed",
+          "retrieved_at": "2026-09-11T02:08:18.507945Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fe307cec2496e39ad0d71d008e12f7089acc3238e8f1d0a1e4c04c2fed7be17e",
+          "source_uri": null
+        },
+        "record_sha256": "2ff914e04e3ed500d3b51f175d53e947695588be61a6800c074fc5436d523923",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "가능"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ed0abd85413d7d748648df10f6e608d256e1de507b9a64f79b3751d9e87598c2",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "129784",
+          "request_sha256": "cda89192177faaf6114d0df7b88b396e72df27dc75dd7ac7a9787ae2c3778f84",
+          "response_sha256": "cec122cb346917f2d397f79697373dab3c0f4cbbc594ad09fb1dc03b2484ae68",
+          "retrieved_at": "2026-09-10T17:12:30.575193Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-18T01:10:05Z",
+          "source_record_sha256": "03e608e4887953215614f15f56509aeeb9cde7831d5b08298303540dbb9f9d84",
+          "source_uri": null
+        },
+        "record_sha256": "2a4dc8a75743e24edc392cdda32e77680f0cdd0292fd548017159fd8fe52291a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "조선시대의 대학자 율곡 이이와 관련하여 유명해진 강릉 지역의 대표적인 유적지인 오죽헌은 오죽헌과 강릉시립박물관으로 구분된다. 오죽헌은 조선초기의 건축물로 건축사적인 면에서 그 중요성을 인정받아 보물로 지정되었다. 이곳 오죽헌 몽룡실에서 율곡 이이가 태어났다. 경내에는 오죽헌을 비롯하여 문성사(文成祠), 사랑채, 어제각(御製閣), 율곡기념관 등이 있으며, 율곡기념관에는 사임당, 율곡, 매창, 옥산의 예술적 면모를 살펴볼 수 있는 유작들이 전시되어 있다. 1962년부터 현재까지 매년 율곡을 추모하는 대현 이율곡선생 제곡제를 봉행하고 있다. 시립박물관은 영동지방의 민속자료와 향토 유물을 수집·보관·연구·전시하며, 전통문화를 계승 발전시키고 사회교육 및 시민의 정서 함양에 기여하기 위한 취지로 설립되었다. 전시관은 영동지방에서 사용하던 생업도구와 의식주 관련 용품들이 전시된 향토민속관, 강릉지방에서 출토된 선사유물·불교유물·자기·전적·서화류가 전시된 역사문화관, 석조물과 영동지방의 묘제가 복원된 야외전시장으로 구분된다."
+      }
+    ],
+    "parent_source_sha256": "3dca445a86c61e8770784f246d90ebfee4c6d67df39f43e3e4e29195317af2ff",
+    "place": {
+      "address": "강원특별자치도 강릉시 율곡로3139번길 24 (죽헌동)",
+      "category": "문화시설",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+      "name_ko": "강릉 오죽헌·시립박물관",
+      "place_id": "public:korea:a090863f54eeb96174962458f6693a7b91ff4edd5dc6327a86ba7ad73a753ae0",
+      "provider_content_id": "129784",
+      "region_code": "51150",
+      "region_name": "강원특별자치도 강릉시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

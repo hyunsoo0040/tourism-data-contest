@@ -1,0 +1,813 @@
+{
+  "assessed_at": "2026-09-11T16:36:23.322747Z",
+  "assessment_sha256": "09f5cc9c8fce3bc2bbc835d61152815cba3287f054cb22bb6e588f5c8eef8b01",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 61
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:9b6bfa8110c612972eee50e418e656615a4a797b4c90a478b9547f02ee70c1d3",
+            "appearance:d826374e9daf3f2961cb2926e4ecde74e52d77893ed80d4f66afa807f69b812d"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출의 시각적 성격에 대한 직접적 표현 근거가 없다. 슬라이딩 돔 등 시설 언급만으로 시각적 연출을 추정할 수 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:547c4457d118a3ad62a0601826ddf020f2d3b51605da0c885f25410c6e013d84"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1c5ed28b99a5f5fe3c67662e86873a6f901958d7b17830516f3e0fc78f42520a",
+            "appearance:31e7a2cca9be923424efc09d826a627f9171db23c72645dbab0c9b63337d4acb"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 38,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "숲 교육장·야생화 학습장 등 자연 환경 단서가 확인되나 홍보 문구 이상의 실제 고요함·저자극 환경의 규모는 확인되지 않아 제한적 환경 단서 수준으로 평가한다.",
+      "value": 47
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:547c4457d118a3ad62a0601826ddf020f2d3b51605da0c885f25410c6e013d84"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "체험·탐사·숙박 프로그램, 망원경 직접 조작, 조류 관찰 등 구체적 참여·탐방 활동이 확인되어 참여 기회가 뒷받침된다. 지속적 도전 수준의 근거는 부족하다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제시된 자료는 화석·광물 전시를 언급하나 이는 자연사 표본 수집물이며 확인된 장소 고유의 원형·유산(문화유산·역사 원형)과의 접촉을 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "자료는 과학관 시설·프로그램을 소개할 뿐 이 장소 자체의 역사·연혁·사건·인물 맥락에 대한 서사를 제공하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다. 과학·자연 체험은 실제 전승 활동이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "천체·조류·식물·화석 관찰 교육은 일반 과학 학습이며 원형·유산·전통에 연결된 역사 해설·탐구라는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "별·새·꽃·돌 주제 선정은 운영 취지 설명일 뿐 사회적으로 공유되는 장소 이미지·상징적 의미가 부여되었다는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산(작품·홍보·SNS 등)에 대한 근거가 자료에 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출의 시각적 성격에 대한 직접적 표현 근거가 없다. 슬라이딩 돔 등 시설 언급만으로 시각적 연출을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현(촬영 포인트 등)할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "원문은 자연 생태 체험 공간 조성과 예약제 프로그램만 확인하며, 제안된 anchor(자율적 선택·탐색 기회, 수준 3)와 판단 level 2가 서로 불일치한다. 예약제로 자율성 제한을 추정한 부분은 근거가 약해 현재 수준 확정이 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:547c4457d118a3ad62a0601826ddf020f2d3b51605da0c885f25410c6e013d84",
+          "quote": {
+            "end": 65,
+            "method": "EXACT",
+            "original": "야생화 생태학습장, 화석관, 광물관, 곤충관, 숲 교육장",
+            "start": 34,
+            "submitted": "야생화 생태학습장, 화석관, 광물관, 곤충관, 숲 교육장",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ade1b83dd4375c7aaf220cb3c0bd508efb8a938980bc8573f7cb82615c65a698"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:547c4457d118a3ad62a0601826ddf020f2d3b51605da0c885f25410c6e013d84",
+          "quote": {
+            "end": 663,
+            "method": "EXACT",
+            "original": "150여 종의 야생화와 30여 종의 허브, 65종의 나무가 있으며",
+            "start": 627,
+            "submitted": "150여 종의 야생화와 30여 종의 허브, 65종의 나무가 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ade1b83dd4375c7aaf220cb3c0bd508efb8a938980bc8573f7cb82615c65a698"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "숲 교육장·야생화 학습장 등 자연 환경 단서가 확인되나 홍보 문구 이상의 실제 고요함·저자극 환경의 규모는 확인되지 않아 제한적 환경 단서 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:547c4457d118a3ad62a0601826ddf020f2d3b51605da0c885f25410c6e013d84",
+          "quote": {
+            "end": 279,
+            "method": "EXACT",
+            "original": "현장체험 프로그램, 숙박 프로그램, 하루 탐사 프로그램, 야간 천체 탐사 프로그램",
+            "start": 234,
+            "submitted": "현장체험 프로그램, 숙박 프로그램, 하루 탐사 프로그램, 야간 천체 탐사 프로그램",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ade1b83dd4375c7aaf220cb3c0bd508efb8a938980bc8573f7cb82615c65a698"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:547c4457d118a3ad62a0601826ddf020f2d3b51605da0c885f25410c6e013d84",
+          "quote": {
+            "end": 551,
+            "method": "EXACT",
+            "original": "20m 슬라이딩 돔과 다양한 천체망원경이 있는데, 참가자들이 직접 조작해 볼 수 있다",
+            "start": 504,
+            "submitted": "20m 슬라이딩 돔과 다양한 천체망원경이 있는데, 참가자들이 직접 조작해 볼 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ade1b83dd4375c7aaf220cb3c0bd508efb8a938980bc8573f7cb82615c65a698"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "체험·탐사·숙박 프로그램, 망원경 직접 조작, 조류 관찰 등 구체적 참여·탐방 활동이 확인되어 참여 기회가 뒷받침된다. 지속적 도전 수준의 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 직접적 근거가 없다. 프로그램 참여가 곧 관계 형성이라 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "8dab53e1acd47716edada7ded90fd404b596290af07556c784225a133ccc97f1",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:547c4457d118a3ad62a0601826ddf020f2d3b51605da0c885f25410c6e013d84",
+              "quote": {
+                "end": 149,
+                "method": "EXACT",
+                "original": "도심 생활에 찌든 현대인과 청소년들이 자연 생태를 체험할 수 있는 공간으로 조성되었다",
+                "start": 102,
+                "submitted": "도심 생활에 찌든 현대인과 청소년들이 자연 생태를 체험할 수 있는 공간으로 조성되었다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "ade1b83dd4375c7aaf220cb3c0bd508efb8a938980bc8573f7cb82615c65a698"
+            }
+          ],
+          "flags": [],
+          "key": "R.a",
+          "level": 2,
+          "reason": "자연 생태 체험 공간으로 조성되어 관찰·탐색할 여지가 있으나, 대부분 프로그램이 예약제로 운영되어 자율성이 부분적으로 제한될 수 있어 낮은 수준으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "원문은 자연 생태 체험 공간 조성과 예약제 프로그램만 확인하며, 제안된 anchor(자율적 선택·탐색 기회, 수준 3)와 판단 level 2가 서로 불일치한다. 예약제로 자율성 제한을 추정한 부분은 근거가 약해 현재 수준 확정이 어렵다."
+        }
+      },
+      "reason": "원문은 자연 생태 체험 공간 조성과 예약제 프로그램만 확인하며, 제안된 anchor(자율적 선택·탐색 기회, 수준 3)와 판단 level 2가 서로 불일치한다. 예약제로 자율성 제한을 추정한 부분은 근거가 약해 현재 수준 확정이 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "577cf6de67eeff4ff6368880423df7a69bebd4708b706ab3b35c4bcdca9d9953",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 관측 돔·금속 망원경·의자 등 현대 시설 외관만 보이며 전통적 재료나 공간 구성의 시각적 특성은 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0eff8cc74a0dc502ff35abc96950d12f1f55b949e598b0b521b10345a9fe48f8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2ca312b5693ac3f05b11bba340b661807f653c127e767f440c04e3c51b443b6f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569793_5",
+          "request_sha256": "dccc0ce04415e305a3c7088fded0c64900fa7e35061254d9fea725a40266ea37",
+          "response_sha256": "ad08844e6dede8dd057f553d8f2b9ba59b69795ec777019bace9c0777657aea9",
+          "retrieved_at": "2026-09-10T08:21:50.245289Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "50c95e5a33579f5249d4bbc10d341cc187f9b5421b7f1673552410eda8b6ddd9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3569793_image2_1.jpg"
+        },
+        "record_sha256": "34ba88804027d6b85360976ff9c1c3058b526d8573f68828b22e6ecd267bb9c4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "실내 전시장으로 자연 경관은 배경에 그려진 초원·나무 이미지에 불과하며 실제 녹지·물 등 환경 단서는 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1c5ed28b99a5f5fe3c67662e86873a6f901958d7b17830516f3e0fc78f42520a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3a0ba208af91e147b3956239ede0593200523d991c2f25cc1e686b359b14b5c2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569790_2",
+          "request_sha256": "dccc0ce04415e305a3c7088fded0c64900fa7e35061254d9fea725a40266ea37",
+          "response_sha256": "ad08844e6dede8dd057f553d8f2b9ba59b69795ec777019bace9c0777657aea9",
+          "retrieved_at": "2026-09-10T08:21:50.245289Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b530eb11c1b5e6dc01387c21ad5301068ef253a9ab888a5a0bec555ccd651734",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/90/3569790_image2_1.jpg"
+        },
+        "record_sha256": "1cc215fb8ed795cccb6c3c42f6732f75a41c615e1493642ac865997e8db544b1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "유리창 너머로 겹겹의 산과 나무, 맑고 푸른 하늘이 트인 자연 배경으로 뚜렷하게 보이나 실내가 화면 중심이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:31e7a2cca9be923424efc09d826a627f9171db23c72645dbab0c9b63337d4acb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2ca312b5693ac3f05b11bba340b661807f653c127e767f440c04e3c51b443b6f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569793_5",
+          "request_sha256": "dccc0ce04415e305a3c7088fded0c64900fa7e35061254d9fea725a40266ea37",
+          "response_sha256": "ad08844e6dede8dd057f553d8f2b9ba59b69795ec777019bace9c0777657aea9",
+          "retrieved_at": "2026-09-10T08:21:50.245289Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "50c95e5a33579f5249d4bbc10d341cc187f9b5421b7f1673552410eda8b6ddd9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3569793_image2_1.jpg"
+        },
+        "record_sha256": "413e5983e6b36c5140d13fc81bcb58b281fa5d6a7a4f9a8b6cd2862f76b62a26",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "대형 매머드 화석 두개골과 긴 엄니가 중앙에 전시되어 시선을 강하게 끌며, 녹색 배경 패널과 원형 전시대 구성이 연출적 성격을 드러낸다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9b6bfa8110c612972eee50e418e656615a4a797b4c90a478b9547f02ee70c1d3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3a0ba208af91e147b3956239ede0593200523d991c2f25cc1e686b359b14b5c2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569790_2",
+          "request_sha256": "dccc0ce04415e305a3c7088fded0c64900fa7e35061254d9fea725a40266ea37",
+          "response_sha256": "ad08844e6dede8dd057f553d8f2b9ba59b69795ec777019bace9c0777657aea9",
+          "retrieved_at": "2026-09-10T08:21:50.245289Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b530eb11c1b5e6dc01387c21ad5301068ef253a9ab888a5a0bec555ccd651734",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/90/3569790_image2_1.jpg"
+        },
+        "record_sha256": "4dcfc81acfb4acd350199906be65e8e27558929603a76ea4ba6945a0d3bd975f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "망원경 여러 대가 전경을 지배하고 검은 돔·의자 배열과 함께 천문대 관측실 특유의 구성이 뚜렷하며 밝은 자광과 푸른 하늘 대비가 강한 시각적 성격을 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d826374e9daf3f2961cb2926e4ecde74e52d77893ed80d4f66afa807f69b812d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2ca312b5693ac3f05b11bba340b661807f653c127e767f440c04e3c51b443b6f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569793_5",
+          "request_sha256": "dccc0ce04415e305a3c7088fded0c64900fa7e35061254d9fea725a40266ea37",
+          "response_sha256": "ad08844e6dede8dd057f553d8f2b9ba59b69795ec777019bace9c0777657aea9",
+          "retrieved_at": "2026-09-10T08:21:50.245289Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "50c95e5a33579f5249d4bbc10d341cc187f9b5421b7f1673552410eda8b6ddd9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3569793_image2_1.jpg"
+        },
+        "record_sha256": "852e48e3b4ef027e913d8045d9f11da020b22fd97379b4e2515810d24570794f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "우측 목재 패널 벽면이 약간의 전통적 재료 느낌을 주나, 전반적으로 현대적 박물관 전시실 외관이 지배적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ec409ea95e2a8c0b376ce3dc8a70f9fabe7a7893cee592ed4cc0821a280c5982",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3a0ba208af91e147b3956239ede0593200523d991c2f25cc1e686b359b14b5c2",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569790_2",
+          "request_sha256": "dccc0ce04415e305a3c7088fded0c64900fa7e35061254d9fea725a40266ea37",
+          "response_sha256": "ad08844e6dede8dd057f553d8f2b9ba59b69795ec777019bace9c0777657aea9",
+          "retrieved_at": "2026-09-10T08:21:50.245289Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b530eb11c1b5e6dc01387c21ad5301068ef253a9ab888a5a0bec555ccd651734",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/90/3569790_image2_1.jpg"
+        },
+        "record_sha256": "6381afa8158d5cf4d9824ecb268426b52fb9dfb98a2e4de7efeb88ec6d2bb7fa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:547c4457d118a3ad62a0601826ddf020f2d3b51605da0c885f25410c6e013d84",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "128218",
+          "request_sha256": "c0819b25c21d74d53166b88a5144cd0df91a3e2e5657032c628fb15c111cb0b8",
+          "response_sha256": "2d07b3e59c88e688f4a5a03b6c994391e3e3f462ebbf72a276d067c0a805f454",
+          "retrieved_at": "2026-09-10T08:03:10.681296Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-19T08:17:46Z",
+          "source_record_sha256": "b06b0fc302f8eaf06a52238b8667cecfa6ee9c9bf8f267f2060a1dbd47073947",
+          "source_uri": null
+        },
+        "record_sha256": "ade1b83dd4375c7aaf220cb3c0bd508efb8a938980bc8573f7cb82615c65a698",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "별새꽃돌과학관은 별‌천지 천문대를 비롯하여 야생조류 연구소, 야생화 생태학습장, 화석관, 광물관, 곤충관, 숲 교육장 등 첨단 시설 및 전문성을 갖춘 충청북도 제1호 전문과학관이다. 도심 생활에 찌든 현대인과 청소년들이 자연 생태를 체험할 수 있는 공간으로 조성되었다. 체험을 통해 도시 생활로 피폐해진 인성을 회복하는 것을 목표로 하는 이곳은 별, 새, 꽃, 돌의 네 가지를 자연 세계의 대표 주제로 선정하고 있다. 현장체험 프로그램, 숙박 프로그램, 하루 탐사 프로그램, 야간 천체 탐사 프로그램, 찾아가는 천문 이동대 프로그램이 진행되는데, 모든 교육 프로그램은 예약해야 한다. 이곳에서는 하늘이 내린 아름다운 자연환경과 풍부한 교육 시설을 갖추고 전문성을 갖춘 최고의 교사들이 편안한 휴식과 함께 세상을 사랑하는 따뜻한 마음, 그리고 가슴 가득한 감동과 행복을 담아 갈 수 있도록 최선을 다하고 있다. 별을 주제로 하는 구학산 천문대에서는 지붕을 열어 밤하늘의 별을 관찰할 수 있다. 이곳에는 20m 슬라이딩 돔과 다양한 천체망원경이 있는데, 참가자들이 직접 조작해 볼 수 있다. 새를 주제로 하는 과학관에서는 쌍안경과 조류 탐조용 망원경을 이용해 야생조류를 관찰할 수 있다. 꽃을 주제로 하는 식물생태학습원에는 150여 종의 야생화와 30여 종의 허브, 65종의 나무가 있으며, 고배율 확대경을 통해 이들을 관찰할 수 있다. 돌을 주제로 하는 화석전시실에는 200여 점의 화석이, 암석 광물 교육실에는 100여 점의 광물 원석이 전시되어 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:64c360a4c05902164d8da428eafa91888047ec57aff1df2033f9102d15061b93",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128218",
+          "request_sha256": "fcef33c426499b833f1cec2ce139d253d4a4b26c2fdd4a5a3a0a47cf65178be0",
+          "response_sha256": "e676295c94338cc9a8583edbcd48435e3de9a46cab230c58694fbff3006f119d",
+          "retrieved_at": "2026-09-10T08:21:49.909873Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "71deead4e4c9451ceddfeac8743905a79e4b0bd3d61d7474b8c707d7ea8064a5",
+          "source_uri": null
+        },
+        "record_sha256": "c6066bbda5ad27286191f1ec27590bc9a7c2e82acde5eaaae7e76739ceedb9b6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "프로그램마다 상이"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6df173ba8d2ab8dffc2d948d8e83aacb55c411beca5d145508fec1f7d1da9959",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128218",
+          "request_sha256": "fcef33c426499b833f1cec2ce139d253d4a4b26c2fdd4a5a3a0a47cf65178be0",
+          "response_sha256": "e676295c94338cc9a8583edbcd48435e3de9a46cab230c58694fbff3006f119d",
+          "retrieved_at": "2026-09-10T08:21:49.909873Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d68f8005a15056cfdaa86d6697820a4d737c1d4a6414ba700eec385c24f9c4e6",
+          "source_uri": null
+        },
+        "record_sha256": "65f8a9a30a43cd371dc601a8aec5f9416ee94349c505ac5ee2693fe25739392b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "별천지천문대 / 디지털 플라네타리움 / 화석전시실 및 교육장 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b49840cb7e7bef45f307573bf1ae2eb13ccb846e41a21488dcc918c82027c386",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128218",
+          "request_sha256": "fcef33c426499b833f1cec2ce139d253d4a4b26c2fdd4a5a3a0a47cf65178be0",
+          "response_sha256": "e676295c94338cc9a8583edbcd48435e3de9a46cab230c58694fbff3006f119d",
+          "retrieved_at": "2026-09-10T08:21:49.909873Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bb876926c0cb7e4bec93f67d9592f7b835936a290cfdeb3721af1cfd726f3430",
+          "source_uri": null
+        },
+        "record_sha256": "7a3efb1d6115a707a981bce0f0e1d046b7ad2265f532f50974cf31a7abfc42f1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음(남녀 구분)"
+      }
+    ],
+    "parent_source_sha256": "53e4f1850290ca469f30d448545a0406e5f445d96028bdb0ebf90f67bb57f7e9",
+    "place": {
+      "address": "충청북도 제천시 봉양읍 옥전4길 45",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+      "name_ko": "별새꽃돌과학관",
+      "place_id": "public:korea:3fa9c1618a28cb2a9a67b3f20765328aebbe8c8b3f8439a0f39903d809f8dea6",
+      "provider_content_id": "128218",
+      "region_code": "43150",
+      "region_name": "충청북도 제천시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

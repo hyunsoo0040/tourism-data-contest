@@ -1,0 +1,1160 @@
+{
+  "assessed_at": "2026-09-11T19:01:46.700970Z",
+  "assessment_sha256": "bf6471549aa7a83a83de531a1366cee34f0b11cd31ab194e337f141fe25ab526",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8b5c16aa3a39091bf20f0bafbc7a71dba17d628d3afe9a5c9fe18e0d63137c28",
+            "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "여러 영화·드라마 촬영지로 명시되고 '해안절경'이라는 이미지가 장소와 연결되어 있으나, 여러 표현에서 일관된 의미가 확인된다는 수준 이상의 근거는 없어 2 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:8b5c16aa3a39091bf20f0bafbc7a71dba17d628d3afe9a5c9fe18e0d63137c28"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "이 장소 자체가 여러 영화·드라마의 촬영지로 명시되어 매체를 통한 장소 이미지의 표현이 확인된다. 반복적 유통의 확대 근거는 없어 2 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:29f6c987cd60425a5ab695fba0e6baae7f5cc5add49179666790a31ed1fd942d",
+            "appearance:eb56df9cd05d410bf22172076b2aa6dd1462285ee4940fbc735ca320e2715338",
+            "appearance:ee0924a354aced9c37c102dbdef44c77c3f9b997a49d730e9fefdbe04a63a768"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안 앵커는 5수준 '일관된 시각적 성격·연출이 장면을 지배'이지만 제시 수준은 4로 불일치한다. 인용은 홍보성 서술로 색채 대비를 묘사할 뿐 실제 경관의 시각적 표현을 직접 관찰한 근거가 아니며, '장면을 지배'하는 수준의 근거가 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:02e0197c8a2425eecc0a783a24a949cf74db509af94d6bdda441ac63f61d0245",
+            "appearance:1a8f92c751373c7d90290f05bf387b44ff0680e11aabdc88619c334a7e6f6ffb",
+            "appearance:875cd71c9f48951140bd2d6b9b25f0de8dbc6df72bf76eaf1a5ea7e49de21384"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안 앵커는 4수준 '자연·시각적 저자극 환경이 두드러짐'이나, 인용은 지형·해수욕장 언급에 불과하고 저자극 환경이 두드러진다는 직접 관찰·확인 근거가 없다. 홍보적 경관 묘사로는 현재 제안 수준을 뒷받침할 수 없다.",
+      "value": 92
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제안 앵커는 4수준 '원형·유산의 공간이나 실물을 구체적으로 탐구'이나, 원문은 협자연대가 '비교적 원형대로 보존되어 있다'는 관람 수준(3수준)만 뒷받침한다. 구체적 탐구·출입 경험의 근거가 없어 현재 제안 수준은 지지되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "제안 앵커는 3수준 '그 장소의 사건·인물 맥락 제시'이나, 원문은 지명 어원과 연대 유래 소개 수준(2수준)에 그친다. 구체적 사건·인물 맥락 제시의 근거가 없어 현재 제안 수준은 부적합하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 현재 연결에 대한 근거가 제공되지 않았다. 과거 봉수대의 존재만으로 현재 전승 활동을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "앵커는 3수준 '유산·전통에 연결된 설명·전시'이나, 인용은 공식 개관 서술(overview) 문구일 뿐 현장에서 유산에 연결된 해설·전시가 실제 제공된다는 직접 근거가 없다. 현장 해설 시설의 존재를 확인할 수 없어 UNCERTAIN.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:8b5c16aa3a39091bf20f0bafbc7a71dba17d628d3afe9a5c9fe18e0d63137c28",
+          "quote": {
+            "end": 35,
+            "method": "EXACT",
+            "original": "영화.드라마 촬영지 - 단적비연수, 이재수의 난, 천일야, 올인",
+            "start": 0,
+            "submitted": "영화.드라마 촬영지 - 단적비연수, 이재수의 난, 천일야, 올인",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6ae6f113fd12850fcdd99860b06f5b5db53efaf0756b28343eb0cb596850ad80"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+          "quote": {
+            "end": 745,
+            "method": "EXACT",
+            "original": "등대 난간에 올라서면 과연 기가 막힌 섭지코지의 해안절경이 바로 코앞에 펼쳐진다.",
+            "start": 700,
+            "submitted": "등대 난간에 올라서면 과연 기가 막힌 섭지코지의 해안절경이 바로 코앞에 펼쳐진다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "여러 영화·드라마 촬영지로 명시되고 '해안절경'이라는 이미지가 장소와 연결되어 있으나, 여러 표현에서 일관된 의미가 확인된다는 수준 이상의 근거는 없어 2 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:8b5c16aa3a39091bf20f0bafbc7a71dba17d628d3afe9a5c9fe18e0d63137c28",
+          "quote": {
+            "end": 35,
+            "method": "EXACT",
+            "original": "영화.드라마 촬영지 - 단적비연수, 이재수의 난, 천일야, 올인",
+            "start": 0,
+            "submitted": "영화.드라마 촬영지 - 단적비연수, 이재수의 난, 천일야, 올인",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6ae6f113fd12850fcdd99860b06f5b5db53efaf0756b28343eb0cb596850ad80"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "이 장소 자체가 여러 영화·드라마의 촬영지로 명시되어 매체를 통한 장소 이미지의 표현이 확인된다. 반복적 유통의 확대 근거는 없어 2 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "제안 앵커는 5수준 '일관된 시각적 성격·연출이 장면을 지배'이지만 제시 수준은 4로 불일치한다. 인용은 홍보성 서술로 색채 대비를 묘사할 뿐 실제 경관의 시각적 표현을 직접 관찰한 근거가 아니며, '장면을 지배'하는 수준의 근거가 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "촬영지라는 사실은 있으나 현장에서 대표 장면·구도를 경험하거나 재현할 수 있는 활동(촬영 포인트 안내 등)에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "제안 앵커는 4수준 '여유롭게 자신의 방식으로 탐색'이나, 원문은 이정표를 따르는 도로 안내와 등대 철계단 접근성 서술에 그친다. 방문자가 자신의 방식으로 여유롭게 탐색한다는 경험의 근거가 없어 현재 수준은 부적합하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "제안 앵커는 4수준 '자연·시각적 저자극 환경이 두드러짐'이나, 인용은 지형·해수욕장 언급에 불과하고 저자극 환경이 두드러진다는 직접 관찰·확인 근거가 없다. 홍보적 경관 묘사로는 현재 제안 수준을 뒷받침할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "오르기·탐방 등 집중할 참여 활동의 제공 여부에 대한 명시적 근거가 부족하다. 철계단 오르기만으로 지속적 참여·도전 활동이라 단정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다. '무료', '있음' 등의 단편 정보만으로는 관계·자기표현 경험을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 516,
+                "method": "EXACT",
+                "original": "넓고 평평한 코지 언덕 위에는 옛날 봉화 불을 지피던 협자연대라는 돌로 만든 봉수대가 세워져 있는데 높이 약 4m, 가로세로 9m의 정방형으로 비교적 원형대로 보존되어 있다.",
+                "start": 419,
+                "submitted": "넓고 평평한 코지 언덕 위에는 옛날 봉화 불을 지피던 협자연대라는 돌로 만든 봉수대가 세워져 있는데 높이 약 4m, 가로세로 9m의 정방형으로 비교적 원형대로 보존되어 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.a",
+          "level": 3,
+          "reason": "섭지코지 자체에 실제 봉수대 유산인 협자연대가 '비교적 원형대로 보존되어 있다'고 명시되어 방문자가 확인된 원형을 관람할 수 있다. 구체적 탐구가 중심이라는 근거는 없어 3 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "제안 앵커는 4수준 '원형·유산의 공간이나 실물을 구체적으로 탐구'이나, 원문은 협자연대가 '비교적 원형대로 보존되어 있다'는 관람 수준(3수준)만 뒷받침한다. 구체적 탐구·출입 경험의 근거가 없어 현재 제안 수준은 지지되지 않는다."
+        }
+      },
+      "reason": "제안 앵커는 4수준 '원형·유산의 공간이나 실물을 구체적으로 탐구'이나, 원문은 협자연대가 '비교적 원형대로 보존되어 있다'는 관람 수준(3수준)만 뒷받침한다. 구체적 탐구·출입 경험의 근거가 없어 현재 제안 수준은 지지되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 63,
+                "method": "EXACT",
+                "original": "섭지코지는 코지(코지곶을 의미하는 제주 방언)라는 지명에서 알 수 있듯 코의 끄트리 모양 비죽 튀어나온 지형이다.",
+                "start": 0,
+                "submitted": "섭지코지는 코지(코지곶을 의미하는 제주 방언)라는 지명에서 알 수 있듯 코의 끄트리 모양 비죽 튀어나온 지형이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            },
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 474,
+                "method": "EXACT",
+                "original": "넓고 평평한 코지 언덕 위에는 옛날 봉화 불을 지피던 협자연대라는 돌로 만든 봉수대가 세워져 있는데",
+                "start": 419,
+                "submitted": "넓고 평평한 코지 언덕 위에는 옛날 봉화 불을 지피던 협자연대라는 돌로 만든 봉수대가 세워져 있는데",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 2,
+          "reason": "지명의 어원(코지곶을 의미하는 제주 방언)과 옛 봉화를 지피던 협자연대라는 유래가 소개되어 이 장소 자체의 역사 맥락이 제공된다. 다만 간략한 소개 수준이므로 2 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "제안 앵커는 3수준 '그 장소의 사건·인물 맥락 제시'이나, 원문은 지명 어원과 연대 유래 소개 수준(2수준)에 그친다. 구체적 사건·인물 맥락 제시의 근거가 없어 현재 제안 수준은 부적합하다."
+        }
+      },
+      "reason": "제안 앵커는 3수준 '그 장소의 사건·인물 맥락 제시'이나, 원문은 지명 어원과 연대 유래 소개 수준(2수준)에 그친다. 구체적 사건·인물 맥락 제시의 근거가 없어 현재 제안 수준은 부적합하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 582,
+                "method": "EXACT",
+                "original": "연대에서 동북 방향으로 솟아있는 봉우리는 일명 붉은오름으로, 제주말로 송이라고 하는 붉은색 화산재로 이루어진 오름인데",
+                "start": 517,
+                "submitted": "연대에서 동북 방향으로 솟아있는 봉우리는 일명 붉은오름으로, 제주말로 송이라고 하는 붉은색 화산재로 이루어진 오름인데",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.d",
+          "level": 2,
+          "reason": "공식 개관 설명에서 협자연대의 봉화 기능, 붉은오름의 제주말 명칭과 화산재 지형 등 유산·지형에 연결된 해설이 짧게 제공된다. 심층 탐구 프로그램의 근거는 없어 2 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.d",
+          "reason": "앵커는 3수준 '유산·전통에 연결된 설명·전시'이나, 인용은 공식 개관 서술(overview) 문구일 뿐 현장에서 유산에 연결된 해설·전시가 실제 제공된다는 직접 근거가 없다. 현장 해설 시설의 존재를 확인할 수 없어 UNCERTAIN."
+        }
+      },
+      "reason": "앵커는 3수준 '유산·전통에 연결된 설명·전시'이나, 인용은 공식 개관 서술(overview) 문구일 뿐 현장에서 유산에 연결된 해설·전시가 실제 제공된다는 직접 근거가 없다. 현장 해설 시설의 존재를 확인할 수 없어 UNCERTAIN."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 667,
+                "method": "EXACT",
+                "original": "정상에 서있는 하얀 등대의 모습이 노란 유채꽃밭과 오름의 붉은 흙빛, 그리고 파란 하늘빛, 바다 빛과 대비되는 또 다른 이국적인 정취를 불러일으킨다.",
+                "start": 584,
+                "submitted": "정상에 서있는 하얀 등대의 모습이 노란 유채꽃밭과 오름의 붉은 흙빛, 그리고 파란 하늘빛, 바다 빛과 대비되는 또 다른 이국적인 정취를 불러일으킨다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            }
+          ],
+          "flags": [],
+          "key": "E.c",
+          "level": 4,
+          "reason": "repair 반영: E.c의 claim은 VISUAL_EXPRESSION이어야 하며 VISUAL_APPEARANCE 인용은 제거했다. 유채꽃의 노란빛, 오름의 붉은 흙빛, 하얀 등대, 바다·하늘의 푸른빛이 대비되는 분명하고 일관된 시각적 성격이 경관 수준에서 묘사되어 4 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "E.c",
+          "reason": "제안 앵커는 5수준 '일관된 시각적 성격·연출이 장면을 지배'이지만 제시 수준은 4로 불일치한다. 인용은 홍보성 서술로 색채 대비를 묘사할 뿐 실제 경관의 시각적 표현을 직접 관찰한 근거가 아니며, '장면을 지배'하는 수준의 근거가 없다."
+        }
+      },
+      "reason": "제안 앵커는 5수준 '일관된 시각적 성격·연출이 장면을 지배'이지만 제시 수준은 4로 불일치한다. 인용은 홍보성 서술로 색채 대비를 묘사할 뿐 실제 경관의 시각적 표현을 직접 관찰한 근거가 아니며, '장면을 지배'하는 수준의 근거가 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 193,
+                "method": "EXACT",
+                "original": "대개의 경우 신양리 해안 국도변에서 마을로 진입하여 이정표를 보고 콘크리트로 포장된 길을 따라가면 코지 끝에까지 이를 수 있다.",
+                "start": 122,
+                "submitted": "대개의 경우 신양리 해안 국도변에서 마을로 진입하여 이정표를 보고 콘크리트로 포장된 길을 따라가면 코지 끝에까지 이를 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            },
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 711,
+                "method": "EXACT",
+                "original": "등대까지는 철계단이 마련되어 있어 쉽게 올라갈 수 있으며 등대 난간에 올라서면",
+                "start": 668,
+                "submitted": "등대까지는 철계단이 마련되어 있어 쉽게 올라갈 수 있으며 등대 난간에 올라서면",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 3,
+          "reason": "이정표를 따라 코지 끝까지 걷고 등대 철계단을 직접 오르는 등 구조화된 프로그램이 아닌 자율적 탐색이 가능한 지형과 동선이 확인된다. 깊은 몰입형 탐색이라는 근거는 부족하여 3 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "제안 앵커는 4수준 '여유롭게 자신의 방식으로 탐색'이나, 원문은 이정표를 따르는 도로 안내와 등대 철계단 접근성 서술에 그친다. 방문자가 자신의 방식으로 여유롭게 탐색한다는 경험의 근거가 없어 현재 수준은 부적합하다."
+        }
+      },
+      "reason": "제안 앵커는 4수준 '여유롭게 자신의 방식으로 탐색'이나, 원문은 이정표를 따르는 도로 안내와 등대 철계단 접근성 서술에 그친다. 방문자가 자신의 방식으로 여유롭게 탐색한다는 경험의 근거가 없어 현재 수준은 부적합하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 96,
+                "method": "EXACT",
+                "original": "코의 끄트리 모양 비죽 튀어나온 지형이다. 위치상으로는 서귀포시 성산읍 신양리 해안에 돌출되어 있다.",
+                "start": 40,
+                "submitted": "코의 끄트리 모양 비죽 튀어나온 지형이다. 위치상으로는 서귀포시 성산읍 신양리 해안에 돌출되어 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            },
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+              "quote": {
+                "end": 314,
+                "method": "EXACT",
+                "original": "신양해수욕장 백사장이 보이고",
+                "start": 299,
+                "submitted": "신양해수욕장 백사장이 보이고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 3,
+          "reason": "해안에 돌출한 자연 지형, 유채꽃밭, 오름, 백사장 등 자연 환경 단서가 확인된다. 실제 고요함이나 혼잡 수준에 대한 근거는 없어 환경이 장면을 지배한다고 단정하지 않고 3 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "제안 앵커는 4수준 '자연·시각적 저자극 환경이 두드러짐'이나, 인용은 지형·해수욕장 언급에 불과하고 저자극 환경이 두드러진다는 직접 관찰·확인 근거가 없다. 홍보적 경관 묘사로는 현재 제안 수준을 뒷받침할 수 없다."
+        }
+      },
+      "reason": "제안 앵커는 4수준 '자연·시각적 저자극 환경이 두드러짐'이나, 인용은 지형·해수욕장 언급에 불과하고 저자극 환경이 두드러진다는 직접 관찰·확인 근거가 없다. 홍보적 경관 묘사로는 현재 제안 수준을 뒷받침할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "93a55564384355de6999815f0f46a5a01be7ef9682b10ac142a5c5cb17170a59",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "노란 들꽃이 가득한 넓은 화단과 녹지가 장면의 상당 부분을 차지하며 자연 환경 단서가 풍부함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:02e0197c8a2425eecc0a783a24a949cf74db509af94d6bdda441ac63f61d0245",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ebd0ec82c62a755900648006752a988a45a2d98aacccb5436621388746c8d0f6",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2728178",
+          "request_sha256": "16b9d14ef57a23e52b94393503b4c39dd8f9062e7a8bffa4cc5edc968773124f",
+          "response_sha256": "56c0382f970008521b20c5d8115fb89eb8499b766db6a17588c205a9755bb1eb",
+          "retrieved_at": "2026-09-10T08:28:20.848704Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "75e5c84ff8c1bd98a44c66deb2707e50bc6a51c2b6eb95f0a5e389c864b49dd9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/78/2728178.jpg"
+        },
+        "record_sha256": "6d9d8fabb4a18d458185a70701679493649268ca01d1881a7d9e5a62c44494af",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대적 콘크리트 옹벽과 포장 보도가 중심이며 전통적 재료나 외관 요소는 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1196745fb7d166b173af8ce9e085e36304a370ef284b3dc19e80a8c93cec7c71",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ebd0ec82c62a755900648006752a988a45a2d98aacccb5436621388746c8d0f6",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2728178",
+          "request_sha256": "16b9d14ef57a23e52b94393503b4c39dd8f9062e7a8bffa4cc5edc968773124f",
+          "response_sha256": "56c0382f970008521b20c5d8115fb89eb8499b766db6a17588c205a9755bb1eb",
+          "retrieved_at": "2026-09-10T08:28:20.848704Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "75e5c84ff8c1bd98a44c66deb2707e50bc6a51c2b6eb95f0a5e389c864b49dd9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/78/2728178.jpg"
+        },
+        "record_sha256": "6498feeb1878bbfafbf2a5a1a020594e7a800dc71a53de4917a63c785ce709bd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "초원으로 뒤덮인 언덕, 바위 산, 트인 하늘이 화면 대부분을 차지하며 자연 경관이 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1a8f92c751373c7d90290f05bf387b44ff0680e11aabdc88619c334a7e6f6ffb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ce4e97b9ea0449ae384d6a127934eeee0fb9a66151abf4d6ecd6149a88cccea8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3100249_1",
+          "request_sha256": "a29f84482bb76d6164fa22fc739aa6a9be3ef445e671dbd69afaed7352659705",
+          "response_sha256": "420ad3c0be476d3c4c449dc22eae1bba62ae0a4291f6c1ed967563dc7862ce1e",
+          "retrieved_at": "2026-09-10T08:28:19.942719Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "53c78febb63f6d5a1c07f8aaff2ab73bb683ec51b48b4989d3774ce445b871aa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/49/3100249_image2_1.jpg"
+        },
+        "record_sha256": "25f20d9bd40d724c0ba2b89d3f9b7ab1deb1fcf41c60941e4eedfe178b82a094",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰색·파란색·노란 꽃·초록의 대비가 뚜렷하고 콘크리트 벽과 화단이 만드는 구성이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:29f6c987cd60425a5ab695fba0e6baae7f5cc5add49179666790a31ed1fd942d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ebd0ec82c62a755900648006752a988a45a2d98aacccb5436621388746c8d0f6",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2728178",
+          "request_sha256": "16b9d14ef57a23e52b94393503b4c39dd8f9062e7a8bffa4cc5edc968773124f",
+          "response_sha256": "56c0382f970008521b20c5d8115fb89eb8499b766db6a17588c205a9755bb1eb",
+          "retrieved_at": "2026-09-10T08:28:20.848704Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "75e5c84ff8c1bd98a44c66deb2707e50bc6a51c2b6eb95f0a5e389c864b49dd9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/78/2728178.jpg"
+        },
+        "record_sha256": "e7ec2caa0d03ef5fddb360d0c144553f1a92116d272e894158ddbb41d5914f8b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "등대와 목책, 억센 풀 어양 언덕의 소박한 외관이 일부 보이나 전통 재료·구성의 뚜렷한 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7ec7970949b5865fb54402098bb5338f80e4544934da08c6dccc01c1cf6a79e9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ce4e97b9ea0449ae384d6a127934eeee0fb9a66151abf4d6ecd6149a88cccea8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3100249_1",
+          "request_sha256": "a29f84482bb76d6164fa22fc739aa6a9be3ef445e671dbd69afaed7352659705",
+          "response_sha256": "420ad3c0be476d3c4c449dc22eae1bba62ae0a4291f6c1ed967563dc7862ce1e",
+          "retrieved_at": "2026-09-10T08:28:19.942719Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "53c78febb63f6d5a1c07f8aaff2ab73bb683ec51b48b4989d3774ce445b871aa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/49/3100249_image2_1.jpg"
+        },
+        "record_sha256": "8f1fb5ee6be19ede260bbd46dad6ddd6e29db7b66ee7cdb57018c3971ef83011",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "트인 바다와 수평선, 언덕 풀밭, 바위와 관목 등 자연 환경 단서가 장면 대부분을 차지함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:875cd71c9f48951140bd2d6b9b25f0de8dbc6df72bf76eaf1a5ea7e49de21384",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "076a1b546c201da96ea21154fd40b04743c5a12891cb440840e40b271e94ea4c",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1806010",
+          "request_sha256": "16b9d14ef57a23e52b94393503b4c39dd8f9062e7a8bffa4cc5edc968773124f",
+          "response_sha256": "56c0382f970008521b20c5d8115fb89eb8499b766db6a17588c205a9755bb1eb",
+          "retrieved_at": "2026-09-10T08:28:20.848704Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d891f8ed4612f9bc0cad59aa68dbc0e1a24c539c46fc41c9e6bef01b8fc3f9c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/10/1806010.jpg"
+        },
+        "record_sha256": "0930d3e252b2d31eaf4074a21a8f26b9e0fdf05462981e240d7cb2d018bf485f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흐린 하늘 아래 붉은 지붕과 석재 첨탑이 바다 배경과 대비되며 화면 중심을 지배하는 구도가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:eb56df9cd05d410bf22172076b2aa6dd1462285ee4940fbc735ca320e2715338",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "076a1b546c201da96ea21154fd40b04743c5a12891cb440840e40b271e94ea4c",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1806010",
+          "request_sha256": "16b9d14ef57a23e52b94393503b4c39dd8f9062e7a8bffa4cc5edc968773124f",
+          "response_sha256": "56c0382f970008521b20c5d8115fb89eb8499b766db6a17588c205a9755bb1eb",
+          "retrieved_at": "2026-09-10T08:28:20.848704Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d891f8ed4612f9bc0cad59aa68dbc0e1a24c539c46fc41c9e6bef01b8fc3f9c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/10/1806010.jpg"
+        },
+        "record_sha256": "e81eb7e0c6f18389d0153b8aedb668097bc64fafcd331c7f069e84f53c13a022",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "먹색 하늘과 어두운 초록 언덕 위 흰 등대, 붉은 하트 조형물의 점색 대비가 절제되지만 인상적인 구도를 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ee0924a354aced9c37c102dbdef44c77c3f9b997a49d730e9fefdbe04a63a768",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ce4e97b9ea0449ae384d6a127934eeee0fb9a66151abf4d6ecd6149a88cccea8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3100249_1",
+          "request_sha256": "a29f84482bb76d6164fa22fc739aa6a9be3ef445e671dbd69afaed7352659705",
+          "response_sha256": "420ad3c0be476d3c4c449dc22eae1bba62ae0a4291f6c1ed967563dc7862ce1e",
+          "retrieved_at": "2026-09-10T08:28:19.942719Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "53c78febb63f6d5a1c07f8aaff2ab73bb683ec51b48b4989d3774ce445b871aa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/49/3100249_image2_1.jpg"
+        },
+        "record_sha256": "9b94d78ad52da25152d8eb5bbcb67546ac01239ecef7e2a3e6621d39045fc08d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "거친 석재 벽체와 붉은 기와 지붕 등 전통적 외관 요소가 보이나 서양 교회 양식과 혼합됨.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f371b490c46db813a36b00ee107400eebde0a091ad85809997408e3bf42540b7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "076a1b546c201da96ea21154fd40b04743c5a12891cb440840e40b271e94ea4c",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:1806010",
+          "request_sha256": "16b9d14ef57a23e52b94393503b4c39dd8f9062e7a8bffa4cc5edc968773124f",
+          "response_sha256": "56c0382f970008521b20c5d8115fb89eb8499b766db6a17588c205a9755bb1eb",
+          "retrieved_at": "2026-09-10T08:28:20.848704Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d891f8ed4612f9bc0cad59aa68dbc0e1a24c539c46fc41c9e6bef01b8fc3f9c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/10/1806010.jpg"
+        },
+        "record_sha256": "1c03604522d7c5120c61cbafdddc45bb5589b34badca8d5eb105c13bca206a6a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3c0a65101c76e61b4db364cc19f9ff29ee6eaed3b9596db233116d225766919f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127813",
+          "request_sha256": "5e445f6855e4a274efacf78a06d7c622cd2c63df3abdf5f1774aee6c3e91eada",
+          "response_sha256": "b1058f540c9edcda845fdfcc195f23f8b8827a3206441bb39154de91b61e6274",
+          "retrieved_at": "2026-09-10T08:28:19.614602Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5110943bdf3050b4d62ee179033f986eb869f389778cc66d4a5f33085979fd9b",
+          "source_uri": null
+        },
+        "record_sha256": "41df65a440e36fb5d2a9cf9a7a0b9c55f97e54ce392fc3a9a1cff122e9629487",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8b5c16aa3a39091bf20f0bafbc7a71dba17d628d3afe9a5c9fe18e0d63137c28",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127813",
+          "request_sha256": "5e445f6855e4a274efacf78a06d7c622cd2c63df3abdf5f1774aee6c3e91eada",
+          "response_sha256": "b1058f540c9edcda845fdfcc195f23f8b8827a3206441bb39154de91b61e6274",
+          "retrieved_at": "2026-09-10T08:28:19.614602Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "26a4f979e09c0d7a906b87fe78eb6e8b1b015b0b21cab0cc64b7eff6108dd565",
+          "source_uri": null
+        },
+        "record_sha256": "6ae6f113fd12850fcdd99860b06f5b5db53efaf0756b28343eb0cb596850ad80",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "영화.드라마 촬영지 - 단적비연수, 이재수의 난, 천일야, 올인"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ee473ad741548a9a02ad6bf4101c7149cf64820dc3a77a59828c8be7df451590",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127813",
+          "request_sha256": "5e445f6855e4a274efacf78a06d7c622cd2c63df3abdf5f1774aee6c3e91eada",
+          "response_sha256": "b1058f540c9edcda845fdfcc195f23f8b8827a3206441bb39154de91b61e6274",
+          "retrieved_at": "2026-09-10T08:28:19.614602Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "35fe77773ba89d1e9e336330269f78508a4676085d04b4a47a8bf25de3d580b4",
+          "source_uri": null
+        },
+        "record_sha256": "e9cf84ed369aa6ba25696c64da4c1932b948bfdb978dda6d6abc0e5dfa455df6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ef91ecba30b2fac25e091e31c0993212cf29d77665e40e5e453d218301b728be",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127813",
+          "request_sha256": "3a84efe90676c903d1d756e29680dc0e1a534cf2aad04515d99e3cc1a6ba136d",
+          "response_sha256": "aad6270a93f6e05bc6e21f554865d585ab6fa309183c32965ecc62e97ae2e6ac",
+          "retrieved_at": "2026-09-10T05:30:45.951400Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-11T05:35:32Z",
+          "source_record_sha256": "e7a9533f23dd9c2a62e5538b05bfa256cebd683692c35d1ad87af2e775211329",
+          "source_uri": null
+        },
+        "record_sha256": "91e2281222e5927c082105508f1da3baade3df07f8fa76fe1c19de165e0a913f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "섭지코지는 코지(코지곶을 의미하는 제주 방언)라는 지명에서 알 수 있듯 코의 끄트리 모양 비죽 튀어나온 지형이다. 위치상으로는 서귀포시 성산읍 신양리 해안에 돌출되어 있다. 외지인들에게는 찾아가기가 그리 쉽지는 않은데 대개의 경우 신양리 해안 국도변에서 마을로 진입하여 이정표를 보고 콘크리트로 포장된 길을 따라가면 코지 끝에까지 이를 수 있다. 또는 서귀포 방면에서 찾아온다면, 표선 시내를 지나 약 7㎞쯤 가서 우측으로 해안 도로 표지판이 나오면 여기서 우회전하여 줄곧 바다를 끼고 정면으로 섭지코지 전경을 바라보며 달리다가 이내 신양해수욕장 백사장이 보이고 마을 앞에 이르러 우회전, 마찬가지로 콘크리트 도로를 따라가면 된다. 특히 이곳의 유채꽃은 밝은 햇살과 푸른 바다 빛과 어울려 그 어느 곳에서보다 더욱 선명하고 고운 빛깔을 띠고 있다. 넓고 평평한 코지 언덕 위에는 옛날 봉화 불을 지피던 협자연대라는 돌로 만든 봉수대가 세워져 있는데 높이 약 4m, 가로세로 9m의 정방형으로 비교적 원형대로 보존되어 있다. 연대에서 동북 방향으로 솟아있는 봉우리는 일명 붉은오름으로, 제주말로 송이라고 하는 붉은색 화산재로 이루어진 오름인데, 정상에 서있는 하얀 등대의 모습이 노란 유채꽃밭과 오름의 붉은 흙빛, 그리고 파란 하늘빛, 바다 빛과 대비되는 또 다른 이국적인 정취를 불러일으킨다. 등대까지는 철계단이 마련되어 있어 쉽게 올라갈 수 있으며 등대 난간에 올라서면 과연 기가 막힌 섭지코지의 해안절경이 바로 코앞에 펼쳐진다."
+      }
+    ],
+    "parent_source_sha256": "874905ee95fc6f414aebdd90790172f19332aa1e9f7db6340c2070ec1e907326",
+    "place": {
+      "address": "제주특별자치도 서귀포시 성산읍 섭지코지로 107",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+      "name_ko": "섭지코지",
+      "place_id": "public:korea:cb8e75ed7fc7943b2b2e37bd458c9538982f30f70af3c3a448176aab7d39199a",
+      "provider_content_id": "127813",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

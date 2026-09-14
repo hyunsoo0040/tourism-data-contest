@@ -1,0 +1,989 @@
+{
+  "assessed_at": "2026-09-11T16:33:42.758849Z",
+  "assessment_sha256": "ef02c8c76046015bbf7dd936182ea9548d62b92d91b5be685d650a97aa0e2b29",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 54
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 88
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소에 '감성 여행지', '교감', '힐링'이라는 이미지가 공식 소개문에서 부여되고 있으나, 여러 표현·장면에서 일관된 의미가 확인되는 수준으로 그치며 방문 경험의 중심이라 단정하기는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:66bd3903dd193d3e4071c0a3dd7bd019ddc9a09a5ae58dc2583d056fde0dca95",
+            "appearance:80d449f15c4522ab08bae2e3607634f1549d70a892054f7cfaba041c95bdda2b",
+            "appearance:96b9307d877a42b0e507ff7537380551fd92d532a75e7b7d7b1f8c42c8364b3e"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:4c69d1bf4c8b2964e9f3306d7dff193553ae451263fbaba1dba56a9a4511a792",
+            "appearance:546a99cc5db74703328e2a5fc5c60059e708e5fb99dd0754ec7ca16b66f4c65b",
+            "appearance:98795c828da3a956dfcf1f271c07035ef042d26a4c91f0dd9ce31c6c64946bd1"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연 환경 단서는 수준 3('자연·환경 단서를 확인')까지는 가능하나, 제안된 anchor_ko는 수준 4의 '자연·시각적 저자극 환경이 두드러짐'이다. 근거가 모두 홍보성 overview 문구('청정자연', '푸른 숲속')이며 실제 환경이 장면을 지배한다는 관찰 근거가 없어 현재 수준은 불확실하다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "알파카와의 산책, 놀이터, 새들의정원 입장, 다양한 동물 체험 등 참여형 활동이 소개문의 중심 내용을 이루며 '대표 체험'으로 명시된다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 알파카 동물 테마 파크에 관한 것으로, 확인된 실제 원형·문화유산과의 접촉에 대한 정보가 없다. '안데스생태방목장'은 남미 지형의 재현으로 원형 유산 접촉의 근거가 되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소의 실제 역사·연혁·사건·인물에 대한 서사가 근거에 없어 평가할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 제공되지 않았다. 동물 체험은 실제 전승의 지속을 보여주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 프로그램에 대한 정보가 근거에 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+          "quote": {
+            "end": 87,
+            "method": "EXACT",
+            "original": "자연 그대로의 모습으로 살아가는 동물들을 가까이서 만나고 교감할 수 있는 알파카 테마 감성 여행지다.",
+            "start": 31,
+            "submitted": "자연 그대로의 모습으로 살아가는 동물들을 가까이서 만나고 교감할 수 있는 알파카 테마 감성 여행지다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6de0a2295b3a64aa76ed4df4c68fcc5e657e49b01159daad2a9cfbec7851b0c3"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "이 장소에 '감성 여행지', '교감', '힐링'이라는 이미지가 공식 소개문에서 부여되고 있으나, 여러 표현·장면에서 일관된 의미가 확인되는 수준으로 그치며 방문 경험의 중심이라 단정하기는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "NCT LIFE 촬영이라는 단일 매체 등장은 앵커 수준 3('확인된 작품·홍보·SNS와 장소 이미지의 연결')에는 적합하지만, 제안된 anchor_ko는 수준 4의 '반복되는 매체 표현과 유통의 근거'이다. 단일 방송 콘텐츠로 반복적 유통을 단정할 근거가 없어 현재 수준은 불확실하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "제안된 anchor_ko는 수준 4의 '촬영·참여로 이미지나 장면을 재현'이다. 근거는 NCT 멤버가 사진을 찍은 단일 매체 장면일 뿐, 일반 방문자의 이미지 재현 활동이 확인되지 않는다. 알파카 산책·사진 촬영 가능성은 암시되나 수준 4 재현의 직접 근거는 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색·자기 선택의 여지를 직접 보여주는 근거가 부족하다. 산책·놀이터 프로그램이 자유 탐색을 의미한다고 확정하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경 단서는 수준 3('자연·환경 단서를 확인')까지는 가능하나, 제안된 anchor_ko는 수준 4의 '자연·시각적 저자극 환경이 두드러짐'이다. 근거가 모두 홍보성 overview 문구('청정자연', '푸른 숲속')이며 실제 환경이 장면을 지배한다는 관찰 근거가 없어 현재 수준은 불확실하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+          "quote": {
+            "end": 198,
+            "method": "EXACT",
+            "original": "푸른 숲을 알파카와 함께 발을 맞춰 걸으며 교감할 수 있는 알파카월드의 대표 체험 ‘알파카와 힐링 산책’",
+            "start": 140,
+            "submitted": "푸른 숲을 알파카와 함께 발을 맞춰 걸으며 교감할 수 있는 알파카월드의 대표 체험 ‘알파카와 힐링 산책’",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6de0a2295b3a64aa76ed4df4c68fcc5e657e49b01159daad2a9cfbec7851b0c3"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 4,
+      "reason": "알파카와의 산책, 놀이터, 새들의정원 입장, 다양한 동물 체험 등 참여형 활동이 소개문의 중심 내용을 이루며 '대표 체험'으로 명시된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "사람 간 교류·공동 활동·자기표현의 기회에 대한 직접 근거가 없다. 동물과의 교감은 관계·자기표현 활동의 근거로 삼기 어렵다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+            "quote": "문을 열고 들어가는 순간 동화 속 세상에 온 듯한 느낌을 주는 ‘새들의정원’"
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+            "quote": "청정자연 강원도 홍천의 푸른 숲속에 있으며"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "푸른 숲 속 경관과 '동화 속 세상' 연출, '안데스생태방목장' 재현 등 장소의 시각적 성격이 소개문에서 구별되게 표현된다. 다만 일관된 시각적 연출이 장면 전체를 지배한다는 근거는 부족하여 수준 3으로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+              "quote": {
+                "end": 462,
+                "method": "EXACT",
+                "original": "NCT가 자체 콘텐츠 <NCT LIFE in 춘천&홍천>에서 힐링을 하기 위해 찾은 장소다.",
+                "start": 411,
+                "submitted": "NCT가 자체 콘텐츠 <NCT LIFE in 춘천&홍천>에서 힐링을 하기 위해 찾은 장소다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6de0a2295b3a64aa76ed4df4c68fcc5e657e49b01159daad2a9cfbec7851b0c3"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.b",
+          "level": 3,
+          "reason": "한류 콘텐츠(NCT LIFE)에서 이 장소가 촬영지로 등장해 장소 이미지가 매체를 통해 표현·확산되는 근거가 확인된다. 반복적 유통까지는 확인되지 않아 수준 3으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.b",
+          "reason": "NCT LIFE 촬영이라는 단일 매체 등장은 앵커 수준 3('확인된 작품·홍보·SNS와 장소 이미지의 연결')에는 적합하지만, 제안된 anchor_ko는 수준 4의 '반복되는 매체 표현과 유통의 근거'이다. 단일 방송 콘텐츠로 반복적 유통을 단정할 근거가 없어 현재 수준은 불확실하다."
+        }
+      },
+      "reason": "NCT LIFE 촬영이라는 단일 매체 등장은 앵커 수준 3('확인된 작품·홍보·SNS와 장소 이미지의 연결')에는 적합하지만, 제안된 anchor_ko는 수준 4의 '반복되는 매체 표현과 유통의 근거'이다. 단일 방송 콘텐츠로 반복적 유통을 단정할 근거가 없어 현재 수준은 불확실하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+              "quote": {
+                "end": 535,
+                "method": "EXACT",
+                "original": "함께 사진을 찍으며 즐거워했다.",
+                "start": 518,
+                "submitted": "함께 사진을 찍으며 즐거워했다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6de0a2295b3a64aa76ed4df4c68fcc5e657e49b01159daad2a9cfbec7851b0c3"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 3,
+          "reason": "알파카와의 산책·사진 촬영이 대표 장면으로 제시되고, 매체 콘텐츠에서도 이를 재현하는 모습이 확인된다. 이미지 체험이 방문 목적의 중심이라는 수준의 근거는 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "제안된 anchor_ko는 수준 4의 '촬영·참여로 이미지나 장면을 재현'이다. 근거는 NCT 멤버가 사진을 찍은 단일 매체 장면일 뿐, 일반 방문자의 이미지 재현 활동이 확인되지 않는다. 알파카 산책·사진 촬영 가능성은 암시되나 수준 4 재현의 직접 근거는 부족하다."
+        }
+      },
+      "reason": "제안된 anchor_ko는 수준 4의 '촬영·참여로 이미지나 장면을 재현'이다. 근거는 NCT 멤버가 사진을 찍은 단일 매체 장면일 뿐, 일반 방문자의 이미지 재현 활동이 확인되지 않는다. 알파카 산책·사진 촬영 가능성은 암시되나 수준 4 재현의 직접 근거는 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+              "quote": {
+                "end": 30,
+                "method": "EXACT",
+                "original": "청정자연 강원도 홍천의 푸른 숲속에 있으며",
+                "start": 7,
+                "submitted": "청정자연 강원도 홍천의 푸른 숲속에 있으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6de0a2295b3a64aa76ed4df4c68fcc5e657e49b01159daad2a9cfbec7851b0c3"
+            },
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+              "quote": {
+                "end": 239,
+                "method": "EXACT",
+                "original": "넓은 잔디 광장에서 알파카들과 교감하며 뛰어놀 수 있는 ‘알파카놀이터’",
+                "start": 200,
+                "submitted": "넓은 잔디 광장에서 알파카들과 교감하며 뛰어놀 수 있는 ‘알파카놀이터’",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6de0a2295b3a64aa76ed4df4c68fcc5e657e49b01159daad2a9cfbec7851b0c3"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "푸른 숲, 잔디 광장 등 자연 환경 단서가 공식 소개문에서 확인된다. 다만 실제 고요함·혼잡·심리적 회복은 확인할 수 없어 환경이 장면을 지배하는 수준(4)까지는 평가하지 않는다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "자연 환경 단서는 수준 3('자연·환경 단서를 확인')까지는 가능하나, 제안된 anchor_ko는 수준 4의 '자연·시각적 저자극 환경이 두드러짐'이다. 근거가 모두 홍보성 overview 문구('청정자연', '푸른 숲속')이며 실제 환경이 장면을 지배한다는 관찰 근거가 없어 현재 수준은 불확실하다."
+        }
+      },
+      "reason": "자연 환경 단서는 수준 3('자연·환경 단서를 확인')까지는 가능하나, 제안된 anchor_ko는 수준 4의 '자연·시각적 저자극 환경이 두드러짐'이다. 근거가 모두 홍보성 overview 문구('청정자연', '푸른 숲속')이며 실제 환경이 장면을 지배한다는 관찰 근거가 없어 현재 수준은 불확실하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "87593e6881b46bba6a70e88032595d11c50e54a983e4d93022df2c8a91d73f91",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "우산처럼 생긴 전통 초가 지붕 구조물들이 보이나 소규모 장식 요소 수준으로, 전체 공간의 전통적 외관은 보통 정도.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:303bda90682c02ef54d48d1c174096f69aa27a766a15a032adf6b688785f79e1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6f997766de0a1ae3678050111830f4b0a88f5e64337bd1831fb9869332c6097a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407993_8",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0127876800ecfb6535725978af8717223b70fba6d6e60c53e7c29b7d492d9aa9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3407993_image2_1.png"
+        },
+        "record_sha256": "eb6d5e4e5bb3edf456c25c8fdc9095e66a5ffcddd4b593e4dc0353b851192914",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 시각적 특성이 거의 드러나지 않으며 단순한 목책과 흙바닥만 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:44642d23f599426e412dfbbe12f455c076e2f3a324047d8ea0f331265b7974a6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "92a789f9d6b412c7fb3912d151f456f0246d3a24af50317f765e789dcd104405",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407992_1",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a887daffd7b008ccc98602fa30c14434e8ef4609219bcb6bca4fbaea7657660c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3407992_image2_1.png"
+        },
+        "record_sha256": "3b9f47cfa7ec1227482c76a85a0b558d8566f00f39608c8e18b848a36b24af79",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "흙바닥과 나무 그늘 같은 자연 환경 단서가 보이나 울타리와 사육장 느낌으로 자연 경관의 두드러짐은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4c69d1bf4c8b2964e9f3306d7dff193553ae451263fbaba1dba56a9a4511a792",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "92a789f9d6b412c7fb3912d151f456f0246d3a24af50317f765e789dcd104405",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407992_1",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a887daffd7b008ccc98602fa30c14434e8ef4609219bcb6bca4fbaea7657660c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3407992_image2_1.png"
+        },
+        "record_sha256": "2c3d29f6f739073a0a8e0655a019bb87bcd40a1739cc615b0ecc17d8a8e61798",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 산 능선과 침엽수, 잔디 녹지가 화면 대부분을 채우고 인공 구조물은 전면 데크뿐으로 자연 경관이 장면을 지배.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:546a99cc5db74703328e2a5fc5c60059e708e5fb99dd0754ec7ca16b66f4c65b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35c78b8404b881eec4a57ce7b6a49c088da9713d1335809d09f5467089aae844",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407989_7",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4274e340323d7d56574f5c0c9aa86ab42df7a8ee5dd66ea7a722fb2e63d28e80",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3407989_image2_1.png"
+        },
+        "record_sha256": "905a45467917e0e0728bd22cfabbe43adf2634fd37275e946ea1bf8c37bb51d6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "곡선형 목재 데크와 나무가 어우러진 자연스러운 구도로, 물 반사와 나무 그늘이 조화로운 시각적 성격을 보이나 극적인 연출감은 보통 수준.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:66bd3903dd193d3e4071c0a3dd7bd019ddc9a09a5ae58dc2583d056fde0dca95",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6f997766de0a1ae3678050111830f4b0a88f5e64337bd1831fb9869332c6097a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407993_8",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0127876800ecfb6535725978af8717223b70fba6d6e60c53e7c29b7d492d9aa9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3407993_image2_1.png"
+        },
+        "record_sha256": "2b772ea988201bd7cba5518ce6589c124a6742840efe8c75999d74441d7e6889",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰색 입체 글자 오브제가 정면 구도 중앙을 지배하며, 나무 데크와 검은 울타리, 푸른 산봉우리가 대비를 이루는 포토스팟형 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:80d449f15c4522ab08bae2e3607634f1549d70a892054f7cfaba041c95bdda2b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35c78b8404b881eec4a57ce7b6a49c088da9713d1335809d09f5467089aae844",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407989_7",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4274e340323d7d56574f5c0c9aa86ab42df7a8ee5dd66ea7a722fb2e63d28e80",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3407989_image2_1.png"
+        },
+        "record_sha256": "33b4d3d16495039d3014b1a66133cd755db9cec3b1f0d8e9458c7bea50df3be4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "흰 티셔츠와 갈색 사슴의 자연스러운 색 대비, 나무 그늘의 얼룩진 빛이 화면에 보통 수준의 시각적 성격을 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:96b9307d877a42b0e507ff7537380551fd92d532a75e7b7d7b1f8c42c8364b3e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "92a789f9d6b412c7fb3912d151f456f0246d3a24af50317f765e789dcd104405",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407992_1",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a887daffd7b008ccc98602fa30c14434e8ef4609219bcb6bca4fbaea7657660c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3407992_image2_1.png"
+        },
+        "record_sha256": "f941c9cd161c4a1aba621f5561e7e7106332b18e9e30d0cd456e41e002cce4b4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 숲, 흐르는 시냇물, 다양한 초목이 장면 전체를 지배하며 자연 경관이 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:98795c828da3a956dfcf1f271c07035ef042d26a4c91f0dd9ce31c6c64946bd1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6f997766de0a1ae3678050111830f4b0a88f5e64337bd1831fb9869332c6097a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407993_8",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0127876800ecfb6535725978af8717223b70fba6d6e60c53e7c29b7d492d9aa9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3407993_image2_1.png"
+        },
+        "record_sha256": "4d039b58e1684f1bb729c0a2216a1c5fa2b386b60eda6340191fbf6d368544cb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목재 데크와 자연재료 느낌의 소재가 일부 보이나, 입체 글자 오브제와 금속 울타리가 현대적이어서 전통 외관은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cf01db2d5df106b84f6032d8d1cbb58f65df469a54ed543b7863ba385e0fe600",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35c78b8404b881eec4a57ce7b6a49c088da9713d1335809d09f5467089aae844",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407989_7",
+          "request_sha256": "a4a74b57fd7f84f503fb5b7c8e966183dfd897b5d31abeedd9f955035ac0a0d3",
+          "response_sha256": "1fe0c585fd4f571d477415430b784e38cca4f5774caab80e88640cdf356103f2",
+          "retrieved_at": "2026-09-11T02:03:15.460489Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4274e340323d7d56574f5c0c9aa86ab42df7a8ee5dd66ea7a722fb2e63d28e80",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/89/3407989_image2_1.png"
+        },
+        "record_sha256": "f50cd03a03119cf7b1f050e5aece97a46b05b5d8c7f60615e46621f49008746b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:25d7dce04083689b8be23a35943045feaed34700e9d9a454bf2d26c24bf4ccae",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2495006",
+          "request_sha256": "48a4ebd99d2cd002cb48dc93bcd4612ae059a3d23d62dd69fecf53b4e28a6b17",
+          "response_sha256": "3df59e999d896d668ed1a92cb24519444d2abc143eac5882ad825ed6d644a9c7",
+          "retrieved_at": "2026-09-11T02:03:15.112222Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a50ee074844ffed79533b29895c23c0e45dff20fd1693f06ceef1d3098cbe6d5",
+          "source_uri": null
+        },
+        "record_sha256": "75d55e331a7eb46d5515a058cab2145ee662029e37f520d55bc8bda548f9b7ee",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:48df1406042a14cd37416a2dcc400a1b239701c1c1c0967ee57bde07e9ca7a24",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2495006",
+          "request_sha256": "48a4ebd99d2cd002cb48dc93bcd4612ae059a3d23d62dd69fecf53b4e28a6b17",
+          "response_sha256": "3df59e999d896d668ed1a92cb24519444d2abc143eac5882ad825ed6d644a9c7",
+          "retrieved_at": "2026-09-11T02:03:15.112222Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6de07dcafceba718e2bec5b86654092168b7893eb810119fa6629b8d14bc934a",
+          "source_uri": null
+        },
+        "record_sha256": "ba6f01d81a57246000438890f2444c161a3f41b3bd61da8e24a9a58c1e574e07",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[입장권] - 성인/어린이(36개월 이상~64세 이하) : 18,000원 [힐링산책] - 성인/어린이(36개월 이상~64세 이하) : 15,000원 ※ 36개월 미만 무료 입장(서류 지참) ※ 65세 이상, 국가유공자는 20%할인(서류 지참) ※ 홍천주민 입장권 20%할인(서류 지참) ※ 장애인 장애인 50% 할인(서류 지참)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b088f63520611f058d04ecbb20dff0f04baf9814806d77a96c7d6cf2b29116fe",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2495006",
+          "request_sha256": "026111066d00453ceda042377dccc52241f54c381703762b294e802ce652d7a5",
+          "response_sha256": "1aeb34c8590d073533ef759ddf79343a7af09439c9238194e195673ac94f1326",
+          "retrieved_at": "2026-09-10T17:04:57.708208Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-24T01:08:43Z",
+          "source_record_sha256": "9c20827441a782820a85e0eae53c99d10c9f2a9a898c878fb85b174add641192",
+          "source_uri": null
+        },
+        "record_sha256": "6de0a2295b3a64aa76ed4df4c68fcc5e657e49b01159daad2a9cfbec7851b0c3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "알파카월드는 청정자연 강원도 홍천의 푸른 숲속에 있으며 자연 그대로의 모습으로 살아가는 동물들을 가까이서 만나고 교감할 수 있는 알파카 테마 감성 여행지다. 남미 안데스 산악지형을 재현한 '안데스생태방목장'에서 만나는 50여 마리의 귀여운 알파카들, 푸른 숲을 알파카와 함께 발을 맞춰 걸으며 교감할 수 있는 알파카월드의 대표 체험 ‘알파카와 힐링 산책’, 넓은 잔디 광장에서 알파카들과 교감하며 뛰어놀 수 있는 ‘알파카놀이터’, 문을 열고 들어가는 순간 동화 속 세상에 온 듯한 느낌을 주는 ‘새들의정원’까지 만나볼 수 있다. 이 외에도 사슴, 토끼, 염소, 타조, 낙타, 올빼미, 독수리 등 다양한 종류의 동물들과 재밌는 즐길 거리 가득한 알파카월드에서 즐겁고 행복한 추억 만들어 볼 수 있다. ◎ 한류의 매력을 만나는 여행 정보 NCT가 자체 콘텐츠 <NCT LIFE in 춘천&홍천>에서 힐링을 하기 위해 찾은 장소다. 멤버들은 이곳에서 카트 탑승권을 두고 미션을 수행했는데, 알파카가 침을 뱉자 당황하는 것도 잠시, 함께 사진을 찍으며 즐거워했다."
+      }
+    ],
+    "parent_source_sha256": "ee5374c899ffbb6a944ee91e0f82c197a5172f54b2a2986d273076d741bec8ee",
+    "place": {
+      "address": "강원특별자치도 홍천군 화촌면 덕밭재길 146-155",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+      "name_ko": "알파카월드",
+      "place_id": "public:korea:3d2d42246792b8577fde321807fa4437f8e5c84cedc0ea17da156ae0c3cb72b8",
+      "provider_content_id": "2495006",
+      "region_code": "51720",
+      "region_name": "강원특별자치도 홍천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

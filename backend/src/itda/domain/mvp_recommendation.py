@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import cast
+from typing import Literal, cast
 
 from itda.contracts.base import DataSplit, ExperienceAxis
 from itda.contracts.mvp_scored_release import InformationState, MvpScoredProfile
@@ -29,9 +29,11 @@ from itda.contracts.recommendation import (
     RecommendationCandidate,
     RecommendationConfig,
     RecommendationPreference,
+    RecommendationQualityContext,
     ScoreContribution,
     TravelConditionId,
     mvp_confidence_state_for,
+    observed_condition_weights,
 )
 from itda.domain.canonical import canonical_sha256
 from itda.domain.recommendation_scoring import (
@@ -62,7 +64,27 @@ def _axis_values(profile: MvpScoredProfile) -> tuple[int, int, int]:
     return profile.scores.H, profile.scores.E, profile.scores.R
 
 
-def _condition_values(profile: MvpScoredProfile) -> tuple[int, int, int, int, int, int]:
+def _condition_values(
+    profile: MvpScoredProfile,
+    quality_context: RecommendationQualityContext | None = None,
+) -> tuple[int | None, ...]:
+    if quality_context is not None:
+        from itda.pipeline.place_facts import resolve_profile_conditions
+
+        facts = resolve_profile_conditions(
+            profile, companion=quality_context.companion, transport=quality_context.transport
+        )
+        return tuple(
+            facts.values[key]
+            for key in (
+                "visit_date_time",
+                "companions",
+                "transport",
+                "walking",
+                "indoor_outdoor",
+                "crowd",
+            )
+        )
     row = profile.condition_scores
     return (
         row.visit_date_time,
@@ -84,6 +106,7 @@ def _photo_trait_trace(
     *,
     base_relevance: int,
     trait_targets: tuple[int, int, int, int, int, int],
+    observed_traits: tuple[MismatchTraitId, ...] | None = None,
 ) -> PhotoRecommendationScoreTrace:
     components = cast(
         tuple[
@@ -109,10 +132,16 @@ def _photo_trait_trace(
             )
         ),
     )
-    photo_fit = _half_up(sum(row.fit for row in components), 6)
-    strongest = max(components, key=lambda row: (row.fit, -int(row.trait_id.value[1:])))
+    observed = [
+        row for row in components if observed_traits is None or row.trait_id in observed_traits
+    ]
+    if not observed:
+        raise MvpRecommendationError("PHOTO_SEMANTIC_EVIDENCE_UNAVAILABLE")
+    photo_fit = _half_up(sum(row.fit for row in observed), len(observed))
+    strongest = max(observed, key=lambda row: (row.fit, -int(row.trait_id.value[1:])))
     return PhotoRecommendationScoreTrace(
         base_relevance=base_relevance,
+        observed_traits=observed_traits,
         trait_components=components,
         photo_trait_fit=photo_fit,
         effective_relevance=_half_up(base_relevance * 6_500 + photo_fit * 3_500, 10_000),
@@ -127,7 +156,8 @@ def _relevance(
     profile: MvpScoredProfile,
     *,
     axis_targets: tuple[int, int, int],
-    condition_targets: tuple[int, int, int, int, int, int],
+    condition_targets: tuple[int | None, ...],
+    quality_context: RecommendationQualityContext | None = None,
 ) -> int:
     axis_fit = _half_up(
         sum(
@@ -136,17 +166,25 @@ def _relevance(
         ),
         3,
     )
-    weights = (400, 350, 350, 350, 300, 250)
+    condition_values = _condition_values(profile, quality_context)
+    weights = observed_condition_weights(
+        tuple(
+            expected is not None and actual is not None
+            for expected, actual in zip(condition_targets, condition_values, strict=True)
+        )
+    )
     condition_fit = _half_up(
         sum(
             (100 - abs(expected - actual)) * weight
             for expected, actual, weight in zip(
-                condition_targets, _condition_values(profile), weights, strict=True
+                condition_targets, condition_values, weights, strict=True
             )
+            if expected is not None and actual is not None
         ),
         2_000,
     )
-    return _half_up(axis_fit * 8_000 + condition_fit * 2_000, 10_000)
+    condition_weight = 2_000 if any(weights) else 0
+    return _half_up(axis_fit * 8_000 + condition_fit * condition_weight, 8_000 + condition_weight)
 
 
 def _novelty(profile: MvpScoredProfile, selected: Iterable[MvpScoredProfile]) -> int:
@@ -215,7 +253,8 @@ def rank_mvp_top_five(
     *,
     relation_authority: PublicRelationAuthority,
     axis_targets: tuple[int, int, int],
-    condition_targets: tuple[int, int, int, int, int, int],
+    condition_targets: tuple[int | None, ...],
+    quality_context: RecommendationQualityContext | None = None,
 ) -> tuple[RankedMvpPlace, ...]:
     if not 80 <= len(profiles) <= 100:
         raise MvpRecommendationError("MVP_RELEASE_MEMBER_COUNT_INVALID")
@@ -229,12 +268,17 @@ def rank_mvp_top_five(
             row,
             axis_targets=axis_targets,
             condition_targets=condition_targets,
+            quality_context=quality_context,
         )
         for row in ordered
     }
     selected: list[MvpScoredProfile] = []
     ranked: list[RankedMvpPlace] = []
-    remaining = list(ordered)
+    remaining = [
+        row
+        for row in ordered
+        if quality_context is None or row.place_id in quality_context.eligible_place_ids
+    ]
     while len(selected) < 5:
         selected_groups = {row.duplicate_group_id for row in selected}
         compatible = [
@@ -306,8 +350,10 @@ def rank_photo_mvp_top_five(
     *,
     relation_authority: PublicRelationAuthority,
     axis_targets: tuple[int, int, int],
-    condition_targets: tuple[int, int, int, int, int, int],
+    condition_targets: tuple[int | None, ...],
     trait_targets: tuple[int, int, int, int, int, int],
+    quality_context: RecommendationQualityContext | None = None,
+    observed_traits: tuple[MismatchTraitId, ...] | None = None,
 ) -> tuple[tuple[RankedMvpPlace, ...], dict[str, PhotoRecommendationScoreTrace]]:
     if not 80 <= len(profiles) <= 100:
         raise MvpRecommendationError("MVP_RELEASE_MEMBER_COUNT_INVALID")
@@ -321,14 +367,20 @@ def rank_photo_mvp_top_five(
                 row,
                 axis_targets=axis_targets,
                 condition_targets=condition_targets,
+                quality_context=quality_context,
             ),
             trait_targets=trait_targets,
+            observed_traits=observed_traits,
         )
         for row in ordered
     }
     selected: list[MvpScoredProfile] = []
     ranked: list[RankedMvpPlace] = []
-    remaining = list(ordered)
+    remaining = [
+        row
+        for row in ordered
+        if quality_context is None or row.place_id in quality_context.eligible_place_ids
+    ]
     while len(selected) < 5:
         selected_groups = {row.duplicate_group_id for row in selected}
         compatible = [
@@ -346,8 +398,7 @@ def rank_photo_mvp_top_five(
                 relevance_score=traces[candidate.place_id].effective_relevance,
                 novelty_score=(novelty := _novelty(candidate, selected)),
                 combined_score=_half_up(
-                    traces[candidate.place_id].effective_relevance * 8_500
-                    + novelty * 1_500,
+                    traces[candidate.place_id].effective_relevance * 8_500 + novelty * 1_500,
                     10_000,
                 ),
             )
@@ -398,11 +449,21 @@ def _evidence_ids(profile: MvpScoredProfile, dimension: str) -> tuple[str, ...]:
     )
 
 
-def _public_candidate(profile: MvpScoredProfile) -> RecommendationCandidate:
+def _public_candidate(
+    profile: MvpScoredProfile,
+    quality_context: RecommendationQualityContext | None = None,
+) -> RecommendationCandidate:
     axis_dimensions = ("H", "E", "R")
     axis_values = (profile.scores.H, profile.scores.E, profile.scores.R)
     condition_dimensions = ("M6", "M4", "M5", "M5", "R1", "M3")
-    condition_values = tuple(profile.condition_scores.model_dump(mode="python").values())
+    condition_values = _condition_values(profile, quality_context)
+    condition_evidence = None
+    if quality_context is not None:
+        from itda.pipeline.place_facts import resolve_profile_conditions
+
+        condition_evidence = resolve_profile_conditions(
+            profile, companion=quality_context.companion, transport=quality_context.transport
+        ).evidence_ids
     reference_date = max(row.reference_date for row in profile.evidence_excerpts)
     return RecommendationCandidate(
         place_id=profile.place_id,
@@ -500,7 +561,11 @@ def _public_candidate(profile: MvpScoredProfile) -> RecommendationCandidate:
                 PlaceConditionSnapshot(
                     condition_id=condition,
                     value=value,
-                    evidence_ids=_evidence_ids(profile, dimension),
+                    evidence_ids=(
+                        condition_evidence[condition.value.lower()]
+                        if condition_evidence is not None
+                        else _evidence_ids(profile, dimension)
+                    ),
                 )
                 for condition, value, dimension in zip(
                     TravelConditionId, condition_values, condition_dimensions, strict=True
@@ -542,6 +607,10 @@ def create_mvp_recommendation_run(
     config: RecommendationConfig = CANONICAL_RECOMMENDATION_CONFIG,
     created_at: object,
 ) -> MvpRecommendationRun:
+    if (config.kernel_version == "recommendation-kernel-v4") != (
+        preference.quality_context is not None
+    ):
+        raise MvpRecommendationError("RECOMMENDATION_QUALITY_POLICY_MISMATCH")
     axis_targets = tuple(row.value for row in preference.axis_targets)
     condition_targets = tuple(row.value for row in preference.condition_targets)
     ranked = rank_mvp_top_five(
@@ -549,8 +618,11 @@ def create_mvp_recommendation_run(
         relation_authority=relation_authority,
         axis_targets=cast(tuple[int, int, int], axis_targets),
         condition_targets=cast(tuple[int, int, int, int, int, int], condition_targets),
+        quality_context=preference.quality_context,
     )
-    candidates = {_public_candidate(row).place_id: _public_candidate(row) for row in profiles}
+    candidates = {
+        row.place_id: _public_candidate(row, preference.quality_context) for row in profiles
+    }
     public_items: list[MvpRecommendationPublicItem] = []
     for index, ranked_row in enumerate(ranked, start=1):
         candidate = candidates[ranked_row.place_id]
@@ -585,9 +657,7 @@ def create_mvp_recommendation_run(
             for row in candidate.evidence
             if row.evidence_id in evidence_ids
         )
-        confidence_state, confidence_reason = mvp_confidence_state_for(
-            candidate.overall_confidence
-        )
+        confidence_state, confidence_reason = mvp_confidence_state_for(candidate.overall_confidence)
         public_items.append(
             MvpRecommendationPublicItem(
                 rank=index,
@@ -662,6 +732,9 @@ def create_photo_mvp_recommendation_run(
     photo_job_reference_sha256: str,
     images_count: int,
     included_count: int,
+    photo_projection_version: str = "photo-projection-v1",
+    observed_traits: tuple[MismatchTraitId, ...] | None = None,
+    photo_trait_values: tuple[tuple[MismatchTraitId, int], ...] | None = None,
     config: RecommendationConfig = CANONICAL_RECOMMENDATION_CONFIG,
     created_at: object,
 ) -> PhotoMvpRecommendationRun:
@@ -672,7 +745,10 @@ def create_photo_mvp_recommendation_run(
     )
     trait_targets = cast(
         tuple[int, int, int, int, int, int],
-        tuple(row.value for row in preference.trait_targets),
+        tuple(
+            dict(photo_trait_values or ()).get(row.trait_id, row.value)
+            for row in preference.trait_targets
+        ),
     )
     ranked, traces = rank_photo_mvp_top_five(
         profiles,
@@ -680,8 +756,12 @@ def create_photo_mvp_recommendation_run(
         axis_targets=axis_targets,
         condition_targets=condition_targets,
         trait_targets=trait_targets,
+        quality_context=preference.quality_context,
+        observed_traits=observed_traits,
     )
-    candidates = {_public_candidate(row).place_id: _public_candidate(row) for row in profiles}
+    candidates = {
+        row.place_id: _public_candidate(row, preference.quality_context) for row in profiles
+    }
     public_items: list[MvpRecommendationPublicItem] = []
     photo_scores: list[PhotoRecommendationScoreTrace] = []
     for index, ranked_row in enumerate(ranked, start=1):
@@ -722,9 +802,7 @@ def create_photo_mvp_recommendation_run(
             for row in candidate.evidence
             if row.evidence_id in evidence_ids
         )
-        confidence_state, confidence_reason = mvp_confidence_state_for(
-            candidate.overall_confidence
-        )
+        confidence_state, confidence_reason = mvp_confidence_state_for(candidate.overall_confidence)
         public_items.append(
             MvpRecommendationPublicItem(
                 rank=index,
@@ -761,7 +839,9 @@ def create_photo_mvp_recommendation_run(
         candidate_sha256=candidate_sha256,
         config_sha256=cast(str, config.config_sha256),
         kernel_version=config.kernel_version,
-        photo_projection_version="photo-projection-v1",
+        photo_projection_version=cast(
+            Literal["photo-projection-v1", "photo-projection-v2"], photo_projection_version
+        ),
         photo_projection_policy_sha256=photo_projection_policy_sha256,
         photo_projection_output_sha256=photo_projection_output_sha256,
         confirmation_draft_sha256=confirmation_draft_sha256,

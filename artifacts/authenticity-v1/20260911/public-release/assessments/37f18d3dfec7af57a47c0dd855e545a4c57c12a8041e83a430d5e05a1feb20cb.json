@@ -1,0 +1,955 @@
+{
+  "assessed_at": "2026-09-11T15:35:59.518051Z",
+  "assessment_sha256": "37f18d3dfec7af57a47c0dd855e545a4c57c12a8041e83a430d5e05a1feb20cb",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 63
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'젊음의광장'이라는 이름과 함께 젊은 세대의 문화 교류 공간이라는 이미지가 장소에 연결되어 있다. 여러 표현에서 일관된 의미를 확인하기에는 근거가 제한적이라 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:53034e6c9f3b5322189d1c69016f665ffa492a3b008da1557146acb067e13760",
+            "appearance:776b7c7c2947cec667ebd7b40efa70c5e32b09458f3509c8954b9e8e57973809",
+            "appearance:a9c024d8fd15dcbd7b366ba560516ac63fa7f06c29dc12955dc4c83145dc2a50"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 50,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "울창한 수목과 도심형 체육공간이라는 환경적 시각적 성격이 언급되나, 일관된 시각적 연출이 장면을 지배한다는 근거는 부족하여 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "다양한 운동 시설에서 자유롭게 활동할 수 있다는 자율적 선택 기회가 확인된다. 다만 여유로운 탐색이 경험의 중심이라는 근거는 없어 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:22b011d216e0480c1c525e199045b6bdeb79787299051bb22baf699b217d5fcf",
+            "appearance:39bf650b7fcf83795475002e844f8d8e423e57bc14ab559b261d07072f54973f",
+            "appearance:42b0541c189f4f985b49a9506925950b9816ed814b741ccd5e6ef2f6db266ea3"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "운동 시설 이용과 댄스 연습, 버스킹 등 참여·집중할 구체적 활동 기회가 확인된다. 지속적 도전 활동이 방문의 중심이라는 근거는 부족하여 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "버스킹, 문화공연, 축제에서 시민과 공연팀의 교류 기회가 확인된다. 교류·표현이 풍부하나 방문 경험의 중심이라 단정하기 어려워 수준 3이다.",
+      "value": 75
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "확인된 실제 원형·유산과의 접촉에 대한 근거가 없다. 개장 연도와 체육공원 시설 소개만 있어 문화유산 접촉을 판단할 자료가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "명륜동의 체육 중심지 연혁이 간단히 언급되나, 그 장소 자체의 구체적 역사·사건·인물 맥락을 탐구할 수 있다는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 확인할 근거가 없다. 시민 이용과 축제 개최 언급만으로 전승의 지속을 단정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a",
+          "quote": {
+            "end": 357,
+            "method": "EXACT",
+            "original": "젊은 세대의 문화 교류 공간으로 활용되고 있다",
+            "start": 332,
+            "submitted": "젊은 세대의 문화 교류 공간으로 활용되고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "91c0854facbe1563b5e306abc08b3c1dfe58d6868e5043910e5a308a9fc4758e"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'젊음의광장'이라는 이름과 함께 젊은 세대의 문화 교류 공간이라는 이미지가 장소에 연결되어 있다. 여러 표현에서 일관된 의미를 확인하기에는 근거가 제한적이라 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 대한 근거가 없다. 축제 개최 언급만으로 매체 표현의 유통을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a",
+          "quote": {
+            "end": 167,
+            "method": "EXACT",
+            "original": "울창한 수목 환경을 갖춘 도심형 생활체육공간",
+            "start": 143,
+            "submitted": "울창한 수목 환경을 갖춘 도심형 생활체육공간",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "91c0854facbe1563b5e306abc08b3c1dfe58d6868e5043910e5a308a9fc4758e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "울창한 수목과 도심형 체육공간이라는 환경적 시각적 성격이 언급되나, 일관된 시각적 연출이 장면을 지배한다는 근거는 부족하여 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험하고 재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a",
+          "quote": {
+            "end": 280,
+            "method": "EXACT",
+            "original": "학생과 주민 누구나 자유롭게 체력 단련과 여가 활동을 즐길 수 있다",
+            "start": 243,
+            "submitted": "학생과 주민 누구나 자유롭게 체력 단련과 여가 활동을 즐길 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "91c0854facbe1563b5e306abc08b3c1dfe58d6868e5043910e5a308a9fc4758e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "다양한 운동 시설에서 자유롭게 활동할 수 있다는 자율적 선택 기회가 확인된다. 다만 여유로운 탐색이 경험의 중심이라는 근거는 없어 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a",
+          "quote": {
+            "end": 242,
+            "method": "EXACT",
+            "original": "전천후트랙을 비롯해 인라인스케이트장, 농구장, 족구장, 배구장 등이 조성되어 있어",
+            "start": 197,
+            "submitted": "전천후트랙을 비롯해 인라인스케이트장, 농구장, 족구장, 배구장 등이 조성되어 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "91c0854facbe1563b5e306abc08b3c1dfe58d6868e5043910e5a308a9fc4758e"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a",
+          "quote": {
+            "end": 331,
+            "method": "EXACT",
+            "original": "시민들의 버스킹과 댄스 연습, 다양한 문화공연이 이루어지며",
+            "start": 299,
+            "submitted": "시민들의 버스킹과 댄스 연습, 다양한 문화공연이 이루어지며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "91c0854facbe1563b5e306abc08b3c1dfe58d6868e5043910e5a308a9fc4758e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "운동 시설 이용과 댄스 연습, 버스킹 등 참여·집중할 구체적 활동 기회가 확인된다. 지속적 도전 활동이 방문의 중심이라는 근거는 부족하여 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a",
+          "quote": {
+            "end": 436,
+            "method": "EXACT",
+            "original": "국내외 공연팀과 시민들이 함께 어우러지는 활기찬 문화 예술의 장을 형성한다",
+            "start": 395,
+            "submitted": "국내외 공연팀과 시민들이 함께 어우러지는 활기찬 문화 예술의 장을 형성한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "91c0854facbe1563b5e306abc08b3c1dfe58d6868e5043910e5a308a9fc4758e"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 3,
+      "reason": "버스킹, 문화공연, 축제에서 시민과 공연팀의 교류 기회가 확인된다. 교류·표현이 풍부하나 방문 경험의 중심이라 단정하기 어려워 수준 3이다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "7e264f249bca3e10ab4f0013b4f1ff172831c41ea7b1031a7d7318c2db975af3",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a",
+              "quote": {
+                "end": 482,
+                "method": "EXACT",
+                "original": "광장 인근에는 종합운동장 둘레 숲길이 조성되어 있어 산책과 조깅을 즐기기 좋으며",
+                "start": 438,
+                "submitted": "광장 인근에는 종합운동장 둘레 숲길이 조성되어 있어 산책과 조깅을 즐기기 좋으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "91c0854facbe1563b5e306abc08b3c1dfe58d6868e5043910e5a308a9fc4758e"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "울창한 수목 환경과 숲길, 산책 등 자연 환경 단서가 확인된다. 다만 실제 고요함·저자극성은 확인할 수 없어 수준 3이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "ba9c99a1272971ab2b71d3438a655493ca825fa9faceccf8ca9fc25fb0293f3d",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "크게 자란 나무와 하늘이 화면 상당 부분을 차지하나 넓은 자연 경관보다는 시설 옆 녹지 수준",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:22b011d216e0480c1c525e199045b6bdeb79787299051bb22baf699b217d5fcf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c72e19e6e432d2daa2b9759154f531a74dd35033cbd313ff5815565a2c6545d0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065120_9",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fd29c3a7413ce56c405706fb4cb3f959f60a8743e5c5433eabf9bfa06c710e16",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/20/4065120_image2_1.jpeg"
+        },
+        "record_sha256": "7c02bfdb194b0eea41eddf7dfb22abc41ea3c74cad73a2f2e4e10e085c912212",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "배경의 울창한 수림, 먼 산, 트인 하늘 등 자연 환경 단서가 화면 상당 부분을 차지함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:39bf650b7fcf83795475002e844f8d8e423e57bc14ab559b261d07072f54973f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "59570578aa7d8baf49d192aa506561efe4e08f5a1d2df108cd89badfdb1df7b8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065117_4",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ac2e2d29eddf11aaf0e0b4f0a43720c99b18a1e6d44fd52393c4371db1d7ab63",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/17/4065117_image2_1.jpeg"
+        },
+        "record_sha256": "f1aee69fd6352c97ace74fb1ce50c8afa257c9bba14b247bf565cc3f4cf3387d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "맑게 트인 하늘과 구조물 뒤 일부 나뭇잎이 보이나, 대부분이 운동장 포장면과 건축 구조물로 채워져 자연 단서는 매우 제한적",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:42b0541c189f4f985b49a9506925950b9816ed814b741ccd5e6ef2f6db266ea3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b2089f17aa66f7b6c21222b27a017eec6e6eea0d3e2bcdfd0ff57d58140d37bc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065113_1",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "19b910dfdf6158af78aaef50f6659c9252690c005fe8d085cb8cb4f33cbe2795",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/13/4065113_image2_1.jpeg"
+        },
+        "record_sha256": "c6a5561872b791929b58cc3038d5e9f8afba2a9782463aca28f859a4633d639b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성의 시각적 단서가 보이지 않는 현대적 스포츠 코트 공간임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4ab07ada719c03436bd10f5fcd87a49fe5487d44d84bd752fe0d6ebf076a4e60",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "59570578aa7d8baf49d192aa506561efe4e08f5a1d2df108cd89badfdb1df7b8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065117_4",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ac2e2d29eddf11aaf0e0b4f0a43720c99b18a1e6d44fd52393c4371db1d7ab63",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/17/4065117_image2_1.jpeg"
+        },
+        "record_sha256": "9f54d69ef9af15e248380523e22e907a72d4dac2606ac02c1f3aa6596a249507",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대식 콘크리트·패널 재질의 공중화장실로 전통적 외관이나 재료의 흔적이 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4be20f1a6d60b24f5ccbb17159c63770cd2bfc615b276e08f9a01f13591baca2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c72e19e6e432d2daa2b9759154f531a74dd35033cbd313ff5815565a2c6545d0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065120_9",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fd29c3a7413ce56c405706fb4cb3f959f60a8743e5c5433eabf9bfa06c710e16",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/20/4065120_image2_1.jpeg"
+        },
+        "record_sha256": "5f89ff3bd3f65415ebe5a91221303958cccde7ebeb205779465a9bbe1084b2be",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "백색 텐트형 멤브레인 지붕의 곡선 구조가 하늘을 배경으로 크게 펼쳐져 장면의 시각적 중심을 이루며, 잔대와 철골 구조물이 현대적·산업적 외관을 강하게 드러냄",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:53034e6c9f3b5322189d1c69016f665ffa492a3b008da1557146acb067e13760",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b2089f17aa66f7b6c21222b27a017eec6e6eea0d3e2bcdfd0ff57d58140d37bc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065113_1",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "19b910dfdf6158af78aaef50f6659c9252690c005fe8d085cb8cb4f33cbe2795",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/13/4065113_image2_1.jpeg"
+        },
+        "record_sha256": "87267da7c9ff67776c71c2cc11264552b8042c955a7fa73a07da5524362477c9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 1,
+          "reason": "빨강·파랑 출입문과 붉은 포장이 눈에 띄지만 전반은 일상적 화장실 건물의 단순한 외관으로 연출감이 약함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:776b7c7c2947cec667ebd7b40efa70c5e32b09458f3509c8954b9e8e57973809",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c72e19e6e432d2daa2b9759154f531a74dd35033cbd313ff5815565a2c6545d0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065120_9",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fd29c3a7413ce56c405706fb4cb3f959f60a8743e5c5433eabf9bfa06c710e16",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/20/4065120_image2_1.jpeg"
+        },
+        "record_sha256": "e568bdfb4a1c5dfd9ae594512eea6f8815738318bd4e63170755283e8f396d2c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "녹색·파랑 코트면의 대비색과 탁 트인 하늘 구도가 보이나 특별한 연출은 두드러지지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a9c024d8fd15dcbd7b366ba560516ac63fa7f06c29dc12955dc4c83145dc2a50",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "59570578aa7d8baf49d192aa506561efe4e08f5a1d2df108cd89badfdb1df7b8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065117_4",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ac2e2d29eddf11aaf0e0b4f0a43720c99b18a1e6d44fd52393c4371db1d7ab63",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/17/4065117_image2_1.jpeg"
+        },
+        "record_sha256": "cdd2db77b495d178782d774f24ed2a219ff31373d8bdc93e914f92f822c6dfa4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "콘크리트·철골·멤브레인 지붕 등 현대적 재료와 구성만 보이며 전통적 외관·재료의 시각적 특성은 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a9f4f8c08835f908062a9220e1049f46d19d558e4ebdbe2af83a97ece7c5c7e1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b2089f17aa66f7b6c21222b27a017eec6e6eea0d3e2bcdfd0ff57d58140d37bc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065113_1",
+          "request_sha256": "b6823e403103f498307513dd05b22a34822d170e25b362d3537c2204894b1fd1",
+          "response_sha256": "a48b42280e0a87a3d5222b6e1d7198908d33ae14a81fa7d5933c7f1e425dfab7",
+          "retrieved_at": "2026-09-11T02:00:43.114005Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "19b910dfdf6158af78aaef50f6659c9252690c005fe8d085cb8cb4f33cbe2795",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/13/4065113_image2_1.jpeg"
+        },
+        "record_sha256": "38cd411b2f5383b58a415d01d859213f04781a190d7f809ee8e1e5e6ce3f8cdb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1c679f5ce8da69e2ef275a7d4f31e64d54643a43bd47eab7026ccc115abb92d5",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3029968",
+          "request_sha256": "89d56059e16530d79f81838be74e3b8dd16f4e124b32f61835f9ce9450d4c2bd",
+          "response_sha256": "23b4397123015430a88966bba96c73bfed22954dbb985a8e7bcca7ddfd7c100f",
+          "retrieved_at": "2026-09-11T02:00:42.438983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "69f80fbb61005e0751d85c64400ec106f581bf0eeba7664019974a16f3a2ad8f",
+          "source_uri": null
+        },
+        "record_sha256": "f8cef48bd542ee94bfecaf074d7d9e0f42caaedf0f2b2854fb9a7491a21cdd13",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3ace6b1e09bedc40d4235307a56376a7b21529cadf3ff292e1bc5f06d70cd71a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3029968",
+          "request_sha256": "d2a82c847e9fa1261a949b893a0a6a57d4fe104591c32c5961d87247dbfafba9",
+          "response_sha256": "8dc88f20442d9d0bc5ce9fb246cae755814ffcb2df950cbbfdb7a570539bb5d3",
+          "retrieved_at": "2026-09-10T17:27:41.380677Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-05-26T00:05:24Z",
+          "source_record_sha256": "404dd50d01ac797d2247076edab8c3951741e524c03acef40001051e58d5b234",
+          "source_uri": null
+        },
+        "record_sha256": "91c0854facbe1563b5e306abc08b3c1dfe58d6868e5043910e5a308a9fc4758e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "원주젊음의광장은 원주시 명륜동에 위치한 야외 체육공간이다. 명륜동은 1980년 종합운동장 신축 이후 치악체육관, 국민체육센터, 엘리트 체육관 등이 들어서며 원주의 대표적인 체육·문화 중심지로 자리 잡았다. 2006년 개장한 원주젊음의광장은 뛰어난 접근성과 울창한 수목 환경을 갖춘 도심형 생활체육공간으로, 시민들에게 꾸준히 사랑받고 있다. 공원 내에는 전천후트랙을 비롯해 인라인스케이트장, 농구장, 족구장, 배구장 등이 조성되어 있어 학생과 주민 누구나 자유롭게 체력 단련과 여가 활동을 즐길 수 있다. 또한 광장 내 댄싱공연장에서는 시민들의 버스킹과 댄스 연습, 다양한 문화공연이 이루어지며 젊은 세대의 문화 교류 공간으로 활용되고 있다. 특히 원주의 대표 축제인 원주 댄싱카니발이 이 일대에서 개최되어 국내외 공연팀과 시민들이 함께 어우러지는 활기찬 문화 예술의 장을 형성한다. 광장 인근에는 종합운동장 둘레 숲길이 조성되어 있어 산책과 조깅을 즐기기 좋으며, 지역 주민들의 일상과 도시의 분위기를 가까이에서 느낄 수 있는 공간으로 주목받고 있다. 이와 함께 3월부터 11월까지 어린이날 행사, 대중가수 공연, 지역 페스티벌 등 다양한 행사가 열려 가족 단위 방문객들의 나들이 장소로도 많은 인기를 얻고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4769bfb160145c4ea96d90c59c4667028b44a155b66c37fa9c61d6e2cb1bc83a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3029968",
+          "request_sha256": "89d56059e16530d79f81838be74e3b8dd16f4e124b32f61835f9ce9450d4c2bd",
+          "response_sha256": "23b4397123015430a88966bba96c73bfed22954dbb985a8e7bcca7ddfd7c100f",
+          "retrieved_at": "2026-09-11T02:00:42.438983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b4c2630edd0705382ea963db778345d3d8a679dc6c36958caa28cdfc09a2b08e",
+          "source_uri": null
+        },
+        "record_sha256": "a8558b922936e267ddc784626cdf42d46d7bec45489608061530d575daae8e7a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "9fdef9da7950b054946493c3d46dc5a992e6fdea3bf56fcafc4593f0d0895406",
+    "place": {
+      "address": "강원특별자치도 원주시 단구로 170 (명륜동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+      "name_ko": "원주젊음의광장",
+      "place_id": "public:korea:032be5b98838fd5cdb81e1b3732d14580fd8d4a32a05afb9b4adff7600c9af3f",
+      "provider_content_id": "3029968",
+      "region_code": "51130",
+      "region_name": "강원특별자치도 원주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

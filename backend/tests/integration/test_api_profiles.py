@@ -771,5 +771,5 @@ def test_current_v2_profile_carries_bumped_schema_version(api_client: TestClient
     body = created.json()
     assert body["schema_version"] == "preference-profile-v2"
     assert body["questionnaire_version"] == "questionnaire-v2"
-    assert body["scoring_version"] == "choice-bp-v2"
+    assert body["scoring_version"] == "choice-distribution-v3"
     assert set(body["answers"]) == {f"q{number}" for number in range(1, 13)}

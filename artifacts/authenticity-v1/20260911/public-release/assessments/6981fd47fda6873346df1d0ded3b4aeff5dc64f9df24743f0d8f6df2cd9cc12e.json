@@ -1,0 +1,913 @@
+{
+  "assessed_at": "2026-09-11T17:35:51.269448Z",
+  "assessment_sha256": "6981fd47fda6873346df1d0ded3b4aeff5dc64f9df24743f0d8f6df2cd9cc12e",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 42
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 68
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소에 '숨은 벚꽃 명소'라는 이미지가 연결되어 있다는 간단한 표현이 확인되나, 일관된 상징적 의미의 체계적 표현 근거는 부족해 낮은 수준으로 판단한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1fa9f8d4d2afc2b1d6f31c40507fd67115a9e66d289be1d98ed027e3aa7d3893",
+            "appearance:b8a6d4f8bad7bd8756585c28aaedcd36253da2c84f49d889783b953d56b9cabf",
+            "appearance:e0d3341668d6885a91bdb300ed2ca1bdb63cf0ce08638a22d17cd33f64178a59"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "벚꽃터널이라는 뚜렷한 시각적 경관의 성격이 확인되나, 일관된 연출이 장면을 지배한다는 수준의 근거는 없어 중간 수준으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(벚꽃터널)을 차량 안에서 제한적으로 관람할 수 있다는 근거는 있으나, 길에 인도가 없어 밖에서 감상·재현이 어렵다고 명시되어 낮은 수준이다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "드라이브·도보여행 코스를 자율적으로 선택해 즐길 수 있는 기회가 확인되나, 심층적 자기 주도 탐색의 근거는 부족하다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2d95b4d33fc2383da9d256fb808fb07a15b760844c3a317a44a66549ebddb92c",
+            "appearance:486073eb06d25f4dad6891755f2e5afd92deb4948a49b4a31b74658210f10669",
+            "appearance:ebdc3f515a4c66c3c6083caf4fddf04e14790991badd0ec6585d65ad31aac9d5"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "한적하고 사람이 적다는 환경 단서와 벚꽃 가로수라는 자연 단서가 확인되나, 실제 고요함·회복 효과까지는 추정할 수 없어 제한적 수준으로 판단한다.",
+      "value": 61
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "벚꽃길이 '자연적으로 조성'되었다는 표현만 있으며 확인된 원형·유산과의 접촉에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소의 역사·연혁·사건·인물에 대한 설명이 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다. 벚꽃이 자연 조성되었다는 서술만 있다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·역사와 연결된 해설·전시·탐구 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9",
+          "quote": {
+            "end": 80,
+            "method": "EXACT",
+            "original": "아는 사람들 사이에 입소문이 난 벚꽃 명소로",
+            "start": 56,
+            "submitted": "아는 사람들 사이에 입소문이 난 벚꽃 명소로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "007878839e4686d8df31dc2e4c84fabb0b54c6e669fc8c37fd732f2be3e8fbda"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 1,
+      "reason": "이 장소에 '숨은 벚꽃 명소'라는 이미지가 연결되어 있다는 간단한 표현이 확인되나, 일관된 상징적 의미의 체계적 표현 근거는 부족해 낮은 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "'입소문'이라는 유포 정황만 있고 작품·홍보·SNS 등 확인된 매체 표현과 장소 이미지의 연결 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9",
+          "quote": {
+            "end": 189,
+            "method": "EXACT",
+            "original": "양 길가의 벚꽃나무들이 벚꽃터널을 이루며 일대 장관을 이룬다",
+            "start": 156,
+            "submitted": "양 길가의 벚꽃나무들이 벚꽃터널을 이루며 일대 장관을 이룬다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "007878839e4686d8df31dc2e4c84fabb0b54c6e669fc8c37fd732f2be3e8fbda"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "벚꽃터널이라는 뚜렷한 시각적 경관의 성격이 확인되나, 일관된 연출이 장면을 지배한다는 수준의 근거는 없어 중간 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9",
+          "quote": {
+            "end": 282,
+            "method": "EXACT",
+            "original": "안전속도로 차를 몰며 벚꽃을 감상하는 드라이브만으로도 충분한 봄꽃의 흥취를 즐길 수 있는",
+            "start": 233,
+            "submitted": "안전속도로 차를 몰며 벚꽃을 감상하는 드라이브만으로도 충분한 봄꽃의 흥취를 즐길 수 있는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "007878839e4686d8df31dc2e4c84fabb0b54c6e669fc8c37fd732f2be3e8fbda"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 1,
+      "reason": "대표 장면(벚꽃터널)을 차량 안에서 제한적으로 관람할 수 있다는 근거는 있으나, 길에 인도가 없어 밖에서 감상·재현이 어렵다고 명시되어 낮은 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9",
+          "quote": {
+            "end": 411,
+            "method": "EXACT",
+            "original": "자매로카라반캠핑장 방면 자매로는 남파랑길 57코스와 이어져 도보여행으로 연결하여 즐길 수 있다",
+            "start": 359,
+            "submitted": "자매로카라반캠핑장 방면 자매로는 남파랑길 57코스와 이어져 도보여행으로 연결하여 즐길 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "007878839e4686d8df31dc2e4c84fabb0b54c6e669fc8c37fd732f2be3e8fbda"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "드라이브·도보여행 코스를 자율적으로 선택해 즐길 수 있는 기회가 확인되나, 심층적 자기 주도 탐색의 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9",
+          "quote": {
+            "end": 168,
+            "method": "EXACT",
+            "original": "사람이 적고 한적한 이곳은 봄이 되면 양 길가의 벚꽃나무들이",
+            "start": 135,
+            "submitted": "사람이 적고 한적한 이곳은 봄이 되면 양 길가의 벚꽃나무들이",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "007878839e4686d8df31dc2e4c84fabb0b54c6e669fc8c37fd732f2be3e8fbda"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "한적하고 사람이 적다는 환경 단서와 벚꽃 가로수라는 자연 단서가 확인되나, 실제 고요함·회복 효과까지는 추정할 수 없어 제한적 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "운전하며 경관을 감상하는 것은 이동·관람에 가깝고 참여형 활동 근거는 약하다. 도보여행 연결이 참여·탐방 활동으로 보기에 충분한 구체성을 갖는지 판단이 어려워 UNCERTAIN으로 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않는다. 오히려 인도 부재로 도보 활동이 제한된다고 명시되어 있으나 관계 형성 자체의 낮음을 직접 뒷받침하지는 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "b67a03145612c22bb69e192a7d6404c3864fe5edfb7bf300db363b979763b23d",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9",
+              "quote": {
+                "end": 448,
+                "method": "EXACT",
+                "original": "벚꽃길 드라이브를 즐기고 계속 장수리 방향으로 차를 몰아",
+                "start": 417,
+                "submitted": "벚꽃길 드라이브를 즐기고 계속 장수리 방향으로 차를 몰아",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "007878839e4686d8df31dc2e4c84fabb0b54c6e669fc8c37fd732f2be3e8fbda"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 2,
+          "reason": "드라이브와 도보 코스 연결이라는 참여 활동이 있으나 운전·감상 중심으로 지속적 도전·몰입 활동의 근거는 부족해 제한적 수준이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE",
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "운전하며 경관을 감상하는 것은 이동·관람에 가깝고 참여형 활동 근거는 약하다. 도보여행 연결이 참여·탐방 활동으로 보기에 충분한 구체성을 갖는지 판단이 어려워 UNCERTAIN으로 남긴다."
+        }
+      },
+      "reason": "운전하며 경관을 감상하는 것은 이동·관람에 가깝고 참여형 활동 근거는 약하다. 도보여행 연결이 참여·탐방 활동으로 보기에 충분한 구체성을 갖는지 판단이 어려워 UNCERTAIN으로 남긴다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "c056866d5bb8894dcf3ae0af9909a3a7c95a0c60351aeb10a95db612f4cad056",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "道路を挟んで左右に対称的に広がる白い花木の列が画面を支配し、春の明るい光と相まって演出された構図の視覚的印象が強い。",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1fa9f8d4d2afc2b1d6f31c40507fd67115a9e66d289be1d98ed027e3aa7d3893",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "dcc8e76a1fc79d1836b34f94ada4833d43bf9e90d2ea661abd15430ee9620935",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064276_4",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8227b04ebc84995352c5db02496ff80e49c1bec3536a3e9f2a29e9623c8d987b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/4064276_image2_1.jpg"
+        },
+        "record_sha256": "836832862e6e7c6b4db9b9abb14f318c778e23f8bef7a46f005dd90e505789e3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "산악 숲, 능선, 구름 낀 하늘, 먼 바다와 섬까지 트인 자연 경관이 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2d95b4d33fc2383da9d256fb808fb07a15b760844c3a317a44a66549ebddb92c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b053afffe625a620b135a555fda0d8bfc36f2cfad325a5a5b015bdd92fa5ccc5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064271_6",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f6097fb765db7a5ecd53b138310ac9c85a0ed144c67ba6735230c2516f135469",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/71/4064271_image2_1.jpg"
+        },
+        "record_sha256": "0647b8d71c6367632ea8d24536b9857ae0a59e0c7255745f6efbaddf4a55e2b6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "後方に広がる山や林、道端の花木など自然環境の手がかりが画面の大部分を占め、開けた自然景観が目立つ。",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:486073eb06d25f4dad6891755f2e5afd92deb4948a49b4a31b74658210f10669",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "dcc8e76a1fc79d1836b34f94ada4833d43bf9e90d2ea661abd15430ee9620935",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064276_4",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8227b04ebc84995352c5db02496ff80e49c1bec3536a3e9f2a29e9623c8d987b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/4064276_image2_1.jpg"
+        },
+        "record_sha256": "36312bf0b3d509e4fe868899aeeb8b4a20c64842dce15a5eae109674d065c6d1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통 외관·재료의 시각적 단서는 거의 없고, 아스팔트 도로와 현대식 가드레일만 보이나 가로수 조성의 정연한 구성이 약간의 조경적 성격을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7c8533dab84521aab5fd24df3a87b68a71ad2380f039fa899297b2aad09bf8c5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0e9f5dc8c01e50e6125db0960e02df9ef470e2715ce32772fc4744748fb06667",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064275_2",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "21c0fda3cdbcbed19242523631157b1e336198a85e2ec5c0e42f689d99f3e98a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/75/4064275_image2_1.jpg"
+        },
+        "record_sha256": "b540b33cdd2abfbb37c77315ad1e6c0480270f08e27171aa196e75241eb31889",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "アスファルト道路、ガードレールなど近代的要素が中心で、伝統的な外観や素材の視覚的特徴はほとんど確認できない。",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8a4577d77a2692a6b3f9b30195010d460babbe85c7380768819a891eff4e116e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "dcc8e76a1fc79d1836b34f94ada4833d43bf9e90d2ea661abd15430ee9620935",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064276_4",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8227b04ebc84995352c5db02496ff80e49c1bec3536a3e9f2a29e9623c8d987b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/76/4064276_image2_1.jpg"
+        },
+        "record_sha256": "d9ea501f0ff56d09d0e9791cdea5a04fce4c1b460975d0d3b7b250ee61d0fcf8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 외관 요소는 뚜렷하지 않고, 논과 산속 도로 등 농촌적 풍경만 약하게 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ae2064c10eb80099a7bd7949c1196327ac3cd48e6981f229393720f9feb0b95a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b053afffe625a620b135a555fda0d8bfc36f2cfad325a5a5b015bdd92fa5ccc5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064271_6",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f6097fb765db7a5ecd53b138310ac9c85a0ed144c67ba6735230c2516f135469",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/71/4064271_image2_1.jpg"
+        },
+        "record_sha256": "c8c10b6b833fa5ccd735ac59e4b826e0e3449e88fc502f0251dba4b6d6d67c12",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "드론 시점의 넓은 전경 구도로 녹슨 갈색과 청록이 어우러진 완만한 색감이 보이나 극적인 연출은 두드러지지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b8a6d4f8bad7bd8756585c28aaedcd36253da2c84f49d889783b953d56b9cabf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b053afffe625a620b135a555fda0d8bfc36f2cfad325a5a5b015bdd92fa5ccc5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064271_6",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f6097fb765db7a5ecd53b138310ac9c85a0ed144c67ba6735230c2516f135469",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/71/4064271_image2_1.jpg"
+        },
+        "record_sha256": "c2145a725c970a49d5a15a98a8540a7a9e2da04dd4b1c590d8c0091e5789e0f9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "도로 양옆으로 만개한 벚꽃 터널이 장면 전체를 지배하며, 흰 분홍빛 꽃과 잿빛 도로·하늘의 대비가 뚜렷한 연출적 구도를 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e0d3341668d6885a91bdb300ed2ca1bdb63cf0ce08638a22d17cd33f64178a59",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0e9f5dc8c01e50e6125db0960e02df9ef470e2715ce32772fc4744748fb06667",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064275_2",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "21c0fda3cdbcbed19242523631157b1e336198a85e2ec5c0e42f689d99f3e98a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/75/4064275_image2_1.jpg"
+        },
+        "record_sha256": "12374a66e06a874f384b41b61aee87ff7ac556981a50ced1ba572a5d3b722f74",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "벚꽃 가로수, 배경의 산림, 트인 하늘 등 자연 경관 요소가 화면 대부분을 차지하며 환경 단서가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ebdc3f515a4c66c3c6083caf4fddf04e14790991badd0ec6585d65ad31aac9d5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0e9f5dc8c01e50e6125db0960e02df9ef470e2715ce32772fc4744748fb06667",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4064275_2",
+          "request_sha256": "f2709003f642e504da319675262dcf540eab38c14d204c0a03abb629cc49be88",
+          "response_sha256": "8a87459d9afe3de6797bccab8f8dd60fa075e4b2542450cdef1380e579bd3596",
+          "retrieved_at": "2026-09-11T02:06:06.968166Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "21c0fda3cdbcbed19242523631157b1e336198a85e2ec5c0e42f689d99f3e98a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/75/4064275_image2_1.jpg"
+        },
+        "record_sha256": "362ad6aff364f134ef3bd9d303f308a84da76927b7d0810bcf73c23a6c4829e8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1e3230a15289afbc2aef29bc03f7fe461bc55513213cab701a96a055cbb24af9",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3013553",
+          "request_sha256": "0b697fe6f08c1bfe533bfe32ba2ce1ef60871fecc8622e432b8aaaf9fbacc1c5",
+          "response_sha256": "85eddfedf982c4709f57445595828ebfdb0f88bd92ccb0bf07e7f1140232ce6b",
+          "retrieved_at": "2026-09-10T16:50:14.966539Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T12:26:27Z",
+          "source_record_sha256": "1be0ca8470fad017bdd9970768321f31e01d0531d091326a092c11bcfaa946c5",
+          "source_uri": null
+        },
+        "record_sha256": "007878839e4686d8df31dc2e4c84fabb0b54c6e669fc8c37fd732f2be3e8fbda",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "여수의 벚꽃 명소하면 많은 사람들은 충민로, 돌산 승월마을, 전남대 여수캠퍼스 등으로 알고 있는데, 아는 사람들 사이에 입소문이 난 벚꽃 명소로 화양면 이목리 258-4에서 자매로카라반캠핑장에 이르는 약 2.2㎞ 길이의 벚꽃터널 길이 있다. 사람이 적고 한적한 이곳은 봄이 되면 양 길가의 벚꽃나무들이 벚꽃터널을 이루며 일대 장관을 이룬다. 길 양쪽에는 인도가 없어 차 밖으로 나와 벚꽃길을 감상하는 것은 위험하지만 안전속도로 차를 몰며 벚꽃을 감상하는 드라이브만으로도 충분한 봄꽃의 흥취를 즐길 수 있는 숨은 명소이다. 또한, 자매로에서 이목안포로 신도로를 따라서 운포마을까지 벚꽃길이 자연적으로 조성되어 벚꽃길 드라이브를 즐길 수 있다. 자매로카라반캠핑장 방면 자매로는 남파랑길 57코스와 이어져 도보여행으로 연결하여 즐길 수 있다. 화양면 벚꽃길 드라이브를 즐기고 계속 장수리 방향으로 차를 몰아 장수교차로를 만나면 바다를 끼고 드라이브를 즐길 수 있는 백리섬섬길과 만나게 된다. 교차로에서 오른쪽 방향으로 빠지면 화양대교, 둔병대교, 낭도대교, 적금대교 등 남해안의 대교와 바다를 즐기며 고흥까지 드라이브를 즐길 수 있다. 봄에는 화양면의 벚꽃길을 즐기고 여름에는 바다를 느끼며 계절마다 색다른 드라이브를 즐길 수 있는 숨은 명소로 가득한 드라이브 코스이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4f38c06eef4323d8f8aabdd8962500d689ce129653a1aa062c6d9dbde76e8bdd",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3013553",
+          "request_sha256": "bd1735e3bcfd01f4fa2a84bdd7bd522b448cbed0d08b260d547701cd75b2fd20",
+          "response_sha256": "cef33b0d063ed316fbe3ec68d5687a9d92f9295d69a785c4ea26369a1f7fda7b",
+          "retrieved_at": "2026-09-11T02:06:06.631617Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fac105623dfdc9d7b6c8cf2b56dd4bbb513ea3541383f668ec02fffc7a7bad78",
+          "source_uri": null
+        },
+        "record_sha256": "40723b8a5f810ed8d0b8687bea747d44f573e459671e2686a3787f4ab75f9095",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "c01551da91d26ebee495e70e345fbd6813075b768c1d9044437b0d4727d6de44",
+    "place": {
+      "address": "전남광주통합특별시 여수시 화양면 장수리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+      "name_ko": "화양면 벚꽃길",
+      "place_id": "public:korea:78cecf037d84de2825142c01ef2e61d36346aacbcc11b0d75fa3362c75d30c8b",
+      "provider_content_id": "3013553",
+      "region_code": "12130",
+      "region_name": "전남광주통합특별시 여수시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

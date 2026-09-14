@@ -19,9 +19,6 @@ _REGISTRY = "pengginregistry.pengbot.app/itda"
 _STACK_NAME = re.compile(r"[a-z0-9][a-z0-9_-]{0,62}")
 _EMAIL = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,63}")
 _ENV_SAFE_PATH = re.compile(r"/[A-Za-z0-9_./-]+")
-_DAILY_REFRESH_AUTHORITY_SHA256 = (
-    "060c06e8aac3f786413b6298e58b6fcf43638fa5e351d5aabab064069ec7959c"
-)
 
 
 def _password() -> str:
@@ -34,7 +31,9 @@ def _session_key() -> str:
 
 def _validate_domain(value: str) -> str:
     if _DOMAIN.fullmatch(value) is None:
-        raise argparse.ArgumentTypeError("domain must be a lowercase fully-qualified hostname")
+        raise argparse.ArgumentTypeError(
+            "domain must be a lowercase fully-qualified hostname"
+        )
     return value
 
 
@@ -46,7 +45,9 @@ def _validate_image_reference(value: str) -> str:
 
 def _validate_stack_name(value: str) -> str:
     if _STACK_NAME.fullmatch(value) is None:
-        raise argparse.ArgumentTypeError("stack name must be a safe lowercase identifier")
+        raise argparse.ArgumentTypeError(
+            "stack name must be a safe lowercase identifier"
+        )
     return value
 
 
@@ -72,6 +73,8 @@ def _render(
     dashboard_domain: str,
     whoami_domain: str,
     dashboard_users_file: Path,
+    authenticity_release_sha256: str,
+    authenticity_places: int,
 ) -> str:
     variables = {
         "STACK_NAME": stack_name,
@@ -107,10 +110,20 @@ def _render(
         "ITDA_OPERATING_INFORMATION_TIMEOUT_SECONDS": "1.5",
         "ITDA_OPERATING_INFORMATION_TTL_SECONDS": "900",
         "ITDA_OPERATING_INFORMATION_NEGATIVE_TTL_SECONDS": "120",
-        "ITDA_DAILY_GLM_REFRESH_ENABLED": "1",
-        "ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256": (
-            _DAILY_REFRESH_AUTHORITY_SHA256
-        ),
+        "ITDA_GROUNDED_RECOMMENDATIONS_ENABLED": "0",
+        "ITDA_TOURISM_ENABLED": "0",
+        "ITDA_PHOTO_MOOD_ENABLED": "1",
+        "ITDA_GROUNDED_DAILY_ENABLED": "0",
+        "ITDA_GROUNDED_DAILY_WORKERS": "4",
+        "ITDA_GROUNDED_DAILY_REPLICAS": "0",
+        "ITDA_AUTHENTICITY_RELEASE_SHA256": authenticity_release_sha256,
+        "ITDA_AUTHENTICITY_EXPECTED_PLACES": str(authenticity_places),
+        "ITDA_AUTHENTICITY_PREVIOUS_RELEASE_SHA256": "NONE",
+        "ITDA_AUTHENTICITY_ALLOW_DEVELOPMENT": "0",
+        "ITDA_AUTHENTICITY_PHOTO_ENABLED": "1",
+        "ITDA_GROUNDED_DAILY_GATE_FILE": "",
+        "ITDA_GROUNDED_DAILY_REPORT_DIR": "",
+        "ITDA_MODEL_SESSION_LIMIT": "5",
         "ITDA_ZHIPUAI_API_KEY_SECRET": "itda_zhipuai_api_key",
         "ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD_SECRET": (
             "itda_daily_glm_refresh_service_password"
@@ -123,15 +136,24 @@ def _render(
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--domain", required=True, type=_validate_domain)
-    parser.add_argument("--backend-image", required=True, type=_validate_image_reference)
+    parser.add_argument(
+        "--backend-image", required=True, type=_validate_image_reference
+    )
     parser.add_argument("--web-image", required=True, type=_validate_image_reference)
     parser.add_argument("--stack-name", required=True, type=_validate_stack_name)
     parser.add_argument("--acme-email", required=True, type=_validate_email)
     parser.add_argument("--dashboard-domain", required=True, type=_validate_domain)
     parser.add_argument("--whoami-domain", required=True, type=_validate_domain)
     parser.add_argument("--dashboard-users-file", required=True, type=_validate_path)
+    parser.add_argument("--release-sha256", required=True)
+    parser.add_argument("--places", required=True, type=int)
     parser.add_argument("--output", type=Path, default=Path("deploy/.env"))
     arguments = parser.parse_args()
+    if (
+        not re.fullmatch(r"[0-9a-f]{64}", arguments.release_sha256)
+        or arguments.places < 1
+    ):
+        parser.error("a PUBLIC release SHA-256 and positive place count are required")
 
     output = arguments.output.resolve()
     flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
@@ -152,6 +174,8 @@ def main() -> int:
                     dashboard_domain=arguments.dashboard_domain,
                     whoami_domain=arguments.whoami_domain,
                     dashboard_users_file=arguments.dashboard_users_file.resolve(),
+                    authenticity_release_sha256=arguments.release_sha256,
+                    authenticity_places=arguments.places,
                 )
             )
             handle.flush()

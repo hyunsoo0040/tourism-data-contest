@@ -17,7 +17,7 @@ import { TourismPlacePanel, TourismRegionalPanel, useTourismContext, type Touris
 import { RECOMMENDATION_ORDER_DESCRIPTION, SIMILARITY_DESCRIPTION, SimilaritySummary, similarityLabel } from "./PreferenceSimilarity";
 import { travelRegionName, useTravelRegions } from "../../api/recommendation-regions";
 
-const AXES = { H: { label: "역사·전통", className: "recommendation-axis--history" }, E: { label: "감성·이미지", className: "recommendation-axis--emotion" }, R: { label: "휴식·몰입", className: "recommendation-axis--rest" } };
+const AXES = { H: { label: "대상•원형형", className: "recommendation-axis--history" }, E: { label: "의미•이미지형", className: "recommendation-axis--emotion" }, R: { label: "자기•몰입형", className: "recommendation-axis--rest" } };
 const TRAITS: Record<string, string> = { M1: "공간 성격", M2: "방문객 성격", M3: "현장 밀도", M4: "경험 방식", M5: "체류 방식", M6: "시간 의존성" };
 const SUBATTRIBUTES: Record<string, string> = { H1: "역사 이야기", H2: "문화유산·원형", H3: "전통의 지속성", H4: "학습·해설",
   E1: "시각적 상징성", E2: "사진·경관 매력", E3: "현대적 재해석", E4: "분위기·감각 경험",

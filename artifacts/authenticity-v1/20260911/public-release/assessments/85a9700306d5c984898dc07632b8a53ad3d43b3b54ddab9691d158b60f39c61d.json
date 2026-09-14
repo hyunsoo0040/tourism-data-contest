@@ -1,0 +1,879 @@
+{
+  "assessed_at": "2026-09-11T18:30:21.899913Z",
+  "assessment_sha256": "85a9700306d5c984898dc07632b8a53ad3d43b3b54ddab9691d158b60f39c61d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 53
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "노동자들의 삶의 동선을 따라 관람하며 과거와 현재의 시간을 경험하도록 해설적 구성이 되어 있어 유산과 연결된 설명이 제공된다. 깊은 역사 맥락 탐구가 중심이라는 근거는 없어 수준 2~3 범위에서 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "노동자의 역사·이야기와 산업단지의 산업 성장·기술 발전이 개인과 사회에 미치는 영향이라는 구체적 의미·이야기가 장소와 연결되어 있다. 여러 표현에서 일관된 의미가 확인되는 수준까지는 근거가 부족해 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2520305346424666692d8289a74c1e915e9f4b5b8b468dceb38932e77ab7ed74",
+            "appearance:8facc97d8c5d330b78b78465fc8801a469558a45ea877e3923b514c1cae13b17",
+            "appearance:a7e5e22e62fe0489de3162691a31c88dd2900a4d73726c906abd50ac9fe8cb3d"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "전시 공간의 동선 구성은 있으나 외관·경관·연출 등 시각적 표현의 성격에 대한 직접적 서술이 없다. UNKNOWN이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "과거 거주자의 동선이라는 장소의 대표적 장면·이야기를 관람자가 직접 따라 걸으며 경험하도록 구성되어 있다. 촬영·참여를 통한 재현 단계까지의 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:956aaccc16c781233f9a63b020992414010170b299596a41f0a8909ef606c160",
+            "appearance:ba7897cf60b82384d3a50cc12ca41cd129615e72ece3a63229b0ccf15e33531f",
+            "appearance:fcfc0904888395c6684f0a815e738ad77e7a342cb1cc36ef371f409567d6acbb"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 8,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연 환경·시각적 저자극·머무를 환경에 대한 단서가 제공되지 않았다. 산업단지 인근이라는 사실만으로 환경의 특성을 추정하지 않는다. UNKNOWN이다.",
+      "value": 8
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "전시연계 워크숍·예술교육 프로그램 등 구체적인 참여 활동이 기획·운영된다고 명시되어 있다. 지속적 도전·몰입이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "공동체·환대를 주제로 하는 예술모임, 작가·기획자와 관람자의 이야기 교류, 세대 간 함께하는 프로그램 등 구체적 교류 기회가 제공된다. 교류·자기표현이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "노동자들이 거주했던 공간이라는 서술이 있으나, 현재 원형 건물·유산 실물이 남아 관람자가 접촉할 수 있는지에 대한 확인된 근거가 없다. 과거 공간 위의 미술센터 여부만으로 원형 접촉을 단정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "제안 수준 2의 앵커는 '관련 연혁·유래를 간단히 소개'여야 하나 anchor_ko는 수준 3인 '그 장소의 사건·인물 맥락 제시'이다. 인용은 장소의 노동자 거주 연혁을 간단히 소개하는 수준 2를 뒷받침하며, 구체적 사건·인물 맥락 제시(수준 3)의 근거는 없다. 앵커-수준 불일치로 판단이 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "과거 노동자 거주 사실은 있으나 현재 지역 주체의 전승·생활문화와의 실제 연결(전승 활동 등)에 대한 근거가 없다. 관련 언급이 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7",
+          "quote": {
+            "end": 184,
+            "method": "EXACT",
+            "original": "관람객들은 이곳에 머물던 노동자들의 삶의 동선을 따라 작품을 관람하며 과거와 현재의 ‘시간’ 안에 머무는 경험을 하게 된다",
+            "start": 116,
+            "submitted": "관람객들은 이곳에 머물던 노동자들의 삶의 동선을 따라 작품을 관람하며 과거와 현재의 ‘시간’ 안에 머무는 경험을 하게 된다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e09958a2361f062fea9f78ff05f7d53b44f95214643dadda7c162389c80c534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "노동자들의 삶의 동선을 따라 관람하며 과거와 현재의 시간을 경험하도록 해설적 구성이 되어 있어 유산과 연결된 설명이 제공된다. 깊은 역사 맥락 탐구가 중심이라는 근거는 없어 수준 2~3 범위에서 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7",
+          "quote": {
+            "end": 360,
+            "method": "EXACT",
+            "original": "서울디지털산업단지에 위치한 지역적, 문화적 특색에 따라 산업의 성장과 테크놀로지의 발전이 개인과 사회에게 어떤 영향을 주고 있는 지 주목하고 있는 곳이며",
+            "start": 275,
+            "submitted": "서울디지털산업단지에 위치한 지역적, 문화적 특색에 따라 산업의 성장과 테크놀로지의 발전이 개인과 사회에게 어떤 영향을 주고 있는 지 주목하고 있는 곳이며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e09958a2361f062fea9f78ff05f7d53b44f95214643dadda7c162389c80c534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 3,
+      "reason": "노동자의 역사·이야기와 산업단지의 산업 성장·기술 발전이 개인과 사회에 미치는 영향이라는 구체적 의미·이야기가 장소와 연결되어 있다. 여러 표현에서 일관된 의미가 확인되는 수준까지는 근거가 부족해 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 매체(작품·홍보·SNS 등)를 통해 재현·확산된다는 근거가 제공되지 않았다. 관련 언급이 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "전시 공간의 동선 구성은 있으나 외관·경관·연출 등 시각적 표현의 성격에 대한 직접적 서술이 없다. UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7",
+          "quote": {
+            "end": 114,
+            "method": "EXACT",
+            "original": "전시 공간은 과거 이곳에 살았던 이들의 동선과 현재 관람자의 동선이 만나도록 구성되어있다",
+            "start": 65,
+            "submitted": "전시 공간은 과거 이곳에 살았던 이들의 동선과 현재 관람자의 동선이 만나도록 구성되어있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e09958a2361f062fea9f78ff05f7d53b44f95214643dadda7c162389c80c534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "과거 거주자의 동선이라는 장소의 대표적 장면·이야기를 관람자가 직접 따라 걸으며 경험하도록 구성되어 있다. 촬영·참여를 통한 재현 단계까지의 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "관람 동선이 구성되어 있다는 서술은 있으나 자율적 탐색·선택·여유를 지원한다는 직접 근거가 없다. 동선 구성만으로 자율성의 높낮음을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경·시각적 저자극·머무를 환경에 대한 단서가 제공되지 않았다. 산업단지 인근이라는 사실만으로 환경의 특성을 추정하지 않는다. UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7",
+          "quote": {
+            "end": 744,
+            "method": "EXACT",
+            "original": "아트센터 예술의 시간은 전시연계 워크숍, 프로그램 등 예술을 통한 다양한 접근으로 세대와 지역을 넘어 예술을 향유하고 경험할 수 있는 예술교육 프로그램을 기획, 운영한다",
+            "start": 650,
+            "submitted": "아트센터 예술의 시간은 전시연계 워크숍, 프로그램 등 예술을 통한 다양한 접근으로 세대와 지역을 넘어 예술을 향유하고 경험할 수 있는 예술교육 프로그램을 기획, 운영한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e09958a2361f062fea9f78ff05f7d53b44f95214643dadda7c162389c80c534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "전시연계 워크숍·예술교육 프로그램 등 구체적인 참여 활동이 기획·운영된다고 명시되어 있다. 지속적 도전·몰입이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7",
+          "quote": {
+            "end": 1006,
+            "method": "EXACT",
+            "original": "매년 한 달간 집중적으로 모이는 예술모임인〈한 달, 예술학교〉는 공동체, 환대, 예술을 주제로 펼치는 사회공헌 프로젝트로",
+            "start": 939,
+            "submitted": "매년 한 달간 집중적으로 모이는 예술모임인〈한 달, 예술학교〉는 공동체, 환대, 예술을 주제로 펼치는 사회공헌 프로젝트로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e09958a2361f062fea9f78ff05f7d53b44f95214643dadda7c162389c80c534"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 3,
+      "reason": "공동체·환대를 주제로 하는 예술모임, 작가·기획자와 관람자의 이야기 교류, 세대 간 함께하는 프로그램 등 구체적 교류 기회가 제공된다. 교류·자기표현이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "138bec9142bc6a6d1ae9851da745bfb50e54f8fd11447cd43cea4cba136194e2",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7",
+              "quote": {
+                "end": 63,
+                "method": "EXACT",
+                "original": "30여 년 이상 지역의 노동자들이 거주했던 공간인 아트센터 예술의 시간은 그들의 역사와 이야기가 담겨 있는 곳이다",
+                "start": 0,
+                "submitted": "30여 년 이상 지역의 노동자들이 거주했던 공간인 아트센터 예술의 시간은 그들의 역사와 이야기가 담겨 있는 곳이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6e09958a2361f062fea9f78ff05f7d53b44f95214643dadda7c162389c80c534"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.b",
+          "level": 2,
+          "reason": "이 장소 자체의 노동자 거주 역사와 이야기가 담겨 있다는 소개가 있어 장소의 연혁·유래가 간단히 제시된다. 다만 구체적 사건·인물 맥락의 심층 탐구 근거는 없어 수준 2로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "제안 수준 2의 앵커는 '관련 연혁·유래를 간단히 소개'여야 하나 anchor_ko는 수준 3인 '그 장소의 사건·인물 맥락 제시'이다. 인용은 장소의 노동자 거주 연혁을 간단히 소개하는 수준 2를 뒷받침하며, 구체적 사건·인물 맥락 제시(수준 3)의 근거는 없다. 앵커-수준 불일치로 판단이 어렵다."
+        }
+      },
+      "reason": "제안 수준 2의 앵커는 '관련 연혁·유래를 간단히 소개'여야 하나 anchor_ko는 수준 3인 '그 장소의 사건·인물 맥락 제시'이다. 인용은 장소의 노동자 거주 연혁을 간단히 소개하는 수준 2를 뒷받침하며, 구체적 사건·인물 맥락 제시(수준 3)의 근거는 없다. 앵커-수준 불일치로 판단이 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "28be8ce45cd835b42dae0e57cf502f538b7ad0d0e65b88a928d3ace3ac3aec3b",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "거친 노출 벽돌과 콘크리트의 미장된 질감 위 중앙 틈새 공간에 스포트라이트로 조명된 흑백 작품이 집중되는 절제된 연출이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2520305346424666692d8289a74c1e915e9f4b5b8b468dceb38932e77ab7ed74",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "165232075e9da24ae6cb3c772d92805576d7e25d506f8b3b8353a0eaac0190ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572826_8",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "50ed130a1f8d167ea2afd6e8cc397d95798a3380122ba02a5f40df69e0ba4d97",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/26/3572826_image2_1.jpg"
+        },
+        "record_sha256": "46b92f9ee1a8c1d7df538425a063551f0f1413415900af41b07b9bbbca07049d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "원목 문짝과 오래된 느낌의 벽체, 노출 벽돌 등 옛 외관의 재료가 일부 보이지만 전체 공간은 현대적 조명과 설비와 혼재되어 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:409ff77c1d4ed94ec59c1714fe37e8388e819834bd285f6b05aeb42a2534c212",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "38983ab61f4bb0135ea349be54d34c5d237c37c53e60e2de36c1d631b54307c0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572831_13",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff2475afd6ff1882b932d546d99e46ed73afc71ca5ddb04040f9351310219b68",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/31/3572831_image2_1.jpg"
+        },
+        "record_sha256": "252f7701b93fc7fb574ffb4b425b6d8c027ef345adc87f8e2e78e6ec636eb4d7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "노출 콘크리트와 벽돌, 따뜻한 전구 조명, 네온사인 등 산업적·연출된 시각적 성격이 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8facc97d8c5d330b78b78465fc8801a469558a45ea877e3923b514c1cae13b17",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "def70abaa0849d9566153d71d8042ff0db7db972515a497dc7abf15f43cdf87f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572830_11",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4e5ec2664f05056830c3e2530609627ad56f0d3c69db312eb9760d042a486a1a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/30/3572830_image2_1.jpg"
+        },
+        "record_sha256": "90d8f40eb943379a9a89ffff2837167cc93fab76db4e77e3d64bcbe645a8ad81",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "노출 벽돌과 낡은 회벽 질감이 옛 재료의 외관을 보여주나 전통 공간 구성이라기보다 리모델링된 전시실 느낌으로 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:93c6a470a24293f3de6b21e8f7dda711d44df7f908b5c4841ab2e9b6b3ed0e42",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "165232075e9da24ae6cb3c772d92805576d7e25d506f8b3b8353a0eaac0190ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572826_8",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "50ed130a1f8d167ea2afd6e8cc397d95798a3380122ba02a5f40df69e0ba4d97",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/26/3572826_image2_1.jpg"
+        },
+        "record_sha256": "0a6642e350d335e6d947f68df31f6b1c71a636af8347f7d32ed4369fa73b9ee5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "원목 테이블과 목재 창호 등 일부 전통적 재료가 보이지만 전반은 산업적 리모델링 외관이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9456a5886b811d541d11b5c9f24dd3eaa5b96f842f0d6b341c69a8735ea1966d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "def70abaa0849d9566153d71d8042ff0db7db972515a497dc7abf15f43cdf87f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572830_11",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4e5ec2664f05056830c3e2530609627ad56f0d3c69db312eb9760d042a486a1a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/30/3572830_image2_1.jpg"
+        },
+        "record_sha256": "79a4400cb9b280deb94b0052ba16b2c550e7c1d8731c3436e8c2ad7db9099cb8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "실내 화분과 창밖 나뭇잎이 일부 보이나 자연 경관 단서는 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:956aaccc16c781233f9a63b020992414010170b299596a41f0a8909ef606c160",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "def70abaa0849d9566153d71d8042ff0db7db972515a497dc7abf15f43cdf87f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572830_11",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4e5ec2664f05056830c3e2530609627ad56f0d3c69db312eb9760d042a486a1a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/30/3572830_image2_1.jpg"
+        },
+        "record_sha256": "789880c2375cf5169f1cdb9b9053cc65d368a907c53b1c2894c5e7d57fa123cf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "따뜻한 조명과 네온사인의 보라빛 대비, 노출된 배관과 원목 문, 소화함의 붉은색이 어우러져 레트로·산업적 분위기가 뚜렷한 연출된 복도이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a7e5e22e62fe0489de3162691a31c88dd2900a4d73726c906abd50ac9fe8cb3d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "38983ab61f4bb0135ea349be54d34c5d237c37c53e60e2de36c1d631b54307c0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572831_13",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff2475afd6ff1882b932d546d99e46ed73afc71ca5ddb04040f9351310219b68",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/31/3572831_image2_1.jpg"
+        },
+        "record_sha256": "dce62d4bb7018291d3aa1643273ec33aaa60f22593f24e7e0db15d8a279489ed",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 복도 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서는 전혀 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ba7897cf60b82384d3a50cc12ca41cd129615e72ece3a63229b0ccf15e33531f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "38983ab61f4bb0135ea349be54d34c5d237c37c53e60e2de36c1d631b54307c0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572831_13",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff2475afd6ff1882b932d546d99e46ed73afc71ca5ddb04040f9351310219b68",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/31/3572831_image2_1.jpg"
+        },
+        "record_sha256": "a9c19e24e78be154330a2f45a3f39027b930e2a7c76d3ffc7b687a3a4f522c00",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시 공간으로 녹지·물·자연 경관 등 자연 환경 단서는 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fcfc0904888395c6684f0a815e738ad77e7a342cb1cc36ef371f409567d6acbb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "165232075e9da24ae6cb3c772d92805576d7e25d506f8b3b8353a0eaac0190ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572826_8",
+          "request_sha256": "5818c29a3c2bbf2b1f422dc78873202f4d0bf7ae941736610bbc96d499a8be5d",
+          "response_sha256": "b3348f1157d200839695e0122c188f9bca7081809e65f71f795a6de32f40e0c8",
+          "retrieved_at": "2026-09-10T08:26:52.082802Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "50ed130a1f8d167ea2afd6e8cc397d95798a3380122ba02a5f40df69e0ba4d97",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/26/3572826_image2_1.jpg"
+        },
+        "record_sha256": "49a4815481837718a2b204c979f88033efa7d631a9718ba86c5eaf5a0036a7e5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f8beea45cadc939858e08bb3dbf00bde8d520b75d494f7bd3c22d3cbd31688b7",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3572470",
+          "request_sha256": "549ebffdfb9ce258cb6c4dfa65dfdff641fe74ac519084a032deb546ebba033c",
+          "response_sha256": "cd3345a1c71a4e377562fea35f7cbe2bfc2ee385951382a014ea5573c5ba4bd1",
+          "retrieved_at": "2026-09-10T05:32:28.895900Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-13T08:45:54Z",
+          "source_record_sha256": "f7d0b8cb8f7ac47cc5677da91e079200b72a8005e421f771691b0d76aa5cbfd6",
+          "source_uri": null
+        },
+        "record_sha256": "6e09958a2361f062fea9f78ff05f7d53b44f95214643dadda7c162389c80c534",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "30여 년 이상 지역의 노동자들이 거주했던 공간인 아트센터 예술의 시간은 그들의 역사와 이야기가 담겨 있는 곳이다. 전시 공간은 과거 이곳에 살았던 이들의 동선과 현재 관람자의 동선이 만나도록 구성되어있다. 관람객들은 이곳에 머물던 노동자들의 삶의 동선을 따라 작품을 관람하며 과거와 현재의 ‘시간’ 안에 머무는 경험을 하게 된다. 또한 아트센터 예술의 시간은 동시대 이슈를 담아내는 전시 기획 안에서 기획자 및 작가, 그리고 다원 예술 분야 간 다양한 형태의 협업을 지향하고 있는 곳이다. 서울디지털산업단지에 위치한 지역적, 문화적 특색에 따라 산업의 성장과 테크놀로지의 발전이 개인과 사회에게 어떤 영향을 주고 있는 지 주목하고 있는 곳이며, 나아가 역사, 세계관, 사회현상, 문화 등 시대를 관통하며 개인과 공동체의 삶을 형성하고 있는 주제들을 예술가의 작업으로 풀어내고 그 작업을 해석하는 것에 관심을 갖고 있는 곳이다. 작가의 작업 세계와 기획자의 관점을 통해 이 시대에 필요한 예술의 사회적 역할과 방향에 관해 지속적으로 고민해 나가고 있으며, 이를 위해 매년 신진작가 공모〈아티스트 프롤로그 Artist Prologue〉를 통해 선정 작가들의 개인전을 기획하고, 개인전과 주제 기획전, 그룹전 기획을 통해 다양한 전시와 프로젝트를 선보이는 곳이다. 아트센터 예술의 시간은 전시연계 워크숍, 프로그램 등 예술을 통한 다양한 접근으로 세대와 지역을 넘어 예술을 향유하고 경험할 수 있는 예술교육 프로그램을 기획, 운영한다. 모든 전시에서 관람자가 작가와 기획자가 건네는 이야기 안으로 들어갈 수 있도록 돕고자 하며, 어린이, 청소년, 성인, 어르신 등 다양한 세대와 문화예술 경험을 함께 하고자 기획한다. 또한 지역사회 공헌 프로그램의 일환으로 진행하는 다양한 워크숍을 통해 문화예술 경험에서 소외된 이들이 유의미한 시간을 가질 수 있는 접점을 찾고자 노력하고 있다. 매년 한 달간 집중적으로 모이는 예술모임인〈한 달, 예술학교〉는 공동체, 환대, 예술을 주제로 펼치는 사회공헌 프로젝트로 아트센터 예술의 시간의 예술교육 철학을 담은 문화예술교육 프로그램이다."
+      }
+    ],
+    "parent_source_sha256": "f33f5376b687b21830b4bd49348319efffee72b0df4918a8898c3559271b6ebc",
+    "place": {
+      "address": "서울특별시 금천구 범안로9길 23 (독산동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+      "name_ko": "아트센터 예술의 시간",
+      "place_id": "public:korea:ab622e574cbeadc883e5744c54065dec96ca10f681016e98d3fe3f2772e0f9f7",
+      "provider_content_id": "3572470",
+      "region_code": "11545",
+      "region_name": "서울특별시 금천구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

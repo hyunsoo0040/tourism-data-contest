@@ -1,0 +1,523 @@
+{
+  "assessed_at": "2026-09-11T15:53:16.231919Z",
+  "assessment_sha256": "cca0dbcb7f7ef86d5ab390a7ef1fc7a6660e754fa1e0f2e28841894a8e6d45b0",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "북벽이라는 암석 절벽이라는 실제 자연 원형을 관람할 수 있으나, 유산의 실물을 탐구하는 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "17세기 문집 언급, 이보상의 '북벽' 글자 새김 등 이 장소의 구체적 유래가 공식 소개에 제시된다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "단양 제2팔경, 매가 날아오르는 형상(응암)이라는 공유된 이미지·의미가 이 장소에 연결되어 있다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "역사적 문집·한시 등 매체에 이름이 남은 근거가 있으나, 현재 반복되는 매체 표현·유통의 근거는 제한적이다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "병풍처럼 늘어선 석벽과 계절별 철쭉·단풍이라는 뚜렷한 시각적 성격이 확인된다. repair 항목의 claim이 허용 범위를 벗어나(VISUAL_APPEARANCE) E.c 허용 claim인 VISUAL_EXPRESSION으로 교정하였다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "응암 형상 등 대표 이미지를 현장에서 직접 볼 수 있으나, 촬영·재현 체험이 방문 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "강·절벽·철쭉·단풍 등 자연 환경 단서가 두드러진 것으로 확인되나, 실제 고요함·회복 효과는 확정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0",
+          "quote": {
+            "end": 58,
+            "method": "EXACT",
+            "original": "깎아지른 듯 병풍처럼 늘어서 있는 석벽",
+            "start": 37,
+            "submitted": "깎아지른 듯 병풍처럼 늘어서 있는 석벽",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b19be8204533ee7e303d9bc3d58c3a228f739dc0b3da8f179a585c2fcdb851f7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.a",
+      "level": 2,
+      "reason": "북벽이라는 암석 절벽이라는 실제 자연 원형을 관람할 수 있으나, 유산의 실물을 탐구하는 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0",
+          "quote": {
+            "end": 345,
+            "method": "EXACT",
+            "original": "1741년(조선 영조 17) 2월부터 1745년 7월까지 영춘현감으로 재직했던 이보상이 이곳 암석에 ‘북벽’이란 글자를 새긴 것으로 보고 있다.",
+            "start": 265,
+            "submitted": "1741년(조선 영조 17) 2월부터 1745년 7월까지 영춘현감으로 재직했던 이보상이 이곳 암석에 ‘북벽’이란 글자를 새긴 것으로 보고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b19be8204533ee7e303d9bc3d58c3a228f739dc0b3da8f179a585c2fcdb851f7"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 2,
+      "reason": "17세기 문집 언급, 이보상의 '북벽' 글자 새김 등 이 장소의 구체적 유래가 공식 소개에 제시된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "과거 뗏목 사공·선비들의 풍류는 역사 서술일 뿐 현재 지역 주체의 전승·생활문화와 연결된다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "개요에 역사 맥락이 담겨 있으나 현장에서 유산 연결 해설·전시·탐구를 제공한다는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0",
+          "quote": {
+            "end": 79,
+            "method": "EXACT",
+            "original": "단양 제2팔경 중 한 곳",
+            "start": 66,
+            "submitted": "단양 제2팔경 중 한 곳",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b19be8204533ee7e303d9bc3d58c3a228f739dc0b3da8f179a585c2fcdb851f7"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "단양 제2팔경, 매가 날아오르는 형상(응암)이라는 공유된 이미지·의미가 이 장소에 연결되어 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0",
+          "quote": {
+            "end": 457,
+            "method": "EXACT",
+            "original": "많은 선비가 신이 빚은 자연의 조화를 한시로 남겼다",
+            "start": 429,
+            "submitted": "많은 선비가 신이 빚은 자연의 조화를 한시로 남겼다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b19be8204533ee7e303d9bc3d58c3a228f739dc0b3da8f179a585c2fcdb851f7"
+        }
+      ],
+      "flags": [],
+      "key": "E.b",
+      "level": 1,
+      "reason": "역사적 문집·한시 등 매체에 이름이 남은 근거가 있으나, 현재 반복되는 매체 표현·유통의 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0",
+          "quote": {
+            "end": 105,
+            "method": "EXACT",
+            "original": "깎아지른 듯 병풍처럼 늘어서 있는 석벽을 의미한다. 단양 제2팔경 중 한 곳으로 봄가을의 철쭉과 단풍이 그 풍광을 더해준다",
+            "start": 37,
+            "submitted": "깎아지른 듯 병풍처럼 늘어서 있는 석벽을 의미한다. 단양 제2팔경 중 한 곳으로 봄가을의 철쭉과 단풍이 그 풍광을 더해준다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b19be8204533ee7e303d9bc3d58c3a228f739dc0b3da8f179a585c2fcdb851f7"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "병풍처럼 늘어선 석벽과 계절별 철쭉·단풍이라는 뚜렷한 시각적 성격이 확인된다. repair 항목의 claim이 허용 범위를 벗어나(VISUAL_APPEARANCE) E.c 허용 claim인 VISUAL_EXPRESSION으로 교정하였다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0",
+          "quote": {
+            "end": 167,
+            "method": "EXACT",
+            "original": "마치 매가 막 날아오르는 형상을 하고 있어 응암이라고도 불린다",
+            "start": 133,
+            "submitted": "마치 매가 막 날아오르는 형상을 하고 있어 응암이라고도 불린다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b19be8204533ee7e303d9bc3d58c3a228f739dc0b3da8f179a585c2fcdb851f7"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "응암 형상 등 대표 이미지를 현장에서 직접 볼 수 있으나, 촬영·재현 체험이 방문 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색·여유에 대한 근거가 없고, 무료라는 사실만으로 여유를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0",
+          "quote": {
+            "end": 58,
+            "method": "EXACT",
+            "original": "남한강가에 깎아지른 듯 병풍처럼 늘어서 있는 석벽",
+            "start": 31,
+            "submitted": "남한강가에 깎아지른 듯 병풍처럼 늘어서 있는 석벽",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b19be8204533ee7e303d9bc3d58c3a228f739dc0b3da8f179a585c2fcdb851f7"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "강·절벽·철쭉·단풍 등 자연 환경 단서가 두드러진 것으로 확인되나, 실제 고요함·회복 효과는 확정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "구체적 참여·탐방·집중 활동에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "478eee067ab801e0459a4796d4f95804e0ebd19f3ae6c79bf7de54b264c2ef16",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1d055481cc1ec4103b09734182953166a557a8fbef6cf17aa6e8a7ce6a3aae63",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:16cfd603f234f7f30598af3b1f56bd584e0366e1b393abe404e18346bc1564f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1627315",
+          "request_sha256": "2dc080c4a6735b8781907a5e33d0274c5dcde75ae1875f7911d967e90de6c0c1",
+          "response_sha256": "1902bde9b2fb98d892a022a1a4bd9ed7851110a833995f3e855ae27ab86421bb",
+          "retrieved_at": "2026-09-11T02:01:36.793718Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fc4efd43e29af024c01ba4983cb17f11b09b2d70dc2921bcb76ccd1f5e77e4e7",
+          "source_uri": null
+        },
+        "record_sha256": "641e436aa219414af49bf1fa86aff93d3a26eea64c092a3484adaa7549652cf2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:980810e41546e0996a7005e62ece1df6b2ac13930bd788db03dc1f6e016f04c0",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:16cfd603f234f7f30598af3b1f56bd584e0366e1b393abe404e18346bc1564f4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1627315",
+          "request_sha256": "4c8e3a756149e058e12940e6593341090daefac2860e0fb86ac050c0ad70b95e",
+          "response_sha256": "e0dde0df01d792c89cc62e2153f39c951e3623ffd6e28468062fd4cfe36eefc8",
+          "retrieved_at": "2026-09-10T16:43:50.258306Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-04-02T08:58:40Z",
+          "source_record_sha256": "e95a893c9ab455f2472f2144370d8dcaa6351fec10891a67b548182a1a87de82",
+          "source_uri": null
+        },
+        "record_sha256": "b19be8204533ee7e303d9bc3d58c3a228f739dc0b3da8f179a585c2fcdb851f7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "북벽은 단양군 영춘면 상리 느티마을 앞을 도도히 흐르는 남한강가에 깎아지른 듯 병풍처럼 늘어서 있는 석벽을 의미한다. 단양 제2팔경 중 한 곳으로 봄가을의 철쭉과 단풍이 그 풍광을 더해준다. 북벽의 가장 높은 봉우리를 청명봉이라고 하는데 마치 매가 막 날아오르는 형상을 하고 있어 응암이라고도 불린다. 북벽은 영춘면에서 북쪽에 있고, 17세기에 펴낸 각종 문집에 이름이 나오는 것으로 보아 늦어도 1600년대부터 이 같은 이름이 붙여진 것으로 보인다. 단양지역 향토사학계는 1741년(조선 영조 17) 2월부터 1745년 7월까지 영춘현감으로 재직했던 이보상이 이곳 암석에 ‘북벽’이란 글자를 새긴 것으로 보고 있다. 영월, 영춘, 청풍, 단양, 풍기, 제천 등지의 풍류객들과 유생들이 이곳 북벽의 풍경에 매료되어 뱃놀이를 하며 봄의 철쭉, 가을의 단풍을 즐겼으며, 많은 선비가 신이 빚은 자연의 조화를 한시로 남겼다. 1960년대만 해도 북벽에 흐드러지게 핀 진달래를 지나서 서울 광나루로 향하던 뗏목 사공의 노래가 구성지게 울려 퍼졌다고 한다."
+      }
+    ],
+    "parent_source_sha256": "d06ec60a41b1016b3a043183aa112f31e51a02628e691749522842aaad073d58",
+    "place": {
+      "address": "충청북도 단양군 영춘면 북벽길 51-3",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:16cfd603f234f7f30598af3b1f56bd584e0366e1b393abe404e18346bc1564f4",
+      "name_ko": "북벽",
+      "place_id": "public:korea:16cfd603f234f7f30598af3b1f56bd584e0366e1b393abe404e18346bc1564f4",
+      "provider_content_id": "1627315",
+      "region_code": "43800",
+      "region_name": "충청북도 단양군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

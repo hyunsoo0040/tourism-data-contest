@@ -1,0 +1,438 @@
+{
+  "assessed_at": "2026-09-11T17:30:26.914527Z",
+  "assessment_sha256": "26619b4b5bb8e4fefdafae312d751012722f7f3abfed23226e8ca2e9e56a562d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 38
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소에 부여된 슬로건 형태의 간단한 이미지·의미 표현이 확인된다. 슬로건의 존재만으로 수준 1(제한적 표현)이 적절하며, 다양한 매체·장면에서 일관된 의미의 근거는 부족하다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "옥상 원형 돔이라는 시각적으로 구별되는 건축 요소가 확인된다. 그러나 외관·경관 전반을 지배하는 일관된 시각적 연출의 근거는 부족하여 수준 2로 판단한다. 픽셀 전용 claim인 VISUAL_APPEARANCE 대신 VISUAL_EXPRESSION으로 수정한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "천체 관측과 일일체험교실 등 구체적 참여 활동이 확인된다. 다만 지속적 도전·몰입의 중심이라 할 만한 심층 근거는 부족하여 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "가족 단위·단체 프로그램 등 공동 활동의 기회가 확인된다. 그러나 교류·자기표현이 풍부하거나 방문 경험의 중심이라 할 근거는 부족하여 수준 2로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "천문대라는 시설 특성상 문화유산·원형과의 접촉 근거가 제공되지 않았다. 인근 한국민속촌 언급은 이 장소의 유산 경험이 아니므로 평가하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개소 연도와 운영사 연혁은 있으나 이는 시설 개관 정보이며, 이 장소 자체의 역사적 맥락 탐구 경험에 대한 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 제공되지 않았다. 천문 교육기관이라는 사실만으로 전통 지속을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "우주과학 교육 프로그램이 있으나 일반 과학 체험·교육에 해당하며, 원형·유산·전통에 연결된 해설·탐구라 할 근거는 없다. 일반 교육만으로 H.d를 부여하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65",
+          "quote": {
+            "end": 232,
+            "method": "EXACT",
+            "original": "‘별을 아는 어린이는 생각이 깊어집니다’라는 슬로건 아래",
+            "start": 201,
+            "submitted": "‘별을 아는 어린이는 생각이 깊어집니다’라는 슬로건 아래",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5279a8231b0533b7aa62dd8718969a60fde775d8009699317449bccab70242ac"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 1,
+      "reason": "이 장소에 부여된 슬로건 형태의 간단한 이미지·의미 표현이 확인된다. 슬로건의 존재만으로 수준 1(제한적 표현)이 적절하며, 다양한 매체·장면에서 일관된 의미의 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "운영사의 전국 천문대 운영 사실은 이 장소의 이미지 유통·매체 재현 근거가 아니며, 이 장소의 작품·홍보·SNS 매체 표현에 대한 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65",
+          "quote": {
+            "end": 420,
+            "method": "EXACT",
+            "original": "옥상에 천체관측을 위한 4.5m 원형 돔을 비롯 다양한 관측 장비도 갖추고 있다.",
+            "start": 375,
+            "submitted": "옥상에 천체관측을 위한 4.5m 원형 돔을 비롯 다양한 관측 장비도 갖추고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5279a8231b0533b7aa62dd8718969a60fde775d8009699317449bccab70242ac"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "옥상 원형 돔이라는 시각적으로 구별되는 건축 요소가 확인된다. 그러나 외관·경관 전반을 지배하는 일관된 시각적 연출의 근거는 부족하여 수준 2로 판단한다. 픽셀 전용 claim인 VISUAL_APPEARANCE 대신 VISUAL_EXPRESSION으로 수정한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다. 관측 장비 구비 사실만으로 이미지 재현 경험을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "정규 교실 중심의 체계적 교육 운영이 확인되나, 자율적 탐색·여유·자기 선택을 지원하는 경험에 대한 직접 근거는 없다. 접근성 정보는 자유·여유의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경·시각적 저자극·머무를 환경에 대한 근거가 없다. 인근 광교산·청계산 언급은 이 장소의 환경 단서가 아니며, 천문대라는 이름만으로 고요함을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65",
+          "quote": {
+            "end": 419,
+            "method": "EXACT",
+            "original": "천체관측을 위한 4.5m 원형 돔을 비롯 다양한 관측 장비도 갖추고 있다",
+            "start": 379,
+            "submitted": "천체관측을 위한 4.5m 원형 돔을 비롯 다양한 관측 장비도 갖추고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5279a8231b0533b7aa62dd8718969a60fde775d8009699317449bccab70242ac"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65",
+          "quote": {
+            "end": 266,
+            "method": "EXACT",
+            "original": "4단계의 정규 교실과 3개의 1회성 일일체험교실을 운영하며",
+            "start": 234,
+            "submitted": "4단계의 정규 교실과 3개의 1회성 일일체험교실을 운영하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5279a8231b0533b7aa62dd8718969a60fde775d8009699317449bccab70242ac"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "천체 관측과 일일체험교실 등 구체적 참여 활동이 확인된다. 다만 지속적 도전·몰입의 중심이라 할 만한 심층 근거는 부족하여 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65",
+          "quote": {
+            "end": 374,
+            "method": "EXACT",
+            "original": "초등학생 어린이 및 가족단위의 프로그램 신청이 가능하며, 유치원, 초·중·고 단체 맞춤형 프로그램도 운영하고 있다.",
+            "start": 310,
+            "submitted": "초등학생 어린이 및 가족단위의 프로그램 신청이 가능하며, 유치원, 초·중·고 단체 맞춤형 프로그램도 운영하고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5279a8231b0533b7aa62dd8718969a60fde775d8009699317449bccab70242ac"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "가족 단위·단체 프로그램 등 공동 활동의 기회가 확인된다. 그러나 교류·자기표현이 풍부하거나 방문 경험의 중심이라 할 근거는 부족하여 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "40f7b4c30b54c567a487290f4e139fb7d37803de5963679bc38df8bbd1e170af",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e1111e4165366b73d825841c8775ff1d02100c00ce6b04ba779df1ef10abfe65",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:730c2154eb221a3f5667f23dea270df143c5f45b480e4e773da51313af411d60",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3012524",
+          "request_sha256": "4b1f845d1832c65ed1da67aacbcdf5d97e87044de117a5afebc44cc1333e188f",
+          "response_sha256": "e23d85d13c530030caa5dbf83905a47e39d79bc4712b9e585bd7012edbc4bca6",
+          "retrieved_at": "2026-09-09T16:42:00.719314Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-29T04:19:59Z",
+          "source_record_sha256": "6e87a85fc8f04f00186d08a015f1b272d9cd290868155462e133f8b99dc986ae",
+          "source_uri": null
+        },
+        "record_sha256": "5279a8231b0533b7aa62dd8718969a60fde775d8009699317449bccab70242ac",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "한국민속촌 인근에 위치한 용인어린이천문대는 도심 속에서도 밤하늘을 관측할 수 있는 천문대이다. 초등학생 어린이들을 대상으로 우주과학 지식을 나누고 천문학에 대한 이해와 견문을 넓힐 수 있도록 교육하는 민간교육기관으로 2017년 개소하였다. 2003년 국내 최초 어린이 천문학 교육과정을 개발해 전국에 어린이천문대를 운영하고 있는 아스트로 캠프의 용인지점이다. ‘별을 아는 어린이는 생각이 깊어집니다’라는 슬로건 아래, 4단계의 정규 교실과 3개의 1회성 일일체험교실을 운영하며 정규 교실은 팀 수업으로 각 단계마다 수준별 체계적인 전문교육이 이루어진다. 초등학생 어린이 및 가족단위의 프로그램 신청이 가능하며, 유치원, 초·중·고 단체 맞춤형 프로그램도 운영하고 있다. 옥상에 천체관측을 위한 4.5m 원형 돔을 비롯 다양한 관측 장비도 갖추고 있다. 용인에버라인 삼가역에서 차량으로 약 9분, 수인분당선 상갈역과 수원신갈 IC에서 약 15분 내외의 거리에 위치하고 지하철역에서 부근까지 버스도 있어 대중교통 접근성도 용이하다. 인근에 한국민속촌, 다이노베이, 에버랜드, 광교산, 청계산, 율동공원 등이 있다."
+      }
+    ],
+    "parent_source_sha256": "f954a91f282195e4461bba5b3b5f64e504b72934f3d5d08ff2e87a186053dd2b",
+    "place": {
+      "address": "경기도 용인시 기흥구 지삼로98번길 11 (지곡동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:730c2154eb221a3f5667f23dea270df143c5f45b480e4e773da51313af411d60",
+      "name_ko": "용인어린이천문대",
+      "place_id": "public:korea:730c2154eb221a3f5667f23dea270df143c5f45b480e4e773da51313af411d60",
+      "provider_content_id": "3012524",
+      "region_code": "41463",
+      "region_name": "경기도 용인시 기흥구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

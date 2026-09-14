@@ -1,0 +1,889 @@
+{
+  "assessed_at": "2026-09-11T16:11:21.004437Z",
+  "assessment_sha256": "d3f1ad82322dea44bfba31b74b61352c57f70a83c7f1e1494697d7f202e8ae06",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 76
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:6a9d190f15fab1786a1bbaf80767efa6ab8000897ba780bb2aefd2c87b469381",
+            "appearance:d7ccabe06f35b18b24d99cfb29e79b00283708696e19acea7ed0e729c295aaf2",
+            "appearance:f9aea6b99612d223c818c2f896654505acc67d909766e24dd024ad6c07425cb4"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "단풍정원, 청류지원, 붓꽃원 등 정원 이름으로 시각적 성격 일부를 짐작할 수 있으나 장소 이미지를 표현하는 외관·경관·연출의 분명한 표현을 확인하는 근거는 부족하다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e3afc37c86c85845ffd83c08bd55ca7d7d562629a7d669a621b2c461e5f1bf38"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "9개 정원과 11개 체험 공간 등 다양한 구역을 사계절 관람하며 자연을 체험하는 공간으로, 방문자가 자신의 방식으로 탐색할 기회가 확인된다. 도심 인접성 등은 가중 근거로 쓰지 않았다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e3afc37c86c85845ffd83c08bd55ca7d7d562629a7d669a621b2c461e5f1bf38"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:15f67eb678bee2fd2636b4c30e5722ef719c5afdbb7207d620f4f26b8b6f1548",
+            "appearance:7334c32865d79ecf6aad452fa817d4cb4ac9cdc9b6df4de53faea216e3649d13",
+            "appearance:f95365442311e1c7a75588d967b5b7d829c5543479adb1bd32b728082d338c68"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "도심 속 자연 체험 공간, 습지형 생태숲·숲정원·치유정원 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡·심리적 회복은 확인되지 않아 최고 수준까지 올리지 않았다.",
+      "value": 77
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 2020년 신설 도심형 수목원과 9개 조성 정원을 소개할 뿐, 확인된 실제 원형·문화유산과의 접촉 근거가 없다. 한국전통정원은 전통의 미를 담은 조성물로 실제 유산 여부를 판단할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "설립 연혁(국가수목원 확충계획, 2020년 개원)은 간단한 소개에 그치며 이 장소 고유의 역사적 사건·인물 맥락 탐구를 뒷받침하는 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "민속식물원 언급이 있으나 지역 주체의 실제 전승·생활문화와의 연결이 확인되지 않는다. 조성된 전시 공간만으로 현재 전승을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "식물에 대한 이해와 체험 목적의 교육지구가 있으나 이는 일반 식물 학습이지 원형·유산·전통에 연결된 역사 해설·탐구라는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'자연과 함께하는 삶의 가치'라는 홍보 문구가 있으나 사회적으로 공유된 구체적 이미지·상징이 이 장소에 부여된다는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체 작품·홍보·SNS를 통한 장소 이미지의 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "단풍정원, 청류지원, 붓꽃원 등 정원 이름으로 시각적 성격 일부를 짐작할 수 있으나 장소 이미지를 표현하는 외관·경관·연출의 분명한 표현을 확인하는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:e3afc37c86c85845ffd83c08bd55ca7d7d562629a7d669a621b2c461e5f1bf38",
+          "quote": {
+            "end": 363,
+            "method": "EXACT",
+            "original": "정원전시관람지구는 총 9개 정원으로 이루어져 있다. 한국 전통의 미를 담은 한국전통정원을 비롯하여 분재원, 야생화원, 단풍정원, 양서류관찰원, 습지형 생태숲, 청류지원, 붓꽃원, 담장정원이 포함되어 있다.",
+            "start": 249,
+            "submitted": "정원전시관람지구는 총 9개 정원으로 이루어져 있다. 한국 전통의 미를 담은 한국전통정원을 비롯하여 분재원, 야생화원, 단풍정원, 양서류관찰원, 습지형 생태숲, 청류지원, 붓꽃원, 담장정원이 포함되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "865f394a9497340eff38f8c97d2888fb94a45d46f84dd8cacb06a4d6742021c8"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "9개 정원과 11개 체험 공간 등 다양한 구역을 사계절 관람하며 자연을 체험하는 공간으로, 방문자가 자신의 방식으로 탐색할 기회가 확인된다. 도심 인접성 등은 가중 근거로 쓰지 않았다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e3afc37c86c85845ffd83c08bd55ca7d7d562629a7d669a621b2c461e5f1bf38",
+          "quote": {
+            "end": 87,
+            "method": "EXACT",
+            "original": "도심 속에서 자연을 체험할 수 있는 공간으로 조성되었다.",
+            "start": 56,
+            "submitted": "도심 속에서 자연을 체험할 수 있는 공간으로 조성되었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "865f394a9497340eff38f8c97d2888fb94a45d46f84dd8cacb06a4d6742021c8"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e3afc37c86c85845ffd83c08bd55ca7d7d562629a7d669a621b2c461e5f1bf38",
+          "quote": {
+            "end": 363,
+            "method": "EXACT",
+            "original": "습지형 생태숲, 청류지원, 붓꽃원, 담장정원이 포함되어 있다.",
+            "start": 329,
+            "submitted": "습지형 생태숲, 청류지원, 붓꽃원, 담장정원이 포함되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "865f394a9497340eff38f8c97d2888fb94a45d46f84dd8cacb06a4d6742021c8"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "도심 속 자연 체험 공간, 습지형 생태숲·숲정원·치유정원 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡·심리적 회복은 확인되지 않아 최고 수준까지 올리지 않았다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "식물교육체험지구의 체험 공간 존재는 확인되나, 이는 구체적 참여 활동(수준 2)의 근거에 가깝다. '지속적으로 참여·도전할 활동'(수준 3)을 뒷받침하는 상시 프로그램·지속 참여 근거는 원문에 없어 상위 수준 판정은 보류한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "커뮤니티참여활동지구와 공유정원 등 교류 기회의 존재는 확인되나(수준 2 수준), '함께 만들거나 자신을 표현할 활동이 풍부'(수준 3)함을 직접 보여주는 근거는 부족하다. '시민 참여를 위한 공간'이라는 개관 서술만으로 풍부함을 단정하기 어렵다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "3eeff6bb5d2d9c0a72acb61e005c599126976d2cffd977ec156490ceebcdee36",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:e3afc37c86c85845ffd83c08bd55ca7d7d562629a7d669a621b2c461e5f1bf38",
+              "quote": {
+                "end": 419,
+                "method": "EXACT",
+                "original": "식물교육체험지구는 총 11개의 공간으로 구성되어 있으며, 식물에 대한 이해와 체험을 목적으로 한다.",
+                "start": 364,
+                "submitted": "식물교육체험지구는 총 11개의 공간으로 구성되어 있으며, 식물에 대한 이해와 체험을 목적으로 한다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "865f394a9497340eff38f8c97d2888fb94a45d46f84dd8cacb06a4d6742021c8"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "식물교육체험지구 11개 공간, 유아숲체험원, 양서류관찰원 등 구체적 참여·탐방 활동의 기회가 확인된다. 지속적 도전 수준의 근거는 없어 3로 판정했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "식물교육체험지구의 체험 공간 존재는 확인되나, 이는 구체적 참여 활동(수준 2)의 근거에 가깝다. '지속적으로 참여·도전할 활동'(수준 3)을 뒷받침하는 상시 프로그램·지속 참여 근거는 원문에 없어 상위 수준 판정은 보류한다."
+        }
+      },
+      "reason": "식물교육체험지구의 체험 공간 존재는 확인되나, 이는 구체적 참여 활동(수준 2)의 근거에 가깝다. '지속적으로 참여·도전할 활동'(수준 3)을 뒷받침하는 상시 프로그램·지속 참여 근거는 원문에 없어 상위 수준 판정은 보류한다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:e3afc37c86c85845ffd83c08bd55ca7d7d562629a7d669a621b2c461e5f1bf38",
+              "quote": {
+                "end": 607,
+                "method": "EXACT",
+                "original": "커뮤니티참여활동지구는 시민 참여와 여가 활동을 위한 공간으로, 어린이정원, 축제마당, 생활정원, 후계목정원, 감각정원, 공유정원 등 6개소로 구성되어 있다.",
+                "start": 520,
+                "submitted": "커뮤니티참여활동지구는 시민 참여와 여가 활동을 위한 공간으로, 어린이정원, 축제마당, 생활정원, 후계목정원, 감각정원, 공유정원 등 6개소로 구성되어 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "865f394a9497340eff38f8c97d2888fb94a45d46f84dd8cacb06a4d6742021c8"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 3,
+          "reason": "시민 참여를 위한 커뮤니티참여활동지구와 공유정원 등 교류·공동 활동 기회가 확인된다. 자기표현 활동의 풍부함까지는 근거가 없어 3로 판정했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "커뮤니티참여활동지구와 공유정원 등 교류 기회의 존재는 확인되나(수준 2 수준), '함께 만들거나 자신을 표현할 활동이 풍부'(수준 3)함을 직접 보여주는 근거는 부족하다. '시민 참여를 위한 공간'이라는 개관 서술만으로 풍부함을 단정하기 어렵다."
+        }
+      },
+      "reason": "커뮤니티참여활동지구와 공유정원 등 교류 기회의 존재는 확인되나(수준 2 수준), '함께 만들거나 자신을 표현할 활동이 풍부'(수준 3)함을 직접 보여주는 근거는 부족하다. '시민 참여를 위한 공간'이라는 개관 서술만으로 풍부함을 단정하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "3e791b3b0cd1e9e52f4f3604521e994967cee1b5301ae2f8984b5d7e59ef8905",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "연꽃 연못, 수초, 울창한 수목과 배롱나무 등 자연 환경 단서가 장면 전반을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:15f67eb678bee2fd2636b4c30e5722ef719c5afdbb7207d620f4f26b8b6f1548",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3966ccedd6cc4addae1dcf5b508ebbb63477597ec3631d5676e3a99ee4aebeb0",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3343608",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "aabe93413e3066985d6d3c69ccb79ba9f65ae563712bc7a815ab6fb16c9fbc09",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/08/3343608.jpg"
+        },
+        "record_sha256": "8d608b84b9fce0ccc84ca38b482c7d9764a3ad6574e5dcbb0e8b0610f9e98377",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와지붕, 목조 누각, 일주문 형태의 문, 한옥 재료와 공간 구성 등 전통 외관이 장면의 중심을 이룸.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:533af5c4306673959ee3e291e57b7da3edfa5dcdc8f866bc151c3b84ef31a422",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3966ccedd6cc4addae1dcf5b508ebbb63477597ec3631d5676e3a99ee4aebeb0",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3343608",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "aabe93413e3066985d6d3c69ccb79ba9f65ae563712bc7a815ab6fb16c9fbc09",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/08/3343608.jpg"
+        },
+        "record_sha256": "78673378c4c76f2786d108d2804bb9aaebf4b21211d3d3d67681c5fdc1e75eec",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 재료나 전통적 공간 구성의 시각적 단서가 보이지 않으며, 유리와 금속 중심의 현대적 외관만이 관찰된다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6227b0ac5190e1f2a8afb46a5b71e40378adc4f027daa963662029189d490447",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7b6fd747b101cdadb94f996c5bb2e31b3c7927079b37bd7d155c4bed01cff5e2",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3038089",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "27e602e5945c5d3cb4eb34b7ba9021117b86f0bbb05874500837f97cf3ad1453",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/89/3038089.jpg"
+        },
+        "record_sha256": "42cf59e71b6338cdfdda4d284a6cc7c90bfa6a69a8a45df5324792140e65d187",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "유리 커튼월로 이루어진 물결형 대형 건축물이 화면을 지배하며, 흐린 하늘과 대비되는 독특한 곡선 형태와 현대적 외관이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6a9d190f15fab1786a1bbaf80767efa6ab8000897ba780bb2aefd2c87b469381",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7b6fd747b101cdadb94f996c5bb2e31b3c7927079b37bd7d155c4bed01cff5e2",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3038089",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "27e602e5945c5d3cb4eb34b7ba9021117b86f0bbb05874500837f97cf3ad1453",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/89/3038089.jpg"
+        },
+        "record_sha256": "2dc68d35f21c75cfc5279a96b0b3914fc45adacf81851b5094e626f5ef73b081",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "잔디 마당, 분재 나무, 배경 소나무 숲과 트인 하늘이 중앙을 크게 차지한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7334c32865d79ecf6aad452fa817d4cb4ac9cdc9b6df4de53faea216e3649d13",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0027c7a7d52b9fa6cc839677c2e2e5e83814ee0da222e112b4d61782124c7d27",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3513778",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "903dbcf94b657857d05251c6b1bbd922acc3d49973689c03f7c1bb056eeed4e0",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/78/3513778.jpg"
+        },
+        "record_sha256": "4a25bdef71a7f28485c4409c4dc47e5c9eced0595ad31943a0a5eb93f55445e2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "어안 렌즈 특유의 왜곡과 목조 처마 프레임 구도, 대비되는 하늘과 잔디 색이 강한 연출적 인상을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d7ccabe06f35b18b24d99cfb29e79b00283708696e19acea7ed0e729c295aaf2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0027c7a7d52b9fa6cc839677c2e2e5e83814ee0da222e112b4d61782124c7d27",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3513778",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "903dbcf94b657857d05251c6b1bbd922acc3d49973689c03f7c1bb056eeed4e0",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/78/3513778.jpg"
+        },
+        "record_sha256": "8124a9b88cb8e800c915043631d03672d7ddca43c645611bc44a58b5f789d999",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와 지붕과 목재 기둥·창호의 한옥식 건물, 목조 회랑과 마당 구성이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f442f76730a8b74b587826e83cfad1f54d0d88b2bdf785dbe79b53be30e4a46a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0027c7a7d52b9fa6cc839677c2e2e5e83814ee0da222e112b4d61782124c7d27",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3513778",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "903dbcf94b657857d05251c6b1bbd922acc3d49973689c03f7c1bb056eeed4e0",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/78/3513778.jpg"
+        },
+        "record_sha256": "5d8cd15bdd6ac69b14a91182e993942955afd61f7b053a297d9b0bb85156b1f2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 잔디밭이 전경 대부분을 차지하고, 원경에 낮은 산 능선과 나무들이 보여 트인 자연 환경 단서가 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f95365442311e1c7a75588d967b5b7d829c5543479adb1bd32b728082d338c68",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7b6fd747b101cdadb94f996c5bb2e31b3c7927079b37bd7d155c4bed01cff5e2",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3038089",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "27e602e5945c5d3cb4eb34b7ba9021117b86f0bbb05874500837f97cf3ad1453",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/89/3038089.jpg"
+        },
+        "record_sha256": "83f0c964b49c1fe2b48ca9e82a90f58f0efaa518a55b6d35d38615bae6a6b95e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "따뜻한 석양빛이 목조 한옥의 지붕 곡선과 나무 결을 강조하고, 연못과 배롱나무, 팻몰이 구도가 조화를 이루어 연출된 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f9aea6b99612d223c818c2f896654505acc67d909766e24dd024ad6c07425cb4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3966ccedd6cc4addae1dcf5b508ebbb63477597ec3631d5676e3a99ee4aebeb0",
+        "match_basis": [
+          "공식 촬영지역 세종특별자치시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3343608",
+          "request_sha256": "b80b37a4e7da049956066cf56d2c7c1aa2140b35a358fc8db1f1f25811571f35",
+          "response_sha256": "d36561c21557a2c0ff53427d0d5c802806d91930e7ca1c0b8a226bf7fddb0774",
+          "retrieved_at": "2026-09-10T08:20:34.205674Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "aabe93413e3066985d6d3c69ccb79ba9f65ae563712bc7a815ab6fb16c9fbc09",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/08/3343608.jpg"
+        },
+        "record_sha256": "00c7e15940047aa03bb76129dbef49ad3043a360f70a7a2f479a0ad3e5d7d874",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4e2061680eac03188d6889d3dd9a1a94bba52d805eea3473e951692be9786da1",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2675068",
+          "request_sha256": "a3bd38c9e8a6e17fa6ec7031b12fbd09a5193a88e078dd33885c88fde3ffcdab",
+          "response_sha256": "7bb9b6ede8aa5d2defac7abe514139e684974ca2d365c5b2df13f8c7f97552c0",
+          "retrieved_at": "2026-09-10T08:20:32.828741Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6560583f854c07762c5848e6bcb380ca61c4555c8ae263e38d18bfe0587c7527",
+          "source_uri": null
+        },
+        "record_sha256": "1291d3ae3296661f61525b90eb6a2be088effc03330a58219e44cf602d0cc041",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[개인] - 성인 5,000원 - 청소년 4,000원 - 어린이 3,000원 [단체(20인 이상)] - 성인 4,000원 - 청소년 3,000원 - 어린이 2,000원 ※ 무료 - 만 6세 이하 / 65세 이상 / 장애인 / 국가유공자 / 독립유공자 / 참전용사 / 기초수급자 등 ※ 자세한 사항은 홈페이지 참조"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e3afc37c86c85845ffd83c08bd55ca7d7d562629a7d669a621b2c461e5f1bf38",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2675068",
+          "request_sha256": "24c667aa7bcd71cb80515d83c5dbac74492b7ee9b2a778cedaa1642bed7be3ff",
+          "response_sha256": "7b3112428102054b4c1088efa871856a1d7db5790fb71b920a907b15720b8adc",
+          "retrieved_at": "2026-09-09T16:42:22.143730Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-17T00:39:20Z",
+          "source_record_sha256": "c2881de5e2d0447bfac623979414e49d5f524482953cb20523dd2f57f48cbc7f",
+          "source_uri": null
+        },
+        "record_sha256": "865f394a9497340eff38f8c97d2888fb94a45d46f84dd8cacb06a4d6742021c8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "국립세종수목원은 국립수목원 중 국내 최초의 도심형 수목원이다. 세종정부청사와 인접한 위치에 있으며, 도심 속에서 자연을 체험할 수 있는 공간으로 조성되었다. 이 수목원은 기후 및 식생대별 수목유전자원의 보존과 자원화를 위한 국가수목원 확충계획에 따라, 국립백두대간수목원(2017년 5월 개원)에 이어 2020년 7월에 설립된 두 번째 국립수목원이다. 국립세종수목원은 크게 정원전시관람지구, 식물교육체험지구, 커뮤니티참여활동지구로 구성되어 있다. 정원전시관람지구는 총 9개 정원으로 이루어져 있다. 한국 전통의 미를 담은 한국전통정원을 비롯하여 분재원, 야생화원, 단풍정원, 양서류관찰원, 습지형 생태숲, 청류지원, 붓꽃원, 담장정원이 포함되어 있다. 식물교육체험지구는 총 11개의 공간으로 구성되어 있으며, 식물에 대한 이해와 체험을 목적으로 한다. 민속식물원, 사계절전시원, 희귀·특산식물원, 숲정원, 정원식물가늠터, 치산녹화원, 치유정원, 무궁화원, 유아숲체험원, 폴리네이터가든, IFLA 세계조경가대회 기념정원이 포함된다. 커뮤니티참여활동지구는 시민 참여와 여가 활동을 위한 공간으로, 어린이정원, 축제마당, 생활정원, 후계목정원, 감각정원, 공유정원 등 6개소로 구성되어 있다. 국립세종수목원은 사계절 내내 다양한 식물과 정원을 관람하며, 자연과 함께하는 삶의 가치를 되새길 수 있는 공간이다."
+      }
+    ],
+    "parent_source_sha256": "02c7f75fd7696a5771d3c1223777e2def93b0d5d37fcb6546e24fdddbd355283",
+    "place": {
+      "address": "세종특별자치시 수목원로 136 (세종동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+      "name_ko": "국립세종수목원",
+      "place_id": "public:korea:268a57575f0e648e02de4621132813a2f31b6ed2373ca1fe0e54f4204665d548",
+      "provider_content_id": "2675068",
+      "region_code": "36110",
+      "region_name": "세종특별자치시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

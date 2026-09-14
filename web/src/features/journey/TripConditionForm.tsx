@@ -113,6 +113,10 @@ export function TripConditionForm({
 }) {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [today, setToday] = useState(() => localDate());
+  const [dateNotice, setDateNotice] = useState("");
+  const lastValidDateRef = useRef(
+    !defaultValues.visit_date || defaultValues.visit_date < today ? today : defaultValues.visit_date,
+  );
   const [groundedDraft] = useState(readGroundedTripInput);
   const travelRegions = useTravelRegions();
   const [regionCode, setRegionCode] = useState(groundedDraft.region_code ?? "");
@@ -125,6 +129,7 @@ export function TripConditionForm({
     register,
     handleSubmit,
     setFocus,
+    setValue,
     reset,
     watch,
     formState: { errors },
@@ -138,6 +143,29 @@ export function TripConditionForm({
   });
   // Only restored selections expose the retired option; new trips use the design's four choices.
   const retainedGroup = defaultValues.companion === "GROUP" && watch("companion") === "GROUP";
+
+  const refreshDateMinimum = (input: HTMLInputElement) => {
+    const currentDate = localDate();
+    input.min = currentDate;
+    setToday(currentDate);
+    return currentDate;
+  };
+
+  const acceptVisitDate = (input: HTMLInputElement) => {
+    const currentDate = refreshDateMinimum(input);
+    let selectedDate = input.value;
+    if (selectedDate && selectedDate < currentDate) {
+      selectedDate = lastValidDateRef.current >= currentDate ? lastValidDateRef.current : currentDate;
+      setDateNotice(`지난 날짜는 선택할 수 없어요. ${selectedDate}로 되돌렸어요.`);
+    } else {
+      setDateNotice("");
+    }
+    // Native pickers may emit out-of-range values despite min. Keep the DOM and
+    // React Hook Form in sync before another event or a submit can use that value.
+    input.value = selectedDate;
+    lastValidDateRef.current = selectedDate;
+    setValue("visit_date", selectedDate, { shouldDirty: true, shouldValidate: true });
+  };
 
   useEffect(() => {
     let timer: number;
@@ -279,11 +307,15 @@ export function TripConditionForm({
               type="date"
               min={today}
               aria-invalid={errors.visit_date ? true : undefined}
-              aria-describedby={errors.visit_date ? "visit_date-error" : undefined}
+              aria-describedby={errors.visit_date ? "visit_date-error" : dateNotice ? "visit_date-notice" : undefined}
               {...register("visit_date")}
+              onPointerDown={(event) => refreshDateMinimum(event.currentTarget)}
+              onFocus={(event) => refreshDateMinimum(event.currentTarget)}
+              onChange={(event) => acceptVisitDate(event.currentTarget)}
             />
           </label>
           {errors.visit_date ? <p className="field-error" id="visit_date-error">{errors.visit_date.message}</p> : null}
+          <p id="visit_date-notice" role="status" aria-live="polite" hidden={!dateNotice}>{dateNotice}</p>
           <ChoiceGroup
             name="visit_time"
             register={register}
@@ -360,6 +392,8 @@ export function TripConditionForm({
             setGroundedError(null);
             const resetDate = localDate();
             setToday(resetDate);
+            lastValidDateRef.current = resetDate;
+            setDateNotice("");
             reset({
               visit_date: resetDate,
               visit_time: "",

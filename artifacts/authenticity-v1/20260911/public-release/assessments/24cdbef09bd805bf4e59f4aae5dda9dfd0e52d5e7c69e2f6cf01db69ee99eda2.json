@@ -1,0 +1,710 @@
+{
+  "assessed_at": "2026-09-11T16:14:20.317454Z",
+  "assessment_sha256": "24cdbef09bd805bf4e59f4aae5dda9dfd0e52d5e7c69e2f6cf01db69ee99eda2",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'숨겨진 해변', '비밀스러운' 이미지가 공식 소개문에서 장소에 부여된 의미로 표현되어 있다. 하나의 이미지 표현이 확인되므로 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:84d5bfbcdbc999944d39ecf1402220ef8a9c7d54afb9f20651242f50b7fdcfa7",
+            "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "영화 <헤어질 결심>과 예능프로그램 <나혼자 산다>라는 두 매체에서 장소 이미지가 재현·유통된 근거가 확인된다. 방문자 증가와 연결되어 매체 이미지가 방문 동기로 작용하는 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "갯바위가 솟은 해안선과 맑은 물 등 구별되는 시각적 성격이 묘사되고 사진작가들이 계속 찾을 만큼 경관의 시각적 표현이 확인되어 수준 3으로 판단. 단, 해당 근거는 VISUAL_EXPRESSION만 허용되어 VISUAL_APPEARANCE 인용은 제외했다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "맑고 잔잔한 물, 갯바위 해안 등 자연 환경 단서가 확인된다. 다만 실제 고요함이나 혼잡 수준은 확정할 수 없어 두드러진 자연 환경 수준인 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거에는 부남해변의 확인된 원형·문화유산이나 실물 유산 접촉에 대한 내용이 없다. 해안 경치와 촬영지 언급만으로 유산 접촉을 판단할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "'예전에는 지도에도 표시되지 않았을 정도로 숨겨진 해변'이라는 간단한 연혁 언급이 있으나, 이는 구체적 역사·사건·인물 맥락의 근거로 부족하여 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "'마을이 관리하는 해수욕장'이라는 표현이 있으나, 이것이 지역 주체의 실제 전승·생활문화와의 연결을 보여주는 근거로는 불충분하여 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "제공된 근거에 원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 내용이 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+          "quote": {
+            "end": 552,
+            "method": "EXACT",
+            "original": "주변의 다른 해수욕장에 비해 조용히 숨어 있는 듯한 느낌을 주며 누구에게도 말할 수 없는 비밀스러운 일이 일어날 것만 같다.",
+            "start": 483,
+            "submitted": "주변의 다른 해수욕장에 비해 조용히 숨어 있는 듯한 느낌을 주며 누구에게도 말할 수 없는 비밀스러운 일이 일어날 것만 같다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'숨겨진 해변', '비밀스러운' 이미지가 공식 소개문에서 장소에 부여된 의미로 표현되어 있다. 하나의 이미지 표현이 확인되므로 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+          "quote": {
+            "end": 313,
+            "method": "EXACT",
+            "original": "영화 <헤어질 결심>의 마지막 장면 촬영지로 알려지며 찾는 사람이 늘었다.",
+            "start": 272,
+            "submitted": "영화 <헤어질 결심>의 마지막 장면 촬영지로 알려지며 찾는 사람이 늘었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+        },
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:84d5bfbcdbc999944d39ecf1402220ef8a9c7d54afb9f20651242f50b7fdcfa7",
+          "quote": {
+            "end": 31,
+            "method": "EXACT",
+            "original": "영화 <헤어질 결심> MBC 예능프로그램 <나혼자 산다>",
+            "start": 0,
+            "submitted": "영화 <헤어질 결심> MBC 예능프로그램 <나혼자 산다>",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "93ef555063cc90200e28311789446caa208480b2983367687b2fb149b5ce3151"
+        }
+      ],
+      "flags": [],
+      "key": "E.b",
+      "level": 3,
+      "reason": "영화 <헤어질 결심>과 예능프로그램 <나혼자 산다>라는 두 매체에서 장소 이미지가 재현·유통된 근거가 확인된다. 방문자 증가와 연결되어 매체 이미지가 방문 동기로 작용하는 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+          "quote": {
+            "end": 206,
+            "method": "EXACT",
+            "original": "근덕면 소재 해변 중 가장 경치가 뛰어나 사진작가들의 방문이 끊이지 않는다.",
+            "start": 164,
+            "submitted": "근덕면 소재 해변 중 가장 경치가 뛰어나 사진작가들의 방문이 끊이지 않는다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "갯바위가 솟은 해안선과 맑은 물 등 구별되는 시각적 성격이 묘사되고 사진작가들이 계속 찾을 만큼 경관의 시각적 표현이 확인되어 수준 3으로 판단. 단, 해당 근거는 VISUAL_EXPRESSION만 허용되어 VISUAL_APPEARANCE 인용은 제외했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "원문은 엔딩 장면의 바다가 세 해안을 합쳐 만든 합성 영상임을 명시한다. 따라서 부남해변 방문만으로 영화의 대표 장면을 그대로 경험·재현한다고 보기 어렵고, 촬영지로 알려졌다는 사실은 장면 경험 자체를 뒷받침하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "인용은 '외지인에게 잘 알려지지 않았다'는 홍보 서술일 뿐이며, 같은 문단에서 영화 촬영지로 알려지며 찾는 사람이 늘었다고 명시한다. 알려지지 않음에서 여유로운 자기 방식의 탐색 경험을 추정하는 것은 근거가 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+          "quote": {
+            "end": 271,
+            "method": "EXACT",
+            "original": "부남해변은 물이 맑고 잔잔한 파도로 아이들과 함께 파도타기, 스노클링을 즐길 수 있어 가족 단위 피서지로 최적이다.",
+            "start": 207,
+            "submitted": "부남해변은 물이 맑고 잔잔한 파도로 아이들과 함께 파도타기, 스노클링을 즐길 수 있어 가족 단위 피서지로 최적이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "맑고 잔잔한 물, 갯바위 해안 등 자연 환경 단서가 확인된다. 다만 실제 고요함이나 혼잡 수준은 확정할 수 없어 두드러진 자연 환경 수준인 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "파도타기·스노클링 즐길 수 있음은 구체적인 참여 활동 기회(수준 2)까지 뒷받침한다. 지속적으로 참여·도전할 활동이라는 제안 수준은 근거가 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "'가족 단위 피서지로 최적'은 이용 대상 권장 문구이며, 구체적인 교류·자기표현 기회를 제공한다는 근거가 없다. 가족 동반이 곧 관계 활동 기회를 의미하지 않는다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+              "quote": {
+                "end": 313,
+                "method": "EXACT",
+                "original": "영화 <헤어질 결심>의 마지막 장면 촬영지로 알려지며 찾는 사람이 늘었다.",
+                "start": 272,
+                "submitted": "영화 <헤어질 결심>의 마지막 장면 촬영지로 알려지며 찾는 사람이 늘었다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+            },
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+              "quote": {
+                "end": 434,
+                "method": "EXACT",
+                "original": "영화 <헤어질 결심> 엔딩 장면의 환상적인 바다는 세 곳의 해안을 합쳐 만든 장소이다.",
+                "start": 386,
+                "submitted": "영화 <헤어질 결심> 엔딩 장면의 환상적인 바다는 세 곳의 해안을 합쳐 만든 장소이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 3,
+          "reason": "영화의 대표 장면 촬영지로서 방문자가 해당 장면의 바다를 직접 경험할 수 있다는 근거가 있다. 다만 촬영 구도 재현 프로그램 등의 근거는 없어 직접 경험 수준인 3으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "E.d",
+          "reason": "원문은 엔딩 장면의 바다가 세 해안을 합쳐 만든 합성 영상임을 명시한다. 따라서 부남해변 방문만으로 영화의 대표 장면을 그대로 경험·재현한다고 보기 어렵고, 촬영지로 알려졌다는 사실은 장면 경험 자체를 뒷받침하지 않는다."
+        }
+      },
+      "reason": "원문은 엔딩 장면의 바다가 세 해안을 합쳐 만든 합성 영상임을 명시한다. 따라서 부남해변 방문만으로 영화의 대표 장면을 그대로 경험·재현한다고 보기 어렵고, 촬영지로 알려졌다는 사실은 장면 경험 자체를 뒷받침하지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+              "quote": {
+                "end": 163,
+                "method": "EXACT",
+                "original": "규모가 작고 진입로가 눈에 잘 띄지 않는 덕분에 외지인에게 잘 알려지지 않았으나",
+                "start": 119,
+                "submitted": "규모가 작고 진입로가 눈에 잘 띄지 않는 덕분에 외지인에게 잘 알려지지 않았으나",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 3,
+          "reason": "숨겨진 마을 해변으로 잘 알려지지 않았다는 근거가 있어 상대적으로 붐비지 않고 자유롭게 탐색할 여지가 있다고 볼 수 있다. 다만 자율 탐색 프로그램 등의 근거는 없어 수준 3이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.a",
+          "reason": "인용은 '외지인에게 잘 알려지지 않았다'는 홍보 서술일 뿐이며, 같은 문단에서 영화 촬영지로 알려지며 찾는 사람이 늘었다고 명시한다. 알려지지 않음에서 여유로운 자기 방식의 탐색 경험을 추정하는 것은 근거가 없다."
+        }
+      },
+      "reason": "인용은 '외지인에게 잘 알려지지 않았다'는 홍보 서술일 뿐이며, 같은 문단에서 영화 촬영지로 알려지며 찾는 사람이 늘었다고 명시한다. 알려지지 않음에서 여유로운 자기 방식의 탐색 경험을 추정하는 것은 근거가 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+              "quote": {
+                "end": 271,
+                "method": "EXACT",
+                "original": "아이들과 함께 파도타기, 스노클링을 즐길 수 있어 가족 단위 피서지로 최적이다.",
+                "start": 227,
+                "submitted": "아이들과 함께 파도타기, 스노클링을 즐길 수 있어 가족 단위 피서지로 최적이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "파도타기, 스노클링 등 구체적인 참여·신체 활동 기회가 명시되어 있다. 지속적 도전 활동이라는 근거는 없어 수준 3으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.c",
+          "reason": "파도타기·스노클링 즐길 수 있음은 구체적인 참여 활동 기회(수준 2)까지 뒷받침한다. 지속적으로 참여·도전할 활동이라는 제안 수준은 근거가 없다."
+        }
+      },
+      "reason": "파도타기·스노클링 즐길 수 있음은 구체적인 참여 활동 기회(수준 2)까지 뒷받침한다. 지속적으로 참여·도전할 활동이라는 제안 수준은 근거가 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+              "quote": {
+                "end": 271,
+                "method": "EXACT",
+                "original": "아이들과 함께 파도타기, 스노클링을 즐길 수 있어 가족 단위 피서지로 최적이다.",
+                "start": 227,
+                "submitted": "아이들과 함께 파도타기, 스노클링을 즐길 수 있어 가족 단위 피서지로 최적이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "가족 단위 이용이 언급되어 함께 활동할 여지는 있으나, 교류·공동 창작·자기표현 프로그램 등의 근거는 없다. 제한적 공동 활동 수준인 2로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "'가족 단위 피서지로 최적'은 이용 대상 권장 문구이며, 구체적인 교류·자기표현 기회를 제공한다는 근거가 없다. 가족 동반이 곧 관계 활동 기회를 의미하지 않는다."
+        }
+      },
+      "reason": "'가족 단위 피서지로 최적'은 이용 대상 권장 문구이며, 구체적인 교류·자기표현 기회를 제공한다는 근거가 없다. 가족 동반이 곧 관계 활동 기회를 의미하지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "e18f2f9612b683d2ffbb203707a826c82ec85639a7bdca3dbfece09e0955f020",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:71b85402f9033f0b42c1816bf86d6529c71b281851c7d3ac64321d441a23fd10",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:28f6696d78efe903f38860bbfa29667f977824f1608a47bdde4ad78f2620b6ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129582",
+          "request_sha256": "5b04d8742a2a01676ba6adf852212479d03a9997b83d0bf2ce541a1e8671aff6",
+          "response_sha256": "fc895a248e88eba897513b5f86e916ba607cea505bc550c5ccda06bb75ea208b",
+          "retrieved_at": "2026-09-11T02:02:31.716126Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "13eb0c803f127ffb7077c6b0414cdf77db635fb9912e8e49a3738546ca53d383",
+          "source_uri": null
+        },
+        "record_sha256": "61b6303e15e891644d5459f15b6dad8941617a4d1ed08d45f831f478187b5427",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:84d5bfbcdbc999944d39ecf1402220ef8a9c7d54afb9f20651242f50b7fdcfa7",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:28f6696d78efe903f38860bbfa29667f977824f1608a47bdde4ad78f2620b6ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129582",
+          "request_sha256": "5b04d8742a2a01676ba6adf852212479d03a9997b83d0bf2ce541a1e8671aff6",
+          "response_sha256": "fc895a248e88eba897513b5f86e916ba607cea505bc550c5ccda06bb75ea208b",
+          "retrieved_at": "2026-09-11T02:02:31.716126Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0ec6cce364454511ab8bc56deea71d57bb5ebb55b2dc78c4d0902e0204d2b90",
+          "source_uri": null
+        },
+        "record_sha256": "93ef555063cc90200e28311789446caa208480b2983367687b2fb149b5ce3151",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "영화 <헤어질 결심> MBC 예능프로그램 <나혼자 산다>"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a41cd39409d7c132c1401b2c88ea323d81f9683acb52a1b6fc356ab86fd89bc8",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:28f6696d78efe903f38860bbfa29667f977824f1608a47bdde4ad78f2620b6ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129582",
+          "request_sha256": "5b04d8742a2a01676ba6adf852212479d03a9997b83d0bf2ce541a1e8671aff6",
+          "response_sha256": "fc895a248e88eba897513b5f86e916ba607cea505bc550c5ccda06bb75ea208b",
+          "retrieved_at": "2026-09-11T02:02:31.716126Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0038137ba025195a231ac87d4a5535d9a5ca1cc735662b00379af387f75c2ebb",
+          "source_uri": null
+        },
+        "record_sha256": "8eea15923010790e57b4611f0c75402f283230463d2765c2e3fa0228349f71e9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "탈의장 / 샤워장"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:cfd262413fc325e14e9822efe149e871124b0bc9a63a49cc41510d1f1673ff43",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:28f6696d78efe903f38860bbfa29667f977824f1608a47bdde4ad78f2620b6ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "129582",
+          "request_sha256": "afd193f88fbb9eb90db478f8330115059db109aef18b259873cc2fcd87e5127f",
+          "response_sha256": "407661b758550e8977f1e8329131346b351a750ff083bbd9c9af8aa501dcd0a4",
+          "retrieved_at": "2026-09-10T17:19:35.037882Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-12T09:42:33Z",
+          "source_record_sha256": "70fccfa403ff418da0827a66fe45a5f6e27d9e8b13fb57e1105fd4ea719f2498",
+          "source_uri": null
+        },
+        "record_sha256": "8488116d0843667c8a708eb5b35f7b1abbdbe10a2d79ac6a274438757e98a4b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "부남해변은 해수욕장이라기보다 마을 해변에 가깝지만 해안선을 따라 갯바위 등이 드문드문 솟아있어 운치가 있고 멋스럽다. 백사장 길이 400m, 폭 50m로 예전에는 지도에도 표시되지 않았을 정도로 숨겨진 해변이다. 규모가 작고 진입로가 눈에 잘 띄지 않는 덕분에 외지인에게 잘 알려지지 않았으나 근덕면 소재 해변 중 가장 경치가 뛰어나 사진작가들의 방문이 끊이지 않는다. 부남해변은 물이 맑고 잔잔한 파도로 아이들과 함께 파도타기, 스노클링을 즐길 수 있어 가족 단위 피서지로 최적이다. 영화 <헤어질 결심>의 마지막 장면 촬영지로 알려지며 찾는 사람이 늘었다. 이곳은 군사보호 지역으로, 마을이 관리하는 해수욕장이라 여름휴가철만 한시적으로 개방한다. ◎ 한류의 매력을 만나는 여행 정보 - 영화 <헤어질 결심> 엔딩 장면의 환상적인 바다는 세 곳의 해안을 합쳐 만든 장소이다. 그중 하나인 부남해변은 갯바위가 운치 있는 작은 해변으로 물이 맑고 물살이 잔잔하다. 주변의 다른 해수욕장에 비해 조용히 숨어 있는 듯한 느낌을 주며 누구에게도 말할 수 없는 비밀스러운 일이 일어날 것만 같다."
+      }
+    ],
+    "parent_source_sha256": "b5074178fc94e79c49da5dfa077391c87aef3621361a59b63f6e12b428ef3f3d",
+    "place": {
+      "address": "강원특별자치도 삼척시 근덕면 부남해변길",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:28f6696d78efe903f38860bbfa29667f977824f1608a47bdde4ad78f2620b6ed",
+      "name_ko": "부남해변",
+      "place_id": "public:korea:28f6696d78efe903f38860bbfa29667f977824f1608a47bdde4ad78f2620b6ed",
+      "provider_content_id": "129582",
+      "region_code": "51230",
+      "region_name": "강원특별자치도 삼척시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

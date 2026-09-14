@@ -1,0 +1,583 @@
+{
+  "assessed_at": "2026-09-11T17:09:00.194752Z",
+  "assessment_sha256": "6fde61a7ddeab4d889ac46d23c6303195a3da47141c54ead5ecac1080bbb8665",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.a"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소의 소금·염전이라는 구체적 주제와 직접 연결된 역사·문화 맥락을 소금박물관 관람을 통해 이해할 수 있는 근거가 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.c",
+      "missing_channels": [],
+      "reason": "태평염전이 현재 운영 중인 실제 염전으로 확인되어 소금 생산이라는 생활문화의 흔적에 접근할 수 있으나, 지역 주체의 지속적 전승 활동 자체에 대한 명시적 근거는 제한적이어서 흔적 접함 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "소금박물관의 역사·문화 전시와 염전 현장 해설·체험이 유산 주제에 연결된 설명·학습 기회를 제공한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "증도라는 장소에 슬로시티·느긋함이라는 구체적 이미지와 의미가 부여되어 있고 모실길이라는 이름 자체에 그 의미가 담겨 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "바둑판 모양으로 다듬어진 광활한 염판이라는 이 장면에서 구별되는 시각적 성격이 확인된다. repair 항목을 반영하되 E.c의 텍스트 근거 claim은 VISUAL_EXPRESSION이므로 이를 사용했다. 일관된 연출이 장면을 지배한다는 근거는 없어 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "10.8km 걷기 트레킹 코스로 방문자가 자신의 방식과 속도로 해안선을 탐색할 수 있는 자율적 활동 기회가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "천혜의 자연환경, 갯벌 습지와 70여 종 염생물 관찰 등 자연 환경 단서가 확인된다. 다만 실제 고요함·회복 효과는 확정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "염전체험 프로그램 참여와 3시간 소요의 해안 트레킹 등 구체적인 참여·탐방 활동 기회가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "anchor_ko는 '공간이나 실물을 구체적으로 탐구' 수준이나, 원문은 전망대에서 염판 '감상'과 박물관 '관람'만 명시한다. 확인된 실제 염전이라는 점은 유산 접촉의 근거가 되지만 탐구 중심의 경험까지 뒷받침하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+          "quote": {
+            "end": 393,
+            "method": "EXACT",
+            "original": "소금박물관에서는 소금 생성의 역사와 문화 등을 관람하며",
+            "start": 363,
+            "submitted": "소금박물관에서는 소금 생성의 역사와 문화 등을 관람하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 3,
+      "reason": "이 장소의 소금·염전이라는 구체적 주제와 직접 연결된 역사·문화 맥락을 소금박물관 관람을 통해 이해할 수 있는 근거가 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "LIVING_TRADITION",
+          "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+          "quote": {
+            "end": 413,
+            "method": "EXACT",
+            "original": "염전체험 프로그램에 참여도 가능하다",
+            "start": 394,
+            "submitted": "염전체험 프로그램에 참여도 가능하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+        }
+      ],
+      "flags": [],
+      "key": "H.c",
+      "level": 2,
+      "reason": "태평염전이 현재 운영 중인 실제 염전으로 확인되어 소금 생산이라는 생활문화의 흔적에 접근할 수 있으나, 지역 주체의 지속적 전승 활동 자체에 대한 명시적 근거는 제한적이어서 흔적 접함 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+          "quote": {
+            "end": 413,
+            "method": "EXACT",
+            "original": "소금 생성의 역사와 문화 등을 관람하며 염전체험 프로그램에 참여도 가능하다",
+            "start": 372,
+            "submitted": "소금 생성의 역사와 문화 등을 관람하며 염전체험 프로그램에 참여도 가능하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+        }
+      ],
+      "flags": [],
+      "key": "H.d",
+      "level": 3,
+      "reason": "소금박물관의 역사·문화 전시와 염전 현장 해설·체험이 유산 주제에 연결된 설명·학습 기회를 제공한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+          "quote": {
+            "end": 119,
+            "method": "EXACT",
+            "original": "아시아에서는 최초의 슬로시티로 지정된 곳이다. 증도 모실길은 조급한 마음을 버리고 거북이처럼 느긋하게 걸으며 증도만의 독특한 매력을 느끼며",
+            "start": 42,
+            "submitted": "아시아에서는 최초의 슬로시티로 지정된 곳이다. 증도 모실길은 조급한 마음을 버리고 거북이처럼 느긋하게 걸으며 증도만의 독특한 매력을 느끼며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "증도라는 장소에 슬로시티·느긋함이라는 구체적 이미지와 의미가 부여되어 있고 모실길이라는 이름 자체에 그 의미가 담겨 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 매체 보도, SNS 등 장소 이미지의 매체적 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+          "quote": {
+            "end": 361,
+            "method": "EXACT",
+            "original": "소금전망대에서 바둑판처럼 잘 다듬어진 광활한 염판을 감상할 수 있고",
+            "start": 324,
+            "submitted": "소금전망대에서 바둑판처럼 잘 다듬어진 광활한 염판을 감상할 수 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "바둑판 모양으로 다듬어진 광활한 염판이라는 이 장면에서 구별되는 시각적 성격이 확인된다. repair 항목을 반영하되 E.c의 텍스트 근거 claim은 VISUAL_EXPRESSION이므로 이를 사용했다. 일관된 연출이 장면을 지배한다는 근거는 없어 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "anchor_ko는 '촬영·참여로 이미지나 장면을 재현'이나, 원문은 전망대에서 염판을 '감상'할 수 있다고만 하며 촬영·재현 활동의 명시가 없다. 대표 장면의 직접 경험까지만 뒷받침된다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+          "quote": {
+            "end": 194,
+            "method": "EXACT",
+            "original": "해안선을 따라 한 바퀴 도는 일주 코스이다. 증도 모실길 3코스 천일염길은 노두길 입구부터 증도대교까지 이르는 남동쪽 해안 코스이다.",
+            "start": 120,
+            "submitted": "해안선을 따라 한 바퀴 도는 일주 코스이다. 증도 모실길 3코스 천일염길은 노두길 입구부터 증도대교까지 이르는 남동쪽 해안 코스이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "10.8km 걷기 트레킹 코스로 방문자가 자신의 방식과 속도로 해안선을 탐색할 수 있는 자율적 활동 기회가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+          "quote": {
+            "end": 28,
+            "method": "EXACT",
+            "original": "때 묻지 않은 천혜의 자연환경을 갖춘 섬으로",
+            "start": 4,
+            "submitted": "때 묻지 않은 천혜의 자연환경을 갖춘 섬으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "천혜의 자연환경, 갯벌 습지와 70여 종 염생물 관찰 등 자연 환경 단서가 확인된다. 다만 실제 고요함·회복 효과는 확정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+          "quote": {
+            "end": 413,
+            "method": "EXACT",
+            "original": "염전체험 프로그램에 참여도 가능하다",
+            "start": 394,
+            "submitted": "염전체험 프로그램에 참여도 가능하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "염전체험 프로그램 참여와 3시간 소요의 해안 트레킹 등 구체적인 참여·탐방 활동 기회가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+              "quote": {
+                "end": 322,
+                "method": "EXACT",
+                "original": "태평염전에 도착하게 되는데 이 염전은 국내 최대의 염전이며 단일염전으로는 서울 여의도의 2배 면적의 큰 규모를 가지고 있다",
+                "start": 254,
+                "submitted": "태평염전에 도착하게 되는데 이 염전은 국내 최대의 염전이며 단일염전으로는 서울 여의도의 2배 면적의 큰 규모를 가지고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+            }
+          ],
+          "flags": [],
+          "key": "H.a",
+          "level": 3,
+          "reason": "해당 코스의 핵심 대상인 태평염전이 국내 최대 규모의 실제 염전으로 확인되며, 방문자가 바둑판 염판을 직접 감상할 수 있어 확인된 원형·유산을 관람하는 경험이 가능하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "anchor_ko는 '공간이나 실물을 구체적으로 탐구' 수준이나, 원문은 전망대에서 염판 '감상'과 박물관 '관람'만 명시한다. 확인된 실제 염전이라는 점은 유산 접촉의 근거가 되지만 탐구 중심의 경험까지 뒷받침하지 않는다."
+        }
+      },
+      "reason": "anchor_ko는 '공간이나 실물을 구체적으로 탐구' 수준이나, 원문은 전망대에서 염판 '감상'과 박물관 '관람'만 명시한다. 확인된 실제 염전이라는 점은 유산 접촉의 근거가 되지만 탐구 중심의 경험까지 뒷받침하지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+              "quote": {
+                "end": 361,
+                "method": "EXACT",
+                "original": "소금전망대에서 바둑판처럼 잘 다듬어진 광활한 염판을 감상할 수 있고",
+                "start": 324,
+                "submitted": "소금전망대에서 바둑판처럼 잘 다듬어진 광활한 염판을 감상할 수 있고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443"
+            }
+          ],
+          "flags": [],
+          "key": "E.d",
+          "level": 3,
+          "reason": "전망대를 통한 대표 장면(염판 전경)의 직접 감상이 가능하나, 촬영·재현 활동에 대한 명시는 없어 대표 장면 경험 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "anchor_ko는 '촬영·참여로 이미지나 장면을 재현'이나, 원문은 전망대에서 염판을 '감상'할 수 있다고만 하며 촬영·재현 활동의 명시가 없다. 대표 장면의 직접 경험까지만 뒷받침된다."
+        }
+      },
+      "reason": "anchor_ko는 '촬영·참여로 이미지나 장면을 재현'이나, 원문은 전망대에서 염판을 '감상'할 수 있다고만 하며 촬영·재현 활동의 명시가 없다. 대표 장면의 직접 경험까지만 뒷받침된다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "e6ddd9cb72a786885cec1909fe2e661733a223a77ed2d32923ff7d30b518c157",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:650df555cf00cafef19cbbcffa29dcc3ee7a2fed3921c88ca65a2033e4240d57",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5c82fb773e76995bee554ce01af9e85cc6691e84ca8acc8f6cc004c6dc98640a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1194474",
+          "request_sha256": "8a0306d1ea4e1230e839eec143e2cced9c37272fcb7352821782f5f5cad667d3",
+          "response_sha256": "d47aa8f4183b4f45f8c90d0256202c394d587b54fa465716104767417e2d7ae4",
+          "retrieved_at": "2026-09-10T08:16:29.108994Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "3c6cfab45645afc5fab0727aa84f6be641cd93f63182c43eaab105b573d2c0f5",
+          "source_uri": null
+        },
+        "record_sha256": "ae5d66c57c49a05e8d7342079cb874a724dd915d38a134bcb4e19201467fa443",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "증도는 때 묻지 않은 천혜의 자연환경을 갖춘 섬으로 2007년 12월 1일 아시아에서는 최초의 슬로시티로 지정된 곳이다. 증도 모실길은 조급한 마음을 버리고 거북이처럼 느긋하게 걸으며 증도만의 독특한 매력을 느끼며 해안선을 따라 한 바퀴 도는 일주 코스이다. 증도 모실길 3코스 천일염길은 노두길 입구부터 증도대교까지 이르는 남동쪽 해안 코스이다. 길이는 10.8㎞로 약 3시간 소요된다. 증도와 화도를 잇는 노두길 입구에서 남쪽 해안을 따라 걷다 보면 태평염전에 도착하게 되는데 이 염전은 국내 최대의 염전이며 단일염전으로는 서울 여의도의 2배 면적의 큰 규모를 가지고 있다. 소금전망대에서 바둑판처럼 잘 다듬어진 광활한 염판을 감상할 수 있고, 소금박물관에서는 소금 생성의 역사와 문화 등을 관람하며 염전체험 프로그램에 참여도 가능하다. 또한, 태평염전 안에 있는 태평염생식물원은 유네스코 생물권보전 지역으로 지정되어 있는 갯벌 습지로, 함초와 나문재, 칠면초, 해홍나물 등 다른 곳에서 보기 힘든 70여 종의 염생물을 관찰할 수 있다."
+      }
+    ],
+    "parent_source_sha256": "ed16d055fb536d0f265d05ebbd7708ac29e0c3c5dac11eed22d939a9d4c2ce4b",
+    "place": {
+      "address": "전남광주통합특별시 신안군 증도면",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:5c82fb773e76995bee554ce01af9e85cc6691e84ca8acc8f6cc004c6dc98640a",
+      "name_ko": "[증도 모실길 3코스] 천일염길",
+      "place_id": "public:korea:5c82fb773e76995bee554ce01af9e85cc6691e84ca8acc8f6cc004c6dc98640a",
+      "provider_content_id": "1194474",
+      "region_code": "12870",
+      "region_name": "전남광주통합특별시 신안군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

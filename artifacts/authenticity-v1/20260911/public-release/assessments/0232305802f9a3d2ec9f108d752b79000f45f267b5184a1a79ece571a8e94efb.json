@@ -1,0 +1,536 @@
+{
+  "assessed_at": "2026-09-11T19:15:07.726977Z",
+  "assessment_sha256": "0232305802f9a3d2ec9f108d752b79000f45f267b5184a1a79ece571a8e94efb",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "가파도라는 지명 유래 설을 간단히 소개하고 있으나 전망대 자체의 역사 맥락 탐구는 아니다. 수준 1.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "설문대 항망에게 소망을 기원하는 장소라는 구체적 상징적 의미가 전망대와 연결되어 있다. 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "전망대에서 바다·한라산·마라도를 조망하는 시각적 장면이 확인되지만 연출이 장면을 지배한다는 근거는 없어 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "섬 전체를 도보나 자전거로 자율적으로 둘러볼 기회가 확인된다. 다만 이는 섬 전체이며 전망대 자체의 탐색은 제한적이라 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "바다·한라산 등 자연 경관 조망 환경이 확인된다. 실제 고요함·혼잡은 확인 불가하여 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "청보리 밭 걷기, 보물찾기 등 참여 활동이 축제 기간에 한해 제공되어 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 가파도 섬의 지리적 특징을 소개하나 소망전망대 자체가 확인된 원형·유산의 접촉을 제공한다는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2",
+          "quote": {
+            "end": 134,
+            "method": "EXACT",
+            "original": "이름은 가오리(가파리)를 닮아 가파도가 되었다는 설과 덮개 모양을 닮아 개도(蓋島)로 부르던 것이 가파도라 굳어졌다는 설 등이 있다.",
+            "start": 60,
+            "submitted": "이름은 가오리(가파리)를 닮아 가파도가 되었다는 설과 덮개 모양을 닮아 개도(蓋島)로 부르던 것이 가파도라 굳어졌다는 설 등이 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b01728828c66711e78e47311aeacc2c938b369cb6ecad292247d2181567f477"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 1,
+      "reason": "가파도라는 지명 유래 설을 간단히 소개하고 있으나 전망대 자체의 역사 맥락 탐구는 아니다. 수준 1.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "청보리 축제가 관광 자원으로 묘사되지만 지역 주체의 실제 전승·생활문화와의 지속적 연결을 확인하는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "전망대에서 원형·유산에 연결된 해설·학습 프로그램을 제공한다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2",
+          "quote": {
+            "end": 650,
+            "method": "EXACT",
+            "original": "이곳에서 한라산을 향해 설문대 항망에게 소망을 기원할 수 있는 장소이다.",
+            "start": 610,
+            "submitted": "이곳에서 한라산을 향해 설문대 항망에게 소망을 기원할 수 있는 장소이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b01728828c66711e78e47311aeacc2c938b369cb6ecad292247d2181567f477"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "설문대 항망에게 소망을 기원하는 장소라는 구체적 상징적 의미가 전망대와 연결되어 있다. 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "전망대의 이미지가 매체를 통해 재현·확산된다는 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2",
+          "quote": {
+            "end": 571,
+            "method": "EXACT",
+            "original": "제주 본 섬과 한라산, 마라도, 그리고 푸른 바다를 한눈에 볼 수 있는 최적의 명소이며",
+            "start": 523,
+            "submitted": "제주 본 섬과 한라산, 마라도, 그리고 푸른 바다를 한눈에 볼 수 있는 최적의 명소이며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b01728828c66711e78e47311aeacc2c938b369cb6ecad292247d2181567f477"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "전망대에서 바다·한라산·마라도를 조망하는 시각적 장면이 확인되지만 연출이 장면을 지배한다는 근거는 없어 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도를 현장에서 재현하는 체험에 대한 근거가 없다. 소망 기원이 재현 체험임을 확인하기는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2",
+          "quote": {
+            "end": 195,
+            "method": "EXACT",
+            "original": "포구 근처에 자전거를 대여하는 곳도 있지만 오르막길이 없어 1~2시간이면 섬 전체를 도보로 둘러볼 수 있다.",
+            "start": 135,
+            "submitted": "포구 근처에 자전거를 대여하는 곳도 있지만 오르막길이 없어 1~2시간이면 섬 전체를 도보로 둘러볼 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b01728828c66711e78e47311aeacc2c938b369cb6ecad292247d2181567f477"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "섬 전체를 도보나 자전거로 자율적으로 둘러볼 기회가 확인된다. 다만 이는 섬 전체이며 전망대 자체의 탐색은 제한적이라 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2",
+          "quote": {
+            "end": 571,
+            "method": "EXACT",
+            "original": "제주 본 섬과 한라산, 마라도, 그리고 푸른 바다를 한눈에 볼 수 있는 최적의 명소이며",
+            "start": 523,
+            "submitted": "제주 본 섬과 한라산, 마라도, 그리고 푸른 바다를 한눈에 볼 수 있는 최적의 명소이며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b01728828c66711e78e47311aeacc2c938b369cb6ecad292247d2181567f477"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "바다·한라산 등 자연 경관 조망 환경이 확인된다. 실제 고요함·혼잡은 확인 불가하여 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2",
+          "quote": {
+            "end": 299,
+            "method": "EXACT",
+            "original": "청보리 밭 걷기, 올레길 보물찾기, 야외 공연 등 다양한 행사가 열린다.",
+            "start": 259,
+            "submitted": "청보리 밭 걷기, 올레길 보물찾기, 야외 공연 등 다양한 행사가 열린다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0b01728828c66711e78e47311aeacc2c938b369cb6ecad292247d2181567f477"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "청보리 밭 걷기, 보물찾기 등 참여 활동이 축제 기간에 한해 제공되어 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "야외 공연 언급이 있으나 전망대에서의 교류·자기표현 기회를 직접 확인하는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "f18d65cc5ade4dd8665ad395860a88b566a23437e18887de94790001a80de006",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "85c86f72607254d2d72dbde59a4145ae76ea2c0768e6c5e7cf22a24b946f6903",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6a1e94d07de4254875993762041fe35c6608f445cc792cf756608831bc9059ca",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d88d95e7aba5a8450f50e40440aa30048f27c3636f0a0135a3bec27c02429b67",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3344437",
+          "request_sha256": "3fbdf3d0010c00f89c0f801cb5becebfdb0640b8aae8ef8c706cba560cfd008a",
+          "response_sha256": "7edb79b4a7461baf419293ea78f271698a91ee499c82ea0574cf62d0c3d3e970",
+          "retrieved_at": "2026-09-10T08:28:51.727511Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3e3174d7fe3e5ef34adc5a321d1d71092f198b0a08dde02f9202e3a30d65b87e",
+          "source_uri": null
+        },
+        "record_sha256": "dd8f1880659e2ba446729a4f699863e674403a9ad764a36ce34f8b4d6c076ee8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:bb916355d0fc0d95f9a435833e0bad9305ffe78be70b50f75bb34c76c1b69974",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d88d95e7aba5a8450f50e40440aa30048f27c3636f0a0135a3bec27c02429b67",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "3344437",
+          "request_sha256": "3fbdf3d0010c00f89c0f801cb5becebfdb0640b8aae8ef8c706cba560cfd008a",
+          "response_sha256": "fe7c8030c9d943c83fb02fb2712ab0bf75f204849217abbad736f4e4b0b6379a",
+          "retrieved_at": "2026-09-10T08:07:21.998916Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8ad5174a54f41570f0725e949cb7160d9170c24c5e16608b8d206d82c0a1eb7f",
+          "source_uri": null
+        },
+        "record_sha256": "72523bb75933ca6e590d5ff7e96f87accd4913b5d0cf947af65172e09369e1fd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "4월~5월 청보리 축제 행사"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e15e3c6d259d715c260338a5215b0ad565564fc29ba5e2269b726502f29af4c2",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d88d95e7aba5a8450f50e40440aa30048f27c3636f0a0135a3bec27c02429b67",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3344437",
+          "request_sha256": "90903b4ae79d93e083214ad794d744716970bfd098aced7063ac1078d4ea995a",
+          "response_sha256": "c3340813c6aef1c7b7ebc7390460444675ee814e1b6eb58b9314cc900cfb58ec",
+          "retrieved_at": "2026-09-10T08:07:21.635167Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-06T00:42:39Z",
+          "source_record_sha256": "6c1450e51904c7af4077e976b0fbd18a88decf68c5b883585e51f8e4edb02e12",
+          "source_uri": null
+        },
+        "record_sha256": "0b01728828c66711e78e47311aeacc2c938b369cb6ecad292247d2181567f477",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "제주도 부속섬 중 4번째로 큰 섬 가파도는 위에서 내려다보면 바다를 헤엄쳐 가는 가오리 모양을 하고 있다. 이름은 가오리(가파리)를 닮아 가파도가 되었다는 설과 덮개 모양을 닮아 개도(蓋島)로 부르던 것이 가파도라 굳어졌다는 설 등이 있다. 포구 근처에 자전거를 대여하는 곳도 있지만 오르막길이 없어 1~2시간이면 섬 전체를 도보로 둘러볼 수 있다. 또한 가파도 하면 빼놓을 수 없는 것이 청보리이다. 매년 4월 초에서 5월 초에 가파도 청보리 축제가 열리는데, 청보리 밭 걷기, 올레길 보물찾기, 야외 공연 등 다양한 행사가 열린다. 가파도의 보리는 키가 1m를 훌쩍 넘는다. 바람이 조금만 불어도 파도 너울 같은 보리 물결이 넘실댄다. 가파도의 청보리는 돌담과 바다가 어우러져 아름다운 풍경을 자아내면서 지금은 유명한 관광 자원이 되었다. 청보리 관광과 올레길이 조성되면서 하루에도 정기적으로 7~8회의 여객선이 왕복 운항하는 섬이 되었다. 가파도 소망전망대는 가파도에서 제일 높은 위치(해발20.5m)에 2.5m 높이로 설치하여 제주 본 섬과 한라산, 마라도, 그리고 푸른 바다를 한눈에 볼 수 있는 최적의 명소이며, 매년 도민의 무사 안녕과 국태 민안을 기원하는 ‘한라산신제’ 처럼 이곳에서 한라산을 향해 설문대 항망에게 소망을 기원할 수 있는 장소이다."
+      }
+    ],
+    "parent_source_sha256": "ad5c0d7d71eabee955f078af5f67380d520415a9ff60fcbf34b534c34f40b342",
+    "place": {
+      "address": "제주특별자치도 서귀포시 대정읍 가파리",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:d88d95e7aba5a8450f50e40440aa30048f27c3636f0a0135a3bec27c02429b67",
+      "name_ko": "가파도 소망전망대",
+      "place_id": "public:korea:d88d95e7aba5a8450f50e40440aa30048f27c3636f0a0135a3bec27c02429b67",
+      "provider_content_id": "3344437",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

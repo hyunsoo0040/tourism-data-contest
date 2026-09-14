@@ -1,0 +1,915 @@
+{
+  "assessed_at": "2026-09-11T17:46:46.368019Z",
+  "assessment_sha256": "f5b732d1a0116763657b0b0850a86472330fa4154aaefc6abdc86bd3e3e80274",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 54
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0f564d8c723522f9053ec51fbcd61d979e11c10c5c271ddfc5b4aec2df1fa870",
+            "appearance:bcff0faf6b10e7e2ce393ebac83708a1cce1957e96511222a5e2730dc61cd1e5",
+            "appearance:bd4488d64b9cf1c8f85bc9863d4baeac77c6e6921e6052cef2bf103623bb8233"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출의 시각적 표현을 확인할 근거가 없다. '야외에서 진행'이라는 문구만으로 시각적 성격을 판단하기는 부족하다.",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d6871b510b3184c170bda252979a27d3b7452971ca7b92029a6c2a21799e1461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:3e1df2c70801c0c74968068165d3c20d591121d1cf5f19b6335dc5026de0182b",
+            "appearance:78ecd0ae2f369b4b8bfa9bb9d249d52fe4ffd2bd238f87fbc9b25db0e30440a4",
+            "appearance:e330ee796de1ad6cc0d0220ca973ca01ddbf734e5d3945d0a546fb0884822f4b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "야외 요가·명상 진행과 자연 환경 언급으로 자연 환경 단서가 있음은 확인된다. 다만 실제 고요함·혼잡 수준은 설명 문구만으로 확정할 수 없어 중간 수준으로 제한한다.",
+      "value": 58
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b7c80fadfae7722dab8686e7d9cf36acfc10cf47f1e3afeaa4c914ea8ab30508",
+            "evidence:d6871b510b3184c170bda252979a27d3b7452971ca7b92029a6c2a21799e1461"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "요가·명상·춤 명상·싱잉볼 세션·다도 등 구체적인 참여형 체험 활동이 확인된다. 지속적 도전·몰입 수준까지는 근거가 없어 참여 기회 확인 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료에는 확인된 원형·유산과의 접촉에 관한 근거가 없다. 요가·명상·다도 프로그램 소개만으로 실제 유산 접촉을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소 자체의 역사·연혁·출처를 다루는 내용이 자료에 없다. 다도 절차 설명은 일반 지식이며 장소의 역사 맥락이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 확인할 근거가 없다. 다도·명상 프로그램이 전통의 지속을 증명하지는 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·탐구 제공 여부에 대한 근거가 없다. 다도 방법 설명은 문화유산 해설로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "장소에 사회적으로 부여된 상징·이미지에 관한 근거가 없다. 자기 인용형 소개 문구만으로 공유되는 의미를 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·유통에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출의 시각적 표현을 확인할 근거가 없다. '야외에서 진행'이라는 문구만으로 시각적 성격을 판단하기는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색·자기 선택의 여지에 관한 직접 근거가 없다. 프로그램은 클래스 형태로 운영되어 자율 탐색 환경으로 보기 어렵고, 부정 근거도 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d6871b510b3184c170bda252979a27d3b7452971ca7b92029a6c2a21799e1461",
+          "quote": {
+            "end": 118,
+            "method": "EXACT",
+            "original": "야외에서 진행하는 요가, 명상 등 원데이클래스가 메인 프로그램이지만",
+            "start": 81,
+            "submitted": "야외에서 진행하는 요가, 명상 등 원데이클래스가 메인 프로그램이지만",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "70a80436242e6ef738f7221097076d0b7b85e1779d8bdab8de9fa08877a6fa9e"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d6871b510b3184c170bda252979a27d3b7452971ca7b92029a6c2a21799e1461",
+          "quote": {
+            "end": 528,
+            "method": "EXACT",
+            "original": "자연이 주는 고요함 속에서 몸과 마음을 잔잔하게 달래주는 명상과 요가",
+            "start": 490,
+            "submitted": "자연이 주는 고요함 속에서 몸과 마음을 잔잔하게 달래주는 명상과 요가",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "70a80436242e6ef738f7221097076d0b7b85e1779d8bdab8de9fa08877a6fa9e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "야외 요가·명상 진행과 자연 환경 언급으로 자연 환경 단서가 있음은 확인된다. 다만 실제 고요함·혼잡 수준은 설명 문구만으로 확정할 수 없어 중간 수준으로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d6871b510b3184c170bda252979a27d3b7452971ca7b92029a6c2a21799e1461",
+          "quote": {
+            "end": 155,
+            "method": "EXACT",
+            "original": "춤 명상 원데이클래스와 싱잉볼 힐링 세션 프로그램도 운영하고 있다",
+            "start": 119,
+            "submitted": "춤 명상 원데이클래스와 싱잉볼 힐링 세션 프로그램도 운영하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "70a80436242e6ef738f7221097076d0b7b85e1779d8bdab8de9fa08877a6fa9e"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:b7c80fadfae7722dab8686e7d9cf36acfc10cf47f1e3afeaa4c914ea8ab30508",
+          "quote": {
+            "end": 17,
+            "method": "EXACT",
+            "original": "싱잉볼 / 명상 / 보이차담 등",
+            "start": 0,
+            "submitted": "싱잉볼 / 명상 / 보이차담 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "98a0863d9826d7d903918c2339e11f7e5f117d03ebcb54f779a0c858272b70e9"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "요가·명상·춤 명상·싱잉볼 세션·다도 등 구체적인 참여형 체험 활동이 확인된다. 지속적 도전·몰입 수준까지는 근거가 없어 참여 기회 확인 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "1129071d1f7908d2651c869722343d5b10a063954b65f45efb76c2d5b218c629",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:d6871b510b3184c170bda252979a27d3b7452971ca7b92029a6c2a21799e1461",
+              "quote": {
+                "end": 192,
+                "method": "EXACT",
+                "original": "몸과 자연이 교감하고, 사람과 사람이 교감하는 시간을 선물받는다",
+                "start": 157,
+                "submitted": "몸과 자연이 교감하고, 사람과 사람이 교감하는 시간을 선물받는다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "70a80436242e6ef738f7221097076d0b7b85e1779d8bdab8de9fa08877a6fa9e"
+            },
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:d6871b510b3184c170bda252979a27d3b7452971ca7b92029a6c2a21799e1461",
+              "quote": {
+                "end": 282,
+                "method": "EXACT",
+                "original": "체험생들은 주전부리를 챙겨와 차담을 나눈다",
+                "start": 259,
+                "submitted": "체험생들은 주전부리를 챙겨와 차담을 나눈다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "70a80436242e6ef738f7221097076d0b7b85e1779d8bdab8de9fa08877a6fa9e"
+            }
+          ],
+          "flags": [],
+          "key": "R.d",
+          "level": 2,
+          "reason": "프로그램 참여자 간 차담 교류 등 공동 활동의 기회가 확인된다. 다만 참여자 간 실제 교류의 깊이까지는 단정할 수 없어 교류 기회 확인 수준으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "c3b9e605188347a249a5186ff924376795b56a4108dcd8e3096d1b561cd5399c",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "만개한 벚꽃 아래 밝은 역광과 흐릿한 배경 처리로 피사체를 부각한 연출된 봄날의 화사한 구도가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0f564d8c723522f9053ec51fbcd61d979e11c10c5c271ddfc5b4aec2df1fa870",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f3212effeec7c288965f19a65caff39836d057ca5ec8d98171edefe80ae2cf98",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972605_9",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a23d77903c22ccee3eeabe118fb2a463dcec39d0e05c53c0bdf226d0836dc4db",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/05/2972605_image2_1.jpg"
+        },
+        "record_sha256": "18b3e90c5a724e2426958b592f106fa7b2ca21fb050693ecb3133004a5470139",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "중앙 인물의 묵직한 천 재질의 개킷형 상의에서 옅은 전통 복식 연상 요소가 보이나, 전체적으로 캠핑 텐트와 캐주얼 의상이 중심이라 전통 외관은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2b5ce38036803e8b3aeac683b73e3174d498310b55c02cb72ec6a283a7b5de46",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03d597305f5a88198f3c2a76b02b57f0e37f3199bc9741789faa250389d72029",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972612_2",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3a9a67882ed068f332132f5ffa0fffea77b7362e7dcbb51a0d605410acbdd738",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/12/2972612_image2_1.jpg"
+        },
+        "record_sha256": "c3edc607ed5ddea8f6edc1a27ffe52d12c5770e1b4c405f9d31b05ba7dcf3b74",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 들판, 물이 보이는 하천, 먼 산과 트인 하늘이 배경을 지배하며 녹지와 자연 경관 단서가 뚜렷함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3e1df2c70801c0c74968068165d3c20d591121d1cf5f19b6335dc5026de0182b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03d597305f5a88198f3c2a76b02b57f0e37f3199bc9741789faa250389d72029",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972612_2",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3a9a67882ed068f332132f5ffa0fffea77b7362e7dcbb51a0d605410acbdd738",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/12/2972612_image2_1.jpg"
+        },
+        "record_sha256": "b3066fb1a391f41266e45935185360db4f4fcda2114dffed3512e676e73c260e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축·재료·공간 구성의 흔적은 보이지 않고, 벨텐트와 요가 매트 등 현대적 캠핑 소품만 확인된다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:623a92279cedaffddee85634bbc26733098a3fa0ebe8825cb0319dab51587dcd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "92d7a3c4c6bdeed488f0296466ced12c805c063de2f7d20b292a95f450067619",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972611_6",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "49bf423c5c2a2d78a0a53deb704d7b78fd8b40c78a1bd2db80458bd665a44651",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/2972611_image2_1.jpg"
+        },
+        "record_sha256": "82d67b006e4bdbcd15cbf61b5ea43380f7251d906f820f5ec095c108f087f52f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "벚꽃이 늘어선 산책로, 노란 꽃 덤불, 강과 다리가 보이는 트인 자연 환경이 화면을 지배적으로 채움.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:78ecd0ae2f369b4b8bfa9bb9d249d52fe4ffd2bd238f87fbc9b25db0e30440a4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f3212effeec7c288965f19a65caff39836d057ca5ec8d98171edefe80ae2cf98",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972605_9",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a23d77903c22ccee3eeabe118fb2a463dcec39d0e05c53c0bdf226d0836dc4db",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/05/2972605_image2_1.jpg"
+        },
+        "record_sha256": "c1e6b86947d9e4cea7afdf9c2319789f71827b6c63a7a60ea6a5332aa297cc30",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "밝은 자연광 아래 중앙의 흰 텐트가 안정된 대칭 구도의 중심을 이루며, 인물들이 좌우로 배치된 짜인 연출 느낌의 구성이 보통 수준으로 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bcff0faf6b10e7e2ce393ebac83708a1cce1957e96511222a5e2730dc61cd1e5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "92d7a3c4c6bdeed488f0296466ced12c805c063de2f7d20b292a95f450067619",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972611_6",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "49bf423c5c2a2d78a0a53deb704d7b78fd8b40c78a1bd2db80458bd665a44651",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/2972611_image2_1.jpg"
+        },
+        "record_sha256": "cdf216d0a0adb08e7b8077f016e12ffca9aea7f097a1664c0503f254e8c7fbe1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "햇살이 비치는 야외 장면으로 분홍·베이지 등 부드러운 색조의 의상과 캔버스 텐트가 화면을 구성하며, 얕은 심도로 배경이 흐려진 자연스러운 스냅샷적 구도가 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bd4488d64b9cf1c8f85bc9863d4baeac77c6e6921e6052cef2bf103623bb8233",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03d597305f5a88198f3c2a76b02b57f0e37f3199bc9741789faa250389d72029",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972612_2",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3a9a67882ed068f332132f5ffa0fffea77b7362e7dcbb51a0d605410acbdd738",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/12/2972612_image2_1.jpg"
+        },
+        "record_sha256": "fdff938466e62734b89881cb09dbc7c1d3f71cd8b614835904079ca1be8f5c5e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "한 명이 입은 자수 장식의 흰 전통풍 저고리형 상의가 전통 외관의 시각적 단서로 보이나 전체 장면은 현대적 산책로임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c5572d573c300741b96a69c1e89c735f9c74741e2fc8abf42a4f790c494a465b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f3212effeec7c288965f19a65caff39836d057ca5ec8d98171edefe80ae2cf98",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972605_9",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a23d77903c22ccee3eeabe118fb2a463dcec39d0e05c53c0bdf226d0836dc4db",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/05/2972605_image2_1.jpg"
+        },
+        "record_sha256": "0caf7332a8193d203437f76e9ce33590da24610f581755be33b88eeecc78c435",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "시원한 들판, 갈대와 수변, 저 멀리 산과 나무줄, 트인 하늘이 장면 전체를 지배하며 자연 배경이 강하게 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e330ee796de1ad6cc0d0220ca973ca01ddbf734e5d3945d0a546fb0884822f4b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "92d7a3c4c6bdeed488f0296466ced12c805c063de2f7d20b292a95f450067619",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2972611_6",
+          "request_sha256": "8d3d48e6b1b343da27a577120755fced380cd363b793339fe1cffe9bc2514aea",
+          "response_sha256": "23c3f1158aaa1090a66f66c31daf916321aaffa89b2892a94050d231ec4cbdea",
+          "retrieved_at": "2026-09-11T02:03:40.959012Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "49bf423c5c2a2d78a0a53deb704d7b78fd8b40c78a1bd2db80458bd665a44651",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/2972611_image2_1.jpg"
+        },
+        "record_sha256": "e7090d2df07ffa27ba5d9346d981ef12b1c5160c4d288a1b49a86e32031f1d44",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:44bf1d7c2838674cd0e827d48fb8b0af30794f2a4b855ca8fe634c4c7146fb6c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2996818",
+          "request_sha256": "f5758bbf37383f0a9469206fffb4268c45940f5cff657ffd3fa145a2a5e56e6e",
+          "response_sha256": "f1e902fcd810736862e3be5285963bdaea8c5e3b28b9a27db6ef58688f967a38",
+          "retrieved_at": "2026-09-11T02:03:40.631560Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "37f16c49f582b16530f9c5e7592ae34e1946c9008084446e964c09b588229be3",
+          "source_uri": null
+        },
+        "record_sha256": "9f1b8c2e7976a19a175881b2190fd6be6b388476e18e496d994f7731f68305c2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "1인 30,000원 (가드닝 신청 시 1인당 20,000~40,000원(식음 메뉴에 따라 상이))"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b7c80fadfae7722dab8686e7d9cf36acfc10cf47f1e3afeaa4c914ea8ab30508",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "2996818",
+          "request_sha256": "f5758bbf37383f0a9469206fffb4268c45940f5cff657ffd3fa145a2a5e56e6e",
+          "response_sha256": "114c4528d2f2c78bb04de7e2e9e6cd7621cfa2c8aaf58494c87a7b54adff0c93",
+          "retrieved_at": "2026-09-10T17:06:50.336824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8bf14ecfe079dbffef26cdf49cad85b9ec620c1a2fdf94582285532e5576ea62",
+          "source_uri": null
+        },
+        "record_sha256": "98a0863d9826d7d903918c2339e11f7e5f117d03ebcb54f779a0c858272b70e9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "싱잉볼 / 명상 / 보이차담 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d6871b510b3184c170bda252979a27d3b7452971ca7b92029a6c2a21799e1461",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2996818",
+          "request_sha256": "bc47dc03f7761a9a01aac249fb69776318d371a65b498f165ff2ae089f0730f6",
+          "response_sha256": "5343aa5ceb22fe3a97d6b567482996c9dfe9435f0beb3e09b2024c4348de7119",
+          "retrieved_at": "2026-09-10T17:06:49.992129Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-05-14T02:18:56Z",
+          "source_record_sha256": "492b2aff27a98162fa98a8fefd0e934b9dc2013499fcf948de51c834c0de478b",
+          "source_uri": null
+        },
+        "record_sha256": "70a80436242e6ef738f7221097076d0b7b85e1779d8bdab8de9fa08877a6fa9e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "명상과 요가란 스스로의 힘으로 자신을 돌보는 것이다. 이때만큼은 나를 둘러싼 모든 환경과 타인들을 지워버리고, 오롯이 나에게만 집중해야만 한다. 야외에서 진행하는 요가, 명상 등 원데이클래스가 메인 프로그램이지만 춤 명상 원데이클래스와 싱잉볼 힐링 세션 프로그램도 운영하고 있다. 몸과 자연이 교감하고, 사람과 사람이 교감하는 시간을 선물받는다. 요가와 명상 프로그램이 끝나고 나면 마음을 갈무리하기 위한 다도 시간을 갖는다. 매번 다른 종류의 찻잎을 준비하고, 체험생들은 주전부리를 챙겨와 차담을 나눈다. 다도는 각자의 도(茶)가 다 다르다는 것이 묘미다. 차 맛은 우리는 사람의 마음여유라 우리는 사람에 따라 다르다. 오래 공들이고 예의를 갖추는 만큼 찻잎이 가진 본연의 가치가 드러난다. 재밌는 건 차를 우리기 전 주전자의 겉에 먼저 뜨거운 물을 적셔 붓질을 한다. 차가운 주전자에 뜨거운 물을 먼저 부으면 겉과 속의 온도 차 때문에 차의 향과 맛이 떨어지기 때문이다. 자연이 주는 고요함 속에서 몸과 마음을 잔잔하게 달래주는 명상과 요가는 반줄의 다도와 닮아있다."
+      }
+    ],
+    "parent_source_sha256": "bf9567b07679d98a8d0b60302ea096a66d71d319c18fff87e4848a8ead2f3146",
+    "place": {
+      "address": "전북특별자치도 완주군 구정1길 43-22",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+      "name_ko": "반줄",
+      "place_id": "public:korea:45aeb14078fe014af630c817ed3f7c0bf015e29cf9d913a2ee12c9a6492219bc",
+      "provider_content_id": "2996818",
+      "region_code": "52710",
+      "region_name": "전북특별자치도 완주군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

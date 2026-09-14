@@ -812,7 +812,7 @@ if (!controlledRedOnly) {
       const heading = await screen.findByRole("heading", { name: "경주 장소 1" });
       await waitFor(() => expect(heading).toBe(document.activeElement));
       expect(document.querySelector("[data-preference-similarity]")?.textContent).toBe("내 취향과 88% 유사");
-      expect(screen.getByRole("meter", { name: "역사·전통 취향 유사도 91%" }).getAttribute("aria-valuenow")).toBe("91");
+      expect(screen.getByRole("meter", { name: "대상•원형형 취향 유사도 91%" }).getAttribute("aria-valuenow")).toBe("91");
       expect(screen.queryByText(/\d+점 \/ 100점/)).toBeNull();
       expect(screen.getAllByRole("meter")).toHaveLength(3);
       expect(screen.getByText("역사 근거 1이 이번 기대와 이어져요.")).toBeTruthy();

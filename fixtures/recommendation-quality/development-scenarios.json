@@ -1,0 +1,272 @@
+{
+  "schema_version": "recommendation-development-scenarios.v1",
+  "suite_version": "development-scenarios-v1",
+  "split": "DEV",
+  "provenance": "SYNTHETIC_BEHAVIORAL_CASES",
+  "seed": 20260908,
+  "policies": [
+    {
+      "policy_id": "distance",
+      "interpretation": "distance"
+    },
+    {
+      "policy_id": "importance",
+      "interpretation": "importance"
+    },
+    {
+      "policy_id": "importance-conditions-40",
+      "interpretation": "importance",
+      "experience_weight_bp": 6000,
+      "condition_weight_bp": 4000
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "balanced-interpretation",
+      "split": "DEV",
+      "input_kind": "SYNTHETIC",
+      "description_ko": "균형 취향의 중요도와 원하는 강도 해석 비교. 실제 선호 라벨이 아니다.",
+      "axes": [
+        33,
+        40,
+        36
+      ],
+      "candidates": [
+        {
+          "place_id": "synthetic:quiet-low",
+          "split": "SYNTHETIC",
+          "axes": [
+            30,
+            40,
+            35
+          ]
+        },
+        {
+          "place_id": "synthetic:rich-high",
+          "split": "SYNTHETIC",
+          "axes": [
+            80,
+            80,
+            80
+          ]
+        },
+        {
+          "place_id": "synthetic:history",
+          "split": "SYNTHETIC",
+          "axes": [
+            90,
+            20,
+            20
+          ]
+        },
+        {
+          "place_id": "synthetic:emotion",
+          "split": "SYNTHETIC",
+          "axes": [
+            20,
+            90,
+            20
+          ]
+        },
+        {
+          "place_id": "synthetic:rest",
+          "split": "SYNTHETIC",
+          "axes": [
+            20,
+            20,
+            90
+          ]
+        },
+        {
+          "place_id": "synthetic:middle",
+          "split": "SYNTHETIC",
+          "axes": [
+            50,
+            50,
+            50
+          ]
+        }
+      ],
+      "expected_first": {
+        "distance": "synthetic:quiet-low",
+        "importance": "synthetic:rich-high"
+      }
+    },
+    {
+      "scenario_id": "purpose-and-access",
+      "split": "DEV",
+      "input_kind": "SYNTHETIC",
+      "description_ko": "방문 불가·목적 불일치·확인된 보행 제약 제외와 미확인 조건 보존.",
+      "axes": [
+        50,
+        50,
+        50
+      ],
+      "purpose": "SIGHTSEEING",
+      "conditions": [
+        null,
+        null,
+        null,
+        25,
+        null,
+        20
+      ],
+      "condition_maxima": [
+        null,
+        null,
+        null,
+        50,
+        null,
+        null
+      ],
+      "candidates": [
+        {
+          "place_id": "synthetic:unknown",
+          "split": "SYNTHETIC",
+          "axes": [
+            70,
+            70,
+            70
+          ],
+          "category": "관광지",
+          "region": "중심"
+        },
+        {
+          "place_id": "synthetic:flat",
+          "split": "SYNTHETIC",
+          "axes": [
+            60,
+            70,
+            80
+          ],
+          "conditions": [
+            null,
+            null,
+            null,
+            20,
+            null,
+            20
+          ],
+          "evidence_count": 1,
+          "total_claims": 3,
+          "bound_claims": 2,
+          "category": "자연",
+          "region": "외곽"
+        },
+        {
+          "place_id": "synthetic:closed",
+          "split": "SYNTHETIC",
+          "axes": [
+            100,
+            100,
+            100
+          ],
+          "available": false
+        },
+        {
+          "place_id": "synthetic:hotel",
+          "split": "SYNTHETIC",
+          "axes": [
+            100,
+            100,
+            100
+          ],
+          "purpose": "LODGING"
+        },
+        {
+          "place_id": "synthetic:steep",
+          "split": "SYNTHETIC",
+          "axes": [
+            100,
+            100,
+            100
+          ],
+          "conditions": [
+            null,
+            null,
+            null,
+            90,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "weights-tradeoff",
+      "split": "DEV",
+      "input_kind": "SYNTHETIC",
+      "description_ko": "역사 경험과 확인된 보행 조건의 비중 비교. 가중치를 자동 승격하지 않는다.",
+      "axes": [
+        100,
+        0,
+        0
+      ],
+      "conditions": [
+        null,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
+      "candidates": [
+        {
+          "place_id": "synthetic:history-demanding",
+          "split": "SYNTHETIC",
+          "axes": [
+            100,
+            30,
+            30
+          ],
+          "conditions": [
+            null,
+            null,
+            null,
+            60,
+            null,
+            null
+          ]
+        },
+        {
+          "place_id": "synthetic:history-accessible",
+          "split": "SYNTHETIC",
+          "axes": [
+            70,
+            40,
+            40
+          ],
+          "conditions": [
+            null,
+            null,
+            null,
+            0,
+            null,
+            null
+          ]
+        },
+        {
+          "place_id": "synthetic:other",
+          "split": "SYNTHETIC",
+          "axes": [
+            20,
+            90,
+            90
+          ],
+          "conditions": [
+            null,
+            null,
+            null,
+            0,
+            null,
+            null
+          ]
+        }
+      ],
+      "expected_first": {
+        "importance": "synthetic:history-demanding",
+        "importance-conditions-40": "synthetic:history-accessible"
+      }
+    }
+  ]
+}

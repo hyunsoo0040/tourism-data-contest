@@ -1,4 +1,4 @@
-"""Strict provider-free contracts for the Gyeongju PUBLIC scoring catalog."""
+"""Strict provider-free contracts for the national PUBLIC scoring catalog."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ from itda.domain.canonical import canonical_sha256
 
 PublicPlaceId = Annotated[
     str,
-    Field(strict=True, pattern=r"^public:gyeongju:[0-9a-f]{64}$"),
+    Field(strict=True, pattern=r"^public:(?:gyeongju|korea):[0-9a-f]{64}$"),
 ]
 PublicEvidenceId = Annotated[
     str,
@@ -179,10 +179,13 @@ class PublicPlace(StrictContract):
     name_ko: Annotated[str, Field(strict=True, min_length=1, max_length=240)]
     normalized_name_ko: Annotated[str, Field(strict=True, min_length=1, max_length=240)]
     category: Annotated[str, Field(strict=True, min_length=1, max_length=120)]
-    administrative_area: Literal["경주시"]
+    administrative_area: Annotated[str, Field(strict=True, min_length=1, max_length=100)]
+    region_code: Annotated[
+        str | None, Field(pattern=r"^\d{5}$", exclude_if=lambda value: value is None)
+    ] = None
     address_ko: Annotated[str, Field(strict=True, min_length=1, max_length=500)]
-    latitude: Annotated[float, Field(strict=True, ge=35.0, le=36.5)]
-    longitude: Annotated[float, Field(strict=True, ge=128.0, le=130.5)]
+    latitude: Annotated[float, Field(strict=True, ge=33.0, le=39.0)]
+    longitude: Annotated[float, Field(strict=True, ge=124.0, le=132.0)]
     provider_crosswalk: Annotated[tuple[ProviderCrosswalk, ...], Field(min_length=1)]
     evidence_ids: Annotated[tuple[PublicEvidenceId, ...], Field(min_length=1, max_length=8)]
     duplicate_group_id: Annotated[
@@ -193,6 +196,8 @@ class PublicPlace(StrictContract):
 
     @model_validator(mode="after")
     def validate_place(self) -> Self:
+        if self.place_id.startswith("public:korea:") and self.region_code is None:
+            raise ValueError("national places require the official administrative region code")
         crosswalk = tuple((row.provider, row.source_id) for row in self.provider_crosswalk)
         if crosswalk != tuple(sorted(crosswalk)) or len(crosswalk) != len(set(crosswalk)):
             raise ValueError("provider crosswalk must use unique canonical order")
@@ -207,22 +212,22 @@ class PublicPlace(StrictContract):
 class PublicPlaceCatalog(StrictContract):
     schema_version: Literal["public-place-catalog.v1"]
     pool: Literal["PUBLIC"]
-    region: Literal["경주시"]
-    places: Annotated[tuple[PublicPlace, ...], Field(min_length=100, max_length=100)]
+    region: Annotated[str, Field(strict=True, min_length=1, max_length=100)]
+    places: Annotated[tuple[PublicPlace, ...], Field(min_length=1, max_length=1000)]
     evidence_inventory_sha256: Sha256
-    blind_overlap_count: Literal[0]
+    blind_overlap_count: Literal[0] | None
     catalog_sha256: Sha256
 
     @model_validator(mode="after")
     def validate_catalog(self) -> Self:
         ids = tuple(row.place_id for row in self.places)
-        if ids != tuple(sorted(ids)) or len(set(ids)) != 100:
-            raise ValueError("public catalog requires exactly 100 unique sorted places")
+        if ids != tuple(sorted(ids)) or len(set(ids)) != len(ids):
+            raise ValueError("public catalog requires unique sorted places")
         identity_keys = tuple(
             (row.normalized_name_ko, round(row.latitude, 5), round(row.longitude, 5))
             for row in self.places
         )
-        if len(set(identity_keys)) != 100:
+        if len(set(identity_keys)) != len(identity_keys):
             raise ValueError("public catalog contains a duplicate normalized place")
         expected = canonical_sha256(self.model_dump(exclude={"catalog_sha256"}, mode="json"))
         if self.catalog_sha256 != expected:
@@ -246,7 +251,7 @@ class PublicPlaceRelation(StrictContract):
 class PublicPlaceRelations(StrictContract):
     schema_version: Literal["public-place-relations.v1"]
     catalog_sha256: Sha256
-    catalog_place_ids: Annotated[tuple[PublicPlaceId, ...], Field(min_length=100, max_length=100)]
+    catalog_place_ids: Annotated[tuple[PublicPlaceId, ...], Field(min_length=1, max_length=1000)]
     relations: tuple[PublicPlaceRelation, ...]
     relations_sha256: Sha256
 

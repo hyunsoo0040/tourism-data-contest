@@ -33,6 +33,10 @@ services:
   migrate:
     image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
     environment:
+      ITDA_AUTHENTICITY_RELEASE_DIR: /app/artifacts/authenticity/current
+      ITDA_AUTHENTICITY_RELEASE_SHA256: ${ITDA_AUTHENTICITY_RELEASE_SHA256:?PUBLIC release hash is required}
+      ITDA_AUTHENTICITY_EXPECTED_PLACES: ${ITDA_AUTHENTICITY_EXPECTED_PLACES:?PUBLIC place count is required}
+      ITDA_AUTHENTICITY_PREVIOUS_RELEASE_SHA256: ${ITDA_AUTHENTICITY_PREVIOUS_RELEASE_SHA256:-NONE}
       ITDA_POSTGRES_DB: ${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required}
       ITDA_POSTGRES_ADMIN_USER: ${ITDA_POSTGRES_ADMIN_USER:?ITDA_POSTGRES_ADMIN_USER is required}
       ITDA_POSTGRES_ADMIN_PASSWORD: ${ITDA_POSTGRES_ADMIN_PASSWORD:?ITDA_POSTGRES_ADMIN_PASSWORD is required}
@@ -73,12 +77,14 @@ services:
       - -c
       - |
         import os
-        path = "/var/lib/itda/photo-quarantine"
-        os.makedirs(path, mode=0o700, exist_ok=True)
-        os.chown(path, 10001, 10001)
-        os.chmod(path, 0o700)
+        for path in ("/var/lib/itda/photo-quarantine", "/var/lib/itda/model-sessions", "/var/lib/itda/grounded-daily"):
+            os.makedirs(path, mode=0o700, exist_ok=True)
+            os.chown(path, 10001, 10001)
+            os.chmod(path, 0o700)
     volumes:
       - photo-quarantine:/var/lib/itda/photo-quarantine
+      - model-sessions:/var/lib/itda/model-sessions
+      - grounded-daily:/var/lib/itda/grounded-daily
     networks:
       - database
     deploy:
@@ -94,6 +100,10 @@ services:
   backend:
     image: ${BACKEND_IMAGE:?BACKEND_IMAGE is required}
     environment:
+      ITDA_AUTHENTICITY_RELEASE_SHA256: ${ITDA_AUTHENTICITY_RELEASE_SHA256:?PUBLIC release hash is required}
+      ITDA_AUTHENTICITY_EXPECTED_PLACES: ${ITDA_AUTHENTICITY_EXPECTED_PLACES:?PUBLIC place count is required}
+      ITDA_AUTHENTICITY_ALLOW_DEVELOPMENT: "0"
+      ITDA_AUTHENTICITY_PHOTO_ENABLED: ${ITDA_AUTHENTICITY_PHOTO_ENABLED:-1}
       ITDA_POSTGRES_DB: ${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required}
       ITDA_RUNTIME_ROLE: ${ITDA_RUNTIME_ROLE:?ITDA_RUNTIME_ROLE is required}
       ITDA_RUNTIME_PASSWORD: ${ITDA_RUNTIME_PASSWORD:?ITDA_RUNTIME_PASSWORD is required}
@@ -104,9 +114,30 @@ services:
       ITDA_PROFILE_SESSION_KEYRING: ${ITDA_PROFILE_SESSION_KEYRING:?ITDA_PROFILE_SESSION_KEYRING is required}
       ITDA_CANONICAL_APP_ORIGIN: https://${APP_DOMAIN:?APP_DOMAIN is required}
       ITDA_PHOTO_QUARANTINE_ROOT: /var/lib/itda/photo-quarantine
+      ITDA_PHOTO_MOOD_ENABLED: ${ITDA_PHOTO_MOOD_ENABLED:-1}
+      ITDA_MODEL_SESSION_LOCK_DIR: /var/lib/itda/model-sessions
+      ITDA_MODEL_SESSION_LIMIT: ${ITDA_MODEL_SESSION_LIMIT:-5}
+      ZHIPUAI_API_KEY: ${ZHIPUAI_API_KEY:-}
+      ITDA_PHOTO_VLM_ENABLED: ${ITDA_PHOTO_VLM_ENABLED:-0}
+      ITDA_PHOTO_VLM_ENDPOINT: ${ITDA_PHOTO_VLM_ENDPOINT:-https://api.z.ai/api/coding/paas/v4/chat/completions}
+      ITDA_PHOTO_VLM_MODEL: ${ITDA_PHOTO_VLM_MODEL:-glm-5.3-flash}
+      ITDA_PHOTO_VLM_API_KEY: ${ITDA_PHOTO_VLM_API_KEY:-}
+      ITDA_PHOTO_VLM_API_KEY_FILE: ${ITDA_PHOTO_VLM_API_KEY_FILE:-}
       ITDA_OPERATING_INFORMATION_ENABLED: ${ITDA_OPERATING_INFORMATION_ENABLED:-0}
+      ITDA_GROUNDED_RECOMMENDATIONS_ENABLED: ${ITDA_GROUNDED_RECOMMENDATIONS_ENABLED:-0}
+      ITDA_TOURISM_ENABLED: ${ITDA_TOURISM_ENABLED:-0}
+      ITDA_TOURISM_HTTP_CONCURRENCY: ${ITDA_TOURISM_HTTP_CONCURRENCY:-3}
+      ITDA_TOURISM_TIMEOUT_SECONDS: ${ITDA_TOURISM_TIMEOUT_SECONDS:-10}
+      ITDA_TOURISM_MAX_ATTEMPTS: ${ITDA_TOURISM_MAX_ATTEMPTS:-2}
+      ITDA_TOURISM_FACILITY_TTL_SECONDS: ${ITDA_TOURISM_FACILITY_TTL_SECONDS:-86400}
+      ITDA_TOURISM_TEMPORAL_TTL_SECONDS: ${ITDA_TOURISM_TEMPORAL_TTL_SECONDS:-21600}
+      ITDA_TOURISM_NEGATIVE_TTL_SECONDS: ${ITDA_TOURISM_NEGATIVE_TTL_SECONDS:-900}
+      ITDA_TOURISM_RELATED_MONTH: ${ITDA_TOURISM_RELATED_MONTH:-}
+      ITDA_TOURISM_VISITOR_START: ${ITDA_TOURISM_VISITOR_START:-}
+      ITDA_TOURISM_VISITOR_END: ${ITDA_TOURISM_VISITOR_END:-}
+      ITDA_TOURISM_DEMAND_MONTH: ${ITDA_TOURISM_DEMAND_MONTH:-}
       TOUR_API_SERVICE_KEY: ${TOUR_API_SERVICE_KEY:-}
-      ITDA_PUBLIC_PLACE_CATALOG_PATH: /app/artifacts/public/catalog/public-place-catalog-v1.json
+      ITDA_PUBLIC_PLACE_CATALOG_PATH: /app/artifacts/national/current/catalog.json
       ITDA_OPERATING_INFORMATION_TIMEOUT_SECONDS: ${ITDA_OPERATING_INFORMATION_TIMEOUT_SECONDS:-1.5}
       ITDA_OPERATING_INFORMATION_TTL_SECONDS: ${ITDA_OPERATING_INFORMATION_TTL_SECONDS:-900}
       ITDA_OPERATING_INFORMATION_NEGATIVE_TTL_SECONDS: ${ITDA_OPERATING_INFORMATION_NEGATIVE_TTL_SECONDS:-120}
@@ -117,13 +148,21 @@ services:
       - |
         set -eu
         export ITDA_DATABASE_URL="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=$${ITDA_RUNTIME_ROLE:?ITDA_RUNTIME_ROLE is required} password=$${ITDA_RUNTIME_PASSWORD:?ITDA_RUNTIME_PASSWORD is required} host=postgres port=5432 sslmode=disable"
+        export ITDA_AUTHENTICITY_DATABASE_URL="$${ITDA_DATABASE_URL}"
         export ITDA_PROFILE_SESSION_DATABASE_URL="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=itda_current_profile_session_service password=$${ITDA_PROFILE_SESSION_SERVICE_PASSWORD:?ITDA_PROFILE_SESSION_SERVICE_PASSWORD is required} host=postgres port=5432 sslmode=disable"
         export ITDA_PHOTO_SERVICE_DATABASE_URL="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=itda_photo_service password=$${ITDA_PHOTO_SERVICE_PASSWORD:?ITDA_PHOTO_SERVICE_PASSWORD is required} host=postgres port=5432 sslmode=disable"
+        attempts=0
+        until [ -w /var/lib/itda/model-sessions ]; do
+          attempts=$$((attempts + 1))
+          [ "$${attempts}" -lt 60 ] || exit 1
+          sleep 1
+        done
         until [ -w /var/lib/itda/photo-quarantine ]; do sleep 3; done
         until python -c "import os, psycopg; psycopg.connect(os.environ['ITDA_DATABASE_URL']).close()" >/dev/null 2>&1; do sleep 3; done
         exec python -m uvicorn itda.api.main:app --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips=*
     volumes:
       - photo-quarantine:/var/lib/itda/photo-quarantine
+      - model-sessions:/var/lib/itda/model-sessions
     networks:
       proxy:
       application:
@@ -131,11 +170,11 @@ services:
           - backend
       database:
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/v1/questionnaires/current', timeout=3)"]
-      interval: 10s
-      timeout: 5s
+      test: ["CMD", "python", "-m", "itda.cli.authenticity_health"]
+      interval: 15s
+      timeout: 40s
       retries: 12
-      start_period: 30s
+      start_period: 90s
     deploy:
       replicas: 1
       placement:
@@ -173,13 +212,19 @@ services:
     environment:
       ITDA_POSTGRES_DB: ${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required}
       ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD: ${ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD:?ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD is required}
-      ITDA_DAILY_GLM_REFRESH_ENABLED: ${ITDA_DAILY_GLM_REFRESH_ENABLED:?ITDA_DAILY_GLM_REFRESH_ENABLED is required}
-      ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256: ${ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256:?ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256 is required}
-      TOUR_API_SERVICE_KEY: ${TOUR_API_SERVICE_KEY:?TOUR_API_SERVICE_KEY is required}
-      ZHIPUAI_API_KEY: ${ZHIPUAI_API_KEY:?ZHIPUAI_API_KEY is required}
-      ITDA_PUBLIC_PLACE_CATALOG_PATH: /app/artifacts/public/catalog/public-place-catalog-v1.json
-      ITDA_PUBLIC_EVIDENCE_INVENTORY_PATH: /app/artifacts/public/catalog/public-evidence-inventory-v1.json
-      ITDA_PUBLIC_PLACE_RELATIONS_PATH: /app/artifacts/public/catalog/public-place-relations-v1.json
+      ITDA_GROUNDED_DAILY_ENABLED: ${ITDA_GROUNDED_DAILY_ENABLED:-0}
+      ITDA_GROUNDED_DAILY_WORKERS: ${ITDA_GROUNDED_DAILY_WORKERS:-4}
+      ITDA_GROUNDED_DAILY_OUTPUT_ROOT: /var/lib/itda/grounded-daily/national/runs
+      ITDA_GROUNDED_DAILY_CACHE_ROOT: /var/lib/itda/grounded-daily/national/cache
+      ITDA_GROUNDED_DAILY_GATE_FILE: ${ITDA_GROUNDED_DAILY_GATE_FILE:-}
+      ITDA_GROUNDED_DAILY_REPORT_DIR: ${ITDA_GROUNDED_DAILY_REPORT_DIR:-}
+      TOUR_API_SERVICE_KEY: ${TOUR_API_SERVICE_KEY:-}
+      ZHIPUAI_API_KEY: ${ZHIPUAI_API_KEY:-}
+      ITDA_MODEL_SESSION_LOCK_DIR: /var/lib/itda/model-sessions
+      ITDA_MODEL_SESSION_LIMIT: ${ITDA_MODEL_SESSION_LIMIT:-5}
+      ITDA_PUBLIC_PLACE_CATALOG_PATH: /app/artifacts/national/current/catalog.json
+      ITDA_PUBLIC_EVIDENCE_INVENTORY_PATH: /app/artifacts/national/current/evidence.json
+      ITDA_PUBLIC_PLACE_RELATIONS_PATH: /app/artifacts/national/current/relations.json
       ITDA_DAILY_TOUR_API_TIMEOUT_SECONDS: ${ITDA_DAILY_TOUR_API_TIMEOUT_SECONDS:-15}
       TZ: UTC
     command:
@@ -189,17 +234,26 @@ services:
         set -eu
         export ITDA_DAILY_GLM_REFRESH_DATABASE_URL="dbname=$${ITDA_POSTGRES_DB:?ITDA_POSTGRES_DB is required} user=itda_daily_glm_refresh_service password=$${ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD:?ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD is required} host=postgres port=5432 sslmode=disable"
         attempts=0
+        until [ -w /var/lib/itda/model-sessions ] && [ -w /var/lib/itda/grounded-daily ]; do
+          attempts=$$((attempts + 1))
+          [ "$${attempts}" -lt 60 ] || exit 1
+          sleep 1
+        done
+        attempts=0
         until python -c "import os, psycopg; psycopg.connect(os.environ['ITDA_DAILY_GLM_REFRESH_DATABASE_URL']).close()" >/dev/null 2>&1; do
           attempts=$$((attempts + 1))
           [ "$${attempts}" -lt 60 ] || exit 1
           sleep 3
         done
         exec python -m itda.cli.run_daily_glm_refresh
+    volumes:
+      - model-sessions:/var/lib/itda/model-sessions
+      - grounded-daily:/var/lib/itda/grounded-daily
     networks:
       - database
       - scheduler-egress
     deploy:
-      replicas: 1
+      replicas: ${ITDA_GROUNDED_DAILY_REPLICAS:-0}
       placement:
         constraints:
           - node.hostname == ${ITDA_DATA_NODE_HOSTNAME:?ITDA_DATA_NODE_HOSTNAME is required}
@@ -212,7 +266,7 @@ services:
         failure_action: rollback
 
   web:
-    image: pengginregistry.pengbot.app/itda/web:latest
+    image: ${WEB_IMAGE:?WEB_IMAGE is required}
     environment:
       HOSTNAME: 0.0.0.0
       PORT: "3000"
@@ -223,7 +277,7 @@ services:
       - proxy
       - application
     healthcheck:
-      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/start').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/trip').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
       interval: 10s
       timeout: 5s
       retries: 12
@@ -272,6 +326,8 @@ services:
 volumes:
   postgres-data:
   photo-quarantine:
+  model-sessions:
+  grounded-daily:
 
 networks:
   proxy:

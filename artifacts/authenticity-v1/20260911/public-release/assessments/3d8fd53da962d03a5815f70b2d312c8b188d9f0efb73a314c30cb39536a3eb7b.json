@@ -1,0 +1,984 @@
+{
+  "assessed_at": "2026-09-11T17:46:46.446793Z",
+  "assessment_sha256": "3d8fd53da962d03a5815f70b2d312c8b188d9f0efb73a314c30cb39536a3eb7b",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 34
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'동화 속 풍경', '요정 마을' 등 동화적 이미지가 공식 소개에서 장소에 부여된 구체적 이미지로 연결되어 있다. 수준은 간단한 이미지 표현 수준으로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "드라마 촬영지로서 장소 이미지가 매체에서 재현되었음을 확인할 수 있다. 하나의 매체 사례만 명시되어 수준 2로 평가했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0b238468a4cedfdc84e0ee47cad3176cfa6d3c7ae14e456a14126c003141c350",
+            "appearance:380f371e1dcf7ba9dc15485e1f2f0f8de0e2107eec19868b70b8ccf8ffcb6ed4",
+            "appearance:ee12577e4489bdf3f28c43a232a2750202e03ef9675e98e46d163013d5559e44"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "물에 뜨는 듯한 캐슬 연출, 바다·전경 조망, 요정 마을 테마존 등 장소를 구별하는 시각적 성격의 근거가 있다. 장면을 지배한다는 근거까지는 부족해 수준 3으로 판단했다.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "드라마 명장면을 현장에서 떠올리며 경험할 수 있음을 안내하나, 촬영·재현 참여 같은 적극적 재현 근거는 없어 관람적 경험 수준인 수준 2로 평가했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "여러 테마존을 자유롭게 돌며 선택·탐색할 여지가 있으나, 여유로운 자기 방식의 탐색이 중심이라는 근거는 없어 제한적 자유 선택 수준인 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:547a8ebcb959aab222ae3c05b79058a1b90c9f45588685db016cc9a1854b7cc5",
+            "appearance:be3896e467bc96a9847fb6255d3aaa66b36e2533fdec7a84cf80e8fe75045232",
+            "appearance:c26b8b38297a63cbcf203099c128c4951e54a2aa30341d2e66ea6120aa001241"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 17,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "'숲 속의 청량함'은 홍보 문구이며 실제 자연 환경 단서의 직접 관찰 근거가 없다. 로리캐슬 조망 등 일부 단서가 있으나 환경 단서의 확인 수준을 뒷받침하기엔 자료가 홍보성에 머물러 판단을 남긴다.",
+      "value": 17
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "테마파크 시설·어트랙션 소개만 있으며 확인된 실제 원형·유산과의 접촉에 대한 근거가 없다. 동화 테마 존은 재현·연출일 뿐 유산 접촉을 증명하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개장 배경과 시설 안내만 있고 이 장소 자체의 역사적 사건·인물 맥락에 대한 설명은 제시되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다. 동화 세계관 연출은 실제 전승이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "토킹트리는 파크 테마 이야기를 들려주는 엔터테인먼트 장치로, 유산·전통에 연결된 해설·탐구라 볼 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+          "quote": {
+            "end": 658,
+            "method": "EXACT",
+            "original": "동화 속에 들어온 듯한 풍경과 스릴 넘치는 놀이기구, 환상적인 퍼레이드가 공존하는 곳이다.",
+            "start": 608,
+            "submitted": "동화 속에 들어온 듯한 풍경과 스릴 넘치는 놀이기구, 환상적인 퍼레이드가 공존하는 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'동화 속 풍경', '요정 마을' 등 동화적 이미지가 공식 소개에서 장소에 부여된 구체적 이미지로 연결되어 있다. 수준은 간단한 이미지 표현 수준으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+          "quote": {
+            "end": 606,
+            "method": "EXACT",
+            "original": "드라마 중간과 준희가 남부럽지 않은 데이트를 즐겼던 롯데월드 어드벤처 부산",
+            "start": 565,
+            "submitted": "드라마 중간과 준희가 남부럽지 않은 데이트를 즐겼던 롯데월드 어드벤처 부산",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a"
+        }
+      ],
+      "flags": [],
+      "key": "E.b",
+      "level": 2,
+      "reason": "드라마 촬영지로서 장소 이미지가 매체에서 재현되었음을 확인할 수 있다. 하나의 매체 사례만 명시되어 수준 2로 평가했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+          "quote": {
+            "end": 378,
+            "method": "EXACT",
+            "original": "로리캐슬은 물에 떠 있는 듯한 모습으로 연출되어 있으며 부산의 전경과 함께 기장 앞바다를 한눈에 즐길 수 있다.",
+            "start": 316,
+            "submitted": "로리캐슬은 물에 떠 있는 듯한 모습으로 연출되어 있으며 부산의 전경과 함께 기장 앞바다를 한눈에 즐길 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "물에 뜨는 듯한 캐슬 연출, 바다·전경 조망, 요정 마을 테마존 등 장소를 구별하는 시각적 성격의 근거가 있다. 장면을 지배한다는 근거까지는 부족해 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+          "quote": {
+            "end": 704,
+            "method": "NORMALIZED_AND_MAPPED",
+            "original": "‘토킹 트리’ 앞에 서면 반지를 주고받으며 행복해하던 중간·준희 커플이 떠오른다.",
+            "start": 659,
+            "submitted": "'토킹 트리' 앞에 서면 반지를 주고받으며 행복해하던 중간·준희 커플이 떠오른다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "드라마 명장면을 현장에서 떠올리며 경험할 수 있음을 안내하나, 촬영·재현 참여 같은 적극적 재현 근거는 없어 관람적 경험 수준인 수준 2로 평가했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+          "quote": {
+            "end": 211,
+            "method": "EXACT",
+            "original": "6개의 테마존으로 꾸려져 있다.",
+            "start": 194,
+            "submitted": "6개의 테마존으로 꾸려져 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "여러 테마존을 자유롭게 돌며 선택·탐색할 여지가 있으나, 여유로운 자기 방식의 탐색이 중심이라는 근거는 없어 제한적 자유 선택 수준인 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "'숲 속의 청량함'은 홍보 문구이며 실제 자연 환경 단서의 직접 관찰 근거가 없다. 로리캐슬 조망 등 일부 단서가 있으나 환경 단서의 확인 수준을 뒷받침하기엔 자료가 홍보성에 머물러 판단을 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "대형 어트랙션은 구체적 참여 활동(수준 3)의 근거이나, '지속적으로 참여·도전할 활동'이라는 앵커 수준을 뒷받침하는 반복·도전형 활동의 근거는 없다. 놀이기구 탑승이 지속적 도전임을 단정할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "가족 동반 놀이기구는 함께 이용한다는 정황일 뿐 교류·자기표현의 구체적 기회라는 앵커 수준을 직접 뒷받침하지 않는다. 공연·퍼레이드도 공유 관람이지 교류 활동의 근거로는 부족하다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "c113123b8755fd5d6d6454966ef807248fb7509ef1dbf22dca5750532b544191",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+              "quote": {
+                "end": 55,
+                "method": "EXACT",
+                "original": "숲 속의 청량함과 짜릿한 스릴감을 완벽하게 즐길 수 있도록 준비되어 있다.",
+                "start": 14,
+                "submitted": "숲 속의 청량함과 짜릿한 스릴감을 완벽하게 즐길 수 있도록 준비되어 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 2,
+          "reason": "숲·바다 전경 등 환경 단서가 언급되지만 홍보 문구이고 실제 고요함·혼잡·회복 효과는 확인할 수 없어 제한적 환경 단서 수준으로 평가했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "'숲 속의 청량함'은 홍보 문구이며 실제 자연 환경 단서의 직접 관찰 근거가 없다. 로리캐슬 조망 등 일부 단서가 있으나 환경 단서의 확인 수준을 뒷받침하기엔 자료가 홍보성에 머물러 판단을 남긴다."
+        }
+      },
+      "reason": "'숲 속의 청량함'은 홍보 문구이며 실제 자연 환경 단서의 직접 관찰 근거가 없다. 로리캐슬 조망 등 일부 단서가 있으나 환경 단서의 확인 수준을 뒷받침하기엔 자료가 홍보성에 머물러 판단을 남긴다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+              "quote": {
+                "end": 444,
+                "method": "EXACT",
+                "original": "자이언트 디거, 자이언트 스플래쉬 등 대표 어트랙션은 그 짜릿함이 벌써 입소문을 타고 있다.",
+                "start": 393,
+                "submitted": "자이언트 디거, 자이언트 스플래쉬 등 대표 어트랙션은 그 짜릿함이 벌써 입소문을 타고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "대형 어트랙션과 공연·퍼레이드 등 구체적 참여 활동의 근거가 있으나, 지속적 도전·몰입이 방문 중심이라 단정할 근거는 부족해 수준 3으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.c",
+          "reason": "대형 어트랙션은 구체적 참여 활동(수준 3)의 근거이나, '지속적으로 참여·도전할 활동'이라는 앵커 수준을 뒷받침하는 반복·도전형 활동의 근거는 없다. 놀이기구 탑승이 지속적 도전임을 단정할 수 없다."
+        }
+      },
+      "reason": "대형 어트랙션은 구체적 참여 활동(수준 3)의 근거이나, '지속적으로 참여·도전할 활동'이라는 앵커 수준을 뒷받침하는 반복·도전형 활동의 근거는 없다. 놀이기구 탑승이 지속적 도전임을 단정할 수 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+              "quote": {
+                "end": 502,
+                "method": "EXACT",
+                "original": "유아를 동반한 가족 이용객을 위한 놀이 기구도 준비되어 있다.",
+                "start": 468,
+                "submitted": "유아를 동반한 가족 이용객을 위한 놀이 기구도 준비되어 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "가족 동반 이용과 공연·퍼레이드 공유 관람 등 제한적 공동 활동 근거는 있으나 교류·자기표현 활동이 풍부하다는 근거는 없어 수준 2로 평가했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "가족 동반 놀이기구는 함께 이용한다는 정황일 뿐 교류·자기표현의 구체적 기회라는 앵커 수준을 직접 뒷받침하지 않는다. 공연·퍼레이드도 공유 관람이지 교류 활동의 근거로는 부족하다."
+        }
+      },
+      "reason": "가족 동반 놀이기구는 함께 이용한다는 정황일 뿐 교류·자기표현의 구체적 기회라는 앵커 수준을 직접 뒷받침하지 않는다. 공연·퍼레이드도 공유 관람이지 교류 활동의 근거로는 부족하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "0998132189403b86e798be6be7891daa104ba557e1cbdd5ed2eb9c1b1eccf46a",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "빨간 레일과 보라색 기둥의 강렬한 색채, 대각선으로 횡단하는 트랙 구도, 황혼 조명 아래 등화 효과가 장면을 지배하며 놀이기구의 역동성이 시각적으로 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0b238468a4cedfdc84e0ee47cad3176cfa6d3c7ae14e456a14126c003141c350",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0b4b1c833792de37f6bacc99a45229809f8570b3d369775d1e46fad9558c5ae3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407910_17",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1efb7249f92a9090acfd6b8af00c63bd812af6b0e4391c852922c6948b157568",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3407910_image2_1.png"
+        },
+        "record_sha256": "0dca9fc8a2f1758ddb1d09d8e21432362456f6629d4afef2aef082541c55a9a3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "인격화된 대형 나무 조형물, 캐릭터 의상, 저녁 조명과 동화적 성채 건물이 장면 전체를 지배하는 강한 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:380f371e1dcf7ba9dc15485e1f2f0f8de0e2107eec19868b70b8ccf8ffcb6ed4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13dd881391cef59a6fc3ce68735e01db06a0f4a39eaa121255ba3c30d660c81b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407908_15",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0add83c83fefa034dc077512c85b3dcc9d299ab46b5cd2d2683923ec442fa74d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/08/3407908_image2_1.png"
+        },
+        "record_sha256": "cc0e0b3e3418c8094096cd85331cb7eb3aec005b536ace613a68571ca4af91d7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "나뭇잎과 덩굴이 일부 보이지만 자연 경관보다는 인공 구조물 위주의 장면임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:547a8ebcb959aab222ae3c05b79058a1b90c9f45588685db016cc9a1854b7cc5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "dd11162f9d2bde98cfedb1fac5ad650df9f68368b38659ced67482a9b595217a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407907_14",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bccaee7ee68c16afcd271d63cc692f52f49c1ee81a8bb315d4b3bd63fe924a89",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/07/3407907_image2_1.png"
+        },
+        "record_sha256": "06f56433c1b7f917e686314ce4c58750f50566d8e11f98823707b163b60e3123",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목재 울타리와 잔디밭 등 일부 소재가 있으나 전반은 판타지 테마파크 조형으로 전통 외관·재료의 특성은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5ebd97e8feb5500c19c93d7e7678f33ba8cd7de05a576917bbf1bc4358694f45",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13dd881391cef59a6fc3ce68735e01db06a0f4a39eaa121255ba3c30d660c81b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407908_15",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0add83c83fefa034dc077512c85b3dcc9d299ab46b5cd2d2683923ec442fa74d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/08/3407908_image2_1.png"
+        },
+        "record_sha256": "19cecd2858fea47f0ee2d38aee69ba2a04e9387bd58519a0b640afb5e5aefe9e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "동화 속 성과 궁정을 연상시키는 장식적 외관이 있으나 전통 재료·구성이라기보다 테마파크식 재현임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:782ef1b6f6cb69ac5b245a5e872597bb722998582f999f0086c3a9717e950810",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "dd11162f9d2bde98cfedb1fac5ad650df9f68368b38659ced67482a9b595217a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407907_14",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bccaee7ee68c16afcd271d63cc692f52f49c1ee81a8bb315d4b3bd63fe924a89",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/07/3407907_image2_1.png"
+        },
+        "record_sha256": "195a9a491cace56ae71d8637eeed4958397323232e8184f6a48f1ddb89c008ad",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적인 철제 롤러코스터 구조물만 보이며 전통적 외관·재료·공간 구성의 시각적 특성은 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a4088a9fa7663c3dcfff7057c3fa0357bbfb2edee60ba33b6b3563abd895003c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0b4b1c833792de37f6bacc99a45229809f8570b3d369775d1e46fad9558c5ae3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407910_17",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1efb7249f92a9090acfd6b8af00c63bd812af6b0e4391c852922c6948b157568",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3407910_image2_1.png"
+        },
+        "record_sha256": "1e5a3ed3744650166b805a43bdcb502f8e24087f95294731843934dffad682f0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "황혼의 하늘과 화면 하단의 나무 숲이 일부 보이나, 놀이기구 구조물 대부분에 가려져 자연 환경 단서는 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:be3896e467bc96a9847fb6255d3aaa66b36e2533fdec7a84cf80e8fe75045232",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0b4b1c833792de37f6bacc99a45229809f8570b3d369775d1e46fad9558c5ae3",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407910_17",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1efb7249f92a9090acfd6b8af00c63bd812af6b0e4391c852922c6948b157568",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3407910_image2_1.png"
+        },
+        "record_sha256": "d1b3e01fa13a981a4dc2607faf25c4952fadf379e132184daf6b36b913ec2033",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "나무·인물 등은 모두 인공 조형물이며 실제 녹지, 수면, 자연 경관 단서는 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c26b8b38297a63cbcf203099c128c4951e54a2aa30341d2e66ea6120aa001241",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13dd881391cef59a6fc3ce68735e01db06a0f4a39eaa121255ba3c30d660c81b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407908_15",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0add83c83fefa034dc077512c85b3dcc9d299ab46b5cd2d2683923ec442fa74d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/08/3407908_image2_1.png"
+        },
+        "record_sha256": "84363939ee1e11c2e32f20f6ee0b1713f91ec7f976252e7305ec84b6406f0751",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "금색 장식 아치, 샹들리에, 화려한 캐릭터 플로트가 장면 전체를 지배하며 매우 연출된 시각적 구성이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ee12577e4489bdf3f28c43a232a2750202e03ef9675e98e46d163013d5559e44",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "dd11162f9d2bde98cfedb1fac5ad650df9f68368b38659ced67482a9b595217a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3407907_14",
+          "request_sha256": "d9d80a3af97b3309ed23c2a3fd9c190ca0b6bb9023f9dc5370bfb6cb9cf56aac",
+          "response_sha256": "00c2841f23946c5b523662a78142b9040fbd3f560cefdfacb5f949533f91e039",
+          "retrieved_at": "2026-09-11T02:05:09.860983Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bccaee7ee68c16afcd271d63cc692f52f49c1ee81a8bb315d4b3bd63fe924a89",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/07/3407907_image2_1.png"
+        },
+        "record_sha256": "db9747379b1f9e5b958dad1ab77a00cb00235c15fe8dafa8482261893177ce9d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4e3c74ff131d17df187c6fd620e77253e42fe26b3fe5688c36a227b96393b4de",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2815627",
+          "request_sha256": "71acef8ca9caf70ee7673b3cb46eaa116ec0b8cf900575714ff90cd33b375c60",
+          "response_sha256": "8b21a1a2baec4eea219d1064db871601c42e3d1cb3e83dc0a33b075bcc2798fc",
+          "retrieved_at": "2026-09-11T02:05:09.519084Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "af728c5f7824b7007c23b0ab2416396a4d2e52ce277150e80a37ac9d925247c9",
+          "source_uri": null
+        },
+        "record_sha256": "915ea9ca770ef2a5fae7fbddf97187fec8db18a8ec9e7d2d032b26cc6e62d1e4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[종일권] - 성인 49,000원 - 청소년 41,000원 - 어린이/경로 35,000원 - 베이비 13,000원 [After 3] - 어른 38,000원 - 청소년 34,000원 - 어린이 32,000원 - 베이비 13,000원"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:6fc98926abdb10622710f993615965dcd3976e80ab779cb1867b0f95df62dc96",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2815627",
+          "request_sha256": "50e2f130894b373c1b5074d74631b8b2a3a2f0242c9507bfad821245c208b641",
+          "response_sha256": "467617756b016f7806944ee6faffec0a1ad9562fa242b127edbf84b117f8ca0e",
+          "retrieved_at": "2026-09-10T16:55:46.924996Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-08-10T07:56:35Z",
+          "source_record_sha256": "4898c373d5fc1ab127ccd96f9ecb569a2fa0c9bb7e19115b08d628146a1ea483",
+          "source_uri": null
+        },
+        "record_sha256": "d68a90457d710d5671c4466c06baddf901979d3fb1cea4754747d24c92b9b75a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "롯데월드 어드벤처 부산은 숲 속의 청량함과 짜릿한 스릴감을 완벽하게 즐길 수 있도록 준비되어 있다. '놀이공원' 하면 떠오르는 언제나 즐겁고 신나는 공연 그리고 퍼레이드를 경험할 수 있다. 롯데월드 어드벤처 부산은 대한민국 제2의 도시라고 불리는 부산에 세워진 데다 대중교통을 이용한 접근성도 편리해 개장 첫날부터 끊임없는 발길이 이어지고 있다. 6개의 테마존으로 꾸려져 있다. 요정 마을 팅커폴스 존 중심에 토킹트리가 있는데 이 나무는 애니매트로닉스 기술이 적용되어 파크 내 6개 테마에 관한 이야기를 들려준다. 롯데월드 내 가장 높은 곳에 위치한 로얄가든 존의 로리캐슬은 물에 떠 있는 듯한 모습으로 연출되어 있으며 부산의 전경과 함께 기장 앞바다를 한눈에 즐길 수 있다. 이외의 놀이 기구들 특히 자이언트 디거, 자이언트 스플래쉬 등 대표 어트랙션은 그 짜릿함이 벌써 입소문을 타고 있다. 이렇게 어른들을 위한 어트랙션뿐만 아니라 유아를 동반한 가족 이용객을 위한 놀이 기구도 준비되어 있다. 날씨와 관계없이 아이와 안전하게 즐길 수 있도록 실내에 배치되어 있다. ◎ 한류의 매력을 만나는 여행 정보 - 드라마 중간과 준희가 남부럽지 않은 데이트를 즐겼던 롯데월드 어드벤처 부산은 동화 속에 들어온 듯한 풍경과 스릴 넘치는 놀이기구, 환상적인 퍼레이드가 공존하는 곳이다. ‘토킹 트리’ 앞에 서면 반지를 주고받으며 행복해하던 중간·준희 커플이 떠오른다."
+      }
+    ],
+    "parent_source_sha256": "6d992d46b0e5b3cdc55e964de30130797b6fea7ae343b3cc32f71a875f60fc6c",
+    "place": {
+      "address": "부산광역시 기장군 동부산관광로 42",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+      "name_ko": "롯데월드 어드벤처 부산",
+      "place_id": "public:korea:672c0068acc4270149589f3bcca2915d7b76f51fccf46319b5ed5708dc556a84",
+      "provider_content_id": "2815627",
+      "region_code": "26710",
+      "region_name": "부산광역시 기장군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

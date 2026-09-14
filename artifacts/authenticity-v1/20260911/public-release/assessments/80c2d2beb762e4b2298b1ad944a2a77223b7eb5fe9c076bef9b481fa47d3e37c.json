@@ -1,0 +1,467 @@
+{
+  "assessed_at": "2026-09-11T18:59:37.568980Z",
+  "assessment_sha256": "80c2d2beb762e4b2298b1ad944a2a77223b7eb5fe9c076bef9b481fa47d3e37c",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "자연과 예술의 조화라는 이미지·의미가 이 장소에 연결되어 소개되므로 간단한 이미지 표현 수준(level 2)으로 지원된다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "소박한 외형, 정·동 전시실 주제, 계단 벽화, 야외 조각 공원 등 시각적 성격이 구체적으로 묘사되어 구별되는 시각적 표현(level 3)으로 볼 수 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "본관 외 도자기실·전시실·조각 공원 등 여러 공간을 스스로 둘러볼 여지가 있으나, 자율 탐색 자체가 중심이라는 근거는 부족하여 제한적 수준(level 2)으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "산·천·야외 조각 공원 등 자연 환경 단서가 확인되지만 실제 고요함·회복 효과는 확정할 수 없어 자연 단서가 확인된 수준(level 3)으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "예술 체험 프로그램 운영이 언급되어 참여 기회가 있으나, 그 내용·지속성이 구체적이지 않아 제한된 체험 기회 수준(level 2)으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제시된 개관 설명은 내설악 백공미술관이라는 새로 지어진 미술관(2011년 개관)의 전시와 시설을 다룰 뿐, 확인된 실제 원형·유산에의 접촉을 제공한다는 근거가 없다. 인근 백담사 언급은 미술관 자체의 유산 접촉 근거로 볼 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관 연도(2011년)와 소장 작가 일반 언급만 있을 뿐 이 장소 자체의 구체적 역사·사건·인물 맥락을 다루는 서사는 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승이나 생활문화와의 실제 연결을 보여주는 근거가 없다. 황태마을 언급은 인근 장소의 특성이며 이 미술관의 전승 경험으로 옮길 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "예술 작품 감상 안내는 있으나 원형·유산·전통에 연결된 해설이나 학습 프로그램의 존재를 뒷받침하는 내용이 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535",
+          "quote": {
+            "end": 123,
+            "method": "EXACT",
+            "original": "자연 속에서 예술을 감상할 수 있는 특별한 공간으로, 자연의 휴식과 예술의 향기를 동시에 느낄 수 있는 곳이다",
+            "start": 62,
+            "submitted": "자연 속에서 예술을 감상할 수 있는 특별한 공간으로, 자연의 휴식과 예술의 향기를 동시에 느낄 수 있는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e71bcedac3e6bccf423dbae39a5bdddc71411dc8e980b8d786099c6c7901efd8"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "자연과 예술의 조화라는 이미지·의미가 이 장소에 연결되어 소개되므로 간단한 이미지 표현 수준(level 2)으로 지원된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535",
+          "quote": {
+            "end": 316,
+            "method": "EXACT",
+            "original": "미술관 건물은 심플하면서도 소박한 외형을 지니고 있으며",
+            "start": 286,
+            "submitted": "미술관 건물은 심플하면서도 소박한 외형을 지니고 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e71bcedac3e6bccf423dbae39a5bdddc71411dc8e980b8d786099c6c7901efd8"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535",
+          "quote": {
+            "end": 431,
+            "method": "EXACT",
+            "original": "2층으로 올라가는 계단 벽에는 환상적인 모습의 벽화가 그려져 있어",
+            "start": 395,
+            "submitted": "2층으로 올라가는 계단 벽에는 환상적인 모습의 벽화가 그려져 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e71bcedac3e6bccf423dbae39a5bdddc71411dc8e980b8d786099c6c7901efd8"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "소박한 외형, 정·동 전시실 주제, 계단 벽화, 야외 조각 공원 등 시각적 성격이 구체적으로 묘사되어 구별되는 시각적 표현(level 3)으로 볼 수 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 재현하거나 참여로 경험할 수 있다는 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535",
+          "quote": {
+            "end": 566,
+            "method": "EXACT",
+            "original": "총 2만 평의 대지에는 미술관 본관 외에도 도자기실, 별도의 전시실, 조각 공원이 조성되어 있다",
+            "start": 513,
+            "submitted": "총 2만 평의 대지에는 미술관 본관 외에도 도자기실, 별도의 전시실, 조각 공원이 조성되어 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e71bcedac3e6bccf423dbae39a5bdddc71411dc8e980b8d786099c6c7901efd8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "본관 외 도자기실·전시실·조각 공원 등 여러 공간을 스스로 둘러볼 여지가 있으나, 자율 탐색 자체가 중심이라는 근거는 부족하여 제한적 수준(level 2)으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535",
+          "quote": {
+            "end": 56,
+            "method": "EXACT",
+            "original": "설악산의 풍요로움과 내린천의 시원함이 함께하는 인제군 백담사 입구에 자리하고 있다",
+            "start": 11,
+            "submitted": "설악산의 풍요로움과 내린천의 시원함이 함께하는 인제군 백담사 입구에 자리하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e71bcedac3e6bccf423dbae39a5bdddc71411dc8e980b8d786099c6c7901efd8"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535",
+          "quote": {
+            "end": 635,
+            "method": "EXACT",
+            "original": "조각 공원에는 마리아 조각상 등 유명 조각가들의 작품이 야외에 전시되어 있어 자연과 예술이 조화를 이루는 풍경을 제공한다",
+            "start": 568,
+            "submitted": "조각 공원에는 마리아 조각상 등 유명 조각가들의 작품이 야외에 전시되어 있어 자연과 예술이 조화를 이루는 풍경을 제공한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e71bcedac3e6bccf423dbae39a5bdddc71411dc8e980b8d786099c6c7901efd8"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "산·천·야외 조각 공원 등 자연 환경 단서가 확인되지만 실제 고요함·회복 효과는 확정할 수 없어 자연 단서가 확인된 수준(level 3)으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535",
+          "quote": {
+            "end": 284,
+            "method": "EXACT",
+            "original": "작가들의 창작 활동을 지원하고 지역 주민과 관광객들에게 예술 체험의 기회를 제공하는 다양한 프로그램도 운영 중이다",
+            "start": 221,
+            "submitted": "작가들의 창작 활동을 지원하고 지역 주민과 관광객들에게 예술 체험의 기회를 제공하는 다양한 프로그램도 운영 중이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e71bcedac3e6bccf423dbae39a5bdddc71411dc8e980b8d786099c6c7901efd8"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "예술 체험 프로그램 운영이 언급되어 참여 기회가 있으나, 그 내용·지속성이 구체적이지 않아 제한된 체험 기회 수준(level 2)으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회를 직접 보여주는 근거가 없다. 창작 지원 언급만으로 방문자 간 교류나 자기표현을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "e88dca0107a547c8f5e58fcbf0dbbbb381e2a513e51fd92f1ade76c15f0b6d25",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "d17d90cb6db0808d2f9969f6e734d62ecd7d03dc2b40e2979a2e9eb4b428c18e",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d015bc27d158ec70c58ee895e26a33ee362b3d78a6be3cad0f36e935d62b4535",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c906893c1b45fd13b8a59d71223cfdf8ec3e3ff26225ab7c7d9e20249a846f61",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1835658",
+          "request_sha256": "eda719e73aa9993f8cc4db130a00b06c5d2fc09b62adde5421a7f3a343750837",
+          "response_sha256": "e3aa67c53be0f9561bb452f5a60b8a8ce18db04f9a30cb43ebef840a2da5a659",
+          "retrieved_at": "2026-09-10T07:29:08.314959Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-12T00:08:40Z",
+          "source_record_sha256": "971e5aeb9b1be5a748c8321a601ad82f44bad748133950481d37e2efa674ccad",
+          "source_uri": null
+        },
+        "record_sha256": "e71bcedac3e6bccf423dbae39a5bdddc71411dc8e980b8d786099c6c7901efd8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "내설악 백공미술관은 설악산의 풍요로움과 내린천의 시원함이 함께하는 인제군 백담사 입구에 자리하고 있다. 이곳은 자연 속에서 예술을 감상할 수 있는 특별한 공간으로, 자연의 휴식과 예술의 향기를 동시에 느낄 수 있는 곳이다. 2011년에 개관한 백공미술관은 한국 근대 회화의 대표적인 작가들의 작품을 소장하고 있으며, 매년 기획 전시를 통해 현대 젊은 작가들의 작품도 함께 선보이고 있다. 또한, 작가들의 창작 활동을 지원하고 지역 주민과 관광객들에게 예술 체험의 기회를 제공하는 다양한 프로그램도 운영 중이다. 미술관 건물은 심플하면서도 소박한 외형을 지니고 있으며, 1층과 2층으로 구성되어 있다. 1층에는 ‘정(靜)’과 ‘동(動)’ 전시실이 있어 고요함과 역동성을 주제로 한 작품들을 감상할 수 있다. 2층으로 올라가는 계단 벽에는 환상적인 모습의 벽화가 그려져 있어, 관람객들은 계단을 오르며 예술 작품을 감상하는 또 다른 즐거움을 느낄 수 있다. 2층 전시실에는 근현대 회화 작품들이 다양하게 전시되어 있다. 총 2만 평의 대지에는 미술관 본관 외에도 도자기실, 별도의 전시실, 조각 공원이 조성되어 있다. 조각 공원에는 마리아 조각상 등 유명 조각가들의 작품이 야외에 전시되어 있어 자연과 예술이 조화를 이루는 풍경을 제공한다. 또한, 인근에는 우리나라에서 황태가 가장 많이 생산되는 용대리 황태마을이 위치해 있어, 황태를 활용한 다양한 음식을 맛볼 수 있는 미식 여행도 함께 즐길 수 있다."
+      }
+    ],
+    "parent_source_sha256": "98fd3a165818b8573b420531dd1cc6ed4a20e81ed4464fd25b7db6f6ca2af94e",
+    "place": {
+      "address": "강원특별자치도 인제군 북면 황태길 245",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:c906893c1b45fd13b8a59d71223cfdf8ec3e3ff26225ab7c7d9e20249a846f61",
+      "name_ko": "내설악 백공미술관",
+      "place_id": "public:korea:c906893c1b45fd13b8a59d71223cfdf8ec3e3ff26225ab7c7d9e20249a846f61",
+      "provider_content_id": "1835658",
+      "region_code": "51810",
+      "region_name": "강원특별자치도 인제군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

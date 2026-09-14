@@ -1,0 +1,915 @@
+{
+  "assessed_at": "2026-09-11T17:54:01.692951Z",
+  "assessment_sha256": "3b13c20dc7875cab4abab9623d0abff0689bdabb75397ffa63f91d3c8473a4c3",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c"
+      ],
+      "value": 53
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 52
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "개요가 장소의 옛 이름과 지명 유래 전설(부부와 용왕, 푸른 뱀)을 구체적으로 제시하여 이 장소 자체의 유래·서사 맥락을 이해할 수 있게 한다. 다만 사건·인물 중심의 심층 탐구라기보다 유래 소개 수준이므로 level 2~3 사이에서 2로 판단.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "아름다운 일출로 정평이 났고 영화 촬영지로 알려졌다는 등 장소에 부여된 공유된 이미지·이야기가 확인되며, 지명 유래 전설도 상징적 의미를 더한다. 다만 다양한 표현에서 일관된 의미가 확인되는 수준까지는 근거가 부족해 level 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "영화 촬영지로 알려져 대중적으로 사랑받는다는 대표적 매체 표현의 근거가 있다. 반복되는 유통 근거는 부족하므로 level 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:a2f7ff3fd596b67442ddcc1f4c32f9c2dde743953a570efd04f0ab9efc846362",
+            "appearance:f496461cce410f756bc7df35047f74156c8222a3b4dd8ee350d1c726e6db4fc5",
+            "appearance:ffb3fca63bb68f71fac53ec6bdd142954315533d84690f1f356812a79cafaf6c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "수리 제안의 인용은 E.c에 허용되지 않는 VISUAL_APPEARANCE 주장을 사용했으므로 같은 근거 구절을 VISUAL_EXPRESSION 주장으로 교정해 반영했다. 해변 철길과 포구, 시골 마을 풍경 등 장소를 구별 짓는 시각적 성격이 서술되나 두드러지거나 지배적이라는 근거는 없어 level 2.",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "갯바위 낚시, 해안 산책, 포구 식사 등 자율적으로 선택할 수 있는 활동 가능성이 서술된다. 다만 '북적거리며'라는 혼잡 표현은 여유를 제한할 수 있어 level 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:825f04023b73e0a068eefd56bb883283dcbcac2c672b5579915d8f649a9077da",
+            "appearance:a2e0dc5d91a2e91d74e724649a5b44adb9bbbd26c5a814283ea5e16eb5c3c077",
+            "appearance:e90f7228e89095167085aa8ae87394b9e0bc2f5e9e664a9940ad8fb0570acfd8"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "바다·갯바위·한적한 시골 마을 풍경 등 자연 환경 단서가 확인된다. 실제 고요함·회복 효과는 확정할 수 없고 북적거림 서사도 있어 level 2.",
+      "value": 56
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "낚시와 신선한 해산물 식사 등 참여할 수 있는 구체적 활동이 확인된다. 지속적 참여·도전 활동이라는 근거는 없어 level 2.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 청사포가 어촌 포구임을 알리지만, 확인된 실제 원형·유산(문화유산, 역사적 실물)의 접촉 가능성에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a",
+          "quote": {
+            "end": 529,
+            "method": "EXACT",
+            "original": "청사포의 원래 이름은 ‘푸른 뱀’이란 뜻의 청사였다.",
+            "start": 500,
+            "submitted": "청사포의 원래 이름은 ‘푸른 뱀’이란 뜻의 청사였다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18f1fba104050cc946e74101b5f3de11a31eb3769a9ed1502152384e368dc7d8"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 2,
+      "reason": "개요가 장소의 옛 이름과 지명 유래 전설(부부와 용왕, 푸른 뱀)을 구체적으로 제시하여 이 장소 자체의 유래·서사 맥락을 이해할 수 있게 한다. 다만 사건·인물 중심의 심층 탐구라기보다 유래 소개 수준이므로 level 2~3 사이에서 2로 판단.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "미역 생산 유명 언급은 지역 생활문화의 흔적일 수 있으나, 현재 지역 주체의 전승·생활문화와 직접 연결되는 경험 제공에 대한 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "전설 서사는 자료의 설명이며, 현장에서 원형·전통에 연결된 해설·전시·탐구 프로그램이 제공된다는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a",
+          "quote": {
+            "end": 182,
+            "method": "EXACT",
+            "original": "이곳의 일출은 이미 아름답기로 정평이 나있다",
+            "start": 158,
+            "submitted": "이곳의 일출은 이미 아름답기로 정평이 나있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18f1fba104050cc946e74101b5f3de11a31eb3769a9ed1502152384e368dc7d8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "아름다운 일출로 정평이 났고 영화 촬영지로 알려졌다는 등 장소에 부여된 공유된 이미지·이야기가 확인되며, 지명 유래 전설도 상징적 의미를 더한다. 다만 다양한 표현에서 일관된 의미가 확인되는 수준까지는 근거가 부족해 level 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a",
+          "quote": {
+            "end": 415,
+            "method": "EXACT",
+            "original": "영화 ‘파랑주의보’의 촬영지로도 많이 알려져 더욱더 사랑을 받고 있다",
+            "start": 377,
+            "submitted": "영화 ‘파랑주의보’의 촬영지로도 많이 알려져 더욱더 사랑을 받고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18f1fba104050cc946e74101b5f3de11a31eb3769a9ed1502152384e368dc7d8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "영화 촬영지로 알려져 대중적으로 사랑받는다는 대표적 매체 표현의 근거가 있다. 반복되는 유통 근거는 부족하므로 level 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a",
+          "quote": {
+            "end": 347,
+            "method": "EXACT",
+            "original": "가끔씩 경적을 울리며 달리는 기차가 한적하고 조용한 시골 마을의 풍경을 더욱더 돋보이게 한다",
+            "start": 296,
+            "submitted": "가끔씩 경적을 울리며 달리는 기차가 한적하고 조용한 시골 마을의 풍경을 더욱더 돋보이게 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18f1fba104050cc946e74101b5f3de11a31eb3769a9ed1502152384e368dc7d8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "수리 제안의 인용은 E.c에 허용되지 않는 VISUAL_APPEARANCE 주장을 사용했으므로 같은 근거 구절을 VISUAL_EXPRESSION 주장으로 교정해 반영했다. 해변 철길과 포구, 시골 마을 풍경 등 장소를 구별 짓는 시각적 성격이 서술되나 두드러지거나 지배적이라는 근거는 없어 level 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "영화 촬영지라는 사실은 대표 장면·구도를 현장에서 직접 경험·재현할 수 있음을 보장하지 않으며, 관련 체험·재현 기회에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a",
+          "quote": {
+            "end": 234,
+            "method": "EXACT",
+            "original": "청사포의 해안 주변을 나있는 갯바위에는 낚시를 하기 위해 몰려온 강태공들로 항상 북적거리며",
+            "start": 184,
+            "submitted": "청사포의 해안 주변을 나있는 갯바위에는 낚시를 하기 위해 몰려온 강태공들로 항상 북적거리며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18f1fba104050cc946e74101b5f3de11a31eb3769a9ed1502152384e368dc7d8"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "갯바위 낚시, 해안 산책, 포구 식사 등 자율적으로 선택할 수 있는 활동 가능성이 서술된다. 다만 '북적거리며'라는 혼잡 표현은 여유를 제한할 수 있어 level 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a",
+          "quote": {
+            "end": 347,
+            "method": "EXACT",
+            "original": "가끔씩 경적을 울리며 달리는 기차가 한적하고 조용한 시골 마을의 풍경을 더욱더 돋보이게 한다",
+            "start": 296,
+            "submitted": "가끔씩 경적을 울리며 달리는 기차가 한적하고 조용한 시골 마을의 풍경을 더욱더 돋보이게 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18f1fba104050cc946e74101b5f3de11a31eb3769a9ed1502152384e368dc7d8"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "바다·갯바위·한적한 시골 마을 풍경 등 자연 환경 단서가 확인된다. 실제 고요함·회복 효과는 확정할 수 없고 북적거림 서사도 있어 level 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a",
+          "quote": {
+            "end": 498,
+            "method": "EXACT",
+            "original": "갓 잡아 올린 싱싱한 해산물을 한 점씩 맛보는 것도 묘미 중에 묘미이다",
+            "start": 459,
+            "submitted": "갓 잡아 올린 싱싱한 해산물을 한 점씩 맛보는 것도 묘미 중에 묘미이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18f1fba104050cc946e74101b5f3de11a31eb3769a9ed1502152384e368dc7d8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "낚시와 신선한 해산물 식사 등 참여할 수 있는 구체적 활동이 확인된다. 지속적 참여·도전 활동이라는 근거는 없어 level 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "음식점·횟집 서술은 개인적 식사 경험이며, 교류·공동 활동·자기표현의 기회에 대한 근거는 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "f040af6a612709f0bb0f27870b3640e7439ffa9dc7469cbe459a3957587c770b",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "방파제·콘크리트·소파블록 등 항만 시설 위주로 전통적 외관은 거의 보이지 않고 등대만 옅은 전통적 인상.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1d1ed300433c72d0fc08302acebe830b15b19ffd30d588af9fd46109ec775af9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "63f4646fbf9e01f07ea3939a62341b2d0a1ddf9e1d8720518120bbe5392e9682",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2927155",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0b43d1a32e6d5c4eead4253f10deafdffa11f1a779b6a77f73731dc349f76384",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/55/2927155.jpg"
+        },
+        "record_sha256": "ec16de2191043dc3ffcc9d67e0b2e2129766745c6614267b1c9deb5f3b1b9c5d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "등대 모양 건물과 콘크리트 방파제 등 해안 항만 시설의 단순한 외관이 보이나 전통적 재료·구성의 특성은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:55d758231c46be5fbe3dc22e76fd4e0db66f34332ef4d9e982c42e753d7a47cb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "70ff7d7edfd2b0258eb4331b75830b86154c6dabc82d16c91a5b57a4d4af6639",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3392562",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6b38811900c72cb689bc5adcae5e51ea6ea169bb021ff3997de1fd2fdca2555a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/62/3392562.jpg"
+        },
+        "record_sha256": "7e9f780d41baf37c564f1e4815ed960eb05cfc8cf747b6c7d236b0787e4f0992",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "머리말 너머 바다와 넓은 하늘·구름이 보이나, 전경은 포장 도로와 시설물이 차지해 자연 경관이 보통 수준으로 나타남.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:825f04023b73e0a068eefd56bb883283dcbcac2c672b5579915d8f649a9077da",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "70ff7d7edfd2b0258eb4331b75830b86154c6dabc82d16c91a5b57a4d4af6639",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3392562",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6b38811900c72cb689bc5adcae5e51ea6ea169bb021ff3997de1fd2fdca2555a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/62/3392562.jpg"
+        },
+        "record_sha256": "d59f577fd570418c30df8697d3cc1f0a50925ff44f24ef4542208a29037a8c0d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 바다, 갯바위 방파제, 파도, 언덕의 울창한 녹지와 먼 섬·산들이 화면 대부분을 차지하며 자연 경관이 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a2e0dc5d91a2e91d74e724649a5b44adb9bbbd26c5a814283ea5e16eb5c3c077",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d246aeb0e886a7436e76533b4613625881fe4a1c1968df3c44bc05acc5db67bc",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2928087",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c76082f02d8bf80a7c55912c14f49143f69d59e07ba342b46d056b8c273720c8",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/87/2928087.jpg"
+        },
+        "record_sha256": "445ed1ab90f455744738d62df41b3a52493d01a18d7c8b6250a1573825a8fa23",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰 등대형 건물이 푸른 하늘과 대비되며 장면의 중심을 이루고, 잔상 색과 전망대 구도가 시각적으로 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a2f7ff3fd596b67442ddcc1f4c32f9c2dde743953a570efd04f0ab9efc846362",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "70ff7d7edfd2b0258eb4331b75830b86154c6dabc82d16c91a5b57a4d4af6639",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3392562",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6b38811900c72cb689bc5adcae5e51ea6ea169bb021ff3997de1fd2fdca2555a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/62/3392562.jpg"
+        },
+        "record_sha256": "eada4941a1276e374b67244b8ecc443301608f9c807b2b5d3fd0de229fe29158",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "낮은 지붕의 오래된 해안 마을 건물과 좁은 골목 구성이 일부 보이지만 전통 재료나 공간 구성의 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ce0f3637c89e10ee14d9f5246f29287853316bf78a0dee24d073b8dd6a48a845",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d246aeb0e886a7436e76533b4613625881fe4a1c1968df3c44bc05acc5db67bc",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2928087",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c76082f02d8bf80a7c55912c14f49143f69d59e07ba342b46d056b8c273720c8",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/87/2928087.jpg"
+        },
+        "record_sha256": "f8d1fa577b68301cb46ac5eedc67ab054605dbbb5729a05315277553733b1854",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓게 트인 바다, 수평선, 갯바위 등 자연 경관이 화면 대부분을 차지함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e90f7228e89095167085aa8ae87394b9e0bc2f5e9e664a9940ad8fb0570acfd8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "63f4646fbf9e01f07ea3939a62341b2d0a1ddf9e1d8720518120bbe5392e9682",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2927155",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0b43d1a32e6d5c4eead4253f10deafdffa11f1a779b6a77f73731dc349f76384",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/55/2927155.jpg"
+        },
+        "record_sha256": "1090ff72127c2382be4dfd169f2210ed639c3e7899704f8d1e14acf2f2d91a71",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "밝은 청록빛 하늘과 회색 바다 대비 붉은 등대가 강렬한 시선을 끄는 절제된 색 구성으로 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f496461cce410f756bc7df35047f74156c8222a3b4dd8ee350d1c726e6db4fc5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "63f4646fbf9e01f07ea3939a62341b2d0a1ddf9e1d8720518120bbe5392e9682",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2927155",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0b43d1a32e6d5c4eead4253f10deafdffa11f1a779b6a77f73731dc349f76384",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/55/2927155.jpg"
+        },
+        "record_sha256": "28aa29bb6ce3568d1d47ea3b838885f4f2aa9ab0b8223261299c991c9d114696",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "청록색 바다, 에메랄드 해안선, 붉은 등대와 흰 등대의 대비, 푸른 하늘과 도시 스카이라인이 어우러진 강렬하고 선명한 색채 연출이 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ffb3fca63bb68f71fac53ec6bdd142954315533d84690f1f356812a79cafaf6c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d246aeb0e886a7436e76533b4613625881fe4a1c1968df3c44bc05acc5db67bc",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 해운대구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2928087",
+          "request_sha256": "a76a4e310d55b7a6605409603efabe7b6b697f6ad2a004ecb7a465d18619aea5",
+          "response_sha256": "258f0d2eaff4b1f3b78fc45ebb81096339336c4258a2c70c713e846e040372fa",
+          "retrieved_at": "2026-09-11T02:07:07.690224Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c76082f02d8bf80a7c55912c14f49143f69d59e07ba342b46d056b8c273720c8",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/87/2928087.jpg"
+        },
+        "record_sha256": "407bb3264676182803e2ccf009f7d914ba110652f09d1c926963964874e8d27d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4ebd92291b9203c17f004001b9a47f040550cc2d733a7894a48b8adc7a0dfd3f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129602",
+          "request_sha256": "80645ad7fbd8062aa8df98d17b70eb583013c111acbb188a78a23eceb6d9eeab",
+          "response_sha256": "82a46927d9db676912e8c717a2061ab1b555cdb839baab5123caa56621e941ba",
+          "retrieved_at": "2026-09-11T02:07:06.458914Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "3f3f5cf5436b9c970f3938134127d3a0ecf51a30d106eee37c23fd7d731ac394",
+          "source_uri": null
+        },
+        "record_sha256": "2bab5c4959a896cc32f7e911395b06909c7f5f681229bb4b415b2fa43dfa6ce3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c5815df44c5214459d8d1b2d5b480d4fe7dd0f341dc6548c3a6cf6993eaa588a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "129602",
+          "request_sha256": "346501756da0cb222ea9479a43403ddc913838038f0ae5b1957a9270b1d0d0c7",
+          "response_sha256": "a316c2eab2b4d33b5277d05088fffb3e5a25de690f401c9cd94143bc4cf247b6",
+          "retrieved_at": "2026-09-10T17:12:01.490451Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-11T01:03:40Z",
+          "source_record_sha256": "11de0e7e7f345580960ebed65d5cf5c852eb5914b6511829eb6e4f6e71cd56d0",
+          "source_uri": null
+        },
+        "record_sha256": "18f1fba104050cc946e74101b5f3de11a31eb3769a9ed1502152384e368dc7d8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "해운대 달맞이언덕을 따라 송정방향으로 가다 보면 오른쪽 아래로 보이는 곳이 청사포이다. 부산의 해운대와 송정 사이에는 세 개의 작은 포구가 해안을 따라 나란히 놓여있다. 구덕포, 미포와 더불어 청사포가 바로 그 작은 포구이다. 청사포는 질이 아주 뛰어난 미역이 생산되기로 유명하며, 이곳의 일출은 이미 아름답기로 정평이 나있다. 청사포의 해안 주변을 나있는 갯바위에는 낚시를 하기 위해 몰려온 강태공들로 항상 북적거리며, 특히 고등어가 제철인 가을에는 더 많은 사람들이 찾아온다. 그리고 해안을 끼고 동해남부선이 길게 뻗어 있어 가끔씩 경적을 울리며 달리는 기차가 한적하고 조용한 시골 마을의 풍경을 더욱더 돋보이게 한다. 이 철로는 전국에서 단 두 곳뿐인 해변 철길이며, 영화 ‘파랑주의보’의 촬영지로도 많이 알려져 더욱더 사랑을 받고 있다. 또 포구의 한쪽으로 주욱 늘어선 음식점과 횟집에서 한적한 포구를 배경 삼아 갓 잡아 올린 싱싱한 해산물을 한 점씩 맛보는 것도 묘미 중에 묘미이다. 청사포의 원래 이름은 ‘푸른 뱀’이란 뜻의 청사였다. 그 이름에 얽힌 전설은 예전에 이 마을에 살던 금실 좋은 부부가 살았는데, 고기잡이 나간 남편이 바다에 빠져 죽자, 그 아내는 해안가 바위에 올라 매일 같이 남편을 기다렸는데, 이를 애처롭게 여긴 용왕이 푸른 뱀을 보내어 부인을 동해 용궁으로 더러와 죽은 남편과 만나게 했다는 애틋한 전설이다. 그런데 마을지명에 뱀이란 단어가 들어가는 것이 좋지 않다 하여 최근엔 ‘푸른 모래의 포구’란 이름으로 바뀌었다."
+      }
+    ],
+    "parent_source_sha256": "fce53fdc2d28a0aad8c45edb03285fc66bf4b42acb199b615958ca83e31b4993",
+    "place": {
+      "address": "부산광역시 해운대구 중동",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+      "name_ko": "청사포",
+      "place_id": "public:korea:8976939d049ccb9c974a1785d2349ce3291a9b94c5b0f79358f2d11df7ff371d",
+      "provider_content_id": "129602",
+      "region_code": "26350",
+      "region_name": "부산광역시 해운대구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

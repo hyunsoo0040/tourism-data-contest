@@ -92,7 +92,9 @@ def test_definition_matches_committed_artifact_texts_exactly() -> None:
         assert question.title_ko == artifact_question["title_ko"]
         assert question.description_ko == artifact_question["description_ko"]
         for option, artifact_option in zip(
-            question.options, artifact_question["options"], strict=True  # type: ignore[arg-type]
+            question.options,
+            artifact_question["options"],
+            strict=True,  # type: ignore[arg-type]
         ):
             assert option.text_ko == artifact_option["text_ko"]
             assert option.keywords_ko == tuple(artifact_option["keywords_ko"])  # type: ignore[arg-type]
@@ -102,13 +104,13 @@ def test_scoring_matrix_is_frozen_deterministic_and_canonical() -> None:
     matrix = QUESTIONNAIRE_DEFINITION_V2.scoring_matrix
     assert len(matrix) == 36
     expected_q5o2 = {
-        "HISTORY_TRADITION": 1,
-        "EMOTION_IMAGE": 1,
-        "REST_IMMERSION": 4,
+        "HISTORY_TRADITION": -1,
+        "EMOTION_IMAGE": 0,
+        "REST_IMMERSION": 1,
     }
     assert matrix["q5o2"] == expected_q5o2
     for choice_id, row in matrix.items():
-        assert sum(row.values()) == AXIS_WEIGHT_TOTAL
+        assert sum(row.values()) == (0 if choice_id == "q5o2" else AXIS_WEIGHT_TOTAL)
         primary = max(row, key=lambda axis: row[axis])
         axis_by_choice = {
             option.choice_id: option.axis
@@ -228,3 +230,38 @@ def test_definition_rejects_matrix_not_matching_choice_axes() -> None:
     payload["scoring_matrix"]["q1o1"]["REST_IMMERSION"] = 9
     with pytest.raises(ValidationError):
         QuestionnaireDefinitionV2.model_validate(payload)
+
+
+def test_pdf_revision3_snapshot_matches_and_current_copy_preserves_scoring() -> None:
+    reference = json.loads(
+        (REPO_ROOT / "fixtures/synthetic/questionnaire-pdf-revision3.json").read_text()
+    )
+    previous = json.loads((REPO_ROOT / "contracts/questionnaire-v2-20260908.json").read_text())
+    assert len(reference["questions"]) == 12
+    assert previous["scoring_matrix"] == QUESTIONNAIRE_DEFINITION_V2.scoring_matrix
+    assert previous["scoring_version"] == QUESTIONNAIRE_DEFINITION_V2.scoring_version
+    for expected, old, current in zip(
+        reference["questions"],
+        previous["questions"],
+        QUESTIONNAIRE_DEFINITION_V2.questions,
+        strict=True,
+    ):
+        assert expected["question_id"] == old["question_id"] == current.question_id
+        assert expected["title_ko"] == old["title_ko"]
+        for option, choice, now in zip(
+            expected["options"], old["options"], current.options, strict=True
+        ):
+            assert option["value"] == choice["value"] == now.value
+            assert option["text_ko"] == choice["text_ko"]
+            assert choice["axis"] == now.axis
+            assert option["scoring"] == QUESTIONNAIRE_DEFINITION_V2.scoring_matrix[now.choice_id]
+
+
+def test_distribution_denominators_count_options_not_covered_questions() -> None:
+    from itda.contracts.questionnaire_v2 import SCORING_CONFIG_V2
+
+    assert dict(SCORING_CONFIG_V2["positive_choice_counts"]) == {
+        "HISTORY_TRADITION": 14,
+        "EMOTION_IMAGE": 11,
+        "REST_IMMERSION": 11,
+    }

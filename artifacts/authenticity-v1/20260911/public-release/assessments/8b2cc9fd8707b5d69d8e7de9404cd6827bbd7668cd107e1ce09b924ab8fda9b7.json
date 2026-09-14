@@ -1,0 +1,855 @@
+{
+  "assessed_at": "2026-09-11T19:17:43.977443Z",
+  "assessment_sha256": "8b2cc9fd8707b5d69d8e7de9404cd6827bbd7668cd107e1ce09b924ab8fda9b7",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.a"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 77
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "코스 안내에 봉수대가 있는 해변을 지나간다고 명시되어 원형 유산과의 제한적 접촉이 확인되나, 봉수대 자체를 관람·탐구하는 경험으로 소개되지는 않는다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:18e2dbb9597e6172dd1e332c37891c7b194f01177b5ae2b485042e0d9b7b9ad7",
+            "appearance:3c0fca1e7a3e1c4db2df9b50348bda8d2daa27ad3dc51f9a6d93b8e3294a4b14",
+            "appearance:a48a52a089cebeee47461515aa7f5423ad203455bb09817bae82bc3d0a14cdb0"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "바다와 한옥의 조화, 옵바위의 물빛 등 구별되는 시각적 성격의 표현이 묘사되어 있으나 이를 지배하는 일관된 연출 수준까지는 확인되지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "왕곡마을에 포토존이 있어 대표 장면을 직접 경험하고 촬영으로 재현할 수 있다고 명시되어 있으나, 이미지 체험이 방문 경험의 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "9.7km 구간을 스스로 걷는 도보 코스로서 자율적으로 탐색하고 여유롭게 이동할 기회가 제공된다. 일상 이탈 경험이 중심이라는 근거는 없어 상위 등급은 제한한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:9cd8c3861509ebdab48cc7952276411405bb4848239ccab77f58766ba588f4c4",
+            "appearance:9da972614ade4e7c52e61930dbfd61fe7378303b2008124c42d48ece0827fbe8",
+            "appearance:9f917d1b1e59a300b6e0b99a14d7374a7d26545777f205dcd0f974d136b02a24"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "바다·호수·산책로 등 자연 환경 단서가 확인되며 편안함을 돕는 환경으로 소개되나, 실제 고요함·저자극성이 장면을 지배한다고 단정하기는 어렵고 철책 구간도 언급된다.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "9.7km 도보 탐방과 왕곡마을의 체험할 거리가 구체적 참여 활동으로 제시된다. 지속적 도전·집중 활동의 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c",
+          "quote": {
+            "end": 77,
+            "method": "EXACT",
+            "original": "삼포해변을 시작으로 봉수대가 있는 봉수대해변, 오호항과 송지호해변을 지나 송지호",
+            "start": 33,
+            "submitted": "삼포해변을 시작으로 봉수대가 있는 봉수대해변, 오호항과 송지호해변을 지나 송지호",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7763d6ef700a0dc03e128093a144d2a7609b21d999c370fbdf5bd9f322b18f77"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 1,
+      "reason": "코스 안내에 봉수대가 있는 해변을 지나간다고 명시되어 원형 유산과의 제한적 접촉이 확인되나, 봉수대 자체를 관람·탐구하는 경험으로 소개되지는 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 코스의 역사적 사건·인물·연혁에 대한 구체적 서사는 제공되지 않았다. 지명과 경유지 소개만으로 역사 맥락의 구체성을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "왕곡마을·민박 언급이 있으나 지역 주체의 실제 전승·생활문화와의 연결 여부를 확인할 근거가 부족하다. 전통풍 풍경 묘사만으로 현재 전승을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "봉수대·서낭바위 등 유산에 연결된 해설·학습 프로그램에 대한 근거가 없다. 경유지 나열만으로 원형 맥락의 탐구를 인정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "오호항 서낭바위·옵바위 등 명소 언급이 있으나 사회적으로 공유되는 구체적 이미지·상징적 의미의 내용이 제시되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 코스의 이미지가 작품·홍보·매체에서 재현·확산되고 있다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c",
+          "quote": {
+            "end": 366,
+            "method": "EXACT",
+            "original": "바다와 한옥의 조화로움이 고즈넉한 아름다움을 연출한다",
+            "start": 337,
+            "submitted": "바다와 한옥의 조화로움이 고즈넉한 아름다움을 연출한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7763d6ef700a0dc03e128093a144d2a7609b21d999c370fbdf5bd9f322b18f77"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "바다와 한옥의 조화, 옵바위의 물빛 등 구별되는 시각적 성격의 표현이 묘사되어 있으나 이를 지배하는 일관된 연출 수준까지는 확인되지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c",
+          "quote": {
+            "end": 418,
+            "method": "EXACT",
+            "original": "체험할 것이 많은데, 포토존까지 겸비하고 있어 재미있는 추억을 만들기에 충분하다",
+            "start": 374,
+            "submitted": "체험할 것이 많은데, 포토존까지 겸비하고 있어 재미있는 추억을 만들기에 충분하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7763d6ef700a0dc03e128093a144d2a7609b21d999c370fbdf5bd9f322b18f77"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "왕곡마을에 포토존이 있어 대표 장면을 직접 경험하고 촬영으로 재현할 수 있다고 명시되어 있으나, 이미지 체험이 방문 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c",
+          "quote": {
+            "end": 31,
+            "method": "EXACT",
+            "original": "삼포해변에서 가진항까지 걷는 코스이다",
+            "start": 11,
+            "submitted": "삼포해변에서 가진항까지 걷는 코스이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7763d6ef700a0dc03e128093a144d2a7609b21d999c370fbdf5bd9f322b18f77"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "9.7km 구간을 스스로 걷는 도보 코스로서 자율적으로 탐색하고 여유롭게 이동할 기회가 제공된다. 일상 이탈 경험이 중심이라는 근거는 없어 상위 등급은 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c",
+          "quote": {
+            "end": 227,
+            "method": "EXACT",
+            "original": "넓은 바다가 계속 이어져 걷는 동안 마음을 편안하게 만들어준다",
+            "start": 193,
+            "submitted": "넓은 바다가 계속 이어져 걷는 동안 마음을 편안하게 만들어준다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7763d6ef700a0dc03e128093a144d2a7609b21d999c370fbdf5bd9f322b18f77"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "바다·호수·산책로 등 자연 환경 단서가 확인되며 편안함을 돕는 환경으로 소개되나, 실제 고요함·저자극성이 장면을 지배한다고 단정하기는 어렵고 철책 구간도 언급된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c",
+          "quote": {
+            "end": 191,
+            "method": "EXACT",
+            "original": "볼거리도 많고 체험할 것이 많은 구간이다",
+            "start": 169,
+            "submitted": "볼거리도 많고 체험할 것이 많은 구간이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7763d6ef700a0dc03e128093a144d2a7609b21d999c370fbdf5bd9f322b18f77"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "9.7km 도보 탐방과 왕곡마을의 체험할 거리가 구체적 참여 활동으로 제시된다. 지속적 도전·집중 활동의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "민박 추천은 숙박 안내일 뿐 교류·공동 활동·자기표현 기회에 대한 근거가 부족하다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "c71d553c68ac48ff461dad89b0024cded1523405c1b19d6d7d95185e85efc832",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "fd4b9aaf1be7b6df3c829819f0022c613d7be851216beea2e82205a4b9054261",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "소나무 숲 사이로 곡선형 목책 산책로가 중앙 소실점으로 이어지는 구도가 안정적이며, 짙은 녹색 수관과 회색 데크의 색 대비가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:18e2dbb9597e6172dd1e332c37891c7b194f01177b5ae2b485042e0d9b7b9ad7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c22154490ed87f5934f8487bd047b15b1f44583e76c6be0efc355db24c01d647",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100972_3",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9bb755bdb1545f5a6741eb01c4f8ea7fb3947d6959e89a1ba955e9880eb27860",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/72/4100972_image2_1.jpg"
+        },
+        "record_sha256": "8dfebbf5cecdfb92bb9a8fc6c3db60c1c7dc55b262bd65a2602f97fe05ff869a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "청색 하늘과 푸른 바다, 넓은 백사장의 강렬한 색 대비와 수평 구도가 시각적으로 두드러지며, 노란 표지판이 보색 포인트로 작용한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3c0fca1e7a3e1c4db2df9b50348bda8d2daa27ad3dc51f9a6d93b8e3294a4b14",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0d722ce0e142dea563e7b5e7d2cf1b6286e6f28be497b4ea707a664e32ca0387",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100969_6",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "06ccdbb0f4b9fb50423ed52b3c411dde43399aa2989dcbc98ab4512b91bdb1c8",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/69/4100969_image2_1.jpg"
+        },
+        "record_sha256": "ca23ddc786b37fc93d1e85538ea8746331b6045dc4ff45afdb82a9d4ea807246",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "바다, 모래사장, 암석 군락, 저 멀리 섬과 하늘이 화면 전체를 지배하는 자연 경관",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9cd8c3861509ebdab48cc7952276411405bb4848239ccab77f58766ba588f4c4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "752963c7df919d2087f1af6645422306f3acf6a1bd11ad57f222f0b881539a8c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100966_8",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7c5fe6d45cca63bb99bf6de5717d68ba38e6de81c25729dc7196a048d0c2643a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/66/4100966_image2_1.jpg"
+        },
+        "record_sha256": "a95a34f27c2111f529405fec8eb6878fea9ba9d7b75a32321f3a5523da24e053",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 모래사장, 에메랄드빛 바다, 초록빛 언덕, 트인 하늘 등 자연 경관이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9da972614ade4e7c52e61930dbfd61fe7378303b2008124c42d48ece0827fbe8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0d722ce0e142dea563e7b5e7d2cf1b6286e6f28be497b4ea707a664e32ca0387",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100969_6",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "06ccdbb0f4b9fb50423ed52b3c411dde43399aa2989dcbc98ab4512b91bdb1c8",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/69/4100969_image2_1.jpg"
+        },
+        "record_sha256": "2373861b5d16e746fe1dc7eb0cfb6cf5e49bbf6ae6c99052978085d32d4d9a07",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 소나무 숲, 나무 사이로 보이는 호수·습지 수면, 숲속 초본이 화면 전체를 지배하는 자연 환경이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9f917d1b1e59a300b6e0b99a14d7374a7d26545777f205dcd0f974d136b02a24",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c22154490ed87f5934f8487bd047b15b1f44583e76c6be0efc355db24c01d647",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100972_3",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9bb755bdb1545f5a6741eb01c4f8ea7fb3947d6959e89a1ba955e9880eb27860",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/72/4100972_image2_1.jpg"
+        },
+        "record_sha256": "9e5d8338c50013261659d4fbf1be13d87ff12301837db9d3bf0393b3eabd2b55",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "맑은 청록·에메랄드빛 바다, 부드러운 모래사장, 넓은 하늘이 조화된 밝고 개방감 있는 색채와 구도가 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a48a52a089cebeee47461515aa7f5423ad203455bb09817bae82bc3d0a14cdb0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "752963c7df919d2087f1af6645422306f3acf6a1bd11ad57f222f0b881539a8c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100966_8",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7c5fe6d45cca63bb99bf6de5717d68ba38e6de81c25729dc7196a048d0c2643a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/66/4100966_image2_1.jpg"
+        },
+        "record_sha256": "00c052f18c5840a29749b46298cf3f63a007d644ce7a774803047a7921527e22",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 시각적 단서가 보이지 않으며, 현대적 교량과 해변 풍경만 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:be5b9c7a168981d7f73fa57e4ca3c93c194daa3462bf86910607ae4a232d7a2e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0d722ce0e142dea563e7b5e7d2cf1b6286e6f28be497b4ea707a664e32ca0387",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100969_6",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "06ccdbb0f4b9fb50423ed52b3c411dde43399aa2989dcbc98ab4512b91bdb1c8",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/69/4100969_image2_1.jpg"
+        },
+        "record_sha256": "dcc926af231d01eca7ebe750c9a2f9c7f4a7f024dd7f4af2992eb2fedee5f259",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "목재 데크와 원목 형태의 난간 등 자연재료 느낌의 전통적 산책로 외관이 보이나 시설물 자체는 현대적 조성으로도 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e4ac1bb63016f3095c1e91a65bfe4f2f73242e7a9e86d5f5077a9bef7ab452b0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c22154490ed87f5934f8487bd047b15b1f44583e76c6be0efc355db24c01d647",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100972_3",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9bb755bdb1545f5a6741eb01c4f8ea7fb3947d6959e89a1ba955e9880eb27860",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/72/4100972_image2_1.jpg"
+        },
+        "record_sha256": "8daabc3e9d37b77376d39a14e03211841488effa99e479a41bc32d653e676f6d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축·재료·공간 구성으로 보이는 시각적 요소는 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fdd819befdc3502822cdab13570765c4ac928f416472740e922440447f05bf63",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "752963c7df919d2087f1af6645422306f3acf6a1bd11ad57f222f0b881539a8c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4100966_8",
+          "request_sha256": "6bf56459cbe08b55ef2b771506a1b682b488b89cdf23672a8b9b98a84ef4251f",
+          "response_sha256": "62ff4032b724911009236993186f95af4e1f8555aaf6f8db52822afec52cfc31",
+          "retrieved_at": "2026-09-10T08:29:03.974493Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7c5fe6d45cca63bb99bf6de5717d68ba38e6de81c25729dc7196a048d0c2643a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/66/4100966_image2_1.jpg"
+        },
+        "record_sha256": "ada73913b1019a4feb958fb56ad7bcf637fb57e1f0e6e2ed82353939cd8fa175",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:bacf440bd3a9f2e36337772ec5e924134c54a25b31f60ad7d127eb799cc07c6c",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2782509",
+          "request_sha256": "8b4063800d351ebb410d4f4eab5ef423b281de5bb61d284c0bc7a80305d8d504",
+          "response_sha256": "56b25434c01e68826fba2166b9c1e4ab4f14cc64f0d97024a174bc90a22014ac",
+          "retrieved_at": "2026-09-10T08:02:53.096474Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-08-19T04:55:55Z",
+          "source_record_sha256": "66ed77f904be9a3c434cb5ccf390ec5eb24d8beeb6ae83a6f1042eeefe116313",
+          "source_uri": null
+        },
+        "record_sha256": "7763d6ef700a0dc03e128093a144d2a7609b21d999c370fbdf5bd9f322b18f77",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "해파랑길 47코스는 삼포해변에서 가진항까지 걷는 코스이다. 삼포해변을 시작으로 봉수대가 있는 봉수대해변, 오호항과 송지호해변을 지나 송지호, 왕곡마을, 공현진항을 거쳐 가진항에 이르는 9.7㎞ 구간이다. 해안 길로 다른 코스에 비해 비교적 짧고 평탄하다. 짧은 코스이기 때문에 쉽게 지나칠 수 있지만, 볼거리도 많고 체험할 것이 많은 구간이다. 넓은 바다가 계속 이어져 걷는 동안 마음을 편안하게 만들어준다. 특히 오호항의 서낭바위와 송지호해변의 죽도의 풍경을 추천한다. 이 모든 것을 송지호 철새관망타워에서 한눈에 바라볼 수 있다. 송지호 산책로를 따라 조금 더 걷다 보면 고성 왕곡마을이 나오는데, 바다와 한옥의 조화로움이 고즈넉한 아름다움을 연출한다. 이곳에서는 체험할 것이 많은데, 포토존까지 겸비하고 있어 재미있는 추억을 만들기에 충분하다. 민박도 가능해서 47코스에서 숙박을 할 예정이라면 왕곡마을을 추천한다. 옵바위로 유명한 공현진 해변은 마치 태평양의 유명 휴양지에 와 있는 물빛을 자랑한다. 이곳부터 가진항까지는 바닷가로 철책이 가로막힌 길을 따라 걸을 수 있다."
+      }
+    ],
+    "parent_source_sha256": "659f91597db0187d85a1095596e4651009e6e4e7db1d4b5f6811069888d4136f",
+    "place": {
+      "address": "강원특별자치도 고성군 죽왕면 삼포해변길 15-4",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+      "name_ko": "[해파랑길] 47코스",
+      "place_id": "public:korea:db57acbb31f4770e5741b320f2ce476c6c1716ed1db0ef7b7f097b43bd22299b",
+      "provider_content_id": "2782509",
+      "region_code": "51820",
+      "region_name": "강원특별자치도 고성군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

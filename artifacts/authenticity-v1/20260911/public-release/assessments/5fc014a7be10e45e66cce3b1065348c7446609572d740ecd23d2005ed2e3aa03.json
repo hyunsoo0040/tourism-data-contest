@@ -1,0 +1,975 @@
+{
+  "assessed_at": "2026-09-11T18:42:49.566232Z",
+  "assessment_sha256": "5fc014a7be10e45e66cce3b1065348c7446609572d740ecd23d2005ed2e3aa03",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 100
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 69
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:392b42b92740472bb8280370f8cf9153b9a33bb4cc35b7e17c1ca7158ab0462a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "오릉은 실제 신라 초기 봉토무덤(사적)이며 숭덕전, 알영정 등 확인된 유산을 방문자가 직접 관람·탐구할 수 있는 장소다. 무덤 접촉이 관람의 중심이라 level 4로 판단. 다만 내부 구조는 알 수 없음이 명시되어 실물 내부 탐구는 아니다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:392b42b92740472bb8280370f8cf9153b9a33bb4cc35b7e17c1ca7158ab0462a",
+            "evidence:b1edbb12f2b81e04c39ec8538ffee88fbc9380128f8414f64562be903d8d3122"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "삼국사기·삼국유사의 상충 기록, 무덤 형식의 연대(4세기 이후), 왕호 변천 등 이 장소의 구체적 역사 맥락을 다층적으로 제시하며 해설이 역사 탐구의 중심이다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b1edbb12f2b81e04c39ec8538ffee88fbc9380128f8414f64562be903d8d3122",
+            "evidence:e6abff8acf606ec5aae1412731492d973342e0453274b0af0f0aea91637b0a0d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "Odii 해설이 문헌 기록 비교, 왕호 변천, 알영정 설화와 당대 우물 문화 해석까지 연결해 원형·유산에 대한 깊은 해설과 탐구를 제공한다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b1edbb12f2b81e04c39ec8538ffee88fbc9380128f8414f64562be903d8d3122",
+            "evidence:e6abff8acf606ec5aae1412731492d973342e0453274b0af0f0aea91637b0a0d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "오릉·사릉 명칭 유래 설화와 알영정 탄생 설화 등 구체적인 이야기·의미가 장소와 연결되어 있다. 매체 확산 근거는 별도로 제한적이라 level 3.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:586ccb134b044ffa3dd067b33e435b3d09bfecb4a8e16a9d844fa41e4ea653a2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "Odii 오디오 해설이라는 한 매체를 통해 장소의 서사적 이미지가 표현·유통된다는 근거는 있으나, 반복적 확산이나 대중 매체 표현의 규모에 대한 근거는 없어 level 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1833c0a9ebaefe0aac54712b8708a1244bd36dac539e94c6a26c6cc9d86c7f10",
+            "appearance:a00f11191c8b49c20c622d5be351ad0a61a2515e59e5015b84c938ae992636c3"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제공된 자료에는 외관·경관·연출 등 시각적 표현에 대한 묘사가 없다. 저자극 직접 근거도 없어 UNKNOWN이며, 0(낮음)의 명시적 근거도 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:586ccb134b044ffa3dd067b33e435b3d09bfecb4a8e16a9d844fa41e4ea653a2",
+            "evidence:e6abff8acf606ec5aae1412731492d973342e0453274b0af0f0aea91637b0a0d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "설화의 현장(숭덕전, 알영정)을 직접 방문하고 해설 동선에 따라 이야기를 경험할 수 있다. 재현·참여 활동까지는 확인되지 않아 level 3.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:7825fd0e3634dff6d70d8df82af6915f681e5ab6d7cb755b28329db1874d08d9"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "봉토무덤·우물 등 환경 단서를 직접 묘사하거나 고요함·자연 환경에 대한 근거가 자료에 없다. 홍보 문구만으로 추정하지 않으므로 UNKNOWN.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:392b42b92740472bb8280370f8cf9153b9a33bb4cc35b7e17c1ca7158ab0462a",
+          "quote": {
+            "end": 58,
+            "method": "EXACT",
+            "original": "경주시 탑동에 위치한 4기의 봉토무덤과 1기의 원형무덤이다. 1969년 8월 27일 사적으로 지정되었으며",
+            "start": 0,
+            "submitted": "경주시 탑동에 위치한 4기의 봉토무덤과 1기의 원형무덤이다. 1969년 8월 27일 사적으로 지정되었으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "04ea1616a1221d5a46a1fc50cd84c2e9434f24401c22ba2ed76d51e820fced37"
+        },
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:392b42b92740472bb8280370f8cf9153b9a33bb4cc35b7e17c1ca7158ab0462a",
+          "quote": {
+            "end": 536,
+            "method": "EXACT",
+            "original": "오릉 동편에는 시조왕의 위패를 모시는 숭덕전이 있으며, 그 뒤에는 알영부인의 탄생과 관련한 알영정이 보존되어 있다.",
+            "start": 472,
+            "submitted": "오릉 동편에는 시조왕의 위패를 모시는 숭덕전이 있으며, 그 뒤에는 알영부인의 탄생과 관련한 알영정이 보존되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "04ea1616a1221d5a46a1fc50cd84c2e9434f24401c22ba2ed76d51e820fced37"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 4,
+      "reason": "오릉은 실제 신라 초기 봉토무덤(사적)이며 숭덕전, 알영정 등 확인된 유산을 방문자가 직접 관람·탐구할 수 있는 장소다. 무덤 접촉이 관람의 중심이라 level 4로 판단. 다만 내부 구조는 알 수 없음이 명시되어 실물 내부 탐구는 아니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:392b42b92740472bb8280370f8cf9153b9a33bb4cc35b7e17c1ca7158ab0462a",
+          "quote": {
+            "end": 340,
+            "method": "EXACT",
+            "original": "『삼국사기』에는 신라 시조 박혁거세와 왕비 알영부인, 제2대 남해왕, 제3대 유리왕, 제5대 파사왕 등 신라 초기 4명의 박씨 임금과 왕비 1명의 무덤이라 나와 있다.",
+            "start": 247,
+            "submitted": "『삼국사기』에는 신라 시조 박혁거세와 왕비 알영부인, 제2대 남해왕, 제3대 유리왕, 제5대 파사왕 등 신라 초기 4명의 박씨 임금과 왕비 1명의 무덤이라 나와 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "04ea1616a1221d5a46a1fc50cd84c2e9434f24401c22ba2ed76d51e820fced37"
+        },
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:b1edbb12f2b81e04c39ec8538ffee88fbc9380128f8414f64562be903d8d3122",
+          "quote": {
+            "end": 289,
+            "method": "EXACT",
+            "original": "이들을 사릉원 안에서 장사 지냈다는 기록이 있기 때문이지요. 이때‘사릉’의 사는 뱀 사자입니다.",
+            "start": 236,
+            "submitted": "이들을 사릉원 안에서 장사 지냈다는 기록이 있기 때문이지요. 이때‘사릉’의 사는 뱀 사자입니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8e88d2d907ac23ff879d047b59ba3dca42c2beb0ece67c7bcd01dd08916dbaa0"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 4,
+      "reason": "삼국사기·삼국유사의 상충 기록, 무덤 형식의 연대(4세기 이후), 왕호 변천 등 이 장소의 구체적 역사 맥락을 다층적으로 제시하며 해설이 역사 탐구의 중심이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:b1edbb12f2b81e04c39ec8538ffee88fbc9380128f8414f64562be903d8d3122",
+          "quote": {
+            "end": 131,
+            "method": "EXACT",
+            "original": "삼국사기와 삼국유사의 기록을 통해 무덤의 주인을 추측해 볼 수는 있어요.",
+            "start": 91,
+            "submitted": "삼국사기와 삼국유사의 기록을 통해 무덤의 주인을 추측해 볼 수는 있어요.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8e88d2d907ac23ff879d047b59ba3dca42c2beb0ece67c7bcd01dd08916dbaa0"
+        },
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:e6abff8acf606ec5aae1412731492d973342e0453274b0af0f0aea91637b0a0d",
+          "quote": {
+            "end": 491,
+            "method": "EXACT",
+            "original": "옛날 사회에서 우물은 사회 구성원들에게 식수를 공급해 줄 뿐만 아니라 물이 곧 생명을 상징한다는 점에서 중요한 공간으로 여겨졌다고 합니다.",
+            "start": 414,
+            "submitted": "옛날 사회에서 우물은 사회 구성원들에게 식수를 공급해 줄 뿐만 아니라 물이 곧 생명을 상징한다는 점에서 중요한 공간으로 여겨졌다고 합니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6963389e2c2b35ea4e250a759ab7d45d410bbbef96e6f9f38658a3209bc9e10b"
+        }
+      ],
+      "flags": [],
+      "key": "H.d",
+      "level": 4,
+      "reason": "Odii 해설이 문헌 기록 비교, 왕호 변천, 알영정 설화와 당대 우물 문화 해석까지 연결해 원형·유산에 대한 깊은 해설과 탐구를 제공한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e6abff8acf606ec5aae1412731492d973342e0453274b0af0f0aea91637b0a0d",
+          "quote": {
+            "end": 70,
+            "method": "EXACT",
+            "original": "알영정은 신라 시조 박혁거세의 부인인 알영의 탄생 설화가 깃든 곳이지요.",
+            "start": 30,
+            "submitted": "알영정은 신라 시조 박혁거세의 부인인 알영의 탄생 설화가 깃든 곳이지요.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6963389e2c2b35ea4e250a759ab7d45d410bbbef96e6f9f38658a3209bc9e10b"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:b1edbb12f2b81e04c39ec8538ffee88fbc9380128f8414f64562be903d8d3122",
+          "quote": {
+            "end": 578,
+            "method": "EXACT",
+            "original": "그래서 다섯 부분으로 흩어진 몸을 각각 묻었어요. 그것을 오릉이라고 하고, 뱀이 나타나서 사릉이라 했답니다.",
+            "start": 518,
+            "submitted": "그래서 다섯 부분으로 흩어진 몸을 각각 묻었어요. 그것을 오릉이라고 하고, 뱀이 나타나서 사릉이라 했답니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8e88d2d907ac23ff879d047b59ba3dca42c2beb0ece67c7bcd01dd08916dbaa0"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "오릉·사릉 명칭 유래 설화와 알영정 탄생 설화 등 구체적인 이야기·의미가 장소와 연결되어 있다. 매체 확산 근거는 별도로 제한적이라 level 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:586ccb134b044ffa3dd067b33e435b3d09bfecb4a8e16a9d844fa41e4ea653a2",
+          "quote": {
+            "end": 71,
+            "method": "EXACT",
+            "original": "오릉 안에는 박혁거세의 위패를 모신 숭덕전이 있습니다. 조선 세종 때 세워졌으나 임진왜란 때 불타버린 것을 선조 때 다시 지었고",
+            "start": 0,
+            "submitted": "오릉 안에는 박혁거세의 위패를 모신 숭덕전이 있습니다. 조선 세종 때 세워졌으나 임진왜란 때 불타버린 것을 선조 때 다시 지었고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5d87d2d4c0f60e41ceef34266525fcabe31a4669f0de214db9230324eb3e83eb"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "Odii 오디오 해설이라는 한 매체를 통해 장소의 서사적 이미지가 표현·유통된다는 근거는 있으나, 반복적 확산이나 대중 매체 표현의 규모에 대한 근거는 없어 level 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "제공된 자료에는 외관·경관·연출 등 시각적 표현에 대한 묘사가 없다. 저자극 직접 근거도 없어 UNKNOWN이며, 0(낮음)의 명시적 근거도 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:e6abff8acf606ec5aae1412731492d973342e0453274b0af0f0aea91637b0a0d",
+          "quote": {
+            "end": 29,
+            "method": "EXACT",
+            "original": "오릉의 숭덕전 뒤편에는 알영정이라는 우물이 있습니다.",
+            "start": 0,
+            "submitted": "오릉의 숭덕전 뒤편에는 알영정이라는 우물이 있습니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6963389e2c2b35ea4e250a759ab7d45d410bbbef96e6f9f38658a3209bc9e10b"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:586ccb134b044ffa3dd067b33e435b3d09bfecb4a8e16a9d844fa41e4ea653a2",
+          "quote": {
+            "end": 683,
+            "method": "EXACT",
+            "original": "숭덕전을 둘러본 뒤, 알영정으로 이동해 보시는 건 어떨까요?",
+            "start": 650,
+            "submitted": "숭덕전을 둘러본 뒤, 알영정으로 이동해 보시는 건 어떨까요?",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5d87d2d4c0f60e41ceef34266525fcabe31a4669f0de214db9230324eb3e83eb"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "설화의 현장(숭덕전, 알영정)을 직접 방문하고 해설 동선에 따라 이야기를 경험할 수 있다. 재현·참여 활동까지는 확인되지 않아 level 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "봉토무덤·우물 등 환경 단서를 직접 묘사하거나 고요함·자연 환경에 대한 근거가 자료에 없다. 홍보 문구만으로 추정하지 않으므로 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "제사는 박씨 문중이 주관하는 활동이지 방문자 참여 체험이 아니며, 관람 외 집중적 참여·도전 활동의 근거가 없다. 낮음을 명시한 자료도 없어 UNKNOWN.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "방문자 간 교류·공동 활동·자기표현의 기회에 대한 근거가 자료에 없다. 문중 제사가 방문자 교류를 의미하지 않으므로 UNKNOWN.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "H.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "LIVING_TRADITION",
+            "evidence_id": "evidence:586ccb134b044ffa3dd067b33e435b3d09bfecb4a8e16a9d844fa41e4ea653a2",
+            "quote": "임진왜란 이후에 와서는 박씨 문중에서 주관하여 매년 봄, 가을에 제사를 지내고 있어요."
+          }
+        ],
+        "key": "H.c",
+        "level": 3,
+        "reason": "숭덕전 제사가 임진왜란 이후 박씨 문중이 주관하여 매년 봄·가을 지속되고 있다는 현재성 있는 전승 근거가 확인된다. 방문자가 전승을 직접 참여하기보다 접하는 수준이므로 level 3.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.a",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "AUTONOMOUS_ACTIVITY",
+            "evidence_id": "evidence:b1edbb12f2b81e04c39ec8538ffee88fbc9380128f8414f64562be903d8d3122",
+            "quote": "오릉에는 5기의 왕릉뿐만 아니라 숭덕전, 알영정 등 곳곳에 볼거리들이 많으니 구석구석 살펴보시기 바랍니다."
+          }
+        ],
+        "key": "R.a",
+        "level": 2,
+        "reason": "왕릉·숭덕전·알영정 등 여러 지점을 스스로 둘러보라는 안내로 자율 탐색의 여지가 확인되지만, 탐색 폭과 여유에 대한 구체적 근거는 제한적이라 level 2.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "9686356e585cf05c7a516263767658778ffa01ac99998f3a4078cea832c24461",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘과 황금빛 초원 언덕의 대비가 뚜렷하고, 부드러운 곡선의 언덕들이 넓은 구도 속에서 균형 있게 배치되어 시각적 인상이 강하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1833c0a9ebaefe0aac54712b8708a1244bd36dac539e94c6a26c6cc9d86c7f10",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "43018dcaf0c255a7364e3ef7886dc32299f1e23e53522d2bf52fd93fdbb40aa0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3582416_5",
+          "request_sha256": "afd9c4ea9a20d2be344a2aebfcd9010b6bab1a3e43a4cace611a68fa2cdb0438",
+          "response_sha256": "e6a72037e88b274f3578572875ec033f179824cd22457ec4f5480ab2ddf6c1dd",
+          "retrieved_at": "2026-09-11T02:09:23.338401Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "556e8c6a5c954c32cf201f2cd56607dff4dc0d3143e93c44d04725e183774404",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/3582416_image2_1.jpg"
+        },
+        "record_sha256": "9fd312bbf955a97e2700d4aad3c3d59b96028c72149699f09cdcef0742dfa249",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "소나무 숲, 넓은 마른 초지, 트인 하늘과 열린 지평선 등 자연 경관이 화면 전체를 채우며 환경 단서가 매우 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7825fd0e3634dff6d70d8df82af6915f681e5ab6d7cb755b28329db1874d08d9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "24ddaf66c3ac6c2a183aa33a9b9c1544c72cf18e599814e9fd1736d2517dbdca",
+        "match_basis": [
+          "공식 촬영지역 경상북도 경주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2485881",
+          "request_sha256": "81166ec39ff54ca5a58686fd04091a0d0370d9f8cafb890a89b5c1c999c0ede5",
+          "response_sha256": "c12d37be9b6ab9ab2898045550a6d0c550ce733de7bcb8fe98a51d5a32adb771",
+          "retrieved_at": "2026-09-11T02:09:24.494096Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "240d10792271e3c143ae1df3fcb68badf35b726f5dd33c379f81ba3b8d6ec28d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/81/2485881.jpg"
+        },
+        "record_sha256": "a97275e74f23965f6b5ce56ebd2091e234b403bc38aaa1c47ba240d0ad8d46e6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "붉은빛 소나무 줄기와 푸른 하늘, 금빛 초지 봉분의 대비가 뚜렷하고 사선으로 뻗은 나무 구도가 장면을 지배하며 아침·저녁의 부드러운 빛이 돋보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a00f11191c8b49c20c622d5be351ad0a61a2515e59e5015b84c938ae992636c3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "24ddaf66c3ac6c2a183aa33a9b9c1544c72cf18e599814e9fd1736d2517dbdca",
+        "match_basis": [
+          "공식 촬영지역 경상북도 경주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2485881",
+          "request_sha256": "81166ec39ff54ca5a58686fd04091a0d0370d9f8cafb890a89b5c1c999c0ede5",
+          "response_sha256": "c12d37be9b6ab9ab2898045550a6d0c550ce733de7bcb8fe98a51d5a32adb771",
+          "retrieved_at": "2026-09-11T02:09:24.494096Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "240d10792271e3c143ae1df3fcb68badf35b726f5dd33c379f81ba3b8d6ec28d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/81/2485881.jpg"
+        },
+        "record_sha256": "78772bf64984423ee94645ba1e5cf27d8dbf7a1e7f3fae12d6f1934d2711b309",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "완만하게 흙을 쌓아 올린 듯한 언덕형 봉분과 그 주변의 정돈된 초지, 소나무 수림이 전통적 조경·봉토 외관의 시각적 특징을 뚜렷이 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c90793a8515f062a7515b9a26e41d0707ed4194a532aa2d64f560d10d6878554",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "43018dcaf0c255a7364e3ef7886dc32299f1e23e53522d2bf52fd93fdbb40aa0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3582416_5",
+          "request_sha256": "afd9c4ea9a20d2be344a2aebfcd9010b6bab1a3e43a4cace611a68fa2cdb0438",
+          "response_sha256": "e6a72037e88b274f3578572875ec033f179824cd22457ec4f5480ab2ddf6c1dd",
+          "retrieved_at": "2026-09-11T02:09:23.338401Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "556e8c6a5c954c32cf201f2cd56607dff4dc0d3143e93c44d04725e183774404",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/3582416_image2_1.jpg"
+        },
+        "record_sha256": "4bdb143faf3ced1a6d87e97c74887132275bb27fd16b46dd30b79a35119f72b8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "완만한 흙봉(무덤 형태)과 낮은 담장, 전통적 조경된 소나무 숲 구성이 눈에 띄게 전통적 외관을 보여줌",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f34f6b95691ef6fe9b0718d868f23b4a35c981180a2d58d43b1103080a910b9a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "24ddaf66c3ac6c2a183aa33a9b9c1544c72cf18e599814e9fd1736d2517dbdca",
+        "match_basis": [
+          "공식 촬영지역 경상북도 경주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2485881",
+          "request_sha256": "81166ec39ff54ca5a58686fd04091a0d0370d9f8cafb890a89b5c1c999c0ede5",
+          "response_sha256": "c12d37be9b6ab9ab2898045550a6d0c550ce733de7bcb8fe98a51d5a32adb771",
+          "retrieved_at": "2026-09-11T02:09:24.494096Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "240d10792271e3c143ae1df3fcb68badf35b726f5dd33c379f81ba3b8d6ec28d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/81/2485881.jpg"
+        },
+        "record_sha256": "212138acf43dfb21f1470d08027c5d84381eb0ffe5fc55f659fd329774cb6fe1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:392b42b92740472bb8280370f8cf9153b9a33bb4cc35b7e17c1ca7158ab0462a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126213",
+          "request_sha256": "344306a23cf93bfb1114253056b00c1ae14d0812ab5d2ceaa00c5160794fc3b2",
+          "response_sha256": "c94ae1bf0ffe4416f07d8fecf83f7d8c5a8bfe3819d206b7af01f12e6b6d055e",
+          "retrieved_at": "2026-09-10T17:27:26.490443Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-10T08:32:10Z",
+          "source_record_sha256": "926c28cec5ac231095d03b7c305003a8f21812f46603d01da486b3aeec9f2094",
+          "source_uri": null
+        },
+        "record_sha256": "04ea1616a1221d5a46a1fc50cd84c2e9434f24401c22ba2ed76d51e820fced37",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "경주시 탑동에 위치한 4기의 봉토무덤과 1기의 원형무덤이다. 1969년 8월 27일 사적으로 지정되었으며, 내부구조는 알 수 없으나 무덤의 겉모습은 경주시내에 있는 다른 삼국시대 신라무덤과 같이 둥글게 흙을 쌓아 올린 원형 봉토무덤이다. 1호 무덤이 높이 10m로 가장 크며, 2호 무덤은 표주박형으로 봉분이 두 개인 2인용 무덤이다. 이러한 대형 원형 봉토무덤은 신라에서는 4세기 이후 등장하는 것으로 박혁거세 당시의 무덤 형식은 아니다. 『삼국사기』에는 신라 시조 박혁거세와 왕비 알영부인, 제2대 남해왕, 제3대 유리왕, 제5대 파사왕 등 신라 초기 4명의 박씨 임금과 왕비 1명의 무덤이라 나와 있다. 한편, 『삼국유사』에는 박혁거세 승하 후 7일 만에 몸이 다섯 개로 흩어지자 왕비도 따라 죽으니, 사람들이 같이 묻으려고 했으나 큰 뱀이 방해해 몸의 다섯 부분을 각각 묻었는데, 그것을 오릉(五陵) 또는 사릉(蛇陵)이라 했다고 한다. 오릉 동편에는 시조왕의 위패를 모시는 숭덕전이 있으며, 그 뒤에는 알영부인의 탄생과 관련한 알영정이 보존되어 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:586ccb134b044ffa3dd067b33e435b3d09bfecb4a8e16a9d844fa41e4ea653a2",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "2973",
+          "request_sha256": "c064f8c70f3c51761c4039274c8bd9dc54fdb3fc9f3e706b405520adb45c5481",
+          "response_sha256": "45e8a451108bb46e2cae1ffc81b96c396e1fea7f26e1059ab9674e652af9c4c8",
+          "retrieved_at": "2026-09-11T02:09:23.765447Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2023-07-20T02:46:16Z",
+          "source_record_sha256": "d45f4d70a29bc7b6e566c8a189ca51098e94973dda67b8050d86b5a602481db5",
+          "source_uri": null
+        },
+        "record_sha256": "5d87d2d4c0f60e41ceef34266525fcabe31a4669f0de214db9230324eb3e83eb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "오릉 안에는 박혁거세의 위패를 모신 숭덕전이 있습니다. 조선 세종 때 세워졌으나 임진왜란 때 불타버린 것을 선조 때 다시 지었고, 숙종 때 수리했어요 이곳에 모셔진 박혁거세는 어떤 사람일까요? 박혁거세는 신라의 가장 첫 번째 왕인데요, 당시에는 왕이라는 칭호가 아닌 거서간이라는 칭호를 사용했습니다. 그래서 박혁거세 거서간이었죠. 거서간은 귀한 사람이라는 뜻으로 작은 나라의 수장을 부르는 말이었어요. 이후 신라 왕들은 무당이라는 뜻의 차차웅, 연장자를 뜻하는 이사금. 으뜸, 우두머리라는 뜻의 마립간이라는 칭호를 사용하였지요. 지금 우리가 흔히 부르는 왕이라는 칭호는 22대 왕인 지증왕 때부터 사용한 것이랍니다. 숭덕전에서는 신라를 세운 박혁거세를 기리기 위한 제사가 치러집니다. 처음에는 국가에서 모든 것을 주관하였으나 임진왜란 이후에 와서는 박씨 문중에서 주관하여 매년 봄, 가을에 제사를 지내고 있어요. 숭덕전에는 박혁거세와 숭덕전의 내력을 적은 신도비가 위치하고 있으며, 제사를 준비하는 재실 건물도 여러 동 찾아볼 수 있습니다. 또, 제향에 사용되었던 제기 중 2점은 지금까지 파악된 조선시대 국가 제사에 사용되던 금속제 제기 가운데 가장 연대가 앞서는 유물입니다. 숭덕전 뒤로는 박혁거세의 부인 알영 왕비가 태어났다는 알영정이 자리하고 있습니다. 숭덕전을 둘러본 뒤, 알영정으로 이동해 보시는 건 어떨까요?"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7146734f6d0e12f59ebcc352797e853a2ebe9db92d8e49c5517e9c679f72565f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126213",
+          "request_sha256": "1cbd8796471b4292a5249eafa345e6033135b613b8222eac6bf3497e5f015222",
+          "response_sha256": "20a4092f444b372b1d4e8666480cd0b136300afb2b090e99b27aeaa61e37c13d",
+          "retrieved_at": "2026-09-11T02:09:22.993496Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "73c52da3c0f40eac983019622b7499af057b49271ca5c3bcfc04ac21efa1328e",
+          "source_uri": null
+        },
+        "record_sha256": "e9445969c22e7c59703743fdc0da4fde2e24580794e1e955eed812463d700c45",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[개인] - 성인 2,000원 - 청소년·군인 1,000원 - 어린이 500원 [단체(20인 이상)] - 성인 1,600원 - 청소년.군인 800원 - 어린이 400원"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b1edbb12f2b81e04c39ec8538ffee88fbc9380128f8414f64562be903d8d3122",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "2973",
+          "request_sha256": "c064f8c70f3c51761c4039274c8bd9dc54fdb3fc9f3e706b405520adb45c5481",
+          "response_sha256": "45e8a451108bb46e2cae1ffc81b96c396e1fea7f26e1059ab9674e652af9c4c8",
+          "retrieved_at": "2026-09-11T02:09:23.765447Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2023-07-20T02:46:16Z",
+          "source_record_sha256": "8091c32ada89ff37341815b918da68c2971f19141d0587893da2111fba1d1375",
+          "source_uri": null
+        },
+        "record_sha256": "8e88d2d907ac23ff879d047b59ba3dca42c2beb0ece67c7bcd01dd08916dbaa0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "5기의 능이 있어 오릉이라 부르는 이곳은 신라의 역사 인물이 잠들어 있는 곳입니다. 오릉은 도굴되거나 발굴된 적이 없어 주인이 누군지 정확하게 밝혀지지는 않았지만 삼국사기와 삼국유사의 기록을 통해 무덤의 주인을 추측해 볼 수는 있어요. 먼저, 삼국사기는 5기의 무덤에는 신라의 시조인 박혁거세 거서간과 그의 부인인 알영왕비, 2대왕 남해 차차웅, 제3대 유리 이사금, 제5대 파사 이사금의 무덤이라고 이야기하고 있습니다. 이들을 사릉원 안에서 장사 지냈다는 기록이 있기 때문이지요. 이때‘사릉’의 사는 뱀 사자입니다. 장례를 치를 때 큰 뱀이 나타나서 붙은 이름으로,‘오릉’의 다른 이름입니다. 한편, 삼국유사에는 기록이 조금 다릅니다. 5기의 능을 박혁거세 거서간의 단독 무덤으로 본 것이죠. 박혁거세가 왕위에 오른지 61년 만에 하늘로 올라갔다가 7일 후에 몸이 흩어져 땅에 떨어졌고, 왕비도 왕을 따라 세상을 떠났다고 합니다. 나라의 사람들이 흩어진 시신을 수습해 같이 묻으려고 하자 커다란 뱀이 나타나 방해를 했지요. 그래서 다섯 부분으로 흩어진 몸을 각각 묻었어요. 그것을 오릉이라고 하고, 뱀이 나타나서 사릉이라 했답니다. 두 이야기가 전하는 무덤의 주인이 조금 다른데요. 여러분들의 의견은 어느 쪽에 더 가까운가요? 오릉에는 5기의 왕릉뿐만 아니라 숭덕전, 알영정 등 곳곳에 볼거리들이 많으니 구석구석 살펴보시기 바랍니다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b75edc75f95485e8f825e020920dede58d48721f30a44fdff6640a2cb0ba558d",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126213",
+          "request_sha256": "1cbd8796471b4292a5249eafa345e6033135b613b8222eac6bf3497e5f015222",
+          "response_sha256": "20a4092f444b372b1d4e8666480cd0b136300afb2b090e99b27aeaa61e37c13d",
+          "retrieved_at": "2026-09-11T02:09:22.993496Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fbd2765ed93785c36e417173be5bd7873ce6edbe115041acf5b48e77a4e27ec7",
+          "source_uri": null
+        },
+        "record_sha256": "08be13f065afa56164ad9584f3eeae67d17b1b501d5d51e4241729aaaf6d1d0d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e6abff8acf606ec5aae1412731492d973342e0453274b0af0f0aea91637b0a0d",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "2973",
+          "request_sha256": "c064f8c70f3c51761c4039274c8bd9dc54fdb3fc9f3e706b405520adb45c5481",
+          "response_sha256": "45e8a451108bb46e2cae1ffc81b96c396e1fea7f26e1059ab9674e652af9c4c8",
+          "retrieved_at": "2026-09-11T02:09:23.765447Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2023-07-20T02:46:16Z",
+          "source_record_sha256": "17b667469d4a363f0ae9dc4c576619d64d41cc9f7ab9f1869283717d0c35a727",
+          "source_uri": null
+        },
+        "record_sha256": "6963389e2c2b35ea4e250a759ab7d45d410bbbef96e6f9f38658a3209bc9e10b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "오릉의 숭덕전 뒤편에는 알영정이라는 우물이 있습니다. 알영정은 신라 시조 박혁거세의 부인인 알영의 탄생 설화가 깃든 곳이지요. 삼국사기와 삼국유사에 기록된 이야기를 통해 우리는 알영의 탄생 설화를 알 수 있습니다. 어느 날, 사량리에 있는 알영정에서 닭을 닮은 용이 나타나 옆구리로 아이를 낳았습니다. 용이 낳은 아이는 얼굴과 모습이 매우 고우나 입술이 마치 닭의 부리 같았어요. 이에 월성 북쪽 냇물에서 목욕을 시켰더니 그 부리가 떨어졌습니다. 이 때문에 그 냇물을 발천이라고 하지요. 아이의 이름은 우물의 이름을 따서 알영이라 지었으며, 탄생을 기이하게 여겨 아이를 거두어 길렀어요. 이후 이 아이는 커서 박혁거세의 왕비가 되었다고 합니다. 생각해 보면 박혁거세도 나정이라는 우물 근처에서 태어났는데 부인인 알영도 우물에서 태어났네요. 옛날 사회에서 우물은 사회 구성원들에게 식수를 공급해 줄 뿐만 아니라 물이 곧 생명을 상징한다는 점에서 중요한 공간으로 여겨졌다고 합니다. 혹시 박혁거세와 알영의 탄생 설화의 배경이 우물가라는 점도 이러한 점과 일맥상통하는 것은 아닐까요?"
+      }
+    ],
+    "parent_source_sha256": "5f6f89ad9db52f4a0c11a11821cd82ad3c740d199716a3a9a55996a26401adcb",
+    "place": {
+      "address": "경상북도 경주시 탑동 67-1",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+      "name_ko": "경주 오릉",
+      "place_id": "public:korea:b84349d74cc55121d06ba5a7aaaa2497c1d21100a351f5de4e248666ced188eb",
+      "provider_content_id": "126213",
+      "region_code": "47130",
+      "region_name": "경상북도 경주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

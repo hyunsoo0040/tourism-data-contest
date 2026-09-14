@@ -39,11 +39,11 @@ def test_same_input_config_and_time_are_byte_identical_one_hundred_times() -> No
     assert len(outputs) == 1
     profile = calculate_preference(SUBMISSION, created_at=CREATED_AT)
     assert profile.description_ko == (
-        "이번 여행에서는 감성·이미지와 휴식·몰입 경험을 더 기대하고 있어요."
+        "이번 여행에서는 의미•이미지형과 자기•몰입형 경험을 더 기대하고 있어요."
     )
     assert profile.description_template_version == "current-trip-expectation-v1"
     assert profile.questionnaire_version == "questionnaire-v2"
-    assert profile.scoring_version == "choice-bp-v2"
+    assert profile.scoring_version == "choice-distribution-v3"
 
 
 def test_swapping_visible_question_order_changes_the_semantic_hash() -> None:

@@ -1,0 +1,858 @@
+{
+  "assessed_at": "2026-09-11T17:34:32.728039Z",
+  "assessment_sha256": "b8f368074bacda0a61f56d88b251366696c456269186838af1c21103045a3fed",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 54
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "명명을 통한 '부산을 담다'라는 상징적 의미와 지역재생 이미지가 장소에 부여되어 있으나 그 이상의 일관된 표현 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:9707c8867aafc9f05b5aebec32a4f0b9552523fac04082e5dd1f711c1d1bf402",
+            "appearance:b75ed522c82b8ae86e2a4bc75f205a5f4cdce6a4701bb046f5d4be5c5cd68a13",
+            "appearance:f730bd8f7b41c4927264b2ee689b40310ab88b694285bb138adfad8b86ecf777"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "인용문은 공간의 기능(지역 연결, 문화공간 제공)을 설명할 뿐 외관·경관·연출 등 시각적 표현(색·빛·형태)의 묘사는 없다. 시각적 성격의 제한적 표현이라는 수준 2 앵커를 현재 자료만으로 뒷받침하기 어렵다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "복합 문화공간으로서 카페·매장·행사 공간 등 다양한 공간이 제공되어 자율적 이용 여지가 있으나 자유 탐색 중심 경험이라는 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:56eb313dfb6c4c45f2a6fd4c6d995cd25cba666139de76ac782a1f9b4b10296f",
+            "appearance:612469ea349e41e420dd48eb1fa13cde1192aa3e89c1b6ad12ca53eece7b0406",
+            "appearance:913c011a93ae6679c655c86cea21fc0cd2c73eae04551fbac70cb28a8ae727cf"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 17,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "고가도로 하부 공간이라는 사실만으로 자연·저자극·회복 환경을 추정할 근거가 없다.",
+      "value": 17
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "창작·전시·시민 행사·연계 문화 프로그램 등 구체적 참여 활동의 기회가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "커뮤니티 공간, 소모임, 장애예술인 입주 창작, 소셜벤처 입주 등 교류·공동 활동 기회가 확인된다.",
+      "value": 75
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "고가도로 하부 유휴 공간 재생이라는 사실만 있고 실제 원형·유산의 접촉에 관한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "조성 배경 설명은 있으나 이 장소 자체의 구체적 역사·연혁 탐구 자료는 제시되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역재생 취지는 있으나 지역 주체의 전승·생활문화와의 실제 연결 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·전통에 연결된 해설·학습 프로그램에 대한 언급이 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda",
+          "quote": {
+            "end": 120,
+            "method": "EXACT",
+            "original": "'부산을 담다'라는 의미를 가지고 있으며, 부산광역시에서 수영 고가도로 하부 유휴 공간을 새로이 설계하고 재생시킨 공간",
+            "start": 54,
+            "submitted": "'부산을 담다'라는 의미를 가지고 있으며, 부산광역시에서 수영 고가도로 하부 유휴 공간을 새로이 설계하고 재생시킨 공간",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5afcc375a8a9a8d1705cf723e580ef37abf88567bf8e646399a04cd6fd951d29"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "명명을 통한 '부산을 담다'라는 상징적 의미와 지역재생 이미지가 장소에 부여되어 있으나 그 이상의 일관된 표현 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체·작품·SNS를 통한 이미지 유통에 관한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "인용문은 공간의 기능(지역 연결, 문화공간 제공)을 설명할 뿐 외관·경관·연출 등 시각적 표현(색·빛·형태)의 묘사는 없다. 시각적 성격의 제한적 표현이라는 수준 2 앵커를 현재 자료만으로 뒷받침하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda",
+          "quote": {
+            "end": 443,
+            "method": "EXACT",
+            "original": "카페, 일반소매점 등이 입점해 있는 쇼핑그라운드",
+            "start": 417,
+            "submitted": "카페, 일반소매점 등이 입점해 있는 쇼핑그라운드",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5afcc375a8a9a8d1705cf723e580ef37abf88567bf8e646399a04cd6fd951d29"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "복합 문화공간으로서 카페·매장·행사 공간 등 다양한 공간이 제공되어 자율적 이용 여지가 있으나 자유 탐색 중심 경험이라는 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "고가도로 하부 공간이라는 사실만으로 자연·저자극·회복 환경을 추정할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda",
+          "quote": {
+            "end": 415,
+            "method": "EXACT",
+            "original": "부산 장애예술인이 입주하여 창작활동 및 전시가 이루어지는 패밀리데크",
+            "start": 378,
+            "submitted": "부산 장애예술인이 입주하여 창작활동 및 전시가 이루어지는 패밀리데크",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5afcc375a8a9a8d1705cf723e580ef37abf88567bf8e646399a04cd6fd951d29"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda",
+          "quote": {
+            "end": 478,
+            "method": "EXACT",
+            "original": "부산 시민을 위한 다양한 행사가 열리는 공간인 플레이그라운드",
+            "start": 445,
+            "submitted": "부산 시민을 위한 다양한 행사가 열리는 공간인 플레이그라운드",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5afcc375a8a9a8d1705cf723e580ef37abf88567bf8e646399a04cd6fd951d29"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "창작·전시·시민 행사·연계 문화 프로그램 등 구체적 참여 활동의 기회가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda",
+          "quote": {
+            "end": 376,
+            "method": "EXACT",
+            "original": "소모임, 교육, 세미나 등의 활용이 가능한 공간인 커뮤니티그라운드",
+            "start": 340,
+            "submitted": "소모임, 교육, 세미나 등의 활용이 가능한 공간인 커뮤니티그라운드",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5afcc375a8a9a8d1705cf723e580ef37abf88567bf8e646399a04cd6fd951d29"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 3,
+      "reason": "커뮤니티 공간, 소모임, 장애예술인 입주 창작, 소셜벤처 입주 등 교류·공동 활동 기회가 확인된다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "82c216df3c05e5b7a0668edb73bd8524ee3d82a96d3cd94b83d6f804496eaafe",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda",
+              "quote": {
+                "end": 181,
+                "method": "EXACT",
+                "original": "고가도로로 인하여 양분되고 낙후된 지역을 연결하고 부족한 문화 공간을 제공하는 생활 복합 문화공간이다.",
+                "start": 124,
+                "submitted": "고가도로로 인하여 양분되고 낙후된 지역을 연결하고 부족한 문화 공간을 제공하는 생활 복합 문화공간이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "5afcc375a8a9a8d1705cf723e580ef37abf88567bf8e646399a04cd6fd951d29"
+            }
+          ],
+          "flags": [],
+          "key": "E.c",
+          "level": 2,
+          "reason": "고가도로 하부 재생 공간으로서 시각적 성격이 암시되나 구체적 외관·경관·연출의 표현 묘사는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "E.c",
+          "reason": "인용문은 공간의 기능(지역 연결, 문화공간 제공)을 설명할 뿐 외관·경관·연출 등 시각적 표현(색·빛·형태)의 묘사는 없다. 시각적 성격의 제한적 표현이라는 수준 2 앵커를 현재 자료만으로 뒷받침하기 어렵다."
+        }
+      },
+      "reason": "인용문은 공간의 기능(지역 연결, 문화공간 제공)을 설명할 뿐 외관·경관·연출 등 시각적 표현(색·빛·형태)의 묘사는 없다. 시각적 성격의 제한적 표현이라는 수준 2 앵커를 현재 자료만으로 뒷받침하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "4bdf214e46123fbf65df0a92e3bc48f9a9f03291c764b96e19fa810f6c66a6c8",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "한국어 간판과 전통 등롱을 연상시키는 형태가 있으나, 전반은 현대적 리모델링·전시 공간 외관으로 전통적 재료·구성의 비중은 낮다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:41b3d3e68f9d81dcc1a8bfebe3c2c7829ecdbee1e907572c0d69173498dd13ca",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15f90a60194a6ea4feaf741db0a7541db01a7fe401c5edb455129317895197e5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498773_10",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "53f4a8fb9bdb6e84f6a44900dacb2a4441ebf9be99a01cc87e8933807b50f172",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/73/3498773_image2_1.jpg"
+        },
+        "record_sha256": "b0b763da4ed416caf7dea3f31f6c26e311ab0a0bc0faae3fc876469e7016c8fe",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지, 물, 자연 경관 등 자연 환경 단서가 전혀 보이지 않는 실내형 전시 공간",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:56eb313dfb6c4c45f2a6fd4c6d995cd25cba666139de76ac782a1f9b4b10296f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3db68f99eef0c0ccc18e199c456e2266e6101b3442af846bfc724815c05dd0d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498763_3",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0c520d93cf625c3a21fe9429908ca1deca3a977bebdd7a9a7e2a6858433e7d5a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/63/3498763_image2_1.jpg"
+        },
+        "record_sha256": "e43b1b9a5eb380241f04cfdc74ff80fd605cb9c0f9822090a01b18e1746ebae1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "화분 식물 한 그루만 보일 뿐 실내 전시 공간으로 자연 경관 단서는 거의 없다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:612469ea349e41e420dd48eb1fa13cde1192aa3e89c1b6ad12ca53eece7b0406",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "20f2f4f89d13de294731b204231c3797d1f1f993b2f10698bc9c26337348c097",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498774_11",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5e308fc3f576db142482683ae72fe265b7a4be43c07e3eeb3e08a51666efd973",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/74/3498774_image2_1.jpg"
+        },
+        "record_sha256": "be74dc259952ed92250e2348b02c6663f01c26ceb317c93c472710dd329f0193",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "매끈한 흰 벽, 현대식 조명과 진열장 중심의 전형적인 현대 전시 공간으로 전통적 외관·재료 단서가 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8ee562d9d9b10bd42a9651ee0e40b9dffe07184b5170bc283ca80b25b3c83c25",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "20f2f4f89d13de294731b204231c3797d1f1f993b2f10698bc9c26337348c097",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498774_11",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5e308fc3f576db142482683ae72fe265b7a4be43c07e3eeb3e08a51666efd973",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/74/3498774_image2_1.jpg"
+        },
+        "record_sha256": "c3e396db24d06f58e39c16a27ff422a083ef97f5e255a9579acda8aa59ef5d4e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "잔디 화분 일부와 트인 외부 구조가 보이나, 전체는 콘크리트 기둥과 인공 시설이 중심으로 자연 환경 단서는 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:913c011a93ae6679c655c86cea21fc0cd2c73eae04551fbac70cb28a8ae727cf",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15f90a60194a6ea4feaf741db0a7541db01a7fe401c5edb455129317895197e5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498773_10",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "53f4a8fb9bdb6e84f6a44900dacb2a4441ebf9be99a01cc87e8933807b50f172",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/73/3498773_image2_1.jpg"
+        },
+        "record_sha256": "b4cc46e92978cb55348c02cd127b131fa8760774f3c3ddc2b3e375ca6c2b22f6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "흰 벽면에 수채 느낌의 청록 로고, 균일한 조명과 정돈된 진열 니치가 절제되고 현대적인 전시 연출을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9707c8867aafc9f05b5aebec32a4f0b9552523fac04082e5dd1f711c1d1bf402",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "20f2f4f89d13de294731b204231c3797d1f1f993b2f10698bc9c26337348c097",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498774_11",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5e308fc3f576db142482683ae72fe265b7a4be43c07e3eeb3e08a51666efd973",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/74/3498774_image2_1.jpg"
+        },
+        "record_sha256": "4d58f6cdf2b2bf311a700b95463ad43f7759004fa083268ff69a5a8a211d8561",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 재료나 전통적 공간 구성의 시각적 특성이 보이지 않고 컨테이너와 네온 현대적 연출만 존재",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a0da488b20c337db579502440b264af46711f8872a8a1509b5eacb55de37b672",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3db68f99eef0c0ccc18e199c456e2266e6101b3442af846bfc724815c05dd0d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498763_3",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0c520d93cf625c3a21fe9429908ca1deca3a977bebdd7a9a7e2a6858433e7d5a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/63/3498763_image2_1.jpg"
+        },
+        "record_sha256": "6f7cbbb9aa1cc1378673611712317f65d1d7a1d64fd5f89f5f49c3e8a12c0b64",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "빨간 컨테이너 벽면에 다색 네온 조명이 천장과 벽을 따라 강렬하게 배열되어 장면 전체를 지배하는 강한 연출감이 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b75ed522c82b8ae86e2a4bc75f205a5f4cdce6a4701bb046f5d4be5c5cd68a13",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3db68f99eef0c0ccc18e199c456e2266e6101b3442af846bfc724815c05dd0d6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498763_3",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0c520d93cf625c3a21fe9429908ca1deca3a977bebdd7a9a7e2a6858433e7d5a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/63/3498763_image2_1.jpg"
+        },
+        "record_sha256": "1c8ca00f34bf4965a78fe6f4b4aee732ad8b19005de87fa9f58194697c68500b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "하늘색 등롱 모형이 반복 매달려 시각적 연출이 두드러지고, 청색 벤치·빨간 문·펭귄 그래픽 등 강한 색채 구성이 장면의 개성을 형성한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f730bd8f7b41c4927264b2ee689b40310ab88b694285bb138adfad8b86ecf777",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "15f90a60194a6ea4feaf741db0a7541db01a7fe401c5edb455129317895197e5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3498773_10",
+          "request_sha256": "540dd7e5fbcfcc784c8b5564ead8962e7046bfe5c604dfb46749ce3eb646e378",
+          "response_sha256": "61321f03dbc78f77bd437e721a63a4ef1f7a83f9a4fda410edf8bb4c63e43f0d",
+          "retrieved_at": "2026-09-10T08:24:26.797529Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "53f4a8fb9bdb6e84f6a44900dacb2a4441ebf9be99a01cc87e8933807b50f172",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/73/3498773_image2_1.jpg"
+        },
+        "record_sha256": "e1df2cc737eb2baac9a32c0a62d224b33e86039196ef3aaf4ff08d34457089e8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a2340175627bbc6ed114d3a9a1d068ef68a962623c9fb5d10bb8f05dad8adcda",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3014533",
+          "request_sha256": "54c39b19f206a8161f982c9bb4e405a28194b4263bc308fa7875eb52dbd27e34",
+          "response_sha256": "de7c7930f1abe96aaf3d3bcb2a6eb7b7579f14391f05f926bd778bcc4f7f8197",
+          "retrieved_at": "2026-09-10T07:41:33.913030Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-09T07:14:15Z",
+          "source_record_sha256": "cbf15dcfda850fdb48327871cf302aff24e33ce809558ffcd916e586ee3a74cc",
+          "source_uri": null
+        },
+        "record_sha256": "5afcc375a8a9a8d1705cf723e580ef37abf88567bf8e646399a04cd6fd951d29",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "비콘(B-Con) 그라운드는 부산(BUSAN)의 B와 컨테이너(CONTAIN)의 CON이 합쳐져 '부산을 담다'라는 의미를 가지고 있으며, 부산광역시에서 수영 고가도로 하부 유휴 공간을 새로이 설계하고 재생시킨 공간으로, 고가도로로 인하여 양분되고 낙후된 지역을 연결하고 부족한 문화 공간을 제공하는 생활 복합 문화공간이다. 지역개발의 부재로 낙후된 지역을 연결하고 문화시설로써 지역재생과 기존의 지역 인프라 및 관광 네트워크와의 연계로 경제적 시너지를 끌어올리는 지역 활성화 프로그램으로 탄생되었다. 커뮤니티그라운드, 패밀리데크, 비콘스퀘어, 쇼핑그라운드, 플레이그라운드, 아트갤러리 등의 공간이 있으며, 소모임, 교육, 세미나 등의 활용이 가능한 공간인 커뮤니티그라운드, 부산 장애예술인이 입주하여 창작활동 및 전시가 이루어지는 패밀리데크, 카페, 일반소매점 등이 입점해 있는 쇼핑그라운드, 부산 시민을 위한 다양한 행사가 열리는 공간인 플레이그라운드, 부산의 소셜벤처기업이 입주해 있으며, 예술품의 판매와 전시 및 연계 문화 프로그램이 운영되는 공간인 아트갤러리 등이 운영되고 있다."
+      }
+    ],
+    "parent_source_sha256": "7d425a7c42e8d5f25b27d5a630dd39f3007bb808c6489fb65c0655d5c0f10bbe",
+    "place": {
+      "address": "부산광역시 수영구 망미번영로 49-1 (망미동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+      "name_ko": "비콘그라운드",
+      "place_id": "public:korea:77a729ac309bf1bc05d0244f3abd02285ebf946399f4eea1da395ebb50363e85",
+      "provider_content_id": "3014533",
+      "region_code": "26500",
+      "region_name": "부산광역시 수영구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

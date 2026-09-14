@@ -11,7 +11,6 @@ for (const width of [1440, 390]) {
     await expect(menu.locator('a[href="#flow"]')).toHaveAttribute("aria-current", "location");
     await expect.poll(async () => (await header.boundingBox())?.y).toBe(0);
     await page.goto("/");
-    await expect(header.locator(".nav-cta")).toHaveAttribute("href", "/start");
     await page.screenshot({ path: info.outputPath("design-main.png") });
     await expect(menu.locator('[aria-current="location"]')).toHaveCount(0);
 
@@ -43,14 +42,13 @@ for (const width of [1440, 390]) {
     await page.goto("/#flow");
     await expect(menu.locator('a[href="#flow"]')).toHaveAttribute("aria-current", "location");
     await expect.poll(async () => (await header.boundingBox())?.y).toBe(0);
-    await page.goto("/#photo");
-    const photoIntro = page.locator("section#photo");
-    await expect(photoIntro.locator(".photo-link")).toHaveCount(0);
-    await expect(photoIntro).toHaveClass(/visible/);
-    await photoIntro.screenshot({ path: info.outputPath("design-photo-intro.png") });
-    if (width < 920) await header.getByRole("button", { name: "메뉴 열기" }).click();
-    await menu.getByRole("link", { name: "사진 분위기 입력", exact: true }).click();
-    await expect(page).toHaveURL(/\/photo$/);
-    await expect(page.locator(".up-photo")).toBeVisible();
+    await expect(menu.getByRole("link", { name: "사진 분위기 입력", exact: true })).toHaveCount(0);
+    const start = header.getByRole("link", { name: "시작하기", exact: true });
+    await expect(start).toBeVisible();
+    await expect(start).toHaveAttribute("href", "/trip");
+    if (width < 920) {
+      const tabs = page.getByRole("navigation", { name: "모바일 빠른 이동" });
+      await expect(tabs.getByRole("link")).toHaveCount(2);
+    }
   });
 }

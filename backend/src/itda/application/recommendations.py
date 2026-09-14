@@ -8,8 +8,16 @@ from collections.abc import Callable, Mapping
 from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Any, Protocol, cast
 
+from itda.application.source_grounding import PreparedGrounding, SourceGroundingService
 from itda.contracts.base import DataSplit, ExperienceAxis
+from itda.contracts.grounded_recommendation import (
+    GroundedRunBinding,
+    GroundedTripInput,
+    TripContextPlace,
+    TripContextResponse,
+)
 from itda.contracts.mvp_daily_refresh import MvpScoredReleaseV2, MvpScoredReleaseV3
+from itda.contracts.mvp_public_catalog import PublicPlaceCatalog
 from itda.contracts.mvp_scored_release import MvpScoredRelease
 from itda.contracts.place_profile import MismatchTraitId, SubattributeId
 from itda.contracts.preference import PreferenceProfile
@@ -33,17 +41,21 @@ from itda.contracts.recommendation import (
     RecommendationConfig,
     RecommendationDetail,
     RecommendationPreference,
+    RecommendationPurpose,
+    RecommendationQualityContext,
     RecommendationRequest,
     RecommendationResultsResponse,
     RecommendationRun,
     RecommendationRunCreated,
     SavedPlaceProjection,
 )
+from itda.contracts.tourism_context import TourismContextResponse
 from itda.db.photo_repositories import (
     PhotoJobNotFound,
     PhotoRecommendationProjectionRecord,
 )
 from itda.db.recommendation_repositories import (
+    RecommendationPinInvalid,
     RecommendationRequestConflict,
     RecommendationRunRepository,
 )
@@ -60,6 +72,7 @@ from itda.domain.recommendation_projection import (
     project_recommendation_preference,
 )
 from itda.operating.service import OperatingInformationService
+from itda.tourism.registry import ProductionTourismRegistry
 
 if TYPE_CHECKING:
     from itda.contracts.demo_profile_materialization import PublicScoredReleaseSnapshot
@@ -329,6 +342,9 @@ class RecommendationService:
         release_resolver: ActivePublicScoredReleaseResolver,
         photo_projection_reader: PhotoRecommendationProjectionReaderProtocol | None = None,
         operating_information_service: OperatingInformationService | None = None,
+        source_grounding_service: SourceGroundingService | None = None,
+        tourism_registry: ProductionTourismRegistry | None = None,
+        catalog: PublicPlaceCatalog | None = None,
         config: RecommendationConfig = CANONICAL_RECOMMENDATION_CONFIG,
         clock: Callable[[], datetime] = lambda: datetime.now(UTC),
         event_sink: EventSink = _default_event_sink,
@@ -338,7 +354,10 @@ class RecommendationService:
         self._release_resolver = release_resolver
         self._photo_projection_reader = photo_projection_reader
         self._operating_information_service = operating_information_service
+        self._source_grounding = source_grounding_service
+        self._tourism_registry = tourism_registry
         self._config = config
+        self._catalog = catalog
         self._clock = clock
         self._event_sink = event_sink
 
@@ -353,7 +372,131 @@ class RecommendationService:
         profile = self._profile_repository.get(request.preference_profile_id)
         if profile is None:
             raise PreferenceProfileUnavailable(request.preference_profile_id)
-        no_photo_preference = _recommendation_preference(profile)
+        bound = self._recommendation_repository.recover_bound_request(
+            request_id=request.request_id,
+            preference_profile_id=profile.profile_id,
+        )
+        trip_input = request.grounded_input or GroundedTripInput(
+            visit_date=profile.trip_conditions.visit_date,
+        )
+        prepared_grounding: PreparedGrounding | None = None
+        if isinstance(bound, (MvpRecommendationRun, PhotoMvpRecommendationRun)):
+            grounding = (
+                bound.preference.quality_context.grounding
+                if bound.preference.quality_context
+                else None
+            )
+            if grounding is not None:
+                if self._source_grounding is None:
+                    raise RecommendationPinInvalid("grounded replay storage is unavailable")
+                binding = self._source_grounding.store.get_request_binding(request.request_id)
+                if binding is None:
+                    raise RecommendationPinInvalid("grounded request binding is missing")
+                if (
+                    binding.run_id != bound.run_id
+                    or binding.preference_profile_id != profile.profile_id
+                    or binding.preference_input_sha256 != _preference_submission_sha256(profile)
+                    or binding.trip_input_sha256 != trip_input.input_sha256
+                    or grounding.trip_input_sha256 != binding.trip_input_sha256
+                    or grounding.source_release_sha256 != binding.source_release_sha256
+                    or grounding.source_snapshot_sha256 != binding.source_snapshot_sha256
+                    or bound.authority.release_sha256 != binding.raw_release_sha256
+                ):
+                    raise RecommendationRequestConflict(
+                        RecommendationRunRepository.code_for_conflict(request.request_id)
+                    )
+            elif request.grounded_input is not None:
+                raise RecommendationRequestConflict(
+                    RecommendationRunRepository.code_for_conflict(request.request_id)
+                )
+        elif (
+            bound is None and request.grounded_input is not None and self._source_grounding is None
+        ):
+            raise InvalidRecommendationOutput("explicit facility requirements are not available")
+        quality_context = None
+        preloaded_snapshot: MvpScoredRelease | MvpScoredReleaseV2 | MvpScoredReleaseV3 | None = None
+        if isinstance(bound, (MvpRecommendationRun, PhotoMvpRecommendationRun)):
+            quality_context = bound.preference.quality_context
+            if request.purpose is not None and request.purpose != (
+                quality_context.purpose if quality_context else RecommendationPurpose.MIXED
+            ):
+                raise RecommendationRequestConflict(
+                    RecommendationRunRepository.code_for_conflict(request.request_id)
+                )
+        elif bound is None and self._config.kernel_version == "recommendation-kernel-v4":
+            if self._catalog is None:
+                raise NoActiveScoredRelease(
+                    request_id=request.request_id,
+                    preference_profile_id=profile.profile_id,
+                )
+            resolved = self._release_resolver()
+            if not isinstance(resolved, (MvpScoredRelease, MvpScoredReleaseV2, MvpScoredReleaseV3)):
+                raise NoActiveScoredRelease(
+                    request_id=request.request_id,
+                    preference_profile_id=profile.profile_id,
+                )
+            preloaded_snapshot = resolved
+            available_place_ids = {row.place_id for row in resolved.profiles}
+            purpose = request.purpose or RecommendationPurpose.SIGHTSEEING
+            categories = {
+                RecommendationPurpose.SIGHTSEEING: {
+                    "관광지",
+                    "문화시설",
+                    "레포츠",
+                    "축제·공연·행사",
+                },
+                RecommendationPurpose.FOOD: {"음식점"},
+                RecommendationPurpose.LODGING: {"숙박"},
+            }
+            allowed = tuple(
+                sorted(
+                    row.place_id
+                    for row in self._catalog.places
+                    if row.place_id in available_place_ids
+                    and (
+                        purpose is RecommendationPurpose.MIXED
+                        or row.category in categories[purpose]
+                    )
+                )
+            )
+            quality_context = RecommendationQualityContext(
+                companion=profile.trip_conditions.companion.value,
+                transport=profile.trip_conditions.transport.value,
+                purpose=purpose,
+                eligible_place_ids=allowed,
+            )
+            if self._source_grounding is not None:
+                prepared_grounding = self._source_grounding.prepare(
+                    trip_input=trip_input,
+                    raw_release_sha256=resolved.release_sha256,
+                    place_ids=allowed,
+                )
+                quality_context = quality_context.model_copy(
+                    update={
+                        "eligible_place_ids": tuple(
+                            p for p in allowed if p not in prepared_grounding.excluded_place_ids
+                        ),
+                        "grounding": prepared_grounding.authority,
+                    }
+                )
+        no_photo_preference = project_recommendation_preference(
+            profile,
+            quality_context=quality_context,
+        )
+        if isinstance(bound, PhotoMvpRecommendationRun):
+            if (
+                request.photo_job_id is None
+                or bound.authority.photo_job_reference_sha256
+                != canonical_sha256({"photo_job_id": request.photo_job_id})
+                or bound.preference.input_sha256 != no_photo_preference.input_sha256
+                or bound.preference.axis_targets != no_photo_preference.axis_targets
+                or bound.preference.condition_targets != no_photo_preference.condition_targets
+            ):
+                raise RecommendationRequestConflict(
+                    RecommendationRunRepository.code_for_conflict(request.request_id)
+                )
+            # All sealed photo versions replay before projection/provider access.
+            return bound
         projection: PhotoRecommendationProjectionRecord | None = None
         preference = no_photo_preference
         photo_projection_result = None
@@ -377,7 +520,10 @@ class RecommendationService:
                 )
             except (PhotoJobNotFound, TypeError, ValueError) as error:
                 raise PhotoRecommendationUnavailable(request.photo_job_id) from error
-            if photo_projection_result.trait_targets is None:
+            if (
+                photo_projection_result.trait_targets is None
+                or not photo_projection_result.blend_applied
+            ):
                 raise PhotoRecommendationUnavailable(request.photo_job_id)
             blended_values = {
                 row.trait_id: row.value for row in photo_projection_result.trait_targets
@@ -394,10 +540,6 @@ class RecommendationService:
                     )
                 }
             )
-        bound = self._recommendation_repository.recover_bound_request(
-            request_id=request.request_id,
-            preference_profile_id=profile.profile_id,
-        )
         if isinstance(bound, (MvpRecommendationRun, PhotoMvpRecommendationRun)):
             expected_preference = preference
             if bound.preference != expected_preference or (
@@ -444,7 +586,9 @@ class RecommendationService:
                     RecommendationRunRepository.code_for_conflict(request.request_id)
                 )
             return bound
-        snapshot = self._release_resolver()
+        snapshot = (
+            preloaded_snapshot if preloaded_snapshot is not None else self._release_resolver()
+        )
         if snapshot is None:
             self._emit(
                 {
@@ -489,7 +633,7 @@ class RecommendationService:
                     raise PhotoRecommendationUnavailable(request.photo_job_id)
                 authority.update(
                     {
-                        "photo_projection_version": "photo-projection-v1",
+                        "photo_projection_version": photo_projection_result.projection_version,
                         "photo_projection_policy_sha256": photo_projection_result.policy_sha256,
                         "photo_projection_output_sha256": photo_projection_result.output_sha256,
                         "confirmation_draft_sha256": projection.draft_digest,
@@ -541,6 +685,11 @@ class RecommendationService:
                         ),
                         images_count=projection.images_count,
                         included_count=projection.included_count,
+                        photo_projection_version=photo_projection_result.projection_version,
+                        observed_traits=tuple(
+                            trait for trait, _ in photo_projection_result.photo_trait_values
+                        ),
+                        photo_trait_values=photo_projection_result.photo_trait_values,
                         config=self._config,
                         created_at=self._clock(),
                     )
@@ -594,11 +743,37 @@ class RecommendationService:
                 if str(error) == InsufficientEligibleCandidates.code:
                     raise InsufficientEligibleCandidates(str(error)) from error
                 raise InvalidRecommendationOutput(str(error)) from error
+        grounded_binding = None
+        if prepared_grounding is not None:
+            binding_data = {
+                "schema_version": "grounded-run-binding.v1",
+                "run_id": calculated.run_id,
+                "request_id": request.request_id,
+                "preference_profile_id": profile.profile_id,
+                "preference_input_sha256": _preference_submission_sha256(profile),
+                "trip_input": trip_input.model_dump(mode="json"),
+                "trip_input_sha256": trip_input.input_sha256,
+                "raw_release_sha256": snapshot.release_sha256,
+                "source_release_sha256": prepared_grounding.authority.source_release_sha256,
+                "assessment_bundle_sha256": list(
+                    prepared_grounding.authority.assessment_bundle_sha256
+                ),
+                "source_snapshot_sha256": list(prepared_grounding.authority.source_snapshot_sha256),
+                "created_at": calculated.created_at.isoformat().replace("+00:00", "Z"),
+            }
+            grounded_binding = GroundedRunBinding.model_validate(
+                {
+                    **binding_data,
+                    "binding_sha256": canonical_sha256(binding_data),
+                }
+            )
+        insert_extra = {"grounded_binding": grounded_binding} if grounded_binding else {}
         persisted, recovered = self._recommendation_repository.insert_or_recover(
             request_id=request.request_id,
             preference_profile_id=profile.profile_id,
             run=calculated,
             release_snapshot=snapshot,
+            **insert_extra,
         )
         release_sha256 = (
             persisted.authority.release_sha256
@@ -689,6 +864,113 @@ class RecommendationService:
                 ),
             )
         return self._operating_information_service.load(run_id=run_id, place_ids=place_ids)
+
+    def get_trip_context(self, run_id: str) -> TripContextResponse:
+        run = self._recommendation_repository.load_run(run_id)
+        names = {item.place_id: item.place_name_ko for item in run.items}
+        profile_id = (
+            run.preference.profile_id
+            if isinstance(run, (MvpRecommendationRun, PhotoMvpRecommendationRun))
+            else self._recommendation_repository.load_pinned(run_id).preference_profile_id
+        )
+        profile = self._profile_repository.get(profile_id)
+        trip_input = GroundedTripInput(
+            visit_date=profile.trip_conditions.visit_date if profile else None,
+        )
+        if self._source_grounding is None:
+            return TripContextResponse(
+                recommendation_run_id=run_id,
+                trip_input=trip_input,
+                checked_at=self._clock(),
+                mode="REFRESHED",
+                places=tuple(
+                    TripContextPlace(
+                        place_id=p,
+                        place_name_ko=n,
+                        facts=(),
+                        source_snapshot_sha256=None,
+                        state="UNAVAILABLE",
+                        reason_ko="추가 관광정보 연결이 준비되지 않았습니다.",
+                    )
+                    for p, n in names.items()
+                ),
+            )
+        binding = self._source_grounding.store.get_run_binding(run_id)
+        expected_grounding = (
+            run.preference.quality_context.grounding
+            if isinstance(run, (MvpRecommendationRun, PhotoMvpRecommendationRun))
+            and run.preference.quality_context
+            else None
+        )
+        if expected_grounding is not None and binding is None:
+            raise RecommendationPinInvalid("grounded run binding is missing")
+        if binding is not None:
+            if not isinstance(run, (MvpRecommendationRun, PhotoMvpRecommendationRun)):
+                raise RecommendationPinInvalid("grounding is not bound to an MVP run")
+            authority = (
+                run.preference.quality_context.grounding if run.preference.quality_context else None
+            )
+            if (
+                authority is None
+                or authority.source_release_sha256 != binding.source_release_sha256
+                or authority.source_snapshot_sha256 != binding.source_snapshot_sha256
+                or authority.trip_input_sha256 != binding.trip_input_sha256
+            ):
+                raise RecommendationPinInvalid("grounding authority mismatch")
+            trip_input = binding.trip_input
+        try:
+            return self._source_grounding.context(
+                run_id=run_id,
+                place_names=names,
+                trip_input=trip_input,
+                checked_at=self._clock(),
+                binding=binding,
+            )
+        except ValueError as error:
+            raise RecommendationPinInvalid("invalid pinned trip context") from error
+
+    def get_tourism_context(self, run_id: str) -> TourismContextResponse:
+        """Explicit refresh endpoint, separate from immutable recommendation reads."""
+        if self._tourism_registry is None:
+            raise InvalidRecommendationOutput("tourism registry is not configured")
+        run = self._recommendation_repository.load_run(run_id)
+        if not isinstance(run, (MvpRecommendationRun, PhotoMvpRecommendationRun)):
+            raise InvalidRecommendationOutput("tourism context requires a public source-pinned run")
+        profile = self._profile_repository.get(run.preference.profile_id)
+        if profile is None:
+            raise PreferenceProfileUnavailable(run.preference.profile_id)
+        trip = GroundedTripInput(visit_date=profile.trip_conditions.visit_date)
+        quality = run.preference.quality_context
+        if quality is not None and quality.grounding is not None:
+            if self._source_grounding is None:
+                raise RecommendationPinInvalid("grounded context storage is unavailable")
+            binding = self._source_grounding.store.get_run_binding(run_id)
+            if binding is None:
+                raise RecommendationPinInvalid("grounded context binding is missing")
+            trip = binding.trip_input
+        if quality is not None:
+            eligible = quality.eligible_place_ids
+            purpose = quality.purpose.value
+        else:
+            eligible = run.candidate_place_ids
+            purpose = "MIXED"
+        pinned = self._recommendation_repository.load_pinned(run_id)
+        pairs = (
+            pinned.release_snapshot.relation_pairs
+            if isinstance(
+                pinned.release_snapshot, (MvpScoredRelease, MvpScoredReleaseV2, MvpScoredReleaseV3)
+            )
+            else ()
+        )
+        return self._tourism_registry.context(
+            run_id=run_id,
+            place_ids=tuple(item.place_id for item in run.items),
+            trip_input=trip,
+            eligible_place_ids=eligible,
+            purpose=purpose,
+            selected_place_ids=tuple(item.place_id for item in run.items),
+            cannot_coappear_pairs=pairs,
+        )
 
     def resolve_saved_place_reference(
         self,

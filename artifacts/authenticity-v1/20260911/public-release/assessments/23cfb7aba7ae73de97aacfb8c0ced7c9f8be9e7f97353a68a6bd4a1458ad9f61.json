@@ -1,0 +1,817 @@
+{
+  "assessed_at": "2026-09-11T16:52:03.970331Z",
+  "assessment_sha256": "23cfb7aba7ae73de97aacfb8c0ced7c9f8be9e7f97353a68a6bd4a1458ad9f61",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 42
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e7afc3dbc7af74bf93a6907985667f1197a417cea718cc0966d42ef809170b30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "개관 연도와 시설 등록 연혁이 간단히 소개되어 있으나, 이는 행정적 연혁 수준으로 장소의 역사적 사건·인물 맥락의 구체적 탐구를 보여주는 근거는 부족하다. 낮은 수준의 연혁 소개로 평가한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0e12ff4f7554648dec20ae4d78edb03bf6e03f21666e7d16584766e8b841c11f",
+            "appearance:8d3913973ca761d9af759318f48922c1dbf2d3917fe84674ca8fa95bdbb349bb",
+            "appearance:d76d29b629f1db5cd5fc52c2cda1a963a895d7b5c851a9263f703fa5ff51415c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출의 시각적 성격에 대한 묘사가 제공되지 않았다. 전시 규모 수치는 시각적 표현의 근거가 아니다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1c59c7ef024513848ea1966cf18cac7bb0426174692c3868ac5e68257be22dc1",
+            "appearance:3afe82c289f161a7bf29753ef7376c30aa97d7e86d8d57bfc459595c6958dda7",
+            "appearance:f0de6fbc6366264a21925609f2a95d9480ac52ccf1d78a2dcd35524e4dea67c0"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 33,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "주소가 불영계곡로임은 위치 정보일 뿐이며, 자연·저자극·머무를 환경에 대한 실제 묘사가 없다. 계곡 인근이라는 사실로 회복 환경을 추정하지 않는다.",
+      "value": 33
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e0b94b15b3a75948133b70ae6aafc57a0c222016fde9946dbbf56df6556a0c03",
+            "evidence:e7afc3dbc7af74bf93a6907985667f1197a417cea718cc0966d42ef809170b30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "먹이 주기 체험과 직접 접촉 등 구체적인 참여 활동이 확인된다. 다만 지속적 도전·몰입 활동의 중심성까지 보이는 근거는 부족하여 중간 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료는 생태체험관의 전시·체험을 설명할 뿐, 확인된 실제 원형·문화유산의 실물·공간 접촉에 대한 근거가 없다. 과학적 생태 전시는 문화유산 원형 접촉으로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:e7afc3dbc7af74bf93a6907985667f1197a417cea718cc0966d42ef809170b30",
+          "quote": {
+            "end": 85,
+            "method": "EXACT",
+            "original": "2006년 11월 8일에 개관했다",
+            "start": 67,
+            "submitted": "2006년 11월 8일에 개관했다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3b0d3926edc5396b3dd0aded8942a97d65c98940eef435271a761ada39b2b10f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 1,
+      "reason": "개관 연도와 시설 등록 연혁이 간단히 소개되어 있으나, 이는 행정적 연혁 수준으로 장소의 역사적 사건·인물 맥락의 구체적 탐구를 보여주는 근거는 부족하다. 낮은 수준의 연혁 소개로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 언급이 없다. 멸종위기어종 보존 활동은 생물자원 보존이지 지역 전통 전승의 실제 지속을 확인하는 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "생태 교육과 과학적 탐구가 언급되었으나, 이는 일반 과학 체험이지 원형·유산·전통에 연결된 역사 해설·탐구라 할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'동해안의 새로운 관광명소'라는 자기 기술이 있으나, 사회적으로 공유되는 구체적 이미지·상징적 의미가 이 장소에 부여되고 표현된다는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출의 시각적 성격에 대한 묘사가 제공되지 않았다. 전시 규모 수치는 시각적 표현의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다. 먹이 주기 체험은 참여 활동이지 대표 이미지의 재현 경험으로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색·여유·자기 선택을 지원한다는 직접 근거가 없다. 전시 관람과 체험이 있다는 사실만으로 자율 탐색 기회를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "주소가 불영계곡로임은 위치 정보일 뿐이며, 자연·저자극·머무를 환경에 대한 실제 묘사가 없다. 계곡 인근이라는 사실로 회복 환경을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e0b94b15b3a75948133b70ae6aafc57a0c222016fde9946dbbf56df6556a0c03",
+          "quote": {
+            "end": 9,
+            "method": "EXACT",
+            "original": "물고기 먹이 주기",
+            "start": 0,
+            "submitted": "물고기 먹이 주기",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b66809255631dcc84322764d75f206cdeb735570164152247bbfb19fc428e002"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e7afc3dbc7af74bf93a6907985667f1197a417cea718cc0966d42ef809170b30",
+          "quote": {
+            "end": 665,
+            "method": "EXACT",
+            "original": "거대한 먹이 주기 체험장과 독도 모형 수조에서 물고기에게 먹이를 주고 직접 물고기를 만져볼 수 있다",
+            "start": 610,
+            "submitted": "거대한 먹이 주기 체험장과 독도 모형 수조에서 물고기에게 먹이를 주고 직접 물고기를 만져볼 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3b0d3926edc5396b3dd0aded8942a97d65c98940eef435271a761ada39b2b10f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "먹이 주기 체험과 직접 접촉 등 구체적인 참여 활동이 확인된다. 다만 지속적 도전·몰입 활동의 중심성까지 보이는 근거는 부족하여 중간 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 언급이 없다. 생태 학습장 제공은 관계·자기표현 활동의 근거로 보기 어렵다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "716e167412f0eb5d30ca425ee90f48dd83c3e2d47d68f54dc5362620a6014074",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "299d1aca448a2a97e26c25cd6b01e9c7f1685d3e91af781d9a143d74964a3d7f",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "어두운 배경과 청록·파랑 계열의 연출 조명, 수조 속 밝은 녹색빛이 강한 대비를 이루며 관람 동선 전체에 극적인 시각 분위기를 형성함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0e12ff4f7554648dec20ae4d78edb03bf6e03f21666e7d16584766e8b841c11f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5776ade288a47580f82da6368f92906052a11d18f0ed48f34d1ff238476d3cc4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591001_7",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "29a1ebae188525da992aa491b90fca4530f5115b80a1a34e0fb939bb364d8186",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/01/3591001_image2_1.jpg"
+        },
+        "record_sha256": "225145d3bf0fe69afedb08ab050ec0cdb284683bea31a54bfacaa3ee46072234",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "자연 경관이 직접 보이지 않고 실내 수조 환경이며, 하단의 바닥재와 돌 정도만 자연 관련 단서로 희미하게 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1c59c7ef024513848ea1966cf18cac7bb0426174692c3868ac5e68257be22dc1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d12b9809584f98951dc1ff5ed3f8996d05ac47949a5c6f3ae803a5fe2fcacee7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591003_4",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ffe548e1ad7bf56f3fbb0a21cb186092cb2a107c8461861467112b605b359153",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/03/3591003_image2_1.jpg"
+        },
+        "record_sha256": "53909dce127fa46b5d69cfa2653377b348aefd21c9259fe4a221c8f866c33907",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "자연 경관은 수조 내부의 물과 수초 배경 이미지로만 간접적으로 보이며, 실제 트인 자연 환경 단서는 없음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3afe82c289f161a7bf29753ef7376c30aa97d7e86d8d57bfc459595c6958dda7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5776ade288a47580f82da6368f92906052a11d18f0ed48f34d1ff238476d3cc4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591001_7",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "29a1ebae188525da992aa491b90fca4530f5115b80a1a34e0fb939bb364d8186",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/01/3591001_image2_1.jpg"
+        },
+        "record_sha256": "22835573e177f075150e0a8e73013014d3dc313a347eb08500d4941d923ae86a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "철골, 아스팔트, 산업용 배관과 기계 장치 중심으로 전통적 외관·재료의 흔적이 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4569d585e45d7245b6deba9b64c6a2c1eac8ee65519ceaf5708ac6e4c4354f13",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "bf0d5376cd148d263cf2ff34593e0f990f363d423cc69dd2858abbf2525a9a44",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591006_6",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "23decd2e33a4530b30e64beb410696f694971bdb0634b12577c4e19e478d327d",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/06/3591006_image2_1.jpg"
+        },
+        "record_sha256": "09645ae3e727b693460ae0e7fbf1be4768b308078406b6470faa96c837576cc6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 시각적 특성은 찾아보기 어렵고, 현대적 수조 전시 환경만 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:60dacdbf1b1a821ae9ec8684d95d07ee23ba7304fd623572739abb6b0e86fa06",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d12b9809584f98951dc1ff5ed3f8996d05ac47949a5c6f3ae803a5fe2fcacee7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591003_4",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ffe548e1ad7bf56f3fbb0a21cb186092cb2a107c8461861467112b605b359153",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/03/3591003_image2_1.jpg"
+        },
+        "record_sha256": "0ddb0eccacc154f0ad42d85eea77ad28e561e3c93c6c690d5a34d813e75d1e72",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "화면 전체를 가득 채운 무리 지어 헤엄치는 물고기들이 반복적 질감과 밀도로 강한 시각적 임팩트를 만들며, 청록빛 수조 배경과 대비되는 역동적 구도가 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8d3913973ca761d9af759318f48922c1dbf2d3917fe84674ca8fa95bdbb349bb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d12b9809584f98951dc1ff5ed3f8996d05ac47949a5c6f3ae803a5fe2fcacee7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591003_4",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ffe548e1ad7bf56f3fbb0a21cb186092cb2a107c8461861467112b605b359153",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/03/3591003_image2_1.jpg"
+        },
+        "record_sha256": "582161a928f5c84fd7951a67f0898ffd7b95c9397a419ad35f89d7e721374a7c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "좌측 벽이 인공 암석 재질로 마감되어 있으나 전통적 재료나 구성의 특성은 뚜렷하지 않고 전반적으로 현대적 전시 연출임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ad077d878b21f28adc02c2b9c35bac21b5e1744c5124e983b96e85534dc0dca9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5776ade288a47580f82da6368f92906052a11d18f0ed48f34d1ff238476d3cc4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591001_7",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "29a1ebae188525da992aa491b90fca4530f5115b80a1a34e0fb939bb364d8186",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/01/3591001_image2_1.jpg"
+        },
+        "record_sha256": "b449265921e9ac2f2daa0a9b66d785e56320691c5d554675dcf39dd0e9975138",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "수조에서 뿜어지는 물보라와 청록빛 물빛, 철골 구조물이 산업적·기능적 구성을 이루며 중간 정도의 시각적 성격을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d76d29b629f1db5cd5fc52c2cda1a963a895d7b5c851a9263f703fa5ff51415c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "bf0d5376cd148d263cf2ff34593e0f990f363d423cc69dd2858abbf2525a9a44",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591006_6",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "23decd2e33a4530b30e64beb410696f694971bdb0634b12577c4e19e478d327d",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/06/3591006_image2_1.jpg"
+        },
+        "record_sha256": "ab0fc539e857fa6adb9f12b77706a8e7af929a04244fffadaa1c85e16917c37d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "배경의 완만한 산과 나무, 트인 하늘이 보이나 시설과 배관이 화면 대부분을 차지해 자연 단서는 배경 수준.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f0de6fbc6366264a21925609f2a95d9480ac52ccf1d78a2dcd35524e4dea67c0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "bf0d5376cd148d263cf2ff34593e0f990f363d423cc69dd2858abbf2525a9a44",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3591006_6",
+          "request_sha256": "aa53193410be31fe03aa2b36e82463d56bd36052e97522434e7dc8f242a17e83",
+          "response_sha256": "04478c08d4da5d6998bb374037c3b79ca17acd67cd1ecb8bb6a454684190cc9f",
+          "retrieved_at": "2026-09-10T08:22:34.374242Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "23decd2e33a4530b30e64beb410696f694971bdb0634b12577c4e19e478d327d",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/06/3591006_image2_1.jpg"
+        },
+        "record_sha256": "45c2e3a1779cfc8cc0e5b4bb310596500d4ae06d2cad0f6f4e702370e593fde7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e0b94b15b3a75948133b70ae6aafc57a0c222016fde9946dbbf56df6556a0c03",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "130696",
+          "request_sha256": "714e56f2eb066f49ec83dce02167c27d2a902b0cd364663b9321bf187d7a3017",
+          "response_sha256": "799b763114b9c15f9e4110096f0f2f6d1a71114105e0cd66523d848cf177d2a8",
+          "retrieved_at": "2026-09-10T08:22:33.366053Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "36b164c12126699b48ebf0cd690926e696cfe9d7fad6db9639bff67ad1ba63bf",
+          "source_uri": null
+        },
+        "record_sha256": "b66809255631dcc84322764d75f206cdeb735570164152247bbfb19fc428e002",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "물고기 먹이 주기"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e7afc3dbc7af74bf93a6907985667f1197a417cea718cc0966d42ef809170b30",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "130696",
+          "request_sha256": "953cec267a1f3b1fd40258d9d2099b424e8e4d135a80376bb51903aea0448992",
+          "response_sha256": "5494e8c25423b9c2ff0d391f415368bcc8df2e1b554d4feca3618b93d10b7a7f",
+          "retrieved_at": "2026-09-10T05:39:22.763030Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-01-02T08:19:39Z",
+          "source_record_sha256": "ad6c4b09b92ca7f6bf92d56e7b0dcd8f89da05a4d8ede3733ef8a717af6b9c1a",
+          "source_uri": null
+        },
+        "record_sha256": "3b0d3926edc5396b3dd0aded8942a97d65c98940eef435271a761ada39b2b10f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "우리나라 민물고기의 아름다움을 널리 알리고 자라나는 청소년 및 어린이들에게 살아있는 생태체험 학습의 장을 제공하기 위해 2006년 11월 8일에 개관했다. 민물고기 단일 테마로 구성된 국내 최대 규모로 개관한 생태체험관은 116종 2,630여 마리를 전시 운영 중이다. 또한 다양한 전시와 기획 운영으로 민물고기에 대한 흥미유발, 생명의 신비함과 과학적 탐구심을 고취시키고 생물자원에 대한 이해증진 및 사라져 가는 토종, 멸종위기어종 등 전시하여 동해안의 새로운 관광명소로 확고한 자리매김을 하였다. 특히 2008년 10월 국내최초의 생물자원보존시설로 등록(환경부지정)되었고, 2009년 12월 교육과학기술부지정 과학관 등록을 완료했으며 2015년 12월 수입·반입된 국제적 멸종위기어종 양수신고 및 사육시설 등록(환경부)을 완료, 2018년도에는 수족관 등록을 완료하여 생태교육용 학습시설로 활용도가 높다. 주요 전시 테마는 하천 유역별 서식어종 전시, 소중한 민물고기, 연어 고향관, 대형 민물고기 전시 등이 있으며 이를 통해 생물자원에 대한 이해 증진을 돕고 있다. 이 밖에도 민물고기생태체험관에서는 물고기에게 직접 먹이를 주는 경험을 할 수 있다. 1층 열대어 전시관 안쪽에 마련된 거대한 먹이 주기 체험장과 독도 모형 수조에서 물고기에게 먹이를 주고 직접 물고기를 만져볼 수 있다."
+      }
+    ],
+    "parent_source_sha256": "b5eaf61c2d9fa8dd8b13c153e9dc710914e42104e402712ee889eb2eb6a14c57",
+    "place": {
+      "address": "경상북도 울진군 근남면 불영계곡로 3532",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+      "name_ko": "민물고기생태체험관",
+      "place_id": "public:korea:4e76ea58027c66b979a149160afad0605a2c03241bd0e189d2feab49823ace1a",
+      "provider_content_id": "130696",
+      "region_code": "47930",
+      "region_name": "경상북도 울진군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

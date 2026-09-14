@@ -1,0 +1,505 @@
+{
+  "assessed_at": "2026-09-11T15:56:13.029180Z",
+  "assessment_sha256": "d3bdd54676f5f2f5411f79bd94b203b2350d9138f9344bef82f2f2241c35e95f",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "말 위에서 제주 풍경을 만끽하고 꽃밭 배경의 촬영 장면이 언급되어 시각적 표현의 단서는 있으나, 일관된 경관 연출을 지배한다는 수준의 근거는 아니다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "꽃밭에서 포즈를 취하며 사진을 남기는 대표 장면 재현 경험이 직접 제시되나, 그것이 방문 경험의 중심이라고까지는 단정할 수 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "짧은 코스 체험과 먹이 주기 등 방문자가 선택해 즐길 활동이 있으나, 자율적 탐색·일상 이탈이 중심이라는 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "제주 풍경과 꽃밭이라는 환경 단서가 있으나 '스트레스 해소'는 홍보 문구이며 실제 고요함·저자극 환경을 확정할 수 없어 제한적 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "승마체험장이라는 시설 설명만 있으며 확인된 원형·문화유산과의 접촉에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소의 역사·연혁·출처에 대한 서술이 제공되지 않아 평가할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "인근 성읍민속마을이 언급되지만 이 승마장 자체의 전승·생활문화 연결 근거는 없다. 인근 관광지 특성을 옮길 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·역사와 연결된 해설이나 학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "장소에 사회적으로 부여된 구체적 상징·의미에 대한 근거가 부족하다. 제주 풍경이라는 일반 이미지만으로 충분하지 않다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·매체를 통한 이미지 유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4",
+          "quote": {
+            "end": 189,
+            "method": "EXACT",
+            "original": "승마장 주변 드넓게 조성된 예쁜 꽃밭에서 개성 넘치는 포즈를 취하며 생생한 추억을 남길 수 있다.",
+            "start": 135,
+            "submitted": "승마장 주변 드넓게 조성된 예쁜 꽃밭에서 개성 넘치는 포즈를 취하며 생생한 추억을 남길 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "36d8c863cb9aaf8c8c90ab38d2c488c9aa28ed818446feddeffbdeb498a27ef8"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "말 위에서 제주 풍경을 만끽하고 꽃밭 배경의 촬영 장면이 언급되어 시각적 표현의 단서는 있으나, 일관된 경관 연출을 지배한다는 수준의 근거는 아니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4",
+          "quote": {
+            "end": 189,
+            "method": "EXACT",
+            "original": "승마장 주변 드넓게 조성된 예쁜 꽃밭에서 개성 넘치는 포즈를 취하며 생생한 추억을 남길 수 있다.",
+            "start": 135,
+            "submitted": "승마장 주변 드넓게 조성된 예쁜 꽃밭에서 개성 넘치는 포즈를 취하며 생생한 추억을 남길 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "36d8c863cb9aaf8c8c90ab38d2c488c9aa28ed818446feddeffbdeb498a27ef8"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "꽃밭에서 포즈를 취하며 사진을 남기는 대표 장면 재현 경험이 직접 제시되나, 그것이 방문 경험의 중심이라고까지는 단정할 수 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4",
+          "quote": {
+            "end": 443,
+            "method": "EXACT",
+            "original": "성읍마을 주변 방문 시 아이와 함께 짧게 즐기기에 좋고 승마체험이 끝난 후에는 말에게 당근 먹이 주기 체험도 가능하다.",
+            "start": 377,
+            "submitted": "성읍마을 주변 방문 시 아이와 함께 짧게 즐기기에 좋고 승마체험이 끝난 후에는 말에게 당근 먹이 주기 체험도 가능하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "36d8c863cb9aaf8c8c90ab38d2c488c9aa28ed818446feddeffbdeb498a27ef8"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "짧은 코스 체험과 먹이 주기 등 방문자가 선택해 즐길 활동이 있으나, 자율적 탐색·일상 이탈이 중심이라는 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4",
+          "quote": {
+            "end": 86,
+            "method": "EXACT",
+            "original": "잘 훈련된 말 위에서 제주의 아름다운 풍경을 만끽하며 일상의 스트레스를 한 번에 날릴 수 있는 이색 승마체험장이다.",
+            "start": 22,
+            "submitted": "잘 훈련된 말 위에서 제주의 아름다운 풍경을 만끽하며 일상의 스트레스를 한 번에 날릴 수 있는 이색 승마체험장이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "36d8c863cb9aaf8c8c90ab38d2c488c9aa28ed818446feddeffbdeb498a27ef8"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "제주 풍경과 꽃밭이라는 환경 단서가 있으나 '스트레스 해소'는 홍보 문구이며 실제 고요함·저자극 환경을 확정할 수 없어 제한적 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "승마와 먹이 주기라는 구체적 참여 활동의 존재는 명확하나, 원문은 '저렴하게 짧은 코스'를 강조하며 지속적 참여·도전(수준 3 앵커)을 뒷받침하지 않는다. 제안자 스스로 '지속적 몰입이라기 어렵다'고 인정하면서 수준 3을 유지한 것은 현재 수준과의 불일치다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "'동물과 교감'은 홍보 문구이자 사람 간 교류·공동 활동·자기표현(R.d의 대상)과 다른 내용이다. 아이 동반 권장은 유대감의 근거가 아니며, 구체적인 교류·표현 기회(수준 2)를 직접 뒷받침하는 원문 근거가 부족하다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "b64c2b10a0523b55d451eb567bf5144828aa190a68520e2bdd017272d584ef5d",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4",
+              "quote": {
+                "end": 134,
+                "method": "EXACT",
+                "original": "이곳의 말들은 성품이 온순하여 초보자는 물론, 아이도 안전하게 승마를 즐길 수 있다.",
+                "start": 87,
+                "submitted": "이곳의 말들은 성품이 온순하여 초보자는 물론, 아이도 안전하게 승마를 즐길 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "36d8c863cb9aaf8c8c90ab38d2c488c9aa28ed818446feddeffbdeb498a27ef8"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4",
+              "quote": {
+                "end": 443,
+                "method": "EXACT",
+                "original": "승마체험이 끝난 후에는 말에게 당근 먹이 주기 체험도 가능하다.",
+                "start": 408,
+                "submitted": "승마체험이 끝난 후에는 말에게 당근 먹이 주기 체험도 가능하다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "36d8c863cb9aaf8c8c90ab38d2c488c9aa28ed818446feddeffbdeb498a27ef8"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "승마체험이라는 구체적 신체 참여 활동과 먹이 주기 체험이 명확히 제공되나, '짧은 코스'라는 점에서 지속적 몰입 활동이라고 보기는 어렵다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "승마와 먹이 주기라는 구체적 참여 활동의 존재는 명확하나, 원문은 '저렴하게 짧은 코스'를 강조하며 지속적 참여·도전(수준 3 앵커)을 뒷받침하지 않는다. 제안자 스스로 '지속적 몰입이라기 어렵다'고 인정하면서 수준 3을 유지한 것은 현재 수준과의 불일치다."
+        }
+      },
+      "reason": "승마와 먹이 주기라는 구체적 참여 활동의 존재는 명확하나, 원문은 '저렴하게 짧은 코스'를 강조하며 지속적 참여·도전(수준 3 앵커)을 뒷받침하지 않는다. 제안자 스스로 '지속적 몰입이라기 어렵다'고 인정하면서 수준 3을 유지한 것은 현재 수준과의 불일치다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4",
+              "quote": {
+                "end": 267,
+                "method": "EXACT",
+                "original": "동물과 직접 교감하는 것 만한 경험은 없을 것이다.",
+                "start": 239,
+                "submitted": "동물과 직접 교감하는 것 만한 경험은 없을 것이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "36d8c863cb9aaf8c8c90ab38d2c488c9aa28ed818446feddeffbdeb498a27ef8"
+            }
+          ],
+          "flags": [],
+          "key": "R.d",
+          "level": 2,
+          "reason": "동물과의 교감과 아이 동반 방문 맥락이 있으나 사람 간 교류·공동 활동·자기표현의 기회에 대한 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.d",
+          "reason": "'동물과 교감'은 홍보 문구이자 사람 간 교류·공동 활동·자기표현(R.d의 대상)과 다른 내용이다. 아이 동반 권장은 유대감의 근거가 아니며, 구체적인 교류·표현 기회(수준 2)를 직접 뒷받침하는 원문 근거가 부족하다."
+        }
+      },
+      "reason": "'동물과 교감'은 홍보 문구이자 사람 간 교류·공동 활동·자기표현(R.d의 대상)과 다른 내용이다. 아이 동반 권장은 유대감의 근거가 아니며, 구체적인 교류·표현 기회(수준 2)를 직접 뒷받침하는 원문 근거가 부족하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "b70ee65f26f4b4007cdcf42c8f636ed1e5ec0322d4b9a107c48e0287ed5e6de0",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:82b9008e207d8230ddae75044ee7179f8a4feb9f73f531683f1969ae91ee3ab4",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:191a90bc93c31695628ab19330b6df1d1db50298784865d68b6d260a97b6f7b9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3030949",
+          "request_sha256": "887bf681ab97ea1eae316dd852820a86dfd5d3c90d8f2176f9e1a22487d4dc0f",
+          "response_sha256": "ea4a5f89f758cb6f24b6141b1888d39d66820a6cd33e977ed2a033f2b059d472",
+          "retrieved_at": "2026-09-10T05:38:47.734734Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-16T06:48:10Z",
+          "source_record_sha256": "cf1e319f551c5d555eb5f86afe431aa3c953d715dad9520aed8663e21ec9bb04",
+          "source_uri": null
+        },
+        "record_sha256": "36d8c863cb9aaf8c8c90ab38d2c488c9aa28ed818446feddeffbdeb498a27ef8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "성읍민속마을 근처에 위치한 우리승마장은 잘 훈련된 말 위에서 제주의 아름다운 풍경을 만끽하며 일상의 스트레스를 한 번에 날릴 수 있는 이색 승마체험장이다. 이곳의 말들은 성품이 온순하여 초보자는 물론, 아이도 안전하게 승마를 즐길 수 있다. 승마장 주변 드넓게 조성된 예쁜 꽃밭에서 개성 넘치는 포즈를 취하며 생생한 추억을 남길 수 있다. 특히 아이들에게 동물은 호기심과 즐거움의 대상이고 생명에 대한 존중, 호기심을 기르기에 동물과 직접 교감하는 것 만한 경험은 없을 것이다. 승마체험에 어울리는 카우보이모자, 장화 대여가 가능하고 안전상의 문제로 핸드폰을 소지한 채로 승마체험은 할 수 없으며 사진도 정해진 자리에서만 찍어야 한다. 또한 양산이나 우산도 사용 금지이다. 성읍마을 주변 방문 시 아이와 함께 짧게 즐기기에 좋고 승마체험이 끝난 후에는 말에게 당근 먹이 주기 체험도 가능하다. 무엇보다도 이곳의 경쟁력은 저렴하게 짧은 코스의 승마체험이 가능하다는 점이다. 따라서 성읍민속마을뿐만 아니라 표선해수욕장, 제주민속촌, 허브동산 등 성산 쪽 여러 관광지를 둘러보는 코스에 포함시켜 방문하길 추천한다."
+      }
+    ],
+    "parent_source_sha256": "b99e394a68e85d93965600054510d57be18561f9aa72c443132facc248bbb186",
+    "place": {
+      "address": "제주특별자치도 서귀포시 성산읍 중산간동로 4517",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:191a90bc93c31695628ab19330b6df1d1db50298784865d68b6d260a97b6f7b9",
+      "name_ko": "우리승마장",
+      "place_id": "public:korea:191a90bc93c31695628ab19330b6df1d1db50298784865d68b6d260a97b6f7b9",
+      "provider_content_id": "3030949",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

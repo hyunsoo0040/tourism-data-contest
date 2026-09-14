@@ -27,6 +27,8 @@ case "$permissions" in
   *) fail "deployment environment file must have mode 0400 or 0600" ;;
 esac
 [ "$owner" = "$(id -u)" ] || fail "deployment environment file must be owned by the current user"
+command -v python3 >/dev/null 2>&1 || fail "python3 is required for PUBLIC release verification"
+[ -f "$SCRIPT_DIR/../scripts/verify_authenticity_deployment.py" ] || fail "PUBLIC deployment verifier is missing"
 
 set -a
 . "$ENV_FILE"
@@ -36,22 +38,48 @@ for name in \
   STACK_NAME APP_DOMAIN TRAEFIK_ACME_EMAIL TRAEFIK_DASHBOARD_DOMAIN \
   TRAEFIK_WHOAMI_DOMAIN TRAEFIK_DASHBOARD_USERS_FILE \
   ITDA_GLM_DASHBOARD_BASIC_AUTH_USERS BACKEND_IMAGE WEB_IMAGE \
+  ITDA_AUTHENTICITY_RELEASE_SHA256 ITDA_AUTHENTICITY_EXPECTED_PLACES \
   ITDA_POSTGRES_DB ITDA_POSTGRES_ADMIN_USER ITDA_POSTGRES_ADMIN_PASSWORD \
   ITDA_RUNTIME_ROLE ITDA_RUNTIME_PASSWORD ITDA_LABEL_BUILDER_ROLE \
   ITDA_LABEL_BUILDER_PASSWORD ITDA_LABEL_APPROVER_ROLE \
   ITDA_LABEL_APPROVER_PASSWORD ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD \
   ITDA_PHOTO_SERVICE_PASSWORD ITDA_PROFILE_SESSION_SERVICE_PASSWORD \
   ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD ITDA_PROFILE_SESSION_CURRENT_KID \
-  ITDA_PROFILE_SESSION_KEYRING ITDA_DAILY_GLM_REFRESH_ENABLED \
-  ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256 ITDA_TOUR_API_SERVICE_KEY_SECRET \
+  ITDA_PROFILE_SESSION_KEYRING ITDA_TOUR_API_SERVICE_KEY_SECRET \
   ITDA_ZHIPUAI_API_KEY_SECRET ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD_SECRET
 do
   require_variable "$name"
 done
 
 [ "$APP_DOMAIN" = "it-da.app" ] || fail "APP_DOMAIN must be it-da.app"
-[ "$ITDA_DAILY_GLM_REFRESH_ENABLED" = "1" ] || fail "daily GLM refresh must be enabled"
-[ "$ITDA_DAILY_GLM_REFRESH_AUTHORITY_SHA256" = "060c06e8aac3f786413b6298e58b6fcf43638fa5e351d5aabab064069ec7959c" ] || fail "daily GLM refresh authority is invalid"
+[ "${ITDA_GROUNDED_DAILY_ENABLED:-0}" = "0" ] || fail "official collection must remain stopped"
+[ "${ITDA_GROUNDED_DAILY_REPLICAS:-0}" = "0" ] || fail "daily collection replicas must be zero"
+[ "${ITDA_TOURISM_ENABLED:-0}" = "0" ] || fail "live official context collection must remain disabled"
+[ "${ITDA_OPERATING_INFORMATION_ENABLED:-0}" = "0" ] || fail "live operating information collection must remain disabled"
+[ "${ITDA_GROUNDED_RECOMMENDATIONS_ENABLED:-0}" = "0" ] || fail "the archived grounded journey must remain disabled"
+[ "${ITDA_MODEL_SESSION_LIMIT:-5}" = "5" ] || fail "model concurrency must be five"
+[ "${ITDA_AUTHENTICITY_ALLOW_DEVELOPMENT:-0}" = "0" ] || fail "development releases cannot be published"
+for name in BACKEND_IMAGE WEB_IMAGE
+do
+  eval "image_reference=\${$name}"
+  case "$image_reference" in
+    *@sha256:*) image_digest=${image_reference##*@sha256:} ;;
+    *) fail "$name must use the registry digest of the tested image" ;;
+  esac
+  case "$image_digest" in
+    *[!0-9a-f]*) fail "$name digest is invalid" ;;
+  esac
+  [ "${#image_digest}" -eq 64 ] || fail "$name digest is invalid"
+done
+unset image_reference image_digest
+case "$ITDA_AUTHENTICITY_RELEASE_SHA256" in
+  *[!0-9a-f]*) fail "PUBLIC release SHA-256 is invalid" ;;
+esac
+[ "${#ITDA_AUTHENTICITY_RELEASE_SHA256}" -eq 64 ] || fail "PUBLIC release SHA-256 is invalid"
+case "$ITDA_AUTHENTICITY_EXPECTED_PLACES" in
+  ''|*[!0-9]*|0) fail "PUBLIC place count is invalid" ;;
+esac
+[ "$ITDA_AUTHENTICITY_EXPECTED_PLACES" -gt 0 ] || fail "PUBLIC place count is invalid"
 [ -f "$TRAEFIK_DASHBOARD_USERS_FILE" ] || fail "dashboard users file not found"
 [ ! -L "$TRAEFIK_DASHBOARD_USERS_FILE" ] || fail "dashboard users file must not be a symbolic link"
 dashboard_permissions=$(stat -c '%a' "$TRAEFIK_DASHBOARD_USERS_FILE" 2>/dev/null || true)
@@ -226,7 +254,7 @@ wait_for_replica() {
 
 wait_for_completed "${STACK_NAME}_migrate"
 wait_for_completed "${STACK_NAME}_quarantine-init"
-for service in traefik whoami postgres backend daily-glm-refresh web
+for service in traefik whoami postgres backend web
 do
   wait_for_replica "${STACK_NAME}_${service}"
 done
@@ -244,8 +272,14 @@ wait_for_status() {
 }
 
 wait_for_status "https://${APP_DOMAIN}/" 200
-wait_for_status "https://${APP_DOMAIN}/v1/questionnaires/current" 200
+wait_for_status "https://${APP_DOMAIN}/trip" 200
+wait_for_status "https://${APP_DOMAIN}/v1/authenticity/info" 200
 wait_for_status "https://${APP_DOMAIN}/internal" 404
 wait_for_status "https://${APP_DOMAIN}/internal/evaluation/profile-releases/probe" 404
+python3 "$SCRIPT_DIR/../scripts/verify_authenticity_deployment.py" \
+  --origin "https://${APP_DOMAIN}" \
+  --release-sha256 "$ITDA_AUTHENTICITY_RELEASE_SHA256" \
+  --places "$ITDA_AUTHENTICITY_EXPECTED_PLACES" \
+  --photo-enabled "${ITDA_AUTHENTICITY_PHOTO_ENABLED:-1}"
 
 printf 'Swarm stack deployed and verified: %s\n' "$STACK_NAME"

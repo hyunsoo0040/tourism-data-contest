@@ -6,7 +6,7 @@ import os
 from datetime import UTC, date, datetime
 from functools import lru_cache
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, NoReturn
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, status
 
@@ -20,6 +20,7 @@ from itda.contracts.mvp_daily_refresh import (
     DailyGlmOperationsOverview,
     DailyRecollectionCommandProjection,
     DailyRecollectionCommandRequest,
+    DailyRecollectionEligibility,
 )
 from itda.contracts.mvp_public_catalog import PublicPlaceCatalog
 from itda.db.mvp_release_overlay import (
@@ -30,6 +31,7 @@ from itda.db.mvp_release_overlay import (
 from itda.pipeline.daily_refresh import next_run_at
 
 router = APIRouter(prefix="/internal/operations/daily-glm/api", tags=["operations"])
+LEGACY_RECOLLECTION_RETIRED = "LEGACY_RECOLLECTION_RETIRED"
 
 
 @lru_cache(maxsize=1)
@@ -72,7 +74,9 @@ def get_overview(
         latest_execution=record.execution,
         next_run_at=next_run_at(datetime.now(UTC)),
         active_release_sha256=record.active_release_sha256,
-        recollection=record.recollection,
+        recollection=DailyRecollectionEligibility(
+            eligible=False, safe_reason=LEGACY_RECOLLECTION_RETIRED
+        ),
         pending_command=pending,
     )
 
@@ -134,30 +138,21 @@ def get_execution_detail(
 
 @router.post(
     "/commands/recollect",
-    response_model=DailyRecollectionCommandProjection,
-    status_code=status.HTTP_202_ACCEPTED,
+    response_model=None,
+    status_code=status.HTTP_410_GONE,
+    responses={410: {"description": "Raw-only recollection retired; use grounded daily CLI"}},
 )
 def request_recollection(
     payload: DailyRecollectionCommandRequest,
     request: Request,
-    reader: Annotated[
-        DailyReleaseOverlayReader,
-        Depends(get_daily_release_overlay_reader),
-    ],
-) -> DailyRecollectionCommandProjection:
+) -> NoReturn:
     require_same_origin_mutation(request)
-    try:
-        return reader.request_recollection(
-            run_date=payload.run_date,
-            idempotency_key=payload.idempotency_key,
-        )
-    except DailyRefreshConflict as error:
-        raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail="daily GLM recollection rejected",
-        ) from error
-    except DailyRefreshStoreError as error:
-        raise _unavailable(error) from error
+    # Historical commands remain readable; production has no consumer for new
+    # raw-only jobs. Never turn a disabled grounded scheduler into a legacy queue.
+    raise HTTPException(
+        status_code=status.HTTP_410_GONE,
+        detail=LEGACY_RECOLLECTION_RETIRED,
+    )
 
 
 @router.get(

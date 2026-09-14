@@ -1,0 +1,973 @@
+{
+  "assessed_at": "2026-09-11T17:19:26.010726Z",
+  "assessment_sha256": "223f06fe49fde91d5c6dc2c6eeea16f5429defa6ca9c0e1474ad6c32c46844a5",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 68
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 64
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "실제 존재하는 정자 원형(청풍정)을 방문해 관람할 수 있음을 확인. 원형 공간의 구체적 탐구 근거는 없어 2수준.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "갑신정변·김옥균·명월의 유서 등 이 장소와 직결된 구체적 사건·인물 맥락이 상세히 제공됨.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "장소에 연결된 역사 서사 해설이 제공되나 여러 자료를 통한 탐구 환경의 근거는 부족.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "김옥균과 명월의 이야기, 명월암 각자 등 장소에 부여된 구체적 상징적 의미·이야기가 확인됨.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a07a6f90da88e7bb7368cbf3a308907f712a26a43f29cdb9217855e86a55dca5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:05210627736881c335cd49ed8c848211ea129a41cdf31acba88d9e616202c1b1",
+            "appearance:06260a93bc3aeafd4247f73e427606e87e2059eacdd71049a1a17db0d0e7f080",
+            "appearance:9a05b8b74ce7cd9c5032dae876a987485b79f456c14843e225b0888b9dcf6679"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "절벽 위 정자에서 내려다보는 대청호 장경 등 구별되는 시각적 성격이 확인된다. 수리안의 두 번째 인용은 해당 출처의 허용 claim 목록에 VISUAL_APPEARANCE가 없어 제외했으며, 장면 전체를 지배하는 일관된 연출의 근거는 부족하여 수준 3으로 판단한다.",
+      "value": 79
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a07a6f90da88e7bb7368cbf3a308907f712a26a43f29cdb9217855e86a55dca5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(대청호 조망)을 현장에서 직접 경험 가능하나, 촬영·재현 활동의 근거는 없음.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a07a6f90da88e7bb7368cbf3a308907f712a26a43f29cdb9217855e86a55dca5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "주변에 다른 관광지가 없고 풍경 감상 중심이라 자율적 조용한 탐색 여지를 시사하나, 여유로운 탐색 지원에 대한 직접 근거는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:73a14d83c684d055e2bf495bf7f8d115cdda1f2d87a82edb456b904b55c7d8ed",
+            "appearance:801240455a007c62241f82374ed0230aba0f05d9bcccb8e89e9594d358c9a7e7",
+            "appearance:b5a29777aa2501477040917a41bcd1208949e702ca6b9195f46d230ab038b59b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "물·절벽·산수 등 자연 환경 단서가 확인되나 실제 고요함·혼잡은 확정할 수 없어 3수준.",
+      "value": 77
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534",
+          "quote": {
+            "end": 161,
+            "method": "EXACT",
+            "original": "물이 굽이쳐 흐르는 절벽 위에 정자 하나, 청풍정에는 김옥균과 명월이에 대한 이야기가 전해진다.",
+            "start": 108,
+            "submitted": "물이 굽이쳐 흐르는 절벽 위에 정자 하나, 청풍정에는 김옥균과 명월이에 대한 이야기가 전해진다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6d84f26f58d5ddf247f8fd0b0c48f5d5c8f1144dd69803979ad2cdad2767afb9"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.a",
+      "level": 2,
+      "reason": "실제 존재하는 정자 원형(청풍정)을 방문해 관람할 수 있음을 확인. 원형 공간의 구체적 탐구 근거는 없어 2수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534",
+          "quote": {
+            "end": 107,
+            "method": "EXACT",
+            "original": "이곳은 조선말기 갑신정변의 주역 김옥균이 정변이 실패로 돌아가자 청풍정에서 은둔생활을 하던 곳이다.",
+            "start": 52,
+            "submitted": "이곳은 조선말기 갑신정변의 주역 김옥균이 정변이 실패로 돌아가자 청풍정에서 은둔생활을 하던 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6d84f26f58d5ddf247f8fd0b0c48f5d5c8f1144dd69803979ad2cdad2767afb9"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 3,
+      "reason": "갑신정변·김옥균·명월의 유서 등 이 장소와 직결된 구체적 사건·인물 맥락이 상세히 제공됨.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 현재 전승·생활문화와의 연결에 대한 근거 없음. '전해진다'는 과거 서사 확인일 뿐임.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534",
+          "quote": {
+            "end": 363,
+            "method": "EXACT",
+            "original": "이때 김옥균은 명월이라는 기생과 함께 청풍정으로 내려왔다고 전해진다.",
+            "start": 325,
+            "submitted": "이때 김옥균은 명월이라는 기생과 함께 청풍정으로 내려왔다고 전해진다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6d84f26f58d5ddf247f8fd0b0c48f5d5c8f1144dd69803979ad2cdad2767afb9"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "장소에 연결된 역사 서사 해설이 제공되나 여러 자료를 통한 탐구 환경의 근거는 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534",
+          "quote": {
+            "end": 664,
+            "method": "EXACT",
+            "original": "아침에 일어난 김옥균이 이 사실을 알고 시체를 거두어 장사를 치른 뒤 청풍정 아래 바위 절벽에 ‘명월암’이라는 글자를 새겼다고 한다.",
+            "start": 590,
+            "submitted": "아침에 일어난 김옥균이 이 사실을 알고 시체를 거두어 장사를 치른 뒤 청풍정 아래 바위 절벽에 ‘명월암’이라는 글자를 새겼다고 한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6d84f26f58d5ddf247f8fd0b0c48f5d5c8f1144dd69803979ad2cdad2767afb9"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "김옥균과 명월의 이야기, 명월암 각자 등 장소에 부여된 구체적 상징적 의미·이야기가 확인됨.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 유통·재현에 대한 근거 없음.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a07a6f90da88e7bb7368cbf3a308907f712a26a43f29cdb9217855e86a55dca5",
+          "quote": {
+            "end": 52,
+            "method": "EXACT",
+            "original": "정자 아래로 내려다보는 대청호 풍경을 감상할 수 있다.",
+            "start": 22,
+            "submitted": "정자 아래로 내려다보는 대청호 풍경을 감상할 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ce0111ab1a73c35a4ac4230144675e7741cc25d28c21b369bd51a20bce59f88d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "절벽 위 정자에서 내려다보는 대청호 장경 등 구별되는 시각적 성격이 확인된다. 수리안의 두 번째 인용은 해당 출처의 허용 claim 목록에 VISUAL_APPEARANCE가 없어 제외했으며, 장면 전체를 지배하는 일관된 연출의 근거는 부족하여 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:a07a6f90da88e7bb7368cbf3a308907f712a26a43f29cdb9217855e86a55dca5",
+          "quote": {
+            "end": 52,
+            "method": "EXACT",
+            "original": "청풍정 주변에는 별도의 관광지는 없으나 정자 아래로 내려다보는 대청호 풍경을 감상할 수 있다.",
+            "start": 0,
+            "submitted": "청풍정 주변에는 별도의 관광지는 없으나 정자 아래로 내려다보는 대청호 풍경을 감상할 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ce0111ab1a73c35a4ac4230144675e7741cc25d28c21b369bd51a20bce59f88d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "대표 장면(대청호 조망)을 현장에서 직접 경험 가능하나, 촬영·재현 활동의 근거는 없음.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:a07a6f90da88e7bb7368cbf3a308907f712a26a43f29cdb9217855e86a55dca5",
+          "quote": {
+            "end": 52,
+            "method": "EXACT",
+            "original": "청풍정 주변에는 별도의 관광지는 없으나 정자 아래로 내려다보는 대청호 풍경을 감상할 수 있다.",
+            "start": 0,
+            "submitted": "청풍정 주변에는 별도의 관광지는 없으나 정자 아래로 내려다보는 대청호 풍경을 감상할 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ce0111ab1a73c35a4ac4230144675e7741cc25d28c21b369bd51a20bce59f88d"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "주변에 다른 관광지가 없고 풍경 감상 중심이라 자율적 조용한 탐색 여지를 시사하나, 여유로운 탐색 지원에 대한 직접 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534",
+          "quote": {
+            "end": 130,
+            "method": "EXACT",
+            "original": "물이 굽이쳐 흐르는 절벽 위에 정자 하나",
+            "start": 108,
+            "submitted": "물이 굽이쳐 흐르는 절벽 위에 정자 하나",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6d84f26f58d5ddf247f8fd0b0c48f5d5c8f1144dd69803979ad2cdad2767afb9"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "물·절벽·산수 등 자연 환경 단서가 확인되나 실제 고요함·혼잡은 확정할 수 없어 3수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "참여·도전·몰입 활동 기회에 대한 근거 없음. '무료'는 경험 강도가 아님.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거 없음.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "5093894f1ddfb181d02d05079661c8a8147d626d64ff4ce0c94f586871f74917",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "널판으로 덮인 듯한 지붕과 나무 결이 강조된 저각도 구도가 장면을 지배하며, 원근감 있는 연출이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:05210627736881c335cd49ed8c848211ea129a41cdf31acba88d9e616202c1b1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1cc56b951e0e19ea2294ddb2e1071715b263293712c5d7b0049568789366157a",
+        "match_basis": [
+          "공식 촬영지역 충청북도 옥천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3438769",
+          "request_sha256": "cd2a2591de2ef1b6136adf0232a47c00e5bb5a7791bc31a142c5a584105f10bb",
+          "response_sha256": "1e51725120acf068bd407e1a8045ad8451a0bc1ff7eb472875a956b2dbfd23b1",
+          "retrieved_at": "2026-09-10T08:23:47.740873Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d66d9b143112c92b4ef7ea2aa36762437f6b83033c0307c64cc79043369b8915",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/69/3438769.jpg"
+        },
+        "record_sha256": "8ac936451fa5325e6f567a84d78607ffef6212a8e00ae3159862f3422a271379",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "노랑·주황으로 물든 가을 숲이 화면을 가득 채우고 맑은 낮 빛과 수면 반사가 어우러져 시각적으로 매우 강한 인상을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:06260a93bc3aeafd4247f73e427606e87e2059eacdd71049a1a17db0d0e7f080",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "68c4551cbfdf4214314358858fe71b9f1763e8c996a6660bed7828479e2ce403",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572892_5",
+          "request_sha256": "5036ae40e81d25a2a3113f635ce4bad40ed302dacc4ee5e2a49bed7d942d103b",
+          "response_sha256": "411398dafcf9fa23311d6bc81ace3f389d7004e53bce3d7da8dccfc7124f4ee0",
+          "retrieved_at": "2026-09-10T08:23:46.366888Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1dea01ded6f3c79a78a91b137639057a45f642cb59872285881f3f1db5e3893f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3572892_image2_1.jpg"
+        },
+        "record_sha256": "1fe142def63c59702e169a9b869ec6aac1cac037259dafb69e4e4ea91a24805f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "기와 지붕의 한옥 정자가 나무 울타리와 함께 보이나 수려 속 작게 자리해 존재감은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:132a390d0be974fa445378b637cd459215e6976a3746bf4007c1e380ca3ca49f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "68c4551cbfdf4214314358858fe71b9f1763e8c996a6660bed7828479e2ce403",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572892_5",
+          "request_sha256": "5036ae40e81d25a2a3113f635ce4bad40ed302dacc4ee5e2a49bed7d942d103b",
+          "response_sha256": "411398dafcf9fa23311d6bc81ace3f389d7004e53bce3d7da8dccfc7124f4ee0",
+          "retrieved_at": "2026-09-10T08:23:46.366888Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1dea01ded6f3c79a78a91b137639057a45f642cb59872285881f3f1db5e3893f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3572892_image2_1.jpg"
+        },
+        "record_sha256": "184cb05a34b5749d0a83848aed1b15099d84ba40acb3e3b8bc1f4f87ae993c62",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "주변에 울창한 나뭇잎과 뒤로 보이는 강물, 바위 등 자연 환경 단서가 함께 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:73a14d83c684d055e2bf495bf7f8d115cdda1f2d87a82edb456b904b55c7d8ed",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1cc56b951e0e19ea2294ddb2e1071715b263293712c5d7b0049568789366157a",
+        "match_basis": [
+          "공식 촬영지역 충청북도 옥천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3438769",
+          "request_sha256": "cd2a2591de2ef1b6136adf0232a47c00e5bb5a7791bc31a142c5a584105f10bb",
+          "response_sha256": "1e51725120acf068bd407e1a8045ad8451a0bc1ff7eb472875a956b2dbfd23b1",
+          "retrieved_at": "2026-09-10T08:23:47.740873Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d66d9b143112c92b4ef7ea2aa36762437f6b83033c0307c64cc79043369b8915",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/69/3438769.jpg"
+        },
+        "record_sha256": "98262870da4b4af00e291c8b78796652493ad464ce0e5ceddff6c1b2160d66f6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 호수, 둘레의 숲, 연이은 산악 지형과 맑은 하늘이 화면 대부분을 차지하는 자연 경관 중심 장면이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:801240455a007c62241f82374ed0230aba0f05d9bcccb8e89e9594d358c9a7e7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "aa217a153e506af881637f4c28891adb55783828bfc70253988f67f14bd8df94",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572897_1",
+          "request_sha256": "5036ae40e81d25a2a3113f635ce4bad40ed302dacc4ee5e2a49bed7d942d103b",
+          "response_sha256": "411398dafcf9fa23311d6bc81ace3f389d7004e53bce3d7da8dccfc7124f4ee0",
+          "retrieved_at": "2026-09-10T08:23:46.366888Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "739d94daba551096bc70d350e57f18c422bb9c5a7c965b7b9d5a1e297420ba9e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3572897_image2_1.jpg"
+        },
+        "record_sha256": "5eee3f56b64c813d54aef6603c213e00f24fdde513b0c48f92ff3c1ab41196aa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축·재료·공간 구성으로 보이는 시각적 단서는 보이지 않으며 순수 자연 풍경이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8fb5541e9941357fbe7093d6c86f8c622eb7ea526c7ef07b0839af2572159de5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "aa217a153e506af881637f4c28891adb55783828bfc70253988f67f14bd8df94",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572897_1",
+          "request_sha256": "5036ae40e81d25a2a3113f635ce4bad40ed302dacc4ee5e2a49bed7d942d103b",
+          "response_sha256": "411398dafcf9fa23311d6bc81ace3f389d7004e53bce3d7da8dccfc7124f4ee0",
+          "retrieved_at": "2026-09-10T08:23:46.366888Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "739d94daba551096bc70d350e57f18c422bb9c5a7c965b7b9d5a1e297420ba9e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3572897_image2_1.jpg"
+        },
+        "record_sha256": "7f35eaf5bda8489ebf636ead231dad88eefd942081b0243514eccccb2527f9c7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와 지붕, 흑단 편액, 격자문 창, 원목 기둥과 난간 등 전통 누각의 외관이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:94c06df5e21597ef7e209f1ddb39fe7c4ac93ddaa9613eaa33b97b82cda9f5ef",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1cc56b951e0e19ea2294ddb2e1071715b263293712c5d7b0049568789366157a",
+        "match_basis": [
+          "공식 촬영지역 충청북도 옥천군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3438769",
+          "request_sha256": "cd2a2591de2ef1b6136adf0232a47c00e5bb5a7791bc31a142c5a584105f10bb",
+          "response_sha256": "1e51725120acf068bd407e1a8045ad8451a0bc1ff7eb472875a956b2dbfd23b1",
+          "retrieved_at": "2026-09-10T08:23:47.740873Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d66d9b143112c92b4ef7ea2aa36762437f6b83033c0307c64cc79043369b8915",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/69/3438769.jpg"
+        },
+        "record_sha256": "4189a5aa1408a2b5a5824aaa023ea44da56b0d6283445a713a50781d8a17816f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "틀 프레임 역할의 가지와 잎으로 구도를 연출했고, 선명한 청색 호수와 하늘 대비가 강렬하며 채도 높은 가을 색채가 장면을 지배적으로 이끈다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9a05b8b74ce7cd9c5032dae876a987485b79f456c14843e225b0888b9dcf6679",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "aa217a153e506af881637f4c28891adb55783828bfc70253988f67f14bd8df94",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572897_1",
+          "request_sha256": "5036ae40e81d25a2a3113f635ce4bad40ed302dacc4ee5e2a49bed7d942d103b",
+          "response_sha256": "411398dafcf9fa23311d6bc81ace3f389d7004e53bce3d7da8dccfc7124f4ee0",
+          "retrieved_at": "2026-09-10T08:23:46.366888Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "739d94daba551096bc70d350e57f18c422bb9c5a7c965b7b9d5a1e297420ba9e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3572897_image2_1.jpg"
+        },
+        "record_sha256": "da46648a43ebb2fcbd3acecc2e69d04d4e54c0d92c0d2ecd64e77d74d91d13f0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "호수와 활엽수 숲, 갈대밭, 바위 기슭 등 자연 경관 요소가 장면 전반을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b5a29777aa2501477040917a41bcd1208949e702ca6b9195f46d230ab038b59b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "68c4551cbfdf4214314358858fe71b9f1763e8c996a6660bed7828479e2ce403",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3572892_5",
+          "request_sha256": "5036ae40e81d25a2a3113f635ce4bad40ed302dacc4ee5e2a49bed7d942d103b",
+          "response_sha256": "411398dafcf9fa23311d6bc81ace3f389d7004e53bce3d7da8dccfc7124f4ee0",
+          "retrieved_at": "2026-09-10T08:23:46.366888Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1dea01ded6f3c79a78a91b137639057a45f642cb59872285881f3f1db5e3893f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3572892_image2_1.jpg"
+        },
+        "record_sha256": "06227b0d047846ff1dd9e586fa4df6034ed90149e7d4092fa94f4c146128a962",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:747cb257d83a813eaa865740e91209c6fb795d9347c5fb5fb24a76fe3afc4c42",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "756476",
+          "request_sha256": "ed3b112ae20280b04f1f114e49cb211f1814e7a335373c2572e213471efb0212",
+          "response_sha256": "1f4ed6e788d4b95084f1a42f7f1042c3f68b433eb4bcdfeffb69cd8af09b75f0",
+          "retrieved_at": "2026-09-10T08:23:45.355098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dc645a52d882e6af840288d67f014ad7ac339992a30e3fad9ef39502a6b1761b",
+          "source_uri": null
+        },
+        "record_sha256": "d111132faa114d6f21436ac9f1d3efc687a4719b8a760ed2f4c9807a085c8fd3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a07a6f90da88e7bb7368cbf3a308907f712a26a43f29cdb9217855e86a55dca5",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "756476",
+          "request_sha256": "ed3b112ae20280b04f1f114e49cb211f1814e7a335373c2572e213471efb0212",
+          "response_sha256": "1f4ed6e788d4b95084f1a42f7f1042c3f68b433eb4bcdfeffb69cd8af09b75f0",
+          "retrieved_at": "2026-09-10T08:23:45.355098Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "273bde91d56f78b352463150ccf2ecdc4f154b6b499b8c2123c422dfdcb529fd",
+          "source_uri": null
+        },
+        "record_sha256": "ce0111ab1a73c35a4ac4230144675e7741cc25d28c21b369bd51a20bce59f88d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "청풍정 주변에는 별도의 관광지는 없으나 정자 아래로 내려다보는 대청호 풍경을 감상할 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a6c74871d4ad6da7c8428f786828d2702beeb5de4858250ba92b2ac5b6c30534",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "756476",
+          "request_sha256": "8404e951579c2f84fc7a95bd73abb11cb70a8fd10a9001439e3f25e1cf9f3a23",
+          "response_sha256": "509f0cc20ce4d0bec794e503691a5856df944dab88bd506cf5e85551e8fcc2b2",
+          "retrieved_at": "2026-09-10T08:08:42.511595Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-24T09:13:00Z",
+          "source_record_sha256": "d714e7136c811aff661376fd0f1cc53538438b015cb73faf21427171a8c92157",
+          "source_uri": null
+        },
+        "record_sha256": "6d84f26f58d5ddf247f8fd0b0c48f5d5c8f1144dd69803979ad2cdad2767afb9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "‘청풍정’은 산수가 좋고 바람이 맑아 고려시대 때부터 선비들이 자주 찾던 곳이라고 전해진다. 이곳은 조선말기 갑신정변의 주역 김옥균이 정변이 실패로 돌아가자 청풍정에서 은둔생활을 하던 곳이다. 물이 굽이쳐 흐르는 절벽 위에 정자 하나, 청풍정에는 김옥균과 명월이에 대한 이야기가 전해진다. 1884년 12월 4일 우정국 개업식 연회를 기회로 김옥균은 박영효, 홍영식 등과 함께 사대당 거두들을 죽인 뒤 신정부를 조직하고 호조참판 겸 혜상공국당상이 되었으나 청나라가 군대를 보내 정변을 막는 바람에 삼일 만에 실패로 돌아갔다. 정변에 실패한 김옥균이 이곳 청풍정에 내려와 은거했다. 이때 김옥균은 명월이라는 기생과 함께 청풍정으로 내려왔다고 전해진다. 정변에 실패한 후 김옥균은 청풍정에서 울분을 달래며 정치적 야망을 키우며 세월을 보냈다. 그러던 어느 날 명월이가 절벽 아래 물로 떨어져 죽는 일이 발생한다. 명월이는 짧은 글을 남기고 죽었는데 그 유서에는 ＂김옥균과 함께 소일하고 있던 세월이 일생에 영화를 누린 것 같이 행복했지만, 자기로 말미암아 선생이 품은 큰 뜻에 누를 끼칠까 봐 몹시 송구스럽게 생각한다.＂는 내용의 글이 적혀 있었다고 한다. 아침에 일어난 김옥균이 이 사실을 알고 시체를 거두어 장사를 치른 뒤 청풍정 아래 바위 절벽에 ‘명월암’이라는 글자를 새겼다고 한다."
+      }
+    ],
+    "parent_source_sha256": "750fdabf1f6a0dd59b5ad4a6ae101ef81a7292f6cad6cc90112b184b8d228ca7",
+    "place": {
+      "address": "충청북도 옥천군 군북면 석호리",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+      "name_ko": "청풍정",
+      "place_id": "public:korea:69823001aa91282073b3ca4d98bae52a1812dfc4d6fd3420b3aa778f72343371",
+      "provider_content_id": "756476",
+      "region_code": "43730",
+      "region_name": "충청북도 옥천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

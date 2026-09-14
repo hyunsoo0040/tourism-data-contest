@@ -11,6 +11,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session, sessionmaker
 
 from itda.contracts.base import ExperienceAxis
+from itda.contracts.grounded_recommendation import GroundedRunBinding
 from itda.contracts.mvp_daily_refresh import MvpScoredReleaseV2, MvpScoredReleaseV3
 from itda.contracts.mvp_scored_release import MvpScoredProfile, MvpScoredRelease
 from itda.contracts.place_profile import MismatchTraitId
@@ -263,6 +264,8 @@ def _pin_row(
 def _validate_pinned_rows(
     run_row: RecommendationRunRow,
     pin_row: RecommendationResultPinRow | None,
+    *,
+    session: Session | None = None,
 ) -> PinnedRecommendationRun:
     if pin_row is None:
         raise RecommendationPinInvalid("recommendation result pin is missing")
@@ -362,12 +365,83 @@ def _validate_pinned_rows(
             raise RecommendationPinInvalid("MVP run authority drifted from the pinned release")
     elif not _is_legacy_snapshot(snapshot):
         raise RecommendationPinInvalid("legacy run requires a legacy release snapshot")
+    grounding = (
+        run.preference.quality_context.grounding
+        if isinstance(run, (MvpRecommendationRun, PhotoMvpRecommendationRun))
+        and run.preference.quality_context
+        else None
+    )
+    if grounding is not None:
+        from itda.db.source_snapshot_repositories import RUN_BINDINGS, SourceSnapshotRepository
+
+        if session is None:
+            raise RecommendationPinInvalid("grounded run requires source-aware pinned reads")
+        rows = (
+            session.execute(select(RUN_BINDINGS).where(RUN_BINDINGS.c.run_id == run.run_id))
+            .mappings()
+            .all()
+        )
+        if not rows:
+            raise RecommendationPinInvalid("grounded run has no source binding")
+        for row in rows:
+            try:
+                binding = GroundedRunBinding.model_validate(row["payload"])
+                if (
+                    binding.binding_sha256 != row["binding_sha256"]
+                    or binding.run_id != row["run_id"]
+                    or binding.request_id != row["request_id"]
+                    or binding.preference_profile_id != row["preference_profile_id"]
+                ):
+                    raise ValueError("grounded binding row metadata mismatch")
+                _validate_grounding_authority(run, binding, run_row.preference_profile_id)
+                SourceSnapshotRepository._validate_members(session, binding)
+            except (ValueError, RuntimeError) as error:
+                raise RecommendationPinInvalid("grounded source pin is invalid") from error
     return PinnedRecommendationRun(
         run=run,
         release_snapshot=snapshot,
         preference_profile_id=run_row.preference_profile_id,
         request_id=run_row.request_id,
     )
+
+
+def _validate_grounding_authority(
+    run: RecommendationRunRecord,
+    binding: GroundedRunBinding | None,
+    preference_profile_id: str,
+) -> None:
+    authority = (
+        run.preference.quality_context.grounding
+        if isinstance(run, (MvpRecommendationRun, PhotoMvpRecommendationRun))
+        and run.preference.quality_context
+        else None
+    )
+    if authority is None:
+        if binding is not None:
+            raise RecommendationPinInvalid("ungrounded run cannot acquire source authority")
+        return
+    if binding is None:
+        raise RecommendationPinInvalid("grounded run requires an atomic source binding")
+    if (
+        binding.run_id != run.run_id
+        or binding.preference_profile_id != preference_profile_id
+        or binding.raw_release_sha256 != _run_release_sha256(run)
+        or binding.trip_input_sha256 != authority.trip_input_sha256
+        or binding.source_release_sha256 != authority.source_release_sha256
+        or binding.source_snapshot_sha256 != authority.source_snapshot_sha256
+        or binding.assessment_bundle_sha256 != authority.assessment_bundle_sha256
+    ):
+        raise RecommendationPinInvalid("receipt and source binding authority differ")
+    if not binding.assessment_bundle_sha256:
+        expected = canonical_sha256(
+            {
+                "policy_version": "facility-requirements-v1",
+                "raw_release_sha256": binding.raw_release_sha256,
+                "source_snapshot_sha256": binding.source_snapshot_sha256,
+            }
+        )
+        if binding.source_release_sha256 != expected:
+            raise RecommendationPinInvalid("facility source release digest differs")
 
 
 class RecommendationRunRepository:
@@ -383,7 +457,23 @@ class RecommendationRunRepository:
         preference_profile_id: str,
         run: RecommendationRunRecord,
         release_snapshot: ReleaseSnapshotRecord,
+        grounded_binding: GroundedRunBinding | None = None,
     ) -> tuple[RecommendationRunRecord, bool]:
+        def persist_grounding(session: Session, stored: RecommendationRunRecord) -> None:
+            _validate_grounding_authority(stored, grounded_binding, preference_profile_id)
+            if grounded_binding is None:
+                return
+            from itda.db.source_snapshot_repositories import SourceSnapshotRepository
+
+            if (
+                grounded_binding.run_id != stored.run_id
+                or grounded_binding.request_id != request_id
+                or grounded_binding.preference_profile_id != preference_profile_id
+                or grounded_binding.raw_release_sha256 != _run_release_sha256(stored)
+            ):
+                raise RecommendationPinInvalid("grounding does not belong to the stored run")
+            SourceSnapshotRepository(self._factory).bind_run_in_session(session, grounded_binding)
+
         release_sha256, membership_sha256, _, _ = _run_metadata(run)
         if (
             release_sha256 != release_snapshot.release_sha256
@@ -441,6 +531,7 @@ class RecommendationRunRepository:
                 input_digest=run.input_digest,
             )
             if existing is not None:
+                persist_grounding(session, existing)
                 return existing, True
             try:
                 with session.begin_nested():
@@ -464,6 +555,7 @@ class RecommendationRunRepository:
                         )
                     )
                     session.flush()
+                    persist_grounding(session, run)
                 return run, False
             except IntegrityError:
                 bound = self._reconcile_request_binding(
@@ -473,6 +565,7 @@ class RecommendationRunRepository:
                     input_digest=run.input_digest,
                 )
                 if bound is not None:
+                    persist_grounding(session, bound)
                     return bound, True
                 existing_run_row = session.scalar(
                     select(RecommendationRunRow).where(
@@ -485,7 +578,7 @@ class RecommendationRunRepository:
                         "concurrent recommendation insert could not be reconciled"
                     ) from None
                 pin = session.get(RecommendationResultPinRow, existing_run_row.run_id)
-                restored = _validate_pinned_rows(existing_run_row, pin)
+                restored = _validate_pinned_rows(existing_run_row, pin, session=session)
                 if (
                     not hmac.compare_digest(restored.run.input_digest, run.input_digest)
                     or restored.preference_profile_id != preference_profile_id
@@ -513,10 +606,12 @@ class RecommendationRunRepository:
                         input_digest=run.input_digest,
                     )
                     if bound is not None:
+                        persist_grounding(session, bound)
                         return bound, True
                     raise RecommendationPinInvalid(
                         "concurrent request binding could not be reconciled"
                     ) from None
+                persist_grounding(session, restored.run)
                 return restored.run, True
 
     @classmethod
@@ -536,7 +631,9 @@ class RecommendationRunRepository:
             raise RecommendationPinInvalid("request binding points to a missing run")
         _validate_request_binding_metadata(binding, existing)
         restored = _validate_pinned_rows(
-            existing, session.get(RecommendationResultPinRow, existing.run_id)
+            existing,
+            session.get(RecommendationResultPinRow, existing.run_id),
+            session=session,
         )
         if binding.preference_profile_id != preference_profile_id or not hmac.compare_digest(
             binding.input_digest, input_digest
@@ -554,7 +651,7 @@ class RecommendationRunRepository:
             if run_row is None:
                 raise RecommendationRunNotFound(run_id)
             pin_row = session.get(RecommendationResultPinRow, run_id)
-            return _validate_pinned_rows(run_row, pin_row)
+            return _validate_pinned_rows(run_row, pin_row, session=session)
 
     def recover_by_request_id(
         self,
@@ -574,7 +671,7 @@ class RecommendationRunRepository:
                 raise RecommendationPinInvalid("request binding points to a missing run")
             _validate_request_binding_metadata(binding, run_row)
             pin_row = session.get(RecommendationResultPinRow, run_row.run_id)
-            restored = _validate_pinned_rows(run_row, pin_row)
+            restored = _validate_pinned_rows(run_row, pin_row, session=session)
             if restored.preference_profile_id != preference_profile_id or not hmac.compare_digest(
                 restored.run.input_digest, input_digest
             ):
@@ -597,7 +694,9 @@ class RecommendationRunRepository:
             if binding.preference_profile_id != preference_profile_id:
                 raise RecommendationRequestConflict(self.code_for_conflict(request_id))
             return _validate_pinned_rows(
-                run_row, session.get(RecommendationResultPinRow, binding.run_id)
+                run_row,
+                session.get(RecommendationResultPinRow, binding.run_id),
+                session=session,
             ).run
 
     def load_run(self, run_id: str) -> RecommendationRunRecord:
@@ -712,6 +811,7 @@ class RecommendationRunRepository:
             pin = session.scalar(
                 select(RecommendationResultPinRow)
                 .where(RecommendationResultPinRow.release_sha256 == release_sha256)
+                .where(RecommendationResultPinRow.kernel_version != "recommendation-kernel-v5")
                 .order_by(RecommendationResultPinRow.created_at, RecommendationResultPinRow.run_id)
                 .limit(1)
             )
@@ -720,7 +820,7 @@ class RecommendationRunRepository:
             run_row = session.get(RecommendationRunRow, pin.run_id)
             if run_row is None:
                 raise RecommendationPinInvalid("pinned run is missing")
-            return _validate_pinned_rows(run_row, pin).release_snapshot
+            return _validate_pinned_rows(run_row, pin, session=session).release_snapshot
 
     def load_detail(self, run_id: str, place_id: str) -> RecommendationDetailRecord:
         pinned = self.load_pinned(run_id)
@@ -872,9 +972,9 @@ class RecommendationRunRepository:
             )
         ]
         labels = {
-            ExperienceAxis.HISTORY_TRADITION: "역사·전통",
-            ExperienceAxis.EMOTION_IMAGE: "감성·이미지",
-            ExperienceAxis.REST_IMMERSION: "휴식·몰입",
+            ExperienceAxis.HISTORY_TRADITION: "대상•원형형",
+            ExperienceAxis.EMOTION_IMAGE: "의미•이미지형",
+            ExperienceAxis.REST_IMMERSION: "자기•몰입형",
         }
         rows.extend(
             ComparisonRow(

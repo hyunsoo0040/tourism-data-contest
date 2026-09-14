@@ -1,0 +1,1118 @@
+{
+  "assessed_at": "2026-09-11T17:26:48.411134Z",
+  "assessment_sha256": "21460c188e8529252eb539f5fb2e6bd21ca3d65293835db9a1029ff45c9f609f",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 53
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:f0d3f1531e71874e9cb90b1e4ae201dc015423bc606efada5d505f898a6cefbe"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소에 '미디어를 통해 나와 세상을 연결하는 도시의 문화 플랫폼'이라는 구체적 의미와 이미지가 공식 서사로 부여되어 있으나, 여러 표현에서 일관되게 확인되는 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2f98336f9b577fc3d91913cba3e017960448facf90793ddd9317ff3869d5f1c2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2c5bec96fafb8a9c238e6f055025e575393f46a11228a8b57beb4258317ce408",
+            "appearance:6b76803a24b66c702183fba9ec09b6ae53008dc9a1cc2b96f1ff8cea7cb24d78",
+            "appearance:c36b7955cb039e25c2f102c21134e01301b82b435e3432972c48c8ade2616240"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "기와지붕과 미디어 기술의 결합, 조명·빛을 활용한 전시 등 장소의 시각적 성격이 기술되지만 장면 전체를 지배하는 일관된 연출까지는 확인되지 않는다.",
+      "value": 56
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:15817f0d609d76f139b49166b8805db043cfc913b970adff8a87d5553e85605b",
+            "appearance:32845b772572bc4466525b0adce565928860ab07d64e425df7ea4af5d19d6efa",
+            "appearance:cf23c8caf39d3fb440087289a4b542702ba2de163d47116f5c5d8f45aa23e545"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:581d04e74c052081f949967f96b874afdcbed99a96a9165cbf5082c6b0f4b010"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "장비 대여, 촬영·녹음·편집 실습, 교육, AI 창작 등 시민이 구체적이고 지속적으로 참여·제작할 활동이 다수 확인되나, 이것이 개별 방문 경험의 전부라 단정하기는 어렵다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "전통 한옥 '건축 양식을 도입하여 조성한' 신축 미디어 센터라는 표현만 있으며, 확인된 실제 원형·유산의 실물 접촉 근거가 없다. 전통풍 외관은 문화유산의 진위를 증명하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "제공된 근거는 미디어 교육·제작·상영 중심 서술이고 이 장소 자체의 구체적 역사·연혁·사건·인물 맥락은 제시되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "한옥 양식 외관 언급만 있을 뿐 지역 주체의 실제 전승·생활문화와의 연결을 확인하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "해설·교육 내용은 모두 미디어 제작·감상 관련이며, 원형·유산·전통에 연결된 역사 해설·탐구 제공 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:f0d3f1531e71874e9cb90b1e4ae201dc015423bc606efada5d505f898a6cefbe",
+          "quote": {
+            "end": 49,
+            "method": "NORMALIZED_AND_MAPPED",
+            "original": "‘배우고 만들고 보고 즐기는 미디어 문화공간’, 수원시미디어센터에 오신 것을 환영합니다.",
+            "start": 0,
+            "submitted": "'배우고 만들고 보고 즐기는 미디어 문화공간', 수원시미디어센터에 오신 것을 환영합니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0a7e249655d0bcd5c02519b72fcb76a6269211cd1d954748b7848678665d6ee7"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "이 장소에 '미디어를 통해 나와 세상을 연결하는 도시의 문화 플랫폼'이라는 구체적 의미와 이미지가 공식 서사로 부여되어 있으나, 여러 표현에서 일관되게 확인되는 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "장소 자체의 이미지가 작품·홍보·SNS 등 매체를 통해 유통된다는 확인 근거가 없다. 센터 내부의 미디어 콘텐츠 제작은 장소 이미지의 외부 유통이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:2f98336f9b577fc3d91913cba3e017960448facf90793ddd9317ff3869d5f1c2",
+          "quote": {
+            "end": 87,
+            "method": "EXACT",
+            "original": "기와지붕 아래 미디어 기술을 접목하여 색다른 분위기를 자아내며",
+            "start": 53,
+            "submitted": "기와지붕 아래 미디어 기술을 접목하여 색다른 분위기를 자아내며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a16b529ba04ef8e00e03c0396d39b086452dd635a1681c99c251cdd5464f3a30"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "기와지붕과 미디어 기술의 결합, 조명·빛을 활용한 전시 등 장소의 시각적 성격이 기술되지만 장면 전체를 지배하는 일관된 연출까지는 확인되지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:581d04e74c052081f949967f96b874afdcbed99a96a9165cbf5082c6b0f4b010",
+          "quote": {
+            "end": 231,
+            "method": "EXACT",
+            "original": "카메라와 조명, 음향 장비를 활용해 직접 영상을 제작하고 방송을 송출하는 경험을 할 수 있습니다.",
+            "start": 177,
+            "submitted": "카메라와 조명, 음향 장비를 활용해 직접 영상을 제작하고 방송을 송출하는 경험을 할 수 있습니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "194e86e6e2c5556f4474bab7ba02cb186df98175d2d2cf4c6d723f94fcac8f61"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "장비 대여, 촬영·녹음·편집 실습, 교육, AI 창작 등 시민이 구체적이고 지속적으로 참여·제작할 활동이 다수 확인되나, 이것이 개별 방문 경험의 전부라 단정하기는 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.a",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "AUTONOMOUS_ACTIVITY",
+            "evidence_id": "evidence:80a5e35927f0aadb0041f3c67d4a2837fa69331ba1ac552f33011472d754c7d5",
+            "quote": "보고 싶은 영화를 조용히 감상하거나, 미디어에 대해 더 깊이 알아보고 싶을 때, 누구나 자유롭게 이용할 수 있는 열린 공간입니다."
+          }
+        ],
+        "key": "R.a",
+        "level": 2,
+        "reason": "도서관 공간에서 자유로운 이용과 콘텐츠 선택이 가능하다는 근거가 있으나, 제작 시설은 정회원 제한이 있어 자율 탐색이 방문 경험의 중심이라 보기 어렵다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.d",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "RELATIONAL_ACTIVITY",
+            "evidence_id": "evidence:80a5e35927f0aadb0041f3c67d4a2837fa69331ba1ac552f33011472d754c7d5",
+            "quote": "단순히 영화를 보는 공간을 넘어, 영화를 함께 감상하고 이야기를 나누며 새로운 문화를 만들어가는 공간입니다."
+          }
+        ],
+        "key": "R.d",
+        "level": 3,
+        "reason": "상영 후 의견 교류, 감독과의 대화, 시민 기획 영화제, 미디어활동실의 동아리·모임 등 교류·공동 활동 기회가 구체적으로 확인된다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:2f98336f9b577fc3d91913cba3e017960448facf90793ddd9317ff3869d5f1c2",
+              "quote": {
+                "end": 228,
+                "method": "EXACT",
+                "original": "건물 내부는 밝은 조명 시설이 잘 갖춰져 있어 사진 촬영을 즐기는 방문객들이 머물기에 적합하다.",
+                "start": 175,
+                "submitted": "건물 내부는 밝은 조명 시설이 잘 갖춰져 있어 사진 촬영을 즐기는 방문객들이 머물기에 적합하다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a16b529ba04ef8e00e03c0396d39b086452dd635a1681c99c251cdd5464f3a30"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 2,
+          "reason": "한옥 외관 속 미디어 공간이라는 대표 장면에서 사진 촬영을 즐길 수 있다는 표현이 있으나, 촬영·재현이 방문 경험의 중심이라는 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    },
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:2f98336f9b577fc3d91913cba3e017960448facf90793ddd9317ff3869d5f1c2",
+              "quote": {
+                "end": 126,
+                "method": "EXACT",
+                "original": "날씨와 관계없이 쾌적하게 이용할 수 있는 실내 환경을 갖추고 있다.",
+                "start": 89,
+                "submitted": "날씨와 관계없이 쾌적하게 이용할 수 있는 실내 환경을 갖추고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a16b529ba04ef8e00e03c0396d39b086452dd635a1681c99c251cdd5464f3a30"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 1,
+          "reason": "실내 쾌적성과 DVD를 조용히 감상하며 휴식할 수 있는 공간 언급 등 제한적 환경 단서가 있으나, 자연 환경이나 저자극 환경이 두드러진다는 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "bbfad0a21142db83f5fb35a251763fa3991022ceb29f7a3c5c6fc9b6d05ac2b2",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 영화관 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:15817f0d609d76f139b49166b8805db043cfc913b970adff8a87d5553e85605b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8099c5599140e16d8ce7f0719c685bd9508757cf9636ccba081d3a0e267e5121",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4078224_18",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "437d4e4842ea158bef2ee8cac9809adb6da0cecd62c5811bab4e44823dded889",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/24/4078224_image2_1.jpg"
+        },
+        "record_sha256": "3c2c1e939d5b8b336b8d4b7752a7514aab018e8bc4501a378fa98d66ab1baab5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "붉은 공 모양 오브제가 중앙에 배치되어 강한 시각적 포인트를 이루고, 대칭적인 한옥식 파사드와 함께 연출된 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2c5bec96fafb8a9c238e6f055025e575393f46a11228a8b57beb4258317ce408",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ca7ef1a1da4262afad1fb5ee2b87807db96230cec64ac6fa61d6627bfd10f5ec",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039865_9",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae8e034fd624a14d6f52bf51ad728c952cdba444618e3f7ff4c4a1eef22fa560",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/65/4039865_image2_1.jpg"
+        },
+        "record_sha256": "f3f64ce3942db9829ea0e4b290d9337c91b6acad206ac07fbc179d83138e2289",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "화분에 심긴 대나무와 작은 식물, 인조잔디 녹색 바닥 등 실내 연출된 녹지 요소가 보이나 자연 경관 자체는 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:32845b772572bc4466525b0adce565928860ab07d64e425df7ea4af5d19d6efa",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03918305f69e5d5d93b62288f0b75d0606860166a91d7dee8e28a57a562b6a61",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039870_12",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7fb241505c8d60c4f6ca58e3f32e5a68dc8e82f657b91277969f873b92bdb54a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/70/4039870_image2_1.jpg"
+        },
+        "record_sha256": "404c02f026b8c34bc8d55bc4127a38bd7081770457b804f77504fb55b4192af0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대식 상영관 마감과 좌석 배치로 전통적 외관, 재료, 공간 구성의 시각적 특징이 거의 나타나지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6820a181d630307d8e52a4985c8c8f82acf2397f2c499dd5da79ceeb10573ba2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8099c5599140e16d8ce7f0719c685bd9508757cf9636ccba081d3a0e267e5121",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4078224_18",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "437d4e4842ea158bef2ee8cac9809adb6da0cecd62c5811bab4e44823dded889",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/24/4078224_image2_1.jpg"
+        },
+        "record_sha256": "283836b79cef4b3c0335ddb58ac68cbc093d3dfdc20a7f36e66daf085712cbcf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "한옥 목구조 실내에 인조잔디 바닥, 전시 패널, 모니터가 결합된 전시 연출이 두드러지며 따뜻한 원목 톤과 녹색 대비가 시각적 성격을 형성한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6b76803a24b66c702183fba9ec09b6ae53008dc9a1cc2b96f1ff8cea7cb24d78",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03918305f69e5d5d93b62288f0b75d0606860166a91d7dee8e28a57a562b6a61",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039870_12",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7fb241505c8d60c4f6ca58e3f32e5a68dc8e82f657b91277969f873b92bdb54a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/70/4039870_image2_1.jpg"
+        },
+        "record_sha256": "32bca22ca8cbf0c878f895981c20bac052db1d531ea97d7bb5524112cd7d30ce",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "노출된 목재 서까래·보, 한옥식 창호와 원목 기둥 등 전통 외관·재료의 시각적 특성이 실내 전체를 지배적으로 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ab4fd05f88c9ae33c9f2af4512a5600fde8efc2636bbb67d64d7956cfa4d560e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03918305f69e5d5d93b62288f0b75d0606860166a91d7dee8e28a57a562b6a61",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039870_12",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7fb241505c8d60c4f6ca58e3f32e5a68dc8e82f657b91277969f873b92bdb54a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/70/4039870_image2_1.jpg"
+        },
+        "record_sha256": "b62dc01656211d8958d121c68575358bf5127408f90063fd779e89a6d2a3296c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "대칭 구도의 영화관 내부로 벽면 양쪽의 따뜻한 간접 조명과 검정 천장, 어두운 청록 좌석의 반복이 절제되고 연출된 시각적 성격을 강하게 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c36b7955cb039e25c2f102c21134e01301b82b435e3432972c48c8ade2616240",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8099c5599140e16d8ce7f0719c685bd9508757cf9636ccba081d3a0e267e5121",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4078224_18",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "437d4e4842ea158bef2ee8cac9809adb6da0cecd62c5811bab4e44823dded889",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/24/4078224_image2_1.jpg"
+        },
+        "record_sha256": "46f4f42fc34839168265bc74d0ed84067e55df1acf4d4a5437a0b54802d9b9ec",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "완벽하게 조경된 대나무와 식재가 보이나, 자연 경관이라기보다 건물 중정에 속한 인공적 녹지로 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cf23c8caf39d3fb440087289a4b542702ba2de163d47116f5c5d8f45aa23e545",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ca7ef1a1da4262afad1fb5ee2b87807db96230cec64ac6fa61d6627bfd10f5ec",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039865_9",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae8e034fd624a14d6f52bf51ad728c952cdba444618e3f7ff4c4a1eef22fa560",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/65/4039865_image2_1.jpg"
+        },
+        "record_sha256": "045ee9a1528babdc1917db81e3ee6be96b753e9353abbd0f8070bd1717d17cf5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와지붕, 목재 창호, 흰 벽과 나무 서까래 등 한옥 전통 외관 요소가 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d5678b15ac7e38374908dbc59420965b6f1142596837a49429f3eb219cbc6df1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ca7ef1a1da4262afad1fb5ee2b87807db96230cec64ac6fa61d6627bfd10f5ec",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039865_9",
+          "request_sha256": "5e01b4a1328d7e28c0ab851f45c010e29fba518c8e16ba84e6859c52a53fac27",
+          "response_sha256": "5f9e408359520ec97c6b608a8ba85a64a1a8c597feb9358d74803efc270e1114",
+          "retrieved_at": "2026-09-10T08:24:08.546856Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae8e034fd624a14d6f52bf51ad728c952cdba444618e3f7ff4c4a1eef22fa560",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/65/4039865_image2_1.jpg"
+        },
+        "record_sha256": "27e52e41fd750cc0423c87fd4454c087971b1723272676126880e46f07645446",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:19252c2c4dbada12d1a7805defe822913d62861861941a494c5d8cb87360f4b0",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3782",
+          "request_sha256": "29cecc43a7dd427abb8288e99515a48a8c001b339e45b1411d5b729ac2b2eda2",
+          "response_sha256": "1b4bf112d50e25d73a036514a1396812c1b6d9c09e36e00f698e18d0b174d6c2",
+          "retrieved_at": "2026-09-10T08:24:08.974107Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-15T08:03:27Z",
+          "source_record_sha256": "6724b5e464c6e854f026ac0f309236ada4d65d4db26a4c28828b08379d99edca",
+          "source_uri": null
+        },
+        "record_sha256": "a9b88a557e5086e2d52b33c4ee325c052fe593016807be310e8e1e4615e5fb58",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "이곳은 장비대여실입니다. 이곳에서는 카메라와 렌즈, 조명, 마이크와 녹음 장비 등 다양한 미디어 장비를 대여할 수 있으며, 약 400여 개의 전문 장비가 구비되어 있습니다. 영상 촬영에 필요한 장비부터 음향 녹음 장비까지 콘텐츠 제작에 필요한 장비를 이곳에서 대여하여 사용할 수 있습니다. 장비 대여는 수원시미디어센터 정회원이라면 누구나 이용할 수 있으며, 정회원 가입은 수원시미디어센터 누리집을 통해 신청할 수 있습니다. 장비 사용 방법을 배우는 교육도 함께 운영되고 있어, 장비가 처음인 분들도 쉽게 이용할 수 있습니다. 필요한 장비를 빌리고, 직접 콘텐츠를 만들어 볼 수 있는 공간, 장비대여실입니다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1b8355a9e927ae3804814f27cfa0b8bc055a574f2a0363045fb22f7c7c566d95",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3782",
+          "request_sha256": "29cecc43a7dd427abb8288e99515a48a8c001b339e45b1411d5b729ac2b2eda2",
+          "response_sha256": "1b4bf112d50e25d73a036514a1396812c1b6d9c09e36e00f698e18d0b174d6c2",
+          "retrieved_at": "2026-09-10T08:24:08.974107Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-15T08:03:27Z",
+          "source_record_sha256": "b9dab2c2dbe5036afa173cbc4b906204de3a33cb611c51b696e5b0e3450f5833",
+          "source_uri": null
+        },
+        "record_sha256": "52cda34dc24e8af1cd611034d2c18ed3964ec3b6e25bff83978d770d0b2ee6d0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "이곳은 교육실입니다. 이 공간은 다양한 미디어 교육과 강의, 회의와 모임이 이루어지는 공간입니다. 사진과 영상 제작, 라디오와 음향, 뉴미디어 등 다양한 분야의 미디어 수업이 이곳에서 진행되며, 시민들이 미디어를 배우고 직접 실습해 볼 수 있습니다. 강의와 발표, 세미나와 같은 프로그램은 물론, 공간 대관을 통해 다양한 모임과 활동 공간으로도 활용되고 있습니다. 배우고, 나누고, 함께 이야기하는 공간, 교육실입니다. 이곳은 디지털교육실입니다. 이 공간은 컴퓨터를 활용한 미디어 교육과 실습이 이루어지는 공간으로, 윈도우와 iOS 기반의 컴퓨터가 모두 구축되어 있어 다양한 제작 환경을 경험할 수 있습니다. 영상 편집과 이미지 제작, 디자인 작업 등 디지털 기반의 콘텐츠 제작 교육이 이곳에서 진행되며, 직접 편집하고 결과물을 만들어 보는 실습 중심의 교육이 이루어집니다. 디지털 콘텐츠 제작을 배우고 직접 만들어 보는 공간, 디지털교육실입니다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2f98336f9b577fc3d91913cba3e017960448facf90793ddd9317ff3869d5f1c2",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "4039864",
+          "request_sha256": "c502c84528de424c8fb25dd0307de448829d408900582f5eb799505805e50daa",
+          "response_sha256": "56ebef42ebdae7cdad75f5a120e309397aade54c7bb3a7c35a9c982323a5090e",
+          "retrieved_at": "2026-09-10T08:09:06.167649Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T08:43:54Z",
+          "source_record_sha256": "cfff2d11a94e8205ca15672cff6b94f01726ec5f0661fbbc1c2a6e5d93e35a5b",
+          "source_uri": null
+        },
+        "record_sha256": "a16b529ba04ef8e00e03c0396d39b086452dd635a1681c99c251cdd5464f3a30",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "수원시미디어센터는 국내 최초로 전통 한옥의 건축 양식을 도입하여 조성한 미디어 특화 공간이다. 기와지붕 아래 미디어 기술을 접목하여 색다른 분위기를 자아내며, 날씨와 관계없이 쾌적하게 이용할 수 있는 실내 환경을 갖추고 있다. 화려한 조명과 빛을 활용한 전시를 진행하고 있어 방문객들에게 시각적인 즐거움을 준다. 건물 내부는 밝은 조명 시설이 잘 갖춰져 있어 사진 촬영을 즐기는 방문객들이 머물기에 적합하다. 전시 관람 외에도 미디어 도서관 시설을 통해 다양한 영상 콘텐츠를 경험할 수 있다. 도서관 내부에 마련된 공간에서는 비치된 DVD를 선택하여 무료로 감상할 수 있어 여행 중 휴식을 취하며 영화를 즐길 수 있다. 또한 수원시네마테크 프로그램을 운영하여 평소 접하기 어려운 독립 영화나 예술 영화를 상영하며, 관람 후 서로의 의견을 나눌 수 있는 문화적 환경을 제공한다. 한옥이라는 전통적인 외관 속에 미디어 도서관과 상영관 등 현대적인 설비를 조화롭게 배치하여 세대 간의 소통을 돕는 복합적인 역할을 수행한다. 수원의 역사적 경관 속에서 미디어 문화를 깊이 있게 체험하고 싶은 방문객들에게 실용적인 휴식처가 된다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:581d04e74c052081f949967f96b874afdcbed99a96a9165cbf5082c6b0f4b010",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3782",
+          "request_sha256": "29cecc43a7dd427abb8288e99515a48a8c001b339e45b1411d5b729ac2b2eda2",
+          "response_sha256": "1b4bf112d50e25d73a036514a1396812c1b6d9c09e36e00f698e18d0b174d6c2",
+          "retrieved_at": "2026-09-10T08:24:08.974107Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-15T08:03:27Z",
+          "source_record_sha256": "255685a75d5e4b274fabd1bc497e07b4d936d37667d2ef31bae76a28e785bbbc",
+          "source_uri": null
+        },
+        "record_sha256": "194e86e6e2c5556f4474bab7ba02cb186df98175d2d2cf4c6d723f94fcac8f61",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "이곳은 영상스튜디오입니다. 이 스튜디오는 실제 방송국과 같은 전문 촬영 장비와 조명, 음향 장비를 갖추고 있어 영상 촬영과 실시간 송출이 가능한 공간입니다. 인터뷰 촬영이나 강의 촬영, 온라인 방송 등 다양한 형태의 영상 제작이 이곳에서 이루어지며, 시민들을 위한 영상 제작 교육과 체험 프로그램도 함께 진행됩니다. 카메라와 조명, 음향 장비를 활용해 직접 영상을 제작하고 방송을 송출하는 경험을 할 수 있습니다. 수원시미디어센터의 스튜디오와 전문 장비는 정회원이라면 대여하여 이용할 수 있으며, 정회원 가입은 수원시미디어센터 누리집을 통해 신청할 수 있습니다. 영상으로 자신의 이야기를 만들고 싶은 분들은 이 공간을 이용해 보시기 바랍니다. 이곳은 소리스튜디오입니다. 이 스튜디오는 녹음과 믹싱 등 전문적인 음향 작업을 할 수 있는 공간으로, 5.1채널 음향 시스템을 갖추고 있습니다. 내레이션 녹음이나 음악 작업, 오디오 콘텐츠 제작 등 다양한 음향 작업이 이곳에서 이루어지며, 라이브 송출도 가능합니다. 혼자서 녹음과 편집을 진행하는 1인 스튜디오 공간으로도 활용할 수 있어, 팟캐스트나 오디오북, 나만의 음원 제작 등 다양한 콘텐츠를 만들어 볼 수 있습니다. 수원시미디어센터 정회원이라면 시설과 장비를 대여하여 이용할 수 있으며, 정회원 가입은 수원시미디어센터 누리집을 통해 신청할 수 있습니다. 소리로 자신의 이야기를 만들고 싶은 분들은 이 공간을 이용해 보시기 바랍니다. 이곳은 라디오스튜디오입니다. 이 스튜디오는 보이는 라디오와 팟캐스트 등 다양한 라디오 콘텐츠를 제작할 수 있는 공간으로, 실시간 송출도 가능합니다. 여러 사람이 함께 방송을 진행할 수 있도록 최대 6개의 마이크가 설치되어 있으며, 각 마이크의 음성은 믹서를 통해 하나의 스테레오 음원으로 녹음됩니다. 라디오 방송처럼 이야기를 나누거나, 인터뷰와 토크 프로그램, 팟캐스트 녹음 등 다양한 오디오 콘텐츠 제작이 이곳에서 이루어집니다. 시민들을 위한 라디오 제작 교육도 함께 진행되며, 수원시미디어센터 정회원이라면 시설과 장비를 대여하여 이용할 수 있습니다. 목소리로 이야기를 전하고 싶은 분들은 이 공간을 이용해 보시기 바랍니다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:80a5e35927f0aadb0041f3c67d4a2837fa69331ba1ac552f33011472d754c7d5",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3782",
+          "request_sha256": "29cecc43a7dd427abb8288e99515a48a8c001b339e45b1411d5b729ac2b2eda2",
+          "response_sha256": "1b4bf112d50e25d73a036514a1396812c1b6d9c09e36e00f698e18d0b174d6c2",
+          "retrieved_at": "2026-09-10T08:24:08.974107Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-15T08:03:27Z",
+          "source_record_sha256": "659ee4916c61d37fda07d4877c3a8328fca8953e54b5d2cbe5198cb3ddb6b8ec",
+          "source_uri": null
+        },
+        "record_sha256": "cfe85878f57d9fb0426e44aaf8fb59c0504dc3a4b14da3059a17767bea148b57",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "이곳은 미디어도서관입니다. 미디어도서관은 다양한 영상 작품을 감상하고, 미디어 관련 자료를 무료로 열람할 수 있는 공간입니다. 블루레이와 DVD로 영화와 영상 콘텐츠를 감상할 수 있으며, 영화와 영상 제작, 미디어 문화와 관련된 도서와 정기간행물도 이곳에서 만나볼 수 있습니다. 보고 싶은 영화를 조용히 감상하거나, 미디어에 대해 더 깊이 알아보고 싶을 때, 누구나 자유롭게 이용할 수 있는 열린 공간입니다. 때로는 작은 상영이나 모임, 강연 등 다양한 프로그램이 진행되기도 합니다. 영화를 보고, 책을 읽고, 미디어를 통해 새로운 생각을 만나는 공간, 미디어도서관입니다. 이곳은 수원시미디어센터 상영관, 수원시네마테크입니다. 총 96석 규모의 전문 상영관으로, 전국 미디어센터 중 유일하게 4K 레이저 영사기와 7.1채널 음향시스템, 3D 상영과 스트리밍 시스템까지 모두 갖추고 있습니다. 이곳에서는 최신 독립영화와 예술영화, 고전영화, 그리고 다양한 기획전이 상영되며, 단체 또는 기관대상 상영을 지원하는 공동체 상영도 이루어집니다. 단순히 영화를 보는 공간을 넘어, 영화를 함께 감상하고 이야기를 나누며 새로운 문화를 만들어가는 공간입니다. 때로는 감독과의 대화가 열리고, 때로는 시민이 기획한 작은 영화제가 열리기도 합니다. 누군가에게는 영화를 처음 만나는 공간이 되고, 누군가에게는 자신의 영화를 처음 상영하는 공간이 되기도 합니다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ec99d3e7a87c130bdb217219a2ed04f568c77febaf1b18bc6aabf98887c4f786",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3782",
+          "request_sha256": "29cecc43a7dd427abb8288e99515a48a8c001b339e45b1411d5b729ac2b2eda2",
+          "response_sha256": "1b4bf112d50e25d73a036514a1396812c1b6d9c09e36e00f698e18d0b174d6c2",
+          "retrieved_at": "2026-09-10T08:24:08.974107Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-15T08:03:27Z",
+          "source_record_sha256": "9f85032ad8288830a288c9bf2db6b00813e9aac3ddabe9104ece7bb0a164bdd5",
+          "source_uri": null
+        },
+        "record_sha256": "3be1578a0482a26f27315884a579d339eff1f5867a48e8300e1eb5c85858c2aa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "이곳은 미디어활동실입니다. 이 공간은 시민들의 다양한 미디어 활동과 모임, 동아리 활동이 이루어지는 공간입니다. 콘텐츠 제작 모임이나 스터디, 회의와 발표 등 다양한 활동이 가능하며, 공간 대관을 통해 시민들이 자유롭게 이용할 수 있습니다. 함께 모여 아이디어를 나누고, 기획하고, 새로운 프로젝트를 준비하는 공간, 미디어활동실입니다. 이곳은 AI미디어랩실입니다. 이 공간은 인공지능 기술을 기반으로 다양한 실험과 예술적 탐구가 이루어지는 창작 활동 공간입니다. 인공지능을 활용한 이미지 제작과 영상 제작, 사운드 작업 등 새로운 방식의 미디어 콘텐츠를 실험하고 제작할 수 있으며, 기술과 예술이 결합된 창작 활동이 이곳에서 이루어집니다. 빠르게 변화하는 미디어 환경 속에서 인공지능은 새로운 창작 도구가 되고 있으며, 이곳에서는 누구나 이러한 기술을 직접 배우고 창작에 활용해 볼 수 있습니다. 새로운 방식의 콘텐츠 제작을 경험해 보고 싶은 분들은 이 공간을 이용해 보시기 바랍니다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f0d3f1531e71874e9cb90b1e4ae201dc015423bc606efada5d505f898a6cefbe",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3782",
+          "request_sha256": "29cecc43a7dd427abb8288e99515a48a8c001b339e45b1411d5b729ac2b2eda2",
+          "response_sha256": "1b4bf112d50e25d73a036514a1396812c1b6d9c09e36e00f698e18d0b174d6c2",
+          "retrieved_at": "2026-09-10T08:24:08.974107Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-15T08:03:27Z",
+          "source_record_sha256": "e077231b1f57df140dfd0b2cd91d894dc648363265288fd5c62b053004383c36",
+          "source_uri": null
+        },
+        "record_sha256": "0a7e249655d0bcd5c02519b72fcb76a6269211cd1d954748b7848678665d6ee7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "‘배우고 만들고 보고 즐기는 미디어 문화공간’, 수원시미디어센터에 오신 것을 환영합니다. 수원시미디어센터는 미디어를 통해 ‘나’와 ‘세상’을 연결하는 도시의 문화 플랫폼입니다. 이곳에서는 미디어를 어렵게 배우기만 하는 것이 아니라, 직접 체험하고 직접 만들고 함께 나누는 경험을 할 수 있습니다. 교육과 체험으로 미디어를 이해하고, 영상과 라디오, 다양한 콘텐츠 제작을 통해 나의 이야기를 작품으로 만들고, 전시와 영화 상영을 통해 다른 사람의 이야기를 함께 감상하고 소통합니다. 시민의 작은 아이디어는 이곳에서 하나의 콘텐츠가 되고 하나의 작품이 되어 도시의 문화로 이어집니다. 일상 속에서 미디어를 배우고, 미디어로 결과물을 만들고, 미디어를 함께 즐기는 곳, 누구에게나 열려 있는 공간, 수원시미디어센터입니다. 지금부터 수원시미디어센터의 다양한 공간을 함께 둘러보시겠습니다."
+      }
+    ],
+    "parent_source_sha256": "abe2b0602686cf7ec4630f4bd624fd0da916872ada00ec47a0476f59690332e6",
+    "place": {
+      "address": "경기도 수원시 팔달구 창룡대로 64 (남수동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+      "name_ko": "수원시미디어센터",
+      "place_id": "public:korea:6f04af59b82313bd5be0a3db72d473a730d9c5018e8e5dcb963cf6e30b79f4f0",
+      "provider_content_id": "4039864",
+      "region_code": "41115",
+      "region_name": "경기도 수원시 팔달구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

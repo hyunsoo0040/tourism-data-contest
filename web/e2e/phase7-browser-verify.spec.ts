@@ -123,9 +123,9 @@ test.describe("07-02 upstream main page", () => {
     await expect(page.locator(".phone .type-card")).toHaveCount(3);
     await expect(page.locator(".phone .type-icon")).toHaveText(["古", "景", "休"]);
     await expect(page.locator(".phone .type-card strong")).toHaveText([
-      "역사·전통형",
-      "감성·이미지형",
-      "휴식·몰입형",
+      "대상•원형형",
+      "의미•이미지형",
+      "자기•몰입형",
     ]);
     await expect(page.locator(".phone .type-card span")).toHaveText([
       "문화, 유적, 자연 보존",
@@ -134,18 +134,18 @@ test.describe("07-02 upstream main page", () => {
     ]);
     await expect(page.locator("#matchScore")).toHaveCount(0);
 
-    await expect(page.locator("#phoneType")).toContainText("휴식·몰입형 여행자");
-    await expect(page.locator("#resultTitle")).toHaveText("휴식·몰입형 추천 결과");
-    await expect(page.locator("#phoneType")).toContainText("감성·이미지형 여행자", {
+    await expect(page.locator("#phoneType")).toContainText("자기•몰입형 여행자");
+    await expect(page.locator("#resultTitle")).toHaveText("자기•몰입형 추천 결과");
+    await expect(page.locator("#phoneType")).toContainText("의미•이미지형 여행자", {
       timeout: 4_000,
     });
     await expect(page.locator("#phoneMatch")).toHaveText("86% match");
-    await expect(page.locator("#resultTitle")).toHaveText("감성·이미지형 추천 결과");
-    await expect(page.locator("#phoneType")).toContainText("역사·전통형 여행자", {
+    await expect(page.locator("#resultTitle")).toHaveText("의미•이미지형 추천 결과");
+    await expect(page.locator("#phoneType")).toContainText("대상•원형형 여행자", {
       timeout: 4_000,
     });
     await expect(page.locator("#phoneMatch")).toHaveText("89% match");
-    await expect(page.locator("#resultTitle")).toHaveText("역사·전통형 추천 결과");
+    await expect(page.locator("#resultTitle")).toHaveText("대상•원형형 추천 결과");
   });
 
   for (const viewport of [
@@ -164,13 +164,13 @@ test.describe("07-02 upstream main page", () => {
       await expect(page.getByRole("heading", { name: /내가 기대한 여행과/ })).toBeVisible();
       await expect(page.getByText("관광데이터 기반 개인 맞춤 여행 큐레이션")).toBeVisible();
       await page.locator('#demo .choice[data-type="history"]').click();
-      await expect(page.locator("#resultTitle")).toHaveText("역사·전통형 추천 결과");
+      await expect(page.locator("#resultTitle")).toHaveText("대상•원형형 추천 결과");
       await expect(page.locator("#recommendations h4")).toHaveText(["불국사", "경주 양동마을"]);
       await page.locator('#demo .choice[data-type="rest"]').click();
-      await expect(page.locator("#resultTitle")).toHaveText("휴식·몰입형 추천 결과");
+      await expect(page.locator("#resultTitle")).toHaveText("자기•몰입형 추천 결과");
       await expect(page.locator("#recommendations h4")).toHaveText(["보문호반길", "동궁과 월지"]);
       await page.locator('#demo .choice[data-type="image"]').click();
-      await expect(page.locator("#resultTitle")).toHaveText("감성·이미지형 추천 결과");
+      await expect(page.locator("#resultTitle")).toHaveText("의미•이미지형 추천 결과");
       await expect(page.locator("#recommendations h4")).toHaveText(["황리단길", "대릉원 일원"]);
       await expect(page.getByRole("link", { name: "여행 취향 찾기" })).toBeVisible();
       await expect(page.getByRole("link", { name: "12문항 취향 테스트로 자세히 보기" })).toBeVisible();

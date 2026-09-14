@@ -1,0 +1,1033 @@
+{
+  "assessed_at": "2026-09-11T18:32:17.653383Z",
+  "assessment_sha256": "3406286cf9fdb08fb2d77269f9435ce56b28880d91ca76ac1f834e39e95380e3",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 81
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 29
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "설계자의 의도와 장소 언급을 통해 동대문의 역동성이라는 구체적 이미지·의미가 장소에 연결됨을 확인할 수 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "SNS를 통해 장소 이미지(야경)가 재현·확산되고 있음을 직접 서술하고 있으나, 확산의 규모나 반복성에 대한 추가 근거는 제한적이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:403c521ef6e19b7cde304fc10d6a1b4fb745a08e1263d48ddd7856f574436eff",
+            "appearance:d4b9f5ba2fb7af5d23317658934a6cc6a3e8237069c446c4a8237fb610ce9a3e",
+            "appearance:e79f2ec3b76d0b038fe6141de365299c5a21c145d82cdcd897d6c9f2adcb2e96"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 이미지(야경)를 현장에서 직접 경험하고 촬영으로 재현할 수 있는 지점이 안내되어 있으나, 이것이 방문 경험의 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ac7b71068452a8cd916af425dea47013ffb01fb646caf58587911383ce74882d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "다양한 공간과 야외공간, 산책 코스 언급으로 자율적 선택·탐색 기회를 추정할 수 있으나 여유로운 탐색의 질에 대한 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:71d5c1dc58dbd161a59a9630de0a3a217e07528b72790f260778256a32debd8b",
+            "appearance:99ce06662ba1fe27ac1d169faabe946cb1e34a4ddcf4569fdc82f63f02e8b97d",
+            "appearance:a085bfbe974e35908b28acd5662c5be9bbdd1f36e5ebf331e23b14d71520d8cc"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 8,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제시된 근거는 식당·베이커리·카페가 들어선 상업 공간과 '감성 충전'이라는 홍보성 표현일 뿐, 자연·시각적 저자극 등 회복 지원 환경 단서 자체는 확인되지 않는다. 동대문 상업 지구라는 맥락과도 상충한다.",
+      "value": 8
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "동대문역사문화공원이라는 공간 명칭만 언급되어 원형·유산과의 실제 접촉 여부를 확인할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관 연도(2014년)와 개최 행사 목록만 있을 뿐 이 장소의 실제 역사·출처 맥락에 대한 설명 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 뒷받침하는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·전통에 연결된 해설·학습 프로그램의 내용에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+          "quote": {
+            "end": 693,
+            "method": "EXACT",
+            "original": "이른 새벽부터 밤이 저물 때까지 쉴 새 없이 변화하는 동대문의 역동성에 주목해 곡선과 곡면, 사선과 사면으로 이뤄진 특유의 건축 언어",
+            "start": 619,
+            "submitted": "이른 새벽부터 밤이 저물 때까지 쉴 새 없이 변화하는 동대문의 역동성에 주목해 곡선과 곡면, 사선과 사면으로 이뤄진 특유의 건축 언어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "493c4d4140144df4fadcd711a63a5de7b18ea1c37ceedcb261af21a40c10eb88"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "설계자의 의도와 장소 언급을 통해 동대문의 역동성이라는 구체적 이미지·의미가 장소에 연결됨을 확인할 수 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+          "quote": {
+            "end": 577,
+            "method": "EXACT",
+            "original": "SNS 상에 동대문디자인플라자의 야경 사진이 범람하는 데는 이유가 있는 법이다.",
+            "start": 533,
+            "submitted": "SNS 상에 동대문디자인플라자의 야경 사진이 범람하는 데는 이유가 있는 법이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "493c4d4140144df4fadcd711a63a5de7b18ea1c37ceedcb261af21a40c10eb88"
+        }
+      ],
+      "flags": [],
+      "key": "E.b",
+      "level": 3,
+      "reason": "SNS를 통해 장소 이미지(야경)가 재현·확산되고 있음을 직접 서술하고 있으나, 확산의 규모나 반복성에 대한 추가 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+          "quote": {
+            "end": 864,
+            "method": "EXACT",
+            "original": "야경 사진을 찍기 좋은 지점은 어울림 광장 진입로로, 내부의 웅장함과 건축물의 신비로운 소재가 연출하는 분위기를 담을 수 있다.",
+            "start": 793,
+            "submitted": "야경 사진을 찍기 좋은 지점은 어울림 광장 진입로로, 내부의 웅장함과 건축물의 신비로운 소재가 연출하는 분위기를 담을 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "493c4d4140144df4fadcd711a63a5de7b18ea1c37ceedcb261af21a40c10eb88"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대표 이미지(야경)를 현장에서 직접 경험하고 촬영으로 재현할 수 있는 지점이 안내되어 있으나, 이것이 방문 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:ac7b71068452a8cd916af425dea47013ffb01fb646caf58587911383ce74882d",
+          "quote": {
+            "end": 37,
+            "method": "EXACT",
+            "original": "아트홀 / 뮤지엄 / 디자인랩 / 동대문역사문화공원 / 야외공간 등",
+            "start": 0,
+            "submitted": "아트홀 / 뮤지엄 / 디자인랩 / 동대문역사문화공원 / 야외공간 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a61d8b842d03d7d41dbd4676baec407044fa5cde6da7e76c4ce3bd00d6b0632b"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "다양한 공간과 야외공간, 산책 코스 언급으로 자율적 선택·탐색 기회를 추정할 수 있으나 여유로운 탐색의 질에 대한 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "제시된 근거는 식당·베이커리·카페가 들어선 상업 공간과 '감성 충전'이라는 홍보성 표현일 뿐, 자연·시각적 저자극 등 회복 지원 환경 단서 자체는 확인되지 않는다. 동대문 상업 지구라는 맥락과도 상충한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "체험 프로그램 존재와 시민 라운지는 '구체적인 참여 활동'(수준 2)까지만 뒷받침한다. '지속적으로 참여·도전할 활동'이라는 현재 제안 수준(수준 3)은 프로그램 내용·빈도 등 근거가 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "포럼·콘퍼런스 개최는 전문·사업적 행사로, 방문자 간 교류·공동 활동·자기표현 기회와는 다른 주제이다. 관광객의 관계·자기표현 경험으로 확대할 근거가 없다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+            "quote": "해 질 녘 조명이 켜진 후 건축물에 오롯이 집중할게 될 때 곡선 부가 주는 역동성의 진가가 드러난다"
+          },
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+            "quote": "알림터와 배움터를 나누는 살림터 문 앞은 내외부의 현란한 곡선과 조명이 정점을 이룬다."
+          }
+        ],
+        "key": "E.c",
+        "level": 4,
+        "reason": "곡선·곡면 건축 언어, 야간 조명 연출 등 일관된 시각적 성격이 장면을 지배한다는 구체적 서술이 있다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+              "quote": {
+                "end": 532,
+                "method": "EXACT",
+                "original": "식당과 베이커리, 카페가 들어선 디자인 장터 역시 감성 충전을 기대하는 가족이나 연인을 만족시키고도 남을 산책 코스다.",
+                "start": 466,
+                "submitted": "식당과 베이커리, 카페가 들어선 디자인 장터 역시 감성 충전을 기대하는 가족이나 연인을 만족시키고도 남을 산책 코스다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "493c4d4140144df4fadcd711a63a5de7b18ea1c37ceedcb261af21a40c10eb88"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 2,
+          "reason": "산책 코스와 머무를 공간(카페 등)의 존재는 확인되나 자연·저자극 환경 자체의 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "제시된 근거는 식당·베이커리·카페가 들어선 상업 공간과 '감성 충전'이라는 홍보성 표현일 뿐, 자연·시각적 저자극 등 회복 지원 환경 단서 자체는 확인되지 않는다. 동대문 상업 지구라는 맥락과도 상충한다."
+        }
+      },
+      "reason": "제시된 근거는 식당·베이커리·카페가 들어선 상업 공간과 '감성 충전'이라는 홍보성 표현일 뿐, 자연·시각적 저자극 등 회복 지원 환경 단서 자체는 확인되지 않는다. 동대문 상업 지구라는 맥락과도 상충한다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+              "quote": {
+                "end": 425,
+                "method": "EXACT",
+                "original": "누구나 디자이너가 되는 곳을 주제로 2019년 개장한 시민 라운지 ‘D-숲’과 DDP 관련 기념품을 소개하는 DDP 디자인 스토어",
+                "start": 353,
+                "submitted": "누구나 디자이너가 되는 곳을 주제로 2019년 개장한 시민 라운지 ‘D-숲’과 DDP 관련 기념품을 소개하는 DDP 디자인 스토어",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "493c4d4140144df4fadcd711a63a5de7b18ea1c37ceedcb261af21a40c10eb88"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:34eddcf93ee33b277697af728b0a17f8a4619f0bdc5e98818a0c0cf37d627bd3",
+              "quote": {
+                "end": 36,
+                "method": "EXACT",
+                "original": "무료 ※ 이벤트 및 체험 프로그램 별로 별도 요금 발생할 수 있음",
+                "start": 0,
+                "submitted": "무료 ※ 이벤트 및 체험 프로그램 별로 별도 요금 발생할 수 있음",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "00a254d6ff33523a8e55fbc07d45304e42d2437ffbe1ae1e067f2987bbc64292"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "체험 프로그램 존재와 시민 라운지 등 구체적 참여 기회가 확인되나 지속적 도전·몰입 활동이라는 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "체험 프로그램 존재와 시민 라운지는 '구체적인 참여 활동'(수준 2)까지만 뒷받침한다. '지속적으로 참여·도전할 활동'이라는 현재 제안 수준(수준 3)은 프로그램 내용·빈도 등 근거가 없다."
+        }
+      },
+      "reason": "체험 프로그램 존재와 시민 라운지는 '구체적인 참여 활동'(수준 2)까지만 뒷받침한다. '지속적으로 참여·도전할 활동'이라는 현재 제안 수준(수준 3)은 프로그램 내용·빈도 등 근거가 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+              "quote": {
+                "end": 149,
+                "method": "EXACT",
+                "original": "포럼과 콘퍼런스를 개최해오고 있다",
+                "start": 131,
+                "submitted": "포럼과 콘퍼런스를 개최해오고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "493c4d4140144df4fadcd711a63a5de7b18ea1c37ceedcb261af21a40c10eb88"
+            }
+          ],
+          "flags": [],
+          "key": "R.d",
+          "level": 2,
+          "reason": "포럼·콘퍼런스 등 교류 활동의 존재는 확인되나 방문자 간 교류·자기표현 기회로 이어지는지에 대한 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "WRONG_SUBJECT",
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "포럼·콘퍼런스 개최는 전문·사업적 행사로, 방문자 간 교류·공동 활동·자기표현 기회와는 다른 주제이다. 관광객의 관계·자기표현 경험으로 확대할 근거가 없다."
+        }
+      },
+      "reason": "포럼·콘퍼런스 개최는 전문·사업적 행사로, 방문자 간 교류·공동 활동·자기표현 기회와는 다른 주제이다. 관광객의 관계·자기표현 경험으로 확대할 근거가 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "a1fdbccd9bb29ff6467194ad282f909486d0f3ca28e95fd81093a8b37ce85f0d",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "곡면의 은색 알루미늄 패널 건축물이 장면 전체를 지배하며, 미래적이고 조각적인 형태와 대각선 구도가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:403c521ef6e19b7cde304fc10d6a1b4fb745a08e1263d48ddd7856f574436eff",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13661e1e9b8593b3298c178bfeee5d2b5e27459e6aa8c76e302f8e6dbc96b921",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539611_1",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a7c03be5aa12e6fec3d84eb28dbb797d73d2a33ba6a45b006e9750a8b90987ac",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3539611_image2_1.jpg"
+        },
+        "record_sha256": "400ea552d4b6fda9e91d44a8aa6f2fb31cee85e46a51ebc9a713e45d9330aa4d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 재료·기와·목조 구성 등 전통적 외관은 보이지 않으며, 배경은 현대적 도시 건축물들뿐이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:654f2551b4a09922b31c89221b8f39e408bcde1863b947e7eff4a13b38cc6002",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13661e1e9b8593b3298c178bfeee5d2b5e27459e6aa8c76e302f8e6dbc96b921",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539611_1",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a7c03be5aa12e6fec3d84eb28dbb797d73d2a33ba6a45b006e9750a8b90987ac",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3539611_image2_1.jpg"
+        },
+        "record_sha256": "5f6e210bd99087be77dc674a55ddf8681d9c50d4b16e438024b30b0653d2fea2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "금속 패널 곡면 외벽과 노출 콘크리트 등 현대적 재료와 형태만 보이며 전통적 외관이나 재료의 시각적 특성이 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6942fffe50e27c0c9b78bc7dad918c7d7ae1c911468f427082eafda711aa1eae",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ce96fe120b0782f43906f6d63331c9ff5f28352c5d5027d41c8d21ec9f5b5197",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539612_2",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "08d5109b3b1c8fd58557a9ed9bd2d9a961fee5870f1485129769c9affa6c7fa1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/12/3539612_image2_1.jpg"
+        },
+        "record_sha256": "7b0ee567c41708c4ef5bc6c630d2cf1e7a9f11b19cd80adfd03a8568ae9e7576",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "맑은 하늘과 건축물 사이 좁은 경사로 지역의 흙길·극히 일부 나뭇가지 등 자연 단서가 약하게 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:71d5c1dc58dbd161a59a9630de0a3a217e07528b72790f260778256a32debd8b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "13661e1e9b8593b3298c178bfeee5d2b5e27459e6aa8c76e302f8e6dbc96b921",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539611_1",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a7c03be5aa12e6fec3d84eb28dbb797d73d2a33ba6a45b006e9750a8b90987ac",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3539611_image2_1.jpg"
+        },
+        "record_sha256": "dabb8932d253e59bbbc8a9e8171c73af23bdd23f590237121dac8855b280f6cc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "건축물과 계단, 인공 조형만 보이며 녹지, 물, 자연 경관 등 환경 단서가 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:99ce06662ba1fe27ac1d169faabe946cb1e34a4ddcf4569fdc82f63f02e8b97d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ce96fe120b0782f43906f6d63331c9ff5f28352c5d5027d41c8d21ec9f5b5197",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539612_2",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "08d5109b3b1c8fd58557a9ed9bd2d9a961fee5870f1485129769c9affa6c7fa1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/12/3539612_image2_1.jpg"
+        },
+        "record_sha256": "8372a3a1279e0ca9a950871de4b95def9e9435a7fe2cbd78086a99cefbb6ada3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 백색 통로 공간으로 녹지·물·자연 경관 등 자연 환경 단서가 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a085bfbe974e35908b28acd5662c5be9bbdd1f36e5ebf331e23b14d71520d8cc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "253ad599cd19d194dd1d90d624bfd720c18bfa38f94417c72dcc19951f425782",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539609_4",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fd8bd8051f57dd00585f3d3073ab496093bd0ad504784706dbb1aa0e5f91a6d9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3539609_image2_1.jpg"
+        },
+        "record_sha256": "dd8acfa54202c7c26f068d1ac765186a74b3d2ccd6957faed7ecfe8dde8f3f20",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 그래픽 패턴과 조명이 적용된 미래적 실내 디자인으로 전통적 재료·구성의 시각적 특성이 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b38cbb20cdc61667c6216ebf99e77345b774352c0a56bbf80d8d8083d9652449",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "253ad599cd19d194dd1d90d624bfd720c18bfa38f94417c72dcc19951f425782",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539609_4",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fd8bd8051f57dd00585f3d3073ab496093bd0ad504784706dbb1aa0e5f91a6d9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3539609_image2_1.jpg"
+        },
+        "record_sha256": "018cc48e86a79b0bed531147da98fe6377d55175334d646bcb2c8b7db07ed427",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "흰 곡면 공간을 덮는 대형 주황색 유기적 패턴과 물결치는 천장 라인, 광택 바닥 반사로 강한 연출이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d4b9f5ba2fb7af5d23317658934a6cc6a3e8237069c446c4a8237fb610ce9a3e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "253ad599cd19d194dd1d90d624bfd720c18bfa38f94417c72dcc19951f425782",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539609_4",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "fd8bd8051f57dd00585f3d3073ab496093bd0ad504784706dbb1aa0e5f91a6d9",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3539609_image2_1.jpg"
+        },
+        "record_sha256": "12adcb4d57e315fd2a09c5529e9653fa6370e1d92dfae3f63ebb77dd3bdb5456",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "회색 현대적 곡면 파사드와 콘크리트 계단 사이에 강렬한 빨간 하트 조형이 대칭 구도로 장면을 지배하며, 대비와 연출이 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e79f2ec3b76d0b038fe6141de365299c5a21c145d82cdcd897d6c9f2adcb2e96",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ce96fe120b0782f43906f6d63331c9ff5f28352c5d5027d41c8d21ec9f5b5197",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3539612_2",
+          "request_sha256": "e70c70a00ef4833ab282ef3ac79ba8fcf4f26d3d127815c548f9e2c507734069",
+          "response_sha256": "d9a682261ccf8a1df1c25ed3f29d0f8ab8f594078b06bc6db21c962b7fd8abbf",
+          "retrieved_at": "2026-09-10T08:27:02.210985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "08d5109b3b1c8fd58557a9ed9bd2d9a961fee5870f1485129769c9affa6c7fa1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/12/3539612_image2_1.jpg"
+        },
+        "record_sha256": "c4a70293ceb31bf64afb333c0a14fbe52e42621280b9a7627f49cdc07bab87ee",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:34eddcf93ee33b277697af728b0a17f8a4619f0bdc5e98818a0c0cf37d627bd3",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2470006",
+          "request_sha256": "1a63f9a0ede53cd41e78df11073b39d5230c71adeecea6b1576a76625d72fc23",
+          "response_sha256": "f0bc28c79216988bccdb24f08156567d1b2ddbc1fe4f84b1e67e81350eb8904b",
+          "retrieved_at": "2026-09-10T08:27:00.519530Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "512462c68cade81aca09067531390a5cf95aa010f9b0d16aac00cd0bb1388e8d",
+          "source_uri": null
+        },
+        "record_sha256": "00a254d6ff33523a8e55fbc07d45304e42d2437ffbe1ae1e067f2987bbc64292",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료 ※ 이벤트 및 체험 프로그램 별로 별도 요금 발생할 수 있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ac7b71068452a8cd916af425dea47013ffb01fb646caf58587911383ce74882d",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2470006",
+          "request_sha256": "1a63f9a0ede53cd41e78df11073b39d5230c71adeecea6b1576a76625d72fc23",
+          "response_sha256": "f0bc28c79216988bccdb24f08156567d1b2ddbc1fe4f84b1e67e81350eb8904b",
+          "retrieved_at": "2026-09-10T08:27:00.519530Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e8ea4a411d4a2926e885a0eb094c3c5b8b34e0d307707b39d5fda6b11e7b50de",
+          "source_uri": null
+        },
+        "record_sha256": "a61d8b842d03d7d41dbd4676baec407044fa5cde6da7e76c4ce3bd00d6b0632b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "아트홀 / 뮤지엄 / 디자인랩 / 동대문역사문화공원 / 야외공간 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d761105105746735ec857625d37e2868b84846a353c3cb9a450102d30903768f",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2470006",
+          "request_sha256": "f3abc67b0a3125e9d1752aa328200d81dd23c02906b4b657adb0a98758ed4eeb",
+          "response_sha256": "d498275d83a1010c1618b5c89c038b3e925aed87d1f66eed834d8ef2c88deb60",
+          "retrieved_at": "2026-09-10T08:12:59.765501Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-09-17T05:44:42Z",
+          "source_record_sha256": "2ae9f506b74755901f2f0d39e1bd68f5e20511af8958afaf53cb7450b0364901",
+          "source_uri": null
+        },
+        "record_sha256": "493c4d4140144df4fadcd711a63a5de7b18ea1c37ceedcb261af21a40c10eb88",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "꿈꾸고(Dream), 만들고(Design), 누린다(Play)는 뜻을 가지고 있는 DDP(동대문 디자인 플라자)는 서울특별시 동대문에 위치한 복합문화공간이다. 2014년 3월 21일 개관한 이래 굵직한 전시와 패션쇼, 신제품 발표회, 포럼과 콘퍼런스를 개최해오고 있다. 알림터, 배움터, 살림터, DDP 디자인 뮤지엄, 디자인 장터와 어울림 광장, 동대문 역사 문화공원으로 나뉘어 있다. 알림터에서는 서울패션위크, MAMA(Mnet Asian Music Awards), 반클리프 아펠전, BMW 신차 발표회 등을 개최했고, 다목적 연회 공간인 국제회의장 시설을 갖추었다. BTS 주제전과 서울도시건축 비엔날레 등이 열렸던 배움터, 누구나 디자이너가 되는 곳을 주제로 2019년 개장한 시민 라운지 ‘D-숲’과 DDP 관련 기념품을 소개하는 DDP 디자인 스토어를 아우르는 살림터까지, 규모에 걸맞은 내실로 관람객의 흥미를 북돋운다. 식당과 베이커리, 카페가 들어선 디자인 장터 역시 감성 충전을 기대하는 가족이나 연인을 만족시키고도 남을 산책 코스다. SNS 상에 동대문디자인플라자의 야경 사진이 범람하는 데는 이유가 있는 법이다. 건축가 자하 하디드(Zaha Hadid)가 동대문디자인플라자를 설계하며 “이른 새벽부터 밤이 저물 때까지 쉴 새 없이 변화하는 동대문의 역동성에 주목해 곡선과 곡면, 사선과 사면으로 이뤄진 특유의 건축 언어로 자연물과 인공물이 이음매 없이 이어지는 공간을 만들어냈다\"라고 밝혔는데, 해 질 녘 조명이 켜진 후 건축물에 오롯이 집중할게 될 때 곡선 부가 주는 역동성의 진가가 드러난다. 야경 사진을 찍기 좋은 지점은 어울림 광장 진입로로, 내부의 웅장함과 건축물의 신비로운 소재가 연출하는 분위기를 담을 수 있다. 알림터와 배움터를 나누는 살림터 문 앞은 내외부의 현란한 곡선과 조명이 정점을 이룬다."
+      }
+    ],
+    "parent_source_sha256": "31218e0bca0743c20cd3789f5c930f705e906f31f80c98111e3a3066f508b18c",
+    "place": {
+      "address": "서울특별시 중구 을지로 281 (을지로7가)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+      "name_ko": "동대문디자인플라자(DDP)",
+      "place_id": "public:korea:ada4680952947cc7ee4f62330237c4925ecf5e662fd171c25053b90f270f3ad6",
+      "provider_content_id": "2470006",
+      "region_code": "11140",
+      "region_name": "서울특별시 중구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

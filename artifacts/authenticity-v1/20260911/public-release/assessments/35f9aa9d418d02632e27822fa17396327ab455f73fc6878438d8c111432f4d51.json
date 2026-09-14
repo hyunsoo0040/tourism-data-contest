@@ -1,0 +1,1240 @@
+{
+  "assessed_at": "2026-09-11T17:52:24.945958Z",
+  "assessment_sha256": "35f9aa9d418d02632e27822fa17396327ab455f73fc6878438d8c111432f4d51",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1a6df1617c4991dba10be6444ccd2ebf01d6d63d34cb7a5e08e092b22b33f7bd",
+            "appearance:7771f69e3487bdefe89a9af80a4b104588bccb2feb9e39419695e9e1f4fed316",
+            "appearance:794733d0c77b939bb31b3c9af6c0a1745d5410aae4922042a15a402e7b080eb2"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "파도에 깎인 암벽층, 물결치듯 굽어진 절벽, 굴방과 침식 지대 등 시각적으로 분명하고 장면을 지배하는 경관 표현이 구체적으로 묘사된다. repair 항목의 허용되지 않은 claim(VISUAL_APPEARANCE)을 E.c 허용 claim인 VISUAL_EXPRESSION으로 교정해 반영했다.",
+      "value": 98
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0b52fe9179e1cc8bd4be84484d160fde073b0c8954a6bd2f78ac77374da4572d",
+            "appearance:8616e5f3726e4a51f281e8ccc5f5d3f402ff1db3006727805a48007828114416",
+            "appearance:e6c141c8df0908521840995adaf68f26078e1f2b07e76fc02a75b43205edceab"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안 수준(3, 자연·환경 단서 확인)과 anchor_ko(수준 4, 저자극 환경이 두드러짐)가 불일치한다. 바다·해안이라는 자연 단서는 확인되지만 고요함·회복성 환경이 두드러진다는 직접 근거는 없고 출입 제한·위험 언급이 있다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제안 수준(3, 관람)과 anchor_ko(수준 4, 구체적 탐구)가 불일치한다. 사암층·해안 절벽 감상은 관람 수준까지만 직접 뒷받침되며, 공간·실물의 구체적 탐구 근거는 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "제안 수준(3, 사건·인물 맥락 제시)과 anchor_ko(수준 4, 여러 맥락 연결)가 불일치한다. 진시황 전설과 이름 유래는 이 장소 고유 서사로 수준 3까지는 지원되나, 다층 맥락의 체계적 연결 근거는 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "제안 수준(3)과 anchor_ko(수준 4, 실제 지역 주체의 지속 활동을 경험)가 불일치한다. 해녀 좌판 판매는 실제 지역 주체 활동의 흔적이나, 방문자가 그 지속 활동을 '경험'한다는 수준 4의 직접 근거는 판매 접촉 이상 확인되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "제안 수준(2, 짧은 역사 안내)과 anchor_ko(수준 3, 설명·전시)가 불일치한다. 원문은 이름 유래·전설을 서술하지만 현장의 전시·해설 체계 제공 근거는 없어 어느 수준으로 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "제안 수준(3)과 anchor_ko(수준 4, 여러 표현·장면에서 일관된 의미 확인)가 불일치한다. '감탄을 자아낸다'는 홍보 서술이며, 용 전설·드라마 등 산발적 연결만으로 일관된 의미의 다중 확인 근거는 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "제안 수준(3)과 anchor_ko(수준 4, 반복되는 매체 표현과 유통의 근거)가 불일치한다. 드라마 '환혼' 촬영지 연결은 확인되나 반복적 유통의 근거는 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+          "quote": {
+            "end": 747,
+            "method": "EXACT",
+            "original": "파도에 깎여 형성된 암벽층이 만들어내는 독특하고 아름다운 풍경은 보는 이로 하여금 감탄을 자아낸다.",
+            "start": 692,
+            "submitted": "파도에 깎여 형성된 암벽층이 만들어내는 독특하고 아름다운 풍경은 보는 이로 하여금 감탄을 자아낸다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 4,
+      "reason": "파도에 깎인 암벽층, 물결치듯 굽어진 절벽, 굴방과 침식 지대 등 시각적으로 분명하고 장면을 지배하는 경관 표현이 구체적으로 묘사된다. repair 항목의 허용되지 않은 claim(VISUAL_APPEARANCE)을 E.c 허용 claim인 VISUAL_EXPRESSION으로 교정해 반영했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "제안 수준(3, 대표 장면 직접 경험)과 anchor_ko(수준 4, 촬영·참여로 재현)가 불일치한다. 드라마 배경 풍경을 현장에서 볼 수 있다는 수준 3까지는 가능하나 재현·촬영 지원 근거는 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "제안 수준(3, 자율적 선택·탐색 기회)과 anchor_ko(수준 4, 여유롭게 자신의 방식으로 탐색)가 불일치한다. 일주 탐방로는 자율 탐색 기회를 보여주나, 기상·만조 시 출입 제한이 있어 수준 4의 여유로운 자기 방식 탐색 근거는 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "제안 수준(3, 자연·환경 단서 확인)과 anchor_ko(수준 4, 저자극 환경이 두드러짐)가 불일치한다. 바다·해안이라는 자연 단서는 확인되지만 고요함·회복성 환경이 두드러진다는 직접 근거는 없고 출입 제한·위험 언급이 있다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "제안 수준(2, 제한된 체험)과 anchor_ko(수준 3, 구체적 참여·탐방 활동)가 불일치한다. 해안 일주 걷기는 탐방 활동으로 수준 3에 해당할 수 있으나, 어느 수준으로 제안했는지 앵커 대조가 되지 않아 확정할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "제안 수준(2, 제한된 공동 활동)과 anchor_ko(수준 3, 구체적 교류·표현 기회)가 불일치한다. 해녀 좌판은 교류 가능성의 단서일 뿐 구체적 교류·자기표현 기회의 직접 근거는 없다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 119,
+                "method": "EXACT",
+                "original": "수천만 년 동안 쌓이고 쌓여 이루어진 사암층과 파도가 만들어낸 해안 절벽을 감상할 수 있다",
+                "start": 69,
+                "submitted": "수천만 년 동안 쌓이고 쌓여 이루어진 사암층과 파도가 만들어낸 해안 절벽을 감상할 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.a",
+          "level": 3,
+          "reason": "실제 지질 유산인 사암층과 해안 절벽을 직접 관람·감상할 수 있다고 명시되어 있다. 구체적 탐구가 중심이라는 근거까지는 없어 3 수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "제안 수준(3, 관람)과 anchor_ko(수준 4, 구체적 탐구)가 불일치한다. 사암층·해안 절벽 감상은 관람 수준까지만 직접 뒷받침되며, 공간·실물의 구체적 탐구 근거는 없다."
+        }
+      },
+      "reason": "제안 수준(3, 관람)과 anchor_ko(수준 4, 구체적 탐구)가 불일치한다. 사암층·해안 절벽 감상은 관람 수준까지만 직접 뒷받침되며, 공간·실물의 구체적 탐구 근거는 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 297,
+                "method": "EXACT",
+                "original": "전설에 의하면 용머리가 왕이 날 훌륭한 형세임을 안 진시황이 호종단을 보내어 용의 꼬리 부분과 잔등 부분을 칼로 끊어 버렸는데",
+                "start": 227,
+                "submitted": "전설에 의하면 용머리가 왕이 날 훌륭한 형세임을 안 진시황이 호종단을 보내어 용의 꼬리 부분과 잔등 부분을 칼로 끊어 버렸는데",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 3,
+          "reason": "이름의 유래와 진시황 전설 등 이 장소 고유의 서사가 제시된다. 다만 이는 전설 서사로, 다층적 역사 탐구가 중심이라고 보기는 어려워 3 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "제안 수준(3, 사건·인물 맥락 제시)과 anchor_ko(수준 4, 여러 맥락 연결)가 불일치한다. 진시황 전설과 이름 유래는 이 장소 고유 서사로 수준 3까지는 지원되나, 다층 맥락의 체계적 연결 근거는 부족하다."
+        }
+      },
+      "reason": "제안 수준(3, 사건·인물 맥락 제시)과 anchor_ko(수준 4, 여러 맥락 연결)가 불일치한다. 진시황 전설과 이름 유래는 이 장소 고유 서사로 수준 3까지는 지원되나, 다층 맥락의 체계적 연결 근거는 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "LIVING_TRADITION",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 566,
+                "method": "EXACT",
+                "original": "해안가 일대에서는 해녀들이 좌판을 깔아 놓고 해산물을 판매하고 있으며",
+                "start": 528,
+                "submitted": "해안가 일대에서는 해녀들이 좌판을 깔아 놓고 해산물을 판매하고 있으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.c",
+          "level": 3,
+          "reason": "현지 해녀들의 실제 판매 활동이 언급되어 지역 주체의 생활문화와 연결된다. 그러나 관람·구매 수준이고 전승 연결이 방문 경험의 중심이라는 근거는 없어 3 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.c",
+          "reason": "제안 수준(3)과 anchor_ko(수준 4, 실제 지역 주체의 지속 활동을 경험)가 불일치한다. 해녀 좌판 판매는 실제 지역 주체 활동의 흔적이나, 방문자가 그 지속 활동을 '경험'한다는 수준 4의 직접 근거는 판매 접촉 이상 확인되지 않는다."
+        }
+      },
+      "reason": "제안 수준(3)과 anchor_ko(수준 4, 실제 지역 주체의 지속 활동을 경험)가 불일치한다. 해녀 좌판 판매는 실제 지역 주체 활동의 흔적이나, 방문자가 그 지속 활동을 '경험'한다는 수준 4의 직접 근거는 판매 접촉 이상 확인되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 225,
+                "method": "EXACT",
+                "original": "용머리라는 이름은 언덕의 모양이 용이 머리를 들고 바다로 들어가는 모습을 닮았다 하여 붙여졌다",
+                "start": 173,
+                "submitted": "용머리라는 이름은 언덕의 모양이 용이 머리를 들고 바다로 들어가는 모습을 닮았다 하여 붙여졌다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.d",
+          "level": 2,
+          "reason": "이름 유래와 전설 해설은 있으나 별도 전시·해설 프로그램 등 체계적 탐구 지원의 근거는 부족하여 짧은 안내 수준인 2로 판단.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.d",
+          "reason": "제안 수준(2, 짧은 역사 안내)과 anchor_ko(수준 3, 설명·전시)가 불일치한다. 원문은 이름 유래·전설을 서술하지만 현장의 전시·해설 체계 제공 근거는 없어 어느 수준으로 확정하기 어렵다."
+        }
+      },
+      "reason": "제안 수준(2, 짧은 역사 안내)과 anchor_ko(수준 3, 설명·전시)가 불일치한다. 원문은 이름 유래·전설을 서술하지만 현장의 전시·해설 체계 제공 근거는 없어 어느 수준으로 확정하기 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "REPRESENTED_MEANING",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 746,
+                "method": "EXACT",
+                "original": "독특하고 아름다운 풍경은 보는 이로 하여금 감탄을 자아낸다",
+                "start": 714,
+                "submitted": "독특하고 아름다운 풍경은 보는 이로 하여금 감탄을 자아낸다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.a",
+          "level": 3,
+          "reason": "독특하고 아름다운 해안 절경이라는 이미지와 용 전설이라는 이야기가 장소에 연결되어 있다. 일관된 의미의 중심적 경험이라는 근거는 부족하여 3 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "E.a",
+          "reason": "제안 수준(3)과 anchor_ko(수준 4, 여러 표현·장면에서 일관된 의미 확인)가 불일치한다. '감탄을 자아낸다'는 홍보 서술이며, 용 전설·드라마 등 산발적 연결만으로 일관된 의미의 다중 확인 근거는 부족하다."
+        }
+      },
+      "reason": "제안 수준(3)과 anchor_ko(수준 4, 여러 표현·장면에서 일관된 의미 확인)가 불일치한다. '감탄을 자아낸다'는 홍보 서술이며, 용 전설·드라마 등 산발적 연결만으로 일관된 의미의 다중 확인 근거는 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 690,
+                "method": "EXACT",
+                "original": "드라마 '환혼' 2화에서 장욱(이재욱)이 경천대호에 빠진 무덕이(정소민)를 찾아 도달한 장소가 바로 이곳, 제주 용머리해안이다",
+                "start": 620,
+                "submitted": "드라마 '환혼' 2화에서 장욱(이재욱)이 경천대호에 빠진 무덕이(정소민)를 찾아 도달한 장소가 바로 이곳, 제주 용머리해안이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.b",
+          "level": 3,
+          "reason": "드라마 '환혼' 촬영지로서 대중매체를 통한 장소 이미지 재현이 확인된다. 반복적 유통의 근거까지는 없어 3 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.b",
+          "reason": "제안 수준(3)과 anchor_ko(수준 4, 반복되는 매체 표현과 유통의 근거)가 불일치한다. 드라마 '환혼' 촬영지 연결은 확인되나 반복적 유통의 근거는 없다."
+        }
+      },
+      "reason": "제안 수준(3)과 anchor_ko(수준 4, 반복되는 매체 표현과 유통의 근거)가 불일치한다. 드라마 '환혼' 촬영지 연결은 확인되나 반복적 유통의 근거는 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 726,
+                "method": "EXACT",
+                "original": "파도에 깎여 형성된 암벽층이 만들어내는 독특하고 아름다운 풍경",
+                "start": 692,
+                "submitted": "파도에 깎여 형성된 암벽층이 만들어내는 독특하고 아름다운 풍경",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 3,
+          "reason": "드라마에 등장한 대표 암벽 풍경을 현장에서 직접 볼 수 있으나, 촬영·재현 활동 지원의 근거는 없어 3 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "제안 수준(3, 대표 장면 직접 경험)과 anchor_ko(수준 4, 촬영·참여로 재현)가 불일치한다. 드라마 배경 풍경을 현장에서 볼 수 있다는 수준 3까지는 가능하나 재현·촬영 지원 근거는 없다."
+        }
+      },
+      "reason": "제안 수준(3, 대표 장면 직접 경험)과 anchor_ko(수준 4, 촬영·참여로 재현)가 불일치한다. 드라마 배경 풍경을 현장에서 볼 수 있다는 수준 3까지는 가능하나 재현·촬영 지원 근거는 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 446,
+                "method": "EXACT",
+                "original": "해식애 앞쪽으로 좁지만 평탄한 파식대가 발달되어 용머리해안을 일주할 수 있는 탐방로 역할을 하고 있다",
+                "start": 390,
+                "submitted": "해식애 앞쪽으로 좁지만 평탄한 파식대가 발달되어 용머리해안을 일주할 수 있는 탐방로 역할을 하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 3,
+          "reason": "일주 탐방로를 따라 스스로 걸으며 탐색할 수 있는 자율적 기회가 있다. 다만 출입 제한이 있고 깊은 자기선택 경험의 근거는 부족하여 3 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "제안 수준(3, 자율적 선택·탐색 기회)과 anchor_ko(수준 4, 여유롭게 자신의 방식으로 탐색)가 불일치한다. 일주 탐방로는 자율 탐색 기회를 보여주나, 기상·만조 시 출입 제한이 있어 수준 4의 여유로운 자기 방식 탐색 근거는 부족하다."
+        }
+      },
+      "reason": "제안 수준(3, 자율적 선택·탐색 기회)과 anchor_ko(수준 4, 여유롭게 자신의 방식으로 탐색)가 불일치한다. 일주 탐방로는 자율 탐색 기회를 보여주나, 기상·만조 시 출입 제한이 있어 수준 4의 여유로운 자기 방식 탐색 근거는 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 368,
+                "method": "EXACT",
+                "original": "파도가 하얗게 부서지는 바닷가 바로 옆으로 길이 나있으며",
+                "start": 337,
+                "submitted": "파도가 하얗게 부서지는 바닷가 바로 옆으로 길이 나있으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 3,
+          "reason": "바다와 해안이라는 자연 환경 단서가 확인되나, 고요함·회복성을 뒷받침하는 직접 근거는 없고 오히려 위험·출입제한 언급이 있어 3 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "제안 수준(3, 자연·환경 단서 확인)과 anchor_ko(수준 4, 저자극 환경이 두드러짐)가 불일치한다. 바다·해안이라는 자연 단서는 확인되지만 고요함·회복성 환경이 두드러진다는 직접 근거는 없고 출입 제한·위험 언급이 있다."
+        }
+      },
+      "reason": "제안 수준(3, 자연·환경 단서 확인)과 anchor_ko(수준 4, 저자극 환경이 두드러짐)가 불일치한다. 바다·해안이라는 자연 단서는 확인되지만 고요함·회복성 환경이 두드러진다는 직접 근거는 없고 출입 제한·위험 언급이 있다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 566,
+                "method": "EXACT",
+                "original": "사암층을 따라 걷다 보면 나오는 해안가 일대에서는 해녀들이 좌판을 깔아 놓고 해산물을 판매하고 있으며",
+                "start": 510,
+                "submitted": "사암층을 따라 걷다 보면 나오는 해안가 일대에서는 해녀들이 좌판을 깔아 놓고 해산물을 판매하고 있으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 2,
+          "reason": "사암층 따라 걷기, 해산물 구경·구매 등 참여가 가능하나 지속적 도전·몰입 활동의 근거는 부족하여 제한적 체험 수준인 2.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "제안 수준(2, 제한된 체험)과 anchor_ko(수준 3, 구체적 참여·탐방 활동)가 불일치한다. 해안 일주 걷기는 탐방 활동으로 수준 3에 해당할 수 있으나, 어느 수준으로 제안했는지 앵커 대조가 되지 않아 확정할 수 없다."
+        }
+      },
+      "reason": "제안 수준(2, 제한된 체험)과 anchor_ko(수준 3, 구체적 참여·탐방 활동)가 불일치한다. 해안 일주 걷기는 탐방 활동으로 수준 3에 해당할 수 있으나, 어느 수준으로 제안했는지 앵커 대조가 되지 않아 확정할 수 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+              "quote": {
+                "end": 566,
+                "method": "EXACT",
+                "original": "해녀들이 좌판을 깔아 놓고 해산물을 판매하고 있으며",
+                "start": 538,
+                "submitted": "해녀들이 좌판을 깔아 놓고 해산물을 판매하고 있으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "해녀와 방문객의 교류 가능성은 있으나 구체적 공동 활동·자기표현 프로그램의 근거는 없어 2 수준.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "제안 수준(2, 제한된 공동 활동)과 anchor_ko(수준 3, 구체적 교류·표현 기회)가 불일치한다. 해녀 좌판은 교류 가능성의 단서일 뿐 구체적 교류·자기표현 기회의 직접 근거는 없다."
+        }
+      },
+      "reason": "제안 수준(2, 제한된 공동 활동)과 anchor_ko(수준 3, 구체적 교류·표현 기회)가 불일치한다. 해녀 좌판은 교류 가능성의 단서일 뿐 구체적 교류·자기표현 기회의 직접 근거는 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "93993fb4fde6a1fd059729984cee8c329c7ccd7fc76cefea9d2d9c457bc845d7",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "거대한 암석 절벽과 틈새 하늘 등 자연 경관이 화면 대부분을 차지하며 바위로 이어진 길까지 자연 환경 단서가 장면을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0b52fe9179e1cc8bd4be84484d160fde073b0c8954a6bd2f78ac77374da4572d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08204a4e29a588dc1b2dfd84f96470cbc0ddcd00d14a3c737dc4ce3f19208b89",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2029134",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d4a4871ca1691ef9e0d359962c3d89b783c9b0de86b4143c650d6816adea4023",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/34/2029134.jpg"
+        },
+        "record_sha256": "72939faf19a0ff35efbfc0436f49e80767914bd791196ac4bd33e60be4ca479e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "암벽 협곡 사이로 역광의 태양과 푸른 하늘이 대비를 이루는 극적인 구도로, 바위 질감과 음영이 장면 전체를 지배하는 연출적 성격이 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1a6df1617c4991dba10be6444ccd2ebf01d6d63d34cb7a5e08e092b22b33f7bd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08204a4e29a588dc1b2dfd84f96470cbc0ddcd00d14a3c737dc4ce3f19208b89",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2029134",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d4a4871ca1691ef9e0d359962c3d89b783c9b0de86b4143c650d6816adea4023",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/34/2029134.jpg"
+        },
+        "record_sha256": "bf0c797b385ea44117105fa887e23be2ba767b82d804719e99ef74b1fc6c2f81",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축물, 전통 재료나 공간 구성으로 보이는 시각적 특성은 관찰되지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2bf427b6651cd33f8ee5d1d0c6baa5fd653ea8d7efd301cacdcb69387ea1d79c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6991de0ee12f3b22798e4cd9f20a0306772dd7b6cdea2b28967c81a627605c35",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2602058",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5435fb561035c6732ae5c6c65daa07b401bcdf738504986418ee3ad17fa2dc9b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/58/2602058.jpg"
+        },
+        "record_sha256": "6da216222a7ecd19b1793206333eb9a4bd33c8a04e2ec1e64176b4d87a82531f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "넓은 하늘과 극적인 구름, 바위 위 물웅덩이에 비친 하늘 반사가 장면을 지배하는 연출적 구도",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7771f69e3487bdefe89a9af80a4b104588bccb2feb9e39419695e9e1f4fed316",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4e096d06bba88a00a3747add47a6e4d16b68c0c4322a36ed31a94911dafb9f42",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3587930",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "89ad1a5d88a96daa5ee6be238e9053dcd6794297f155b8394ebf4fb8ff358297",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/30/3587930.jpg"
+        },
+        "record_sha256": "1589701f644453ef02d3355da35ab92f67d1b25ae4639395639e38eaa0e73370",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "맑고 채도 높은 하늘색과 청록빛 바다, 수직 암벽 산의 대비가 뚜렷하며 넓은 수평 구도가 장면을 지배하는 듯한 시각적 인상을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:794733d0c77b939bb31b3c9af6c0a1745d5410aae4922042a15a402e7b080eb2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6991de0ee12f3b22798e4cd9f20a0306772dd7b6cdea2b28967c81a627605c35",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2602058",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5435fb561035c6732ae5c6c65daa07b401bcdf738504986418ee3ad17fa2dc9b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/58/2602058.jpg"
+        },
+        "record_sha256": "1c4ef7e9a058522352530b70adf237c7cdc0de467c8356c1fb38ff93d061e4bd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "바다, 암석 해안, 산악, 트인 하늘 등 자연 경관 요소가 화면 대부분을 차지하며 자연 환경 단서가 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8616e5f3726e4a51f281e8ccc5f5d3f402ff1db3006727805a48007828114416",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6991de0ee12f3b22798e4cd9f20a0306772dd7b6cdea2b28967c81a627605c35",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2602058",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5435fb561035c6732ae5c6c65daa07b401bcdf738504986418ee3ad17fa2dc9b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/58/2602058.jpg"
+        },
+        "record_sha256": "4498d37c30ba8a24ac16bb8979e37c4f426dcf990205f6b2bb13e45ad7cf5a3f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "돌을 쌓아 만든 계단식 길이 보이나 전통 재료·공간 구성의 시각적 특성은 약하게 나타남.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e1c0aaa62f0d0e07dfa812fc1e65679f20323a95321ed2b5480924a48312736f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08204a4e29a588dc1b2dfd84f96470cbc0ddcd00d14a3c737dc4ce3f19208b89",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2029134",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d4a4871ca1691ef9e0d359962c3d89b783c9b0de86b4143c650d6816adea4023",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/34/2029134.jpg"
+        },
+        "record_sha256": "c74a5759b86a5bf5407b485801d2482fb02b216cdab38db799de312e1472f204",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 건축·재료의 시각적 단서는 거의 보이지 않고 자연 지형이 중심",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e36f0f30baa55720d9ee13bb37da7a0cc0d98d69594be7d46442f404d7b44721",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4e096d06bba88a00a3747add47a6e4d16b68c0c4322a36ed31a94911dafb9f42",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3587930",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "89ad1a5d88a96daa5ee6be238e9053dcd6794297f155b8394ebf4fb8ff358297",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/30/3587930.jpg"
+        },
+        "record_sha256": "85113148eedaa50dfafdb90119b9e2a6ac3be2be79347c55c2a572d862d7efee",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "해안, 바다, 절벽, 초록 산봉우리, 갯바위 웅덩이 등 자연 경관이 화면 전체를 채움",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e6c141c8df0908521840995adaf68f26078e1f2b07e76fc02a75b43205edceab",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4e096d06bba88a00a3747add47a6e4d16b68c0c4322a36ed31a94911dafb9f42",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 서귀포시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3587930",
+          "request_sha256": "07fd218755c0e26ef103772e743512ff343625625670deef7c0122dcfcad81ca",
+          "response_sha256": "a0b408a772a4ca332a4c969d25914f1caea727c19e8a721ca8f35eb07b7ed2cd",
+          "retrieved_at": "2026-09-11T02:07:01.609467Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "89ad1a5d88a96daa5ee6be238e9053dcd6794297f155b8394ebf4fb8ff358297",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/30/3587930.jpg"
+        },
+        "record_sha256": "0fe59ba0f365911f41d745c1d0b28226447244257fae40ab3844a9075276c284",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8a7f019e9039b1a611758ad95552e9bf22609d967b77690c94d720073a0eadec",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "228854",
+          "request_sha256": "64e75d473373684e85d0d767af6fd5ff408feaec504b4348be67f33fb33e0c4c",
+          "response_sha256": "f92c27a257a2f594fd069ca55cdf36ddb6ccb73279d7d12577240dd4ed528806",
+          "retrieved_at": "2026-09-11T02:07:00.325726Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f0567b731e5fb4c4a52062804dcae3f580bcfaeeffb540d1ac401eccce0633c0",
+          "source_uri": null
+        },
+        "record_sha256": "af75270fbd165ca7a598a9df66f6d1caa9fe680c69d56a49abb6cc6280fc3d47",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b9a03e0788e4627164187bd7569917b67762aa6cb0c81dc67f33e13fa928045b",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "228854",
+          "request_sha256": "4b701ab7b9ad3e717d4fdc0a4d0d3915ded0c0f8992b2a38142d4060b98a0d3c",
+          "response_sha256": "54286e894ffc8197fefe018821f8883507045a890756db01afdf765e6badd16d",
+          "retrieved_at": "2026-09-10T17:09:19.449483Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-02T07:15:55Z",
+          "source_record_sha256": "00cc8c6065498037461503fcca0b591645279a613391a2241eeb9dcc44438c06",
+          "source_uri": null
+        },
+        "record_sha256": "162e53c4e4c1c23a4d59997379c5f0ce334ba693ccd4cd159ee272b41952a77e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "용머리 해변은 산방산 앞자락에 있는 바닷가로 산방산 휴게소에서 걸어내려가면 수려한 해안절경의 용머리 해안과 마주치게 된다. 수천만 년 동안 쌓이고 쌓여 이루어진 사암층과 파도가 만들어낸 해안 절벽을 감상할 수 있다. 작은 방처럼 움푹 들어간 굴방이나 드넓은 암벽의 침식 지대가 펼쳐져 장관을 연출하고 있으며, 용머리라는 이름은 언덕의 모양이 용이 머리를 들고 바다로 들어가는 모습을 닮았다 하여 붙여졌다. 전설에 의하면 용머리가 왕이 날 훌륭한 형세임을 안 진시황이 호종단을 보내어 용의 꼬리 부분과 잔등 부분을 칼로 끊어 버렸는데 이때 피가 흘러내리고 산방산은 괴로운 울음을 며칠째 계속했다고 한다. 파도가 하얗게 부서지는 바닷가 바로 옆으로 길이 나있으며, 절벽이 마치 물결치듯 굽어져 있다. 해식애 앞쪽으로 좁지만 평탄한 파식대가 발달되어 용머리해안을 일주할 수 있는 탐방로 역할을 하고 있다. 기상악화나 만조 때에는 위험성이 높아 출입을 금하니 방문 전 미리 관람 가능 시간을 확인하고 가는 것이 좋다. 사암층을 따라 걷다 보면 나오는 해안가 일대에서는 해녀들이 좌판을 깔아 놓고 해산물을 판매하고 있으며 용머리로 들어가는 입구에는 하멜기념비가 서 있다.◎ 한류의 매력을 만나는 여행 정보 - 드라마 드라마 '환혼' 2화에서 장욱(이재욱)이 경천대호에 빠진 무덕이(정소민)를 찾아 도달한 장소가 바로 이곳, 제주 용머리해안이다. 파도에 깎여 형성된 암벽층이 만들어내는 독특하고 아름다운 풍경은 보는 이로 하여금 감탄을 자아낸다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:bd1ef6c81eaa2b24a4088ceeff017e0b92f60bc861502875d4e3a66104ac5781",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "228854",
+          "request_sha256": "64e75d473373684e85d0d767af6fd5ff408feaec504b4348be67f33fb33e0c4c",
+          "response_sha256": "f92c27a257a2f594fd069ca55cdf36ddb6ccb73279d7d12577240dd4ed528806",
+          "retrieved_at": "2026-09-11T02:07:00.325726Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae98fe2156c281507523b1d318b701acd45ad8cd7881b73d4b4b5b5ccabfa43e",
+          "source_uri": null
+        },
+        "record_sha256": "aa07837286c4aef5680bd0832641295a06832d26b8cabca79eace89ab490477b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[개인] - 어른 2,000원 - 청소년, 어린이 1,000원 [단체] - 어른 1,600원 - 청소년, 어린이 600원 ※ 자세한 사항은 전화문의 요망"
+      }
+    ],
+    "parent_source_sha256": "46bf82137dede66939f66bd7a21439d6d0bfa295e30f366ce4cdb9182a2d95b9",
+    "place": {
+      "address": "제주특별자치도 서귀포시 안덕면 사계리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+      "name_ko": "용머리해안",
+      "place_id": "public:korea:87c4f08af0baf40806d51c3eace99ca89b2ab44a183039c601b6b1c653ea2998",
+      "provider_content_id": "228854",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

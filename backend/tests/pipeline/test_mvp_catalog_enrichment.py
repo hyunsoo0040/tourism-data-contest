@@ -35,37 +35,32 @@ from itda.pipeline.offline_guard import LiveCollectionRefused
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 SOURCE_UNIVERSE = (
-    REPO_ROOT
-    / "artifacts/catalog/optional-media-v2/policy"
-    / "573e21213f7c0d157e33c7a510b9bcdb612dd517dfc70ba506ef7281ca0e9243"
-    / "projected-candidates.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/source-universe/projected-candidates.json"
 )
-OFFICIAL_PERMISSION_ROOT = (
-    REPO_ROOT / "artifacts/public/catalog/official-permission-snapshots"
-)
+OFFICIAL_PERMISSION_ROOT = REPO_ROOT / "artifacts/public/catalog/official-permission-snapshots"
 CONSUMED_RESULT_PATH = (
     REPO_ROOT
-    / "artifacts/public/catalog/mvp-public-enrichment-runs"
+    / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-runs"
     / "dc5f4adea93b0e94ebe597bdaf6e140bea73a09a70a8909ef43f7735b88277ce"
     / "result.json"
 )
-V4_PLAN_PATH = REPO_ROOT / "artifacts/public/catalog/mvp-public-enrichment-plan-v4.json"
+V4_PLAN_PATH = REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-plan-v4.json"
 V4_RESULT_PATH = (
     REPO_ROOT
-    / "artifacts/public/catalog/mvp-public-enrichment-runs"
+    / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-runs"
     / "73f3911e324067bf09a1c35554885605e87d9700e04987f7ba90e5eff865526b"
     / "result.json"
 )
 V1_CANARY_RESULT_PATH = (
-    REPO_ROOT / "artifacts/public/catalog/tourapi-diagnostic-canary-result-v1.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/tourapi-diagnostic-canary-result-v1.json"
 )
 V2_CANARY_RESULT_PATH = (
-    REPO_ROOT / "artifacts/public/catalog/tourapi-diagnostic-canary-result-v2.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/tourapi-diagnostic-canary-result-v2.json"
 )
-V5_PLAN_PATH = REPO_ROOT / "artifacts/public/catalog/mvp-public-enrichment-plan-v5.json"
+V5_PLAN_PATH = REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-plan-v5.json"
 V5_RESULT_PATH = (
     REPO_ROOT
-    / "artifacts/public/catalog/mvp-public-enrichment-runs"
+    / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-runs"
     / "7a70a63b472980b12afa17250be87aab7cefc1d26204ffb65ddb858f8c6aaeb9"
     / "result.json"
 )
@@ -341,10 +336,7 @@ def test_cli_prints_description_only_gap_and_never_catalog_ready(
     plan_path = tmp_path / "plan.json"
     plan_path.write_bytes(canonical_json_bytes(plan.model_dump(mode="json")))
     transport = FakeTransport(
-        {
-            row.provider_content_id: _response(row.provider_content_id)
-            for row in plan.requests
-        }
+        {row.provider_content_id: _response(row.provider_content_id) for row in plan.requests}
     )
 
     monkeypatch.setattr(
@@ -402,7 +394,7 @@ def test_insufficient_enrichment_reports_truthful_remaining_gap(tmp_path: Path) 
     [
         (b"not json", "MALFORMED_RESPONSE"),
         (_response("other-id"), "CONTENT_ID_MISMATCH"),
-        (b"{" + b'\"x\":\"' + b"x" * RESPONSE_BODY_MAX_BYTES + b'\"}', "RESPONSE_BODY_LIMIT"),
+        (b"{" + b'"x":"' + b"x" * RESPONSE_BODY_MAX_BYTES + b'"}', "RESPONSE_BODY_LIMIT"),
     ],
 )
 def test_response_failures_are_sanitized_and_do_not_persist_raw(
@@ -500,13 +492,9 @@ def _diagnostic_canary_plan(
     corrected: bool = False,
 ) -> TourApiDiagnosticCanaryPlan:
     enrichment_plan = MvpCatalogEnrichmentPlan.model_validate_json(V4_PLAN_PATH.read_bytes())
-    enrichment_result = MvpCatalogEnrichmentResult.model_validate_json(
-        V4_RESULT_PATH.read_bytes()
-    )
+    enrichment_result = MvpCatalogEnrichmentResult.model_validate_json(V4_RESULT_PATH.read_bytes())
     previous = (
-        TourApiDiagnosticCanaryResult.model_validate_json(
-            V1_CANARY_RESULT_PATH.read_bytes()
-        )
+        TourApiDiagnosticCanaryResult.model_validate_json(V1_CANARY_RESULT_PATH.read_bytes())
         if corrected
         else None
     )
@@ -529,9 +517,10 @@ def test_diagnostic_canary_plan_is_bound_and_deterministic() -> None:
         "9b9b305764ed14443cde5701a1d99acc72af775716712fb804955ebccf919a30"
     )
     assert first.max_requests == 1
-    assert first.request == MvpCatalogEnrichmentPlan.model_validate_json(
-        V4_PLAN_PATH.read_bytes()
-    ).requests[0]
+    assert (
+        first.request
+        == MvpCatalogEnrichmentPlan.model_validate_json(V4_PLAN_PATH.read_bytes()).requests[0]
+    )
     assert first.enrichment_result_sha256 == (
         "603349b5eaee45ca79903bb4c10c7ac4df93864b2a97f8640df0a08af925755d"
     )
@@ -650,7 +639,9 @@ def test_plan_hash_and_collection_approval_are_exact(tmp_path: Path) -> None:
 
     v5_plan = MvpCatalogEnrichmentPlan.model_validate_json(V5_PLAN_PATH.read_bytes())
     consumed_v6_plan = MvpCatalogEnrichmentPlan.model_validate_json(
-        (REPO_ROOT / "artifacts/public/catalog/mvp-public-enrichment-plan-v6.json").read_bytes()
+        (
+            REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-plan-v6.json"
+        ).read_bytes()
     )
     v6_plan = _build_synthetic_v6_plan(tmp_path)
     validate_collection_approval(
@@ -666,7 +657,9 @@ def test_plan_hash_and_collection_approval_are_exact(tmp_path: Path) -> None:
                 approval=f"{APPROVAL_PREFIX}{consumed.plan_sha256}",
             )
     v3_plan = MvpCatalogEnrichmentPlan.model_validate_json(
-        (REPO_ROOT / "artifacts/public/catalog/mvp-public-enrichment-plan-v3.json").read_bytes()
+        (
+            REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-public-enrichment-plan-v3.json"
+        ).read_bytes()
     )
     v4_plan = MvpCatalogEnrichmentPlan.model_validate_json(V4_PLAN_PATH.read_bytes())
     for superseded in (v3_plan, v4_plan):

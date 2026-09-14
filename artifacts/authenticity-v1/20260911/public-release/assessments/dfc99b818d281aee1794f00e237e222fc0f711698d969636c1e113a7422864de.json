@@ -1,0 +1,469 @@
+{
+  "assessed_at": "2026-09-11T16:01:17.058843Z",
+  "assessment_sha256": "dfc99b818d281aee1794f00e237e222fc0f711698d969636c1e113a7422864de",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "공식 안내문이 소나무에 '신령스럽기까지 한' 이미지를 부여하며 이 구간의 상징적 의미를 제시한다. 다만 하나의 표현에 그쳐 일관된 다층적 의미 구성의 근거는 제한적이므로 수준 2로 평가.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "원 제안은 승인되지 않은 VISUAL_APPEARANCE claim을 사용했으므로 승인된 VISUAL_EXPRESSION으로 수정한다. 빼곡한 소나무숲이라는 경관의 시각적 성격이 확인되나, 일관된 연출이 장면을 지배한다는 수준의 근거는 부족해 수준 2로 제한적으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "완만한 저지대 산책로로 누구나 자유롭게 걸으며 3.1km 구간을 자율적으로 탐색할 수 있는 환경이 확인된다. 다만 자율 탐색이 방문 경험의 절대적 중심이라고 단정하기는 어려워 수준 3으로 평가.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "소나무숲, 청정 계곡, 물소리 등 자연 환경 단서가 공식 안내문에서 구체적으로 확인된다. 다만 실제 고요함·혼잡 수준은 확인할 수 없어 수준 3으로 평가.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "3.1km, 약 1시간 30분의 걷기 탐방 활동이 확인되어 지속적으로 참여할 신체 활동의 기회가 있다. 그러나 도전·몰입형 프로그램 수준의 근거는 없어 수준 3으로 평가.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "안내문은 소나무숲길이 자연 산책로임을 설명할 뿐, 확인된 문화유산·역사적 원형과의 접촉에 대한 근거가 없다. 자연 경관은 유산 접촉의 근거로 간주할 수 없어 평가 불가.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "둘레길 전체의 개통 연도(2010~2011년)는 있으나 이는 조성 사업 연혁이며, 1구간 소나무숲길 자체의 역사적 사건·인물 맥락에 대한 설명은 없다. 조성 연도만으로 역사 구체성을 인정하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 언급이 없다. '사람과 자연이 하나 되어 걷는' 표현은 실제 전승 활동의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "'역사와 문화, 생태를 체험할 수 있는 길'이라는 일반 문구만 있으며, 원형·유산에 연결된 구체적 해설·전시·학습 프로그램의 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2",
+          "quote": {
+            "end": 360,
+            "method": "EXACT",
+            "original": "웅장하면서도 우아한 자태가 신령스럽기까지 한 소나무가 빼곡한 길이다",
+            "start": 323,
+            "submitted": "웅장하면서도 우아한 자태가 신령스럽기까지 한 소나무가 빼곡한 길이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74a893d31616a93e977facdbd9c99955146e257e52fdae5de7afdacd84b1a15a"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "공식 안내문이 소나무에 '신령스럽기까지 한' 이미지를 부여하며 이 구간의 상징적 의미를 제시한다. 다만 하나의 표현에 그쳐 일관된 다층적 의미 구성의 근거는 제한적이므로 수준 2로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보 매체, SNS 등 장소 이미지의 매체적 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2",
+          "quote": {
+            "end": 360,
+            "method": "EXACT",
+            "original": "소나무가 빼곡한 길이다",
+            "start": 348,
+            "submitted": "소나무가 빼곡한 길이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74a893d31616a93e977facdbd9c99955146e257e52fdae5de7afdacd84b1a15a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "원 제안은 승인되지 않은 VISUAL_APPEARANCE claim을 사용했으므로 승인된 VISUAL_EXPRESSION으로 수정한다. 빼곡한 소나무숲이라는 경관의 시각적 성격이 확인되나, 일관된 연출이 장면을 지배한다는 수준의 근거는 부족해 수준 2로 제한적으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현할 수 있다는 근거가 없다. 산책로 안내만으로 이미지 재현 경험을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2",
+          "quote": {
+            "end": 249,
+            "method": "EXACT",
+            "original": "누구나 쉽게 이용할 수 있는 둘레길",
+            "start": 230,
+            "submitted": "누구나 쉽게 이용할 수 있는 둘레길",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74a893d31616a93e977facdbd9c99955146e257e52fdae5de7afdacd84b1a15a"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2",
+          "quote": {
+            "end": 389,
+            "method": "EXACT",
+            "original": "이 길은 넓고 완만하여 산책을 즐기기에도 적합하다",
+            "start": 362,
+            "submitted": "이 길은 넓고 완만하여 산책을 즐기기에도 적합하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74a893d31616a93e977facdbd9c99955146e257e52fdae5de7afdacd84b1a15a"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "완만한 저지대 산책로로 누구나 자유롭게 걸으며 3.1km 구간을 자율적으로 탐색할 수 있는 환경이 확인된다. 다만 자율 탐색이 방문 경험의 절대적 중심이라고 단정하기는 어려워 수준 3으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2",
+          "quote": {
+            "end": 431,
+            "method": "EXACT",
+            "original": "강렬한 송진 향이 온몸을 감싸 상쾌함을 느낄 수 있다",
+            "start": 402,
+            "submitted": "강렬한 송진 향이 온몸을 감싸 상쾌함을 느낄 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74a893d31616a93e977facdbd9c99955146e257e52fdae5de7afdacd84b1a15a"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2",
+          "quote": {
+            "end": 497,
+            "method": "EXACT",
+            "original": "청정(우이) 계곡을 따라 시원한 물소리를 들으며 걸을 수 있는 곳",
+            "start": 461,
+            "submitted": "청정(우이) 계곡을 따라 시원한 물소리를 들으며 걸을 수 있는 곳",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74a893d31616a93e977facdbd9c99955146e257e52fdae5de7afdacd84b1a15a"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "소나무숲, 청정 계곡, 물소리 등 자연 환경 단서가 공식 안내문에서 구체적으로 확인된다. 다만 실제 고요함·혼잡 수준은 확인할 수 없어 수준 3으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2",
+          "quote": {
+            "end": 534,
+            "method": "EXACT",
+            "original": "거리는 총 3.1㎞이며, 약 1시간 30분이 소요된다",
+            "start": 505,
+            "submitted": "거리는 총 3.1㎞이며, 약 1시간 30분이 소요된다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "74a893d31616a93e977facdbd9c99955146e257e52fdae5de7afdacd84b1a15a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "3.1km, 약 1시간 30분의 걷기 탐방 활동이 확인되어 지속적으로 참여할 신체 활동의 기회가 있다. 그러나 도전·몰입형 프로그램 수준의 근거는 없어 수준 3으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현의 기회에 대한 근거가 제공되지 않았다. 개인 산책로라는 성격만으로 관계 경험을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "07992a2ec8a6220878c8cd97888cc65b7f78531ef32ebfa6a1ee98f241b59882",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5687d181447b3bcb4082d2a5628b7176098e799348821ea31b2b18a3250907d2",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1e01ef34dbebfe2e8288e98d371d360ac7fdbcf165f048b26b52e5c4f2562a3e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1195655",
+          "request_sha256": "115e7e056a59a82f3039d8d1675cda71b92121540e54f15dca8e6ac67865d41d",
+          "response_sha256": "52f317e1cee3f11fa26933e026f7e0124e287f73086cf70a1dc1ac364511c757",
+          "retrieved_at": "2026-09-10T05:42:31.327877Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-11T01:03:40Z",
+          "source_record_sha256": "91706dec1de1bf9d8f5f588a673c52cd6556d03bd11cb7c987636707b2da115d",
+          "source_uri": null
+        },
+        "record_sha256": "74a893d31616a93e977facdbd9c99955146e257e52fdae5de7afdacd84b1a15a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "북한산 둘레길은 기존의 샛길을 연결하고 다듬어서 북한산 자락을 완만하게 걸을 수 있도록 조성한 저지대 수평 산책로이다. 둘레길은 전체 71.5㎞ 중 서울시 구간과 우이령길을 포함하여 2010년 9월 7일 45.7㎞를 개통하고, 2011년 6월 30일에 나머지 25.8㎞ 구간을 개통하였다. 사람과 자연이 하나 되어 걷는 둘레길은 물길, 흙길, 숲길과 마을길 산책로의 형태에 각각 21가지 테마를 구성한 길이다. 누구나 쉽게 이용할 수 있는 둘레길을 우리의 소중한 자연을 보존하는 길, 그리고 역사와 문화, 생태를 체험할 수 있는 길이다. 21가지 테마 중 1구간인 소나무숲길은 웅장하면서도 우아한 자태가 신령스럽기까지 한 소나무가 빼곡한 길이다. 이 길은 넓고 완만하여 산책을 즐기기에도 적합하다. 이 구간에 들어서면 강렬한 송진 향이 온몸을 감싸 상쾌함을 느낄 수 있다. 또한, 일부 구간은 북한산 둘레길 중에서 유일하게 청정(우이) 계곡을 따라 시원한 물소리를 들으며 걸을 수 있는 곳이기도 하다. 거리는 총 3.1㎞이며, 약 1시간 30분이 소요된다."
+      }
+    ],
+    "parent_source_sha256": "3d8f5c64dc50aaa45383b7ee043e08cc64059538d1d16ac738c437155fd66fbb",
+    "place": {
+      "address": "서울특별시 강북구 우이동",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:1e01ef34dbebfe2e8288e98d371d360ac7fdbcf165f048b26b52e5c4f2562a3e",
+      "name_ko": "[북한산 둘레길 1구간] 소나무숲길",
+      "place_id": "public:korea:1e01ef34dbebfe2e8288e98d371d360ac7fdbcf165f048b26b52e5c4f2562a3e",
+      "provider_content_id": "1195655",
+      "region_code": "11305",
+      "region_name": "서울특별시 강북구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

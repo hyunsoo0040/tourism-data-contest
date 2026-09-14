@@ -634,9 +634,9 @@ def build_safe_input_candidate_review(
         "policy_version": "human-independent-three-axis-review-candidate-v1",
         "independent_multi_label": True,
         "axis_definitions": {
-            "history_tradition": "공식 근거가 역사·전통 경험을 실질적으로 뒷받침하는가",
-            "emotion_image": "공식 근거가 감성·이미지 경험을 실질적으로 뒷받침하는가",
-            "rest_immersion": "공식 근거가 휴식·몰입 경험을 실질적으로 뒷받침하는가",
+            "history_tradition": "공식 근거가 대상•원형형 경험을 실질적으로 뒷받침하는가",
+            "emotion_image": "공식 근거가 의미•이미지형 경험을 실질적으로 뒷받침하는가",
+            "rest_immersion": "공식 근거가 자기•몰입형 경험을 실질적으로 뒷받침하는가",
         },
         "allowed_evidence_channels": [
             "official_description",

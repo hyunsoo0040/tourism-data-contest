@@ -1,0 +1,521 @@
+{
+  "assessed_at": "2026-09-11T19:37:55.530576Z",
+  "assessment_sha256": "c64832918e17b7724acbc3a8f86dd09a72c4d6a16523a998af411251aa571d8d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 63
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "이 장소가 '서핑의 1번지 양양'이라는 공유된 이미지 안에서 서핑 라이프스타일 장소로 소개되므로 간단한 이미지·의미 연결(수준 2)로 평가한다. 더 높은 단계의 일관된 의미 확인 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "방문자가 서핑 장면을 직접 경험하고 사진·드론 촬영으로 자신의 모습을 기록·재현할 수 있는 구체적 기회가 확인되므로 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "수준별 자율 참여와 서핑 후 주변을 자유롭게 즐길 여지가 확인되나, 깊은 자율 탐색의 중심 경험이라는 근거는 부족해 수준 2~3 중 수준 2 이상의 근거로 제한적으로 평가한다. 초보~숙련자 선택 기회로 수준 3 가능성도 있으나 보수적으로 제한된 자유 선택 범위로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "인구해변·죽도해변 사이 위치라는 해안 자연환경 단서가 확인된다. 다만 실제 고요함이나 회복 환경의 두드러짐은 확인할 수 없어 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "사전 교육 후 실전 서핑에 이어지는 신체 활동 중심의 강습 프로그램이 이 장소 경험의 핵심으로, 지속적 참여·도전 활동이 확인되므로 수준 4로 평가한다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "가족·친구와 함께하는 교류 및 펍·카페 등 공유 공간이 언급되지만 공동 제작이나 자기표현 활동의 풍부함에 대한 근거는 부족해 수준 2로 평가한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 서핑강습소·샾·카페·게스트하우스 운영만 설명하며, 확인된 원형·유산과의 접촉에 관한 근거가 없다. 언급 부족은 0의 근거가 아니므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "'대한민국 서핑의 1번지 양양'이라는 지역 이미지 표현은 있으나 이 장소의 구체적 역사·연혁·출처에 대한 서사는 제공되지 않아 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 뒷받침하는 근거가 없다. 서핑 강습은 실제 전승 여부를 판단할 자료가 부족하므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "사전 안전교육은 언급되지만 이는 서핑 기술 교육일 뿐 원형·유산·전통에 연결된 해설·탐구의 근거는 없으므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+          "quote": {
+            "end": 57,
+            "method": "EXACT",
+            "original": "대한민국 서핑의 1번지 강원도 양양군에 있는 서핑강습소와 서핑샾을 함께 운영하는 곳이다",
+            "start": 9,
+            "submitted": "대한민국 서핑의 1번지 강원도 양양군에 있는 서핑강습소와 서핑샾을 함께 운영하는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "이 장소가 '서핑의 1번지 양양'이라는 공유된 이미지 안에서 서핑 라이프스타일 장소로 소개되므로 간단한 이미지·의미 연결(수준 2)로 평가한다. 더 높은 단계의 일관된 의미 확인 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "인용된 사진·드론 촬영은 강습 중 방문자 자신의 모습을 기록해 주는 서비스일 뿐, 이 장소의 이미지가 매체를 통해 재현·확산되는 근거가 아니다. E.b는 장소 이미지의 매체적 표현·유통을 다루는 항목이므로 현재 제안(수준 1)도 원문으로 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "해변 위치는 언급되지만 외관·경관·연출의 시각적 성격에 대한 직접 묘사가 없어 판단 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+          "quote": {
+            "end": 539,
+            "method": "EXACT",
+            "original": "강습 중에 멋진 추억을 남길만한 사진 촬영과 드론 영상 촬영도 준비되어 있어 강습 후 서핑하는 자신의 모습을 카페에서 다운로드하여 보관할 수 있다",
+            "start": 458,
+            "submitted": "강습 중에 멋진 추억을 남길만한 사진 촬영과 드론 영상 촬영도 준비되어 있어 강습 후 서핑하는 자신의 모습을 카페에서 다운로드하여 보관할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "방문자가 서핑 장면을 직접 경험하고 사진·드론 촬영으로 자신의 모습을 기록·재현할 수 있는 구체적 기회가 확인되므로 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+          "quote": {
+            "end": 453,
+            "method": "EXACT",
+            "original": "서핑을 처음 시작하는 초보자부터 숙련자까지 모두 참여할 수 있으며 강사진들이 친절하게 지도해 준다",
+            "start": 399,
+            "submitted": "서핑을 처음 시작하는 초보자부터 숙련자까지 모두 참여할 수 있으며 강사진들이 친절하게 지도해 준다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+          "quote": {
+            "end": 605,
+            "method": "EXACT",
+            "original": "근처에는 맛집, 카페, 펍 등이 도보로 5분 거리에 있어 서핑 후 가족, 친구들과 함께 즐기며 추억을 쌓을 수 있다",
+            "start": 541,
+            "submitted": "근처에는 맛집, 카페, 펍 등이 도보로 5분 거리에 있어 서핑 후 가족, 친구들과 함께 즐기며 추억을 쌓을 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "수준별 자율 참여와 서핑 후 주변을 자유롭게 즐길 여지가 확인되나, 깊은 자율 탐색의 중심 경험이라는 근거는 부족해 수준 2~3 중 수준 2 이상의 근거로 제한적으로 평가한다. 초보~숙련자 선택 기회로 수준 3 가능성도 있으나 보수적으로 제한된 자유 선택 범위로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+          "quote": {
+            "end": 105,
+            "method": "EXACT",
+            "original": "1년 내내 서핑하기에 가장 좋은 파도가 들어오는 인구해변과 죽도해변 가운데 위치하여",
+            "start": 59,
+            "submitted": "1년 내내 서핑하기에 가장 좋은 파도가 들어오는 인구해변과 죽도해변 가운데 위치하여",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "인구해변·죽도해변 사이 위치라는 해안 자연환경 단서가 확인된다. 다만 실제 고요함이나 회복 환경의 두드러짐은 확인할 수 없어 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+          "quote": {
+            "end": 282,
+            "method": "EXACT",
+            "original": "다년간의 서핑 경력을 쌓아온 우수한 강사진들은 실전 서핑을 위해 강습회원들에게 서핑 전에 사전 교육을 실시하여",
+            "start": 221,
+            "submitted": "다년간의 서핑 경력을 쌓아온 우수한 강사진들은 실전 서핑을 위해 강습회원들에게 서핑 전에 사전 교육을 실시하여",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 4,
+      "reason": "사전 교육 후 실전 서핑에 이어지는 신체 활동 중심의 강습 프로그램이 이 장소 경험의 핵심으로, 지속적 참여·도전 활동이 확인되므로 수준 4로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+          "quote": {
+            "end": 605,
+            "method": "EXACT",
+            "original": "서핑 후 가족, 친구들과 함께 즐기며 추억을 쌓을 수 있다",
+            "start": 573,
+            "submitted": "서핑 후 가족, 친구들과 함께 즐기며 추억을 쌓을 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "가족·친구와 함께하는 교류 및 펍·카페 등 공유 공간이 언급되지만 공동 제작이나 자기표현 활동의 풍부함에 대한 근거는 부족해 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "f425fe535bb6a4fed8f8a4639ce510a8d334e9dd2c666c54cf1b38cfce44588d",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+              "quote": {
+                "end": 500,
+                "method": "EXACT",
+                "original": "강습 중에 멋진 추억을 남길만한 사진 촬영과 드론 영상 촬영도 준비되어 있어",
+                "start": 458,
+                "submitted": "강습 중에 멋진 추억을 남길만한 사진 촬영과 드론 영상 촬영도 준비되어 있어",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.b",
+          "level": 1,
+          "reason": "사진·드론 영상이라는 매체를 통한 장소 이미지 표현이 명시되나, 반복적 유통이나 확산 근거는 없어 수준 1로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "WRONG_FACET",
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "E.b",
+          "reason": "인용된 사진·드론 촬영은 강습 중 방문자 자신의 모습을 기록해 주는 서비스일 뿐, 이 장소의 이미지가 매체를 통해 재현·확산되는 근거가 아니다. E.b는 장소 이미지의 매체적 표현·유통을 다루는 항목이므로 현재 제안(수준 1)도 원문으로 뒷받침되지 않는다."
+        }
+      },
+      "reason": "인용된 사진·드론 촬영은 강습 중 방문자 자신의 모습을 기록해 주는 서비스일 뿐, 이 장소의 이미지가 매체를 통해 재현·확산되는 근거가 아니다. E.b는 장소 이미지의 매체적 표현·유통을 다루는 항목이므로 현재 제안(수준 1)도 원문으로 뒷받침되지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "983d6c118c547a9273fc315c05645a516e335a6bf8994345a8b04e82e05fb586",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b04084554c88632495d7f628c1c7d09ef25693a149640aba78eb8499c7cf02c5",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f29c069e412fe6fa65c85560e4ac8b4de8d8dfc39c22768cca7e788558597c2e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3072234",
+          "request_sha256": "2c4afb621d58accd588b5324039af6b02e5a1f7cc6a1efa8a8050998bd6703f6",
+          "response_sha256": "bc84ef327ccdf47d5ba27a26e6019a28b927ad5f58692b7a3b11d3fc5993e4e9",
+          "retrieved_at": "2026-09-10T17:08:12.206787Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-06T08:13:51Z",
+          "source_record_sha256": "575a41a4c14602af2ce8892b0645fc6b0a5fea8d15ac68f77cfbf843b941e80d",
+          "source_uri": null
+        },
+        "record_sha256": "dedbdbc0ac4004d2a8cd59ee65ab1faa527da6c15677c1067ba02c8d0af47443",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "엉클서프 양양은 대한민국 서핑의 1번지 강원도 양양군에 있는 서핑강습소와 서핑샾을 함께 운영하는 곳이다. 1년 내내 서핑하기에 가장 좋은 파도가 들어오는 인구해변과 죽도해변 가운데 위치하여 초보자들도 서핑을 배우기에 좋다. 전체 2층 건물의 1층에는 서핑샾과 카페, 서핑 후 즐길 수 있는 펍이 있고, 2층에는 게스트하우스가 운영되고 있어, 한 곳에서 서핑과 편안한 숙박을 함께 즐길 수 있다. 다년간의 서핑 경력을 쌓아온 우수한 강사진들은 실전 서핑을 위해 강습회원들에게 서핑 전에 사전 교육을 실시하여 안전하고 즐겁게 서핑을 즐길 수 있도록 철저한 준비 과정을 거친다. 인구해변에서 진행되는 엉클서프 수업은 서핑보드가 이미 해변에 준비되어 있어 무거운 서핑보드를 들고 이동할 필요가 없다는 것이 큰 장점이다. 서핑을 처음 시작하는 초보자부터 숙련자까지 모두 참여할 수 있으며 강사진들이 친절하게 지도해 준다. 또한 강습 중에 멋진 추억을 남길만한 사진 촬영과 드론 영상 촬영도 준비되어 있어 강습 후 서핑하는 자신의 모습을 카페에서 다운로드하여 보관할 수 있다. 근처에는 맛집, 카페, 펍 등이 도보로 5분 거리에 있어 서핑 후 가족, 친구들과 함께 즐기며 추억을 쌓을 수 있다."
+      }
+    ],
+    "parent_source_sha256": "3d5868bbbc0844a344ec550fb2d56f45625fef0335df143807ca87501b4d312b",
+    "place": {
+      "address": "강원특별자치도 양양군 현남면 인구항길 5",
+      "category": "레포츠",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:f29c069e412fe6fa65c85560e4ac8b4de8d8dfc39c22768cca7e788558597c2e",
+      "name_ko": "엉클서프양양",
+      "place_id": "public:korea:f29c069e412fe6fa65c85560e4ac8b4de8d8dfc39c22768cca7e788558597c2e",
+      "provider_content_id": "3072234",
+      "region_code": "51830",
+      "region_name": "강원특별자치도 양양군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

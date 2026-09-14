@@ -1,0 +1,513 @@
+{
+  "assessed_at": "2026-09-11T17:40:31.233603Z",
+  "assessment_sha256": "96fb9354ae16d4e7e3731f966aeca96bead04ac7cd9ef0311820873ecfad5cbb",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.a"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "공식 소개가 이 장소에 '도심 속 자연 속 힐링·글램핑 바베큐'라는 이미지와 의미를 부여하고 있음을 확인할 수 있다. 다만 표현 수준의 간단한 이미지이며 여러 장면에서 일관된 의미가 확인되는 근거는 부족해 수준 1로 판단한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "외부 음식 반입 허용, 셀프바베큐 등 방문자가 자신의 방식으로 선택·즐길 여지가 확인된다. 다만 랜덤 자리 배정, 1타임 100명 제한 등 통제 요소도 있어 자율 탐색의 중심 경험이라 보기 어려워 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "치유농장이라는 설정과 피톤치드 향기라는 자연 환경 단서가 확인된다. 그러나 이는 홍보 문구이며 실제 고요함·저자극 환경이 두드러짐을 확정할 수 없고 혼잡 관리 정보(1타임 100명)만 있어 수준 2로 제한한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:93464aff982e9b6f18452fcf1d3bf256fddc50bfacd082696080197e95a4d112"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "모종심기, 고구마캐기, 토끼 먹이주기, 물놀이, 셀프바베큐 등 구체적 참여 활동이 확인된다. 다만 각 체험이 3~40분 내외의 짧은 타임제로 지속적 몰입·도전의 중심이라 보기는 어려워 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "가족·친구·연인이 함께 바베큐를 하고 아이들은 인솔 선생님과 함께 체험하는 등 동반자 간 교류의 구체적 기회가 확인된다. 공동 제작이나 자기표현 활동의 근거는 부족해 수준 2로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료는 비욘더팜을 6차 산업형 치유농장·글램핑 바베큐장으로 소개할 뿐, 확인된 원형·유산과의 접촉에 관한 근거가 없다. 농장이라는 표현만으로 문화유산 원형을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "자료에 이 장소 자체의 역사·연혁·유래에 대한 설명이 없다. 시설·프로그램 정보만 제공되므로 역사 맥락의 구체성을 평가할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "농업회사법인 운영과 6차 산업 언급이 있으나 지역 주체의 전승·생활문화와의 실제 연결을 확인하는 근거는 없다. 체험 프로그램이 전통 전승과 연결됨을 뒷받침하는 자료가 부족하여 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "모종심기, 토끼 먹이주기 등의 체험이 있으나 이는 원형·유산·전통에 연결된 해설·학습이 아니라 레저·농촌 체험이다. 역사적 해설·탐구의 근거가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2",
+          "quote": {
+            "end": 180,
+            "method": "EXACT",
+            "original": "도심 속에서 자연을 즐기며 가족끼리, 친구끼리, 연인끼리 힐링하는 당일 글램핑 셀프바베큐장으로 유명하다",
+            "start": 123,
+            "submitted": "도심 속에서 자연을 즐기며 가족끼리, 친구끼리, 연인끼리 힐링하는 당일 글램핑 셀프바베큐장으로 유명하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c23280963ce31df084ba15354de7a3a93a4a2ab2516c190e11e62b57cf424cef"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 1,
+      "reason": "공식 소개가 이 장소에 '도심 속 자연 속 힐링·글램핑 바베큐'라는 이미지와 의미를 부여하고 있음을 확인할 수 있다. 다만 표현 수준의 간단한 이미지이며 여러 장면에서 일관된 의미가 확인되는 근거는 부족해 수준 1로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "'유명하다'는 표현은 있으나 특정 매체를 통한 이미지 재현·확산의 구체적 근거가 제공되지 않는다. SNS·작품·홍보 매체 정보가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "시설 나열(풀장, 글램핑 등)만 있고 외관·경관·연출의 시각적 성격을 직접 확인할 수 있는 묘사가 없다. 피톤치드 향기 언급은 후각 단서일 뿐 시각적 표현의 근거로 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거가 없다. 체험 프로그램의 존재가 이미지 재현 경험을 의미하지는 않으므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2",
+          "quote": {
+            "end": 608,
+            "method": "EXACT",
+            "original": "외부 음식과 배달음식도 취식가능하여 바베큐가 힘든 분들은 먹거리를 가지고 와서 즐기는 것도 좋겠다",
+            "start": 554,
+            "submitted": "외부 음식과 배달음식도 취식가능하여 바베큐가 힘든 분들은 먹거리를 가지고 와서 즐기는 것도 좋겠다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c23280963ce31df084ba15354de7a3a93a4a2ab2516c190e11e62b57cf424cef"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "외부 음식 반입 허용, 셀프바베큐 등 방문자가 자신의 방식으로 선택·즐길 여지가 확인된다. 다만 랜덤 자리 배정, 1타임 100명 제한 등 통제 요소도 있어 자율 탐색의 중심 경험이라 보기 어려워 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2",
+          "quote": {
+            "end": 437,
+            "method": "EXACT",
+            "original": "피톤치드 향기가 솔솔 나는 곳에서",
+            "start": 419,
+            "submitted": "피톤치드 향기가 솔솔 나는 곳에서",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c23280963ce31df084ba15354de7a3a93a4a2ab2516c190e11e62b57cf424cef"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "치유농장이라는 설정과 피톤치드 향기라는 자연 환경 단서가 확인된다. 그러나 이는 홍보 문구이며 실제 고요함·저자극 환경이 두드러짐을 확정할 수 없고 혼잡 관리 정보(1타임 100명)만 있어 수준 2로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:93464aff982e9b6f18452fcf1d3bf256fddc50bfacd082696080197e95a4d112",
+          "quote": {
+            "end": 67,
+            "method": "EXACT",
+            "original": "- 비욘더플레이(선생님인솔체험) - 모종심기 / 화덕체험 / 미술체험 / 고구마캐기 / 토끼 먹이주기 등 3~40분 소요",
+            "start": 0,
+            "submitted": "- 비욘더플레이(선생님인솔체험) - 모종심기 / 화덕체험 / 미술체험 / 고구마캐기 / 토끼 먹이주기 등 3~40분 소요",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "87af52a3948beba38c1498f327b76f135d038024ce97b9a60f94ba31806ec00f"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "모종심기, 고구마캐기, 토끼 먹이주기, 물놀이, 셀프바베큐 등 구체적 참여 활동이 확인된다. 다만 각 체험이 3~40분 내외의 짧은 타임제로 지속적 몰입·도전의 중심이라 보기는 어려워 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2",
+          "quote": {
+            "end": 173,
+            "method": "EXACT",
+            "original": "가족끼리, 친구끼리, 연인끼리 힐링하는 당일 글램핑 셀프바베큐장",
+            "start": 138,
+            "submitted": "가족끼리, 친구끼리, 연인끼리 힐링하는 당일 글램핑 셀프바베큐장",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c23280963ce31df084ba15354de7a3a93a4a2ab2516c190e11e62b57cf424cef"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "가족·친구·연인이 함께 바베큐를 하고 아이들은 인솔 선생님과 함께 체험하는 등 동반자 간 교류의 구체적 기회가 확인된다. 공동 제작이나 자기표현 활동의 근거는 부족해 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "70396de1225afbeb638b35ac75774cf690dda0aeeaae7e4d067b18b48a73b7e7",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "96ea7531147160bd2f9ea3a94e92e88ad60a2cfb8e8848ab0ded560d75ba1706",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2e134db493a0abadb48f88aea5c65a83bccf146c9c7d727219b786de481471a2",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:7ccb0f53d3144aeec15780694fbbdc56521a9d5e69cc510c51d2307d14e03c53",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3075561",
+          "request_sha256": "311fbc3d84164ba736620c0561d3c976adb6be200aa7e99fd77cd634740045b7",
+          "response_sha256": "f1695eea99d6845a14157370457f57e6c75a40e08e89fb20d478ac4427426e4c",
+          "retrieved_at": "2026-09-10T08:05:24.811589Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-02-20T02:32:50Z",
+          "source_record_sha256": "2564e248a0f25439e8e73acf42c5ae126808c33a3bda7d77a8e43219c09ccb7d",
+          "source_uri": null
+        },
+        "record_sha256": "c23280963ce31df084ba15354de7a3a93a4a2ab2516c190e11e62b57cf424cef",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "북위례와 인접한 하남시 감이동에 위치한 비욘더팜은 6차 산업을 통해 농업에 대한 새로운 가치를 창출하고 농업회사법인이 기획하고 전개하는 치유농장이다. 비욘더팜은 공간 대여, 셀프바베큐, 치유 농장이라는 수식어가 어울리는 도심 속에서 자연을 즐기며 가족끼리, 친구끼리, 연인끼리 힐링하는 당일 글램핑 셀프바베큐장으로 유명하다. 바베큐 그릴 예약 시 가위, 집게, 버너, 일회용 식기류 등이 무료로 제공되며, 매점에서 간단한 스낵과 라면, 컵밥과 음료수를 구매할 수 있다.여름에는 20m 길이의 유수풀과 15m 크기의 사각 풀장과 슬라이드, 영유아를 위한 미니 풀장이 오픈하여 물놀이 시설을 함께 이용할 수 있다. 1타임 당 인원은 100명으로 제한하여 티켓과 바베큐를 이용하시는 고객에 한하여 이용 가능하며, 남녀 탈의실과 샤워실도 잘 갖추어져있다. 피톤치드 향기가 솔솔 나는 곳에서 아이들은 인솔 선생님과 함께 상추 모종심기, 물감놀이, 마시멜로우 굽기, 토끼 먹이주기 등 다양한 체험을 할 수 있으며, 어른들은 입장할 때 받은 컵에 무제한으로 커피를 즐길 수 있다. 자리 배정은 랜덤이며 외부 음식과 배달음식도 취식가능하여 바베큐가 힘든 분들은 먹거리를 가지고 와서 즐기는 것도 좋겠다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3a656fe16aa807c8f2231ca81ef6589336484dfac79a7fb7e6570eea8c7155b3",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:7ccb0f53d3144aeec15780694fbbdc56521a9d5e69cc510c51d2307d14e03c53",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3075561",
+          "request_sha256": "39f0723cf5c4a9317963fc8aa40d5561b130cef0245dc9246fde208f53d80740",
+          "response_sha256": "74513a63f9ffaaa400dab0cd9d3f39c16713d1784362a6bf07454cf6bc12f5ed",
+          "retrieved_at": "2026-09-10T08:24:40.919597Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "74663097011d4fd9612ea66d57a8b77224d51c49620eada9223676cc0bd41314",
+          "source_uri": null
+        },
+        "record_sha256": "9c6a0f07b76069ff3888564c559204b570c11f2bec0bc207c6f3e2e35c957412",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "모래놀이터 / 물감놀이터 / 탈의실 및 샤워실"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:93464aff982e9b6f18452fcf1d3bf256fddc50bfacd082696080197e95a4d112",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:7ccb0f53d3144aeec15780694fbbdc56521a9d5e69cc510c51d2307d14e03c53",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3075561",
+          "request_sha256": "39f0723cf5c4a9317963fc8aa40d5561b130cef0245dc9246fde208f53d80740",
+          "response_sha256": "74513a63f9ffaaa400dab0cd9d3f39c16713d1784362a6bf07454cf6bc12f5ed",
+          "retrieved_at": "2026-09-10T08:24:40.919597Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "89e6ebff9a52f61a91567641f6852c7732c3e55c062b6254182b6ff7cf4f51fc",
+          "source_uri": null
+        },
+        "record_sha256": "87af52a3948beba38c1498f327b76f135d038024ce97b9a60f94ba31806ec00f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "- 비욘더플레이(선생님인솔체험) - 모종심기 / 화덕체험 / 미술체험 / 고구마캐기 / 토끼 먹이주기 등 3~40분 소요 - 평일(2타임) 15:30 / 18:30 - 주말(4타임) 11:30 / 13:30 / 16:30 / 19:30"
+      }
+    ],
+    "parent_source_sha256": "b58a412ca42a53126c7e8c17e4f5b5beb572835c99fbdabaf253091d7ddfd249",
+    "place": {
+      "address": "경기도 하남시 학암로 37-15 (감이동)",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:7ccb0f53d3144aeec15780694fbbdc56521a9d5e69cc510c51d2307d14e03c53",
+      "name_ko": "비욘더팜",
+      "place_id": "public:korea:7ccb0f53d3144aeec15780694fbbdc56521a9d5e69cc510c51d2307d14e03c53",
+      "provider_content_id": "3075561",
+      "region_code": "41450",
+      "region_name": "경기도 하남시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

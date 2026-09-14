@@ -1,0 +1,1159 @@
+{
+  "assessed_at": "2026-09-11T16:05:00.607878Z",
+  "assessment_sha256": "471731f4e19608f4dee872ba820486433fa050e0de99b74ca9319ae8d3091fc4",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "고려시대 형성된 자연 호수라는 원형과 유서 깊은 취향정이 확인되지만, 방문자가 실물 유산과 접촉하는 경험의 중심성 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "전주의 역사 연혁과 공원의 조성 경위가 소개되나 이는 장소 배경 설명 수준이고, 장소 고유 사건의 심층 탐구가 방문 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "연꽃 연못이 전주의 명물로 구체적 이미지·이야기가 장소에 부여되어 있으며, 단오 창포물 잔치 등 여러 표현에서 일관된 의미가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:a83659f876da7bb5f2688138aa24881efd620fd56cb014b5f575f3bcd51b28cd",
+            "appearance:e6212dcccf647a7156f302c25c1248d7a5dad53b2bececb7c7e7c1abf99dc25d",
+            "appearance:ec39eb0f9eca4248c43b548e4e53f91d09212a0b90d672bfb0c72ddb4165bad7"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "repair 항목을 반영하되, 텍스트 근거의 claim은 지정된 VISUAL_EXPRESSION으로 수정한다. 연못·아치형 현수교·인공폭포·목교·전통 정자 등 장면에서 구별되는 시각적 경관 표현이 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0fe5f3c6acc8a5539460e150a973baa15baf583d75e4114a60968e8fb869eb3d",
+            "appearance:50113540b9dbf03b601e54f5b11c8eb1d83f5c673d73f81ea86d441e5ab93407",
+            "appearance:b81e6effeaade51ab6d2debb2af6154e07a0bd4e9c7f35b2ab6bf5b3dbed9f0c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "연못·숲(언덕)·창포늪·폭포 등 자연 환경 단서의 존재는 확인되나 '두드러짐'(수준 4)은 조성 홍보 서술만으로 확정하기 어렵고, 실제 저자극·회복 환경 여부는 불명확하다. 단서 확인(수준 3)과 두드러짐(수준 4) 사이 확정이 어렵다.",
+      "value": 92
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+          "quote": {
+            "end": 294,
+            "method": "EXACT",
+            "original": "덕진공원은 고려시대에 형성된 자연 호수가 1978년 4월 시민공원 결정 고시에 의거, 도시공원으로 조성되었고 취향정과 더불어 유서 깊은 곳이다.",
+            "start": 214,
+            "submitted": "덕진공원은 고려시대에 형성된 자연 호수가 1978년 4월 시민공원 결정 고시에 의거, 도시공원으로 조성되었고 취향정과 더불어 유서 깊은 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 2,
+      "reason": "고려시대 형성된 자연 호수라는 원형과 유서 깊은 취향정이 확인되지만, 방문자가 실물 유산과 접촉하는 경험의 중심성 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+          "quote": {
+            "end": 116,
+            "method": "EXACT",
+            "original": "40여 년간 후백제의 수도였으며, 조선시대에는 이성계의 선조가 살았던 고향이라는 이유로 완산유수부로 개칭되기도 했다.",
+            "start": 51,
+            "submitted": "40여 년간 후백제의 수도였으며, 조선시대에는 이성계의 선조가 살았던 고향이라는 이유로 완산유수부로 개칭되기도 했다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "전주의 역사 연혁과 공원의 조성 경위가 소개되나 이는 장소 배경 설명 수준이고, 장소 고유 사건의 심층 탐구가 방문 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "단오 창포물 잔치의 존재는 확인되나 '확인된 전승·생활문화를 관람'(수준 3)은 현재 관람 가능성까지 요구한다. 원문은 유명하다는 서술만 있고 행사의 지속 여부·방문자 관람 가능성이 불명확해, 흔적 접촉(수준 2)과 관람(수준 3) 사이에서 확정이 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "'전통 정자와 창포늪을 조성하여 역사성을 극대화'는 경관 연출 서술일 뿐 설명·전시·해설 제공이 아니다. 판단 이유 스스로 체계적 해설·전시 근거가 없다고 인정하면서 '유산·전통에 연결된 설명·전시'(수준 2)를 지원하는 것은 내적 모순이며, 현재 수준도 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+          "quote": {
+            "end": 186,
+            "method": "EXACT",
+            "original": "전주에서 볼거리로 강한 인상을 받게 되는 것 중의 하나가 덕진공원에 피는 연꽃이다. 그만큼 덕진공원 연못은 전주의 명물이다.",
+            "start": 117,
+            "submitted": "전주에서 볼거리로 강한 인상을 받게 되는 것 중의 하나가 덕진공원에 피는 연꽃이다. 그만큼 덕진공원 연못은 전주의 명물이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "연꽃 연못이 전주의 명물로 구체적 이미지·이야기가 장소에 부여되어 있으며, 단오 창포물 잔치 등 여러 표현에서 일관된 의미가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "장소의 이미지가 특정 매체를 통해 재현·확산된다는 근거가 제공된 자료에 없다. '유명하다'는 표현만으로 유통 경로를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+          "quote": {
+            "end": 417,
+            "method": "EXACT",
+            "original": "그윽이 풍기는 연못 중앙으로 아치형 현수교를 거닐면서 한없는 시정에 젖어볼 수 있다.",
+            "start": 370,
+            "submitted": "그윽이 풍기는 연못 중앙으로 아치형 현수교를 거닐면서 한없는 시정에 젖어볼 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+          "quote": {
+            "end": 565,
+            "method": "EXACT",
+            "original": "인공폭포와 목교를 설치하여 자연 친화 시설로 시민의 정서에 맞도록 조성하였으며",
+            "start": 522,
+            "submitted": "인공폭포와 목교를 설치하여 자연 친화 시설로 시민의 정서에 맞도록 조성하였으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "repair 항목을 반영하되, 텍스트 근거의 claim은 지정된 VISUAL_EXPRESSION으로 수정한다. 연못·아치형 현수교·인공폭포·목교·전통 정자 등 장면에서 구별되는 시각적 경관 표현이 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "현수교 산책은 대표 장면의 직접 경험(수준 3)까지는 가능하나, 제안된 앵커 '촬영·참여로 이미지나 장면을 재현'(수준 4)은 재현 활동 자체를 요구한다. 촬영·재현 참여의 근거가 원문에 없어 현재 수준도 불충분하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "공원 규모와 보트장·현수교는 자율 선택·탐색의 기회(수준 3) 정도까지는 뒷받침하지만, 제안된 앵커 '여유롭게 자신의 방식으로 탐색'(수준 4)은 여유로운 탐색 환경 자체를 요구한다. 판단 이유도 중심성·여유 근거 부재를 인정해 현재 수준이 불충분하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "연못·숲(언덕)·창포늪·폭포 등 자연 환경 단서의 존재는 확인되나 '두드러짐'(수준 4)은 조성 홍보 서술만으로 확정하기 어렵고, 실제 저자극·회복 환경 여부는 불명확하다. 단서 확인(수준 3)과 두드러짐(수준 4) 사이 확정이 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "보트장 이용·현수교 산책은 '구체적인 참여·탐방 활동'(수준 3)까지는 가능하나, 제안된 앵커 '지속적으로 참여·도전할 활동'(수준 4)의 근거가 없다. 판단 이유 스스로 지속적 도전·몰입의 중심성 근거가 제한적임을 인정해 현재 수준이 불충분하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "단오 창포물 잔치는 구체적 공동 참여 기회이나 시즌 한정이며, '구체적인 교류·표현 기회'(수준 3)를 현재 상시적 제공으로 볼지, 제한된 공동 활동(수준 2)으로 볼지 원문만으로 확정이 어렵다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "LIVING_TRADITION",
+              "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+              "quote": {
+                "end": 625,
+                "method": "EXACT",
+                "original": "단오절에는 연못물로 부녀자들이 아침 일찍 머리를 감고 한해 건강을 기원하는 단오 창포물 잔치로도 유명하다.",
+                "start": 566,
+                "submitted": "단오절에는 연못물로 부녀자들이 아침 일찍 머리를 감고 한해 건강을 기원하는 단오 창포물 잔치로도 유명하다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+            }
+          ],
+          "flags": [],
+          "key": "H.c",
+          "level": 2,
+          "reason": "단오 창포물 잔치라는 실제 지속되는 전승 행사가 이 장소에서 언급되나, 방문자가 전승과 직접 연결되는 경험의 강도·지속 여부는 확인되지 않아 제한적으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.c",
+          "reason": "단오 창포물 잔치의 존재는 확인되나 '확인된 전승·생활문화를 관람'(수준 3)은 현재 관람 가능성까지 요구한다. 원문은 유명하다는 서술만 있고 행사의 지속 여부·방문자 관람 가능성이 불명확해, 흔적 접촉(수준 2)과 관람(수준 3) 사이에서 확정이 어렵다."
+        }
+      },
+      "reason": "단오 창포물 잔치의 존재는 확인되나 '확인된 전승·생활문화를 관람'(수준 3)은 현재 관람 가능성까지 요구한다. 원문은 유명하다는 서술만 있고 행사의 지속 여부·방문자 관람 가능성이 불명확해, 흔적 접촉(수준 2)과 관람(수준 3) 사이에서 확정이 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+              "quote": {
+                "end": 518,
+                "method": "EXACT",
+                "original": "전통 정자와 창포늪을 조성하여 역사성을 극대화하였고",
+                "start": 490,
+                "submitted": "전통 정자와 창포늪을 조성하여 역사성을 극대화하였고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "H.d",
+          "level": 2,
+          "reason": "역사성을 살린 시설 조성으로 유산 연결 정서를 제공하나, 체계적 해설·전시·학습 프로그램의 근거는 없어 짧은 안내 수준 이상으로 평가하기 어렵다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "H.d",
+          "reason": "'전통 정자와 창포늪을 조성하여 역사성을 극대화'는 경관 연출 서술일 뿐 설명·전시·해설 제공이 아니다. 판단 이유 스스로 체계적 해설·전시 근거가 없다고 인정하면서 '유산·전통에 연결된 설명·전시'(수준 2)를 지원하는 것은 내적 모순이며, 현재 수준도 뒷받침되지 않는다."
+        }
+      },
+      "reason": "'전통 정자와 창포늪을 조성하여 역사성을 극대화'는 경관 연출 서술일 뿐 설명·전시·해설 제공이 아니다. 판단 이유 스스로 체계적 해설·전시 근거가 없다고 인정하면서 '유산·전통에 연결된 설명·전시'(수준 2)를 지원하는 것은 내적 모순이며, 현재 수준도 뒷받침되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+              "quote": {
+                "end": 417,
+                "method": "EXACT",
+                "original": "아치형 현수교를 거닐면서 한없는 시정에 젖어볼 수 있다.",
+                "start": 386,
+                "submitted": "아치형 현수교를 거닐면서 한없는 시정에 젖어볼 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+            }
+          ],
+          "flags": [],
+          "key": "E.d",
+          "level": 3,
+          "reason": "전주의 명물인 연꽃 연못과 현수교 산책이라는 대표 장면을 현장에서 직접 경험할 수 있으나, 재현 활동 중심성 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "현수교 산책은 대표 장면의 직접 경험(수준 3)까지는 가능하나, 제안된 앵커 '촬영·참여로 이미지나 장면을 재현'(수준 4)은 재현 활동 자체를 요구한다. 촬영·재현 참여의 근거가 원문에 없어 현재 수준도 불충분하다."
+        }
+      },
+      "reason": "현수교 산책은 대표 장면의 직접 경험(수준 3)까지는 가능하나, 제안된 앵커 '촬영·참여로 이미지나 장면을 재현'(수준 4)은 재현 활동 자체를 요구한다. 촬영·재현 참여의 근거가 원문에 없어 현재 수준도 불충분하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+              "quote": {
+                "end": 369,
+                "method": "EXACT",
+                "original": "4만 5천 평의 경내에는 남쪽으로 3분의 2를 차지하고 있는 연못과 북쪽의 보트장을 동서로 가로지른 현수교가 그사이를 양분하고 있다.",
+                "start": 295,
+                "submitted": "4만 5천 평의 경내에는 남쪽으로 3분의 2를 차지하고 있는 연못과 북쪽의 보트장을 동서로 가로지른 현수교가 그사이를 양분하고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 3,
+          "reason": "4만 5천 평 규모의 공원 내에서 산책, 보트, 정자 등 자율적으로 선택·탐색할 기회가 확인된다. 일상 이탈 경험의 중심성까지는 근거가 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "공원 규모와 보트장·현수교는 자율 선택·탐색의 기회(수준 3) 정도까지는 뒷받침하지만, 제안된 앵커 '여유롭게 자신의 방식으로 탐색'(수준 4)은 여유로운 탐색 환경 자체를 요구한다. 판단 이유도 중심성·여유 근거 부재를 인정해 현재 수준이 불충분하다."
+        }
+      },
+      "reason": "공원 규모와 보트장·현수교는 자율 선택·탐색의 기회(수준 3) 정도까지는 뒷받침하지만, 제안된 앵커 '여유롭게 자신의 방식으로 탐색'(수준 4)은 여유로운 탐색 환경 자체를 요구한다. 판단 이유도 중심성·여유 근거 부재를 인정해 현재 수준이 불충분하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+              "quote": {
+                "end": 565,
+                "method": "EXACT",
+                "original": "인공폭포와 목교를 설치하여 자연 친화 시설로 시민의 정서에 맞도록 조성하였으며",
+                "start": 522,
+                "submitted": "인공폭포와 목교를 설치하여 자연 친화 시설로 시민의 정서에 맞도록 조성하였으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "연못, 숲(언덕), 창포늪, 폭포 등 자연·환경 단서가 두드러지게 확인되나, 실제 고요함·회복 효과는 단정할 수 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "연못·숲(언덕)·창포늪·폭포 등 자연 환경 단서의 존재는 확인되나 '두드러짐'(수준 4)은 조성 홍보 서술만으로 확정하기 어렵고, 실제 저자극·회복 환경 여부는 불명확하다. 단서 확인(수준 3)과 두드러짐(수준 4) 사이 확정이 어렵다."
+        }
+      },
+      "reason": "연못·숲(언덕)·창포늪·폭포 등 자연 환경 단서의 존재는 확인되나 '두드러짐'(수준 4)은 조성 홍보 서술만으로 확정하기 어렵고, 실제 저자극·회복 환경 여부는 불명확하다. 단서 확인(수준 3)과 두드러짐(수준 4) 사이 확정이 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+              "quote": {
+                "end": 354,
+                "method": "EXACT",
+                "original": "북쪽의 보트장을 동서로 가로지른 현수교",
+                "start": 333,
+                "submitted": "북쪽의 보트장을 동서로 가로지른 현수교",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "보트장 이용, 현수교 산책 등 구체적 참여 활동이 확인되나 지속적 도전·몰입 활동이 방문 경험의 중심이라는 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "보트장 이용·현수교 산책은 '구체적인 참여·탐방 활동'(수준 3)까지는 가능하나, 제안된 앵커 '지속적으로 참여·도전할 활동'(수준 4)의 근거가 없다. 판단 이유 스스로 지속적 도전·몰입의 중심성 근거가 제한적임을 인정해 현재 수준이 불충분하다."
+        }
+      },
+      "reason": "보트장 이용·현수교 산책은 '구체적인 참여·탐방 활동'(수준 3)까지는 가능하나, 제안된 앵커 '지속적으로 참여·도전할 활동'(수준 4)의 근거가 없다. 판단 이유 스스로 지속적 도전·몰입의 중심성 근거가 제한적임을 인정해 현재 수준이 불충분하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+              "quote": {
+                "end": 617,
+                "method": "EXACT",
+                "original": "연못물로 부녀자들이 아침 일찍 머리를 감고 한해 건강을 기원하는 단오 창포물 잔치",
+                "start": 572,
+                "submitted": "연못물로 부녀자들이 아침 일찍 머리를 감고 한해 건강을 기원하는 단오 창포물 잔치",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "단오 창포물 잔치 등 공동 참여·기원의 교류 기회가 시즌 한정으로 확인된다. 상시적 교류·자기표현 활동의 근거는 부족해 제한적으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.d",
+          "reason": "단오 창포물 잔치는 구체적 공동 참여 기회이나 시즌 한정이며, '구체적인 교류·표현 기회'(수준 3)를 현재 상시적 제공으로 볼지, 제한된 공동 활동(수준 2)으로 볼지 원문만으로 확정이 어렵다."
+        }
+      },
+      "reason": "단오 창포물 잔치는 구체적 공동 참여 기회이나 시즌 한정이며, '구체적인 교류·표현 기회'(수준 3)를 현재 상시적 제공으로 볼지, 제한된 공동 활동(수준 2)으로 볼지 원문만으로 확정이 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "dc70d360e956bbe04655467a1d95533aba77f54b36d3afa99bfa1b06b19c4978",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "호수 수면, 녹나무 등 풍성한 녹지, 넓은 하늘과 성큼성큼한 나무들이 시야를 지배하며 자연 경관 단서가 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0fe5f3c6acc8a5539460e150a973baa15baf583d75e4114a60968e8fb869eb3d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1d9c21b236259cd44c4f7ac0600d15b31d07cb6fb0d9a09251386a47c41ea928",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3526446_16",
+          "request_sha256": "e2844a685860b5e8cc452c3249a344fdd77ecb2fc0252bf4ff5ddf3b48b6f176",
+          "response_sha256": "aa88851c0deeca71f68fee0171b26a6788840d14c8c57a9ccb8639e3a5950dbc",
+          "retrieved_at": "2026-09-10T08:20:13.859154Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c8e046decc4e599cf333821f5101c0dd0427ddca1632c34a02244843669e8afd",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/3526446_image2_1.jpg"
+        },
+        "record_sha256": "b3efa7fc533a2b472585aa0748d57eb9c6adc85c4547f111c33999555dee2975",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "온돌식 마루, 조각된 난간과 기둥, 공포와 서까래 등 전통 한옥 정자의 외관·재료·구성이 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:28dd131fa829dd5e3ce3971723cb88c36f97500d9b6aab2701259c2be4eb0dd5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1d9c21b236259cd44c4f7ac0600d15b31d07cb6fb0d9a09251386a47c41ea928",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3526446_16",
+          "request_sha256": "e2844a685860b5e8cc452c3249a344fdd77ecb2fc0252bf4ff5ddf3b48b6f176",
+          "response_sha256": "aa88851c0deeca71f68fee0171b26a6788840d14c8c57a9ccb8639e3a5950dbc",
+          "retrieved_at": "2026-09-10T08:20:13.859154Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c8e046decc4e599cf333821f5101c0dd0427ddca1632c34a02244843669e8afd",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/3526446_image2_1.jpg"
+        },
+        "record_sha256": "f888468db39922041347aaa6e4fba3a97634c81a52cbea21fbfc6266577009bd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "호수, 둑의 풀과 갈대, 울창한 수림, 트인 하늘 등 자연 경관 요소가 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:50113540b9dbf03b601e54f5b11c8eb1d83f5c673d73f81ea86d441e5ab93407",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "36d3cd148bd3561c18f4fdca080f74e13d81cb114b93fce0f7a5573a3f4dac72",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3526445_20",
+          "request_sha256": "e2844a685860b5e8cc452c3249a344fdd77ecb2fc0252bf4ff5ddf3b48b6f176",
+          "response_sha256": "aa88851c0deeca71f68fee0171b26a6788840d14c8c57a9ccb8639e3a5950dbc",
+          "retrieved_at": "2026-09-10T08:20:13.859154Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a7d174b99226f393460766634426a947617a8a6f1a5afe1a32206e6ef219418",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/45/3526445_image2_1.jpg"
+        },
+        "record_sha256": "2d86467445535fdee0f62166b44ca2b0e6adda14211f120944fc3cf184fc0a49",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "목재 격자창과 데크, 원경의 한옥 정자가 전통 외관과 재료의 시각적 특성을 강하게 드러낸다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6dda4c630f0611ffabda354dbf77260b71e8b5f78deb1feaa5171b9d7f885f46",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6b973a98a45117da6d554948e743e57d0934582c64743655d1880b7379c8e678",
+        "match_basis": [
+          "공식 촬영지역 전북특별자치도 전주시 덕진구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3358876",
+          "request_sha256": "aa619df671bdeabf804de7178a9baa09af46064b989ebcf4a7dac791756ead94",
+          "response_sha256": "f311c1cb7023b4e42bba32e983128c292fdd90d9e5ba60aa47580a3b858688ce",
+          "retrieved_at": "2026-09-10T08:20:14.798582Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bae7e8fb051cd6c2e565635c2c2161bf6d38c229f9aa15a140694b5705fa087a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/76/3358876.jpg"
+        },
+        "record_sha256": "536a4417390fc854fe0d8eb14289b50c84441b3edaa69182404d70f1414d89d5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "수변 너머로 기와 지붕 정자와 전통적으로 보이는 누각·담장이 보이나, 전체 장면에서 차지하는 비중은 중간 정도다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8d22c5a80411506f3a2e3fa070fdaeb91e4636b2d3040d7fe60911c862f320aa",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "36d3cd148bd3561c18f4fdca080f74e13d81cb114b93fce0f7a5573a3f4dac72",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3526445_20",
+          "request_sha256": "e2844a685860b5e8cc452c3249a344fdd77ecb2fc0252bf4ff5ddf3b48b6f176",
+          "response_sha256": "aa88851c0deeca71f68fee0171b26a6788840d14c8c57a9ccb8639e3a5950dbc",
+          "retrieved_at": "2026-09-10T08:20:13.859154Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a7d174b99226f393460766634426a947617a8a6f1a5afe1a32206e6ef219418",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/45/3526445_image2_1.jpg"
+        },
+        "record_sha256": "2233848ec03b6c08819c5f9094eabecc08339e622ee3185df3279cf3510e2a0c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘과 흰 구름, 넓은 호수, 짙은 녹색 수목의 대비가 뚜렷하고 전경의 갈대와 나무 프레임으로 구성된 개방적이고 안정된 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a83659f876da7bb5f2688138aa24881efd620fd56cb014b5f575f3bcd51b28cd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "36d3cd148bd3561c18f4fdca080f74e13d81cb114b93fce0f7a5573a3f4dac72",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3526445_20",
+          "request_sha256": "e2844a685860b5e8cc452c3249a344fdd77ecb2fc0252bf4ff5ddf3b48b6f176",
+          "response_sha256": "aa88851c0deeca71f68fee0171b26a6788840d14c8c57a9ccb8639e3a5950dbc",
+          "retrieved_at": "2026-09-10T08:20:13.859154Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a7d174b99226f393460766634426a947617a8a6f1a5afe1a32206e6ef219418",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/45/3526445_image2_1.jpg"
+        },
+        "record_sha256": "ac41f7ec5512cf1addb1a8cd04e6a64458277fc52d4544c8be1f23d44d97ec3b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "연꽃과 갈대가 가득한 연못, 울창한 수림, 트인 하늘이 화면 대부분을 차지하며 자연 경관이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b81e6effeaade51ab6d2debb2af6154e07a0bd4e9c7f35b2ab6bf5b3dbed9f0c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6b973a98a45117da6d554948e743e57d0934582c64743655d1880b7379c8e678",
+        "match_basis": [
+          "공식 촬영지역 전북특별자치도 전주시 덕진구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3358876",
+          "request_sha256": "aa619df671bdeabf804de7178a9baa09af46064b989ebcf4a7dac791756ead94",
+          "response_sha256": "f311c1cb7023b4e42bba32e983128c292fdd90d9e5ba60aa47580a3b858688ce",
+          "retrieved_at": "2026-09-10T08:20:14.798582Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bae7e8fb051cd6c2e565635c2c2161bf6d38c229f9aa15a140694b5705fa087a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/76/3358876.jpg"
+        },
+        "record_sha256": "03e549c7a9f82473e0ac424aa9e2df006719db93cff216044ccaa93dbd65a3da",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "정자 내부에서 대칭 기둥과 지붕 구조가 프레임을 이루는 구도, 따뜻한 목재 톤과 하늘의 대비가 뚜렷한 연출된 시각적 성격을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e6212dcccf647a7156f302c25c1248d7a5dad53b2bececb7c7e7c1abf99dc25d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1d9c21b236259cd44c4f7ac0600d15b31d07cb6fb0d9a09251386a47c41ea928",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3526446_16",
+          "request_sha256": "e2844a685860b5e8cc452c3249a344fdd77ecb2fc0252bf4ff5ddf3b48b6f176",
+          "response_sha256": "aa88851c0deeca71f68fee0171b26a6788840d14c8c57a9ccb8639e3a5950dbc",
+          "retrieved_at": "2026-09-10T08:20:13.859154Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c8e046decc4e599cf333821f5101c0dd0427ddca1632c34a02244843669e8afd",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/3526446_image2_1.jpg"
+        },
+        "record_sha256": "aa574847c89eee59fb3cefaf944aa585da626bfcb889e21ad6bd48bf4ef94ef1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "전통 격자 문을 액자처럼 활용한 구도가 장면을 지배하며, 연보라빛 하늘과 푸른 연못의 부드러운 색조 대비가 절제되면서도 뚜렷한 연출감을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ec39eb0f9eca4248c43b548e4e53f91d09212a0b90d672bfb0c72ddb4165bad7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6b973a98a45117da6d554948e743e57d0934582c64743655d1880b7379c8e678",
+        "match_basis": [
+          "공식 촬영지역 전북특별자치도 전주시 덕진구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3358876",
+          "request_sha256": "aa619df671bdeabf804de7178a9baa09af46064b989ebcf4a7dac791756ead94",
+          "response_sha256": "f311c1cb7023b4e42bba32e983128c292fdd90d9e5ba60aa47580a3b858688ce",
+          "retrieved_at": "2026-09-10T08:20:14.798582Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bae7e8fb051cd6c2e565635c2c2161bf6d38c229f9aa15a140694b5705fa087a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/76/3358876.jpg"
+        },
+        "record_sha256": "09391735e885e90c9dea58a0b2c896403949cf27ff95deeb0b970595d823ad71",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3915864ea0444f16d64f74c6ee8e533c8fd040cd05fa3b398d6ecb34f9bed370",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126320",
+          "request_sha256": "9ef4c56d725c82cb9bd0bf786eadc23f2da0507a89763695aa79d8e4f338e96a",
+          "response_sha256": "805c41602c528e230e723be412109bbf945fc0434909c6688a1e14c15cbd9a33",
+          "retrieved_at": "2026-09-10T08:20:13.529333Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ee8822dc1155eec79f25b4d46b6074220978fdfa7534b06c627b83f7858b9a44",
+          "source_uri": null
+        },
+        "record_sha256": "bbacac6472917c848ef89af5a8be64f08d9d146ffb00d65f64e87d9f9f0b5b57",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5a3fd7b10df932fb309b48f8fc2599aaf6056366f5c92a71c2deb4ede012c233",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126320",
+          "request_sha256": "9ef4c56d725c82cb9bd0bf786eadc23f2da0507a89763695aa79d8e4f338e96a",
+          "response_sha256": "805c41602c528e230e723be412109bbf945fc0434909c6688a1e14c15cbd9a33",
+          "retrieved_at": "2026-09-10T08:20:13.529333Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2472e3d25a2535bf7e21d3a323ff185c627cb808f755bb3d31d122b5fbe879e6",
+          "source_uri": null
+        },
+        "record_sha256": "b7f452f23e7f041936a00d8e915cadd7b33c18f06438ae27f5f2fe7386a6e1f4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5cde396a46c54d73989ed5a691431fdffa41fa2836295abaa8a3062fc47e384a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126320",
+          "request_sha256": "a03b18a1de4c8fc53fbb12eec59e314c32447c3fe25fe029b6c38dda080d33dc",
+          "response_sha256": "8604719a14762e11910838c3b10c1291cf3d2e338db2ef0f1ec8a7c789de4f6e",
+          "retrieved_at": "2026-09-10T08:16:56.461090Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-08-04T06:22:14Z",
+          "source_record_sha256": "c587587d5e4d4dc0fcedbe8cdff874f40eb8fad302b9311a9dd9a93dfdb211de",
+          "source_uri": null
+        },
+        "record_sha256": "fccf1e3ea55aec12b2ca13abb3e17c26a5d08a4cb637d90411cc606a1e2188f8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "전주는 마한시대 이래 호남지방에서 규모가 큰 고을로 그 이름은 마한의 원산성에서 유래했다. 40여 년간 후백제의 수도였으며, 조선시대에는 이성계의 선조가 살았던 고향이라는 이유로 완산유수부로 개칭되기도 했다. 전주에서 볼거리로 강한 인상을 받게 되는 것 중의 하나가 덕진공원에 피는 연꽃이다. 그만큼 덕진공원 연못은 전주의 명물이다. 전주 IC에서 시내로 들어가는 팔달로변에 위치한 덕진공원은 고려시대에 형성된 자연 호수가 1978년 4월 시민공원 결정 고시에 의거, 도시공원으로 조성되었고 취향정과 더불어 유서 깊은 곳이다. 4만 5천 평의 경내에는 남쪽으로 3분의 2를 차지하고 있는 연못과 북쪽의 보트장을 동서로 가로지른 현수교가 그사이를 양분하고 있다. 그윽이 풍기는 연못 중앙으로 아치형 현수교를 거닐면서 한없는 시정에 젖어볼 수 있다. 특히, 대대적으로 정비 공사를 하여 1998년부터 재개장한 공원의 특색은 마운딩 시공으로 향촌의 작은 숲(언덕)을 연상케 하고, 전통 정자와 창포늪을 조성하여 역사성을 극대화하였고 또한 인공폭포와 목교를 설치하여 자연 친화 시설로 시민의 정서에 맞도록 조성하였으며 단오절에는 연못물로 부녀자들이 아침 일찍 머리를 감고 한해 건강을 기원하는 단오 창포물 잔치로도 유명하다."
+      }
+    ],
+    "parent_source_sha256": "c19963df5741712e6a33592fde49226162eb6b2e190dbafcbba866207c63f999",
+    "place": {
+      "address": "전북특별자치도 전주시 덕진구 권삼득로 390",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+      "name_ko": "덕진공원",
+      "place_id": "public:korea:21b91075d044f22552cbd47f5cb08014078436b0a8e40ec4b45037a4bab40c72",
+      "provider_content_id": "126320",
+      "region_code": "52113",
+      "region_name": "전북특별자치도 전주시 덕진구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

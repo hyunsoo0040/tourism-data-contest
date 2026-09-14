@@ -45,18 +45,18 @@ const SCORE_LABELS = [
 ] as const;
 
 const RUBRIC_SPECS: RubricSpec[] = [
-  { attribute_id: "H1", axis: "역사·전통", label_ko: "역사 서사 밀도", examples_ko: ["시대와 유래를 직접 설명한다"], counterexamples_ko: ["유래 설명 없이 시설만 나열한다"] },
-  { attribute_id: "H2", axis: "역사·전통", label_ko: "문화유산·원형 기반성", examples_ko: ["보존 흔적이 경험의 중심이다"], counterexamples_ko: ["원형과 무관한 임시 장식뿐이다"] },
-  { attribute_id: "H3", axis: "역사·전통", label_ko: "전통의 지속성", examples_ko: ["전통생활이 현재 경험과 이어진다"], counterexamples_ko: ["현재와의 연결 근거가 없다"] },
-  { attribute_id: "H4", axis: "역사·전통", label_ko: "학습·해설 깊이", examples_ko: ["해설과 교육 탐색이 구체적이다"], counterexamples_ko: ["학습 가능한 설명이 없다"] },
-  { attribute_id: "I1", axis: "감성·이미지", label_ko: "시각적 상징성", examples_ko: ["기억되는 형태가 직접 묘사된다"], counterexamples_ko: ["구별되는 장면 근거가 없다"] },
-  { attribute_id: "I2", axis: "감성·이미지", label_ko: "사진·경관 매력", examples_ko: ["경관의 구도와 계절감이 설명된다"], counterexamples_ko: ["경관 정보가 전혀 없다"] },
-  { attribute_id: "I3", axis: "감성·이미지", label_ko: "현대적 재해석", examples_ko: ["전통 요소를 현재 방식으로 잇는다"], counterexamples_ko: ["재해석 근거가 없다"] },
-  { attribute_id: "I4", axis: "감성·이미지", label_ko: "분위기·감각 경험", examples_ko: ["빛과 공간 분위기가 구체적이다"], counterexamples_ko: ["감각 경험 설명이 없다"] },
-  { attribute_id: "R1", axis: "휴식·몰입", label_ko: "자연·회복 환경", examples_ko: ["회복을 돕는 자연 요소가 있다"], counterexamples_ko: ["자연 요소를 확인할 수 없다"] },
-  { attribute_id: "R2", axis: "휴식·몰입", label_ko: "산책·체류 적합성", examples_ko: ["천천히 걷고 머무는 동선이 있다"], counterexamples_ko: ["체류 가능성을 뒷받침하지 않는다"] },
-  { attribute_id: "R3", axis: "휴식·몰입", label_ko: "정적·저자극 가능성", examples_ko: ["조용히 머무를 수 있다고 설명한다"], counterexamples_ko: ["정적 환경 근거가 없다"] },
-  { attribute_id: "R4", axis: "휴식·몰입", label_ko: "참여·몰입 경험", examples_ko: ["탐방과 이야기 몰입이 연결된다"], counterexamples_ko: ["참여 또는 몰입 근거가 없다"] },
+  { attribute_id: "H1", axis: "대상•원형형", label_ko: "역사 서사 밀도", examples_ko: ["시대와 유래를 직접 설명한다"], counterexamples_ko: ["유래 설명 없이 시설만 나열한다"] },
+  { attribute_id: "H2", axis: "대상•원형형", label_ko: "문화유산·원형 기반성", examples_ko: ["보존 흔적이 경험의 중심이다"], counterexamples_ko: ["원형과 무관한 임시 장식뿐이다"] },
+  { attribute_id: "H3", axis: "대상•원형형", label_ko: "전통의 지속성", examples_ko: ["전통생활이 현재 경험과 이어진다"], counterexamples_ko: ["현재와의 연결 근거가 없다"] },
+  { attribute_id: "H4", axis: "대상•원형형", label_ko: "학습·해설 깊이", examples_ko: ["해설과 교육 탐색이 구체적이다"], counterexamples_ko: ["학습 가능한 설명이 없다"] },
+  { attribute_id: "I1", axis: "의미•이미지형", label_ko: "시각적 상징성", examples_ko: ["기억되는 형태가 직접 묘사된다"], counterexamples_ko: ["구별되는 장면 근거가 없다"] },
+  { attribute_id: "I2", axis: "의미•이미지형", label_ko: "사진·경관 매력", examples_ko: ["경관의 구도와 계절감이 설명된다"], counterexamples_ko: ["경관 정보가 전혀 없다"] },
+  { attribute_id: "I3", axis: "의미•이미지형", label_ko: "현대적 재해석", examples_ko: ["전통 요소를 현재 방식으로 잇는다"], counterexamples_ko: ["재해석 근거가 없다"] },
+  { attribute_id: "I4", axis: "의미•이미지형", label_ko: "분위기·감각 경험", examples_ko: ["빛과 공간 분위기가 구체적이다"], counterexamples_ko: ["감각 경험 설명이 없다"] },
+  { attribute_id: "R1", axis: "자기•몰입형", label_ko: "자연·회복 환경", examples_ko: ["회복을 돕는 자연 요소가 있다"], counterexamples_ko: ["자연 요소를 확인할 수 없다"] },
+  { attribute_id: "R2", axis: "자기•몰입형", label_ko: "산책·체류 적합성", examples_ko: ["천천히 걷고 머무는 동선이 있다"], counterexamples_ko: ["체류 가능성을 뒷받침하지 않는다"] },
+  { attribute_id: "R3", axis: "자기•몰입형", label_ko: "정적·저자극 가능성", examples_ko: ["조용히 머무를 수 있다고 설명한다"], counterexamples_ko: ["정적 환경 근거가 없다"] },
+  { attribute_id: "R4", axis: "자기•몰입형", label_ko: "참여·몰입 경험", examples_ko: ["탐방과 이야기 몰입이 연결된다"], counterexamples_ko: ["참여 또는 몰입 근거가 없다"] },
 ];
 
 type RuntimeSource = {
@@ -320,9 +320,9 @@ export function PrimaryAxisField({
 }) {
   const options: Array<{ value: EvaluatorPrimaryAxis | null; label: string }> = [
     { value: null, label: "주 경험축 판단 보류" },
-    { value: "HISTORY_TRADITION", label: "역사·전통" },
-    { value: "EMOTION_IMAGE", label: "감성·이미지" },
-    { value: "REST_IMMERSION", label: "휴식·몰입" },
+    { value: "HISTORY_TRADITION", label: "대상•원형형" },
+    { value: "EMOTION_IMAGE", label: "의미•이미지형" },
+    { value: "REST_IMMERSION", label: "자기•몰입형" },
   ];
   return (
     <fieldset className="primary-axis-field">

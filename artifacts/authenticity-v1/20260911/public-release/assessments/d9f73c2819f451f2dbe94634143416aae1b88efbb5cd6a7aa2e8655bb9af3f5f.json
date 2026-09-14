@@ -1,0 +1,790 @@
+{
+  "assessed_at": "2026-09-11T16:49:50.744087Z",
+  "assessment_sha256": "d9f73c2819f451f2dbe94634143416aae1b88efbb5cd6a7aa2e8655bb9af3f5f",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 42
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:3d8c63f577f908bfec67772590d19a1a39d6a64e7059d0f3841111b394ab15f3",
+            "appearance:8449871129b4519b4fe2a6ae21cafc68504c1f501d4a7092d32f50866bbf61b7",
+            "appearance:c927ce8abd6a30b6c60ccd72bea7b7913481868a9d3b8c892c715dc2ae13f70c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출 등 시각적 성격의 표현에 대한 묘사가 제공되지 않았다.",
+      "value": 92
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0ce66bd051fe4df7ec786f77c6d29551b25e171a38976d82b621ffb3b9a84b62",
+            "appearance:6e706d8d0084a2427472f4c9b771249cb1868e162415791c3d5fa4e89cf8c2ec",
+            "appearance:f2a36010a0c1a82d953f73fc832afe2edd0325acc233965b90a39be38b8865b1"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연 환경, 시각적 저자극, 머무를 환경에 대한 묘사가 제공되지 않았다. 관람객 수가 많다는 점은 오히려 고요함에 대한 근거가 될 수 없다.",
+      "value": 0
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:091394870fbae4637c91b1c9b175e097bf25769744a689299cad30dbe1f4bfb2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "체험형 전시물, 사이언스파크, 인공지능·로봇·메이커 교육 프로그램 등 참여·몰입 활동의 기회가 직접 확인된다. 다만 활동이 방문 경험의 '중심'이라 단정하기보다는 구체적 참여 활동 수준(3)으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:091394870fbae4637c91b1c9b175e097bf25769744a689299cad30dbe1f4bfb2"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "교육·문화행사 프로그램과 숙박형 과학캠프는 공동 활동·교류의 기회로 볼 수 있으나, 참가자 간 관계 형성이나 자기표현의 내용 자체는 확인되지 않아 제한적 공동 활동 수준(2)으로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 과학기술 전시와 체험 중심이며 확인된 실제 원형·유산(문화유산 실물·역사 공간)과의 접촉에 대한 근거가 없다. 증기기관차를 '상징하는 꼬마기차'는 재현·상징물이지 원형 접촉이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관 연도와 누적 관람객 수는 운영 현황일 뿐 이 장소 자체의 역사·출처 서사에 대한 내용이 없다. 부울경 과학산업기술 소개가 있으나 특정 역사 맥락의 탐구라 단정할 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 내용이 없다. 과학산업 전시는 전통 전승 활동이 아니므로 LIVING_TRADITION 근거로 사용할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "과학 교육·전시 해설이 있으나 이는 일반 과학 체험이며, 확인된 원형·유산·전통에 연결된 해설·탐구라는 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'과학문화 확산의 거점기관'이라는 자기 기술은 기관 소개 문구일 뿐 사회적으로 공유되는 구체적 이미지·상징이 장소에 부여된다는 근거로는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·유통(작품, 홍보물, SNS 등)에 대한 내용이 제공되지 않았다. 누적관람객 수는 유통의 내용이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출 등 시각적 성격의 표현에 대한 묘사가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험하거나 재현하는 활동에 대한 내용이 없다. 체험 전시는 구성된 이미지의 재현 경험과 구별된다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "여러 전시관·사이언스파크의 존재는 자율 탐색 여지를 암시할 수 있으나, 방문자가 자신의 방식으로 자유롭게 탐색·선택할 수 있다는 직접 근거는 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경, 시각적 저자극, 머무를 환경에 대한 묘사가 제공되지 않았다. 관람객 수가 많다는 점은 오히려 고요함에 대한 근거가 될 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:091394870fbae4637c91b1c9b175e097bf25769744a689299cad30dbe1f4bfb2",
+          "quote": {
+            "end": 382,
+            "method": "EXACT",
+            "original": "자동차, 항공우주, 선박, 에너지, 의과학 등 지역산업의 과학기술을 체험형 전시물로 담은 상설전시관",
+            "start": 327,
+            "submitted": "자동차, 항공우주, 선박, 에너지, 의과학 등 지역산업의 과학기술을 체험형 전시물로 담은 상설전시관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6b99cb3189f5456f9f4ee940569b9c573ed62e21140a29dfaab7f2e9bab88f3c"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:091394870fbae4637c91b1c9b175e097bf25769744a689299cad30dbe1f4bfb2",
+          "quote": {
+            "end": 543,
+            "method": "EXACT",
+            "original": "뛰어놀면서 배우는 사이언스파크",
+            "start": 527,
+            "submitted": "뛰어놀면서 배우는 사이언스파크",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6b99cb3189f5456f9f4ee940569b9c573ed62e21140a29dfaab7f2e9bab88f3c"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "체험형 전시물, 사이언스파크, 인공지능·로봇·메이커 교육 프로그램 등 참여·몰입 활동의 기회가 직접 확인된다. 다만 활동이 방문 경험의 '중심'이라 단정하기보다는 구체적 참여 활동 수준(3)으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:091394870fbae4637c91b1c9b175e097bf25769744a689299cad30dbe1f4bfb2",
+          "quote": {
+            "end": 310,
+            "method": "EXACT",
+            "original": "인공지능, 로봇, 메이커 등 교육 및 문화행사 프로그램을 지속적으로 개발 및 보급",
+            "start": 265,
+            "submitted": "인공지능, 로봇, 메이커 등 교육 및 문화행사 프로그램을 지속적으로 개발 및 보급",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6b99cb3189f5456f9f4ee940569b9c573ed62e21140a29dfaab7f2e9bab88f3c"
+        },
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:091394870fbae4637c91b1c9b175e097bf25769744a689299cad30dbe1f4bfb2",
+          "quote": {
+            "end": 585,
+            "method": "EXACT",
+            "original": "1박 2일 숙박형 과학교육캠프관",
+            "start": 568,
+            "submitted": "1박 2일 숙박형 과학교육캠프관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6b99cb3189f5456f9f4ee940569b9c573ed62e21140a29dfaab7f2e9bab88f3c"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "교육·문화행사 프로그램과 숙박형 과학캠프는 공동 활동·교류의 기회로 볼 수 있으나, 참가자 간 관계 형성이나 자기표현의 내용 자체는 확인되지 않아 제한적 공동 활동 수준(2)으로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "49ff8942d7b855786fe417d567d9ac65d1fc585a2303379eb614c04c6b32d3f3",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "f027da8e20e300a77914a354008ad4776d75d619da349ae9f09789c0b2356e12",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "초록색 반사 외 자연 경관, 녹지, 물 등 환경 단서가 직접 보이지 않고 건물과 포장된 광장만 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0ce66bd051fe4df7ec786f77c6d29551b25e171a38976d82b621ffb3b9a84b62",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b7a3e8b7bcffdb62b7f716feda41d21c07e332b8abdefa0a63994e3f22070433",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039600_1",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0e4867551345862c3ec81bc65cee83efc22cbf5cca8f89843c9cf3bcbcf1d53",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/00/4039600_image2_1.jpg"
+        },
+        "record_sha256": "324b370c97a52c228d6a7e702275fa5d6e74300c413563f948f4730e2c2e621e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 유리·금속 재질의 최신 시설 공간으로 전통적 외관·재료·구성이 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:32aadde2552605ebfd8e7fdb22c92122a852f5afec4307a93a6cc2e518ff2931",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8fadb9e05669b2f9f02111d1e2e4e4a746f70e9022258ba14c629cfbac1be318",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039596_2",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2dcc665ed11a8a2ead774e5a35c7fd93ee1be0d98ed7b080dd6428ea5d62e80d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/96/4039596_image2_1.jpg"
+        },
+        "record_sha256": "774c63d9aee01ad2eaf4f5bb5fa723469d12a575a453657f3064017291a8f5cc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "경사 유리 커튼월과 흰 패널의 대각 구성, 청록·파랑 포인트 색, 다채로운 캐릭터 조형과 컬러 사인이 현대적·장난스러운 시각 성격을 강하게 드러냄.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3d8c63f577f908bfec67772590d19a1a39d6a64e7059d0f3841111b394ab15f3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b7a3e8b7bcffdb62b7f716feda41d21c07e332b8abdefa0a63994e3f22070433",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039600_1",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0e4867551345862c3ec81bc65cee83efc22cbf5cca8f89843c9cf3bcbcf1d53",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/00/4039600_image2_1.jpg"
+        },
+        "record_sha256": "57e715672d52d8dd76e33c147bfc6b987476aa69995f356e4663df48e6bba23c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "유리·금속 패널의 현대적 상업 건축 외관으로 전통적 재료나 공간 구성의 시각적 특성이 거의 없음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:590fa0d0745bdd41e34ede32656cf51e056fe7d5fa2ae09513ffb4974d054a9f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b7a3e8b7bcffdb62b7f716feda41d21c07e332b8abdefa0a63994e3f22070433",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039600_1",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0e4867551345862c3ec81bc65cee83efc22cbf5cca8f89843c9cf3bcbcf1d53",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/00/4039600_image2_1.jpg"
+        },
+        "record_sha256": "9cc72e22dbbdf992c7fb6197ce94d6143218034aa1637002c50e4a0a29bc6ce2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지·물·자연 경관이 전혀 보이지 않는 실내 공항 로비 공간임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6e706d8d0084a2427472f4c9b771249cb1868e162415791c3d5fa4e89cf8c2ec",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8fadb9e05669b2f9f02111d1e2e4e4a746f70e9022258ba14c629cfbac1be318",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039596_2",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2dcc665ed11a8a2ead774e5a35c7fd93ee1be0d98ed7b080dd6428ea5d62e80d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/96/4039596_image2_1.jpg"
+        },
+        "record_sha256": "8319a26bac076931213226c6da53f5c95371fb805d13106390bb5ccc2fdbfd43",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "대형 은색 튜브 슬라이드가 로비 중앙을 지배하며, 에스컬레이터·현수막·전시판 등 연출된 시설물이 시각적으로 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8449871129b4519b4fe2a6ae21cafc68504c1f501d4a7092d32f50866bbf61b7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8fadb9e05669b2f9f02111d1e2e4e4a746f70e9022258ba14c629cfbac1be318",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039596_2",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2dcc665ed11a8a2ead774e5a35c7fd93ee1be0d98ed7b080dd6428ea5d62e80d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/96/4039596_image2_1.jpg"
+        },
+        "record_sha256": "55be0a439118f6358d68b2fc93ac2bb23c0c70a4e29cd7eb8a91c8a06838995f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "금속 메쉬, 조명, 자동차 리프트 등 현대적 전시 연출만 보이며 전통적 외관, 재료, 공간 구성의 단서가 없다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8c74d5f7eeb5d3d2122831cfd0ff74264969de70555bdf63c9fef42cdd008a3e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1f17f03e6c9df2fc83293b61f950f465ec55814af1de4bd5785ce7600c02bd33",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039599_5",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7ab63e48346a2408ec120607f865ab0e35aec82b2b7da865f590e33f94e4e83c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/99/4039599_image2_1.jpg"
+        },
+        "record_sha256": "ea5d17b69402e156fc6b7cf62b87deafb7fa0e603b5f54e2acbeca09d1420fda",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "적색 곡면 리브가 공간을 감싸고, 원형 조명 천장과 EV PIT ZONE 간판, 리프트에 올라간 차량이 강한 대비색과 연출된 구도로 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c927ce8abd6a30b6c60ccd72bea7b7913481868a9d3b8c892c715dc2ae13f70c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1f17f03e6c9df2fc83293b61f950f465ec55814af1de4bd5785ce7600c02bd33",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039599_5",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7ab63e48346a2408ec120607f865ab0e35aec82b2b7da865f590e33f94e4e83c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/99/4039599_image2_1.jpg"
+        },
+        "record_sha256": "0785293bf6a69a93ba99c835bee53ca102575c7a039b392c1cd7c137ccb8df0f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시관 내부로 녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f2a36010a0c1a82d953f73fc832afe2edd0325acc233965b90a39be38b8865b1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1f17f03e6c9df2fc83293b61f950f465ec55814af1de4bd5785ce7600c02bd33",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4039599_5",
+          "request_sha256": "3594f8f1af10b23e8aee05f5b790b8d79892068c8fb96bd46e492ad4706c9aef",
+          "response_sha256": "53d9ddc9eb9cfae48886a4504f80c181e923df2246f9607f7d371d304ddb9519",
+          "retrieved_at": "2026-09-10T08:22:28.634064Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7ab63e48346a2408ec120607f865ab0e35aec82b2b7da865f590e33f94e4e83c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/99/4039599_image2_1.jpg"
+        },
+        "record_sha256": "889e687bf1678be964351a270f14ebfe7f59a4d64a561f47093dcab435ac1e64",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:091394870fbae4637c91b1c9b175e097bf25769744a689299cad30dbe1f4bfb2",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2385666",
+          "request_sha256": "78bb8fc809b8e6a281c20b1c772db608141c01fc9a32a3d9e01c494eef85b883",
+          "response_sha256": "0965b9bca437eb5e12c4a118f433809f0e05e3c5da7b3afa2aae65ad9a7339c0",
+          "retrieved_at": "2026-09-10T08:01:56.812616Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-09-09T01:21:12Z",
+          "source_record_sha256": "5b735feb9c2644bc20d5685ec391917145ea9722f3a8097687cc0de314fb237e",
+          "source_uri": null
+        },
+        "record_sha256": "6b99cb3189f5456f9f4ee940569b9c573ed62e21140a29dfaab7f2e9bab88f3c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "오시리아 관광단지(부산시 기장군)에 위치한 국립부산과학관은 2015년 12월 개관 이후 누적관람객 700만 명을 넘어섰으며 2025년 개관 10주년을 맞이하였다. 또한, 연평균 관람객 100만여 명, 교육참가자 약 10만 명으로 부울경 지역의 과학적 사고력 함양에 기여하는 과학문화 확산의 거점기관으로 역할을 하고 있다. 자동차, 항공, 조선, 에너지, 의과학 등 부울경 과학산업기술 전시와 4차 산업혁명 이후 맞이하게 된 미래 기술과 문화를 직접 체험하고 배울 수 있도록 인공지능, 로봇, 메이커 등 교육 및 문화행사 프로그램을 지속적으로 개발 및 보급하고 있다. 국립부산과학관에는 자동차, 항공우주, 선박, 에너지, 의과학 등 지역산업의 과학기술을 체험형 전시물로 담은 상설전시관, 영유아를 위한 우주과학놀이터 새싹누리관, 기초과학원리와 미래기술을 직접 느껴볼 수 있는 어린이과학관과 항상 새로운 주제의 특별전시로 관람객을 맞는 기획전시실 김진재홀이 있다. 이외에도 한낮의 밤하늘 여행을 떠나는 천체투영관, 굴절망원경이 있는 천체관측소, 뛰어놀면서 배우는 사이언스파크, 산업혁명 증기기관차를 상징하는 꼬마기차, 1박 2일 숙박형 과학교육캠프관 등 국립부산과학관에는 과학을 즐길거리가 무궁무진하다."
+      }
+    ],
+    "parent_source_sha256": "e43213e93960ff19fa7c66801d4ce1c3612bece5fe39fa4e5588daf1dc623be1",
+    "place": {
+      "address": "부산광역시 기장군 기장읍 동부산관광6로 59",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+      "name_ko": "국립부산과학관",
+      "place_id": "public:korea:4c61455b27207023d4ebadd5bab34bb85f59bca9b9e7f7084141baab17e562c2",
+      "provider_content_id": "2385666",
+      "region_code": "26710",
+      "region_name": "부산광역시 기장군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

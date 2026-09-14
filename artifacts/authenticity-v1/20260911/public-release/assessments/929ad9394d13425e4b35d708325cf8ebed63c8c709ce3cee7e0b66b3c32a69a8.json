@@ -1,0 +1,881 @@
+{
+  "assessed_at": "2026-09-11T17:04:26.885685Z",
+  "assessment_sha256": "929ad9394d13425e4b35d708325cf8ebed63c8c709ce3cee7e0b66b3c32a69a8",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 51
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 40
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소 내 재즈바 명명 유래가 구체적으로 소개되나, 이는 창작 영감에 해당하고 실제 역사적 사건·인물 맥락의 탐구는 제한적이므로 수준 1이다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "BLUE CAT의 무라카ami 재즈바 연상 이미지와 CASA DEL AGUA의 '잡히지 않는 마음' 상징 등 구체적 이미지·이야기가 장소와 연결되므로 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:13c954d6dac614c525b94498ed4006992901ed745ef8ac7612cd330c2931cc77",
+            "appearance:25465db7c1c4af3b1b4ad3b334cd5f3d335664ad1fa2ceb406e2b18cdb3c043c",
+            "appearance:32b8ac74becb76b51bee6fc78cdafc4c2d4d3c2f6fb17f7fd5932d7d4602406c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "파란색 고양이 문 등 장소별 시각적 성격의 표현이 확인되나, 장면 전체를 지배하는 일관된 연출까지의 근거는 없어 수준 2이다. repair 항목에서 VISUAL_APPEARANCE 인용은 해당 출처의 allowed_claims에 포함되지 않아 제외하고, VISUAL_EXPRESSION 인용만 사용했다.",
+      "value": 52
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "열린 광장에서 자유롭게 들르고 쉬어갈 수 있는 자율적 선택 기회가 확인되나, 일상 이탈 경험이 방문의 중심이라는 근거는 없어 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:50d32f5b95c3fda13307824866062f9ca6c64cdfd2c3a5f3ae3de580e50b9c51",
+            "appearance:5bdb0eb6571275a8861c0723bd1cca3893e1f97c732c483f5036ad3758ebb502",
+            "appearance:94e0e25eb0b592f701f16fd4966be6b330c8d2598657b226406da78b56f082aa"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 33,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "탁 트인 야외 공간, 책과 음악으로 여유를 즐길 수 있는 머무름 환경 단서가 확인되나, 실제 고요함·자연 환경이 두드러진다는 근거는 없어 수준 2이다.",
+      "value": 46
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "독서·음악 감상 등 참여 활동이 언급되나 규모·지속성이 불명확하고 제한적으로 제시되므로 수준 1이다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 페즈가 문화복합시설(광장, 카페, 재즈바, 전망 공간)임을 설명할 뿐, 확인된 실제 원형·유산의 접촉에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+          "quote": {
+            "end": 407,
+            "method": "EXACT",
+            "original": "무라카미 하루키가 운영했던 재즈바 ‘Peter Cat’에서 영감을 받은 ‘BLUE CAT’은 재즈와 블루스에서 자주 사용되는 블루 노트(Blue Note) 코드, 그리고 재즈의 대표 색인 블루에서 착안해 이름을 지었다.",
+            "start": 285,
+            "submitted": "무라카미 하루키가 운영했던 재즈바 ‘Peter Cat’에서 영감을 받은 ‘BLUE CAT’은 재즈와 블루스에서 자주 사용되는 블루 노트(Blue Note) 코드, 그리고 재즈의 대표 색인 블루에서 착안해 이름을 지었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 1,
+      "reason": "이 장소 내 재즈바 명명 유래가 구체적으로 소개되나, 이는 창작 영감에 해당하고 실제 역사적 사건·인물 맥락의 탐구는 제한적이므로 수준 1이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 실제 전승·생활문화와의 연결을 확인하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "재즈바 명명 유래 소개는 있으나 원형·유산·전통에 연결된 해설·학습 프로그램 등에 대한 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+          "quote": {
+            "end": 667,
+            "method": "EXACT",
+            "original": "이는 ‘잡히지 않는 마음’을 바람에 실어 보내고, 스스로를 찾아가는 공간이 되고자 하는 바람을 상징한다",
+            "start": 610,
+            "submitted": "이는 ‘잡히지 않는 마음’을 바람에 실어 보내고, 스스로를 찾아가는 공간이 되고자 하는 바람을 상징한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+          "quote": {
+            "end": 336,
+            "method": "EXACT",
+            "original": "무라카미 하루키가 운영했던 재즈바 ‘Peter Cat’에서 영감을 받은 ‘BLUE CAT’은",
+            "start": 285,
+            "submitted": "무라카미 하루키가 운영했던 재즈바 ‘Peter Cat’에서 영감을 받은 ‘BLUE CAT’은",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "BLUE CAT의 무라카ami 재즈바 연상 이미지와 CASA DEL AGUA의 '잡히지 않는 마음' 상징 등 구체적 이미지·이야기가 장소와 연결되므로 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+          "quote": {
+            "end": 283,
+            "method": "EXACT",
+            "original": "파란색 고양이가 그려진 문이 있는데, 이곳이 바로 재즈바 'BLUE CAT'이다",
+            "start": 239,
+            "submitted": "파란색 고양이가 그려진 문이 있는데, 이곳이 바로 재즈바 'BLUE CAT'이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "파란색 고양이 문 등 장소별 시각적 성격의 표현이 확인되나, 장면 전체를 지배하는 일관된 연출까지의 근거는 없어 수준 2이다. repair 항목에서 VISUAL_APPEARANCE 인용은 해당 출처의 allowed_claims에 포함되지 않아 제외하고, VISUAL_EXPRESSION 인용만 사용했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현(촬영 등)할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+          "quote": {
+            "end": 134,
+            "method": "EXACT",
+            "original": "동네 주민들이 반려동물과 함께 지나가다 잠시 쉬어가거나, 외지인도 가볍게 들러 분위기를 즐길 수 있는 열린 광장이다",
+            "start": 70,
+            "submitted": "동네 주민들이 반려동물과 함께 지나가다 잠시 쉬어가거나, 외지인도 가볍게 들러 분위기를 즐길 수 있는 열린 광장이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "열린 광장에서 자유롭게 들르고 쉬어갈 수 있는 자율적 선택 기회가 확인되나, 일상 이탈 경험이 방문의 중심이라는 근거는 없어 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+          "quote": {
+            "end": 204,
+            "method": "EXACT",
+            "original": "개방된 형태로 탁 트인 야외 공간을 바라보며 커피를 마실 수 있고",
+            "start": 168,
+            "submitted": "개방된 형태로 탁 트인 야외 공간을 바라보며 커피를 마실 수 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+          "quote": {
+            "end": 458,
+            "method": "EXACT",
+            "original": "책을 읽거나 노래를 들으며 여유를 즐길 수 있다",
+            "start": 432,
+            "submitted": "책을 읽거나 노래를 들으며 여유를 즐길 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "탁 트인 야외 공간, 책과 음악으로 여유를 즐길 수 있는 머무름 환경 단서가 확인되나, 실제 고요함·자연 환경이 두드러진다는 근거는 없어 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+          "quote": {
+            "end": 458,
+            "method": "EXACT",
+            "original": "무라카미 하루키가 떠오르는 소장품들이 있어 책을 읽거나 노래를 들으며 여유를 즐길 수 있다",
+            "start": 408,
+            "submitted": "무라카미 하루키가 떠오르는 소장품들이 있어 책을 읽거나 노래를 들으며 여유를 즐길 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 1,
+      "reason": "독서·음악 감상 등 참여 활동이 언급되나 규모·지속성이 불명확하고 제한적으로 제시되므로 수준 1이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "반려동물 동반이나 주민 이용 언급은 있으나 교류·공동 활동·자기표현의 기회 제공을 확인하는 근거는 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "2bd20abbad6af5d8ac43af23cbb2c4349c8c9444e3f727bbc68bcfbfbb9fdf52",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "한약재처럼 보이는 마른 재료, 백자 찻잔, 목재 트레이 등 전통적 외관 요소가 보이나 현대적 와인병·카드와 혼재",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:083304d51b43b52d027550002c7cba3b8fe6c2c145076f13f831c73b8f68df5d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4eb400d539de869695564fd4e834121f14a1ea24cf9c83d6982b99cfa66e0e6a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492114_8",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09f6f99db7e832d0bf5e57e47a7d35dba0e349f6432053cc0b26ae8f470ad007",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3492114_image2_1.jpg"
+        },
+        "record_sha256": "75cadd5aeb51d593270919dd5a75b9befb5466c9726648b3a3b520adde266e06",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "원목 테이블 위 백색 천과 마른 재료, 금속 주전자, 와인병이 정돈된 진열 구도로 따뜻하고 절제된 연출이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:13c954d6dac614c525b94498ed4006992901ed745ef8ac7612cd330c2931cc77",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4eb400d539de869695564fd4e834121f14a1ea24cf9c83d6982b99cfa66e0e6a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492114_8",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09f6f99db7e832d0bf5e57e47a7d35dba0e349f6432053cc0b26ae8f470ad007",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3492114_image2_1.jpg"
+        },
+        "record_sha256": "2577dba6d1adf8af30be635883641be3d7b97e966a4b7f496ed4c44f45ad08c1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "유리 벽과 기둥이 만드는 수평·수직 구성이 뚜렷하고, 실내의 따뜻한 조명과 야외 초록의 대비가 절제된 시각적 성격을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:25465db7c1c4af3b1b4ad3b334cd5f3d335664ad1fa2ceb406e2b18cdb3c043c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "541d58aed0d1ba2066f655dd102451e0ee145585da9147dfe40de17f15328449",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492115_7",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "116f5a09259fd62d9152d2111afd25de7308461f2acd2dd83f66f251f4130b52",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/15/3492115_image2_1.jpg"
+        },
+        "record_sha256": "1d0915cf4178f067824a47091881fa74bcc175d1501a1d841a45088f53390a9f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "따뜻한 조명과 어두운 석재 벽면, 배경의 붉은 작품이 절제된 채색 대비를 이루며 갤러리 특유의 차분한 연출이 보통 수준으로 드러남.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:32b8ac74becb76b51bee6fc78cdafc4c2d4d3c2f6fb17f7fd5932d7d4602406c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "49790ca8796bcd5d2363088847b04039d0898f13b27ac58666ad7f32b15ed199",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492116_4",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "45b572c2768091d5f14384d36e7668fe7470f040b035e3e7765c506f18bb6e63",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/3492116_image2_1.jpg"
+        },
+        "record_sha256": "c3028c64d8cd31347eb172a0d3e951736adcc960b223ae6ef014ca964566db9d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "테라스에 풀과 관엽식물이 좌우로 폭넓게 배치되어 자연 단서가 눈에 띄나, 인근 건물과 벽이 배경을 가려 트인 자연경관은 제한적.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:50d32f5b95c3fda13307824866062f9ca6c64cdfd2c3a5f3ae3de580e50b9c51",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "541d58aed0d1ba2066f655dd102451e0ee145585da9147dfe40de17f15328449",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492115_7",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "116f5a09259fd62d9152d2111afd25de7308461f2acd2dd83f66f251f4130b52",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/15/3492115_image2_1.jpg"
+        },
+        "record_sha256": "a7247f80bdd7ad3aed12bc261067780a0f8c022227d239d209279c7d21ad7744",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "배경 창밖으로 녹색 식물 잎이 보이나 실내 진열대가 중심이라 자연 단서는 보통 수준",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5bdb0eb6571275a8861c0723bd1cca3893e1f97c732c483f5036ad3758ebb502",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4eb400d539de869695564fd4e834121f14a1ea24cf9c83d6982b99cfa66e0e6a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492114_8",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09f6f99db7e832d0bf5e57e47a7d35dba0e349f6432053cc0b26ae8f470ad007",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3492114_image2_1.jpg"
+        },
+        "record_sha256": "99fd1a68e31451fece275b485699289fd087332865e554bb7f907c23aa094093",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:94e0e25eb0b592f701f16fd4966be6b330c8d2598657b226406da78b56f082aa",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "49790ca8796bcd5d2363088847b04039d0898f13b27ac58666ad7f32b15ed199",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492116_4",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "45b572c2768091d5f14384d36e7668fe7470f040b035e3e7765c506f18bb6e63",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/3492116_image2_1.jpg"
+        },
+        "record_sha256": "0d894ad7552320465eac166eee515b9f8f3f8b993b244e0c6581f69cb38b584b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 유리 커튼월과 조명 트랙 등 현대적 외관이 지배하며 전통적 재료·공간 구성의 시각적 특성은 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:afb948f85bd186c591e9b535586c2300b29970da3beac6b30428c0ffc2000732",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "541d58aed0d1ba2066f655dd102451e0ee145585da9147dfe40de17f15328449",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492115_7",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "116f5a09259fd62d9152d2111afd25de7308461f2acd2dd83f66f251f4130b52",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/15/3492115_image2_1.jpg"
+        },
+        "record_sha256": "da7952bf3067de5e9f7442defb87e576d640c3a9da3884da5be85b1b76e8f89b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "거친 석재 블록 벽과 목재 간판 등 재질감이 일부 전통적·소박한 외관을 암시하나, 전체적으로 현대적 인테리어가 지배적.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fa8a755031abc9573c20849482b489ed0c39ed5b08c6c53e2bf7b0f1890a5743",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "49790ca8796bcd5d2363088847b04039d0898f13b27ac58666ad7f32b15ed199",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3492116_4",
+          "request_sha256": "75637c5917ce760c5c1b19bb704ad047c02c51f8de07c1587ad66d5e1f1df191",
+          "response_sha256": "7370204526ba2a0a1dc7eeebf5298c329ddb393f5b78156b260838ee9160d657",
+          "retrieved_at": "2026-09-11T02:04:35.774897Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "45b572c2768091d5f14384d36e7668fe7470f040b035e3e7765c506f18bb6e63",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/3492116_image2_1.jpg"
+        },
+        "record_sha256": "a4bee97d44a03dc56459bfa27be466ddf1320b18987d07aca47e34e5fad6291f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e07c4b48b75611e586abdd801fcc1d0065841357e31726f97e1a46c513e89544",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3492118",
+          "request_sha256": "76349c62ebdec284c8ca0465a40af8f879713d294a83c5a34e37d2c3598b0a89",
+          "response_sha256": "2d6f487bb32212d3b3ae146883e477eb5e4a1acbaf872d8eb802a3962ecf9e06",
+          "retrieved_at": "2026-09-10T17:27:19.717409Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-06T00:42:39Z",
+          "source_record_sha256": "cda659d4ecd78a7a6e1eacc26a963d6fba1b181304dcc8170a84404c98b6c916",
+          "source_uri": null
+        },
+        "record_sha256": "871b4bbe48ad767519c0ac34c50593c739ed88bbbcf6ab67166c7d944d72601a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "페즈의 전면 입구에는 'D-SQUARE'가 위치해 있다. 도로와 같은 레벨로 설계되어 자연스럽게 사람들을 초대하는 공간이다. 동네 주민들이 반려동물과 함께 지나가다 잠시 쉬어가거나, 외지인도 가볍게 들러 분위기를 즐길 수 있는 열린 광장이다. 내부에는 카페 'MINA & PAUL'이 자리하고 있다. 개방된 형태로 탁 트인 야외 공간을 바라보며 커피를 마실 수 있고 반려동물 동반이 가능하다. 카페에서 건물 안으로 더 들어가면 파란색 고양이가 그려진 문이 있는데, 이곳이 바로 재즈바 'BLUE CAT'이다. 무라카미 하루키가 운영했던 재즈바 ‘Peter Cat’에서 영감을 받은 ‘BLUE CAT’은 재즈와 블루스에서 자주 사용되는 블루 노트(Blue Note) 코드, 그리고 재즈의 대표 색인 블루에서 착안해 이름을 지었다. 무라카미 하루키가 떠오르는 소장품들이 있어 책을 읽거나 노래를 들으며 여유를 즐길 수 있다. 페즈의 가장 높은 층에는 'CASA DEL AGUA'가 있다. 스페인어로 ‘물의 집’이라는 뜻으로, 한글로는 ‘까사델아구아’라 부른다. 외부에서 바라보면 마치 수면 위에 떠 있는 듯한 모습이며, 로고에는 잔잔한 물 위로 바람이 불며 윤슬이 흩어지는 장면이 담겨 있다. 이는 ‘잡히지 않는 마음’을 바람에 실어 보내고, 스스로를 찾아가는 공간이 되고자 하는 바람을 상징한다"
+      }
+    ],
+    "parent_source_sha256": "9abf035119af94f33bbf91cf746d5c380f9c0cfa1b3f3df7085aad4ae132873f",
+    "place": {
+      "address": "서울특별시 용산구 대사관로11길 41 (한남동)",
+      "category": "문화시설",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+      "name_ko": "페즈 (FEZH)",
+      "place_id": "public:korea:58f0a025b9ed0de100f6afa2e395d5e1d3b056d9bf96fa231d9a5881482f75df",
+      "provider_content_id": "3492118",
+      "region_code": "11170",
+      "region_name": "서울특별시 용산구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

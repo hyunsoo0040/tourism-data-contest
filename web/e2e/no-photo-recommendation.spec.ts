@@ -415,9 +415,9 @@ function recommendationComparisonResponse(runId: string, placeIds: string[]) {
       values_ko: placeIds.map((_, index) => String(90 - index)),
       missing_reasons: placeIds.map(() => null),
     },
-    complete("axis-history_tradition", "역사·전통", "80점 / 100점"),
-    complete("axis-emotion_image", "감성·이미지", "70점 / 100점"),
-    complete("axis-rest_immersion", "휴식·몰입", "60점 / 100점"),
+    complete("axis-history_tradition", "대상•원형형", "80점 / 100점"),
+    complete("axis-emotion_image", "의미•이미지형", "70점 / 100점"),
+    complete("axis-rest_immersion", "자기•몰입형", "60점 / 100점"),
     complete("evidence-reason-1", "잘 맞는 이유 1", "역사 근거가 이번 기대와 이어져요."),
     complete("evidence-reason-2", "잘 맞는 이유 2", "감성 근거가 이번 기대와 이어져요."),
     complete("mismatch-guidance", "이번 여행에서 기대한 것과 다른 점", "한 가지 차이를 확인해 보세요."),
@@ -1022,7 +1022,7 @@ test("NO_ACTIVE_SCORED_RELEASE preserves the confirmed profile and offers bounde
   await expect(page.locator('[data-status="NO_ACTIVE_SCORED_RELEASE"]')).toContainText(
     "검증된 점수 프로필 24곳이 모두 준비된 뒤에만 추천을 보여드려요. 잠시 후 다시 확인해 주세요.",
   );
-  await expect(page.getByRole("meter", { name: "역사·전통 33점 / 100점" })).toBeVisible();
+  await expect(page.getByRole("meter", { name: "대상•원형형 33점 / 100점" })).toBeVisible();
   await expect(page.locator("[data-recommendation-card]")).toHaveCount(0);
 
   const retryResponse = page.waitForResponse(
@@ -1035,7 +1035,7 @@ test("NO_ACTIVE_SCORED_RELEASE preserves the confirmed profile and offers bounde
   expect(requests).toHaveLength(2);
   expect(requests[1]).toEqual(requests[0]);
   await page.reload();
-  await expect(page.getByRole("meter", { name: "역사·전통 33점 / 100점" })).toBeVisible();
+  await expect(page.getByRole("meter", { name: "대상•원형형 33점 / 100점" })).toBeVisible();
   expect(requests).toHaveLength(2);
 });
 

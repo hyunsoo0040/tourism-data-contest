@@ -1,0 +1,630 @@
+{
+  "assessed_at": "2026-09-11T17:25:07.475350Z",
+  "assessment_sha256": "a07b88bd1461049159d40225ab68e1d168f265e9e43160cc133d027be8e1fe3c",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b",
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 69
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소의 이름 유래와 사슴이 살았다는 전승을 간단히 소개하므로 연혁·유래 소개 수준(2)으로 판단한다. 심층 역사 탐구의 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "파노라마 사진과 이름 유래 설명이 짧은 안내 수준의 해설을 제공하므로 수준 2로 판단한다. 깊은 역사 해설·탐구 프로그램의 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "야경 명소, 서귀포 전경의 뷰포인트라는 이미지가 장소에 연결되어 있으나, 일관된 상징적 의미 체계의 근거는 제한적이므로 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "개요에 야경, 서귀포 시가지와 앞바다·섬들의 파노라마 전경, 소나무·삼나무·편백나무 등 수종이 어우러진 숲길 경관이 명시되어 이 장소를 구별되는 시각적 성격으로 표현하므로 수준 3으로 판단한다. 연출이 장면 전체를 지배한다는 근거는 없어 수준 4로 올리지 않는다. 원 repair의 두 번째 인용은 해당 출처의 allowed_claims에 VISUAL_APPEARANCE가 없어 E.c의 텍스트 claim인 VISUAL_EXPRESSION으로 교정했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "야경 감상과 파노라마 명승지 사진 대조라는 대표 장면을 현장에서 경험할 수 있으나, 촬영·재현 중심의 프로그램 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "약 1㎞ 둘레길을 자신의 방식으로 자유롭게 걸을 수 있는 자율 탐색 기회가 확인되므로 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "소나무·삼나무·편백나무 숲길, 자연휴양림 인접, 조용한 명상길 등 회복 지원 환경 단서가 확인되나 실제 고요함·혼잡 수준을 확정할 수 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "약 1㎝ 둘레길 산책이라는 구체적 신체 활동 참여 기회가 확인된다. 지속적 도전·집중 활동의 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "가족 산책이라는 공동 활동 가능성이 언급되나, 교류·자기표현을 위한 구체적 프로그램의 근거는 없어 제한적 수준(2)으로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 전망대가 거린사슴오름 기슭에 있음을 밝히지만, 전망대 자체가 확인된 원형·유산의 실물·공간 접촉을 제공한다는 근거는 없다. 오름 자체 탐구 가능성은 불명확하여 판단하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 310,
+            "method": "EXACT",
+            "original": "한라산 중턱에 있는 오름 중에 사슴과 관련된 이름으로 지어진 오름 가운데 하나이며 실제로 오름에는 사슴이 살았다고 전해지고 있다.",
+            "start": 238,
+            "submitted": "한라산 중턱에 있는 오름 중에 사슴과 관련된 이름으로 지어진 오름 가운데 하나이며 실제로 오름에는 사슴이 살았다고 전해지고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "이 장소의 이름 유래와 사슴이 살았다는 전승을 간단히 소개하므로 연혁·유래 소개 수준(2)으로 판단한다. 심층 역사 탐구의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "사슴이 살았다는 전해짐은 과거 이야기일 뿐, 현재 지역 주체의 전승·생활문화와의 연결 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 361,
+            "method": "EXACT",
+            "original": "서귀포의 명승지들이 파노라마 형태로 표시해 둔 사진에 잘 설명되어 있어 이해를 돕고 있다.",
+            "start": 311,
+            "submitted": "서귀포의 명승지들이 파노라마 형태로 표시해 둔 사진에 잘 설명되어 있어 이해를 돕고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "파노라마 사진과 이름 유래 설명이 짧은 안내 수준의 해설을 제공하므로 수준 2로 판단한다. 깊은 역사 해설·탐구 프로그램의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 237,
+            "method": "EXACT",
+            "original": "서귀포 시가지와 앞바다가 한눈에 들어오는 경치 좋은 곳으로 서귀포 앞바다에 위치한 숲섬, 범섬, 문섬 들의 전경이 아름답게 펼쳐진다.",
+            "start": 163,
+            "submitted": "서귀포 시가지와 앞바다가 한눈에 들어오는 경치 좋은 곳으로 서귀포 앞바다에 위치한 숲섬, 범섬, 문섬 들의 전경이 아름답게 펼쳐진다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "야경 명소, 서귀포 전경의 뷰포인트라는 이미지가 장소에 연결되어 있으나, 일관된 상징적 의미 체계의 근거는 제한적이므로 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 매체에서 재현·확산되고 있다는 근거가 제공되지 않았다. '아직 많이 알려지지 않아'라는 표현은 유통의 증거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 237,
+            "method": "EXACT",
+            "original": "서귀포 앞바다에 위치한 숲섬, 범섬, 문섬 들의 전경이 아름답게 펼쳐진다.",
+            "start": 196,
+            "submitted": "서귀포 앞바다에 위치한 숲섬, 범섬, 문섬 들의 전경이 아름답게 펼쳐진다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 536,
+            "method": "EXACT",
+            "original": "소나무와 삼나무, 편백나무, 자연림이 한데 어울려 자라는 산책로를 걷다 보면",
+            "start": 494,
+            "submitted": "소나무와 삼나무, 편백나무, 자연림이 한데 어울려 자라는 산책로를 걷다 보면",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "개요에 야경, 서귀포 시가지와 앞바다·섬들의 파노라마 전경, 소나무·삼나무·편백나무 등 수종이 어우러진 숲길 경관이 명시되어 이 장소를 구별되는 시각적 성격으로 표현하므로 수준 3으로 판단한다. 연출이 장면 전체를 지배한다는 근거는 없어 수준 4로 올리지 않는다. 원 repair의 두 번째 인용은 해당 출처의 allowed_claims에 VISUAL_APPEARANCE가 없어 E.c의 텍스트 claim인 VISUAL_EXPRESSION으로 교정했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 162,
+            "method": "EXACT",
+            "original": "거린사슴전망대는 차로 바로 이동할 수 있어 야경을 즐기기에도 적합한 곳이다.",
+            "start": 120,
+            "submitted": "거린사슴전망대는 차로 바로 이동할 수 있어 야경을 즐기기에도 적합한 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "야경 감상과 파노라마 명승지 사진 대조라는 대표 장면을 현장에서 경험할 수 있으나, 촬영·재현 중심의 프로그램 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 493,
+            "method": "EXACT",
+            "original": "아직 많이 알려지지 않아 혼자 조용히 걷기 좋은 명상의 숲길이다.",
+            "start": 457,
+            "submitted": "아직 많이 알려지지 않아 혼자 조용히 걷기 좋은 명상의 숲길이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "약 1㎞ 둘레길을 자신의 방식으로 자유롭게 걸을 수 있는 자율 탐색 기회가 확인되므로 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 575,
+            "method": "EXACT",
+            "original": "숲에서 뿜어져 나오는 맑고 신선한 공기는 몸과 마음을 정화시켜 준다.",
+            "start": 537,
+            "submitted": "숲에서 뿜어져 나오는 맑고 신선한 공기는 몸과 마음을 정화시켜 준다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "소나무·삼나무·편백나무 숲길, 자연휴양림 인접, 조용한 명상길 등 회복 지원 환경 단서가 확인되나 실제 고요함·혼잡 수준을 확정할 수 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 402,
+            "method": "EXACT",
+            "original": "이곳에 약 1㎞ 정도 되는 아름다운 숲길인 거린사슴전망대 둘레길이 있는데",
+            "start": 362,
+            "submitted": "이곳에 약 1㎞ 정도 되는 아름다운 숲길인 거린사슴전망대 둘레길이 있는데",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "약 1㎝ 둘레길 산책이라는 구체적 신체 활동 참여 기회가 확인된다. 지속적 도전·집중 활동의 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+          "quote": {
+            "end": 659,
+            "method": "EXACT",
+            "original": "거리가 짧아 노인이나 어린이들도 걷기에 적당한 코스여서 가족 산책길로도 추천한다.",
+            "start": 614,
+            "submitted": "거리가 짧아 노인이나 어린이들도 걷기에 적당한 코스여서 가족 산책길로도 추천한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "가족 산책이라는 공동 활동 가능성이 언급되나, 교류·자기표현을 위한 구체적 프로그램의 근거는 없어 제한적 수준(2)으로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "4817661eef5a4b015cb56e3f3506967caa281c7bc1cc8b54418b893eb48d44f2",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:038ac0161a6d7c62268d982dbb30021a455e259817b6af10b94a706bc0aad5fa",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6e0f51997d28906ed1e2d78b152d21d6b73924464d1bb2189a5c614d505f9f7e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3015782",
+          "request_sha256": "a5ca2256ce57e700436661650f5e04c292673d4f136f3abe930318cb9ff81379",
+          "response_sha256": "9e277d870ff67284fdad32fc0fe379981d4af1b008b0dabb680bcc46ce1cf097",
+          "retrieved_at": "2026-09-10T08:24:07.534065Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c6e6546edd734471374cc91a2de3ccc31bb039bfb0558f111a846d3a9f2098bd",
+          "source_uri": null
+        },
+        "record_sha256": "9152ee1eb580c487da4ff69f3e1bd4f8f567d93834dffd65c1c56fa7e0f09a7f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9d3541731a0ea21d7bef2d57fab95eb5771c7737f2039f52fc33eea9995ea588",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6e0f51997d28906ed1e2d78b152d21d6b73924464d1bb2189a5c614d505f9f7e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3015782",
+          "request_sha256": "a5ca2256ce57e700436661650f5e04c292673d4f136f3abe930318cb9ff81379",
+          "response_sha256": "9e277d870ff67284fdad32fc0fe379981d4af1b008b0dabb680bcc46ce1cf097",
+          "retrieved_at": "2026-09-10T08:24:07.534065Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dbb29988022fc9f9558a95cda9c66cbf5a524d454be10d643b051545f38653f5",
+          "source_uri": null
+        },
+        "record_sha256": "3b88cd94e74faac8bd596b57dd54c25a71aaa823a07cb201e8f71b5f580da6d4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a57263321e54cf32a16abe695706514d333cc62532afc3d00c6d411e70ebf987",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:6e0f51997d28906ed1e2d78b152d21d6b73924464d1bb2189a5c614d505f9f7e",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3015782",
+          "request_sha256": "77e1feaad1b0650f980980c6a32dd4f5dc729b9cc26ec35f8910209be4291e5a",
+          "response_sha256": "e0501a34760a94dd267061cb9f905649f4be0ef22e1a8d88e860884ac6060c5a",
+          "retrieved_at": "2026-09-10T08:03:39.398465Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-29T04:23:36Z",
+          "source_record_sha256": "926bbbfff2500a2f8b6c45a31b32fe2e8b23fe1362a81c3ff7d444a1cb8a721a",
+          "source_uri": null
+        },
+        "record_sha256": "b2066dca42ff7edc137c1199aa6a617fcf98066d475582bf155a2ccd1069760c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "거린사슴전망대는 거린사슴오름의 기슭에 있는 전망대이다. 1100도로 서귀포자연휴양림에서 서귀포 방면으로 내려가다 보면 있다. 서귀포에서 야경을 볼 수 있는 곳들이 흔치 않고 밤에 오름을 올라가기에도 어려움이 있는데 거린사슴전망대는 차로 바로 이동할 수 있어 야경을 즐기기에도 적합한 곳이다. 서귀포 시가지와 앞바다가 한눈에 들어오는 경치 좋은 곳으로 서귀포 앞바다에 위치한 숲섬, 범섬, 문섬 들의 전경이 아름답게 펼쳐진다. 한라산 중턱에 있는 오름 중에 사슴과 관련된 이름으로 지어진 오름 가운데 하나이며 실제로 오름에는 사슴이 살았다고 전해지고 있다. 서귀포의 명승지들이 파노라마 형태로 표시해 둔 사진에 잘 설명되어 있어 이해를 돕고 있다. 이곳에 약 1㎞ 정도 되는 아름다운 숲길인 거린사슴전망대 둘레길이 있는데 원래 민유림 임도로 사용했던 길을 정비하여 제주도민들과 관광객들을 위한 산책로를 조성한 것이다. 아직 많이 알려지지 않아 혼자 조용히 걷기 좋은 명상의 숲길이다. 소나무와 삼나무, 편백나무, 자연림이 한데 어울려 자라는 산책로를 걷다 보면 숲에서 뿜어져 나오는 맑고 신선한 공기는 몸과 마음을 정화시켜 준다. 이곳의 위치는 제주에서 단풍도 잘 드는 곳이라 가을 방문도 좋겠다. 거리가 짧아 노인이나 어린이들도 걷기에 적당한 코스여서 가족 산책길로도 추천한다."
+      }
+    ],
+    "parent_source_sha256": "812b776568ffe335ac905b82541a23de6676e14f6ca42f36456565f29b1c8698",
+    "place": {
+      "address": "제주특별자치도 서귀포시 1100로 791 (대포동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:6e0f51997d28906ed1e2d78b152d21d6b73924464d1bb2189a5c614d505f9f7e",
+      "name_ko": "거린사슴전망대",
+      "place_id": "public:korea:6e0f51997d28906ed1e2d78b152d21d6b73924464d1bb2189a5c614d505f9f7e",
+      "provider_content_id": "3015782",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

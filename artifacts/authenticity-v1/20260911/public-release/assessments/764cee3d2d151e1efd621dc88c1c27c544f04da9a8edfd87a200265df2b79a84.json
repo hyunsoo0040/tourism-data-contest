@@ -1,0 +1,977 @@
+{
+  "assessed_at": "2026-09-11T16:40:17.716001Z",
+  "assessment_sha256": "764cee3d2d151e1efd621dc88c1c27c544f04da9a8edfd87a200265df2b79a84",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 66
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 92
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "용 상승 전설이 장소에 연결된 이야기·이미지로 제시되며, 용소 명명과 신비로운 분위기로 표현된다. 장소와 연결된 간단한 이미지·이야기 수준(2)으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9227d8656b674a90cb45a5205fb5812e264d170943578cc76c1a19bd81fcb58d",
+            "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:56cc3a514ba1096b346a6d297d0e6ada8e1e30014ffa73c85b4b1e57072b3e8b",
+            "appearance:becc54b58b48f428be33041dbb732d8055b0677e892bcca0d19f712ffb1bf158",
+            "appearance:e8894d6536dcbd61e70b2b5f9c9965e88e05fffac15098c68bc7b2026af3be1e"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "수려한 산세와 폭포, 금강산에 비유되는 경관 등 장면에서 구별되는 시각적 성격이 확인된다. 일관된 연출이 장면을 지배한다는 근거는 부족하므로 분명한 경관 표현(수준 3)으로 판단한다. 공식 서술 텍스트이므로 실제 픽셀 수준 확인은 아니다.",
+      "value": 81
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:79c84359ac155cdc0fcb6bdce1eecf1f15ff6ac2194224097abac0ee12daaa19"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "거리·난이도가 다른 복수의 트레킹 코스가 제공되어 방문자가 자신의 방식으로 선택·탐색할 기회가 확인된다. 자율 탐색 기회(3) 수준이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:61fe3f0fd3e0a7b93b78dabb899d09188722f7ab8765434552509dd02d3a6099",
+            "appearance:92985d2dd7ab372c0e0119d667afcb92863f6dfc7a2213bfaf091a9932cb86e5",
+            "appearance:cd8d3adb5901bc0ec779e9ddb25a87be38937c0b062f80d1dab4b2aef8f54137"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "울창한 금강송 군락, 청정 계곡, 맑은 물과 물고기 등 자연 환경 단서가 구체적으로 확인되며 계곡 경관이 장면을 지배한다. 다만 실제 고요함·혼잡 수준까지는 확정하지 않고 환경 단서가 두드러진 수준(4)으로 평가한다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9227d8656b674a90cb45a5205fb5812e264d170943578cc76c1a19bd81fcb58d",
+            "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "최장 32.8km에 이르는 장거리 트레킹 코스와 등산 활동이 지속적으로 참여·도전할 활동으로 확인된다. 신체 활동·탐방이 방문 경험의 중심에 가까운 수준(4)이다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "확인된 문화유산·원형의 실물 접촉에 대한 근거가 없다. 자연 지형과 전설 서사만 제공되어 유산 접촉 여부를 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "의상조사 전설은 서사로 소개되지만 확인된 실제 역사·연혁의 구체적 제시는 부족하다. 전설 소개만으로 역사 맥락 탐구 지원을 확정하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화의 실제 지속 여부에 대한 근거가 없다. 덕풍마을이라는 지명 언급만으로 전승 활동을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 프로그램에 대한 근거가 없다. 트레킹 코스 안내만으로 역사 해설 지원을 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239",
+          "quote": {
+            "end": 331,
+            "method": "EXACT",
+            "original": "용소에서 용이 하늘로 솟구쳐 지금의 덕풍계곡 지형이 형성되었다는 전설이 있다. 이로 인해 계곡은 1 용소, 2 용소, 3 용소로 불리며 전설과 함께 신비로운 분위기를 더한다.",
+            "start": 234,
+            "submitted": "용소에서 용이 하늘로 솟구쳐 지금의 덕풍계곡 지형이 형성되었다는 전설이 있다. 이로 인해 계곡은 1 용소, 2 용소, 3 용소로 불리며 전설과 함께 신비로운 분위기를 더한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e44f5e1e1fdcda35814e81e0c3ea401f57d712a195791be1fbebbb3bd319b907"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "용 상승 전설이 장소에 연결된 이야기·이미지로 제시되며, 용소 명명과 신비로운 분위기로 표현된다. 장소와 연결된 간단한 이미지·이야기 수준(2)으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·매체를 통한 장소 이미지의 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239",
+          "quote": {
+            "end": 377,
+            "method": "EXACT",
+            "original": "계곡은 병풍처럼 둘러싸인 수려한 산세와 함께 여러 개의 폭포가 곳곳에 흩어져 있어",
+            "start": 332,
+            "submitted": "계곡은 병풍처럼 둘러싸인 수려한 산세와 함께 여러 개의 폭포가 곳곳에 흩어져 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e44f5e1e1fdcda35814e81e0c3ea401f57d712a195791be1fbebbb3bd319b907"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:9227d8656b674a90cb45a5205fb5812e264d170943578cc76c1a19bd81fcb58d",
+          "quote": {
+            "end": 134,
+            "method": "EXACT",
+            "original": "덕풍에서 용소의 제3폭포에 이르는 대자연의 미관은 실로 금강산 내금강을 방불케 한다.",
+            "start": 87,
+            "submitted": "덕풍에서 용소의 제3폭포에 이르는 대자연의 미관은 실로 금강산 내금강을 방불케 한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a4ffa29d17e6c61130e0b89a7ca660f4c3167eac7c9b4267f094a1bbbe0fb84b"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "수려한 산세와 폭포, 금강산에 비유되는 경관 등 장면에서 구별되는 시각적 성격이 확인된다. 일관된 연출이 장면을 지배한다는 근거는 부족하므로 분명한 경관 표현(수준 3)으로 판단한다. 공식 서술 텍스트이므로 실제 픽셀 수준 확인은 아니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있는지에 대한 근거가 없다. 전설 서사가 있으나 현장 재현 경험의 제시는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:79c84359ac155cdc0fcb6bdce1eecf1f15ff6ac2194224097abac0ee12daaa19",
+          "quote": {
+            "end": 77,
+            "method": "EXACT",
+            "original": "* 제 1코스 : 왕복 5.6km (110분) 덕풍마을 → 제1용소 → 제2용소 → 덕풍마을 * 제 2코스 : 총 32.8km (665분)",
+            "start": 0,
+            "submitted": "* 제 1코스 : 왕복 5.6km (110분) 덕풍마을 → 제1용소 → 제2용소 → 덕풍마을 * 제 2코스 : 총 32.8km (665분)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "50d840a3be023de012c511540235d8cec7336177a995b13c5df3abee5db8f649"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "거리·난이도가 다른 복수의 트레킹 코스가 제공되어 방문자가 자신의 방식으로 선택·탐색할 기회가 확인된다. 자율 탐색 기회(3) 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239",
+          "quote": {
+            "end": 84,
+            "method": "EXACT",
+            "original": "울창한 금강송 군락지로, 도시의 미세먼지와 혼잡함을 벗어나 맑은 공기와 여유로움을 느낄 수 있는 청정 자연 지역이다.",
+            "start": 19,
+            "submitted": "울창한 금강송 군락지로, 도시의 미세먼지와 혼잡함을 벗어나 맑은 공기와 여유로움을 느낄 수 있는 청정 자연 지역이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e44f5e1e1fdcda35814e81e0c3ea401f57d712a195791be1fbebbb3bd319b907"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239",
+          "quote": {
+            "end": 507,
+            "method": "EXACT",
+            "original": "덕풍계곡의 맑은 물속에는 물고기들이 떼 지어 노니며",
+            "start": 479,
+            "submitted": "덕풍계곡의 맑은 물속에는 물고기들이 떼 지어 노니며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e44f5e1e1fdcda35814e81e0c3ea401f57d712a195791be1fbebbb3bd319b907"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 4,
+      "reason": "울창한 금강송 군락, 청정 계곡, 맑은 물과 물고기 등 자연 환경 단서가 구체적으로 확인되며 계곡 경관이 장면을 지배한다. 다만 실제 고요함·혼잡 수준까지는 확정하지 않고 환경 단서가 두드러진 수준(4)으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:9227d8656b674a90cb45a5205fb5812e264d170943578cc76c1a19bd81fcb58d",
+          "quote": {
+            "end": 68,
+            "method": "EXACT",
+            "original": "덕풍계곡과 용소골은 전국 제일의 트래킹코스로 가곡면 풍곡리에 위치해 있으며 덕풍에서 용소골 막바지까지는 약 12km이며",
+            "start": 2,
+            "submitted": "덕풍계곡과 용소골은 전국 제일의 트래킹코스로 가곡면 풍곡리에 위치해 있으며 덕풍에서 용소골 막바지까지는 약 12km이며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a4ffa29d17e6c61130e0b89a7ca660f4c3167eac7c9b4267f094a1bbbe0fb84b"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239",
+          "quote": {
+            "end": 404,
+            "method": "EXACT",
+            "original": "가족 단위 피서지나 등산 코스로 매우 적합하다.",
+            "start": 378,
+            "submitted": "가족 단위 피서지나 등산 코스로 매우 적합하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e44f5e1e1fdcda35814e81e0c3ea401f57d712a195791be1fbebbb3bd319b907"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 4,
+      "reason": "최장 32.8km에 이르는 장거리 트레킹 코스와 등산 활동이 지속적으로 참여·도전할 활동으로 확인된다. 신체 활동·탐방이 방문 경험의 중심에 가까운 수준(4)이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 없다. 가족 단위 방문 적합성 언급만으로 유대감이나 교류 기회를 추정하지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "7d01116605b11e4ea512113297653538db863f8f65dcc378134295cd38eef016",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축·재료·공간 구성으로 보이는 시각적 단서는 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:271e5eb4ff9a20debbb33c9dd28e9fdcb4f1ba72b7e2776df9e7bcb9d5d1982e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b5b5aabc14387cff0e582ca6fc0985bcb6fba2dba6d42274df4c3f8bd64f52af",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777572",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "475ef47ca45c80423b0faeb5c68e0a112cee56c896310f3c17aa2baa640b7d4c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/72/2777572.jpg"
+        },
+        "record_sha256": "2eabcf53babd90aa1b8737fcd6f2b15b43ea03bb5633597235812767b14fb7f6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축물이나 재료·공간 구성의 시각적 단서는 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:50d3c11fb60ec4893887564da9ebdf635e669a240acd28eaa5f2e24ca389a3b9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0853aa29e9dd2cf7253a6363b43a16b7bb914f6be25a18597763621610c4fbf7",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777573",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1231c0882b826d30ce0654afc7c7e37a49f248852fdcd9c488ad1eaf664c7202",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/73/2777573.jpg"
+        },
+        "record_sha256": "76d2ff51c7b39f527a4437e1ddec42f2e80256367f1f9873d92e7ccd8a0e309b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "붉고 노란 가을 단풍이 화면 전체를 채우며 고채도 색채 대비가 장면을 지배하는 강한 연출성을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:56cc3a514ba1096b346a6d297d0e6ada8e1e30014ffa73c85b4b1e57072b3e8b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0853aa29e9dd2cf7253a6363b43a16b7bb914f6be25a18597763621610c4fbf7",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777573",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1231c0882b826d30ce0654afc7c7e37a49f248852fdcd9c488ad1eaf664c7202",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/73/2777573.jpg"
+        },
+        "record_sha256": "20e13ce412fde2e212a5978f1de032ac2a05a3733612dea374fe908fc82ef6d3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "계곡 물줄기, 바위, 흩어진 낙엽 등 자연 경관 요소가 장면 전체를 채우고 있음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:61fe3f0fd3e0a7b93b78dabb899d09188722f7ab8765434552509dd02d3a6099",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b5b5aabc14387cff0e582ca6fc0985bcb6fba2dba6d42274df4c3f8bd64f52af",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777572",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "475ef47ca45c80423b0faeb5c68e0a112cee56c896310f3c17aa2baa640b7d4c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/72/2777572.jpg"
+        },
+        "record_sha256": "ec565d1bdbf268d38c5f5ccab8b4d8a4f331ff2e7c60ab2057d3ac422f555394",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 요소가 직접 보이지 않으며 대부분 자연 경관으로 구성됨.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:783d804feaa5d6b893004d883f49562fe5a5e6e76cc1b95794440dc6b1fb84eb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "984684413977c29b9e4e54f9e95f537ed337bce001176b254b2ba2b84f1382df",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777584",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a07e9733cd167957c6b1249d166cbcfb3468a14dac2bea1bb58188b9a93e7bf3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/84/2777584.jpg"
+        },
+        "record_sha256": "73ba6593519249d319dbc253f5a0065090c2d936d66ffee82f3d96897b3e2839",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "계곡 물줄기, 바위, 울창한 숲과 단풍이 화면 대부분을 차지하는 자연 환경 단서가 장면을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:92985d2dd7ab372c0e0119d667afcb92863f6dfc7a2213bfaf091a9932cb86e5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "984684413977c29b9e4e54f9e95f537ed337bce001176b254b2ba2b84f1382df",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777584",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a07e9733cd167957c6b1249d166cbcfb3468a14dac2bea1bb58188b9a93e7bf3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/84/2777584.jpg"
+        },
+        "record_sha256": "22108893a840bd485cfb8003283a5fbfa13afcac7b1c886c39a23de69c114a28",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "장노출로 실크처럼 흐른 물결과 선명한 붉은 단풍잎의 대비가 화면 전체를 지배하는 강한 연출적 구도.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:becc54b58b48f428be33041dbb732d8055b0677e892bcca0d19f712ffb1bf158",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b5b5aabc14387cff0e582ca6fc0985bcb6fba2dba6d42274df4c3f8bd64f52af",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777572",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "475ef47ca45c80423b0faeb5c68e0a112cee56c896310f3c17aa2baa640b7d4c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/72/2777572.jpg"
+        },
+        "record_sha256": "1059879e31b5e2a4d3e9454419e3c01b15af95c6b10e82cd0dc46736f28a69fd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 산림, 자갈 강바닥, 얕은 물줄기 등 자연 경관 요소가 장면 전반을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cd8d3adb5901bc0ec779e9ddb25a87be38937c0b062f80d1dab4b2aef8f54137",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0853aa29e9dd2cf7253a6363b43a16b7bb914f6be25a18597763621610c4fbf7",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777573",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1231c0882b826d30ce0654afc7c7e37a49f248852fdcd9c488ad1eaf664c7202",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/73/2777573.jpg"
+        },
+        "record_sha256": "bbb21540ee12c7a7dc7ef7428555a2ff61149e41655d7e7c69cea3385eef6d13",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "붉은·주황·노랑 단풍과 청록 물빛의 강렬한 색채 대비가 상단 부감 구도로 장면 전체를 지배하며 고채도 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e8894d6536dcbd61e70b2b5f9c9965e88e05fffac15098c68bc7b2026af3be1e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "984684413977c29b9e4e54f9e95f537ed337bce001176b254b2ba2b84f1382df",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 삼척시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2777584",
+          "request_sha256": "a1e3135cbf082d7eded4c4fefd8c770bbd05cd7f5a9eb7334adb4122f807dc35",
+          "response_sha256": "923a10f30afb7b570a2753d4fdda182dd9079bb78d8dc4c041afea7109111e28",
+          "retrieved_at": "2026-09-11T02:03:33.376331Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a07e9733cd167957c6b1249d166cbcfb3468a14dac2bea1bb58188b9a93e7bf3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/84/2777584.jpg"
+        },
+        "record_sha256": "9c323b89d0de651a38093cc1a405c6cd126c1eceeed02e50d3fe3d45ed0d90b0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5359004d644785a5b937678648962e59f5c56c25638b52b61764ca323961cba3",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125641",
+          "request_sha256": "0cc6302b9269c672de9057dd5b1095189f633249b50fa0459701977db079d767",
+          "response_sha256": "aac539f36a2a2b0f40a73e3f81050ebd2231665e5ee48f92643b0a3d49ca84d9",
+          "retrieved_at": "2026-09-11T02:03:31.501714Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c236d32361d8e33aa68bbf3685f4846887076f4bd54b77d590f305e5a49a5638",
+          "source_uri": null
+        },
+        "record_sha256": "d0bb2fcccc8545e10fc5a8d021575cc5bf3fc75ebddd45ecdecbb482d488e53a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:79c84359ac155cdc0fcb6bdce1eecf1f15ff6ac2194224097abac0ee12daaa19",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125641",
+          "request_sha256": "0cc6302b9269c672de9057dd5b1095189f633249b50fa0459701977db079d767",
+          "response_sha256": "aac539f36a2a2b0f40a73e3f81050ebd2231665e5ee48f92643b0a3d49ca84d9",
+          "retrieved_at": "2026-09-11T02:03:31.501714Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1bda6e5256fd3c3df4dc503fee14988c55e593458d8b888aebfc914d3ec6f2a7",
+          "source_uri": null
+        },
+        "record_sha256": "50d840a3be023de012c511540235d8cec7336177a995b13c5df3abee5db8f649",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "* 제 1코스 : 왕복 5.6km (110분) 덕풍마을 → 제1용소 → 제2용소 → 덕풍마을 * 제 2코스 : 총 32.8km (665분) 덕풍마읖 → 제3용소 → 응봉산 → 헬기장 → 덕풍마을 * 제 3코스 : 총 25.1km (485분) 덕풍마을 → 제3용소 → 응봉산 → 덕구온천"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9227d8656b674a90cb45a5205fb5812e264d170943578cc76c1a19bd81fcb58d",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125641",
+          "request_sha256": "0cc6302b9269c672de9057dd5b1095189f633249b50fa0459701977db079d767",
+          "response_sha256": "aac539f36a2a2b0f40a73e3f81050ebd2231665e5ee48f92643b0a3d49ca84d9",
+          "retrieved_at": "2026-09-11T02:03:31.501714Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a5cde466b6173cb3435827af672b46fa62fe6c3b39aa42077b97b25074296355",
+          "source_uri": null
+        },
+        "record_sha256": "a4ffa29d17e6c61130e0b89a7ca660f4c3167eac7c9b4267f094a1bbbe0fb84b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "> 덕풍계곡과 용소골은 전국 제일의 트래킹코스로 가곡면 풍곡리에 위치해 있으며 덕풍에서 용소골 막바지까지는 약 12km이며 경북 울진군 서면과의 접경이다. 덕풍에서 용소의 제3폭포에 이르는 대자연의 미관은 실로 금강산 내금강을 방불케 한다. * 제1·2·3폭포와 용소 덕풍마을에서 약1.5km의 거리에 이르면 제 1폭포와 용소가 있고 그 수심은 약 6m에 이른다. 여기서 또 1.5Km지점에 이르면 제2폭포와 용소가 있으며 그 용소의 수심도 제 1폭포와 같다. 여기서 제 3폭포까지 뻗은 계곡의 반석지대는 장장 3km에 이른다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c23a911081c114892481235ea2bb021728f2eec640e051ff4f99a0ec5d747239",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "125641",
+          "request_sha256": "d97f447e9d594514623f5ce7a44a64018e68217b921e9feef0872c9811605b76",
+          "response_sha256": "0c2d817bf695c730054fe6fb053bc7756fe48d622de20ba96bbd40464cff2075",
+          "retrieved_at": "2026-09-10T17:10:58.205942Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-07-09T06:48:16Z",
+          "source_record_sha256": "9cde8d904ca1939d2cb6e05d03c549122c563a9c3a41abd8d5b070d3d139697f",
+          "source_uri": null
+        },
+        "record_sha256": "e44f5e1e1fdcda35814e81e0c3ea401f57d712a195791be1fbebbb3bd319b907",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "삼척시 가곡면에 위치한 덕풍계곡은 울창한 금강송 군락지로, 도시의 미세먼지와 혼잡함을 벗어나 맑은 공기와 여유로움을 느낄 수 있는 청정 자연 지역이다. 서기 약 650년경, 신라 진덕여왕 때 의상조사가 이곳에 이르러 나무 기러기 세 마리를 만들어 날렸는데, 한 마리는 울진 불영사에, 또 한 마리는 안동 홍제암에, 마지막 한 마리는 덕풍계곡에 떨어졌다고 전해진다. 기러기가 떨어지자마자 천지가 진동하며 땅이 갈라지고, 용소에서 용이 하늘로 솟구쳐 지금의 덕풍계곡 지형이 형성되었다는 전설이 있다. 이로 인해 계곡은 1 용소, 2 용소, 3 용소로 불리며 전설과 함께 신비로운 분위기를 더한다. 계곡은 병풍처럼 둘러싸인 수려한 산세와 함께 여러 개의 폭포가 곳곳에 흩어져 있어 가족 단위 피서지나 등산 코스로 매우 적합하다. 진입로는 416번 지방도를 이용해 풍곡 1리까지 접근할 수 있으며, 계곡 입구에서 깊숙한 계곡 안까지는 약 8km의 거리를 이룬다. 덕풍계곡의 맑은 물속에는 물고기들이 떼 지어 노니며, 덕풍계곡과 용소골은 트레킹 코스로도 인기가 높아 많은 사람들이 찾는다."
+      }
+    ],
+    "parent_source_sha256": "dae0aec689b5dfbfd52b48a4513df7db4af69ad1f8dcf321d9e66ebf5e47e898",
+    "place": {
+      "address": "강원특별자치도 삼척시 가곡면 덕풍길 44",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+      "name_ko": "덕풍계곡",
+      "place_id": "public:korea:42af7494b2d312780d23dc8c52576d105048e11000ac4ba74b338168732ce360",
+      "provider_content_id": "125641",
+      "region_code": "51230",
+      "region_name": "강원특별자치도 삼척시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

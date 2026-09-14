@@ -1,0 +1,1039 @@
+{
+  "assessed_at": "2026-09-11T16:52:20.046380Z",
+  "assessment_sha256": "70f25c4e15c142bb674e62c19cf38018b90c58d16e7b230b2b1fb49d13aa5272",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 79
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "사봉낙조라는 영주 12경의 이미지가 장소와 연결되어 있다는 근거가 있으나, 여러 표현에서 일관된 의미가 확인되는 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:36ae82c884b7955c803d1f446d7aad17edc42b3d7d16e05515a989603b114e97",
+            "appearance:45a82d12e8736d48ab857c6582c0cc8ecea2dc8ebb63347f565e1b7d88a940d6",
+            "appearance:9a1bee9fa25c003ac843d78ed9f0d97ca107dc0093fca74522bb8e5f99483ea5"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제안된 앵커는 '분명한 외관·경관·연출의 표현'(상위 수준)이나, 제시된 근거는 일몰과 불빛 경관이 '구별되는 시각적 성격' 수준의 서술이며 제안 사유 스스로도 그 수준을 확인하는 데 그친다. 일관된 경관·연출이 장면을 지배하거나 분명하게 표현된다는 직접 근거가 부족하다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "자유로운 산책·오름 탐방이 가능한 공원이라는 근거가 있으나, 일상 이탈이 방문 경험의 중심이라는 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:576ff175f5b32da59de78b20c3f5c3e96183646b412f27dc9ed85c40b5e9dfaa",
+            "appearance:5a35e29099b4bce373e0389a1a90e3d77618f758adddbc85f3abc38bb3ac9165",
+            "appearance:793b4836fdbb2c2fbdee7ab73ea17fae9f41d6d86dbf637ba5df024e2106d4c2"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "앵커는 '자연·시각적 저자극 환경이 두드러짐'이지만, 인용은 바다·한라산이 보인다는 서술이자 홍보 성격의 개요 문구다. 도심 속 공원이라는 맥락에서 실제 저자극성·고요함이 확인되지 않으며, 제안 사유 스스로 확인 수준임을 인정한다.",
+      "value": 83
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "사라봉이 오름(원형 지형)이라는 사실은 있으나, 확인된 실제 원형·유산에의 구체적 접촉을 뒷받침하는 문화유산 근거는 부족하다. 모충사 언급만으로 유산 접촉의 강도를 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "'영주 12경', '사봉낙조' 등 명칭 소개는 있으나 장소의 실제 역사·사건·인물 맥락을 설명하는 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "모충사 존재가 언급되지만 현재의 전승·생활문화와의 실제 연결을 확인하는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "사봉낙조라는 명칭 해설 외에 원형·역사와 연결된 해설·탐구 제공 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922",
+          "quote": {
+            "end": 204,
+            "method": "EXACT",
+            "original": "사봉낙조는 사라봉에서 바라보는 해넘이를 말하는데, 이곳에서 볼 수 있는 사봉낙조는 영주(제주도의 옛 명칭) 12경의 하나로 성산일출과 대조가 될만하다.",
+            "start": 120,
+            "submitted": "사봉낙조는 사라봉에서 바라보는 해넘이를 말하는데, 이곳에서 볼 수 있는 사봉낙조는 영주(제주도의 옛 명칭) 12경의 하나로 성산일출과 대조가 될만하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f27a7d37c67267e30a09a7e058558f905bae69e2f8fa1e2dfb58f138b4a30419"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "사봉낙조라는 영주 12경의 이미지가 장소와 연결되어 있다는 근거가 있으나, 여러 표현에서 일관된 의미가 확인되는 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "제안된 앵커는 '분명한 외관·경관·연출의 표현'(상위 수준)이나, 제시된 근거는 일몰과 불빛 경관이 '구별되는 시각적 성격' 수준의 서술이며 제안 사유 스스로도 그 수준을 확인하는 데 그친다. 일관된 경관·연출이 장면을 지배하거나 분명하게 표현된다는 직접 근거가 부족하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "앵커 '촬영·참여로 이미지나 장면을 재현'에 필요한 재현·촬영 활동의 근거가 없으며, 제안 사유도 이를 인정한다. 인용은 사봉낙조를 직접 경험(등반·감상)할 수 있다는 수준일 뿐, 제안된 앵커 수준은 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922",
+          "quote": {
+            "end": 119,
+            "method": "EXACT",
+            "original": "사라봉 전체를 공원으로 조성하여 제주 시민들의 산책이나 운동 장소로 이용될 뿐만 아니라, 사라봉을 오르는 관광객들에게도 오름을 오르는 즐거움을 더하고 있다.",
+            "start": 32,
+            "submitted": "사라봉 전체를 공원으로 조성하여 제주 시민들의 산책이나 운동 장소로 이용될 뿐만 아니라, 사라봉을 오르는 관광객들에게도 오름을 오르는 즐거움을 더하고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f27a7d37c67267e30a09a7e058558f905bae69e2f8fa1e2dfb58f138b4a30419"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "자유로운 산책·오름 탐방이 가능한 공원이라는 근거가 있으나, 일상 이탈이 방문 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "앵커는 '자연·시각적 저자극 환경이 두드러짐'이지만, 인용은 바다·한라산이 보인다는 서술이자 홍보 성격의 개요 문구다. 도심 속 공원이라는 맥락에서 실제 저자극성·고요함이 확인되지 않으며, 제안 사유 스스로 확인 수준임을 인정한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "앵커 '지속적으로 참여·도전할 활동'에 비해 근거는 등반·산책 가능성과 운동시설의 존재 나열에 그친다. 낮은 동산의 등반과 시설 존재가 지속적 참여·도전 기회까지 제공한다는 직접 근거가 없으며, 제안 사유도 '기회 확인' 수준에 머문다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "시민·관광객 이용 언급만으로 교류·공동 활동·자기표현의 기회를 확인할 근거는 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "f0638a47c71209c88cc68a603f327ae0505b5ff51a4d8df1dd99f3767437c1f2",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922",
+              "quote": {
+                "end": 495,
+                "method": "EXACT",
+                "original": "시내에 하나 둘 들어오는 불빛을 바라보면, 자연과 도시의 아름다움을 한번에 느낄 수 있다.",
+                "start": 445,
+                "submitted": "시내에 하나 둘 들어오는 불빛을 바라보면, 자연과 도시의 아름다움을 한번에 느낄 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f27a7d37c67267e30a09a7e058558f905bae69e2f8fa1e2dfb58f138b4a30419"
+            }
+          ],
+          "flags": [],
+          "key": "E.c",
+          "level": 3,
+          "reason": "일몰과 바다·도시 불빛 등 구별되는 시각적 경관이 묘사되어 시각적 성격의 표현을 확인할 수 있다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.c",
+          "reason": "제안된 앵커는 '분명한 외관·경관·연출의 표현'(상위 수준)이나, 제시된 근거는 일몰과 불빛 경관이 '구별되는 시각적 성격' 수준의 서술이며 제안 사유 스스로도 그 수준을 확인하는 데 그친다. 일관된 경관·연출이 장면을 지배하거나 분명하게 표현된다는 직접 근거가 부족하다."
+        }
+      },
+      "reason": "제안된 앵커는 '분명한 외관·경관·연출의 표현'(상위 수준)이나, 제시된 근거는 일몰과 불빛 경관이 '구별되는 시각적 성격' 수준의 서술이며 제안 사유 스스로도 그 수준을 확인하는 데 그친다. 일관된 경관·연출이 장면을 지배하거나 분명하게 표현된다는 직접 근거가 부족하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922",
+              "quote": {
+                "end": 443,
+                "method": "EXACT",
+                "original": "오후에 운동 겸 산책겸 사라봉을 오르면서 바다로 지는 일몰도 감상하고",
+                "start": 405,
+                "submitted": "오후에 운동 겸 산책겸 사라봉을 오르면서 바다로 지는 일몰도 감상하고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f27a7d37c67267e30a09a7e058558f905bae69e2f8fa1e2dfb58f138b4a30419"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 3,
+          "reason": "대표 장면(사봉낙조)을 직접 오르고 감상할 수 있다는 근거가 있으나, 촬영·재현 활동 중심이라는 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "앵커 '촬영·참여로 이미지나 장면을 재현'에 필요한 재현·촬영 활동의 근거가 없으며, 제안 사유도 이를 인정한다. 인용은 사봉낙조를 직접 경험(등반·감상)할 수 있다는 수준일 뿐, 제안된 앵커 수준은 뒷받침되지 않는다."
+        }
+      },
+      "reason": "앵커 '촬영·참여로 이미지나 장면을 재현'에 필요한 재현·촬영 활동의 근거가 없으며, 제안 사유도 이를 인정한다. 인용은 사봉낙조를 직접 경험(등반·감상)할 수 있다는 수준일 뿐, 제안된 앵커 수준은 뒷받침되지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922",
+              "quote": {
+                "end": 262,
+                "method": "EXACT",
+                "original": "북쪽으로는 바다를 끼고 남쪽으로는 한라산을 바라보고 있는 이곳은 제주시민은 물론 관광객도 즐겨 찾는다.",
+                "start": 205,
+                "submitted": "북쪽으로는 바다를 끼고 남쪽으로는 한라산을 바라보고 있는 이곳은 제주시민은 물론 관광객도 즐겨 찾는다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f27a7d37c67267e30a09a7e058558f905bae69e2f8fa1e2dfb58f138b4a30419"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.b",
+          "level": 3,
+          "reason": "바다·한라산을 바라보는 자연 환경 단서가 확인된다. 실제 고요함·혼잡은 확인할 수 없어 이 이상의 수준은 근거가 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT",
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "앵커는 '자연·시각적 저자극 환경이 두드러짐'이지만, 인용은 바다·한라산이 보인다는 서술이자 홍보 성격의 개요 문구다. 도심 속 공원이라는 맥락에서 실제 저자극성·고요함이 확인되지 않으며, 제안 사유 스스로 확인 수준임을 인정한다."
+        }
+      },
+      "reason": "앵커는 '자연·시각적 저자극 환경이 두드러짐'이지만, 인용은 바다·한라산이 보인다는 서술이자 홍보 성격의 개요 문구다. 도심 속 공원이라는 맥락에서 실제 저자극성·고요함이 확인되지 않으며, 제안 사유 스스로 확인 수준임을 인정한다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922",
+              "quote": {
+                "end": 443,
+                "method": "EXACT",
+                "original": "오후에 운동 겸 산책겸 사라봉을 오르면서 바다로 지는 일몰도 감상하고",
+                "start": 405,
+                "submitted": "오후에 운동 겸 산책겸 사라봉을 오르면서 바다로 지는 일몰도 감상하고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "f27a7d37c67267e30a09a7e058558f905bae69e2f8fa1e2dfb58f138b4a30419"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:15e796cfbfae3f31f5987681ea989f8d619e52a84d969097ab6757107bf7cea1",
+              "quote": {
+                "end": 20,
+                "method": "EXACT",
+                "original": "배트민턴장 / 축구장 / 지압시설 등",
+                "start": 0,
+                "submitted": "배트민턴장 / 축구장 / 지압시설 등",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8816df19b94e9cf85b249cb7204185dc540da545741f9a64d7be1677dc8b360f"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 3,
+          "reason": "오름 등반, 산책, 운동시설 이용 등 구체적 신체 참여 활동의 기회가 확인된다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "앵커 '지속적으로 참여·도전할 활동'에 비해 근거는 등반·산책 가능성과 운동시설의 존재 나열에 그친다. 낮은 동산의 등반과 시설 존재가 지속적 참여·도전 기회까지 제공한다는 직접 근거가 없으며, 제안 사유도 '기회 확인' 수준에 머문다."
+        }
+      },
+      "reason": "앵커 '지속적으로 참여·도전할 활동'에 비해 근거는 등반·산책 가능성과 운동시설의 존재 나열에 그친다. 낮은 동산의 등반과 시설 존재가 지속적 참여·도전 기회까지 제공한다는 직접 근거가 없으며, 제안 사유도 '기회 확인' 수준에 머문다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "88d62ba3e00fd54b797dd837ca292b1616ff3f4adca9922cf6053a07adbcd445",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "등대와 항구의 실루엣이 옛 항만 정취를 암시하지만, 전통 외관·재료의 시각적 특성은 미약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:01e86b6e5c09cb752a2248228911990d3fcc0c68d5120ed1475fd5856188c1db",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "096a5fc9c3ba2135f27f2ee6130eefc5329b5d834a64a4c90ed03d3df9375487",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406769",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "006e4aca48111d6b27700cd7f43d63b99fd6147ac7774fbaa3ee02133e76d96b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/69/3406769.jpg"
+        },
+        "record_sha256": "8b5973fa29afe264e0d4b6694a89d8a132fefff431d833f6b0d9c145b7a69742",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "주황빛 일몰 역광이 장면 전체를 지배하며, 수면의 금빛 반사와 실루엣 구도가 극적으로 연출된 이미지임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:36ae82c884b7955c803d1f446d7aad17edc42b3d7d16e05515a989603b114e97",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "096a5fc9c3ba2135f27f2ee6130eefc5329b5d834a64a4c90ed03d3df9375487",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406769",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "006e4aca48111d6b27700cd7f43d63b99fd6147ac7774fbaa3ee02133e76d96b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/69/3406769.jpg"
+        },
+        "record_sha256": "92112a0347d93d5710f0cddb8f3e393c40c53ec7ff2a9c8e0f0c01a30f7654a9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "강렬한 주황빛 일몰이 화면 전체를 지배하며, 태양과 수면 반사광이 극적인 시각적 연출을 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:45a82d12e8736d48ab857c6582c0cc8ecea2dc8ebb63347f565e1b7d88a940d6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "123d637ab4539a414c7b499f2f1857be83c27fa45c8d9c562aa844c9b825b0e1",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406863",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5f17f65b1961961e2e5b00a1c4d55476796f647e8825c97bbdff4c5c3f568e9c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/63/3406863.jpg"
+        },
+        "record_sha256": "c298b5acd13858a2cef6a33f3a40ba0522d03f696019621fcef62a79b7bf8b15",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓게 트인 바다와 수평선, 노을 하늘이 주요 배경으로 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:576ff175f5b32da59de78b20c3f5c3e96183646b412f27dc9ed85c40b5e9dfaa",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "123d637ab4539a414c7b499f2f1857be83c27fa45c8d9c562aa844c9b825b0e1",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406863",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5f17f65b1961961e2e5b00a1c4d55476796f647e8825c97bbdff4c5c3f568e9c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/63/3406863.jpg"
+        },
+        "record_sha256": "44ee092e2299cce75e3e6a76cc847bcd7855cc0b29650d4fb3f83ec4a290e207",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 바다, 지평선, 부두와 방파제 사이의 수면 등 자연 경관과 개방된 바다 배경이 화면 대부분을 차지함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5a35e29099b4bce373e0389a1a90e3d77618f758adddbc85f3abc38bb3ac9165",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "096a5fc9c3ba2135f27f2ee6130eefc5329b5d834a64a4c90ed03d3df9375487",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406769",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "006e4aca48111d6b27700cd7f43d63b99fd6147ac7774fbaa3ee02133e76d96b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/69/3406769.jpg"
+        },
+        "record_sha256": "dfb96e2d0c9365f9ae3e0af0b47ab1958bf95285dcd8aafafd5495ac918e0651",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 바다, 수평선, 하늘이 화면 대부분을 차지하고 자연 경관이 지배적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:793b4836fdbb2c2fbdee7ab73ea17fae9f41d6d86dbf637ba5df024e2106d4c2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f1167ae076bbe1f8cf1373f2e4c4cd599e752ff9c1a7da63e7557648d0ac64f8",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406811",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d4375c435c3822ea3e2a71eadb1414416933399ea6bd04459ec29427c90dbf60",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/11/3406811.jpg"
+        },
+        "record_sha256": "e12b8cfc2d6d14b9b5f1695d33c3e507148e985ed351487d69d61231d9dc3516",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "노을빛 주황·금색 하늘과 태양, 드라마틱한 구름이 장면 전체를 지배하며 강한 연출적 인상을 준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9a1bee9fa25c003ac843d78ed9f0d97ca107dc0093fca74522bb8e5f99483ea5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f1167ae076bbe1f8cf1373f2e4c4cd599e752ff9c1a7da63e7557648d0ac64f8",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406811",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d4375c435c3822ea3e2a71eadb1414416933399ea6bd04459ec29427c90dbf60",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/11/3406811.jpg"
+        },
+        "record_sha256": "d775c8dce1c05509cc117fc221f199cbd8124f829f4f6e2421dbea917c80c42b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "방파제와 등대 실루엣이 보이나 전통적 외관·재료의 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a2db35a9df94dc0d7e1b1b9715a17abe50e4287b1389743635a48324afdb1c59",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "123d637ab4539a414c7b499f2f1857be83c27fa45c8d9c562aa844c9b825b0e1",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406863",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5f17f65b1961961e2e5b00a1c4d55476796f647e8825c97bbdff4c5c3f568e9c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/63/3406863.jpg"
+        },
+        "record_sha256": "a064cc81b9dc1bf53c79cbe7f8d261a78a99329fe2efba4ddeef0204e9cd679a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성은 보이지 않고 항만 시설과 건물, 소나무 실루엣만 관찰된다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e5398dfca13760a76655cfe4c8e7b0bfd69b01015d0fae0a37d052203037e879",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f1167ae076bbe1f8cf1373f2e4c4cd599e752ff9c1a7da63e7557648d0ac64f8",
+        "match_basis": [
+          "공식 촬영지역 제주특별자치도 제주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3406811",
+          "request_sha256": "e90ffae11d017ad0458820fe65210f634ff1789b19b55873675a2bff18e27730",
+          "response_sha256": "a920772ce2a29214a83dd81017068ba849a2f957b707ecb7ba2b987a42e355d2",
+          "retrieved_at": "2026-09-11T02:04:04.655002Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d4375c435c3822ea3e2a71eadb1414416933399ea6bd04459ec29427c90dbf60",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/11/3406811.jpg"
+        },
+        "record_sha256": "ae10d8e45fb2bcf94fc7f88b928352d1278902fa12114f7d9181dd8b7e0a9b25",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:15e796cfbfae3f31f5987681ea989f8d619e52a84d969097ab6757107bf7cea1",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126454",
+          "request_sha256": "afbe6248ab5a67a57cd251e711b9a1a5d0793c7c4c064509511e3822857514b7",
+          "response_sha256": "791b8fbc3cfd5121a8e12bcd47985f1ea8cb807543dabc1313d18acf3acf5b20",
+          "retrieved_at": "2026-09-11T02:04:02.850304Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f0fe940a911c80578acf6be125d47f9e8d511516ffa78bb0f709585d22171f74",
+          "source_uri": null
+        },
+        "record_sha256": "8816df19b94e9cf85b249cb7204185dc540da545741f9a64d7be1677dc8b360f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "배트민턴장 / 축구장 / 지압시설 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:50d174514c4e02657a0ce9438d2fa8c15fd669e9650a4c2d09b7f1644228e922",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126454",
+          "request_sha256": "901fbfcb5df367b5d784601b1aa52dd9a4661daf5ec71029d035da6664361610",
+          "response_sha256": "05e84c15c440c11baa2d79bddac15eb2273c1e2b4c0259bb2bb560e69ea12d80",
+          "retrieved_at": "2026-09-10T16:39:52.856903Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-04-11T00:56:48Z",
+          "source_record_sha256": "dc7b586bac80d886c67c90ce023823bf0ad3b7288f7d13ff148c7a8e055de140",
+          "source_uri": null
+        },
+        "record_sha256": "f27a7d37c67267e30a09a7e058558f905bae69e2f8fa1e2dfb58f138b4a30419",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "사라봉 공원은 제주시 동문로터리에서 있는 낮은 동산이다. 사라봉 전체를 공원으로 조성하여 제주 시민들의 산책이나 운동 장소로 이용될 뿐만 아니라, 사라봉을 오르는 관광객들에게도 오름을 오르는 즐거움을 더하고 있다. 사봉낙조는 사라봉에서 바라보는 해넘이를 말하는데, 이곳에서 볼 수 있는 사봉낙조는 영주(제주도의 옛 명칭) 12경의 하나로 성산일출과 대조가 될만하다. 북쪽으로는 바다를 끼고 남쪽으로는 한라산을 바라보고 있는 이곳은 제주시민은 물론 관광객도 즐겨 찾는다. 사라봉입구 버스 정류장에서 공원으로 가는 길에 모충사가 있고 사라봉 동쪽에는 패러글라이딩 활공장이 있는 별도봉이 들어앉았다. 기슭에 우당도서관이 있는데 이곳에서 부터 사라봉 뒤편을 돌아 제주항을 거친 다음 탑동까지 가는 코스는 이름난 드라이브 코스이다. 오후에 운동 겸 산책겸 사라봉을 오르면서 바다로 지는 일몰도 감상하고, 시내에 하나 둘 들어오는 불빛을 바라보면, 자연과 도시의 아름다움을 한번에 느낄 수 있다. 도시의 불빛 뿐만 아니라, 항구 쪽에서 밝혀지는 불빛들은 바닷가에서만 만날 수 있는 또 다른 아름다움을 선사한다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b7c2b743f5d6360fd02b769b12e67249826b9f7ba10536fa402a5dd3966eec4e",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126454",
+          "request_sha256": "afbe6248ab5a67a57cd251e711b9a1a5d0793c7c4c064509511e3822857514b7",
+          "response_sha256": "791b8fbc3cfd5121a8e12bcd47985f1ea8cb807543dabc1313d18acf3acf5b20",
+          "retrieved_at": "2026-09-11T02:04:02.850304Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4fdf77be2d58e22eef4c558235a16ffeb89fb82dc587eeba8c9f563bd08ff937",
+          "source_uri": null
+        },
+        "record_sha256": "583d4105ef9e582d6de7bb823ff592f10404e4ee1be07a3d6aa1f5a0378a698a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d45c28c4bd9cb311ab38cefbcbf6fad80224bb18906ebe496af0b10f928724fc",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126454",
+          "request_sha256": "afbe6248ab5a67a57cd251e711b9a1a5d0793c7c4c064509511e3822857514b7",
+          "response_sha256": "791b8fbc3cfd5121a8e12bcd47985f1ea8cb807543dabc1313d18acf3acf5b20",
+          "retrieved_at": "2026-09-11T02:04:02.850304Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "11a3719046890c729900d660fc27041900591aa2d43302a9f1eec104d29c4f3e",
+          "source_uri": null
+        },
+        "record_sha256": "1104f7bbc5f51791426c95f6a759153d874550e31b36102dea953d2fc34ec36c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "791cdaecc809b2967573a3d6b586c742d36ffab6d035ae3b04fdcedec1e3d9ed",
+    "place": {
+      "address": "제주특별자치도 제주시 사라봉길 75 (건입동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+      "name_ko": "사라봉공원",
+      "place_id": "public:korea:4e834cf105c2676beadbe19162e8f911feae2535ca718c4a39c6bf91f62a46c0",
+      "provider_content_id": "126454",
+      "region_code": "50110",
+      "region_name": "제주특별자치도 제주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

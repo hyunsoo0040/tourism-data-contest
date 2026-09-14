@@ -114,18 +114,18 @@ def build_payload(source_html: Path) -> dict[str, object]:
         "axis_display": [
             {
                 "axis": "HISTORY_TRADITION",
-                "label_ko": "역사·전통",
-                "connective_ko": "역사·전통과",
+                "label_ko": "대상•원형형",
+                "connective_ko": "대상•원형형과",
             },
             {
                 "axis": "EMOTION_IMAGE",
-                "label_ko": "감성·이미지",
-                "connective_ko": "감성·이미지와",
+                "label_ko": "의미•이미지형",
+                "connective_ko": "의미•이미지형과",
             },
             {
                 "axis": "REST_IMMERSION",
-                "label_ko": "휴식·몰입",
-                "connective_ko": "휴식·몰입과",
+                "label_ko": "자기•몰입형",
+                "connective_ko": "자기•몰입형과",
             },
         ],
         "description_template_ko": (

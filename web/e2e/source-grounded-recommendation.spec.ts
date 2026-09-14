@@ -94,7 +94,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     const first = cards.first();
     const experienceComponents = run.items[0].contribution.experience.components;
     await expect(first.getByRole("meter")).toHaveCount(experienceComponents.filter((component: { fit: number | null }) => component.fit !== null).length);
-    const axisLabels: Record<string, string> = { H: "역사·전통", E: "감성·이미지", R: "휴식·몰입" };
+    const axisLabels: Record<string, string> = { H: "대상•원형형", E: "의미•이미지형", R: "자기•몰입형" };
     for (const component of experienceComponents) {
       const axis = first.locator(`[data-supported-axis="${component.key}"]`);
       if (component.fit === null) {

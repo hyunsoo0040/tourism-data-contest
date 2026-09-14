@@ -68,12 +68,15 @@ export type ExecutionDetail = {
 };
 
 export const OPERATIONS_REQUEST_TIMEOUT_MS = 10_000;
+export const LEGACY_RECOLLECTION_RETIRED = "LEGACY_RECOLLECTION_RETIRED";
+export const RETIRED_RECOLLECTION_MESSAGE = "기존 즉시 재수집은 종료되었습니다. 근거 기반 일일 분석은 운영 CLI에서 실행해 주세요.";
 
 export class OperationsApiError extends Error {
   constructor(
     readonly status: number,
     message: string,
     readonly reason: "http" | "timeout" | "network" | "response" = "http",
+    readonly code: string | null = null,
   ) {
     super(message);
   }
@@ -81,6 +84,7 @@ export class OperationsApiError extends Error {
 
 export function operationsErrorMessage(error: unknown, fallback: string): string {
   if (!(error instanceof OperationsApiError)) return fallback;
+  if (error.code === LEGACY_RECOLLECTION_RETIRED) return RETIRED_RECOLLECTION_MESSAGE;
   if (error.reason === "timeout") {
     return "운영 API 응답 시간이 초과되었습니다(10초). 새로고침해 다시 확인해 주세요.";
   }
@@ -115,7 +119,16 @@ async function requestJson<T>(path: string, init?: RequestInit): Promise<T> {
   try {
     if (controller.signal.aborted) throw new DOMException("request cancelled", "AbortError");
     const response = await fetch(path, { ...init, signal: controller.signal, cache: "no-store" });
-    if (!response.ok) throw new OperationsApiError(response.status, "operations request failed");
+    if (!response.ok) {
+      let code: string | null = null;
+      if (response.status === 410) {
+        const body: unknown = await response.json().catch(() => null);
+        if (typeof body === "object" && body !== null && "detail" in body && body.detail === LEGACY_RECOLLECTION_RETIRED) {
+          code = LEGACY_RECOLLECTION_RETIRED;
+        }
+      }
+      throw new OperationsApiError(response.status, "operations request failed", "http", code);
+    }
     try {
       return (await response.json()) as T;
     } catch (error) {

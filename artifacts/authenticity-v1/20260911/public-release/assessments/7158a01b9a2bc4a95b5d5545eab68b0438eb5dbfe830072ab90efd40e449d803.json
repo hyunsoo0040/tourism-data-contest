@@ -1,0 +1,1011 @@
+{
+  "assessed_at": "2026-09-11T18:28:41.059846Z",
+  "assessment_sha256": "7158a01b9a2bc4a95b5d5545eab68b0438eb5dbfe830072ab90efd40e449d803",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 60
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 44
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'안전지킴이·세이퍼 양성'이라는 이미지가 장소에 연결되어 있으나, 표현은 소개 수준에 머문다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:b08039b35901d53aaed2dd5a9cc189105ad8e2edcac7b4fbc3bd113b8e6d059d",
+            "appearance:d35e5a1b3c3dd1ff0a9ba14b7b9634e34e467ff5d39530eabe2b691b7e29bdb5",
+            "appearance:ecdffc8f2f1beb265264ae9028df48cd25106ac889736fa4e999e02cd2482e11"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "재난현장 재현 연출이 시각적 표현의 단서이나, 그 성격의 두드러짐에 대한 구체적 근거는 제한적이다.",
+      "value": 54
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "재난 장면 재현 체험을 직접 경험할 수 있다고 확인되지만, 이미지 재현이 방문 목적의 중심이라는 근거까지는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9e9ccdb869fd9d98e5df26b1c4e00f731539908eadbf9f4e2e8eb51b9f462829"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "여러 체험 주제 중 선택의 여지가 시사되지만, 자율 탐색의 범위는 제한적으로 보인다. 무료 입장('무료')만으로 자유를 추정하지 않는다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1ff3916f93c6cb752aba2c6b0a138e62725d611d576c2b55e81c1d2fd280f522",
+            "appearance:76ab1a3d6c5b34675af2cdbab724dfdde7b5286c87e0b510746a715bbcf02bcc",
+            "appearance:ba4d1898a6ac5d379f65b0a141ec54fae1e1c068a09d775d46d6001509ce3b75"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 0,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연 환경·시각적 저자극·회복 환경에 관한 근거가 제공되지 않았다.",
+      "value": 0
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "지진·화학재난 등 특화 체험과 교육·훈련 중심 구성으로 참여·집중 활동 기회가 확인되나, 방문 경험의 중심이라 단정할 근거는 제한적이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "안전문화 교류 공간이 언급되어 교류 기회의 단서는 있으나, 구체적 공동 활동·자기표현의 풍부함에 대한 근거는 제한적이다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "울산안전체험관은 재난 대응 체험 시설로, 확인된 실제 원형·유산과의 접촉에 관한 근거가 제공되지 않았다. 재현 시설이라는 설명은 유산 접촉을 뒷받침하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관 연도나 제작사 실적 외에 이 장소 자체의 역사·출처 맥락에 관한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "제안된 인용은 안전 기초상식 교육에 관한 것으로, 유산·전통에 연결된 해설·탐구(H.d)의 근거가 아니다. 앵커 '유산·전통에 연결된 설명·전시'는 자료 어디에서도 뒷받침되지 않으며, 안전교육 내용을 원형 맥락 탐구로 확대할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86",
+          "quote": {
+            "end": 49,
+            "method": "EXACT",
+            "original": "재난의 위기상황에서 스스로 극복해 내는 안전지킴이를 양성하는 전문체험기관",
+            "start": 9,
+            "submitted": "재난의 위기상황에서 스스로 극복해 내는 안전지킴이를 양성하는 전문체험기관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6277389a58445c866549b5accb25b634429c85f8585e6103f522d64df681ddfa"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'안전지킴이·세이퍼 양성'이라는 이미지가 장소에 연결되어 있으나, 표현은 소개 수준에 머문다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 관한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86",
+          "quote": {
+            "end": 94,
+            "method": "EXACT",
+            "original": "재난현장을 그대로 재현하고 전문교관을 배치해",
+            "start": 70,
+            "submitted": "재난현장을 그대로 재현하고 전문교관을 배치해",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6277389a58445c866549b5accb25b634429c85f8585e6103f522d64df681ddfa"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "재난현장 재현 연출이 시각적 표현의 단서이나, 그 성격의 두드러짐에 대한 구체적 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86",
+          "quote": {
+            "end": 544,
+            "method": "EXACT",
+            "original": "울산시민의 경험을 스토리로 연결 울산만의 지역성을 고려하고, 그 안의 시민에게 가상의 경험을 배경으로 하는 실질적이고 현실성 있는 체험을 연출",
+            "start": 465,
+            "submitted": "울산시민의 경험을 스토리로 연결 울산만의 지역성을 고려하고, 그 안의 시민에게 가상의 경험을 배경으로 하는 실질적이고 현실성 있는 체험을 연출",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6277389a58445c866549b5accb25b634429c85f8585e6103f522d64df681ddfa"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "재난 장면 재현 체험을 직접 경험할 수 있다고 확인되지만, 이미지 재현이 방문 목적의 중심이라는 근거까지는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:9e9ccdb869fd9d98e5df26b1c4e00f731539908eadbf9f4e2e8eb51b9f462829",
+          "quote": {
+            "end": 34,
+            "method": "EXACT",
+            "original": "기초안전 / 교통안전 / 화재안전 / 응급처치 / 지진안전 등",
+            "start": 0,
+            "submitted": "기초안전 / 교통안전 / 화재안전 / 응급처치 / 지진안전 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6030a83ccb52da1b07ba6bb734886a09f3538f453e1bda40c4c4ae15cb5776da"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "여러 체험 주제 중 선택의 여지가 시사되지만, 자율 탐색의 범위는 제한적으로 보인다. 무료 입장('무료')만으로 자유를 추정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경·시각적 저자극·회복 환경에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86",
+          "quote": {
+            "end": 436,
+            "method": "EXACT",
+            "original": "교육과 훈련 중심이 되는 곳",
+            "start": 421,
+            "submitted": "교육과 훈련 중심이 되는 곳",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6277389a58445c866549b5accb25b634429c85f8585e6103f522d64df681ddfa"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86",
+          "quote": {
+            "end": 123,
+            "method": "EXACT",
+            "original": "전문교관을 배치해 스스로를 지킬 수 있는 능력을 키우는데 최적화하였다",
+            "start": 85,
+            "submitted": "전문교관을 배치해 스스로를 지킬 수 있는 능력을 키우는데 최적화하였다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6277389a58445c866549b5accb25b634429c85f8585e6103f522d64df681ddfa"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "지진·화학재난 등 특화 체험과 교육·훈련 중심 구성으로 참여·집중 활동 기회가 확인되나, 방문 경험의 중심이라 단정할 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86",
+          "quote": {
+            "end": 346,
+            "method": "EXACT",
+            "original": "안전문화 교류를 위한 곳",
+            "start": 333,
+            "submitted": "안전문화 교류를 위한 곳",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6277389a58445c866549b5accb25b634429c85f8585e6103f522d64df681ddfa"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 2,
+      "reason": "안전문화 교류 공간이 언급되어 교류 기회의 단서는 있으나, 구체적 공동 활동·자기표현의 풍부함에 대한 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "a160949ee2c2d3a525ff6c1c17c9d398b05942b3dfd221c1404c58b062be793e",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86",
+              "quote": {
+                "end": 331,
+                "method": "EXACT",
+                "original": "안전에 대한 기초상식을 제공하며 직관적이고 실질적인 체험방식의 어린이 안전교육",
+                "start": 288,
+                "submitted": "안전에 대한 기초상식을 제공하며 직관적이고 실질적인 체험방식의 어린이 안전교육",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6277389a58445c866549b5accb25b634429c85f8585e6103f522d64df681ddfa"
+            }
+          ],
+          "flags": [],
+          "key": "H.d",
+          "level": 2,
+          "reason": "안전 기초상식 제공과 교육·체험 해설이 확인되지만, 이는 유산·전통이 아닌 안전 교육 해설이므로 낮은 수준의 안내로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "WRONG_FACET"
+          ],
+          "key": "H.d",
+          "reason": "제안된 인용은 안전 기초상식 교육에 관한 것으로, 유산·전통에 연결된 해설·탐구(H.d)의 근거가 아니다. 앵커 '유산·전통에 연결된 설명·전시'는 자료 어디에서도 뒷받침되지 않으며, 안전교육 내용을 원형 맥락 탐구로 확대할 수 없다."
+        }
+      },
+      "reason": "제안된 인용은 안전 기초상식 교육에 관한 것으로, 유산·전통에 연결된 해설·탐구(H.d)의 근거가 아니다. 앵커 '유산·전통에 연결된 설명·전시'는 자료 어디에서도 뒷받침되지 않으며, 안전교육 내용을 원형 맥락 탐구로 확대할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "28183a6afd64b53a5066068b7456d39e9ce0031fe999f09f4a9429c84678965e",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "완전한 실내 교육 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 거의 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1ff3916f93c6cb752aba2c6b0a138e62725d611d576c2b55e81c1d2fd280f522",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d93019402d182cd37d043a8dc5d7745ef5323069c7bf608a5f2077363407e06e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534603_5",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b9eec4397239c26f646a9e340b58b85be3abd68c26ad71f68c0ee47291d56d6e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/03/3534603_image2_1.jpg"
+        },
+        "record_sha256": "dfede3b33653c32ff9c793866ae1d61b7bcf26c497c05dea4a7936d99dc68346",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시 공간으로 녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않음. 포스터 속 삽화는 실제 환경 단서가 아님.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:76ab1a3d6c5b34675af2cdbab724dfdde7b5286c87e0b510746a715bbcf02bcc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e9ec2b6247e3a6e6ec6fdece90a5b62d3ed3fca32a0811e79cb5ad941095aa6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534601_3",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b97b82e4681add4db6b5c1afa6c800cfd7296de30b35841490090eeb93e71cd4",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/01/3534601_image2_1.jpg"
+        },
+        "record_sha256": "fe0389dfd1aa16565376790048152a5447a16d537e1c05dcb542c7e18ca3f011",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 재료나 전통적 공간 구성의 시각적 특성은 보이지 않으며 현대적 전시 연출만 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:77dd0a0da89d1c80edb03879ca28c6f8b566dc1f0c4766a134b17f3c0aaac010",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6ce1a9943179e6203bc3600847a31a7d67809cdf6164a9723a59ef9c6e48a931",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534605_6",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bbc83cbe4a36e107e2a73034ad8abbcb9df1d1647af759bbd1fa25f0a7a276c0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/05/3534605_image2_1.jpg"
+        },
+        "record_sha256": "36c7a84e8da8a479024a43d470223eb6c82bc54cc079b81438fd8176304294aa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "그을리거나 불에 탄 주방 배경과 선명한 빨강 소화기들의 강한 대비가 장면 전체를 지배하는 연출적 구성이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b08039b35901d53aaed2dd5a9cc189105ad8e2edcac7b4fbc3bd113b8e6d059d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6ce1a9943179e6203bc3600847a31a7d67809cdf6164a9723a59ef9c6e48a931",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534605_6",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bbc83cbe4a36e107e2a73034ad8abbcb9df1d1647af759bbd1fa25f0a7a276c0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/05/3534605_image2_1.jpg"
+        },
+        "record_sha256": "b0a46c4b5051d810f72808fddfb08836f0623f1cce6e296bb6522948bc82f3e3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관, 재료, 공간 구성의 시각적 특성이 보이지 않는 현대적 실내 시설임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b67cb39332a2345a66e7f739f513da25211d92f167cb0deb4275d5c0f5f1870e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d93019402d182cd37d043a8dc5d7745ef5323069c7bf608a5f2077363407e06e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534603_5",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b9eec4397239c26f646a9e340b58b85be3abd68c26ad71f68c0ee47291d56d6e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/03/3534603_image2_1.jpg"
+        },
+        "record_sha256": "27033e7323064803bce6090069870fe9c0cf0fc7695e50cc2624fca481415667",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지·물·자연 경관 등 자연 환경 단서는 보이지 않는 실내 전시 공간이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ba4d1898a6ac5d379f65b0a141ec54fae1e1c068a09d775d46d6001509ce3b75",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6ce1a9943179e6203bc3600847a31a7d67809cdf6164a9723a59ef9c6e48a931",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534605_6",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "bbc83cbe4a36e107e2a73034ad8abbcb9df1d1647af759bbd1fa25f0a7a276c0",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/05/3534605_image2_1.jpg"
+        },
+        "record_sha256": "7dbf59ced015b3008fb50bcc60d2d6e6982dbd562b2590a7acccf56fbfdaaa17",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "어두운 패널에 캐릭터 마스코트와 인포그래픽 포스터가 배치된 전시 입구로, 그래픽 연출이 보이나 실내 전시관 특유의 기능적 구성이라 두드러진 편은 아님.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d35e5a1b3c3dd1ff0a9ba14b7b9634e34e467ff5d39530eabe2b691b7e29bdb5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e9ec2b6247e3a6e6ec6fdece90a5b62d3ed3fca32a0811e79cb5ad941095aa6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534601_3",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b97b82e4681add4db6b5c1afa6c800cfd7296de30b35841490090eeb93e71cd4",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/01/3534601_image2_1.jpg"
+        },
+        "record_sha256": "97348b0813f05c9bc97e70f3ebbcfbff247d77f32631268176049c72c7a7f9ab",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 전시관 인테리어와 그래픽 패널, 유리 자동문 등 전통적 외관·재료·공간 구성의 시각적 특성이 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e65952dbe53e4e56ba053b1f282d5b30c5d90121d767a41b63417b6c8fce039b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e9ec2b6247e3a6e6ec6fdece90a5b62d3ed3fca32a0811e79cb5ad941095aa6",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534601_3",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b97b82e4681add4db6b5c1afa6c800cfd7296de30b35841490090eeb93e71cd4",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/01/3534601_image2_1.jpg"
+        },
+        "record_sha256": "1283ffc4d379a0194d3de0b8f5b21690008e8ad308195bc4fec2bac6599db3ae",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "다수의 심폐소생술 훈련용 인형이 주황 매트 위에 규칙적으로 반복 배치되어 리듬감 있는 구도를 이루며, 벽면 그래픽과 스크린이 함께 보이는 실내 교육 공간의 시각적 성격이 보통 수준으로 드러남",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ecdffc8f2f1beb265264ae9028df48cd25106ac889736fa4e999e02cd2482e11",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d93019402d182cd37d043a8dc5d7745ef5323069c7bf608a5f2077363407e06e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3534603_5",
+          "request_sha256": "1d9294d13b5b5c2fdffe81aaabf4f63c6b977784bb0a1d701c428ee4278a6e61",
+          "response_sha256": "97cc5a2ee2b450346a049fdd26bf684ef273dd4c4efe4fcf3c1070d4fdc9b1c8",
+          "retrieved_at": "2026-09-10T08:26:47.381356Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b9eec4397239c26f646a9e340b58b85be3abd68c26ad71f68c0ee47291d56d6e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/03/3534603_image2_1.jpg"
+        },
+        "record_sha256": "767a959ac2c5583622cf710b6ffe65478651f24f32cd4251ee9cb668ab16aafb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:014bd46cde01c7a3dbae46473b23d17c4dfab1c2999096ad3069272cddb55d2f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2638480",
+          "request_sha256": "9a15ff62c69f4f350f360673e9354e47204a05a35d022aa18c3586fff2deb22a",
+          "response_sha256": "fc2f22181c36cb21f1b38a3f92b4393fd255664d6d0e1ae8d18d7f0c4b0c5c96",
+          "retrieved_at": "2026-09-10T08:26:46.689913Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0b63745ee0407f166e75bfa9c418a3fe285d5970224eb8cbedbb84b452bc4018",
+          "source_uri": null
+        },
+        "record_sha256": "8aca8a3d1457b9d2a33676598f95d801cc4cdea62dcdc9646903a3a8f6dc6647",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:87edf51b19ba63932a1b914484b9fc75d9405fde79841bc4ca5afea96e880f86",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2638480",
+          "request_sha256": "9e0e80eac2f25aa1e2b0472f0ca2aacfece75a7b1978b6ea9a8086c58ccd34a5",
+          "response_sha256": "469fcf9cb37d78f02d7fb16115506e61b47616cd8b8912eb349bdfc124f90a3d",
+          "retrieved_at": "2026-09-10T07:55:27.887171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-23T05:30:00Z",
+          "source_record_sha256": "ce1a86bf04930422f407dd591bd185a22105297cbb4e982c158b8c8855934bdb",
+          "source_uri": null
+        },
+        "record_sha256": "6277389a58445c866549b5accb25b634429c85f8585e6103f522d64df681ddfa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "울산안전체험관은 재난의 위기상황에서 스스로 극복해 내는 안전지킴이를 양성하는 전문체험기관이다. 일상생활 속에서 겪을 수 있는 재난현장을 그대로 재현하고 전문교관을 배치해 스스로를 지킬 수 있는 능력을 키우는데 최적화하였다. 특히, 지역적 특성을 고려한 지진과 원자력, 화학재난 등의 특화시설은 전국 최고 수준을 자랑하며, 교육과 체험을 통해 다양한 재난사고를 예방에서 대응까지 행동하는 세이퍼가 될 수 있다. 체험관은 총 3층으로 구성되어 있으며, 각 층마다 주제도 다르게 구성되어 있다. 1층은 기초안전공간으로, 안전에 대한 기초상식을 제공하며 직관적이고 실질적인 체험방식의 어린이 안전교육과 안전문화 교류를 위한 곳이다. 2층은 생활안전공간으로, 생활 속 안전사고 대처능력 강화 재난의 원인, 그리고 발생, 대응에 이르기까지 실전대처 능력을 높이고 교육과 훈련 중심이 되는 곳이다. 마지막 3층은 재난안전(지역특화) 공간으로, 울산시민의 경험을 스토리로 연결 울산만의 지역성을 고려하고, 그 안의 시민에게 가상의 경험을 배경으로 하는 실질적이고 현실성 있는 체험을 연출하고 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9e9ccdb869fd9d98e5df26b1c4e00f731539908eadbf9f4e2e8eb51b9f462829",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "2638480",
+          "request_sha256": "9a15ff62c69f4f350f360673e9354e47204a05a35d022aa18c3586fff2deb22a",
+          "response_sha256": "7feb4834335b59c8ed548698e80ac2ef384a482d369ca10d6fd669e290036d30",
+          "retrieved_at": "2026-09-10T07:55:28.266232Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b252e9c4f8781b47039bb6bc2fd8473197ec9aaa65ec951091944096014c42a0",
+          "source_uri": null
+        },
+        "record_sha256": "6030a83ccb52da1b07ba6bb734886a09f3538f453e1bda40c4c4ae15cb5776da",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "기초안전 / 교통안전 / 화재안전 / 응급처치 / 지진안전 등 ※ 자세한 사항은 홈페이지 확인"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fd5294c605d0f9ab20b4025a60c308eef358d4dc8338a931f92c7b864b58ff09",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2638480",
+          "request_sha256": "9a15ff62c69f4f350f360673e9354e47204a05a35d022aa18c3586fff2deb22a",
+          "response_sha256": "fc2f22181c36cb21f1b38a3f92b4393fd255664d6d0e1ae8d18d7f0c4b0c5c96",
+          "retrieved_at": "2026-09-10T08:26:46.689913Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b210ed12e3ca3b2a4d35b46b5c1bcb8f7907fdbdc0746823c1d3863e7b832131",
+          "source_uri": null
+        },
+        "record_sha256": "3d9091af7c1dd9f349350be5903b89098aca8ed54718d18d3e1d1702a7758f34",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "7bf5d4ea10d89323c0893ff1da964f2b68140bc7f0063a90c339e50a1ea9bfa6",
+    "place": {
+      "address": "울산광역시 북구 산하중앙2로 87-33 (정자동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+      "name_ko": "울산안전체험관",
+      "place_id": "public:korea:a97e5e6eed60dbd97c118f312536266eafbb9a0b78997ac85047afdfaf322fc7",
+      "provider_content_id": "2638480",
+      "region_code": "31200",
+      "region_name": "울산광역시 북구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

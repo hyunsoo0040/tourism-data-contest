@@ -1,0 +1,928 @@
+{
+  "assessed_at": "2026-09-11T17:12:31.256357Z",
+  "assessment_sha256": "66e3d93ee58eecf2f91d8b22e6da70b4cffd2babed9f8b8ee85e69e7e60dfd7f",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 53
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.d"
+      ],
+      "value": 66
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "대표적 관광지이자 레포츠·캠핑·낚시의 이미지가 장소에 연결된 간단한 이미지 표현으로 확인된다. 다만 여러 표현에서의 일관된 의미 확인 근거는 없어 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:21950ec99a5039546622654ed8b30c832dbcb48d5f29a4c231382fd7a8c38348",
+            "appearance:5fe4a20c5238053fc30854e8ef756109f7ecf096a83c1712a55f10a7dde610e5",
+            "appearance:6998a295b097d836b56c3712945d328b184b7452e0c7f11ce4ee9111e69fcf2f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "공식 개요에서 홍천강 유역과 강변의 시각적 풍경(자갈과 모래가 덮인 강변, 넓은 강 유역)이 직접 기술되어 있다. 다만 일관되게 장면을 지배하는 연출 수준의 근거는 없어 수준 2(제한된 색·빛·형태의 표현)로 판단한다. 이전 repair 제안의 VISUAL_APPEARANCE claim은 해당 출처의 allowed_claims에 없어 VISUAL_EXPRESSION으로 교정했다.",
+      "value": 56
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:166eb8c52b25d21fcd2ef8a62cf2faec8dd795e4151f62611b843ff77ec0bf5e",
+            "appearance:6b5cda6353e2af71b4a94dc07f47e120b2dc88d9bf5725ff95227aa03e3ce8fe",
+            "appearance:ff04cb6e88d0753efddc1f3ef06617ab5097150139ab7eda08bc8053cab99f76"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "차고 깨끗한 물, 넓은 강변, 자연 계곡 등 자연 환경 단서가 확인된다. 일부는 '한적한 편'이라고 하나 강 전체의 고요함·혼잡 상태를 확정할 수 없어 수준 3으로 판단했다.",
+      "value": 81
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "축제를 통한 공동 참여·교류 기회가 확인된다. 다만 교류·자기표현이 풍부하거나 방문 경험의 중심이라는 근거는 없어 수준 2로 판단했다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "홍천강이 하천이라 물리적 원형(자연하천) 자체는 존재하나, 확인된 문화유산 실물과의 접촉을 지원하는 근거가 이 장소 대상으로 제시되지 않았다. 수타사는 '주변' 명소 언급이므로 THIS_PLACE의 유산 접촉 경험으로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "지류·발원지 등 지리적 사실만 있고 홍천강의 역사·연혁·사건·인물 맥락에 대한 서사가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 뒷받침하는 근거가 없다. 전설적 지명 언급은 현재 전승 활동의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·전통과 연결된 해설·학습 자료가 제공된다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385",
+          "quote": {
+            "end": 120,
+            "method": "EXACT",
+            "original": "홍천강은 강원도의 대표적인 관광지로, 강 유역이 넓고 주변에 관광지가 많아 레포츠, 캠핑, 낚시 등 다양한 활동을 즐길 수 있다.",
+            "start": 48,
+            "submitted": "홍천강은 강원도의 대표적인 관광지로, 강 유역이 넓고 주변에 관광지가 많아 레포츠, 캠핑, 낚시 등 다양한 활동을 즐길 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "401c5ee13993327b5e8e72c00d481143d5f9f21b49a1620335858e8ec8cd74e6"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "대표적 관광지이자 레포츠·캠핑·낚시의 이미지가 장소에 연결된 간단한 이미지 표현으로 확인된다. 다만 여러 표현에서의 일관된 의미 확인 근거는 없어 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "홍천강의 이미지를 재현·확산하는 작품·홍보·매체 표현에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385",
+          "quote": {
+            "end": 306,
+            "method": "EXACT",
+            "original": "밤벌유원지는 강변에 덮인 자갈과 모래가 아름다운 풍경을 자아낸다.",
+            "start": 270,
+            "submitted": "밤벌유원지는 강변에 덮인 자갈과 모래가 아름다운 풍경을 자아낸다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "401c5ee13993327b5e8e72c00d481143d5f9f21b49a1620335858e8ec8cd74e6"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "공식 개요에서 홍천강 유역과 강변의 시각적 풍경(자갈과 모래가 덮인 강변, 넓은 강 유역)이 직접 기술되어 있다. 다만 일관되게 장면을 지배하는 연출 수준의 근거는 없어 수준 2(제한된 색·빛·형태의 표현)로 판단한다. 이전 repair 제안의 VISUAL_APPEARANCE claim은 해당 출처의 allowed_claims에 없어 VISUAL_EXPRESSION으로 교정했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험하거나 재현할 수 있는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "제시된 근거는 여러 활동·유원지의 나열로, '자율적으로 선택·탐색할 기회' 수준까지만 뒷받침된다. 제안 앵커인 '여유롭게 자신의 방식으로 탐색'은 방문자가 자신의 방식으로 여유롭게 탐색하는 경험의 질을 요구하며 이를 직접 뒷받침하는 근거가 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385",
+          "quote": {
+            "end": 233,
+            "method": "EXACT",
+            "original": "물이 차고 깨끗한 최상류의 굴지리유원지는 한적한 편이며",
+            "start": 203,
+            "submitted": "물이 차고 깨끗한 최상류의 굴지리유원지는 한적한 편이며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "401c5ee13993327b5e8e72c00d481143d5f9f21b49a1620335858e8ec8cd74e6"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "차고 깨끗한 물, 넓은 강변, 자연 계곡 등 자연 환경 단서가 확인된다. 일부는 '한적한 편'이라고 하나 강 전체의 고요함·혼잡 상태를 확정할 수 없어 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "낚시·산행·수상 스포츠 등 구체적 참여 활동은 확인되나, 제안 앵커인 '지속적으로 참여·도전할 활동'이 실제로 가능한지는 '즐길 수 있다'는 홍보성 서술만으로 판단이 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385",
+          "quote": {
+            "end": 510,
+            "method": "EXACT",
+            "original": "홍천강 오토캠핑장에서는 매년 별빛음악 맥주축제를 개최하며, 1월에는 겨울철 대표축제중 하나인 홍천강 꽁꽁축제가 열린다.",
+            "start": 444,
+            "submitted": "홍천강 오토캠핑장에서는 매년 별빛음악 맥주축제를 개최하며, 1월에는 겨울철 대표축제중 하나인 홍천강 꽁꽁축제가 열린다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "401c5ee13993327b5e8e72c00d481143d5f9f21b49a1620335858e8ec8cd74e6"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "축제를 통한 공동 참여·교류 기회가 확인된다. 다만 교류·자기표현이 풍부하거나 방문 경험의 중심이라는 근거는 없어 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385",
+              "quote": {
+                "end": 120,
+                "method": "EXACT",
+                "original": "강 유역이 넓고 주변에 관광지가 많아 레포츠, 캠핑, 낚시 등 다양한 활동을 즐길 수 있다.",
+                "start": 69,
+                "submitted": "강 유역이 넓고 주변에 관광지가 많아 레포츠, 캠핑, 낚시 등 다양한 활동을 즐길 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "401c5ee13993327b5e8e72c00d481143d5f9f21b49a1620335858e8ec8cd74e6"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 3,
+          "reason": "여러 유원지·계곡에서 낚시, 산행, 수상 스포츠 등 다양한 활동 중 선택할 수 있는 자율적 기회가 확인된다. 자기 방식의 여유로운 탐색이 중심이라는 근거는 없어 수준 3으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "제시된 근거는 여러 활동·유원지의 나열로, '자율적으로 선택·탐색할 기회' 수준까지만 뒷받침된다. 제안 앵커인 '여유롭게 자신의 방식으로 탐색'은 방문자가 자신의 방식으로 여유롭게 탐색하는 경험의 질을 요구하며 이를 직접 뒷받침하는 근거가 없다."
+        }
+      },
+      "reason": "제시된 근거는 여러 활동·유원지의 나열로, '자율적으로 선택·탐색할 기회' 수준까지만 뒷받침된다. 제안 앵커인 '여유롭게 자신의 방식으로 탐색'은 방문자가 자신의 방식으로 여유롭게 탐색하는 경험의 질을 요구하며 이를 직접 뒷받침하는 근거가 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385",
+              "quote": {
+                "end": 361,
+                "method": "EXACT",
+                "original": "수심이 깊어 보트 놀이와 제트스키 등의 수상 스포츠를 즐길 수 있다",
+                "start": 324,
+                "submitted": "수심이 깊어 보트 놀이와 제트스키 등의 수상 스포츠를 즐길 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "401c5ee13993327b5e8e72c00d481143d5f9f21b49a1620335858e8ec8cd74e6"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "낚시, 산행, 보트·제트스키 등 구체적 참여·탐방 활동이 확인된다. 지속적 도전·집중 활동이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "낚시·산행·수상 스포츠 등 구체적 참여 활동은 확인되나, 제안 앵커인 '지속적으로 참여·도전할 활동'이 실제로 가능한지는 '즐길 수 있다'는 홍보성 서술만으로 판단이 어렵다."
+        }
+      },
+      "reason": "낚시·산행·수상 스포츠 등 구체적 참여 활동은 확인되나, 제안 앵커인 '지속적으로 참여·도전할 활동'이 실제로 가능한지는 '즐길 수 있다'는 홍보성 서술만으로 판단이 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "5421d0a066b91c7526ce159fbb00f6f56205227a8cb4f99f1146e9a62aa22c14",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "기와 지붕으로 추정되는 소규모 건물과 옛 다리 흔적이 보이나 매우 작게 나타나 전통 외관의 존재감이 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0e5409827c231d33af5d0e57d51ff435e26fd5265441eabdb84a4d258b7e14bd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "75f4d99e59fc29486c417e9f5fdcb5718fc98398cb25fe77bf628147080eb49e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584664_3",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8d5c7b05d507b75b3a6a657540282ac8e44084ecd79a9e60c6e46770d991e9b4",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3584664_image2_1.jpg"
+        },
+        "record_sha256": "1535d91b121bfb6adb2e4b833080e980383e7101abe503d9d0e4ea947e7a27cf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "강, 암벽, 나지막한 산 능선, 갈대밭 등 자연 경관이 화면 대부분을 차지하며 트인 계곡 풍경이 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:166eb8c52b25d21fcd2ef8a62cf2faec8dd795e4151f62611b843ff77ec0bf5e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "75f4d99e59fc29486c417e9f5fdcb5718fc98398cb25fe77bf628147080eb49e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584664_3",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8d5c7b05d507b75b3a6a657540282ac8e44084ecd79a9e60c6e46770d991e9b4",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3584664_image2_1.jpg"
+        },
+        "record_sha256": "88b20d17f1305c95fe7b6d9991892384c8c7ac92b01067744cdd6d3b68b4634d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "청록색 강물과 갈색 산세, 푸른 하늘의 대비가 뚜렷하고 광활한 계곡을 내려다보는 항공 구도가 장면을 지배적으로 이끈다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:21950ec99a5039546622654ed8b30c832dbcb48d5f29a4c231382fd7a8c38348",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "75f4d99e59fc29486c417e9f5fdcb5718fc98398cb25fe77bf628147080eb49e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584664_3",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8d5c7b05d507b75b3a6a657540282ac8e44084ecd79a9e60c6e46770d991e9b4",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/64/3584664_image2_1.jpg"
+        },
+        "record_sha256": "c60d98e377733f4057d6c105022af3b0fa730d7af9abc23aebd1ffa0e770af7c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "건축물은 멀리 저개발 마을 형태로 작게 보일 뿐, 전통 외관·재료·공간 구성의 뚜렷한 시각적 특성은 거의 확인되지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5d57407f2941aa7ecdf24905cce9d0959d43aab7b32e8f205fcfc33d8f74c93d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8c483d055d0bbb1325d487a960c7b2a261b7d2c20579c1fce38f51a9995032f8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584665_4",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f9c01b9b376a598217844060e2c5af223da0dbb847481477c474e5407f560140",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/65/3584665_image2_1.jpg"
+        },
+        "record_sha256": "8611422960d3403c2d776b4b411c2a3f3883b97f4f164f4e022a71c155532e52",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "강과 산이 대각선으로 배치된 광활한 풍경 사진으로, 새벽/석양의 은은한 빛과 수면 반사가 절제된 색조 속에서 인상적인 구도를 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5fe4a20c5238053fc30854e8ef756109f7ecf096a83c1712a55f10a7dde610e5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8c483d055d0bbb1325d487a960c7b2a261b7d2c20579c1fce38f51a9995032f8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584665_4",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f9c01b9b376a598217844060e2c5af223da0dbb847481477c474e5407f560140",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/65/3584665_image2_1.jpg"
+        },
+        "record_sha256": "1e0fa0f4c0b6ca397cb5339e27bfef399127e95acc42e2c2c662f005f9d1364b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하천이 계곡을 따라 굽이치고 갈밭·암벽·도로가 대비를 이루는 광활한 항공 구도가 장면을 지배할 정도로 인상적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6998a295b097d836b56c3712945d328b184b7452e0c7f11ce4ee9111e69fcf2f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "69cfd2cc603761f4e1dc7a373837f5814df9725101cd2c8b4fa4a18a9c2efa1a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584661_1",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c8191cc57db2776fb06f24cd2131664a83cc58fda890287638825405310752af",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/61/3584661_image2_1.jpg"
+        },
+        "record_sha256": "160391568fe6d9566467d1913d10345455961db196b5e3cc5caa18f4f2ebc08b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "바위산, 강, 넓은 갈대·억새 평원, 완만한 산 능선 등 자연 경관이 화면 대부분을 차지한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6b5cda6353e2af71b4a94dc07f47e120b2dc88d9bf5725ff95227aa03e3ce8fe",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "69cfd2cc603761f4e1dc7a373837f5814df9725101cd2c8b4fa4a18a9c2efa1a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584661_1",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c8191cc57db2776fb06f24cd2131664a83cc58fda890287638825405310752af",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/61/3584661_image2_1.jpg"
+        },
+        "record_sha256": "2430dce10ad76bc16adf4b3056533432080f28f21ca36a2f53b92c38be6f229e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "좌측 모서리의 작은 건물과 다리 등 근대적 시설이 보이며 전통적 외관 요소는 뚜렷하지 않다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e9e3a455d157540b14ed5fb2ef006084604c14c4e776a9fd52f05be9f1f3b92a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "69cfd2cc603761f4e1dc7a373837f5814df9725101cd2c8b4fa4a18a9c2efa1a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584661_1",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c8191cc57db2776fb06f24cd2131664a83cc58fda890287638825405310752af",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/61/3584661_image2_1.jpg"
+        },
+        "record_sha256": "d56258bdae48890096a458791838c684c9befa366db3a44df4262ed89b045bef",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 강, 바위 절벽, 둘레의 산과 하천변 초지 등 자연 경관이 화면 전체를 지배하며, 원경의 산까지 트인 자연 배경이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ff04cb6e88d0753efddc1f3ef06617ab5097150139ab7eda08bc8053cab99f76",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8c483d055d0bbb1325d487a960c7b2a261b7d2c20579c1fce38f51a9995032f8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3584665_4",
+          "request_sha256": "15433622d442b8283e9ee059fe64fe4d9b5c1f5d6142d774b9e20c176132b9e8",
+          "response_sha256": "578d26c54194eeef6020dd90956866211bf4d20f0881025beedbd57c607102c1",
+          "retrieved_at": "2026-09-10T08:23:27.709436Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f9c01b9b376a598217844060e2c5af223da0dbb847481477c474e5407f560140",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/65/3584665_image2_1.jpg"
+        },
+        "record_sha256": "f94453bfbe3901d145ac09df89bcfb1345b98438f1c42a3d2a8c34c95e0ab1b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3db0977fae7c60f8e71f96db24631503376dc65ec69bf0b096b7377d763ae385",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "125745",
+          "request_sha256": "fb2c9e309b70df9b4270df11af67bd363e512995d6430b64fdf710e2f546eb14",
+          "response_sha256": "811745769f7633baa233f5fc7340c6f8b8bc164732e6f47e6b1cc6042916c976",
+          "retrieved_at": "2026-09-10T08:04:29.779761Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-22T02:09:25Z",
+          "source_record_sha256": "288d59ae113effe88c457826a4c3c770d04b1b5c8297a33332b257d5e560671b",
+          "source_uri": null
+        },
+        "record_sha256": "401c5ee13993327b5e8e72c00d481143d5f9f21b49a1620335858e8ec8cd74e6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "홍천강은 한강의 주요한 지류로, 강원도 홍천군 서석면에서 발원하여 청평호로 흘러든다. 홍천강은 강원도의 대표적인 관광지로, 강 유역이 넓고 주변에 관광지가 많아 레포츠, 캠핑, 낚시 등 다양한 활동을 즐길 수 있다. 수심이 낮고 수온이 따뜻하며,어종이 다양하고 풍부해 어느 곳에서나 낚시가 가능하다. 상류에서부터 굴지리·팔봉산·밤벌·마곡등의 여러 유원지가 있다. 물이 차고 깨끗한 최상류의 굴지리유원지는 한적한 편이며, 팔봉산유원지는 수심이 얕은 데다 가벼운 산행을 즐길 수 있고, 밤벌유원지는 강변에 덮인 자갈과 모래가 아름다운 풍경을 자아낸다. 청평호로 이어지는 마곡유원지는 수심이 깊어 보트 놀이와 제트스키 등의 수상 스포츠를 즐길 수 있다. 홍천강에는 선녀가 목욕을 즐겼다는 미약골, 용소암과 용소약수가 있는 용소계곡, 사람이 살만한 둔덕이라는 뜻의 살둔계곡 등 아름다운 계곡이 많다. 홍천강 오토캠핑장에서는 매년 별빛음악 맥주축제를 개최하며, 1월에는 겨울철 대표축제중 하나인 홍천강 꽁꽁축제가 열린다. 홍천강 주변에는 신라 성덕왕 7년에 창건된 수타사, 해발 462m의 금학산, 8개의 봉우리가 공작새의 날개를 펼친 듯한 팔봉산 등 다양한 관광명소가 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3f1b093e7f48975bc5129246c566c8797c2aa1e0f153932947f90dae54066ada",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125745",
+          "request_sha256": "87251e09983b08312b1d296f5cdd1a433bb63a139a0b84d029ec4737afb82c84",
+          "response_sha256": "5cbca9d53fde96a736a419cfbcd4d46acd29fbeba376b613ee9c09e597ffb67d",
+          "retrieved_at": "2026-09-10T08:23:27.065910Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b0646116ff752200c8d9e81a77c00188d993a5a4c27b6e52c247ebb5c3a44e22",
+          "source_uri": null
+        },
+        "record_sha256": "a91b5e7c40c4af88a4af8ef23f99959e08a1c01ca77a065066f64d2b86e16840",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "6285c7610f5c44b3a5aeb444825a91f6765803a53707c87969880c1aadce35b0",
+    "place": {
+      "address": "강원특별자치도 홍천군 서면 팔봉강변길",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+      "name_ko": "홍천강",
+      "place_id": "public:korea:608be7e6fdbc85845dea78d8cbb8f0df0000d2f839ed8ffa61493d00fd1c1e31",
+      "provider_content_id": "125745",
+      "region_code": "51720",
+      "region_name": "강원특별자치도 홍천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

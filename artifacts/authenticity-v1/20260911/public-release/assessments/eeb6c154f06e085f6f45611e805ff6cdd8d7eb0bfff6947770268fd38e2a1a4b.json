@@ -1,0 +1,1046 @@
+{
+  "assessed_at": "2026-09-11T16:50:27.404397Z",
+  "assessment_sha256": "eeb6c154f06e085f6f45611e805ff6cdd8d7eb0bfff6947770268fd38e2a1a4b",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b",
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 88
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+            "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "안산읍지 등 지명 유래와 연혁이 소개되지만, 심층적 역사 탐구까지는 근거가 없어 간단한 연혁 소개 수준(2)으로 평가.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "김홍도와 지명 유래에 연결된 안내·해설이 존재하나 짧은 안내 수준으로 깊은 해설·탐구의 근거는 부족하여 수준 2.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "개요 자료에서 안산시의 도시 상징물이라는 공유된 의미와 서해 낙조의 절경 이미지가 이 장소에 일관되게 부여되어 있어 수준 3. 원 제안의 두 번째 인용은 Odii가 아닌 개요 출처에서 발췌한 것이므로 evidence_id를 바로잡았다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:4367d7a02191e952571e010e3fecf10c81c18daf3c6c33ee53a4c1ef6e389f07",
+            "appearance:b03dfc67d161d28b48d600c74ff0606e04275ba3bfd14898a4b028c6fe442dcb",
+            "appearance:be454d9c8958cdda27650ddaa786951e0fef8db2a70fd31a377efa2ef41b38a7"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+            "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "정상 전망 장면과 배경 사진촬영 등 대표 장면을 직접 경험할 수 있으나 이미지 재현이 방문 목적의 중심이라는 근거는 부족하여 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:d6fac472ffae1d3eaac88942e378d63b6a8f61037c70f1f024f6699466381baa",
+            "appearance:e24f7de3661008d057220f0da53085a3e2f82728d1a260b9c389bbaabb8383a4",
+            "appearance:f6cd3dcaa7fba275c19efaf5872faac66356319e0fefe623123e2082a4d29c6c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+            "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "산책로와 둘레길 탐방이라는 구체적 참여 활동이 확인되나 지속적 도전·집중 활동의 근거는 부족하여 수준 3.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "노적봉공원은 도시자연공원으로 확인된 실제 원형·유산의 실물 접촉에 대한 근거가 없다. 산 이름 유래 설명은 지형 기원 서사일 뿐 유산 실물 접촉을 보여주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+          "quote": {
+            "end": 173,
+            "method": "EXACT",
+            "original": "이산의 지맥은 수리산에서 떨어진 낙맥으로 안산읍지의 청룡말미에 해당하는데 산의 모양이 노적가리를 쌓아 놓은 듯하다 하여 노적봉이라 불리었다.",
+            "start": 95,
+            "submitted": "이산의 지맥은 수리산에서 떨어진 낙맥으로 안산읍지의 청룡말미에 해당하는데 산의 모양이 노적가리를 쌓아 놓은 듯하다 하여 노적봉이라 불리었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ca825e15c89d0dc128cff750865b2730b36774416cb5b870a77572ea6e839c9"
+        },
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953",
+          "quote": {
+            "end": 92,
+            "method": "EXACT",
+            "original": "노적봉이라는 이름은 지형에서 왔습니다. 폭포 뒤의 산이 꼭 곡식단을 쌓아 놓은 모양으로 생겼다 하여",
+            "start": 37,
+            "submitted": "노적봉이라는 이름은 지형에서 왔습니다. 폭포 뒤의 산이 꼭 곡식단을 쌓아 놓은 모양으로 생겼다 하여",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3f607682ac2f83d064f3d53fbdd19dc2d89ddd971236272766071064ae0b0777"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "안산읍지 등 지명 유래와 연혁이 소개되지만, 심층적 역사 탐구까지는 근거가 없어 간단한 연혁 소개 수준(2)으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "김홍도 유년 시절 테마길 언급이 있으나 현재 지역 주체의 전승·생활문화와의 실제 연결 활동에 대한 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+          "quote": {
+            "end": 445,
+            "method": "EXACT",
+            "original": "김홍도 테마길은 안산을 대표하는 화가 김홍도가 유년 시절을 보냈던 성포동 일원을 테마길로 조성해서",
+            "start": 391,
+            "submitted": "김홍도 테마길은 안산을 대표하는 화가 김홍도가 유년 시절을 보냈던 성포동 일원을 테마길로 조성해서",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ca825e15c89d0dc128cff750865b2730b36774416cb5b870a77572ea6e839c9"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "김홍도와 지명 유래에 연결된 안내·해설이 존재하나 짧은 안내 수준으로 깊은 해설·탐구의 근거는 부족하여 수준 2.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+          "quote": {
+            "end": 376,
+            "method": "EXACT",
+            "original": "안산시민의 여가 활용 공간으로서뿐만 아니라 안산시의 도시 상징물로 자리를 잡고 있다",
+            "start": 330,
+            "submitted": "안산시민의 여가 활용 공간으로서뿐만 아니라 안산시의 도시 상징물로 자리를 잡고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ca825e15c89d0dc128cff750865b2730b36774416cb5b870a77572ea6e839c9"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+          "quote": {
+            "end": 93,
+            "method": "EXACT",
+            "original": "정상에서 보는 서해 낙조는 절경 중의 절경이다",
+            "start": 68,
+            "submitted": "정상에서 보는 서해 낙조는 절경 중의 절경이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ca825e15c89d0dc128cff750865b2730b36774416cb5b870a77572ea6e839c9"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 3,
+      "reason": "개요 자료에서 안산시의 도시 상징물이라는 공유된 의미와 서해 낙조의 절경 이미지가 이 장소에 일관되게 부여되어 있어 수준 3. 원 제안의 두 번째 인용은 Odii가 아닌 개요 출처에서 발췌한 것이므로 evidence_id를 바로잡았다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "공식 해설 스크립트가 존재하나 매체를 통한 이미지 유통·확산 자체의 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953",
+          "quote": {
+            "end": 396,
+            "method": "EXACT",
+            "original": "너른 장미원과 철쭉원을 배경으로 한 사진촬영은 인생에 특별한 순간을 기념으로 남길 수도 있답니다.",
+            "start": 342,
+            "submitted": "너른 장미원과 철쭉원을 배경으로 한 사진촬영은 인생에 특별한 순간을 기념으로 남길 수도 있답니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3f607682ac2f83d064f3d53fbdd19dc2d89ddd971236272766071064ae0b0777"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+          "quote": {
+            "end": 64,
+            "method": "EXACT",
+            "original": "노적봉 정상에 서면 안산시의 모습이 한눈에 들어온다.",
+            "start": 35,
+            "submitted": "노적봉 정상에 서면 안산시의 모습이 한눈에 들어온다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ca825e15c89d0dc128cff750865b2730b36774416cb5b870a77572ea6e839c9"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "정상 전망 장면과 배경 사진촬영 등 대표 장면을 직접 경험할 수 있으나 이미지 재현이 방문 목적의 중심이라는 근거는 부족하여 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953",
+          "quote": {
+            "end": 341,
+            "method": "EXACT",
+            "original": "공원을 빙 둘러 2.6km의 순환 산책로가 있어 가벼운 산책을 즐기기에도 안성맞춤입니다.",
+            "start": 292,
+            "submitted": "공원을 빙 둘러 2.6km의 순환 산책로가 있어 가벼운 산책을 즐기기에도 안성맞춤입니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3f607682ac2f83d064f3d53fbdd19dc2d89ddd971236272766071064ae0b0777"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+          "quote": {
+            "end": 556,
+            "method": "EXACT",
+            "original": "김홍도미술관 - 노적봉공원 - 성호공원 - 청문당 - 점성공원 - 단원조각공원으로 이어지는 테마길은 산책하기 좋은 안산시의 둘레길 명소이다.",
+            "start": 478,
+            "submitted": "김홍도미술관 - 노적봉공원 - 성호공원 - 청문당 - 점성공원 - 단원조각공원으로 이어지는 테마길은 산책하기 좋은 안산시의 둘레길 명소이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ca825e15c89d0dc128cff750865b2730b36774416cb5b870a77572ea6e839c9"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "산책로와 둘레길 탐방이라는 구체적 참여 활동이 확인되나 지속적 도전·집중 활동의 근거는 부족하여 수준 3.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 직접적 근거가 제공되지 않는다. 사진촬영 언급만으로 관계·자기표현 기회를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953",
+            "quote": "어두운 밤이면 LED 장미정원이 빛을 발합니다. 봄이 되면 벚나무 아래에서 흩날리는 꽃비를 맞을 수 있고, 가을이면 언덕이 보기 좋게 물듭니다."
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+            "quote": "장미원과 철쭉원 등을 갖추고 있어 많은 주목을 받고 있으며"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "LED 장미정원의 조명 연출, 철쭉원·장미원, 계절별 경관 등 장소 이미지를 표현하는 시각적 성격이 확인되나 장면 전체를 지배한다고 단정할 근거는 없어 수준 3.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.a",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "AUTONOMOUS_ACTIVITY",
+            "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+            "quote": "노적봉공원은 순환로가 조성되어 산책을 즐기기에 좋으며"
+          },
+          {
+            "claim": "AUTONOMOUS_ACTIVITY",
+            "evidence_id": "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953",
+            "quote": "공원을 빙 둘러 2.6km의 순환 산책로가 있어 가벼운 산책을 즐기기에도 안성맞춤입니다."
+          }
+        ],
+        "key": "R.a",
+        "level": 3,
+        "reason": "2.6km 순환 산책로와 김홍도 테마길 둘레길 등 방문자가 자신의 방식으로 탐색할 수 있는 기회가 확인되나 자율 탐색이 경험의 중심이라는 근거는 부족하여 수준 3.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.b",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "ENVIRONMENT",
+            "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+            "quote": "도시자연공원으로 노적봉 정상에 서면 안산시의 모습이 한눈에 들어온다"
+          },
+          {
+            "claim": "ENVIRONMENT",
+            "evidence_id": "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953",
+            "quote": "2.6km의 순환 산책로가 있어 가벼운 산책을 즐기기에도 안성맞춤입니다."
+          }
+        ],
+        "key": "R.b",
+        "level": 3,
+        "reason": "도시자연공원, 산 정상 전망, 폭포, 장미원·철쭉원 등 자연 환경 단서와 머무를 산책 환경이 확인되나 실제 고요함이나 저자극성은 자료만으로 확인할 수 없어 수준 3.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "4302bc4f4e33836876285955ebf7f9fdbb353c65a918a8075b3b674108496fca",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "중앙의 분수와 연못을 중심으로 소나무 프레임이 양쪽을 감싼 구도가 두드러지며, 봄 초록과 진홍 색조가 대비되어 연출된 조망이 인상적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4367d7a02191e952571e010e3fecf10c81c18daf3c6c33ee53a4c1ef6e389f07",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0a1018d2961b2760f2f97a1ccc2d9ad1fe640e566fc83c22410d19b4e6d3ce59",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065316_3",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09da30f6d2eea3830144dc50c103cc80436370ce5c33e22c1170e9f75624582b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/4065316_image2_1.jpg"
+        },
+        "record_sha256": "e34846c7dc4dc84bdba0b62e2c2f5280410100e5de9c8f8c570eaea60e685344",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "석축과 자연스러운 조경, 원형 난간의 산책로가 전통 정원 연상 요소를 일부 보이나 두드러지지는 않다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:52e6e8307cf0d517f1f38cca9420396db359bf8b71575227d6a87c366037ffa4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c93f3a0e7bf12e14475a482c43119f693215eb6e982523ff737209bea0fc6104",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065318_5",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d51ff0306fa81aab59d1727293568ae43163d7b82ae2668fbefd695ae1f7ff0c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/18/4065318_image2_1.jpg"
+        },
+        "record_sha256": "26e7a76dc77ffe052037340a88631d1bf0ccf190af233ba395f86754e434d741",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "소나무, 돌 배치, 자연석 연못 가장자리 등 전통 정원을 연상시키는 요소가 일부 보이나, 패턴화된 포장 광장 등 현대적 시설이 함께 있어 약하게 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:82a24b74451a5dbe30cc0a5d7d945e041ab29790043d471da23fbdbca9254c19",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0a1018d2961b2760f2f97a1ccc2d9ad1fe640e566fc83c22410d19b4e6d3ce59",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065316_3",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09da30f6d2eea3830144dc50c103cc80436370ce5c33e22c1170e9f75624582b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/4065316_image2_1.jpg"
+        },
+        "record_sha256": "52722f83e132b3c69c995a45b9ac69a1b3bb2d696a0e4d1bbec5e46bd87029f3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "두 개의 폭포, 청록빛 연못, 짙은 녹색 수목이 강렬한 색 대비를 이루며 시각적으로 두드러진 구성이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b03dfc67d161d28b48d600c74ff0606e04275ba3bfd14898a4b028c6fe442dcb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c93f3a0e7bf12e14475a482c43119f693215eb6e982523ff737209bea0fc6104",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065318_5",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d51ff0306fa81aab59d1727293568ae43163d7b82ae2668fbefd695ae1f7ff0c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/18/4065318_image2_1.jpg"
+        },
+        "record_sha256": "2eeaf8536d2697fc4e6ffd390b42c8d8faae00a0255751451d99c8515ff422d5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "새잎의 선명한 초록과 회색 바위 표지, 분수, 원형 광장이 대비되며 관광지답게 짜임새 있게 연출된 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:be454d9c8958cdda27650ddaa786951e0fef8db2a70fd31a377efa2ef41b38a7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03b6c62e82c57e48b39c2a02b33a3f6cd433cdd0d2845f3d82a6246342f104ec",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065321_4",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ba9f7853ff7d9be6d7dcdbbc1392d4262751003983f93097697d972526edb6f7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/21/4065321_image2_1.jpg"
+        },
+        "record_sha256": "90d8d6ed4696f15e042b132d34f46d5d4aa5962a9cf68c956dfc540fa72858f9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "연못·분수·폭포 흐름, 소나무와 활엽수 녹지, 원경의 낮은 산 능선까지 트인 자연 환경이 장면 전반을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d6fac472ffae1d3eaac88942e378d63b6a8f61037c70f1f024f6699466381baa",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0a1018d2961b2760f2f97a1ccc2d9ad1fe640e566fc83c22410d19b4e6d3ce59",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065316_3",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09da30f6d2eea3830144dc50c103cc80436370ce5c33e22c1170e9f75624582b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/4065316_image2_1.jpg"
+        },
+        "record_sha256": "4ee6a2360c17279d603bc30b177eaff371741d3ea1e0446f26c6d0a5d5b51688",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "왼쪽의 한옥 기와 지붕 정자가 전통 외관을 보여주나 화면 일부에 머물러 보통 수준으로 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:dac9d30d57ef63dc8b46f7d7cfea4ec48fc614da98b5b438ee2bb1d80a08e2ae",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03b6c62e82c57e48b39c2a02b33a3f6cd433cdd0d2845f3d82a6246342f104ec",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065321_4",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ba9f7853ff7d9be6d7dcdbbc1392d4262751003983f93097697d972526edb6f7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/21/4065321_image2_1.jpg"
+        },
+        "record_sha256": "4c75e50763c98f64494229fed04e5f7a88bbe51630af9ab1ba13474fffe835b4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "폭포, 연못, 울창한 나루와 암석 등 자연 경관 요소가 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e24f7de3661008d057220f0da53085a3e2f82728d1a260b9c389bbaabb8383a4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c93f3a0e7bf12e14475a482c43119f693215eb6e982523ff737209bea0fc6104",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065318_5",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d51ff0306fa81aab59d1727293568ae43163d7b82ae2668fbefd695ae1f7ff0c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/18/4065318_image2_1.jpg"
+        },
+        "record_sha256": "05ee4b7fa9b60c215f55f30016839d67cb2d3165d08709ab420767511332453f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 산림, 시원한 초록 잔디, 나무와 수목이 장면 전반을 지배하며 자연 환경 단서가 매우 풍부하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f6cd3dcaa7fba275c19efaf5872faac66356319e0fefe623123e2082a4d29c6c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "03b6c62e82c57e48b39c2a02b33a3f6cd433cdd0d2845f3d82a6246342f104ec",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4065321_4",
+          "request_sha256": "177603bf02f7e49e55847d8ee5977df34e45319af177d2dbcb74cf09288976a6",
+          "response_sha256": "edc37fb8f3d4b391e1cf4663796a4e9ac29b3a9ba8eef5c0d667f53793754b2b",
+          "retrieved_at": "2026-09-11T02:03:56.615072Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ba9f7853ff7d9be6d7dcdbbc1392d4262751003983f93097697d972526edb6f7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/21/4065321_image2_1.jpg"
+        },
+        "record_sha256": "989091163aa75fbca9b8fd8ec8100584c62bd4da7fd30ce41054fdfbe10f2a07",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:177fa23375f0d8464d29800328e90f0699184e36ce2cc0578d98a5354755b38a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1624874",
+          "request_sha256": "63277ac7f2fa1f3520cfc7e821285074bfcc4bd5ffafdb4c87c12eb76dcc1c9e",
+          "response_sha256": "d620c17e2bbd73c31a699793b4f2ad995c76a94d0538a4dee2b4f38820120e76",
+          "retrieved_at": "2026-09-11T02:03:56.260483Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2091f7dd1c82c69777e9c06f1a5ca5a6b0e2c22af867302cdfbcb9d7d579cc9d",
+          "source_uri": null
+        },
+        "record_sha256": "125fe291112728f708f121fe1745abf81ad682d075fbb612b09b7681eccd7e9c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:51db9fbdfcf3b3a9f90224f9a2af643e442c8e1fcf6033a097a6f676eddfbd42",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1624874",
+          "request_sha256": "c244af2086db95215523722e9307db92694b4b6d520b6a1a9f7b3cf88d13f3b5",
+          "response_sha256": "23bd3da9ac0b9840ea95e45f13726d336d4e350362021d32428afc4315d0a7af",
+          "retrieved_at": "2026-09-10T16:49:08.660472Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-05-22T05:56:32Z",
+          "source_record_sha256": "9c41443aac616ea00f93d87ad1f98e7902038aa62048ab6d812e2f54bc87c9bc",
+          "source_uri": null
+        },
+        "record_sha256": "5ca825e15c89d0dc128cff750865b2730b36774416cb5b870a77572ea6e839c9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "노적봉공원은 안산 시내로 진입하는 관문에 있는 도시자연공원으로 노적봉 정상에 서면 안산시의 모습이 한눈에 들어온다. 특히 정상에서 보는 서해 낙조는 절경 중의 절경이다. 이산의 지맥은 수리산에서 떨어진 낙맥으로 안산읍지의 청룡말미에 해당하는데 산의 모양이 노적가리를 쌓아 놓은 듯하다 하여 노적봉이라 불리었다. 노적봉공원은 순환로가 조성되어 산책을 즐기기에 좋으며, 주요시설인 인공폭포는 인조암으로 조성된 뒤 1,900개의 자연석으로 재공사하여 2단 계류식 자연석 폭포로 재탄생하였다. 이와 함께 장미원과 철쭉원 등을 갖추고 있어 많은 주목을 받고 있으며, 다양한 편의시설과 볼거리 등으로 안산시민의 여가 활용 공간으로서뿐만 아니라 안산시의 도시 상징물로 자리를 잡고 있다. 노적봉 공원과 이어지는 김홍도 테마길은 안산을 대표하는 화가 김홍도가 유년 시절을 보냈던 성포동 일원을 테마길로 조성해서 이곳을 따라 둘레길을 산책할 수 있게 만들어놓은 곳이다. 김홍도미술관 - 노적봉공원 - 성호공원 - 청문당 - 점성공원 - 단원조각공원으로 이어지는 테마길은 산책하기 좋은 안산시의 둘레길 명소이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d3ffd3b027e2ce046ed3f7c33a2437f1ae6c9827c27f83d131a2c5344051b953",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3120",
+          "request_sha256": "8ed15918e2b8f0223fd2bfa286d9679d87f3ff8808df476955d91bfb20f0e882",
+          "response_sha256": "86a8c640e77a54e4dbe2d06b453d0c11ebf14160f4085664ca2ff8c27a98dafe",
+          "retrieved_at": "2026-09-11T02:03:57.067459Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2023-09-25T08:57:14Z",
+          "source_record_sha256": "b840baff3f145e9222b8e009f1378008a368a519e649f6f852cb516f0efda159",
+          "source_uri": null
+        },
+        "record_sha256": "3f607682ac2f83d064f3d53fbdd19dc2d89ddd971236272766071064ae0b0777",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "국내 최대규모의 인공 폭포가 있는 공원, 안산의 노적봉공원입니다. 노적봉이라는 이름은 지형에서 왔습니다. 폭포 뒤의 산이 꼭 곡식단을 쌓아 놓은 모양으로 생겼다 하여 노적가리를 쌓은 산 ‘노적봉’이 되었습니다. 노적봉공원의 매력은 시간대별, 계절별로 달라지는 풍경입니다. 해 질 무렵 노적봉의 정상에서는 아름다운 노을을 감상할 수 있습니다. 어두운 밤이면 LED 장미정원이 빛을 발합니다. 봄이 되면 벚나무 아래에서 흩날리는 꽃비를 맞을 수 있고, 가을이면 언덕이 보기 좋게 물듭니다. 공원의 자랑은 풍경뿐만이 아닙니다. 공원을 빙 둘러 2.6km의 순환 산책로가 있어 가벼운 산책을 즐기기에도 안성맞춤입니다. 너른 장미원과 철쭉원을 배경으로 한 사진촬영은 인생에 특별한 순간을 기념으로 남길 수도 있답니다."
+      }
+    ],
+    "parent_source_sha256": "d0c60b022c7c3d9b931ab3bb6fca5df9de6c0e9f09d4e4738b1d84ccca3cb786",
+    "place": {
+      "address": "경기도 안산시 상록구 성포동",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+      "name_ko": "노적봉공원",
+      "place_id": "public:korea:4cdecb851fcd95cb87d14d608fac06b700c100a20c5875cfc455ab00b672d92b",
+      "provider_content_id": "1624874",
+      "region_code": "41271",
+      "region_name": "경기도 안산시 상록구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

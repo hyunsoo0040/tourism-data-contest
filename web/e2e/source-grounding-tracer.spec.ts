@@ -56,13 +56,13 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     });
     let fixture: Fixture | null = null;
     let profile: unknown = null;
-    let capturedRequest: Record<string, unknown> | null = null;
+    const capturedRequest: { value: Record<string, unknown> | null } = { value: null };
     let creates = 0;
     await page.route("**/v1/recommendation-runs", async (route) => {
       if (route.request().method() !== "POST") return route.fallback();
-      capturedRequest = route.request().postDataJSON() as Record<string, unknown>;
+      capturedRequest.value = route.request().postDataJSON() as Record<string, unknown>;
       creates += 1;
-      if (fixture === null) fixture = await generateFixture({ profile, request: capturedRequest },
+      if (fixture === null) fixture = await generateFixture({ profile, request: capturedRequest.value },
         resolve(ARTIFACT_ROOT, `tracer-fixture-${viewport.name}.json`));
       await route.fulfill({ status: 201, contentType: "application/json", body: JSON.stringify(fixture.created) });
     });
@@ -108,7 +108,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await expect(known.first().getByText("있음", { exact: true })).toBeVisible();
     await expect(known.first().getByText("2026-09-09 기준", { exact: true })).toBeVisible();
     await expect(known.first().getByRole("link", { name: "한국관광공사 무장애 여행 정보" })).toHaveAttribute("href", "https://www.data.go.kr/data/15101897/openapi.do");
-    expect(capturedRequest?.grounded_input).toEqual({ visit_date: "2026-10-09", visit_time: "10:30", required_facilities: ["accessible_toilet"] });
+    expect(capturedRequest.value?.grounded_input).toEqual({ visit_date: "2026-10-09", visit_time: "10:30", required_facilities: ["accessible_toilet"] });
     await noHorizontalOverflow(page);
     await page.screenshot({ path: resolve(ARTIFACT_ROOT, `tracer-browser-${viewport.name}.png`), fullPage: true });
     await page.locator("section[data-trip-context-state]").first().screenshot({

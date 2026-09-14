@@ -8,6 +8,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
 from itda.api.dependencies import validate_profile_session_startup
+from itda.api.routes.authenticity import router as authenticity_router
 from itda.api.routes.evaluation import router as evaluation_router
 from itda.api.routes.journey import router as journey_router
 from itda.api.routes.operations import router as operations_router
@@ -17,7 +18,10 @@ from itda.api.routes.photo import (
     get_photo_lifecycle,
 )
 from itda.api.routes.photo import router as photo_router
+from itda.api.routes.photo_moods import router as photo_moods_router
 from itda.api.routes.recommendations import router as recommendations_router
+from itda.api.routes.trip_context import router as trip_context_router
+from itda.authenticity.body_limit import PhotoBodyLimit
 from itda.contracts.recommendation import (
     RecommendationErrorDetail,
     RecommendationErrorResponse,
@@ -61,11 +65,15 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
+    application.add_middleware(PhotoBodyLimit)
+
     @application.exception_handler(RequestValidationError)
     async def redact_sensitive_request_validation(
         request: Request,
         error: RequestValidationError,
     ) -> Response:
+        if request.url.path.startswith("/v1/authenticity/"):
+            return JSONResponse(status_code=422, content={"detail": "입력 형식을 확인해 주세요."})
         if _is_profile_release_mutation(request):
             return JSONResponse(
                 status_code=422,
@@ -95,9 +103,12 @@ def create_app() -> FastAPI:
             )
         return await request_validation_exception_handler(request, error)
 
+    application.include_router(authenticity_router)
     application.include_router(journey_router)
     application.include_router(recommendations_router)
+    application.include_router(trip_context_router)
     application.include_router(photo_router)
+    application.include_router(photo_moods_router)
     application.include_router(evaluation_router)
     application.include_router(operations_router)
     if os.environ.get("ITDA_E2E_PHASE3_TEST_SUPPORT") == "1":

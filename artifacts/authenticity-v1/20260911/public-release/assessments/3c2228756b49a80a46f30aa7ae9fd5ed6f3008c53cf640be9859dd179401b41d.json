@@ -1,0 +1,889 @@
+{
+  "assessed_at": "2026-09-11T15:58:48.200812Z",
+  "assessment_sha256": "3c2228756b49a80a46f30aa7ae9fd5ed6f3008c53cf640be9859dd179401b41d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:204303be7d38bdceca3b5e410994409dca8fe970fca4515a9207450b2fdfe780"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "항일 의병 희생자를 기리는 장소라는 의미가 공식 서술과 연결되어 있으나, 사회적으로 공유된 상징·이미지의 표현이나 일관된 의미 부여에 대한 추가 근거는 없다. 장소와 연결된 의미가 존재한다는 수준에서 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0cf718b1df296655b11a77bbf7d5e24b8381cbe7e5e1831969f546ac854ca46b",
+            "appearance:17251aeca79de7d9434451a09b4e82adc2072aed405f39bf003c8209a29b615d",
+            "appearance:f8f2f19ca22ae0a067b00e9489fe8b8f5d60a615d0b1f9ddf6a8dd7facd9604a"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출 등 시각적 표현에 대한 서술이 제공되지 않았다. 분묘가 존재한다는 사실만으로 시각적 성격을 추정할 수 없어 UNKNOWN이다.",
+      "value": 83
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:3d9c8fc8b8d06e1d52e1da1280dc5e6a50d5d36eaad646b4e6dd3cda7ea061e9",
+            "appearance:c96388fe410756a12d473b963179bdf501d7c6fc06880b203d4c22ce3e65314d",
+            "appearance:e14e76ce46326205af56afca5b5855498e8d7fbd26291b39d123aa093b53bc24"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연 환경, 시각적 저자극, 머무를 환경에 대한 단서가 제공되지 않았다. 홍보 문구나 환경 묘사가 없어 UNKNOWN이다.",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "홍주의병 전사자 실제 유골을 합장한 분묘라는 확인된 유산 사실은 제시되어 있어 관람 수준(3)의 접촉은 뒷받침된다. 그러나 제안된 앵커는 '공간이나 실물을 구체적으로 탐구'하는 상위 수준이며, 개요 자료에는 유골 발견·합장 경위만 있고 방문자가 묘역·실물을 구체적으로 탐험하는 내용에 대한 근거가 없다. 상위 수준의 근거 부족이므로 현재 제안 수준에 대해서는 UNCERTAIN 처리한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "을사조약 배경, 1906년 홍주의병 봉기 인물과 전투 경과, 1949년 유골 발견·합장까지 이 장소 고유의 다층적 역사 서술은 확인되어 여러 맥락을 대상과 연결해 설명하는 수준(4)까지는 뒷받침된다. 그러나 제안된 앵커는 '구체적 역사 맥락의 탐구가 방문 경험의 중심'이라는 최상위 수준으로, 현장에서 역사 탐구가 방문 경험의 중심이라는 경험 측면 근거는 개요에 없다. 상위 수준 근거 부족으로 UNCERTAIN이다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "과거 의병 운동과 유해 합장의 역사는 있으나, 현재 지역 주체의 전승 활동·생활문화와의 지속적 연결(제례, 기념 행사 등)에 대한 근거가 제공되지 않았다. 역사적 사실만으로 현재의 전승을 추정할 수 없으므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "제공된 개요는 공식 설명 자료일 뿐, 현장에서 방문객에게 해설·전시·탐구 기회가 제공되는지에 대한 근거는 없다. 해석 패널, 안내시설 등의 언급이 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:204303be7d38bdceca3b5e410994409dca8fe970fca4515a9207450b2fdfe780",
+          "quote": {
+            "end": 327,
+            "method": "EXACT",
+            "original": "홍주성을 함락시켰다. 그 후 일본군이 홍주성의 의병 군을 공격하여 30일부터 본격전이 시작되었으며",
+            "start": 273,
+            "submitted": "홍주성을 함락시켰다. 그 후 일본군이 홍주성의 의병 군을 공격하여 30일부터 본격전이 시작되었으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6e04ae3dfe89be252bc90089d68cab5cefb3336e08676fbd903675f47ee0c51c"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "항일 의병 희생자를 기리는 장소라는 의미가 공식 서술과 연결되어 있으나, 사회적으로 공유된 상징·이미지의 표현이나 일관된 의미 부여에 대한 추가 근거는 없다. 장소와 연결된 의미가 존재한다는 수준에서 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체(작품, 홍보, SNS 등)를 통한 장소 이미지의 재현·유통에 대한 근거가 제공되지 않았다. UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출 등 시각적 표현에 대한 서술이 제공되지 않았다. 분묘가 존재한다는 사실만으로 시각적 성격을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있는지에 대한 근거가 없다. UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "자율적 탐색·여유·자기 선택을 지원하는 경험에 대한 근거가 없다. 무료라는 정보만으로 자유나 여유를 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경, 시각적 저자극, 머무를 환경에 대한 단서가 제공되지 않았다. 홍보 문구나 환경 묘사가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "참여·도전·몰입할 활동의 기회에 대한 근거가 제공되지 않았다. '있음'이라는 단일 정보만으로는 참여 활동의 내용과 강도를 확인할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 구체적 근거가 없다. UNKNOWN이다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "f64d55a909f8b2b50b664b8c4766c2bd559afebb3aaca1beef603010030fc9d1",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:204303be7d38bdceca3b5e410994409dca8fe970fca4515a9207450b2fdfe780",
+              "quote": {
+                "end": 62,
+                "method": "EXACT",
+                "original": "조선말기 홍성 지역에서 있었던 의병 운동에서 일본군과 싸우다 희생된 분들의 유해를 모신 곳이다",
+                "start": 10,
+                "submitted": "조선말기 홍성 지역에서 있었던 의병 운동에서 일본군과 싸우다 희생된 분들의 유해를 모신 곳이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6e04ae3dfe89be252bc90089d68cab5cefb3336e08676fbd903675f47ee0c51c"
+            }
+          ],
+          "flags": [],
+          "key": "H.a",
+          "level": 3,
+          "reason": "해당 장소가 병오 홍주의병 전사자의 실제 유골을 합장한 분묘라는 확인된 유산 사실이 제공된다. 1949년 유골 발견과 합장 경위가 구체적으로 기술되어 있어 원형(실제 유해 묘)과의 접촉을 지원하며, 유해 봉안이 장소의 핵심임을 알 수 있다. 방문 경험의 중심인지까지는 단정하지 않으므로 3수준으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "홍주의병 전사자 실제 유골을 합장한 분묘라는 확인된 유산 사실은 제시되어 있어 관람 수준(3)의 접촉은 뒷받침된다. 그러나 제안된 앵커는 '공간이나 실물을 구체적으로 탐구'하는 상위 수준이며, 개요 자료에는 유골 발견·합장 경위만 있고 방문자가 묘역·실물을 구체적으로 탐험하는 내용에 대한 근거가 없다. 상위 수준의 근거 부족이므로 현재 제안 수준에 대해서는 UNCERTAIN 처리한다."
+        }
+      },
+      "reason": "홍주의병 전사자 실제 유골을 합장한 분묘라는 확인된 유산 사실은 제시되어 있어 관람 수준(3)의 접촉은 뒷받침된다. 그러나 제안된 앵커는 '공간이나 실물을 구체적으로 탐구'하는 상위 수준이며, 개요 자료에는 유골 발견·합장 경위만 있고 방문자가 묘역·실물을 구체적으로 탐험하는 내용에 대한 근거가 없다. 상위 수준의 근거 부족이므로 현재 제안 수준에 대해서는 UNCERTAIN 처리한다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "H.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HISTORICAL_NARRATIVE",
+              "evidence_id": "evidence:204303be7d38bdceca3b5e410994409dca8fe970fca4515a9207450b2fdfe780",
+              "quote": {
+                "end": 164,
+                "method": "EXACT",
+                "original": "1905년 일본의 강압에 의해 을사조약이 체결되자 홍주 지역에서는 1906년에 전 이조참판 민종식이 채광묵, 박인기, 이만식, 농민, 유생 구 관리를 중심으로 홍주성에 쳐들어갔는데",
+                "start": 64,
+                "submitted": "1905년 일본의 강압에 의해 을사조약이 체결되자 홍주 지역에서는 1906년에 전 이조참판 민종식이 채광묵, 박인기, 이만식, 농민, 유생 구 관리를 중심으로 홍주성에 쳐들어갔는데",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "6e04ae3dfe89be252bc90089d68cab5cefb3336e08676fbd903675f47ee0c51c"
+            }
+          ],
+          "flags": [],
+          "key": "H.b",
+          "level": 4,
+          "reason": "을사조약 배경, 1906년 홍주의병 봉기의 인물(민종식 등), 진행 과정, 홍주성 함락과 전투, 조양문 파괴, 전사자 유골의 1949년 발견과 합장까지 이 장소 고유의 역사가 다층적으로 서술되어 있다. 여러 맥락이 대상과 직접 연결되어 구체적 역사 탐구를 지원한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.b",
+          "reason": "을사조약 배경, 1906년 홍주의병 봉기 인물과 전투 경과, 1949년 유골 발견·합장까지 이 장소 고유의 다층적 역사 서술은 확인되어 여러 맥락을 대상과 연결해 설명하는 수준(4)까지는 뒷받침된다. 그러나 제안된 앵커는 '구체적 역사 맥락의 탐구가 방문 경험의 중심'이라는 최상위 수준으로, 현장에서 역사 탐구가 방문 경험의 중심이라는 경험 측면 근거는 개요에 없다. 상위 수준 근거 부족으로 UNCERTAIN이다."
+        }
+      },
+      "reason": "을사조약 배경, 1906년 홍주의병 봉기 인물과 전투 경과, 1949년 유골 발견·합장까지 이 장소 고유의 다층적 역사 서술은 확인되어 여러 맥락을 대상과 연결해 설명하는 수준(4)까지는 뒷받침된다. 그러나 제안된 앵커는 '구체적 역사 맥락의 탐구가 방문 경험의 중심'이라는 최상위 수준으로, 현장에서 역사 탐구가 방문 경험의 중심이라는 경험 측면 근거는 개요에 없다. 상위 수준 근거 부족으로 UNCERTAIN이다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "99f5ccf888b9351f654fc3ca004c038f06a7adebfe50db642f1d82e66280acf2",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "중앙의 반원형 초록 봉분과 좌우 대칭 향로, 넓은 돌계단과 정중한 대칭 구도가 장면을 지배하며 절제되고 엄숙한 시각적 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0cf718b1df296655b11a77bbf7d5e24b8381cbe7e5e1831969f546ac854ca46b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2aea340a129700b15d3972af091bea8ef8075c382eff002ac2cd42330ebf0503",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093427_4",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "962318f227ca7df186dbd6ee09907b5abb1f5a0e5f9347c84512d4074dec3b71",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/27/4093427_image2_1.jpg"
+        },
+        "record_sha256": "f52157fe7d0dd6242892eae63f4bb21a1859ba249757500924f4d372936a7e71",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "완만한 초록 흙무덤과 짙은 수림을 배경으로 비석·석주가 질서 있게 배치된 안정된 구도로, 녹색과 회색 석재의 대비가 두드러진 절제된 연출이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:17251aeca79de7d9434451a09b4e82adc2072aed405f39bf003c8209a29b615d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b229b0ab5d71efbdd30689b453b39d5e6e7fbc3056ada2fa97a130cdf06297a4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093428_5",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7cec6b2e321ba85482212e17813b986256e8b6eac8397c3b7785c2932b98ecee",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/28/4093428_image2_1.jpg"
+        },
+        "record_sha256": "8f98317b4b1f0859c0aed6f4123c6828b609e258ce224890cde72ef762cdb048",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "이접석 비석과 한자 각자, 돌무덤 봉분, 석주 등 전통 석조물의 외관과 재질이 장면의 중심을 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:252c362bbdb322e068d13ffb20319573d434a2716566655eb93961d01d428876",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b229b0ab5d71efbdd30689b453b39d5e6e7fbc3056ada2fa97a130cdf06297a4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093428_5",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7cec6b2e321ba85482212e17813b986256e8b6eac8397c3b7785c2932b98ecee",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/28/4093428_image2_1.jpg"
+        },
+        "record_sha256": "f81770f1ecd554c5f0503046035644d993cf57f84131dba351f14149a2e0dfeb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "봉분을 덮은 풀과 배경의 울창한 소나무 숲, 잔디 평지 등 자연 환경 단서가 화면 상당 부분을 차지함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3d9c8fc8b8d06e1d52e1da1280dc5e6a50d5d36eaad646b4e6dd3cda7ea061e9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2aea340a129700b15d3972af091bea8ef8075c382eff002ac2cd42330ebf0503",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093427_4",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "962318f227ca7df186dbd6ee09907b5abb1f5a0e5f9347c84512d4074dec3b71",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/27/4093427_image2_1.jpg"
+        },
+        "record_sha256": "35120456e7d267ad46b7eb0470410eebb1685fa2dcf59143a5a3a0eaed136cb3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "기와 지붕, 단청, 한자 편액, 목재 문짝 등 전통 외관 요소가 장면 전체를 구성한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:419e40167d763ed31812cbb64654eec3005d694427542fc57dd7b915a471d01b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f4e0c51b0f760e84d30bfad2a8f000366204bef8f51edccabe76bed14338d4d7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093433_6",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "acba3bede3b1173d693aa262d9bb5887c1a55a01c2b14ba55e65427e07003efb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/33/4093433_image2_1.jpg"
+        },
+        "record_sha256": "3b678382adfba2a428b4546e258f72a3558b2965b0b2539f8cee87fa2d1338f3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "봉분, 돌로 만든 제단과 계단, 청동 향로 등 전통 왕릉 양식의 외관과 재료·공간 구성이 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:85af65bc38896deefabdebc00ed36e4362189f3b9bd0359c5c76dfc254bf2e69",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2aea340a129700b15d3972af091bea8ef8075c382eff002ac2cd42330ebf0503",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093427_4",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "962318f227ca7df186dbd6ee09907b5abb1f5a0e5f9347c84512d4074dec3b71",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/27/4093427_image2_1.jpg"
+        },
+        "record_sha256": "cb201335d50019d9ab3fb4ba29fe9c696930fa3c729ef0e60c63e37010657bb3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "건물 외관 위주의 구도로 자연 경관이나 녹지 단서가 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c96388fe410756a12d473b963179bdf501d7c6fc06880b203d4c22ce3e65314d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f4e0c51b0f760e84d30bfad2a8f000366204bef8f51edccabe76bed14338d4d7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093433_6",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "acba3bede3b1173d693aa262d9bb5887c1a55a01c2b14ba55e65427e07003efb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/33/4093433_image2_1.jpg"
+        },
+        "record_sha256": "3b5f0e6a96385648351496972fcae225aa97ea26abb77f22238c089a3cd4c376",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 잔디밭과 뒤로 병풍처럼 둘러진 울창한 수림이 장면 전체를 지배하며 자연 환경 단서가 매우 강하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e14e76ce46326205af56afca5b5855498e8d7fbd26291b39d123aa093b53bc24",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b229b0ab5d71efbdd30689b453b39d5e6e7fbc3056ada2fa97a130cdf06297a4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093428_5",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7cec6b2e321ba85482212e17813b986256e8b6eac8397c3b7785c2932b98ecee",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/28/4093428_image2_1.jpg"
+        },
+        "record_sha256": "a9848d15bc41631cd74914e1e5fb9dbd7c2d433810c982e4116146cc43bed047",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "청록·적색·화려한 단청 문양과 대형 편액이 화면 전체를 지배하며 시각적 연출이 매우 강렬하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f8f2f19ca22ae0a067b00e9489fe8b8f5d60a615d0b1f9ddf6a8dd7facd9604a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f4e0c51b0f760e84d30bfad2a8f000366204bef8f51edccabe76bed14338d4d7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4093433_6",
+          "request_sha256": "ed6c225620488a732d10d0e8773e69da5ffa2565ddf3dbf7ce86866a074a1685",
+          "response_sha256": "5a649a014c4bda2705f0e356f076c5a308e3456f60cc63b92cce035018957b9f",
+          "retrieved_at": "2026-09-10T08:19:58.620448Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "acba3bede3b1173d693aa262d9bb5887c1a55a01c2b14ba55e65427e07003efb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/33/4093433_image2_1.jpg"
+        },
+        "record_sha256": "ae3e4a2bf8419ffe460785e15019125f99dd9143ae3e867df16d83039a0aa99c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:204303be7d38bdceca3b5e410994409dca8fe970fca4515a9207450b2fdfe780",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "125993",
+          "request_sha256": "04a47ae3609bbb1b29c37917c009c37b5f41df3c38fb7d96e73a250cd54863e3",
+          "response_sha256": "374652e5fdebe510b62b8237a4b345706f8e92edeca5cc04940210277764e811",
+          "retrieved_at": "2026-09-10T07:50:30.384284Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-07-29T04:59:41Z",
+          "source_record_sha256": "1e77cd7a6882991f2d7d908afb008e9ddcf780beacd794fe1f59659f3fd856f9",
+          "source_uri": null
+        },
+        "record_sha256": "6e04ae3dfe89be252bc90089d68cab5cefb3336e08676fbd903675f47ee0c51c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "홍성 홍주의사총은 조선말기 홍성 지역에서 있었던 의병 운동에서 일본군과 싸우다 희생된 분들의 유해를 모신 곳이다. 1905년 일본의 강압에 의해 을사조약이 체결되자 홍주 지역에서는 1906년에 전 이조참판 민종식이 채광묵, 박인기, 이만식, 농민, 유생 구 관리를 중심으로 홍주성에 쳐들어갔는데 당시 홍성 군수 이교석과 이주승도 처음에는 의병 군에 호응할 기미였다가 일본군 다수가 입성한다는 소식을 듣고 성문을 닫고 입성을 막아 부득이 물러난 후 재차 홍주성에 쳐들어갔으며 5월 19일에 홍주성을 함락시켰다. 그 후 일본군이 홍주성의 의병 군을 공격하여 30일부터 본격전이 시작되었으며 그때에 일본군 대포에 의해 조양문이 부서졌고 중과부적으로 의병 수백 명이 전사하여 시체가 대교리 일대의 냇가와 남산 일대에 흩어져 있었다. 1949년 4월 5일 홍성 군수 박주철과 홍성 경찰서장 박헌교가 직원들을 인솔하고 현재 의사총이 있는 부근에서 식수하다가 의외로 많은 유골을 발견하였다. 병오 항일의병 시 전사한 의병 군의 유골이 임시 매장된 것으로 판명되어 충청남도에 그 사실을 보고하고 도비를 지원받아 유골을 모아 이곳에 합장하여 분묘를 조성하였다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2b7994c47729ea10fd4d9e0911f721c5b58b2d7189f3b38564f7f476ca33adc2",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125993",
+          "request_sha256": "c854be7c83073f3263609b9a88746a7f7da015557486fa1a6d184f2fc9d5bd59",
+          "response_sha256": "8660d6b0041525e70ea516e21c45efcb66133854ed84dd1afb32731f7482599f",
+          "retrieved_at": "2026-09-10T08:19:58.288861Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0d6193a76071f279a8dc20e68716591ae32145f1c1e5798674fb5144e718f128",
+          "source_uri": null
+        },
+        "record_sha256": "a2dadd4d0f5c9782a26ea2aa520bd2899f49f2cf8b2665bea3df7250dd2cd47c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:31cb38284a3cb0875d45e05ee9367a3c124bc4e186427fdff66c2d1b550bacbf",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125993",
+          "request_sha256": "c854be7c83073f3263609b9a88746a7f7da015557486fa1a6d184f2fc9d5bd59",
+          "response_sha256": "8660d6b0041525e70ea516e21c45efcb66133854ed84dd1afb32731f7482599f",
+          "retrieved_at": "2026-09-10T08:19:58.288861Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8e4688918720b921e5a393a2d6066457d457bf58bd9691e3320e929764fc8dc1",
+          "source_uri": null
+        },
+        "record_sha256": "ae30937cf385caba34e19acb31d061bfb0fc800558415161cd1acab8540f8b27",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "89e562c548f2427ab410ab7e036d01769d334b2aac1aa2315540ede09fd69fa6",
+    "place": {
+      "address": "충청남도 홍성군 홍성읍 의사로 79",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+      "name_ko": "홍성 홍주의사총",
+      "place_id": "public:korea:1b55e4acafb43b7ba5fd598c7dc36f89693310789625c80db6464fe33553fa15",
+      "provider_content_id": "125993",
+      "region_code": "44800",
+      "region_name": "충청남도 홍성군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

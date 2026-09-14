@@ -80,9 +80,9 @@ def _preview_payload() -> dict[str, object]:
                 "evidence_ids": [],
             }
             for axis, label_id, label_ko in (
-                ("HISTORY_TRADITION", "history-tradition", "역사·전통"),
-                ("EMOTION_IMAGE", "emotion-image", "감성·이미지"),
-                ("REST_IMMERSION", "rest-immersion", "휴식·몰입"),
+                ("HISTORY_TRADITION", "history-tradition", "대상•원형형"),
+                ("EMOTION_IMAGE", "emotion-image", "의미•이미지형"),
+                ("REST_IMMERSION", "rest-immersion", "자기•몰입형"),
             )
         ],
         "subattributes": [

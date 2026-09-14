@@ -634,6 +634,278 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/v1/authenticity/definition": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Definition */
+        get: operations["getAuthenticityDefinition"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/info": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Info */
+        get: operations["getAuthenticityInfo"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/photos": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Photos */
+        post: operations["analyzeAuthenticityPhoto"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/photos/{photo_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /** Delete Photo */
+        delete: operations["deleteAuthenticityPhoto"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/photos/{photo_id}/confirm": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Confirm Photo */
+        post: operations["confirmAuthenticityPhoto"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/profiles": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Create Profile */
+        post: operations["createAuthenticityIntent"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/profiles/{profile_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Profile */
+        get: operations["getAuthenticityIntent"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/runs": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Create Run */
+        post: operations["createAuthenticityRun"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/runs/{run_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Run */
+        get: operations["getAuthenticityRun"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/runs/{run_id}/compare": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Compare */
+        get: operations["compareAuthenticityPlaces"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/runs/{run_id}/places/{place_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Detail */
+        get: operations["getAuthenticityDetail"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/runs/{run_id}/places/{place_id}/feedback": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Feedback */
+        post: operations["recordAuthenticityFeedback"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/runs/{run_id}/places/{place_id}/saved": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /** Save */
+        put: operations["saveAuthenticityPlace"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/saved": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Saved */
+        get: operations["getAuthenticitySaved"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/session": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /** Delete Session */
+        delete: operations["deleteAuthenticitySession"];
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/authenticity/sessions": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Create Session */
+        post: operations["createAuthenticitySession"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/v1/photo-jobs": {
         parameters: {
             query?: never;
@@ -1315,6 +1587,13 @@ export interface components {
             /** Place Value */
             place_value: number;
         };
+        /** AxisDescription */
+        AxisDescription: {
+            /** Label */
+            label: string;
+            /** Theory */
+            theory: string;
+        };
         /**
          * AxisDisplayCopy
          * @description Reviewed display and Korean connective copy for one experience axis.
@@ -1326,13 +1605,10 @@ export interface components {
             /** Label Ko */
             label_ko: string;
         };
-        /** AxisScore */
-        AxisScore: {
-            axis: components["schemas"]["ExperienceAxis"];
-            /** Basis Points */
-            basis_points: number;
-            /** Display Score */
-            display_score: number;
+        /** Body_analyzeAuthenticityPhoto */
+        Body_analyzeAuthenticityPhoto: {
+            /** Files */
+            files: string[];
         };
         /** CampingContext */
         CampingContext: {
@@ -1416,6 +1692,13 @@ export interface components {
             /** Travel Condition Fit Score */
             travel_condition_fit_score: number;
         };
+        /** Choice */
+        Choice: {
+            /** Label */
+            label: string;
+            /** Value */
+            value: number | null;
+        };
         /**
          * ClaimKind
          * @enum {string}
@@ -1426,6 +1709,11 @@ export interface components {
          * @enum {string}
          */
         CompanionType: "SOLO" | "FRIEND_OR_PARTNER" | "FAMILY_WITH_CHILDREN" | "WITH_SENIORS" | "GROUP";
+        /** Comparison */
+        Comparison: {
+            /** Places */
+            places: components["schemas"]["Detail"][];
+        };
         /** ComparisonRow */
         ComparisonRow: {
             /** Label Ko */
@@ -1485,6 +1773,38 @@ export interface components {
              * @constant
              */
             schema_version: "photo-mood-projection.v1";
+        };
+        /** Contribution */
+        Contribution: {
+            /**
+             * Channel
+             * @enum {string}
+             */
+            channel: "TEXT" | "PHOTO" | "SOCIAL";
+            /** Evidence Ids */
+            evidence_ids: string[];
+            /** Rule */
+            rule: string;
+            /** Value */
+            value: number;
+            /** Weight Bp */
+            weight_bp: number;
+        };
+        /** Coverage */
+        Coverage: {
+            /** Known Weight */
+            known_weight: number;
+            /** Percent */
+            percent: number;
+            /** Total Weight */
+            total_weight: number;
+        };
+        /** CreateRun */
+        CreateRun: {
+            /** Profile Id */
+            profile_id: string;
+            /** Request Id */
+            request_id: string;
         };
         /**
          * CrowdAvoidance
@@ -1779,6 +2099,31 @@ export interface components {
             schema_version: "mvp-daily-refresh-status.v1";
             status: components["schemas"]["DailyRefreshRunStatus"] | null;
         };
+        /** Definition */
+        Definition: {
+            /** Axes */
+            axes: {
+                [key: string]: components["schemas"]["AxisDescription"];
+            };
+            /** Choices */
+            choices: components["schemas"]["Choice"][];
+            /** Description */
+            description: string;
+            /** Interpretation */
+            interpretation: string;
+            /** Questionnaire Sha256 */
+            questionnaire_sha256: string;
+            /** Questions */
+            questions: components["schemas"]["Question"][];
+            /**
+             * Schema Version
+             * @default authenticity-questionnaire-v1
+             * @constant
+             */
+            schema_version: "authenticity-questionnaire-v1";
+            /** Title */
+            title: string;
+        };
         /** DestinationImageDecision */
         DestinationImageDecision: {
             /** Asset Id */
@@ -1915,6 +2260,24 @@ export interface components {
              * @enum {string}
              */
             season: "SPRING" | "SUMMER" | "AUTUMN" | "WINTER" | "UNKNOWN";
+        };
+        /** Detail */
+        Detail: {
+            /** Address */
+            address: string;
+            /** Axes */
+            axes: components["schemas"]["itda__authenticity__contracts__AxisScore"][];
+            /** Evidence */
+            evidence: components["schemas"]["EvidenceView"][];
+            /** Facets */
+            facets: components["schemas"]["FacetScore"][];
+            item: components["schemas"]["ResultItem"];
+            /** Limitations */
+            limitations: string[];
+            /** Photos */
+            photos: {
+                [key: string]: string;
+            }[];
         };
         /** DiversityCandidateScore */
         DiversityCandidateScore: {
@@ -2260,6 +2623,57 @@ export interface components {
             /** Source Label Ko */
             source_label_ko: string;
         };
+        /** EvidenceView */
+        EvidenceView: {
+            /** Appearance */
+            appearance: {
+                [key: string]: unknown;
+            } | null;
+            /** Evidence Id */
+            evidence_id: string;
+            /** Excerpt */
+            excerpt: string | null;
+            /**
+             * Facet Quotes
+             * @default []
+             */
+            facet_quotes: components["schemas"]["FacetQuote"][];
+            /** Image Sha256 */
+            image_sha256: string | null;
+            /** Modality */
+            modality: string;
+            /** Provider */
+            provider: string;
+            /** Quote */
+            quote: string | null;
+            /**
+             * Quote Truncated
+             * @default false
+             */
+            quote_truncated: boolean;
+            /** Reference Date */
+            reference_date: string | null;
+            /** Reported Count */
+            reported_count: number | null;
+            /**
+             * Retrieved At
+             * Format: date-time
+             */
+            retrieved_at: string;
+            /** Role */
+            role: string;
+            /** State */
+            state: string;
+            /** Uri */
+            uri: string | null;
+        };
+        /** Exclusion */
+        Exclusion: {
+            /** Place Id */
+            place_id: string;
+            /** Reason */
+            reason: string;
+        };
         /**
          * ExperienceAxis
          * @enum {string}
@@ -2282,6 +2696,95 @@ export interface components {
             reference_date: string;
             /** Template Id */
             template_id: string;
+        };
+        /** FacetQuote */
+        FacetQuote: {
+            /**
+             * Facet
+             * @enum {string}
+             */
+            facet: "H.a" | "H.b" | "H.c" | "H.d" | "E.a" | "E.b" | "E.c" | "E.d" | "R.a" | "R.b" | "R.c" | "R.d";
+            /** Quote */
+            quote: string;
+            /**
+             * Truncated
+             * @default false
+             */
+            truncated: boolean;
+        };
+        /** FacetScore */
+        FacetScore: {
+            /** Contributions */
+            contributions: components["schemas"]["Contribution"][];
+            /**
+             * Key
+             * @enum {string}
+             */
+            key: "H.a" | "H.b" | "H.c" | "H.d" | "E.a" | "E.b" | "E.c" | "E.d" | "R.a" | "R.b" | "R.c" | "R.d";
+            /** Missing Channels */
+            missing_channels: ("TEXT" | "PHOTO" | "SOCIAL")[];
+            /** Reason */
+            reason: string;
+            /** Value */
+            value: number | null;
+        };
+        /** FeedbackCreated */
+        FeedbackCreated: {
+            /** Feedback Id */
+            feedback_id: string;
+            /**
+             * Research Use
+             * @default false
+             * @constant
+             */
+            research_use: false;
+        };
+        /** FeedbackRequest */
+        FeedbackRequest: {
+            /** Expectations Met */
+            expectations_met?: {
+                [key: string]: number | null;
+            };
+            /**
+             * Note
+             * @default
+             */
+            note: string;
+            /** Request Id */
+            request_id: string;
+            /**
+             * Visited
+             * @default false
+             */
+            visited: boolean;
+        };
+        /** FitPart */
+        FitPart: {
+            /** Avoidance */
+            avoidance: number;
+            /** Compared */
+            compared: boolean;
+            /** Desired Level */
+            desired_level: number | null;
+            /** Evidence Ids */
+            evidence_ids: string[];
+            /**
+             * Facet
+             * @enum {string}
+             */
+            facet: "H.a" | "H.b" | "H.c" | "H.d" | "E.a" | "E.b" | "E.c" | "E.d" | "R.a" | "R.b" | "R.c" | "R.d";
+            /** Importance */
+            importance: number;
+            /** Place Value */
+            place_value: number | null;
+            /** Rule */
+            rule: string;
+            /** Utility */
+            utility: number | null;
+            /** Visual Comparison */
+            visual_comparison: components["schemas"]["VisualPart"][];
+            /** Weight */
+            weight: number;
         };
         /** ForecastAlternative */
         ForecastAlternative: {
@@ -2704,6 +3207,68 @@ export interface components {
          * @enum {string}
          */
         IndoorOutdoorPreference: "INDOOR" | "NO_PREFERENCE" | "OUTDOOR";
+        /** Intent */
+        Intent: {
+            /** Axis Importance */
+            axis_importance: {
+                [key: string]: number | null;
+            };
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /** Intent Sha256 */
+            intent_sha256: string;
+            /** Profile Id */
+            profile_id: string;
+            /** Requested Axes */
+            requested_axes: ("H" | "E" | "R")[];
+            /** Required Axes */
+            required_axes: ("H" | "E" | "R")[];
+            /**
+             * Schema Version
+             * @default authenticity-intent.v1
+             * @constant
+             */
+            schema_version: "authenticity-intent.v1";
+            submission: components["schemas"]["IntentSubmission"];
+        };
+        /** IntentSubmission */
+        IntentSubmission: {
+            /** Answers */
+            answers: {
+                [key: string]: number | null;
+            };
+            /** Avoid */
+            avoid?: {
+                [key: string]: number;
+            };
+            /** Desired Levels */
+            desired_levels?: {
+                [key: string]: number;
+            };
+            /** Photo Receipt Sha256 */
+            photo_receipt_sha256?: string | null;
+            /**
+             * Questionnaire Sha256
+             * @default 5fd1a9ca18babea6b70ffad1e25e09ab7a822e74e9c14ba86227562d03897ff7
+             */
+            questionnaire_sha256: string;
+            /** Request Id */
+            request_id: string;
+            requirements?: components["schemas"]["TripRequirements"];
+            /**
+             * Visual Input Kind
+             * @default NONE
+             * @enum {string}
+             */
+            visual_input_kind: "NONE" | "MANUAL" | "CONFIRMED_PHOTO";
+            /** Visual Targets */
+            visual_targets?: {
+                [key: string]: number;
+            };
+        };
         /**
          * LabelAggregate
          * @description One immutable per-attribute aggregate preserving every accepted input.
@@ -3144,6 +3709,11 @@ export interface components {
              */
             source_label_ko: "한국관광공사 TourAPI(KorService2 detailIntro2)";
         };
+        /** PhotoConfirmation */
+        PhotoConfirmation: {
+            /** Candidate Ids */
+            candidate_ids: string[];
+        };
         /**
          * PhotoConfirmationReceiptView
          * @description Minimized opaque receipt: identity plus bounded batch facts only.
@@ -3460,6 +4030,46 @@ export interface components {
                 components["schemas"]["PhotoTraitFitComponent"]
             ];
         };
+        /** PhotoReview */
+        PhotoReview: {
+            /** Batches */
+            batches: components["schemas"]["PhotoMoodCandidateSet"][];
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /**
+             * Deletion State
+             * @default ORIGINAL_DISCARDED
+             * @constant
+             */
+            deletion_state: "ORIGINAL_DISCARDED";
+            /**
+             * Original Retained
+             * @default false
+             * @constant
+             */
+            original_retained: false;
+            /** Photo Id */
+            photo_id: string;
+            /** Receipt Sha256 */
+            receipt_sha256?: string | null;
+            /**
+             * Selected Candidate Ids
+             * @default []
+             */
+            selected_candidate_ids: string[];
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "REVIEW" | "CONFIRMED" | "DELETED" | "FAILED";
+            /** Targets */
+            targets?: {
+                [key: string]: number;
+            };
+        };
         /**
          * PhotoTerminalCause
          * @description Closed nine-cause terminal vocabulary mapped to terminal states.
@@ -3666,9 +4276,9 @@ export interface components {
             schema_version: string;
             /** Scores */
             scores: [
-                components["schemas"]["AxisScore"],
-                components["schemas"]["AxisScore"],
-                components["schemas"]["AxisScore"]
+                components["schemas"]["itda__contracts__preference__AxisScore"],
+                components["schemas"]["itda__contracts__preference__AxisScore"],
+                components["schemas"]["itda__contracts__preference__AxisScore"]
             ];
             /** Scoring Version */
             scoring_version: string;
@@ -4070,6 +4680,21 @@ export interface components {
             distinct_images: number;
             /** Value */
             value: number | null;
+        };
+        /** Question */
+        Question: {
+            /**
+             * Axis
+             * @enum {string}
+             */
+            axis: "H" | "E" | "R";
+            /**
+             * Key
+             * @enum {string}
+             */
+            key: "H.a" | "H.b" | "H.c" | "H.d" | "E.a" | "E.b" | "E.c" | "E.d" | "R.a" | "R.b" | "R.c" | "R.d";
+            /** Text */
+            text: string;
         };
         /**
          * QuestionnaireAnswersV1
@@ -4625,6 +5250,15 @@ export interface components {
              */
             schema_version: "itda.recommendation-run-created.v1";
         };
+        /** Region */
+        Region: {
+            /** Code */
+            code: string;
+            /** Name */
+            name: string;
+            /** Places */
+            places: number;
+        };
         /** RegionalDemandContext */
         RegionalDemandContext: {
             /** Base Month */
@@ -4891,6 +5525,34 @@ export interface components {
          * @enum {string}
          */
         RequiredFacility: "wheelchair_rental" | "stroller_rental" | "accessible_toilet" | "accessible_parking" | "step_free_entry";
+        /** ResultItem */
+        ResultItem: {
+            /** Assessment Sha256 */
+            assessment_sha256: string;
+            /** Axes */
+            axes: {
+                [key: string]: number | null;
+            };
+            /** Category */
+            category: string;
+            /** Components */
+            components: components["schemas"]["FitPart"][];
+            coverage: components["schemas"]["Coverage"];
+            /** Duplicate Group Id */
+            duplicate_group_id: string;
+            /** Name Ko */
+            name_ko: string;
+            /** Place Id */
+            place_id: string;
+            /** Rank */
+            rank: number;
+            /** Region Name */
+            region_name: string;
+            /** Score */
+            score: number;
+            /** Warnings */
+            warnings: string[];
+        };
         /**
          * ReviewReason
          * @enum {string}
@@ -5014,6 +5676,71 @@ export interface components {
             unknown_note?: string | null;
             unknown_reason?: components["schemas"]["UnknownReason"] | null;
         };
+        /** RunResult */
+        RunResult: {
+            /** Assessment Set Sha256 */
+            assessment_set_sha256: string;
+            /** Candidate Membership Sha256 */
+            candidate_membership_sha256: string;
+            /**
+             * Created At
+             * Format: date-time
+             */
+            created_at: string;
+            /** Eligible Count */
+            eligible_count: number;
+            /** Exclusions */
+            exclusions: components["schemas"]["Exclusion"][];
+            /** Intent Sha256 */
+            intent_sha256: string;
+            /** Items */
+            items: components["schemas"]["ResultItem"][];
+            /** Policy Sha256 */
+            policy_sha256: string | null;
+            /** Profile Id */
+            profile_id: string;
+            /** Ranking Version */
+            ranking_version: string;
+            /** Request Id */
+            request_id: string;
+            /** Requested Count */
+            requested_count: number;
+            /** Result Count */
+            result_count: number;
+            /** Run Sha256 */
+            run_sha256: string;
+            /**
+             * Schema Version
+             * @constant
+             */
+            schema_version: "authenticity-recommendation-run.v1";
+            /**
+             * State
+             * @enum {string}
+             */
+            state: "COMPLETE" | "LIMITED" | "EMPTY";
+            /** Validation Scope */
+            validation_scope: string;
+            /** Visual Reference Sha256 */
+            visual_reference_sha256: string;
+        };
+        /** SaveRequest */
+        SaveRequest: {
+            /** Saved */
+            saved: boolean;
+        };
+        /** SavedItem */
+        SavedItem: {
+            /** Place Id */
+            place_id: string;
+            /** Run Sha256 */
+            run_sha256: string;
+            /**
+             * Saved At
+             * Format: date-time
+             */
+            saved_at: string;
+        };
         /** SavedPlaceProjection */
         SavedPlaceProjection: {
             /** Address Ko */
@@ -5070,6 +5797,31 @@ export interface components {
             rerank_score: number;
             /** Travel Condition Fit Score */
             travel_condition_fit_score: number;
+        };
+        /** ServiceInfo */
+        ServiceInfo: {
+            /** Photo Enabled */
+            photo_enabled: boolean;
+            /** Places */
+            places: number;
+            /** Regions */
+            regions: components["schemas"]["Region"][];
+            /** Release Sha256 */
+            release_sha256: string | null;
+            /** Scope */
+            scope: string | null;
+        };
+        /** SessionCreated */
+        SessionCreated: {
+            /**
+             * Expires At
+             * Format: date-time
+             */
+            expires_at: string;
+            /** Session Id */
+            session_id: string;
+            /** Token */
+            token: string;
         };
         /** SourceEvidence */
         SourceEvidence: {
@@ -5350,6 +6102,16 @@ export interface components {
             schema_version: "itda.trip-context.v1";
             trip_input: components["schemas"]["GroundedTripInput"];
         };
+        /** TripRequirements */
+        TripRequirements: {
+            /** Region Code */
+            region_code?: string | null;
+            /**
+             * Required Facilities
+             * @default []
+             */
+            required_facilities: components["schemas"]["RequiredFacility"][];
+        };
         /** TripTemporalContext */
         TripTemporalContext: {
             /**
@@ -5437,6 +6199,17 @@ export interface components {
          * @enum {string}
          */
         VisualMoodDimension: "greenery" | "water" | "open_composition" | "traditional_appearance" | "contemporary_design" | "warm_light" | "vivid_color" | "night_lighting";
+        /** VisualPart */
+        VisualPart: {
+            /** Actual */
+            actual: number | null;
+            /** Dimension */
+            dimension: string;
+            /** Fit */
+            fit: number | null;
+            /** Target */
+            target: number;
+        };
         /** WalkingContext */
         WalkingContext: {
             /** Context Sha256 */
@@ -5558,11 +6331,37 @@ export interface components {
          * @enum {string}
          */
         WalkingTolerance: "WITHIN_30_MINUTES" | "ABOUT_1_HOUR" | "EXTENDED_WALKING_OK";
+        /** AxisScore */
+        itda__authenticity__contracts__AxisScore: {
+            /**
+             * Axis
+             * @enum {string}
+             */
+            axis: "H" | "E" | "R";
+            /** Core Satisfied */
+            core_satisfied: boolean;
+            /** Missing Facets */
+            missing_facets: ("H.a" | "H.b" | "H.c" | "H.d" | "E.a" | "E.b" | "E.c" | "E.d" | "R.a" | "R.b" | "R.c" | "R.d")[];
+            /** Reason */
+            reason: string;
+            /** Supported Facets */
+            supported_facets: ("H.a" | "H.b" | "H.c" | "H.d" | "E.a" | "E.b" | "E.c" | "E.d" | "R.a" | "R.b" | "R.c" | "R.d")[];
+            /** Value */
+            value: number | null;
+        };
         /**
          * EvidenceLane
          * @enum {string}
          */
         itda__contracts__labeling__EvidenceLane: "DESCRIPTION" | "ODII";
+        /** AxisScore */
+        itda__contracts__preference__AxisScore: {
+            axis: components["schemas"]["ExperienceAxis"];
+            /** Basis Points */
+            basis_points: number;
+            /** Display Score */
+            display_score: number;
+        };
         /**
          * EvidenceLane
          * @description Independent official-source lanes that must never be merged.
@@ -7338,6 +8137,518 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["DailyGlmOperationsOverview"];
+                };
+            };
+        };
+    };
+    getAuthenticityDefinition: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Definition"];
+                };
+            };
+        };
+    };
+    getAuthenticityInfo: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ServiceInfo"];
+                };
+            };
+        };
+    };
+    analyzeAuthenticityPhoto: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "multipart/form-data": components["schemas"]["Body_analyzeAuthenticityPhoto"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoReview"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    deleteAuthenticityPhoto: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path: {
+                photo_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoReview"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    confirmAuthenticityPhoto: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path: {
+                photo_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["PhotoConfirmation"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["PhotoReview"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    createAuthenticityIntent: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["IntentSubmission"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Intent"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    getAuthenticityIntent: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path: {
+                profile_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Intent"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    createAuthenticityRun: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CreateRun"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RunResult"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    getAuthenticityRun: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path: {
+                run_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["RunResult"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    compareAuthenticityPlaces: {
+        parameters: {
+            query: {
+                place_ids: string;
+            };
+            header?: {
+                authorization?: string | null;
+            };
+            path: {
+                run_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Comparison"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    getAuthenticityDetail: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path: {
+                run_id: string;
+                place_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Detail"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    recordAuthenticityFeedback: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path: {
+                run_id: string;
+                place_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["FeedbackRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["FeedbackCreated"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    saveAuthenticityPlace: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path: {
+                run_id: string;
+                place_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["SaveRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: boolean;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    getAuthenticitySaved: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SavedItem"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    deleteAuthenticitySession: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        [key: string]: boolean;
+                    };
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    createAuthenticitySession: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["SessionCreated"];
                 };
             };
         };

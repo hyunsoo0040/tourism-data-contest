@@ -82,21 +82,36 @@ describe("/start current-trip form", () => {
     expect(window.localStorage.getItem(DRAFT_STORAGE_KEY)).toBeNull();
   });
 
-  it.each(["/start", "/start?mode=edit"])("%s에서 과거 날짜의 직접 제출을 차단한다", async (entry) => {
-    const router = await renderStart(entry);
+  it.each(["/start", "/start?mode=edit"])("%s에서 피커가 반환한 과거 날짜를 즉시 되돌린다", async (entry) => {
+    await renderStart(entry);
     const input = screen.getByLabelText("방문 날짜 (선택)");
     fireEvent.change(input, { target: { value: "2026-09-08" } });
-    completeRequiredChoices();
-    fireEvent.submit(document.getElementById("trip-condition-form")!);
-    const summary = await screen.findByRole("alert");
-    await waitFor(() => expect(document.activeElement).toBe(input));
-    summary.focus();
-    fireEvent.click(within(summary).getByRole("link", { name: "오늘 또는 이후 날짜를 선택해 주세요." }));
-    await waitFor(() => expect(document.activeElement).toBe(input));
-    expect(input.getAttribute("aria-invalid")).toBe("true");
-    expect(input.getAttribute("aria-describedby")).toBe("visit_date-error");
-    expect(router.state.location.pathname).toBe("/start");
+    expect((input as HTMLInputElement).value).toBe("2026-09-09");
+    expect(await screen.findByText("지난 날짜는 선택할 수 없어요. 2026-09-09로 되돌렸어요.")).toBeTruthy();
     expect(window.localStorage.getItem(DRAFT_STORAGE_KEY)).toBeNull();
+  });
+
+  it("과거 날짜를 거절할 때 마지막으로 선택한 유효 날짜를 보존한다", async () => {
+    await renderStart();
+    const input = screen.getByLabelText("방문 날짜 (선택)") as HTMLInputElement;
+    fireEvent.change(input, { target: { value: "2026-10-03" } });
+    fireEvent.change(input, { target: { value: "2026-09-08" } });
+    expect(input.value).toBe("2026-10-03");
+    expect(await screen.findByText(/2026-10-03로 되돌렸어요/)).toBeTruthy();
+    fireEvent.change(input, { target: { value: "2026-10-04" } });
+    await waitFor(() => expect(screen.queryByText(/되돌렸어요/)).toBeNull());
+    expect(input.value).toBe("2026-10-04");
+  });
+
+  it("자정 이후 피커를 열고 과거 날짜를 선택하면 새 오늘로 되돌린다", async () => {
+    await renderStart();
+    const input = screen.getByLabelText("방문 날짜 (선택)") as HTMLInputElement;
+    vi.setSystemTime(new Date(2026, 8, 10, 0, 1));
+    fireEvent.pointerDown(input);
+    expect(input.min).toBe("2026-09-10");
+    fireEvent.change(input, { target: { value: "2026-09-08" } });
+    expect(input.value).toBe("2026-09-10");
+    expect(await screen.findByText(/2026-09-10로 되돌렸어요/)).toBeTruthy();
   });
 
   it.each(["2026-09-09", ""])("오늘 또는 명시적으로 지운 날짜 %s를 제출한다", async (value) => {

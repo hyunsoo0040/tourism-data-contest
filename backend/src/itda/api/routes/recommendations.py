@@ -12,6 +12,7 @@ from itda.api.dependencies import (
     get_recommendation_service,
     require_same_origin_mutation,
 )
+from itda.application.grounded_recommendations import GroundedRecommendationService
 from itda.application.recommendations import (
     InsufficientEligibleCandidates,
     InvalidRecommendationOutput,
@@ -19,6 +20,12 @@ from itda.application.recommendations import (
     PhotoRecommendationUnavailable,
     PreferenceProfileUnavailable,
     RecommendationService,
+)
+from itda.contracts.grounded_responses import (
+    GroundedComparisonResponse,
+    GroundedDetailResponse,
+    GroundedResultsResponse,
+    RecommendationRegionsResponse,
 )
 from itda.contracts.recommendation import (
     MvpRecommendationDetail,
@@ -72,6 +79,21 @@ def _raise_public_error(
     raise HTTPException(status_code=status_code, detail=detail.model_dump(mode="json"))
 
 
+@router.get(
+    "/recommendation-regions",
+    response_model=RecommendationRegionsResponse,
+    operation_id="getRecommendationRegions",
+)
+def get_recommendation_regions(
+    service: Annotated[
+        RecommendationService | GroundedRecommendationService, Depends(get_recommendation_service)
+    ],
+) -> RecommendationRegionsResponse:
+    if isinstance(service, GroundedRecommendationService):
+        return service.get_regions()
+    return RecommendationRegionsResponse(candidate_sha256=None, regions=())
+
+
 @router.post(
     "/recommendation-runs",
     response_model=RecommendationRunCreated,
@@ -82,7 +104,9 @@ def _raise_public_error(
 def create_recommendation_run(
     recommendation_request: RecommendationRequest,
     http_request: Request,
-    service: Annotated[RecommendationService, Depends(get_recommendation_service)],
+    service: Annotated[
+        RecommendationService | GroundedRecommendationService, Depends(get_recommendation_service)
+    ],
     principal: Annotated[
         ProfileSessionPrincipal | None,
         Depends(get_optional_profile_session),
@@ -155,14 +179,18 @@ def create_recommendation_run(
 
 @router.get(
     "/recommendation-runs/{run_id}",
-    response_model=RecommendationResultsResponse | MvpRecommendationResultsResponse,
+    response_model=RecommendationResultsResponse
+    | MvpRecommendationResultsResponse
+    | GroundedResultsResponse,
     operation_id="getRecommendationRun",
     responses=_ERROR_RESPONSES,
 )
 def get_recommendation_run(
     run_id: str,
-    service: Annotated[RecommendationService, Depends(get_recommendation_service)],
-) -> RecommendationResultsResponse | MvpRecommendationResultsResponse:
+    service: Annotated[
+        RecommendationService | GroundedRecommendationService, Depends(get_recommendation_service)
+    ],
+) -> RecommendationResultsResponse | MvpRecommendationResultsResponse | GroundedResultsResponse:
     try:
         return service.get_results(run_id)
     except RecommendationRunNotFound:
@@ -181,15 +209,17 @@ def get_recommendation_run(
 
 @router.get(
     "/recommendation-runs/{run_id}/places/{place_id}",
-    response_model=RecommendationDetail | MvpRecommendationDetail,
+    response_model=RecommendationDetail | MvpRecommendationDetail | GroundedDetailResponse,
     operation_id="getRecommendationPlaceDetail",
     responses=_ERROR_RESPONSES,
 )
 def get_recommendation_place_detail(
     run_id: str,
     place_id: str,
-    service: Annotated[RecommendationService, Depends(get_recommendation_service)],
-) -> RecommendationDetail | MvpRecommendationDetail:
+    service: Annotated[
+        RecommendationService | GroundedRecommendationService, Depends(get_recommendation_service)
+    ],
+) -> RecommendationDetail | MvpRecommendationDetail | GroundedDetailResponse:
     try:
         return service.get_detail(run_id, place_id)
     except RecommendationRunNotFound:
@@ -222,7 +252,9 @@ def get_recommendation_operating_information(
     response: Response,
     run_id: str,
     place_id: Annotated[list[str], Query(min_length=1, max_length=5)],
-    service: Annotated[RecommendationService, Depends(get_recommendation_service)],
+    service: Annotated[
+        RecommendationService | GroundedRecommendationService, Depends(get_recommendation_service)
+    ],
 ) -> OperatingInformationResponse:
     response.headers["Cache-Control"] = "no-store"
     try:
@@ -249,15 +281,17 @@ def get_recommendation_operating_information(
 
 @router.get(
     "/recommendation-runs/{run_id}/comparison",
-    response_model=RecommendationComparisonResponse,
+    response_model=RecommendationComparisonResponse | GroundedComparisonResponse,
     operation_id="getRecommendationComparison",
     responses=_ERROR_RESPONSES,
 )
 def get_recommendation_comparison(
     run_id: str,
     place_id: Annotated[list[str], Query(min_length=2, max_length=3)],
-    service: Annotated[RecommendationService, Depends(get_recommendation_service)],
-) -> RecommendationComparisonResponse:
+    service: Annotated[
+        RecommendationService | GroundedRecommendationService, Depends(get_recommendation_service)
+    ],
+) -> RecommendationComparisonResponse | GroundedComparisonResponse:
     try:
         return service.get_comparison(run_id, tuple(place_id))
     except RecommendationRunNotFound:
@@ -289,7 +323,9 @@ def get_recommendation_comparison(
 def resolve_saved_place_reference(
     release_sha256: _SHA256_PATH,
     place_id: str,
-    service: Annotated[RecommendationService, Depends(get_recommendation_service)],
+    service: Annotated[
+        RecommendationService | GroundedRecommendationService, Depends(get_recommendation_service)
+    ],
 ) -> SavedPlaceProjection:
     try:
         return service.resolve_saved_place_reference(release_sha256, place_id)

@@ -1,0 +1,541 @@
+{
+  "assessed_at": "2026-09-11T18:54:46.252205Z",
+  "assessment_sha256": "b47b03365ace03b3ad703ec501d25678a83568fbb71329172a41884a0ba32447",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 56
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 69
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "단양이 패러글라이딩 명소로 알려져 있다는 이미지가 장소에 연결되어 있다고 서술되어 있다. 그러나 다양한 표현에서 일관된 의미가 확인되는 수준까지는 근거가 부족하여 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "'뷰 좋기로 소문난'이라는 표현은 이미지의 입소문 유통을 간접적으로 시사하나, 특정 매체를 통한 장소 이미지의 재현·확산에 대한 명시적 근거는 제한적이다. 수준 1(명시된 한 매체·경로의 이미지 표현) 범위 내로 판단한다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "수려한 자연경관과 뷰가 좋기로 소문난 장소라는 시각적 성격 서술과 사진 촬영 언급으로 구별되는 시각적 표현을 확인한다. 일관된 연출이 장면을 지배한다는 근거는 없어 수준 3으로 판단한다. 원 제안의 두 번째 인용은 VISUAL_APPEARANCE 주장이 해당 출처에서 허용되지 않아 VISUAL_EXPRESSION 인용으로 대체했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "비행 장면의 영상·사진 촬영과 즉석 인화로 대표 장면을 직접 경험하고 재현할 수 있다. 다만 이미지 체험이 방문 경험의 중심이라고 보기는 어려워 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "노멀·익스트림·커플 코스 등 다양한 프로그램 선택지와 촬영 방식의 선택이 제공되어 방문자가 자신의 방식을 선택할 기회가 있다. 자율적 탐색이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다. 원 제안 인용은 원문에 없는 문장이어서 실제 존재하는 구절로 수정했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "소백산·남한강의 자연경관과 머물며 쉴 수 있는 이착륙장·카페 공간에 대한 근거가 있다. 실제 고요함이나 환경 단서가 공간을 지배한다는 확인은 없어 수준 3으로 제한한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "패러글라이딩이라는 구체적 신체 참여 활동과 다양한 코스, 전문 강사가 제공된다. 참여 활동의 지속적 도전 구조나 몰입 경험의 중심성까지는 확인되지 않아 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "커플 근접 비행과 무전 등 함께하는 경험의 기회가 제시되지만 교류·공동 활동·자기표현의 폭이 넓다는 근거는 부족하다. 제한적 공동 활동 수준인 수준 2로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 패러글라이딩 레포츠 업체 소개이며 확인된 원형·유산과의 접촉에 대한 근거가 없다. 없다는 명시도 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소의 실제 역사·연혁에 대한 서사가 제공되지 않는다. 업체의 사업 경력은 장소의 역사 맥락이 아니므로 근거 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 두산마을 언급만으로 전승 활동을 추정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·전통·역사에 연결된 해설이나 학습 요소가 개요에 없다. 강사의 전문성은 유산 해설이 아니므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 119,
+            "method": "EXACT",
+            "original": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어 패러글라이딩의 명소로 알려져 있다",
+            "start": 60,
+            "submitted": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어 패러글라이딩의 명소로 알려져 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "단양이 패러글라이딩 명소로 알려져 있다는 이미지가 장소에 연결되어 있다고 서술되어 있다. 그러나 다양한 표현에서 일관된 의미가 확인되는 수준까지는 근거가 부족하여 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 477,
+            "method": "EXACT",
+            "original": "특히 단양에서 뷰 좋기로 소문난 도깨비카페와 단독 프로모션 계약돼서 모든 음료를 50% 할인된 가격에 이용할 수 있다",
+            "start": 412,
+            "submitted": "특히 단양에서 뷰 좋기로 소문난 도깨비카페와 단독 프로모션 계약돼서 모든 음료를 50% 할인된 가격에 이용할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.b",
+      "level": 1,
+      "reason": "'뷰 좋기로 소문난'이라는 표현은 이미지의 입소문 유통을 간접적으로 시사하나, 특정 매체를 통한 장소 이미지의 재현·확산에 대한 명시적 근거는 제한적이다. 수준 1(명시된 한 매체·경로의 이미지 표현) 범위 내로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 119,
+            "method": "EXACT",
+            "original": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어 패러글라이딩의 명소로 알려져 있다",
+            "start": 60,
+            "submitted": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어 패러글라이딩의 명소로 알려져 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 449,
+            "method": "EXACT",
+            "original": "단양에서 뷰 좋기로 소문난 도깨비카페와 단독 프로모션 계약돼서",
+            "start": 415,
+            "submitted": "단양에서 뷰 좋기로 소문난 도깨비카페와 단독 프로모션 계약돼서",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "수려한 자연경관과 뷰가 좋기로 소문난 장소라는 시각적 성격 서술과 사진 촬영 언급으로 구별되는 시각적 표현을 확인한다. 일관된 연출이 장면을 지배한다는 근거는 없어 수준 3으로 판단한다. 원 제안의 두 번째 인용은 VISUAL_APPEARANCE 주장이 해당 출처에서 허용되지 않아 VISUAL_EXPRESSION 인용으로 대체했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 616,
+            "method": "EXACT",
+            "original": "영상 촬영도 가능하며 사진 촬영 후에는 맘에 드는 사진을 즉석에서 인화해서 받을 수 있다",
+            "start": 567,
+            "submitted": "영상 촬영도 가능하며 사진 촬영 후에는 맘에 드는 사진을 즉석에서 인화해서 받을 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "비행 장면의 영상·사진 촬영과 즉석 인화로 대표 장면을 직접 경험하고 재현할 수 있다. 다만 이미지 체험이 방문 경험의 중심이라고 보기는 어려워 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 578,
+            "method": "EXACT",
+            "original": "편안한 하늘을 관광하는 노멀코스부터 청룡열차 타듯 스릴 넘치는 익스트림코스, 커플과 함께 근접 비행하며 무전을 할 수 있는 코스 등 다양한 프로그램이 있으며 영상 촬영도 가능하며",
+            "start": 479,
+            "submitted": "편안한 하늘을 관광하는 노멀코스부터 청룡열차 타듯 스릴 넘치는 익스트림코스, 커플과 함께 근접 비행하며 무전을 할 수 있는 코스 등 다양한 프로그램이 있으며 영상 촬영도 가능하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "노멀·익스트림·커플 코스 등 다양한 프로그램 선택지와 촬영 방식의 선택이 제공되어 방문자가 자신의 방식을 선택할 기회가 있다. 자율적 탐색이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다. 원 제안 인용은 원문에 없는 문장이어서 실제 존재하는 구절로 수정했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 96,
+            "method": "EXACT",
+            "original": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장",
+            "start": 60,
+            "submitted": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 410,
+            "method": "EXACT",
+            "original": "탑승하지 않는 사람들도 이륙장 근처나 도깨비카페에서 사진을 찍거나 쉴 수 있다",
+            "start": 367,
+            "submitted": "탑승하지 않는 사람들도 이륙장 근처나 도깨비카페에서 사진을 찍거나 쉴 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "소백산·남한강의 자연경관과 머물며 쉴 수 있는 이착륙장·카페 공간에 대한 근거가 있다. 실제 고요함이나 환경 단서가 공간을 지배한다는 확인은 없어 수준 3으로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 365,
+            "method": "EXACT",
+            "original": "마음 놓고 즐길 수 있는 곳이다. 최대 규모의 높은 이륙장을 보유하고 있으며 이륙장이 바로 옆에 있기 때문에 이동 거리가 짧고",
+            "start": 295,
+            "submitted": "마음 놓고 즐길 수 있는 곳이다. 최대 규모의 높은 이륙장을 보유하고 있으며 이륙장이 바로 옆에 있기 때문에 이동 거리가 짧고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "패러글라이딩이라는 구체적 신체 참여 활동과 다양한 코스, 전문 강사가 제공된다. 참여 활동의 지속적 도전 구조나 몰입 경험의 중심성까지는 확인되지 않아 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+          "quote": {
+            "end": 550,
+            "method": "EXACT",
+            "original": "커플과 함께 근접 비행하며 무전을 할 수 있는 코스",
+            "start": 522,
+            "submitted": "커플과 함께 근접 비행하며 무전을 할 수 있는 코스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "커플 근접 비행과 무전 등 함께하는 경험의 기회가 제시되지만 교류·공동 활동·자기표현의 폭이 넓다는 근거는 부족하다. 제한적 공동 활동 수준인 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "1c014564388188db9a88070f70bf3767f28bf3fa86a5e86f32fcc47ee03ffde0",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e2bcfae1b100a20e8a3feee3b473366ed15c154f0b6b06ebe5c061378b0455c0",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c3e36725cf531afd6fa180bb730d613f1dc0ed73d658aacedf859f9321735b01",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3074954",
+          "request_sha256": "51bbbc7cc1b3f6b62c728410f5c42d9f3a49e3d0ac296d0fb6e44ab2dd3a5593",
+          "response_sha256": "2d39b297dedbeedc1fdba733ec4162021d03cd6ce0e290eabc20dbebf360a426",
+          "retrieved_at": "2026-09-10T16:48:47.358225Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-07T09:04:41Z",
+          "source_record_sha256": "2613a8e271c5eba5e784d3ae1943553d7bfe3e2257ef791565fe178956271023",
+          "source_uri": null
+        },
+        "record_sha256": "577c68576e935b3485323979b452cbdc99a0fdbfa6e813cad049663ff3c2ea06",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "충북 내륙에 위치한 단양은 여행하기 좋은 곳으로 멋진 풍경과 더불어 액티비티가 유명한 곳이다. 특히 단양은 소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어 패러글라이딩의 명소로 알려져 있다. 단양 패러명가는 단양 시외버스터미널에서 차로 20분 거리로 두산마을 정상에 위치한 도깨비 카페 근처에 있는 패러글라이딩 전문업체이다. 다년간 다양하고 전문적인 경험으로 패러글라이딩 사업을 하고 있으며 무엇보다 전국 패러글라이딩 대회에서 우수한 성적을 거둔 최연소 국가대표가 출신의 전문 베테랑 강사분과 함께해서 마음 놓고 즐길 수 있는 곳이다. 최대 규모의 높은 이륙장을 보유하고 있으며 이륙장이 바로 옆에 있기 때문에 이동 거리가 짧고, 탑승하지 않는 사람들도 이륙장 근처나 도깨비카페에서 사진을 찍거나 쉴 수 있다. 특히 단양에서 뷰 좋기로 소문난 도깨비카페와 단독 프로모션 계약돼서 모든 음료를 50% 할인된 가격에 이용할 수 있다. 편안한 하늘을 관광하는 노멀코스부터 청룡열차 타듯 스릴 넘치는 익스트림코스, 커플과 함께 근접 비행하며 무전을 할 수 있는 코스 등 다양한 프로그램이 있으며 영상 촬영도 가능하며 사진 촬영 후에는 맘에 드는 사진을 즉석에서 인화해서 받을 수 있다. 대중교통을 이용한 경우 무료 픽업서비스를 받을 수 있으며 투고 패러글라이딩을 예약하면 단양의 유명 관광지에서 제휴 할인을 받을 수 있다."
+      }
+    ],
+    "parent_source_sha256": "d348e47a8659208dbac17b9cfbd05cfe5b112280c9fb2a02f58248f4f4ded5bb",
+    "place": {
+      "address": "충청북도 단양군 가곡면 두산길 262",
+      "category": "레포츠",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:c3e36725cf531afd6fa180bb730d613f1dc0ed73d658aacedf859f9321735b01",
+      "name_ko": "단양 패러 명가",
+      "place_id": "public:korea:c3e36725cf531afd6fa180bb730d613f1dc0ed73d658aacedf859f9321735b01",
+      "provider_content_id": "3074954",
+      "region_code": "43800",
+      "region_name": "충청북도 단양군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,6 +1,8 @@
 import { FRONTEND_QUESTIONNAIRE as QUESTIONNAIRE } from "../src/content/questionnaire";
 import { expect, type Page, type Response, test } from "@playwright/test";
 
+import type { PreferenceProfile } from "../src/api/api";
+
 const CANONICAL_TITLES = QUESTIONNAIRE.questions.map(({ title_ko }) => title_ko);
 const CANONICAL_Q1 = CANONICAL_TITLES[0];
 
@@ -105,21 +107,25 @@ async function submitEditedAnswers(page: Page) {
   return assertProfileEcho(await profileResponse);
 }
 
-async function expectInitialProfile(page: Page) {
+async function expectDisplayedScores(page: Page, profile: PreferenceProfile) {
+  const axes = ["HISTORY_TRADITION", "EMOTION_IMAGE", "REST_IMMERSION"];
+  await expect(page.getByRole("meter")).toHaveCount(3);
+  const shown = await page.getByRole("meter").evaluateAll((meters) => meters.map((meter) => Number(meter.getAttribute("aria-valuenow"))));
+  expect(shown.reduce((sum, value) => sum + value, 0)).toBe(100);
+  for (const left of profile.scores) for (const right of profile.scores) {
+    if (left.basis_points > right.basis_points) {
+      expect(shown[axes.indexOf(left.axis)]).toBeGreaterThan(shown[axes.indexOf(right.axis)]!);
+    }
+  }
+}
+
+async function expectInitialProfile(page: Page, profile: PreferenceProfile) {
   await expect(page).toHaveURL(/\/profile$/);
-  await expect(
-    page.getByRole("meter", { name: "역사·전통 29점 / 100점" }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("meter", { name: "감성·이미지 36점 / 100점" }),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("meter", { name: "휴식·몰입 36점 / 100점" }),
-  ).toBeVisible();
+  await expectDisplayedScores(page, profile);
   await expect(page.getByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeVisible();
   await expect(
     page.getByText(
-      "이번 여행에서는 감성·이미지와 휴식·몰입 경험을 더 기대하고 있어요.",
+      "나는 장면 속에 담긴 감정과 오래 머물 수 있는 순간에 끌려요.",
       { exact: true },
     ),
   ).toBeVisible();
@@ -163,7 +169,7 @@ test("fresh loopback topology completes the canonical journey and both edits", a
   expect((await questionnaire.json()).config_hash).toBe(QUESTIONNAIRE.config_hash);
   expect(initial.request.answers.q1).toBe(1);
   expect(initial.request.trip_conditions.crowd_avoidance).toBe("MEDIUM");
-  await expectInitialProfile(page);
+  await expectInitialProfile(page, initial.profile);
 
   await page.getByRole("button", { name: "답변 수정하기" }).click();
   await expect(page).toHaveURL(/\/quiz$/);
@@ -171,12 +177,10 @@ test("fresh loopback topology completes the canonical journey and both edits", a
   const answerEdit = await submitEditedAnswers(page);
   expect(answerEdit.request.request_id).not.toBe(initial.request.request_id);
   expect(answerEdit.request.answers.q1).toBe(3);
-  await expect(
-    page.getByRole("meter", { name: "역사·전통 36점 / 100점" }),
-  ).toBeVisible();
+  await expectDisplayedScores(page, answerEdit.profile);
   await expect(
     page.getByText(
-      "이번 여행에서는 감성·이미지와 역사·전통 경험을 더 기대하고 있어요.",
+      "나는 오래된 이야기와 마음속에 그려온 모습에 끌려요.",
       { exact: true },
     ),
   ).toBeVisible();
@@ -198,7 +202,5 @@ test("fresh loopback topology completes the canonical journey and both edits", a
   expect(tripEdit.request.trip_conditions.crowd_avoidance).toBe("HIGH");
   expect(tripEdit.profile.trip_conditions.crowd_avoidance).toBe("HIGH");
   await expect(page).toHaveURL(/\/profile$/);
-  await expect(
-    page.getByRole("meter", { name: "역사·전통 36점 / 100점" }),
-  ).toBeVisible();
+  await expectDisplayedScores(page, tripEdit.profile);
 });

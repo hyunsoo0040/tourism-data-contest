@@ -1,0 +1,569 @@
+{
+  "assessed_at": "2026-09-11T15:56:08.050414Z",
+  "assessment_sha256": "5796fbf57cc83e6fac1bc2acf1f1d870be17c8ff6a9922011364c2e2f7c4cd63",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "공유되는 이미지는 뚜렷하다. 수국·핑크뮬리·유채꽃 등 사계절 꽃 명소로서의 이미지가 장소와 연결되어 있으나, 다층적 상징 의미의 일관된 확인까지는 근거가 부족해 수준 2로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(꽃과 어우러진 경관)을 현장에서 직접 경험하고 촬영으로 재현할 수 있음이 묘사되어 있다. 촬영 재현이 방문 경험의 중심이라고 단정할 근거는 부족해 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "잘 조성된 산책길을 따라 자유롭게 걷고 탐색할 수 있는 환경과 엑스포 공원과의 사방 연결이 확인된다. 자율 탐색이 경험의 중심이라는 근거는 없어 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "물가, 수양버들, 다양한 수목, 야생화, 철새 등 자연 환경 단서가 장소 묘사의 중심을 이루며 두드러진다. 실제 고요함·심리적 회복까지는 단정하지 않고 환경 단서의 두드러짐 수준으로 평가한다.",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "산책이라는 신체 활동 기회는 확인되나, 만들기·탐방 등 지속적으로 참여·도전할 구체적 활동에 대한 근거는 제한적이다. 체험 기회가 제한적인 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 자연 경관(수양버들, 유채꽃 등)과 산책 환경만을 다루며, 확인된 실제 원형·유산과의 접촉에 대한 언급이 없다. 공원 조성 자체가 유산 접촉을 뒷받침하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에는 사계절 자연 경관만 묘사되어 있고 함평천 수변공원의 역사, 연혁, 사건·인물 맥락에 대한 설명이 없다. 부족하며 0의 직접 근거도 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 제공되지 않았다. 자연 경관 묘사만으로 실제 전승의 지속을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·역사와 연결된 해설이나 학습 프로그램에 대한 언급이 없다. 자연 감상 중심 묘사만으로는 원형 맥락 탐구를 지원한다고 판단할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+          "quote": {
+            "end": 171,
+            "method": "EXACT",
+            "original": "사계절 다른 모습으로 여행객들을 부르는 곳이다",
+            "start": 146,
+            "submitted": "사계절 다른 모습으로 여행객들을 부르는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "14a00d859029160a98703a8ec1ea02adad328d9c2e85b5742dfd34374f52dc9a"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "공유되는 이미지는 뚜렷하다. 수국·핑크뮬리·유채꽃 등 사계절 꽃 명소로서의 이미지가 장소와 연결되어 있으나, 다층적 상징 의미의 일관된 확인까지는 근거가 부족해 수준 2로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "개요는 방문객이 사진을 찍는 장면을 묘사하지만, 특정 매체(작품·홍보·SNS)를 통한 장소 이미지의 재현·확산 자체에 대한 확인된 근거는 없다. 셔터를 누르는 묘사는 매체 유통의 내용을 확인해 주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+          "quote": {
+            "end": 505,
+            "method": "EXACT",
+            "original": "지나치는 여행객들의 발길을 붙잡아 열심히 셔터를 누르는 많은 사람을 보게 된다",
+            "start": 462,
+            "submitted": "지나치는 여행객들의 발길을 붙잡아 열심히 셔터를 누르는 많은 사람을 보게 된다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "14a00d859029160a98703a8ec1ea02adad328d9c2e85b5742dfd34374f52dc9a"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+          "quote": {
+            "end": 369,
+            "method": "EXACT",
+            "original": "사진을 찍을 수밖에 없는 멋진 장소이다",
+            "start": 348,
+            "submitted": "사진을 찍을 수밖에 없는 멋진 장소이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "14a00d859029160a98703a8ec1ea02adad328d9c2e85b5742dfd34374f52dc9a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대표 장면(꽃과 어우러진 경관)을 현장에서 직접 경험하고 촬영으로 재현할 수 있음이 묘사되어 있다. 촬영 재현이 방문 경험의 중심이라고 단정할 근거는 부족해 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+          "quote": {
+            "end": 424,
+            "method": "EXACT",
+            "original": "수변공원은 걷기 좋게 산책길이 잘 조성되어 있어 수국뿐 아니라 다양한 야생화들도 만나볼 수 있다",
+            "start": 371,
+            "submitted": "수변공원은 걷기 좋게 산책길이 잘 조성되어 있어 수국뿐 아니라 다양한 야생화들도 만나볼 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "14a00d859029160a98703a8ec1ea02adad328d9c2e85b5742dfd34374f52dc9a"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "잘 조성된 산책길을 따라 자유롭게 걷고 탐색할 수 있는 환경과 엑스포 공원과의 사방 연결이 확인된다. 자율 탐색이 경험의 중심이라는 근거는 없어 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+          "quote": {
+            "end": 145,
+            "method": "EXACT",
+            "original": "이곳은 물가에 조성된 공원으로 다른 곳보다 수양버들이 많이 있는 곳이며 그 외에도 다양한 수목들이 있어",
+            "start": 88,
+            "submitted": "이곳은 물가에 조성된 공원으로 다른 곳보다 수양버들이 많이 있는 곳이며 그 외에도 다양한 수목들이 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "14a00d859029160a98703a8ec1ea02adad328d9c2e85b5742dfd34374f52dc9a"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+          "quote": {
+            "end": 603,
+            "method": "EXACT",
+            "original": "겨울에는 비어있는 공간들을 철새들이 날아와 채워주어 자연의 아름다움을 새삼 느끼게 해주는 곳이다",
+            "start": 550,
+            "submitted": "겨울에는 비어있는 공간들을 철새들이 날아와 채워주어 자연의 아름다움을 새삼 느끼게 해주는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "14a00d859029160a98703a8ec1ea02adad328d9c2e85b5742dfd34374f52dc9a"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 4,
+      "reason": "물가, 수양버들, 다양한 수목, 야생화, 철새 등 자연 환경 단서가 장소 묘사의 중심을 이루며 두드러진다. 실제 고요함·심리적 회복까지는 단정하지 않고 환경 단서의 두드러짐 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+          "quote": {
+            "end": 397,
+            "method": "EXACT",
+            "original": "수변공원은 걷기 좋게 산책길이 잘 조성되어 있어",
+            "start": 371,
+            "submitted": "수변공원은 걷기 좋게 산책길이 잘 조성되어 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "14a00d859029160a98703a8ec1ea02adad328d9c2e85b5742dfd34374f52dc9a"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "산책이라는 신체 활동 기회는 확인되나, 만들기·탐방 등 지속적으로 참여·도전할 구체적 활동에 대한 근거는 제한적이다. 체험 기회가 제한적인 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 직접적 근거가 없다. 방문객이 사진을 찍는 묘사는 관계 형성이나 자기표현 활동의 제공을 확인해 주지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+            "quote": "하늘, 구름, 나무들이 목수국과 어울려 환상적으로 장면을 연출하고 있어 사진을 찍을 수밖에 없는 멋진 장소이다"
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+            "quote": "가을엔 주변이 핑크로 물들며 핑크 뮬리와 팜파스가 멋지게 어울려"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "수양버들, 유채·목수국·핑크뮬리 등 계절별 색채와 경관 연출이 구체적으로 묘사되어 뚜렷한 시각적 성격을 확인할 수 있다. 일관된 연출이 장면을 지배한다는 수준까지는 단정하기 어려워 수준 3으로 평가한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "160c3a841e579d09f817da9f6793dcd68f8af58545955dcd0446f1f58e253126",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:60d7e661f4345941a97520f81cefec4a7ae72aa012bd061180e74822a8378c33",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:18ebfab1684122043656729c75bf2669e4c7b968b2d1df66a97d387de1501900",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3081708",
+          "request_sha256": "94f33a8cbb3f1437307f899e72e036591599a7e97b6b77475676f22fdb9b9013",
+          "response_sha256": "3462323706619c260acd0dc161204e0f986115d08617eefdcfb7139d8e5f18f9",
+          "retrieved_at": "2026-09-10T08:12:03.370400Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "d8c5eb95bd06280284c88d2313d50cbc8c736d7e4331d4ebfc2b2374bfb52a69",
+          "source_uri": null
+        },
+        "record_sha256": "14a00d859029160a98703a8ec1ea02adad328d9c2e85b5742dfd34374f52dc9a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "함평천 수변공원은 함평읍에 자리하고 있으며 바로 옆의 엑스포 공원과 연결되어 있어 엑스포 공원에 주차하고 주차장을 지나면 수변공원과 사방으로 연결되어 있다. 이곳은 물가에 조성된 공원으로 다른 곳보다 수양버들이 많이 있는 곳이며 그 외에도 다양한 수목들이 있어 사계절 다른 모습으로 여행객들을 부르는 곳이다. 봄에는 파릇한 새싹들과 함께 노란 유채꽃이 가득한 들녘을 바라볼 수 있다. 근처 산책길에는 매화도 꽃을 피워서 함께 어울린 모습이 장관이다. 여름엔 파란 하늘과 함께 수많은 목수국이 자태를 뽐내고 있어 그 아름다움은 이루 말할 수조차 없다. 하늘, 구름, 나무들이 목수국과 어울려 환상적으로 장면을 연출하고 있어 사진을 찍을 수밖에 없는 멋진 장소이다. 수변공원은 걷기 좋게 산책길이 잘 조성되어 있어 수국뿐 아니라 다양한 야생화들도 만나볼 수 있다. 가을엔 주변이 핑크로 물들며 핑크 뮬리와 팜파스가 멋지게 어울려 지나치는 여행객들의 발길을 붙잡아 열심히 셔터를 누르는 많은 사람을 보게 된다. 또한 수변공원 댑싸리도 가득 피어올라 또 다른 가을을 느끼게 해주는 곳이다. 겨울에는 비어있는 공간들을 철새들이 날아와 채워주어 자연의 아름다움을 새삼 느끼게 해주는 곳이다. 사계절 아름다운 자연을 보고 싶다면 이곳 수변공원을 찾아 행복한 여행을 해보면 좋을 것이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b105f0d854425a34d1ccb3ea049398afd9c545cf878591513ffda05c64292e32",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:18ebfab1684122043656729c75bf2669e4c7b968b2d1df66a97d387de1501900",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3081708",
+          "request_sha256": "1747cbec4f479b858d904f6fa1b2c146e58813d8c49ac68326aa72fd966f1ca3",
+          "response_sha256": "314979bce9b71eae246b8f4a49f44226c88f6b26ce659e45bf42b00a81e893d6",
+          "retrieved_at": "2026-09-10T08:19:50.193480Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "70f457655c97f3d6eb1143196c02ace222da3c43d37b7aac2a7cef3c03fed4ec",
+          "source_uri": null
+        },
+        "record_sha256": "5dcdc7801a41ba688c8abce727062cc13c8028d76590d536a418de039c36fbc3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d80cc66b7b615f849ef9d5cb65530b09d8f761ca6659cff43d223b9673315f03",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:18ebfab1684122043656729c75bf2669e4c7b968b2d1df66a97d387de1501900",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3081708",
+          "request_sha256": "1747cbec4f479b858d904f6fa1b2c146e58813d8c49ac68326aa72fd966f1ca3",
+          "response_sha256": "314979bce9b71eae246b8f4a49f44226c88f6b26ce659e45bf42b00a81e893d6",
+          "retrieved_at": "2026-09-10T08:19:50.193480Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a69c4823b16f8ef90f0dc036842d6450fa0aadbab6cf4456d2bf450436cd8e54",
+          "source_uri": null
+        },
+        "record_sha256": "bb77084f728faebb25126a92f00d2284ee73ef55844c5968be864391bb1edacc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "943f3e166a3a1d58ad564ac5073bb3e21234043903115fa9715a58fb0c2f7a4e",
+    "place": {
+      "address": "전남광주통합특별시 함평군 함평읍 수호리",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:18ebfab1684122043656729c75bf2669e4c7b968b2d1df66a97d387de1501900",
+      "name_ko": "함평천수변공원",
+      "place_id": "public:korea:18ebfab1684122043656729c75bf2669e4c7b968b2d1df66a97d387de1501900",
+      "provider_content_id": "3081708",
+      "region_code": "12820",
+      "region_name": "전남광주통합특별시 함평군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

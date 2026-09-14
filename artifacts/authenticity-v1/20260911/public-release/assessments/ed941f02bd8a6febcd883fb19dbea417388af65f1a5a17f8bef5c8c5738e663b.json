@@ -1,0 +1,826 @@
+{
+  "assessed_at": "2026-09-11T15:48:50.876201Z",
+  "assessment_sha256": "ed941f02bd8a6febcd883fb19dbea417388af65f1a5a17f8bef5c8c5738e663b",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 42
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 44
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 44
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "수집된 농기구·생활용구라는 실물 유물을 관람할 수 있으나, 건물 외관은 창경궁을 본딴 재현이므로 원형 접촉은 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "설립 연혁(농업박물관 계획→향토민속박물관→시립박물관 재개관)이 간단히 소개되지만, 이는 기관 연혁 수준의 서술이다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:456202261d88d29cab5d62070ea507b57713d0ceec21ed1692fd97a826e06d07"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "단체 관람 시 전시해설 신청이 가능하여 수집 유물에 연결된 해설을 제공하나, 일반 관람객 대상 해설은 명시되지 않아 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "고궁 이미지가 장소에 부여된 이미지로 소개되나, 공유된 상징적 의미의 내용은 단일 표현 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:31b4a3e41a09cfd75caf4dfe0cdfc700a1dea6428ead87ef45949521cbf1b45c",
+            "appearance:8b403429cd473ace66458e8cc985d7c43feeace7b9c0b2c05ea62a2e286b870f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 38,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 38
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "공원 일원의 여러 시설을 연계해 자율적으로 탐색·선택할 기회가 확인되나, 깊은 자유 탐색 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:a2d1a38e48bb5c461cf1965b05debde351315853916ca7757590e844f7b79e99",
+            "appearance:e04b172df364e0ddd4191fe33cc901818f224bfeeadfaaf87f9e155134d16c18"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 0,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "설봉공원·설봉저수지라는 자연 환경 단서가 확인되지만, 실제 고요함이나 회복 환경의 두드러짐은 확인할 수 없다.",
+      "value": 38
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e",
+          "quote": {
+            "end": 81,
+            "method": "EXACT",
+            "original": "지역 내 농기구와 각종 생활용구를 수집하였고",
+            "start": 57,
+            "submitted": "지역 내 농기구와 각종 생활용구를 수집하였고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "00440010dd30281913c0176e8d62bcbd6b4dfae3a811f61934f6c2dd9d59e9b3"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 2,
+      "reason": "수집된 농기구·생활용구라는 실물 유물을 관람할 수 있으나, 건물 외관은 창경궁을 본딴 재현이므로 원형 접촉은 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e",
+          "quote": {
+            "end": 56,
+            "method": "EXACT",
+            "original": "1997년부터 이천농업박물관 건립계획을 수립하여",
+            "start": 30,
+            "submitted": "1997년부터 이천농업박물관 건립계획을 수립하여",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "00440010dd30281913c0176e8d62bcbd6b4dfae3a811f61934f6c2dd9d59e9b3"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 1,
+      "reason": "설립 연혁(농업박물관 계획→향토민속박물관→시립박물관 재개관)이 간단히 소개되지만, 이는 기관 연혁 수준의 서술이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 실제 전승·생활문화와의 연결을 뒷받침하는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:456202261d88d29cab5d62070ea507b57713d0ceec21ed1692fd97a826e06d07",
+          "quote": {
+            "end": 90,
+            "method": "EXACT",
+            "original": "단체관람예약시 전시해설 신청 가능",
+            "start": 72,
+            "submitted": "단체관람예약시 전시해설 신청 가능",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7f5d8393f2b54f2e52313d1d02eaa2cb6bb456cd863b376a4a09257f74e775d7"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "단체 관람 시 전시해설 신청이 가능하여 수집 유물에 연결된 해설을 제공하나, 일반 관람객 대상 해설은 명시되지 않아 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e",
+          "quote": {
+            "end": 313,
+            "method": "EXACT",
+            "original": "창경궁의 외관을 본따 지어 마치 고궁에 온 듯한 느낌을 준다",
+            "start": 280,
+            "submitted": "창경궁의 외관을 본따 지어 마치 고궁에 온 듯한 느낌을 준다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "00440010dd30281913c0176e8d62bcbd6b4dfae3a811f61934f6c2dd9d59e9b3"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "고궁 이미지가 장소에 부여된 이미지로 소개되나, 공유된 상징적 의미의 내용은 단일 표현 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보, SNS 등 매체를 통한 이미지 유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "'마치 고궁에 온 듯한 느낌을 준다'는 개요 문구의 인상 묘사일 뿐, 방문자가 대표 장면·상징을 현장에서 직접 경험한다는 관찰 근거가 없다. 홍보 서술을 현장 경험 확정으로 사용할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e",
+          "quote": {
+            "end": 451,
+            "method": "EXACT",
+            "original": "설봉국제조각공원, 문학동산, 설봉저수지 등을 함께 연계 방문할 수 있다",
+            "start": 412,
+            "submitted": "설봉국제조각공원, 문학동산, 설봉저수지 등을 함께 연계 방문할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "00440010dd30281913c0176e8d62bcbd6b4dfae3a811f61934f6c2dd9d59e9b3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "공원 일원의 여러 시설을 연계해 자율적으로 탐색·선택할 기회가 확인되나, 깊은 자유 탐색 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e",
+          "quote": {
+            "end": 28,
+            "method": "EXACT",
+            "original": "이천시립박물관은 설봉공원 내에 위치한 시립박물관이다",
+            "start": 0,
+            "submitted": "이천시립박물관은 설봉공원 내에 위치한 시립박물관이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "00440010dd30281913c0176e8d62bcbd6b4dfae3a811f61934f6c2dd9d59e9b3"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "설봉공원·설봉저수지라는 자연 환경 단서가 확인되지만, 실제 고요함이나 회복 환경의 두드러짐은 확인할 수 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "만들기, 신체 활동, 탐방 등 참여·몰입 활동에 대한 근거가 제공되지 않았다. 전시 관람만으로 참여 활동을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류, 공동 활동, 자기표현의 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e",
+            "quote": "신관을 통해 자연스럽게 이어지는 구관의 외관은 창경궁의 외관을 본따"
+          }
+        ],
+        "key": "E.c",
+        "level": 2,
+        "reason": "고궁을 본뜬 구관 외관이라는 구별되는 시각적 성격이 확인되지만, 장면 전체를 지배한다는 표현은 없다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e",
+              "quote": {
+                "end": 313,
+                "method": "EXACT",
+                "original": "마치 고궁에 온 듯한 느낌을 준다",
+                "start": 295,
+                "submitted": "마치 고궁에 온 듯한 느낌을 준다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "00440010dd30281913c0176e8d62bcbd6b4dfae3a811f61934f6c2dd9d59e9b3"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 2,
+          "reason": "고궁에 온 듯한 장면을 현장에서 직접 경험할 수 있으나, 촬영·재현 등 적극적 참여 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "E.d",
+          "reason": "'마치 고궁에 온 듯한 느낌을 준다'는 개요 문구의 인상 묘사일 뿐, 방문자가 대표 장면·상징을 현장에서 직접 경험한다는 관찰 근거가 없다. 홍보 서술을 현장 경험 확정으로 사용할 수 없다."
+        }
+      },
+      "reason": "'마치 고궁에 온 듯한 느낌을 준다'는 개요 문구의 인상 묘사일 뿐, 방문자가 대표 장면·상징을 현장에서 직접 경험한다는 관찰 근거가 없다. 홍보 서술을 현장 경험 확정으로 사용할 수 없다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "8f3c9d2edddc54f4185429b2639360617d1d16a2247c8f821192debbca3fb1cb",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "원목 재질 가구가 온화한 느낌을 주나 전통적 외관·공간 구성의 특성은 뚜렷하지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:033033f6f6527c8e8a8de59aaa90296d9dbd6c32d4b1d626843d99e02842ae91",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "806315b5e7ea80385ecd6ba13c8a83b0c2c93d6d5d07491944fe14856838de2b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430346_13",
+          "request_sha256": "e90c001dec248f7bdf36404b467cf160d679272468055a5aa33e182f75f3226b",
+          "response_sha256": "2165771638db2a81f6d9f1e30905268b3a3b6104b7188726856ab1f07828f63c",
+          "retrieved_at": "2026-09-10T08:19:28.857268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "398c88ed459ab70672a2893046d2e93da61d3b96ad9618edf0ab9813de5f4ed6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/3430346_image2_1.jpg"
+        },
+        "record_sha256": "607e2d4ba67b912f398374d5ddf5b0d96360d8e32b21d27da5577f85681eb2b9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 1,
+          "reason": "밝은 원목 가구와 민트색 소파가 정갈하게 배치된 절제된 실내 구성이나 특별한 연출감은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:31b4a3e41a09cfd75caf4dfe0cdfc700a1dea6428ead87ef45949521cbf1b45c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "806315b5e7ea80385ecd6ba13c8a83b0c2c93d6d5d07491944fe14856838de2b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430346_13",
+          "request_sha256": "e90c001dec248f7bdf36404b467cf160d679272468055a5aa33e182f75f3226b",
+          "response_sha256": "2165771638db2a81f6d9f1e30905268b3a3b6104b7188726856ab1f07828f63c",
+          "retrieved_at": "2026-09-10T08:19:28.857268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "398c88ed459ab70672a2893046d2e93da61d3b96ad9618edf0ab9813de5f4ed6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/3430346_image2_1.jpg"
+        },
+        "record_sha256": "60b1c863b8c16c8a1f43246e409b2b3bd72106873f15cd9fd94005a45f374c7c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대식 콘크리트 패널과 벽돌 외벽, 금속 담장, 주차 표시로 전통적 외관·재료·공간 구성의 특성이 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3a7d2181cfdc2c4212775b5d649598945dca4bafcf323c56ff127695a390a66d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1abbc7176ed5f47f3985cc9493dc2e441b33af0157729d059024fa442f90ee5c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430347_12",
+          "request_sha256": "e90c001dec248f7bdf36404b467cf160d679272468055a5aa33e182f75f3226b",
+          "response_sha256": "2165771638db2a81f6d9f1e30905268b3a3b6104b7188726856ab1f07828f63c",
+          "retrieved_at": "2026-09-10T08:19:28.857268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "565bd8771b27cb7571f1430bc4bb89f6f19cc16f663d752f0aad4abd9e3766b3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/47/3430347_image2_1.jpg"
+        },
+        "record_sha256": "b6f7ef22074ca9e54f9d4a04ecc822b1a5694c09f88655dfb82389a118804b1c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "젖은 아스팔트 위 파란색 장애인 주차 구역 표시와 붉은색·회색 건물 외벽의 대비가 뚜렷하나, 전반적으로 기능적이고 평범한 주차장 구도로 연출감은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8b403429cd473ace66458e8cc985d7c43feeace7b9c0b2c05ea62a2e286b870f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1abbc7176ed5f47f3985cc9493dc2e441b33af0157729d059024fa442f90ee5c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430347_12",
+          "request_sha256": "e90c001dec248f7bdf36404b467cf160d679272468055a5aa33e182f75f3226b",
+          "response_sha256": "2165771638db2a81f6d9f1e30905268b3a3b6104b7188726856ab1f07828f63c",
+          "retrieved_at": "2026-09-10T08:19:28.857268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "565bd8771b27cb7571f1430bc4bb89f6f19cc16f663d752f0aad4abd9e3766b3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/47/3430347_image2_1.jpg"
+        },
+        "record_sha256": "fc2d3673222417f05d63dc8fe72385e7bf0ea5552200a47c983a009644982060",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "건물 벽, 담장, 포장 도로만 보이며 녹지·물·자연 경관 등 자연 환경 단서가 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a2d1a38e48bb5c461cf1965b05debde351315853916ca7757590e844f7b79e99",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1abbc7176ed5f47f3985cc9493dc2e441b33af0157729d059024fa442f90ee5c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430347_12",
+          "request_sha256": "e90c001dec248f7bdf36404b467cf160d679272468055a5aa33e182f75f3226b",
+          "response_sha256": "2165771638db2a81f6d9f1e30905268b3a3b6104b7188726856ab1f07828f63c",
+          "retrieved_at": "2026-09-10T08:19:28.857268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "565bd8771b27cb7571f1430bc4bb89f6f19cc16f663d752f0aad4abd9e3766b3",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/47/3430347_image2_1.jpg"
+        },
+        "record_sha256": "4c7908c26a5ce24c812164fa2adab5223a071af4b1b42309fdaf9fc0face402f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "흰 벽과 타일 바닥의 실내 공간으로 녹지·자연 경관 등 환경 단서가 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e04b172df364e0ddd4191fe33cc901818f224bfeeadfaaf87f9e155134d16c18",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "806315b5e7ea80385ecd6ba13c8a83b0c2c93d6d5d07491944fe14856838de2b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430346_13",
+          "request_sha256": "e90c001dec248f7bdf36404b467cf160d679272468055a5aa33e182f75f3226b",
+          "response_sha256": "2165771638db2a81f6d9f1e30905268b3a3b6104b7188726856ab1f07828f63c",
+          "retrieved_at": "2026-09-10T08:19:28.857268Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "398c88ed459ab70672a2893046d2e93da61d3b96ad9618edf0ab9813de5f4ed6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/46/3430346_image2_1.jpg"
+        },
+        "record_sha256": "78946a308b9102306e98a3834ae3483c236873714df48fc1be57041d20db4326",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:456202261d88d29cab5d62070ea507b57713d0ceec21ed1692fd97a826e06d07",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3023991",
+          "request_sha256": "4b46a6a7d1ae5734036b63209004d3ff7e30e9dbce0e16311778221a9952b1a0",
+          "response_sha256": "60fe57c0cd15e973dc549c3ef7258a25a7e99d83f6e5d2f0c9cc825b972cf193",
+          "retrieved_at": "2026-09-10T08:19:28.503375Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "83996312d5b624de318ba44c3dcd21667d5752ffa0acebab25245dccbe2098e1",
+          "source_uri": null
+        },
+        "record_sha256": "7f5d8393f2b54f2e52313d1d02eaa2cb6bb456cd863b376a4a09257f74e775d7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "단체관람예약- 10명 이상 단체 관람시 사전예약 필수 (전시 해설은 없음)- 단체관람예약시 전화문의 (031-633-6734)- 단체관람예약시 전시해설 신청 가능, 해설예약 관광안내소 (031-634-6770)"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fc82245cb07045f9c51baff5c77392b45912b67790623f380a6c7e808c632c5e",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3023991",
+          "request_sha256": "1a296c5940a0a7d14c78e5efc468c830f3e78deb14afa9aed804b88c9dedac87",
+          "response_sha256": "bd3ac99733565bebc2a7a2f2e25cfe0fa2bfaab00bf43fd8783b4355f3706ea9",
+          "retrieved_at": "2026-09-10T05:42:40.457660Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-28T06:14:37Z",
+          "source_record_sha256": "a1e2090860dc2c523bac0a970afe6c4c885b921c56e6b87fde9a72ca19a42791",
+          "source_uri": null
+        },
+        "record_sha256": "00440010dd30281913c0176e8d62bcbd6b4dfae3a811f61934f6c2dd9d59e9b3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "이천시립박물관은 설봉공원 내에 위치한 시립박물관이다. 1997년부터 이천농업박물관 건립계획을 수립하여 지역 내 농기구와 각종 생활용구를 수집하였고, 2000년 11월 이천향토민속박물관으로 명칭을 변경하면서 2001년 12월 건물을 완공하였다. 그 후 2002년 5월 24일에 이천시립박물관으로 재개관한 후 2013년 리모델링 재개관, 2021년 신축건물 및 구관 도자문화역사실 재개관을 거쳐 오늘에 이르고 있다. 이천시립박물관은 신관과 구관으로 나뉘는데 신관을 통해 자연스럽게 이어지는 구관의 외관은 창경궁의 외관을 본따 지어 마치 고궁에 온 듯한 느낌을 준다. 경강선 이천역, 이천종합터미널에서 차량으로 약 10분 이내의 거리에 위치하고 있다. 이천시립박물관은 설봉공원 일원에 위치해 있어 공원 내 이천시립월전미술관, 설봉서원을 비롯 설봉국제조각공원, 문학동산, 설봉저수지 등을 함께 연계 방문할 수 있다. 인근에 이천도예촌, 성호호수연꽃단지, 한택식물원, 지산포레스트리조트스키장, 이천테르메덴, 덕평공룡수목원 등이 있다."
+      }
+    ],
+    "parent_source_sha256": "4223fb9edb5823824375b95bfd20a0f9251d844489ccf3cf456b06b64fd774b0",
+    "place": {
+      "address": "경기도 이천시 경충대로2697번길 172 (관고동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+      "name_ko": "이천시립박물관",
+      "place_id": "public:korea:1193fc2ed12f8d9aa383766d114aa660f850ddbfaf9d4401df844b770b4037d8",
+      "provider_content_id": "3023991",
+      "region_code": "41500",
+      "region_name": "경기도 이천시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

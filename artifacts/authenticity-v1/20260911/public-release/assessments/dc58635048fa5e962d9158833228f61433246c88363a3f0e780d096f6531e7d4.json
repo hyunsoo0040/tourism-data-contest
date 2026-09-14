@@ -1,0 +1,944 @@
+{
+  "assessed_at": "2026-09-11T17:35:23.916562Z",
+  "assessment_sha256": "dc58635048fa5e962d9158833228f61433246c88363a3f0e780d096f6531e7d4",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b",
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 51
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 51
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "381호 전차라는 실제 연혁과 전차 시대 서울이라는 유래가 간단히 소개되나, 구체적 사건·인물 맥락의 탐구까지 근거는 없다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "가이드의 문화해설이 운행 중 제공되어 전차·서울 도시 문화와 연결된 설명이 있으나, 깊은 해설·탐구 체계라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "레트로·전차 시대 서울이라는 구체적 이미지와 향수라는 의미가 장소에 연결되어 표현된다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2a2e9998d630437a3c1afd8ca700bf426df39f8c53c58e809777aa683649d886",
+            "appearance:9759a4f30ddf71eb10a93083739b6ab7cd5ab4ce2d25a50267b5e095997b47e3",
+            "appearance:c2f51f0c510ea1728fb559c0956c1f2425280454b61ff00c491ccfff07ca1d10"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "레트로 스타일 차량이라는 시각적 성격이 확인되나, 장면 전체를 지배하는 일관된 연출이라는 근거는 없다.",
+      "value": 54
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "전차 시대 서울이라는 대표 이미지를 탑승 경험으로 직접 재현할 수 있으나, 촬영·참여형 재현이라는 추가 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:b333bd241aebde20fa1ede3621c74b68c67c697a5cb7610469a72b3fb2b0d3db",
+            "appearance:b91650389922a7efe988eec9286063dc282d83ae481f6e4466521df0f2b021a5",
+            "appearance:bd372c28fe8383d01c5709fe16be4d842b2353518b34402c2c2c532e541d9868"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 42,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "탁 트인 시야라는 제한적 환경 단서만 있을 뿐, 자연·저자극·회복 환경의 실질 근거는 부족하다.",
+      "value": 29
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "페달을 밟아 동력을 보태는 구체적 신체 참여 활동이 운행의 핵심으로 제공된다. 실제 몰입 여부는 별도로 단정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "여럿이 함께 페달을 굴리는 공동 활동의 교류 기회가 있으나, 관계·자기표현이 풍부하거나 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "차량은 '381호 전차를 모티브로 만든' 복제물이며, 실제 원형 전차나 유산 실물과의 접촉을 제공한다는 근거가 없다. 모티브 사실만으로 원형 접촉을 단정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+          "quote": {
+            "end": 185,
+            "method": "EXACT",
+            "original": "서울역사문화박물관에 전시되어 있는 20세기 마지막 전차인 ‘381호 전차’를 모티브로 만든",
+            "start": 135,
+            "submitted": "서울역사문화박물관에 전시되어 있는 20세기 마지막 전차인 ‘381호 전차’를 모티브로 만든",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 1,
+      "reason": "381호 전차라는 실제 연혁과 전차 시대 서울이라는 유래가 간단히 소개되나, 구체적 사건·인물 맥락의 탐구까지 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "향수 소환이라는 감성 표현만 있을 뿐, 지역 주체의 실제 전승·생활문화와의 연결 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+          "quote": {
+            "end": 482,
+            "method": "EXACT",
+            "original": "검표원 겸 가이드의 문화해설까지 곁들여지기 때문에 여행의 즐거움이 배가 된다",
+            "start": 440,
+            "submitted": "검표원 겸 가이드의 문화해설까지 곁들여지기 때문에 여행의 즐거움이 배가 된다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "가이드의 문화해설이 운행 중 제공되어 전차·서울 도시 문화와 연결된 설명이 있으나, 깊은 해설·탐구 체계라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+          "quote": {
+            "end": 234,
+            "method": "EXACT",
+            "original": "마치 전차 시대의 서울을 다시 만나기라도 한 듯 향수를 불러일으킨다",
+            "start": 197,
+            "submitted": "마치 전차 시대의 서울을 다시 만나기라도 한 듯 향수를 불러일으킨다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "레트로·전차 시대 서울이라는 구체적 이미지와 향수라는 의미가 장소에 연결되어 표현된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "인용은 인기·이색성에 대한 홍보 서술이며 명시된 매체를 통한 장소 이미지의 재현·유통 근거가 없음. 해외 페달 펍 유행 언급은 장소의 이미지 유통이 아님.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+          "quote": {
+            "end": 67,
+            "method": "EXACT",
+            "original": "오직 페달과 배터리로만 달리는 레트로 스타일의 15인승 차량",
+            "start": 34,
+            "submitted": "오직 페달과 배터리로만 달리는 레트로 스타일의 15인승 차량",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "레트로 스타일 차량이라는 시각적 성격이 확인되나, 장면 전체를 지배하는 일관된 연출이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+          "quote": {
+            "end": 234,
+            "method": "EXACT",
+            "original": "전차 시대의 서울을 다시 만나기라도 한 듯 향수를 불러일으킨다",
+            "start": 200,
+            "submitted": "전차 시대의 서울을 다시 만나기라도 한 듯 향수를 불러일으킨다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "전차 시대 서울이라는 대표 이미지를 탑승 경험으로 직접 재현할 수 있으나, 촬영·참여형 재현이라는 추가 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "네이버 예약과 지정 좌석·정해진 운행이라는 이용 조건이 있으나, 자율 탐색의 제한을 직접 명시하거나 자율적 선택 기회를 뒷받침하는 근거가 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+          "quote": {
+            "end": 112,
+            "method": "EXACT",
+            "original": "탁 트인 시야를 유지한 채 서울의 도로와 골목을 체험할 수 있는",
+            "start": 77,
+            "submitted": "탁 트인 시야를 유지한 채 서울의 도로와 골목을 체험할 수 있는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 1,
+      "reason": "탁 트인 시야라는 제한적 환경 단서만 있을 뿐, 자연·저자극·회복 환경의 실질 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+          "quote": {
+            "end": 408,
+            "method": "EXACT",
+            "original": "차장이 운행을 멈추고 종을 흔들면 페달을 밟아 동력을 보태야 한다",
+            "start": 372,
+            "submitted": "차장이 운행을 멈추고 종을 흔들면 페달을 밟아 동력을 보태야 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "페달을 밟아 동력을 보태는 구체적 신체 참여 활동이 운행의 핵심으로 제공된다. 실제 몰입 여부는 별도로 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+          "quote": {
+            "end": 435,
+            "method": "EXACT",
+            "original": "여럿이 함께 페달을 굴리는 색다른 재미가 있는",
+            "start": 410,
+            "submitted": "여럿이 함께 페달을 굴리는 색다른 재미가 있는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "여럿이 함께 페달을 굴리는 공동 활동의 교류 기회가 있으나, 관계·자기표현이 풍부하거나 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "05b2ad349c51cf1453de99eaad8852d96c565d29a8b618ceb082c939ceb3398a",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+              "quote": {
+                "end": 133,
+                "method": "EXACT",
+                "original": "이를 타고 탁 트인 시야를 유지한 채 서울의 도로와 골목을 체험할 수 있는 이색 여행법이 큰 인기를 모으고 있다",
+                "start": 71,
+                "submitted": "이를 타고 탁 트인 시야를 유지한 채 서울의 도로와 골목을 체험할 수 있는 이색 여행법이 큰 인기를 모으고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d"
+            }
+          ],
+          "flags": [],
+          "key": "E.b",
+          "level": 1,
+          "reason": "이색 여행법으로서 인기와 해외 페달 펍 여행과의 연결이 언급되지만, 반복되는 매체 표현·유통의 구체적 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE",
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "E.b",
+          "reason": "인용은 인기·이색성에 대한 홍보 서술이며 명시된 매체를 통한 장소 이미지의 재현·유통 근거가 없음. 해외 페달 펍 유행 언급은 장소의 이미지 유통이 아님."
+        }
+      },
+      "reason": "인용은 인기·이색성에 대한 홍보 서술이며 명시된 매체를 통한 장소 이미지의 재현·유통 근거가 없음. 해외 페달 펍 유행 언급은 장소의 이미지 유통이 아님."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "f98f647018d4d8f9f92e8c631be76d4a3052555876315a6a7a128074906cc815",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "오른쪽 배경에 기와지붕과 한옥 스타일 지붕선이 관찰되지만 현대 건물과 주차된 차량이 함께 있어 전통 외관의 두드러짐은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:24f3a939a6abc115574bff5f3f1b95ed441e57322cf844146405024e8c2189c2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6c89ff43d1480708493cf77493cd82cd3d10a72e1b3ff451305ae17b3e3f07e7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987807_1",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "13bc12d5c63f4ef5d5a71ba4969c74fec69afc88fc668a97043fdb070e38809f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/07/2987807_image2_1.jpg"
+        },
+        "record_sha256": "eede814552302eb31cbf987da4dd30da90571afdf73d255bcaa656b64fe67976",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "녹색과 흰색의 밝은 관광 차량이 화면 중앙을 지배하고, 분홍·빨강 꽃과 현대적 건물이 대비를 이루어 연출된 관광 사진의 시각적 성격이 뚜렷함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2a2e9998d630437a3c1afd8ca700bf426df39f8c53c58e809777aa683649d886",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d1406d2152d100c8116503d4ccf27effbc627c9c05af6f17cdf9d11292f55a0d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987808_2",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "da7e34d471714ec90259bf244132aa4e0f15ca0a7c70b143cf04211b2be7d50f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/2987808_image2_1.jpg"
+        },
+        "record_sha256": "4d33029d01816356799d0495e35e05b44cbd1d02ff21b5312773d7467cc0fdee",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "배경 오른쪽에 기와 지붕의 한옥 외관이 일부 보이나, 화면 대부분은 현대적 주택과 도로라 전통 외관은 미미함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2f29df3d4835e33fd256d3e4378e218e03dc043b104251037c759e6b8c464f72",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d1406d2152d100c8116503d4ccf27effbc627c9c05af6f17cdf9d11292f55a0d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987808_2",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "da7e34d471714ec90259bf244132aa4e0f15ca0a7c70b143cf04211b2be7d50f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/2987808_image2_1.jpg"
+        },
+        "record_sha256": "17174377ee509e639e7461dcde82ec7e08348dac644bfd8516f05b5c911bffa3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "원경에 기와지붕의 전통적 건물과 정연한 담장이 보이나 거리가 멀어 장면 전체를 지배하지는 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7877a4811948e88db1d24f894ef11e64fef8a31bb5d56368314d80949202b18e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08162cb5e442e9747296e3a2a8f700303ca3c9ad630635902798e26b6b04a27d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987809_3",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "08eb596d1f98f60c162336afdfc2d8cb29b1fa4c43eeada536f8cb746966b371",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/2987809_image2_1.jpg"
+        },
+        "record_sha256": "391c059f0922dbf63e555520f928ae3602aaeff8760137fcf4adbc2f62d15aab",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "초록과 흰색으로 칠해진 전동 관광차와 잡다한 의복 색, 잇닿은 현대·전통 건물이 대비를 이루지만 전반적으로 일상적인 거리 톤으로 연출감은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9759a4f30ddf71eb10a93083739b6ab7cd5ab4ce2d25a50267b5e095997b47e3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6c89ff43d1480708493cf77493cd82cd3d10a72e1b3ff451305ae17b3e3f07e7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987807_1",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "13bc12d5c63f4ef5d5a71ba4969c74fec69afc88fc668a97043fdb070e38809f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/07/2987807_image2_1.jpg"
+        },
+        "record_sha256": "5d650b6eaabc67c33569b6110e530c4352ba45b42680257125ca2d99536e4311",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "소나무와 관목, 벽면의 꽃, 배경의 녹색 산림이 일부 보이지만 대부분 도시 거리와 건물이 차지하여 자연 단서는 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b333bd241aebde20fa1ede3621c74b68c67c697a5cb7610469a72b3fb2b0d3db",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d1406d2152d100c8116503d4ccf27effbc627c9c05af6f17cdf9d11292f55a0d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987808_2",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "da7e34d471714ec90259bf244132aa4e0f15ca0a7c70b143cf04211b2be7d50f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/2987808_image2_1.jpg"
+        },
+        "record_sha256": "52b2ed0919a09a770c8e4e1d6f3c2306ef223269331f0da645a393fbbf49a0d1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "길 양쪽의 울창한 나무, 화단, 뒤편의 푸른 산이 보이나 다수 인파와 차량 요소가 함께 점유한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b91650389922a7efe988eec9286063dc282d83ae481f6e4466521df0f2b021a5",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08162cb5e442e9747296e3a2a8f700303ca3c9ad630635902798e26b6b04a27d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987809_3",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "08eb596d1f98f60c162336afdfc2d8cb29b1fa4c43eeada536f8cb746966b371",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/2987809_image2_1.jpg"
+        },
+        "record_sha256": "0fedb036af648dd1312526d18c04d1a1bd98ddbbb0538db9e8186a36769c9dd0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "거리 뒤쪽 나무와 언덕의 울창한 녹지, 큰 침엽수가 배경으로 보이나 주요 화면은 도로와 건물이 차지해 자연 단서는 중간 정도이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bd372c28fe8383d01c5709fe16be4d842b2353518b34402c2c2c532e541d9868",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6c89ff43d1480708493cf77493cd82cd3d10a72e1b3ff451305ae17b3e3f07e7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987807_1",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "13bc12d5c63f4ef5d5a71ba4969c74fec69afc88fc668a97043fdb070e38809f",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/07/2987807_image2_1.jpg"
+        },
+        "record_sha256": "bbcbbf7a1a3b4fdf3d21f9ce97838ddca315f65a57f748549c2193af5f1376fc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "차량 내부 전경 구도로 분홍·형광색 등 화려한 색채 요소와 원경의 건물을 향한 대칭적 길 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c2f51f0c510ea1728fb559c0956c1f2425280454b61ff00c491ccfff07ca1d10",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "08162cb5e442e9747296e3a2a8f700303ca3c9ad630635902798e26b6b04a27d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2987809_3",
+          "request_sha256": "3a8a3574d886708ad0809c05511610544db8c5cf9405356ac7aa646662454a91",
+          "response_sha256": "7077b55894f35c60f048e1140cb8594e78c6cc00e446963c6a23dd735ea03aa1",
+          "retrieved_at": "2026-09-11T02:06:03.171281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "08eb596d1f98f60c162336afdfc2d8cb29b1fa4c43eeada536f8cb746966b371",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/2987809_image2_1.jpg"
+        },
+        "record_sha256": "365fc5aca0d1fcbfd62063ced02f7c58c83ee39375eb3d39f71fe5ad16599fd5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:37fc9480f4382584bfa01b9610561bad9290d029d2f1495df161b331a5ab6f30",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2993194",
+          "request_sha256": "f722d8fec314250e77984bf1606d358e4add14b2cba84bf3448430d01f8d8d65",
+          "response_sha256": "f30290db562f7d7ec3ec3a3820fae08d5be289dd82430df0b4ecbe80ca56b0c3",
+          "retrieved_at": "2026-09-10T17:00:08.804500Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-11T08:36:11Z",
+          "source_record_sha256": "2a1f331de29ed8a94948542f70cceac0f927652ce67779702929e5ae37df6425",
+          "source_uri": null
+        },
+        "record_sha256": "48980001e93972944fdd0a296d6a64f0850967eef1aabd524b38cf31d4633e6d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "“돌아온 전차가 여행에 감성을 더한다!” 위라이드 서울전차는 오직 페달과 배터리로만 달리는 레트로 스타일의 15인승 차량으로, 이를 타고 탁 트인 시야를 유지한 채 서울의 도로와 골목을 체험할 수 있는 이색 여행법이 큰 인기를 모으고 있다. 서울역사문화박물관에 전시되어 있는 20세기 마지막 전차인 ‘381호 전차’를 모티브로 만든 위라이드 서울전차는 마치 전차 시대의 서울을 다시 만나기라도 한 듯 향수를 불러일으킨다. 운행 시간은 총 1시간 30분이며, 네이버 예약을 통해 날짜와 좌석을 지정해 예매해야 이용이 가능하다. 이미 해외에서 큰 인기를 끌고 있는 페달 펍(pedal pub, 배터리와 페달로 동력을 얻어 움직이는 투어 프로그램) 여행의 서울 버전으로 차장이 운행을 멈추고 종을 흔들면 페달을 밟아 동력을 보태야 한다. 여럿이 함께 페달을 굴리는 색다른 재미가 있는 데다가 검표원 겸 가이드의 문화해설까지 곁들여지기 때문에 여행의 즐거움이 배가 된다. 어른들에게는 지난 추억을 소환하는 시간을, 아이들에게는 색다른 문화체험을 해보는 소중한 시간을 선사하는 특별한 여행을 즐길 수 있다."
+      }
+    ],
+    "parent_source_sha256": "d2ecf3d81467519f48dc06d2aefe806ec99bcee2ba928d4ebf2e740bd2603fbc",
+    "place": {
+      "address": "서울특별시 종로구 종로 19 (종로1가)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+      "name_ko": "위라이드 서울전차",
+      "place_id": "public:korea:77f95ece489f06f502e4a1aab99b6163bd021de46ce4b40e4f3be32928e49e8d",
+      "provider_content_id": "2993194",
+      "region_code": "11110",
+      "region_name": "서울특별시 종로구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

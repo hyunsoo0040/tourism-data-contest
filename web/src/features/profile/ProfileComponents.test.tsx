@@ -39,29 +39,32 @@ const profile: PreferenceProfile = {
 };
 
 describe("profile result components", () => {
-  it("renders fixed H-E-R meters from display_score at the inclusive boundaries", () => {
+  it("renders H-E-R proportions totaling 100 from unrounded scores", () => {
     render(<ThreeAxisProfile scores={profile.scores} />);
 
     const meters = screen.getAllByRole("meter");
     expect(meters.map((meter) => meter.getAttribute("aria-label"))).toEqual([
-      "역사·전통 0점 / 100점",
-      "감성·이미지 100점 / 100점",
-      "휴식·몰입 50점 / 100점",
+      "대상•원형형 0점 / 100점",
+      "의미•이미지형 67점 / 100점",
+      "자기•몰입형 33점 / 100점",
     ]);
-    expect(meters.map((meter) => meter.getAttribute("aria-valuenow"))).toEqual(["0", "100", "50"]);
+    expect(meters.map((meter) => meter.getAttribute("aria-valuenow"))).toEqual(["0", "67", "33"]);
     expect(meters[0]?.querySelector<HTMLElement>(".axis-meter__fill")?.style.width).toBe("0%");
-    expect(meters[1]?.querySelector<HTMLElement>(".axis-meter__fill")?.style.width).toBe("100%");
+    expect(meters[1]?.querySelector<HTMLElement>(".axis-meter__fill")?.style.width).toBe("67%");
     expect(screen.queryByText(/basis/i)).toBeNull();
   });
 
-  it("keeps ties in fixed order and renders the server narrative verbatim", () => {
+  it("renders tied scores without calculation notes and keeps the narrative component verbatim", () => {
     const tied = profile.scores.map((score) => ({ ...score, basis_points: 3_300, display_score: 33 }));
     const { rerender } = render(<ThreeAxisProfile scores={tied} />);
     expect(screen.getAllByRole("meter").map((meter) => meter.getAttribute("aria-label"))).toEqual([
-      "역사·전통 33점 / 100점",
-      "감성·이미지 33점 / 100점",
-      "휴식·몰입 33점 / 100점",
+      "대상•원형형 34점 / 100점",
+      "의미•이미지형 33점 / 100점",
+      "자기•몰입형 33점 / 100점",
     ]);
+
+    expect(screen.queryByText(/원점수/)).toBeNull();
+    expect(screen.queryByText(/표시 점수 1점 차이/)).toBeNull();
 
     rerender(<ProfileNarrative description={profile.description_ko} />);
     expect(screen.getByText(profile.description_ko).textContent).toBe(profile.description_ko);

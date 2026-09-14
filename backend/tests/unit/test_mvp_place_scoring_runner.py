@@ -39,28 +39,32 @@ from itda.pipeline.mvp_place_scoring import (
 SHA = "0" * 64
 EVIDENCE_ID = f"evidence:{'1' * 64}"
 REPO_ROOT = Path(__file__).resolve().parents[3]
-RUN_PLAN_PATH = REPO_ROOT / "artifacts/public/catalog/mvp-place-scoring-run-plan-v1.json"
-REQUESTS_PATH = REPO_ROOT / "artifacts/public/catalog/mvp-place-scoring-requests-v1.json"
+RUN_PLAN_PATH = (
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-place-scoring-run-plan-v1.json"
+)
+REQUESTS_PATH = (
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-place-scoring-requests-v1.json"
+)
 CANARY_REQUEST_PATH = (
-    REPO_ROOT / "artifacts/public/catalog/mvp-place-scoring-canary-request-v2.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-place-scoring-canary-request-v2.json"
 )
 CANARY_SELECTION_PATH = (
-    REPO_ROOT / "artifacts/public/catalog/mvp-place-scoring-canary-selection-v3.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-place-scoring-canary-selection-v3.json"
 )
 CANARY_EVIDENCE_PATH = (
-    REPO_ROOT / "artifacts/public/catalog/mvp-place-scoring-canary-evidence-v2.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-place-scoring-canary-evidence-v2.json"
 )
 RUN_PLAN_SHA256 = "f031bd15b6e07c3b4523a81667b824600f4012b2d53941a4a591805da1e7f069"
 CONTINUATION_PLAN_PATH = (
-    REPO_ROOT / "artifacts/public/catalog/mvp-place-scoring-continuation-plan-v1.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-place-scoring-continuation-plan-v1.json"
 )
 PREDECESSOR_ROOT = (
     REPO_ROOT
-    / "artifacts/public/catalog/mvp-place-scoring-runs"
+    / "fixtures/historical-gyeongju/catalog/mvp-place-scoring-runs"
     / "1ee70778bb098b63bb7368bfe3aea26ef5c93f8ff6f1609608db2b3487011874"
 )
 CONTINUATION_REQUESTS_PATH = (
-    REPO_ROOT / "artifacts/public/catalog/mvp-place-scoring-requests-v2.json"
+    REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-place-scoring-requests-v2.json"
 )
 
 
@@ -192,9 +196,7 @@ def test_glm_transport_uses_fixed_bounded_json_object_request() -> None:
             200,
             json={
                 "model": "glm-5.3-flash",
-                "choices": [
-                    {"finish_reason": "stop", "message": {"content": response}}
-                ],
+                "choices": [{"finish_reason": "stop", "message": {"content": response}}],
             },
         )
 
@@ -214,9 +216,7 @@ def test_glm_transport_uses_fixed_bounded_json_object_request() -> None:
 
 def test_glm_transport_rejects_credential_reflection() -> None:
     client = httpx.Client(
-        transport=httpx.MockTransport(
-            lambda request: httpx.Response(200, content=b"synthetic-key")
-        )
+        transport=httpx.MockTransport(lambda request: httpx.Response(200, content=b"synthetic-key"))
     )
     transport = GlmCodingScoringTransport("synthetic-key", http_client=client)
     try:
@@ -458,9 +458,7 @@ def test_missing_wire_justification_dimension_is_rejected() -> None:
     payload = json.loads(response_bytes())
     payload["justifications"].pop("M6")
     outcome = run(FakeTransport(body=json.dumps(payload).encode()))
-    assert set(outcome.failed.values()) == {
-        "PROVIDER_RESPONSE_JUSTIFICATION_SHAPE_INVALID"
-    }
+    assert set(outcome.failed.values()) == {"PROVIDER_RESPONSE_JUSTIFICATION_SHAPE_INVALID"}
 
 
 def test_response_body_limit_and_error_redaction() -> None:
@@ -516,9 +514,7 @@ def _tree_sha256(root: Path) -> dict[str, str]:
 def test_continuation_plan_rejects_inconsistent_accounting(mutation) -> None:
     plan = json.loads(CONTINUATION_PLAN_PATH.read_bytes())
     mutation(plan)
-    plan["maximum_aggregate_calls"] = (
-        plan["consumed_completion_calls"] + plan["maximum_new_calls"]
-    )
+    plan["maximum_aggregate_calls"] = plan["consumed_completion_calls"] + plan["maximum_new_calls"]
     _reseal(plan)
 
     with pytest.raises(MvpScoringError, match="CONTINUATION_PLAN_INVALID"):
@@ -565,9 +561,7 @@ def test_prepare_continuation_preserves_predecessor_and_closes_started(
     ]
     assert len(interrupted) == 1
     assert interrupted[0]["status"] == "FAILED"
-    assert list(result_manifest(output_root, request_rows)) == plan[
-        "predecessor_result_manifest"
-    ]
+    assert list(result_manifest(output_root, request_rows)) == plan["predecessor_result_manifest"]
 
     with pytest.raises(MvpScoringError, match="CONTINUATION_OUTPUT_ALREADY_EXISTS"):
         prepare_continuation_state(
@@ -649,9 +643,14 @@ def test_cli_build_canary_inputs_is_byte_stable_from_public_100(tmp_path: Path) 
             [
                 "build-canary-inputs",
                 "--catalog",
-                str(REPO_ROOT / "artifacts/public/catalog/public-place-catalog-v1.json"),
+                str(
+                    REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-place-catalog-v1.json"
+                ),
                 "--evidence",
-                str(REPO_ROOT / "artifacts/public/catalog/public-evidence-inventory-v1.json"),
+                str(
+                    REPO_ROOT
+                    / "fixtures/historical-gyeongju/catalog/public-evidence-inventory-v1.json"
+                ),
                 "--selection-output",
                 str(selection_output),
                 "--evidence-output",
@@ -760,9 +759,7 @@ def test_canary_plan_and_execution_are_exactly_one_safe_call(tmp_path: Path) -> 
 
 
 def test_safe_provider_error_code_does_not_expose_message() -> None:
-    assert redact_error(MvpScoringError("GLM_HTTP_QUOTA_REJECTED")) == (
-        "GLM_HTTP_QUOTA_REJECTED"
-    )
+    assert redact_error(MvpScoringError("GLM_HTTP_QUOTA_REJECTED")) == ("GLM_HTTP_QUOTA_REJECTED")
     assert redact_error(MvpScoringError("provider body secret")) == "PROVIDER_ATTEMPT_FAILED"
 
 
@@ -835,9 +832,7 @@ def test_cli_execute_offline_denies_before_credential_or_transport(
             nonlocal constructed
             constructed = True
 
-    plan_path, requests_path, canary_outcome_path, plan_sha256 = _write_synthetic_plan(
-        tmp_path
-    )
+    plan_path, requests_path, canary_outcome_path, plan_sha256 = _write_synthetic_plan(tmp_path)
     monkeypatch.setattr(score_mvp_places, "GlmCodingScoringTransport", ForbiddenTransport)
     monkeypatch.setenv("ITDA_OFFLINE", "1")
     monkeypatch.delenv("ZHIPUAI_API_KEY", raising=False)
@@ -887,9 +882,7 @@ def test_cli_execute_rejects_used_output_before_transport(
             nonlocal constructed
             constructed = True
 
-    plan_path, requests_path, canary_outcome_path, plan_sha256 = _write_synthetic_plan(
-        tmp_path
-    )
+    plan_path, requests_path, canary_outcome_path, plan_sha256 = _write_synthetic_plan(tmp_path)
     output_root = tmp_path / "out"
     consume_execution_authority(output_root, plan_sha256)
     monkeypatch.setattr(score_mvp_places, "GlmCodingScoringTransport", ForbiddenTransport)
@@ -950,9 +943,7 @@ def test_cli_execute_rejects_wrong_approval_before_network(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    plan_path, requests_path, canary_outcome_path, plan_sha256 = _write_synthetic_plan(
-        tmp_path
-    )
+    plan_path, requests_path, canary_outcome_path, plan_sha256 = _write_synthetic_plan(tmp_path)
     monkeypatch.delenv("ITDA_OFFLINE", raising=False)
     monkeypatch.delenv("ZHIPUAI_API_KEY", raising=False)
     with pytest.raises(MvpScoringError, match="SCORING_APPROVAL_MISMATCH"):

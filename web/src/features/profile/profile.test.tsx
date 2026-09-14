@@ -53,7 +53,7 @@ function profile(overrides: Partial<PreferenceProfile> = {}): PreferenceProfile 
     config_hash: questionnaireArtifact.config_hash,
     created_at: "2026-07-22T12:00:00Z",
     is_current_trip_expectation: true,
-    description_ko: "이번 여행에서는 역사·전통과 감성·이미지 경험을 더 기대하고 있어요.",
+    description_ko: "이번 여행에서는 대상•원형형과 의미•이미지형 경험을 더 기대하고 있어요.",
     trip_conditions: tripConditions,
     answers,
     scores: [
@@ -241,8 +241,10 @@ describe("/profile result, reload, and recovery", () => {
     expect(screen.queryByText("대표 유형 점수")).toBeNull();
     expect(document.querySelector(".match-card > b")).toBeNull();
     expect(screen.getByText("무드 위버").tagName).toBe("B");
-    expect(screen.getAllByRole("meter").map((meter) => meter.getAttribute("aria-valuenow"))).toEqual(["0", "100", "50"]);
-    expect(screen.getByText("나는 오래된 이야기와 마음속에 그려온 모습에 끌려요.")).toBeTruthy();
+    expect(screen.getAllByRole("meter").map((meter) => meter.getAttribute("aria-valuenow"))).toEqual(["0", "67", "33"]);
+    expect(screen.queryByText("당신의 여행 한 문장")).toBeNull();
+    expect(screen.queryByText("입력한 내용")).toBeNull();
+    expect(screen.queryByText("프로필 계산 정보")).toBeNull();
     expect(fetchMock).toHaveBeenCalledWith("/v1/preference-profiles/profile-current", expect.any(Object));
     const restored = JSON.parse(window.localStorage.getItem(DRAFT_STORAGE_KEY) ?? "null") as { answers: unknown; trip_conditions: unknown };
     expect(restored.answers).toEqual(answers);
@@ -609,20 +611,19 @@ describe("/profile result, reload, and recovery", () => {
     expect(screen.queryByRole("meter")).toBeNull();
   });
 
-  it("routes answer edits precisely after restoring the server echo", async () => {
+  it("opens answer editing from the first question after restoring the server echo", async () => {
     writeProfileReference("profile-current");
     vi.stubGlobal("fetch", vi.fn().mockImplementation(async (input: RequestInfo | URL) =>
       jsonResponse(String(input) === "/v1/questionnaires/current" ? questionnaireArtifact : profile()),
     ));
     const router = await renderProfile();
     await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
-    fireEvent.click(screen.getByText("입력한 내용"));
-    fireEvent.click(screen.getByRole("button", { name: "시나리오 7 답변 수정" }));
+    fireEvent.click(screen.getByRole("button", { name: "답변 수정하기" }));
     await waitFor(() => expect(router.state.location.pathname).toBe("/quiz"));
-    expect(router.state.location).toMatchObject({ search: "", hash: "", state: { questionOrdinal: 7 } });
-    expect(router.state.location.state).toEqual({ questionOrdinal: 7, editingProfile: true });
-    expect(await screen.findByRole("heading", { name: FRONTEND_QUESTIONNAIRE.questions[6]!.title_ko })).toBeTruthy();
-    expect(screen.getByText("7 / 12")).toBeTruthy();
+    expect(router.state.location).toMatchObject({ search: "", hash: "", state: { questionOrdinal: 1 } });
+    expect(router.state.location.state).toEqual({ questionOrdinal: 1, editingProfile: true });
+    expect(await screen.findByRole("heading", { name: FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko })).toBeTruthy();
+    expect(screen.getByText("1 / 12")).toBeTruthy();
     expect(screen.getAllByRole("radio")[0]?.getAttribute("aria-checked")).toBe("true");
   });
 
@@ -642,11 +643,10 @@ describe("/profile result, reload, and recovery", () => {
     vi.stubGlobal("fetch", fetchMock);
     const router = await renderProfile();
     await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
-    fireEvent.click(screen.getByText("입력한 내용"));
-    fireEvent.click(screen.getByRole("button", { name: "시나리오 9 답변 수정" }));
-    await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[8]!.title_ko);
+    fireEvent.click(screen.getByRole("button", { name: "답변 수정하기" }));
+    await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko);
     fireEvent.click(screen.getAllByRole("radio")[1]);
-    for (let ordinal = 9; ordinal < 12; ordinal += 1) {
+    for (let ordinal = 1; ordinal < 12; ordinal += 1) {
       await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[ordinal]!.title_ko);
       fireEvent.click(screen.getAllByRole("radio")[2]);
     }
@@ -718,11 +718,11 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
     await renderProfile();
 
     expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
-    expect(screen.getByText("레거시 프로필").textContent).toBe("레거시 프로필");
+    expect(screen.getAllByRole("meter")).toHaveLength(3);
     expect(screen.queryByText(STORAGE_MESSAGES.invalid)).toBeNull();
   });
 
-  it("renders the nine legacy Likert answers without leaking v1 values into a v2 draft", async () => {
+  it("does not leak legacy Likert answers into a v2 draft", async () => {
     writeProfileReference("profile-legacy-v1");
     const fetchMock = vi.fn().mockResolvedValue(jsonResponse(legacyV1Profile));
     vi.stubGlobal("fetch", fetchMock);
@@ -730,10 +730,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
     await renderProfile();
 
     await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
-    // The nine legacy answers render with their own Likert labels...
-    expect(screen.getByText("질문 1 · 꽤 그래요")).toBeTruthy();
-    expect(screen.getByText("질문 2 · 매우 그래요")).toBeTruthy();
-    // ...and no v2 draft is seeded from v1 answers.
+    // No v2 draft is seeded from v1 answers.
     expect(window.localStorage.getItem(DRAFT_STORAGE_KEY)).toBeNull();
   });
 
@@ -748,7 +745,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
     const router = await renderProfile();
     await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
 
-    fireEvent.click(screen.getByRole("button", { name: "질문 1 답변 수정" }));
+    fireEvent.click(screen.getByRole("button", { name: "답변 수정하기" }));
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/quiz"));
     // Fresh v2 flow: no legacy answer survived into the draft record.

@@ -1,0 +1,488 @@
+{
+  "assessed_at": "2026-09-11T18:17:51.410205Z",
+  "assessment_sha256": "388de6d8be99d1a9af11af8c44d49ae93ad810f91cad83f298a3b87ff69aff1d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 58
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 56
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "단양이 패러글라이딩 명소로 알려져 있다는 공식 소개가 장소에 부여된 공유된 이미지·의미를 보여준다. 다만 상징의 깊은 표현까지는 근거가 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "이륙장에서의 수려한 자연경관이 시각적 배경으로 제시되나, 장소 자체의 일관된 시각적 연출·경관 표현에 대한 구체적 서술은 제한적이다. 원 제안의 VISUAL_APPEARANCE 인용은 출처의 allowed_claims에 없어 VISUAL_EXPRESSION으로 조정했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "비행 중 영상·사진 촬영과 즉석 인화를 통해 대표 장면을 직접 경험하고 기념 이미지를 재현할 수 있다는 확인된 근거가 있다. 유행 구도의 재현 중심성까지는 확인되지 않아 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "일반·익스트림·프러포즈 등 다양한 코스 선택지가 제공되어 방문자가 자신의 방식을 선택할 기회는 있으나, 자율 탐색이 경험의 중심이라고 보기는 어려워 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "산과 강이 어우러진 자연경관이 이륙 환경의 배경으로 확인되나, 실제 고요함·저자극 환경이나 머무를 공간에 대한 직접 근거는 없어 수준 2로 제한한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "패러글라이딩 비행과 익스트림 코스 등 참여형 신체 활동이 확인되며, 이 활동 자체가 장소 경험의 중심이므로 수준 3으로 판단한다. 개별 방문자의 몰입까지는 단정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "연인 대상 프러포즈 코스가 관계 표현의 구체적 기회로 확인된다. 다만 교류·공동 활동이 경험의 중심이라는 근거는 없어 수준 2로 제한한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "패러글라이딩 전문업체 소개로 확인된 원형·유산과의 접촉에 대한 근거가 없다. 레저 활동 중심 내용이라 유산 접촉을 판단할 자료가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "업체의 수상 실적(우수영업점 인증 등)은 언급되지만 이는 이 장소의 역사·연혁 탐구 경험을 뒷받침하는 역사 맥락 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "두산마을 위치 언급만 있을 뿐 지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 언급이 없다. 파일럿의 지식은 비행 안전 관련 서술일 뿐 유산 해설 근거로 쓸 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d",
+          "quote": {
+            "end": 120,
+            "method": "EXACT",
+            "original": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어 패러글라이딩의 명소로 알려져 있다.",
+            "start": 60,
+            "submitted": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어 패러글라이딩의 명소로 알려져 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "28f51a243850cba4df7bcfdeb8e090578425cfd2023367b138b2942851397711"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "단양이 패러글라이딩 명소로 알려져 있다는 공식 소개가 장소에 부여된 공유된 이미지·의미를 보여준다. 다만 상징의 깊은 표현까지는 근거가 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "'명소로 알려져 있다'는 서술은 인지도를 암시하지만 특정 매체를 통한 이미지 재현·확산의 구체적 근거(작품, 홍보물, SNS 내용 등)가 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d",
+          "quote": {
+            "end": 100,
+            "method": "EXACT",
+            "original": "단양은 소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어",
+            "start": 56,
+            "submitted": "단양은 소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "28f51a243850cba4df7bcfdeb8e090578425cfd2023367b138b2942851397711"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "이륙장에서의 수려한 자연경관이 시각적 배경으로 제시되나, 장소 자체의 일관된 시각적 연출·경관 표현에 대한 구체적 서술은 제한적이다. 원 제안의 VISUAL_APPEARANCE 인용은 출처의 allowed_claims에 없어 VISUAL_EXPRESSION으로 조정했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d",
+          "quote": {
+            "end": 527,
+            "method": "EXACT",
+            "original": "무전 교신이나 영상 촬영도 가능하며 사진촬영 후에는 맘에 드는 사진을 즉석에서 인화해서 종이 액자에 담아 갈 수 있다.",
+            "start": 461,
+            "submitted": "무전 교신이나 영상 촬영도 가능하며 사진촬영 후에는 맘에 드는 사진을 즉석에서 인화해서 종이 액자에 담아 갈 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "28f51a243850cba4df7bcfdeb8e090578425cfd2023367b138b2942851397711"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "비행 중 영상·사진 촬영과 즉석 인화를 통해 대표 장면을 직접 경험하고 기념 이미지를 재현할 수 있다는 확인된 근거가 있다. 유행 구도의 재현 중심성까지는 확인되지 않아 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d",
+          "quote": {
+            "end": 460,
+            "method": "EXACT",
+            "original": "편안히 하늘을 산책하는 듯한 일반코스부터 바이킹이나 롤러코스터를 타는 스릴을 느낄 수 있는 익스트림코스, 사랑하는 연인에게 프러포즈를 할 수 있는 코스까지 다양한 프로그램도 있으며",
+            "start": 360,
+            "submitted": "편안히 하늘을 산책하는 듯한 일반코스부터 바이킹이나 롤러코스터를 타는 스릴을 느낄 수 있는 익스트림코스, 사랑하는 연인에게 프러포즈를 할 수 있는 코스까지 다양한 프로그램도 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "28f51a243850cba4df7bcfdeb8e090578425cfd2023367b138b2942851397711"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "일반·익스트림·프러포즈 등 다양한 코스 선택지가 제공되어 방문자가 자신의 방식을 선택할 기회는 있으나, 자율 탐색이 경험의 중심이라고 보기는 어려워 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d",
+          "quote": {
+            "end": 87,
+            "method": "EXACT",
+            "original": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관",
+            "start": 60,
+            "submitted": "소백산과 남한강이 어우러져 빚어낸 수려한 자연경관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "28f51a243850cba4df7bcfdeb8e090578425cfd2023367b138b2942851397711"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "산과 강이 어우러진 자연경관이 이륙 환경의 배경으로 확인되나, 실제 고요함·저자극 환경이나 머무를 공간에 대한 직접 근거는 없어 수준 2로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d",
+          "quote": {
+            "end": 417,
+            "method": "EXACT",
+            "original": "바이킹이나 롤러코스터를 타는 스릴을 느낄 수 있는 익스트림코스",
+            "start": 383,
+            "submitted": "바이킹이나 롤러코스터를 타는 스릴을 느낄 수 있는 익스트림코스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "28f51a243850cba4df7bcfdeb8e090578425cfd2023367b138b2942851397711"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "패러글라이딩 비행과 익스트림 코스 등 참여형 신체 활동이 확인되며, 이 활동 자체가 장소 경험의 중심이므로 수준 3으로 판단한다. 개별 방문자의 몰입까지는 단정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d",
+          "quote": {
+            "end": 444,
+            "method": "EXACT",
+            "original": "사랑하는 연인에게 프러포즈를 할 수 있는 코스",
+            "start": 419,
+            "submitted": "사랑하는 연인에게 프러포즈를 할 수 있는 코스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "28f51a243850cba4df7bcfdeb8e090578425cfd2023367b138b2942851397711"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "연인 대상 프러포즈 코스가 관계 표현의 구체적 기회로 확인된다. 다만 교류·공동 활동이 경험의 중심이라는 근거는 없어 수준 2로 제한한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "e087f6c509ed461d2b14409330aa580bdf36464de1da26878f06d78623ca4756",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5d857d13691171a98673ee33830896bffade266cf59b834cbecb87037334738d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:9d59e9eaa3f8dc3f632939adb732ea9f21eef7282ee4a8a95aa61f63feabacd1",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3074913",
+          "request_sha256": "75a634d63275c0af75021eb8e6001a6da7252d3b930d2f6fce706ba7aaa61ef0",
+          "response_sha256": "739c9d0f8150a7b8905b047914725dc3dd4ef9e9a3e51626feaf07e35065844d",
+          "retrieved_at": "2026-09-10T16:57:58.870572Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-08T01:16:11Z",
+          "source_record_sha256": "6bc753d75d34d041b90ebfb06c3b93cf2fd766364e68481942e2b8525ca79464",
+          "source_uri": null
+        },
+        "record_sha256": "28f51a243850cba4df7bcfdeb8e090578425cfd2023367b138b2942851397711",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "충북 내륙에 위치한 단양은 여행하기 좋은 곳으로 멋진 풍경과 더불어 액티비티가 유명한 곳이다. 특히 단양은 소백산과 남한강이 어우러져 빚어낸 수려한 자연경관과 넓은 이착륙장이 있어 패러글라이딩의 명소로 알려져 있다. 청춘 패러는 단양 시외버스터미널에서 차로 20분 거리의 두산마을 최정상에 있는 패러글라이딩 전문업체이다. 2022년 단양군 우수영업점으로 인증받았고 23년에는 소비자 만족지수 1위로 단양에서 대표하는 업체 중 하나이다. 단양에서 제일 높은 이륙장으로 여러 대 동시 이륙할 수 있고 전용 착륙장이 있어 안전하게 착륙이 가능하다. 무엇보다 풍부한 지식과 비행 경험이 많은 최고의 파일럿과 함께해서 마음 놓고 즐길 수 있는 곳이다. 편안히 하늘을 산책하는 듯한 일반코스부터 바이킹이나 롤러코스터를 타는 스릴을 느낄 수 있는 익스트림코스, 사랑하는 연인에게 프러포즈를 할 수 있는 코스까지 다양한 프로그램도 있으며 무전 교신이나 영상 촬영도 가능하며 사진촬영 후에는 맘에 드는 사진을 즉석에서 인화해서 종이 액자에 담아 갈 수 있다. 대중교통 이용자는 예약 시 미리 얘기하면 픽업서비스도 이용이 가능하고 청춘패러를 예약하면 단양의 유명 관광지에서 제휴 할인을 받을 수 있다."
+      }
+    ],
+    "parent_source_sha256": "288cde2e13d2d19392c622359afaf5e1166484db4a67bc45ebf581a1401b0d12",
+    "place": {
+      "address": "충청북도 단양군 가곡면 두산길 262",
+      "category": "레포츠",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:9d59e9eaa3f8dc3f632939adb732ea9f21eef7282ee4a8a95aa61f63feabacd1",
+      "name_ko": "청춘 패러",
+      "place_id": "public:korea:9d59e9eaa3f8dc3f632939adb732ea9f21eef7282ee4a8a95aa61f63feabacd1",
+      "provider_content_id": "3074913",
+      "region_code": "43800",
+      "region_name": "충청북도 단양군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

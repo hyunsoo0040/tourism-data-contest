@@ -1,0 +1,982 @@
+{
+  "assessed_at": "2026-09-11T15:32:10.598871Z",
+  "assessment_sha256": "9cebdac4a7ea4ba8b58845fc3b0078a694bb5fba27f7c40b296e7e59be881d31",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 72
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "벚꽃과 카페거리라는 장소 고유의 이미지가 공유되는 의미로 연결되어 있으나, 여러 표현에서 일관된 상징 체계를 확인하는 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "'벚꽃으로 유명하다'는 매체·대중적 표현과 장소 이미지의 연결이 확인되나 유통의 반복 근거나 다른 매체 표현은 제시되지 않는다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:243d71a01b8ceb0bc75fbe68f813f9f86fc8ed95153dcf288a88d3cd1faaceed",
+            "appearance:3056f68ed0c51bd6daf942499738b865a5e913530df146cc99865086a6be584a",
+            "appearance:5cf30e705ea31cc0ecff2e86c28bf2e02648a5059ae44b1195f8c638633fe932"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "하얀 벚꽃과 노란 유채꽃, 온천천 경관 등 장면에서 구별되는 시각적 성격이 공식 설명으로 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "벚꽃·유채꽃 감상이라는 대표 장면을 현장에서 직접 경험할 수 있으며 방문객이 찾는 목적 이미지로 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책코스와 스탬프투어를 통해 방문자가 자율적으로 코스를 선택·탐색할 기회가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:28a64e4cb800ad97d154c94119e2b89f24bb0ba1d4d710e34674f2159a1619ae",
+            "appearance:980b8e064de867b740f5bcb55735e457c1a17ef7b1db0c5df3a3c67acdac6b77",
+            "appearance:cc411eb0bc824f8e957d84168f31ad56f132aae655326e10a80e52783962ff72"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 33,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "온천천 하천 경관과 시민공원 등 자연·머무를 환경 단서가 확인되나, 벚꽃철 붐빔 언급이 있어 저자극 환경이 지배한다고까지는 보기 어렵다.",
+      "value": 65
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "상시 스탬프투어라는 구체적 참여·탐방 활동과 카페·공방 체험이 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "온천천 산책길과 카페거리 형성(2011년경) 소개만 있을 뿐 확인된 실제 원형·유산의 물리적 접촉을 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "카페거리의 형성 경위(2011년경 안락동 주택가에 카페 입점)는 간단한 연혁이지만 구체적 역사·사건·인물 맥락의 제시는 부족하여 판단 근거가 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "공방 등이 언급되나 지역 주체의 실제 전승·생활문화와의 지속적 연결을 확인하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "스탬프투어는 관광 동기 부여 요소일 뿐 원형·유산·전통에 연결된 해설·학습의 근거가 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+          "quote": {
+            "end": 338,
+            "method": "EXACT",
+            "original": "온천천 카페거리에서만 느낄 수 있는 특색과 개성 있는 매장들이 가득하다",
+            "start": 299,
+            "submitted": "온천천 카페거리에서만 느낄 수 있는 특색과 개성 있는 매장들이 가득하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "벚꽃과 카페거리라는 장소 고유의 이미지가 공유되는 의미로 연결되어 있으나, 여러 표현에서 일관된 상징 체계를 확인하는 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+          "quote": {
+            "end": 200,
+            "method": "EXACT",
+            "original": "벚꽃으로 유명한 온천천변에 관광객이 많이 모이기 시작해",
+            "start": 170,
+            "submitted": "벚꽃으로 유명한 온천천변에 관광객이 많이 모이기 시작해",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "'벚꽃으로 유명하다'는 매체·대중적 표현과 장소 이미지의 연결이 확인되나 유통의 반복 근거나 다른 매체 표현은 제시되지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+          "quote": {
+            "end": 531,
+            "method": "EXACT",
+            "original": "봄에는 벚꽃이 만개하여 아름다운 벚꽃동산을 만들고, 온천천을 따라 조성한 유채꽃이 가득한 지역으로 하얀 벚꽃과 노란 유채꽃을 보러 오는 사람들로 붐비는 곳이다",
+            "start": 443,
+            "submitted": "봄에는 벚꽃이 만개하여 아름다운 벚꽃동산을 만들고, 온천천을 따라 조성한 유채꽃이 가득한 지역으로 하얀 벚꽃과 노란 유채꽃을 보러 오는 사람들로 붐비는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "하얀 벚꽃과 노란 유채꽃, 온천천 경관 등 장면에서 구별되는 시각적 성격이 공식 설명으로 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+          "quote": {
+            "end": 531,
+            "method": "EXACT",
+            "original": "하얀 벚꽃과 노란 유채꽃을 보러 오는 사람들로 붐비는 곳이다",
+            "start": 498,
+            "submitted": "하얀 벚꽃과 노란 유채꽃을 보러 오는 사람들로 붐비는 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "벚꽃·유채꽃 감상이라는 대표 장면을 현장에서 직접 경험할 수 있으며 방문객이 찾는 목적 이미지로 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+          "quote": {
+            "end": 79,
+            "method": "EXACT",
+            "original": "동래 온천천 산책길을 걸으며 동래구의 주요 관광지인 온천장, 명륜 1번가, 온천천 카페거리를 함께 즐길 수 있는 산책코스이다",
+            "start": 10,
+            "submitted": "동래 온천천 산책길을 걸으며 동래구의 주요 관광지인 온천장, 명륜 1번가, 온천천 카페거리를 함께 즐길 수 있는 산책코스이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "산책코스와 스탬프투어를 통해 방문자가 자율적으로 코스를 선택·탐색할 기회가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+          "quote": {
+            "end": 441,
+            "method": "EXACT",
+            "original": "식사 후엔 온천천의 풍경을 즐기며 티타임을 갖기도 하고 온천천 시민공원을 산책하는 사람들이 많다",
+            "start": 388,
+            "submitted": "식사 후엔 온천천의 풍경을 즐기며 티타임을 갖기도 하고 온천천 시민공원을 산책하는 사람들이 많다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "온천천 하천 경관과 시민공원 등 자연·머무를 환경 단서가 확인되나, 벚꽃철 붐빔 언급이 있어 저자극 환경이 지배한다고까지는 보기 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+          "quote": {
+            "end": 155,
+            "method": "EXACT",
+            "original": "스탬프 투어를 상시 운영 중이어서 온천천과 동래구 주요 관광명소를 가볍고 즐겁게 돌아볼 수 있다",
+            "start": 102,
+            "submitted": "스탬프 투어를 상시 운영 중이어서 온천천과 동래구 주요 관광명소를 가볍고 즐겁게 돌아볼 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "상시 스탬프투어라는 구체적 참여·탐방 활동과 카페·공방 체험이 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "인용 구절은 음식점·레스토랑에서 식사하러 손님이 늘어난다는 상업 서비스 이용 서술일 뿐, 방문자 간 교류·공동 활동·자기표현의 기회를 직접 뒷받침하지 않는다. 식사 장소의 존재를 교류·표현 활동으로 확대한 것은 부적절하다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "e252823dc43222b56c07068aee83d1cecf9d7a29ea2f6b89a06a951c17c447e5",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+              "quote": {
+                "end": 386,
+                "method": "EXACT",
+                "original": "레스토랑과 음식점이 많이 있어 브런치나 식사를 위해 이곳을 찾는 손님들이 늘고 있고",
+                "start": 340,
+                "submitted": "레스토랑과 음식점이 많이 있어 브런치나 식사를 위해 이곳을 찾는 손님들이 늘고 있고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff"
+            }
+          ],
+          "flags": [],
+          "key": "R.d",
+          "level": 2,
+          "reason": "카페·음식점에서의 교류 여지는 있으나 공동 제작·자기표현형 활동의 명시적 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE",
+            "BUSINESS_AS_TOURIST_ACTIVITY"
+          ],
+          "key": "R.d",
+          "reason": "인용 구절은 음식점·레스토랑에서 식사하러 손님이 늘어난다는 상업 서비스 이용 서술일 뿐, 방문자 간 교류·공동 활동·자기표현의 기회를 직접 뒷받침하지 않는다. 식사 장소의 존재를 교류·표현 활동으로 확대한 것은 부적절하다."
+        }
+      },
+      "reason": "인용 구절은 음식점·레스토랑에서 식사하러 손님이 늘어난다는 상업 서비스 이용 서술일 뿐, 방문자 간 교류·공동 활동·자기표현의 기회를 직접 뒷받침하지 않는다. 식사 장소의 존재를 교류·표현 활동으로 확대한 것은 부적절하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "dddef1415e9295096e7f55658eea40b2dde07ddaef5c2d12b0d9128094e7c4bd",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 재료나 전통적 공간 구성의 흔적은 보이지 않고, 현대적 콘크리트 교량·고층 아파트·정비된 산책로가 중심이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:08b1ccd03f5fa09da3d4ce92256fc9580b1a4fd1945352a2bd8e1e2c2ea12ad3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "145dee749a893a05a5a1c456de5ba989568600961090391c355c2e9fbb0ce212",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822333_4",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f4e1bd3aa463540a10ec48a15f91dfa9d66de6a618d4925d4c438a4f54b25ce3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/33/2822333_image2_1.png"
+        },
+        "record_sha256": "568a8646910000a7f9082aa3b3d1e8fcb3eaad01ab544e43c29ea3556226031f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "파란색 개폐문과 흰색 본체, 내부 스탬프 기계가 선명한 색 대비로 구성된 셀프 스탬프 대여기로, 기능적 도시 안내물 특유의 시각 성격이 보통 수준으로 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:243d71a01b8ceb0bc75fbe68f813f9f86fc8ed95153dcf288a88d3cd1faaceed",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ff3c464a3ef00a025310fbca0b46b6d39fd905a8bb14adc8e6c0fc594c3266ae",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822332_1",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d8892a44dd185117243e169741284eb01c6b093f845d98a24cf861069735f924",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/32/2822332_image2_1.png"
+        },
+        "record_sha256": "5d5817f96f57b5097720cf2d94988a960e8f6c549ae1a516ca3d615db0420128",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 하천 수면, 벚꽃나무 열매길, 유채 군락 등 자연 경관 단서가 크게 보이며 도시 건물과 공존한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:28a64e4cb800ad97d154c94119e2b89f24bb0ba1d4d710e34674f2159a1619ae",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "145dee749a893a05a5a1c456de5ba989568600961090391c355c2e9fbb0ce212",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822333_4",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f4e1bd3aa463540a10ec48a15f91dfa9d66de6a618d4925d4c438a4f54b25ce3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/33/2822333_image2_1.png"
+        },
+        "record_sha256": "f53a7f7195e1f159149cb17ea5196fd93e87d2d592cc41e8ed58459431919f58",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "노란 패널 건물과 검정 안내판, 강한 직사광의 명암 대비가 화면을 지배하며 도시적·현대적 시각 성격이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3056f68ed0c51bd6daf942499738b865a5e913530df146cc99865086a6be584a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "18de83edb344f14473ab6e8f25127da6b06669a1d419f20ec3943b864b9d207a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822329_2",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "121c38f60d45cdb620974e017764b49a333761c5985c6a04d0fda54509a95ea8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/2822329_image2_1.png"
+        },
+        "record_sha256": "0c3d184cdb09bbd951b8b51d76c4fd34f9604973542c192fab180fadd91944e8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "노란 유채꽃 대와 분홍 벚꽃의 강렬한 색 대비가 장면 전체를 지배하며, 물면 반사와 대각선 구도가 연출 효과를 더한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5cf30e705ea31cc0ecff2e86c28bf2e02648a5059ae44b1195f8c638633fe932",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "145dee749a893a05a5a1c456de5ba989568600961090391c355c2e9fbb0ce212",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822333_4",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f4e1bd3aa463540a10ec48a15f91dfa9d66de6a618d4925d4c438a4f54b25ce3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/33/2822333_image2_1.png"
+        },
+        "record_sha256": "ea56f338505936fa259c71a9269e63c5cf5874c652cb97c258186cc088a99b62",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "배경에 고층 건물과 안내판이 가까이 있고, 오른쪽 가장자리에 일부 식물과 목재 난간이 희미하게 보이나 자연 경관 단서는 매우 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:980b8e064de867b740f5bcb55735e457c1a17ef7b1db0c5df3a3c67acdac6b77",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ff3c464a3ef00a025310fbca0b46b6d39fd905a8bb14adc8e6c0fc594c3266ae",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822332_1",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d8892a44dd185117243e169741284eb01c6b093f845d98a24cf861069735f924",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/32/2822332_image2_1.png"
+        },
+        "record_sha256": "34cd8019f095c9d78eebc87b495fa7ada0c22d4edaee5b62b5f9dd48643fd216",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "금속 문패와 플라스틱 스탬프 기계 등 현대적 소재와 장치만 보이며 전통적 외관·재료·공간 구성의 시각적 특성은 거의 나타나지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a667cc132d8a03ff13fb3d81ab78c2a772a404d4ba4ad3f032d9335b9bdbdc99",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ff3c464a3ef00a025310fbca0b46b6d39fd905a8bb14adc8e6c0fc594c3266ae",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822332_1",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d8892a44dd185117243e169741284eb01c6b093f845d98a24cf861069735f924",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/32/2822332_image2_1.png"
+        },
+        "record_sha256": "8a1617b3ac9d5e22fb2fbd028ccefad354248f7aff69133d00e2ee12a9bcae37",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "가로수 나무와 하늘이 일부 보이지만 녹지·자연 경관 단서는 제한적이고 인공 시설 위주.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cc411eb0bc824f8e957d84168f31ad56f132aae655326e10a80e52783962ff72",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "18de83edb344f14473ab6e8f25127da6b06669a1d419f20ec3943b864b9d207a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822329_2",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "121c38f60d45cdb620974e017764b49a333761c5985c6a04d0fda54509a95ea8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/2822329_image2_1.png"
+        },
+        "record_sha256": "44b37975a14f359b36fdeb2f38083a3836389465489c246a55aa13ff52a5a49a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 안내 키오스크, 금속 난간, 타일 포장 등 전통적 외관·재료의 시각적 특성은 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fbcde8c2ede1a04b3f35fe41a3b516de60b6e95d139a7edd2188fe55046ab401",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "18de83edb344f14473ab6e8f25127da6b06669a1d419f20ec3943b864b9d207a",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:2822329_2",
+          "request_sha256": "b94d3e685e383473d98465b50894d874ba7ca3d101506100d0cbadde7541f967",
+          "response_sha256": "8de40737d57cdeaafb8f79a1f183cd298b24ba72e87a0e97e4b421c2478af279",
+          "retrieved_at": "2026-09-10T08:18:38.572514Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "121c38f60d45cdb620974e017764b49a333761c5985c6a04d0fda54509a95ea8",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/29/2822329_image2_1.png"
+        },
+        "record_sha256": "b2ae0815269e99697787929dc10a3d178d706122c1f27a0e85365c7252e38ccd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:09f168e72f19e267e626acb1acb714f8e1d684978893282ac7624d32f519f06e",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "2822334",
+          "request_sha256": "c07a76340594a4550cbe681554ae0a2ddda393b22fd7388edf51b4bd181fc921",
+          "response_sha256": "95ffbfabc59b45d138039c1a97a710194761dc2ebc82a5e7e799082fd68a98c6",
+          "retrieved_at": "2026-09-10T08:15:51.322171Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c4659ecd43ba63728b8632adb5be9dcd6b0014e323f195d21585f0a56fa3d782",
+          "source_uri": null
+        },
+        "record_sha256": "a2c45b8e5ed98d19aa81104454e986da9723618674b31d20b273ba76345d6a1e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "동래온천길 스탬프투어"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:76dc9561f1f996f4199eb31f28120a577f0fc3347a5765f1bacf8c2f332ac41e",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2822334",
+          "request_sha256": "4838ebc788e9e9299c6685485483d38499c71853929e4911423d5b764f65ca05",
+          "response_sha256": "bfdbe186ee092966bc80215c45e843cb3978a6814001d5a025d14e94ad26890d",
+          "retrieved_at": "2026-09-10T08:15:50.977748Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-01-14T05:31:47Z",
+          "source_record_sha256": "793aa39b24b2a37eee67184f041d64da46422c81a93e26fa8ebdbda163f1d286",
+          "source_uri": null
+        },
+        "record_sha256": "eb195a61416794a68cc2dac5ebd6620d3c95d88ef5c2db4dd3d93aa82f237bff",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "부산 동래온천길은 동래 온천천 산책길을 걸으며 동래구의 주요 관광지인 온천장, 명륜 1번가, 온천천 카페거리를 함께 즐길 수 있는 산책코스이다. 비교적 짧은 거리인 5.65.㎞이지만 스탬프 투어를 상시 운영 중이어서 온천천과 동래구 주요 관광명소를 가볍고 즐겁게 돌아볼 수 있다. 특히 온천천 카페거리는 벚꽃으로 유명한 온천천변에 관광객이 많이 모이기 시작해 안락동 주택가에 2011년 경부터 작은 카페들이 들어서면서 카페거리가 형성된 곳으로 현재 약 150여 개의 매장들이 모여 카페, 음식점, 주점, 공방 등이 조화를 이루고 있고 온천천 카페거리에서만 느낄 수 있는 특색과 개성 있는 매장들이 가득하다. 레스토랑과 음식점이 많이 있어 브런치나 식사를 위해 이곳을 찾는 손님들이 늘고 있고, 식사 후엔 온천천의 풍경을 즐기며 티타임을 갖기도 하고 온천천 시민공원을 산책하는 사람들이 많다. 봄에는 벚꽃이 만개하여 아름다운 벚꽃동산을 만들고, 온천천을 따라 조성한 유채꽃이 가득한 지역으로 하얀 벚꽃과 노란 유채꽃을 보러 오는 사람들로 붐비는 곳이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e0e7f537984417011bf294daca12145a9074b310de0a38709e93711f832ea911",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2822334",
+          "request_sha256": "c07a76340594a4550cbe681554ae0a2ddda393b22fd7388edf51b4bd181fc921",
+          "response_sha256": "614bd58ce325fcd271edb9fbf1235122822548e4e279db0e0646824e8376ec45",
+          "retrieved_at": "2026-09-10T08:18:37.907956Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0845038586a62eda350fbecd46bb1a8778dda2d36d418a36a037f66d769bdb2b",
+          "source_uri": null
+        },
+        "record_sha256": "1dbe9f2cdc5795699bffd1430a0e38cb0887643547a5a9cce4e266d0544d1a9b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "778f5f88e9ecfc6e2e8e8912c7dbfa238213457f83298d418f3375936c8ccb8b",
+    "place": {
+      "address": "부산광역시 동래구 온천천로 451",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+      "name_ko": "동래온천길(온천천 카페거리)",
+      "place_id": "public:korea:017dac7e532bbe9b0c4634ff6118c73681e772c32be8995f138ca8fdb3e39972",
+      "provider_content_id": "2822334",
+      "region_code": "26260",
+      "region_name": "부산광역시 동래구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

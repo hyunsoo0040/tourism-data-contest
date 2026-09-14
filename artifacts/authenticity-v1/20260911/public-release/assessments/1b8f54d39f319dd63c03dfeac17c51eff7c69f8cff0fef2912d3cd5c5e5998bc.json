@@ -1,0 +1,935 @@
+{
+  "assessed_at": "2026-09-11T19:46:01.720409Z",
+  "assessment_sha256": "1b8f54d39f319dd63c03dfeac17c51eff7c69f8cff0fef2912d3cd5c5e5998bc",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 88
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'산소공장', '도심 속 생태의 보고'라는 장소에 부여된 이미지·호칭이 개요에서 확인된다. 다만 다양한 매체·표현에서의 일관성까지는 확인되지 않아 수준 1~2 범위 중 하한으로 평가한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2751e18b2b3fe64605a9e47b0c2dd6924835d8a35fed4df87875dc0dff654c17",
+            "appearance:731ce30c918647edd608172fbc50d8c08a135570a927cc0d4f7887ba22673987",
+            "appearance:888cedbc78b00df74809755d5bc6ded58c0f026c37934814eef4bb11b62c413d"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "올렛길을 통한 자율적 걷기·탐색이 누구나 제약 없이 가능한 활동으로 서술되어 있어 자유로운 탐색 기회가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:801758d204a3e6ac1cb3f0edf2e5828f7b7ba05219a15ae53222b1ef00590c68",
+            "appearance:9f79dce31b52f9d2b6a0d702803015fb080928692f8d1489a66e8241613ada43",
+            "appearance:e3a1b83ff6921fe97a1fc62899929b83856715549a23b21a77b057915ac901e0"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "오리나무 군락, 생태습지, 철새 도래지 등 자연 환경 단서가 공식 개요에서 구체적으로 확인되며 장소의 핵심 특성을 이룬다. 다만 실제 고요함·혼잡 수준은 확인되지 않는다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 생태습지·저수지에 관한 것으로, 오송제 자체의 확인된 원형·문화유산 실물과의 접촉에 관한 정보가 없어 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 생태적 특성(저수량, 서식종)을 다룰 뿐 이 장소의 역사·연혁·사건 맥락에 대한 서사가 없어 점수 부여 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 언급이 없다. '오송제'라는 명칭의 유래나 현재 전승 활동 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·전시·학습 프로그램에 관한 정보가 없어 판단 불가하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5",
+          "quote": {
+            "end": 68,
+            "method": "EXACT",
+            "original": "산소공장으로 불리는 오리나무가 군락을 이루고 있는 곳으로 유명하다",
+            "start": 32,
+            "submitted": "산소공장으로 불리는 오리나무가 군락을 이루고 있는 곳으로 유명하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "276d558fc325c89b684b0fc1edcd1c61979bc61944bae45eeec8a0f5471020ec"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 1,
+      "reason": "'산소공장', '도심 속 생태의 보고'라는 장소에 부여된 이미지·호칭이 개요에서 확인된다. 다만 다양한 매체·표현에서의 일관성까지는 확인되지 않아 수준 1~2 범위 중 하한으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "오송제 이미지가 특정 매체(작품, 홍보물, SNS 등)를 통해 재현·확산되는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현(촬영 포인트 등)할 수 있다는 근거가 없다. '올렛길' 언급은 걷기 코스일 뿐 이미지 재현 경험의 근거로 충분하지 않다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5",
+          "quote": {
+            "end": 743,
+            "method": "EXACT",
+            "original": "걷기가 사랑받는 이유는 남녀노소 누구나 특별한 장비나 경제적인 투자 없이도 할 수 있는",
+            "start": 695,
+            "submitted": "걷기가 사랑받는 이유는 남녀노소 누구나 특별한 장비나 경제적인 투자 없이도 할 수 있는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "276d558fc325c89b684b0fc1edcd1c61979bc61944bae45eeec8a0f5471020ec"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "올렛길을 통한 자율적 걷기·탐색이 누구나 제약 없이 가능한 활동으로 서술되어 있어 자유로운 탐색 기회가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5",
+          "quote": {
+            "end": 466,
+            "method": "EXACT",
+            "original": "오리나무가 군락지 숲속을 이루고 있다. 이와 함께 부들과 갈대, 말즘 등 다양한 수생식물과",
+            "start": 416,
+            "submitted": "오리나무가 군락지 숲속을 이루고 있다. 이와 함께 부들과 갈대, 말즘 등 다양한 수생식물과",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "276d558fc325c89b684b0fc1edcd1c61979bc61944bae45eeec8a0f5471020ec"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 4,
+      "reason": "오리나무 군락, 생태습지, 철새 도래지 등 자연 환경 단서가 공식 개요에서 구체적으로 확인되며 장소의 핵심 특성을 이룬다. 다만 실제 고요함·혼잡 수준은 확인되지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "올렛길 걷기는 구체적인 참여·탐방 활동(수준 2)까지만 뒷받침한다. 지속적으로 참여·도전할 활동(수준 3)이라는 현재 앵커는 근거를 초과한 추론이다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "인용 구간은 걷기 운동의 일반적 장점을 홍보하는 문구로, 현장에서 제공되는 구체적인 교류·표현 기회(수준 2)를 직접 뒷받침하지 않는다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "31f94aab76db16601d5e6febc92861d1d4b5bf4d805790fb6842411a109fa35b",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5",
+              "quote": {
+                "end": 640,
+                "method": "EXACT",
+                "original": "가을이면 오색단풍으로 물들며 겨울이 되면 멋스러운 하얀 옷을 입은",
+                "start": 604,
+                "submitted": "가을이면 오색단풍으로 물들며 겨울이 되면 멋스러운 하얀 옷을 입은",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "276d558fc325c89b684b0fc1edcd1c61979bc61944bae45eeec8a0f5471020ec"
+            }
+          ],
+          "flags": [],
+          "key": "E.c",
+          "level": 2,
+          "reason": "계절별 시각적 경관(단풍, 눈, 오리나무 군락)의 표현이 서술되나, 이것이 장소 이미지를 지배하는 일관된 연출로 확인되지는 않아 제한적 수준으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.c",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5",
+              "quote": {
+                "end": 853,
+                "method": "EXACT",
+                "original": "걸으면서 건강도 찾고 자연과 함께 할 수 있는 곳이다",
+                "start": 824,
+                "submitted": "걸으면서 건강도 찾고 자연과 함께 할 수 있는 곳이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "276d558fc325c89b684b0fc1edcd1c61979bc61944bae45eeec8a0f5471020ec"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "올렛길 걷기라는 구체적 신체 활동·탐방 기회가 확인된다. 지속적 참여·도전 활동으로 확장되는 근거는 없어 중간 수준으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.c",
+          "reason": "올렛길 걷기는 구체적인 참여·탐방 활동(수준 2)까지만 뒷받침한다. 지속적으로 참여·도전할 활동(수준 3)이라는 현재 앵커는 근거를 초과한 추론이다."
+        }
+      },
+      "reason": "올렛길 걷기는 구체적인 참여·탐방 활동(수준 2)까지만 뒷받침한다. 지속적으로 참여·도전할 활동(수준 3)이라는 현재 앵커는 근거를 초과한 추론이다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5",
+              "quote": {
+                "end": 808,
+                "method": "EXACT",
+                "original": "가족이나 친구, 연인과 함께 이야기를 나누며 자연 경관까지 즐길 수 있는 장점이 있기",
+                "start": 761,
+                "submitted": "가족이나 친구, 연인과 함께 이야기를 나누며 자연 경관까지 즐길 수 있는 장점이 있기",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "276d558fc325c89b684b0fc1edcd1c61979bc61944bae45eeec8a0f5471020ec"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "가족·친구·연인과 함께 걷고 이야기를 나누는 교류 기회가 언급되나, 조직된 공동 활동이나 자기표현 프로그램의 근거는 없어 제한적 수준으로 평가한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.d",
+          "reason": "인용 구간은 걷기 운동의 일반적 장점을 홍보하는 문구로, 현장에서 제공되는 구체적인 교류·표현 기회(수준 2)를 직접 뒷받침하지 않는다."
+        }
+      },
+      "reason": "인용 구간은 걷기 운동의 일반적 장점을 홍보하는 문구로, 현장에서 제공되는 구체적인 교류·표현 기회(수준 2)를 직접 뒷받침하지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "062b956bdabb7738665cd9f0f2e5d0baba68f06336d9036d03b272d8c8aa636d",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "맑은 청색 하늘과 짙은 녹색 수련잎, 울창한 수림의 대비가 선명하며 고지대 시점의 넓은 구도가 장면을 지배적으로 이끈다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2751e18b2b3fe64605a9e47b0c2dd6924835d8a35fed4df87875dc0dff654c17",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a8ad5e176ccb90340fb482d7229c3803ef64746edfc91149c9e7272b9978d9c4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529538_4",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e81f6e13efe6ff1ada5da45e71658e318645db6c9ab45a3402a54bd41c06640c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/38/3529538_image2_1.jpg"
+        },
+        "record_sha256": "41d9c1d8f8b8840148ebcd5416371dd0182bf701e24b820cad6864c0320a1b62",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "짙은 초록빛 숲과 흙길의 대비, 나무 그늘과 햇빛이 어우러진 구도가 두드러지며 시원한 여름 산책로 분위기를 연출한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:731ce30c918647edd608172fbc50d8c08a135570a927cc0d4f7887ba22673987",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "da501acf5399d22c6ed83c04769acac405061ee1c6d2f1ee12daa3ba90126486",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529539_5",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "088ca82648ca905905b64c0a261d1bdae013b7b5c0658e47cc643ceace332640",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/39/3529539_image2_1.jpg"
+        },
+        "record_sha256": "216f4e3bfb5d0867415bf11e65b5ba7d345ec020365b4e1ad11850923619b6c9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 나무, 덤불, 숲길이 화면 전체를 지배하며 자연 환경 단서가 매우 강하게 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:801758d204a3e6ac1cb3f0edf2e5828f7b7ba05219a15ae53222b1ef00590c68",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "da501acf5399d22c6ed83c04769acac405061ee1c6d2f1ee12daa3ba90126486",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529539_5",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "088ca82648ca905905b64c0a261d1bdae013b7b5c0658e47cc643ceace332640",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/39/3529539_image2_1.jpg"
+        },
+        "record_sha256": "2bc6f2a340c2d9d5fc474f2e0eaf5e374e9ac98c85db785f6ff6b9a43f5d3020",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "청량한 녹색 연잎과 짙은 수림, 맑은 하늘의 대비가 뚜렷하고 넓은 야외 풍경을 내려다보는 구도가 시각적으로 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:888cedbc78b00df74809755d5bc6ded58c0f026c37934814eef4bb11b62c413d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e161ea727eef1ab6fa3d35dffb20bb47470a3d636d5cdb63ba2ceb06480949d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529537_3",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d814245eeb57269b75d11f03c21586e7d2402f0c7c5a7e40a450cd1517e9381c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/37/3529537_image2_1.jpg"
+        },
+        "record_sha256": "a661c452957f2c104eb341dff9a477bbccf5465868d523c0fe1a4e82d21a1c22",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "수련으로 뒤덮인 연못, 숲, 초록 논밭, 트인 하늘 등 자연 경관 요소가 화면 전체를 채운다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9f79dce31b52f9d2b6a0d702803015fb080928692f8d1489a66e8241613ada43",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a8ad5e176ccb90340fb482d7229c3803ef64746edfc91149c9e7272b9978d9c4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529538_4",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e81f6e13efe6ff1ada5da45e71658e318645db6c9ab45a3402a54bd41c06640c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/38/3529538_image2_1.jpg"
+        },
+        "record_sha256": "dcfa10b5e41ba842dd296b05fab0a5be71ed4dab9c2fbf2e7bff06ee1d2e120d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목책과 흙길 등 소박한 시설이 일부 보이나 전통 외관·재료의 특성은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cd0ac9f1365d6319125627257fa2f2dbc53db9049a03dac05701f785fb4fba26",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e161ea727eef1ab6fa3d35dffb20bb47470a3d636d5cdb63ba2ceb06480949d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529537_3",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d814245eeb57269b75d11f03c21586e7d2402f0c7c5a7e40a450cd1517e9381c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/37/3529537_image2_1.jpg"
+        },
+        "record_sha256": "076b1e4c4b59a9ebe9444a6da6bdc1ed0633265e916694187e506adb730f4b44",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "작은 비닐하우스와 시설물은 보이나 전통 외관·재료·공간 구성의 두드러진 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:dc4ec6fdc9dec4d8ba4c42f4d8acdde002c8a45de9f5c8fdbdbbd6d9cada525b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a8ad5e176ccb90340fb482d7229c3803ef64746edfc91149c9e7272b9978d9c4",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529538_4",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e81f6e13efe6ff1ada5da45e71658e318645db6c9ab45a3402a54bd41c06640c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/38/3529538_image2_1.jpg"
+        },
+        "record_sha256": "1e4c70a6130dfe269fd26cf6e9afde12870204e0581dddfa172f89dd4939205c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "연꽃이 뒤덮인 넓은 연못, 울창한 수림, 초지와 논 등 자연 경관이 화면 대부분을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e3a1b83ff6921fe97a1fc62899929b83856715549a23b21a77b057915ac901e0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1e161ea727eef1ab6fa3d35dffb20bb47470a3d636d5cdb63ba2ceb06480949d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529537_3",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d814245eeb57269b75d11f03c21586e7d2402f0c7c5a7e40a450cd1517e9381c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/37/3529537_image2_1.jpg"
+        },
+        "record_sha256": "791306c4f3d7e60a58ceb583dc8b58e5c75256996b895ba5aa8ba310d05086b2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목재 기둥과 밧줄 울타리, 흙길 등 자연 친화적 재료가 일부 보이나 전통 외관의 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ea9c59688d585c91392ff3a6a106eee924cc286e15755dd8930d0ffe1d80c332",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "da501acf5399d22c6ed83c04769acac405061ee1c6d2f1ee12daa3ba90126486",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3529539_5",
+          "request_sha256": "b01d7902b13e8c763b7a35b68712edfac1dd87b71cab7aa564f1c946947258df",
+          "response_sha256": "57d7a18f9774ea9b12f2afdb1cc6d9051ab84238106ec21d95821ab1989d19c5",
+          "retrieved_at": "2026-09-10T08:30:23.944985Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "088ca82648ca905905b64c0a261d1bdae013b7b5c0658e47cc643ceace332640",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/39/3529539_image2_1.jpg"
+        },
+        "record_sha256": "18a74f11b692e68f5bcfd2d1717262324a873f70e58cc7fef1569e495d13e193",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:2e27792e8cb701bdcc6f6c15f28cdb800d88f42c8b2ab65043f47648d253c1fb",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1587082",
+          "request_sha256": "118b1e33e87d021869fbe802011bc92e11a7647d4f7c7b59527a4cc96fc26754",
+          "response_sha256": "fe8f0f86a7b89f14e1b05c7e861d4ae3ad5b63e37d0ea48f017d3ac8f748dbd9",
+          "retrieved_at": "2026-09-10T08:30:23.608951Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7e2ffc4395157a06e6c9846c884bb79cc7347b90fcc6b799783660494ef45bd3",
+          "source_uri": null
+        },
+        "record_sha256": "13211fd99ad3c9c487ae8e90fe1bd25530c9c4b28b08403e66057a7efce80661",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:33454b66ed5af305e624f42cb8b6309837b4f50537d58920e0284c502ac73bd5",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1587082",
+          "request_sha256": "ae17a9fe9f1e4404eb5554a4d12f9af373f1244648c971ced1c9a9626004ede7",
+          "response_sha256": "64e8aca15ad447e448a5c87f908bad8af27dd796dc6939d4e4cb7629cbb6e708",
+          "retrieved_at": "2026-09-10T05:31:15.479513Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-09-04T07:31:48Z",
+          "source_record_sha256": "643c7edb2412c4061e8aaed21b2ce1bb09de83fbb178f8cdad1dc45ff45d5100",
+          "source_uri": null
+        },
+        "record_sha256": "276d558fc325c89b684b0fc1edcd1c61979bc61944bae45eeec8a0f5471020ec",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "도심의 생태공간으로 다시 태어나게 될 전북 전주 오송제는 산소공장으로 불리는 오리나무가 군락을 이루고 있는 곳으로 유명하다. 또 이곳에서는 청정지역에서 서식하는 각종 곤충들도 서식하고 있어 도심 속 생태의 ‘보고(寶庫)’로 남겨진 생태습지이다. 오송제는 만수면적이 3.5㏊, 총저수량 4만 7,200㎥, 유효저수량은 4만 5,400㎥로 주변에 과수원과 논이 인접하고 있으며 상류지역에는 산림청의 희귀 및 멸종위기식물종인 ‘낙지다리’가 군락을 이루고 있다. 특히 오송제에는 청정지역에서 서식하는 밀잠자리와 노란잠자리, 깃동잠자리, 모메뚜기, 게아제비, 풍뎅이, 네팔나비, 부처나비, 소금쟁이 등 육상곤충상이 유일하게 서식하고 있다. 뿐만 아니라 건지산에 둘러싸여 있는 오송제 주변에는 이산화탄소(CO₂)의 흡수역할을 하고 산소(O₂)가 생산되는 오리나무가 군락지 숲속을 이루고 있다. 이와 함께 부들과 갈대, 말즘 등 다양한 수생식물과 붕어, 잉어, 송사리, 동자개 등 4목 5과 8종이 서식하면서 황새와 기러기, 딱따구리, 두루미, 쇠오리, 기러기 등 철새들이 둥지를 틀고 잠을 자는 등 생태호수로 조건을 두루 갖추고 있다. 봄이면 생명의 시작을 알리고 여름이면 그늘을 제공하고 가을이면 오색단풍으로 물들며 겨울이 되면 멋스러운 하얀 옷을 입은 오송제가 찾는 이들을 반긴다. 올렛길이 사람들의 사랑을 받으며 대한민국에 걷기열풍을 몰고 왔다. 걷기가 사랑받는 이유는 남녀노소 누구나 특별한 장비나 경제적인 투자 없이도 할 수 있는 가장 안전한 유산소성 운동이며 가족이나 친구, 연인과 함께 이야기를 나누며 자연 경관까지 즐길 수 있는 장점이 있기 때문이다. 이처럼 오송제는 걸으면서 건강도 찾고 자연과 함께 할 수 있는 곳이다. 가족, 연인, 친구와 함께 산새가 노래하고 자연이 함께하는 오송제를 찾아 걸어보자! 건강은 물론 맑은 심신은 덤으로 찾아올 것이다."
+      }
+    ],
+    "parent_source_sha256": "8d71de4b2cae63fe6ae6e59f88a63f1070e153908f641fea6f19f890dc20101a",
+    "place": {
+      "address": "전북특별자치도 전주시 덕진구 송천동1가",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+      "name_ko": "오송제",
+      "place_id": "public:korea:fa7e1fc7ed7a6d8e5ca187813f52bb1056a92e620d807228dce2b369a37e8c74",
+      "provider_content_id": "1587082",
+      "region_code": "52113",
+      "region_name": "전북특별자치도 전주시 덕진구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

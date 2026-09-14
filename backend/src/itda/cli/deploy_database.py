@@ -12,6 +12,8 @@ from alembic import command
 from alembic.config import Config
 from psycopg import sql
 
+from itda.cli.initialize_authenticity_release import ensure_initial_authenticity_release
+from itda.cli.initialize_grounded_release import ensure_initial_grounded_release
 from itda.db.session import sqlalchemy_url_from_dsn
 
 ALEMBIC_INI = Path(__file__).resolve().parents[3] / "alembic.ini"
@@ -24,9 +26,7 @@ _OWNER_ROLES = (
     "itda_daily_glm_refresh_write_authority",
 )
 _SERVICE_PASSWORD_ENVIRONMENTS = {
-    "itda_profile_release_authority_service": (
-        "ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD"
-    ),
+    "itda_profile_release_authority_service": ("ITDA_PROFILE_RELEASE_AUTHORITY_SERVICE_PASSWORD"),
     "itda_photo_service": "ITDA_PHOTO_SERVICE_PASSWORD",
     "itda_current_profile_session_service": "ITDA_PROFILE_SESSION_SERVICE_PASSWORD",
     "itda_daily_glm_refresh_service": "ITDA_DAILY_GLM_REFRESH_SERVICE_PASSWORD",
@@ -156,9 +156,7 @@ def provision_roles(settings: DeploymentDatabaseSettings) -> None:
 
 
 def upgrade_schema(settings: DeploymentDatabaseSettings) -> None:
-    database_url = sqlalchemy_url_from_dsn(settings.admin_dsn).render_as_string(
-        hide_password=False
-    )
+    database_url = sqlalchemy_url_from_dsn(settings.admin_dsn).render_as_string(hide_password=False)
     config = Config(str(ALEMBIC_INI))
     config.set_main_option("sqlalchemy.url", database_url.replace("%", "%%"))
     config.attributes["runtime_role"] = settings.runtime_role
@@ -173,6 +171,18 @@ def main() -> int:
         settings = load_settings()
         provision_roles(settings)
         upgrade_schema(settings)
+        if os.environ.get("ITDA_AUTHENTICITY_RELEASE_DIR"):
+            authenticity = ensure_initial_authenticity_release(
+                os.environ, admin_dsn=settings.admin_dsn
+            )
+            print(
+                f"Authenticity PUBLIC release is ready ({authenticity['state']}, "
+                f"{authenticity['places']} places, {authenticity['release_sha256']}).",
+                flush=True,
+            )
+        else:
+            release = ensure_initial_grounded_release(os.environ, admin_dsn=settings.admin_dsn)
+            print(f"Grounded recommendation release is ready ({release.state}).", flush=True)
     except Exception:
         print("Deployment database setup failed.", flush=True)
         return 1

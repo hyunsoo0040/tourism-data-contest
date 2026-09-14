@@ -1,0 +1,1004 @@
+{
+  "assessed_at": "2026-09-11T17:44:25.054731Z",
+  "assessment_sha256": "b7c2e49ee0677a41edebcb624e37e9022d01e16bb820485dec6043b2e377f091",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 69
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:726b2f5b9ca5a4f34a5876ac2e4ae83270986a4ef3b68fc40a472c6f4e2426f9",
+            "appearance:8bab2e0a48462eb4d8a130eff5b72c131332399efb9dce06b9d253a59fdc0af6",
+            "appearance:fd4f2340baca84f1da72eb656056fb5b30cde9a22bdf917a9fc69263b51648a8"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "개요가 야간 경관조명, 미디어파사드, 홀로그램, 음악분수의 빛과 색 연출 등 이 장소의 시각적 성격과 연출을 구체적으로 기술하므로 분명한 외관·연출의 표현으로 직접 지원된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "모노레일을 통한 저수지·조각공원 경관 관람과 출렁다리 위 수면 조명 경험 등 대표 장면을 현장에서 관람할 수 있음은 확인되나, 촬영·재현 참여에 대한 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:020475457a7896d73d4854e9a77a64a80b96b91ff34bce3bc5a5081e258beffd",
+            "evidence:22cd96db572f370ed9821ecdcf60e4e79597c1e286232a6369732989cf0ff81f"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책로, 야영장, 피크닉장, 잔디광장 등 방문자가 자신의 방식으로 머물고 탐색할 수 있는 시설과 출렁다리·모노레일 이용 기회가 확인되어 자율적 선택·탐색 기회로 지원된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0cfbfada31d418d7c295131debebaf4cabdee6b312e30890178646190f36bd7a",
+            "appearance:862d17386c627a2084d1411af715e8a255216e492eeb8970d0b7418f31f513d9",
+            "appearance:d561c580cd6b7a1eb132ee5040ce07844c51a7dcda1bc3f1f9c2996a97bcb65e"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "저수지 연안의 수변 환경과 아름다운 경관, 산책로·잔디광장 등 환경 단서가 확인되지만 실제 고요함·저자극성·혼잡도에 대한 근거는 없어 수준 2로 제한한다.",
+      "value": 56
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:22cd96db572f370ed9821ecdcf60e4e79597c1e286232a6369732989cf0ff81f",
+            "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "402m 출렁다리 건너기, 약 22분 모노레일 탑승, 낚시, 야영 등 구체적 참여 활동이 확인되어 참여·탐방 기회로 지원된다. 지속적 도전 활동의 근거는 부족해 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "예당관광지는 1986년 조성된 국민관광지로 확인된 원형·유산(문화재·역사적 실물)에 대한 근거가 제공되지 않았다. 저수지와 시설은 원형·유산 접촉의 확인 자료가 아니므로 평가할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에 1986년 국민관광지 조성 사실만 있을 뿐, 이 장소의 실제 역사적 사건·인물·연혁 맥락에 대한 구체적 근거가 없다. 단순 조성 연도는 역사 경험의 근거로 쓸 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 제공되지 않았다. 인근 시설 나열은 전승의 현재성을 보여주지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·전시·학습 프로그램에 대한 언급이 없다. 모노레일·출렁다리 설명은 시설 안내일 뿐 역사 해설의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "장소에 사회적으로 부여된 상징·의미의 내용에 대한 근거가 없다. 시설 나열과 '경관이 아름다움' 서술만으로는 공유되는 의미를 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168",
+          "quote": {
+            "end": 324,
+            "method": "EXACT",
+            "original": "테마형 야간경관조명 모노레일로서 저수지의 아름다운 사계절과 달 조형물, 조각공원 조명, 미디어파사드, 홀로그램 등 미디어아트를 표현한 것이 특징이다",
+            "start": 242,
+            "submitted": "테마형 야간경관조명 모노레일로서 저수지의 아름다운 사계절과 달 조형물, 조각공원 조명, 미디어파사드, 홀로그램 등 미디어아트를 표현한 것이 특징이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18e1fa2adf00b4bcd866beae8b642ad73b8ee6b36564ccd2580bd512e4824b7d"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "개요가 야간 경관조명, 미디어파사드, 홀로그램, 음악분수의 빛과 색 연출 등 이 장소의 시각적 성격과 연출을 구체적으로 기술하므로 분명한 외관·연출의 표현으로 직접 지원된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168",
+          "quote": {
+            "end": 237,
+            "method": "EXACT",
+            "original": "그중 모노레일은 출렁다리, 조각공원, 저수지 등의 경관을 안전하게 관람할 수 있는 산악열차 방식으로 저수지 수변 1,320m를 약 22분 동안 운행한다",
+            "start": 153,
+            "submitted": "그중 모노레일은 출렁다리, 조각공원, 저수지 등의 경관을 안전하게 관람할 수 있는 산악열차 방식으로 저수지 수변 1,320m를 약 22분 동안 운행한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18e1fa2adf00b4bcd866beae8b642ad73b8ee6b36564ccd2580bd512e4824b7d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "모노레일을 통한 저수지·조각공원 경관 관람과 출렁다리 위 수면 조명 경험 등 대표 장면을 현장에서 관람할 수 있음은 확인되나, 촬영·재현 참여에 대한 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:020475457a7896d73d4854e9a77a64a80b96b91ff34bce3bc5a5081e258beffd",
+          "quote": {
+            "end": 42,
+            "method": "EXACT",
+            "original": "야영장 / 피크닉장 / 산책로 / 식당 / 매점 / 잔디광장 / 숙박시설 등",
+            "start": 0,
+            "submitted": "야영장 / 피크닉장 / 산책로 / 식당 / 매점 / 잔디광장 / 숙박시설 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "064ac89d7d59847aac85b06af11b49a0f41b21ef3fbf1cc4b446751296b2f9e8"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:22cd96db572f370ed9821ecdcf60e4e79597c1e286232a6369732989cf0ff81f",
+          "quote": {
+            "end": 11,
+            "method": "EXACT",
+            "original": "모노레일 / 출렁다리",
+            "start": 0,
+            "submitted": "모노레일 / 출렁다리",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a5ba657ce56bc13cb1fac43e743aa340e989f52401b3268ac47117fb20ac60a0"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "산책로, 야영장, 피크닉장, 잔디광장 등 방문자가 자신의 방식으로 머물고 탐색할 수 있는 시설과 출렁다리·모노레일 이용 기회가 확인되어 자율적 선택·탐색 기회로 지원된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168",
+          "quote": {
+            "end": 91,
+            "method": "EXACT",
+            "original": "예당관광지는 예산시가지 남쪽 인근에 조성된 예당저수지 북서부 연안에 위치한 국민관광지이다. 예당저수지는 경관이 아름다워 1986년에 이곳에 국민관광지가 조성되었다.",
+            "start": 0,
+            "submitted": "예당관광지는 예산시가지 남쪽 인근에 조성된 예당저수지 북서부 연안에 위치한 국민관광지이다. 예당저수지는 경관이 아름다워 1986년에 이곳에 국민관광지가 조성되었다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18e1fa2adf00b4bcd866beae8b642ad73b8ee6b36564ccd2580bd512e4824b7d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "저수지 연안의 수변 환경과 아름다운 경관, 산책로·잔디광장 등 환경 단서가 확인되지만 실제 고요함·저자극성·혼잡도에 대한 근거는 없어 수준 2로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168",
+          "quote": {
+            "end": 391,
+            "method": "EXACT",
+            "original": "은은하게 흔들리는 출렁다리는 연장 402m로 수면 위를 걷는 듯한 느낌을 주며 주탑의 바닥 아래로 수면이 훤히 보인다",
+            "start": 326,
+            "submitted": "은은하게 흔들리는 출렁다리는 연장 402m로 수면 위를 걷는 듯한 느낌을 주며 주탑의 바닥 아래로 수면이 훤히 보인다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "18e1fa2adf00b4bcd866beae8b642ad73b8ee6b36564ccd2580bd512e4824b7d"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:22cd96db572f370ed9821ecdcf60e4e79597c1e286232a6369732989cf0ff81f",
+          "quote": {
+            "end": 11,
+            "method": "EXACT",
+            "original": "모노레일 / 출렁다리",
+            "start": 0,
+            "submitted": "모노레일 / 출렁다리",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a5ba657ce56bc13cb1fac43e743aa340e989f52401b3268ac47117fb20ac60a0"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "402m 출렁다리 건너기, 약 22분 모노레일 탑승, 낚시, 야영 등 구체적 참여 활동이 확인되어 참여·탐방 기회로 지원된다. 지속적 도전 활동의 근거는 부족해 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 프로그램에 대한 근거가 없다. 수변야외무대 존재만으로 교류·표현 활동의 실제 기회를 추정할 수 없고, 식당·카페는 관계 경험의 근거가 아니다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "aadc0528d4a973e5cf03f1a6742cf7c7b7888601069bd6e5879c3c1ae8f5d532",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대적인 현수교 구조와 금속 재료가 중심이며 전통적 외관·재료의 시각적 특성은 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0665a51dc13d015f4ac30b302abf32eaf4d496c4a3126d3d50ed5aa632e7b175",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6972f68ffcb71e9774fe7103293b36922191564064673bbd222f548c9ec12b2c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488409_5",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a150504214cb6654e5a2d9ae50f13a499f6a370f91a743b10e522255daec0fa1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3488409_image2_1.jpg"
+        },
+        "record_sha256": "18cc55bfe447b0839390adf1d61dfad610e8b386fe1a0db9bcb7884fac6efd13",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "배경에 트인 바다 수면이 넓게 보이며 물 위 소형 선박과 수변 산책로 환경이 나타난다. 자연 경관 단서가 화면 상당 부분을 차지하지만 장면 전체를 지배하지는 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0cfbfada31d418d7c295131debebaf4cabdee6b312e30890178646190f36bd7a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d14d68cc5941e19844e9793dbc73b56ad644a639ec5ebcf9a787443dd3675726",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488408_4",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4415a9e6bab8005174be927ce2684053a2e990d5982ce05049b49efb870427ac",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/3488408_image2_1.jpg"
+        },
+        "record_sha256": "cc28767c8e8d6d880803a41ae4a0b1277fdfbf22c41e669a041d7fdac3cfb23f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통 소재·구성은 약하고 현대적 데크와 현수교가 중심이며, 두루미 조형물이 부분적으로 상징적 외관을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:541c9095115e8d78346d3adde4cfcaa4cfffd50c5ea9db484f6b40e57995f66f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f07952806823a3ab6a269c9ab63aa304f76af8fa2dc1321bdeab0158a46388d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488407_3",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a44b18cacb930d3f4d26a7d9e82c9e5dafe8d7ebc932fb681c38d2f7a45ea93e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/07/3488407_image2_1.jpg"
+        },
+        "record_sha256": "fa4a674896f91ddceee50ccd39c8b51474a8e14c02fc71e5696d13d85525085b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "흰색 현수교 미니어처 모형이 중앙에 배치되고 배경의 바다와 난간이 얕은 심도로 흐려져 피사체가 뚜렷하게 부각된 구성이다. 색채는 절제되어 있으나 모형과 배경의 대비가 안정된 시각적 성격을 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:726b2f5b9ca5a4f34a5876ac2e4ae83270986a4ef3b68fc40a472c6f4e2426f9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d14d68cc5941e19844e9793dbc73b56ad644a639ec5ebcf9a787443dd3675726",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488408_4",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4415a9e6bab8005174be927ce2684053a2e990d5982ce05049b49efb870427ac",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/3488408_image2_1.jpg"
+        },
+        "record_sha256": "45b9548aebb8b38d6c41ea1bbd44de263fa97ddda4d05edbe3ce999d3780317e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 호수, 양쪽의 산지와 나무, 배가 보이는 트인 자연 경관이 두드러지게 나타난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:862d17386c627a2084d1411af715e8a255216e492eeb8970d0b7418f31f513d9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6972f68ffcb71e9774fe7103293b36922191564064673bbd222f548c9ec12b2c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488409_5",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a150504214cb6654e5a2d9ae50f13a499f6a370f91a743b10e522255daec0fa1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3488409_image2_1.jpg"
+        },
+        "record_sha256": "8e96f4a999c0a952f8615038e00d895636a99c91ba87806a31b80bbce318295d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰 현수교, 청색 하늘, 검은 물, 두루미 모형 조형물과 대형 간판 등 대비가 뚜렷하고 구도가 연출된 장면이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8bab2e0a48462eb4d8a130eff5b72c131332399efb9dce06b9d253a59fdc0af6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f07952806823a3ab6a269c9ab63aa304f76af8fa2dc1321bdeab0158a46388d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488407_3",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a44b18cacb930d3f4d26a7d9e82c9e5dafe8d7ebc932fb681c38d2f7a45ea93e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/07/3488407_image2_1.jpg"
+        },
+        "record_sha256": "d14241696a93af1a311fe6b3257a9e775a32a4f7ceb8242dc17bf6d9757c5fca",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "모형, 스테인리스 난간, 콘크리트 기단 등 현대적 재료와 시설물이 중심이며 전통적 외관·재료·공간 구성의 시각적 특성은 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d30019dd0358bab15cef52b82bbec95c48d8da97f106617d23010fd23615bd7e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d14d68cc5941e19844e9793dbc73b56ad644a639ec5ebcf9a787443dd3675726",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488408_4",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4415a9e6bab8005174be927ce2684053a2e990d5982ce05049b49efb870427ac",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/08/3488408_image2_1.jpg"
+        },
+        "record_sha256": "986a566b3813f0a2955cbbae35a32fb14c2611f7b8a187029cf7033cbbbd75fe",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 수면, 맑은 하늘, 건너편 산지와 녹지가 화면의 큰 비중을 차지하며 트인 자연 경관이 뚜렷함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d561c580cd6b7a1eb132ee5040ce07844c51a7dcda1bc3f1f9c2996a97bcb65e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f07952806823a3ab6a269c9ab63aa304f76af8fa2dc1321bdeab0158a46388d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488407_3",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a44b18cacb930d3f4d26a7d9e82c9e5dafe8d7ebc932fb681c38d2f7a45ea93e",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/07/3488407_image2_1.jpg"
+        },
+        "record_sha256": "a5c77c29f82f01bb90be7e9a1340665c7e3fd519cb00aadc85cafab8a54b7f22",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "흰색 케이블들이 화면을 가로지르는 대각선 구도가 장면 전체를 지배하며, 교량과 수면의 대비가 강한 시각적 연출을 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fd4f2340baca84f1da72eb656056fb5b30cde9a22bdf917a9fc69263b51648a8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6972f68ffcb71e9774fe7103293b36922191564064673bbd222f548c9ec12b2c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3488409_5",
+          "request_sha256": "6cf07eed238d21b57ba5f7db5d4605f3cc731ef0807039bcefed335d931da46e",
+          "response_sha256": "f052db7dff4c5157b06ce8ad2458b97f338789bf0330187315f8f6b7768238e7",
+          "retrieved_at": "2026-09-10T08:24:53.053722Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a150504214cb6654e5a2d9ae50f13a499f6a370f91a743b10e522255daec0fa1",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/09/3488409_image2_1.jpg"
+        },
+        "record_sha256": "bc9e8aeda6ce0597ccde41f466aa5c8d36f08f32abaec68655f2306dd3e52c5b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:020475457a7896d73d4854e9a77a64a80b96b91ff34bce3bc5a5081e258beffd",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128054",
+          "request_sha256": "88c62aa31721aaf2826cb3a1c5b041b1080ba51a24bd09ebc61a27a9acf42f61",
+          "response_sha256": "7a225b0ef9b5534525e47a018068dc38780c5ea5f96cd9e12b28dc16a4985fa7",
+          "retrieved_at": "2026-09-10T08:24:52.682479Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f18f8e3f255b5394032aa672074bee1390fde5c1a9e371440134a076d49a01d7",
+          "source_uri": null
+        },
+        "record_sha256": "064ac89d7d59847aac85b06af11b49a0f41b21ef3fbf1cc4b446751296b2f9e8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "야영장 / 피크닉장 / 산책로 / 식당 / 매점 / 잔디광장 / 숙박시설 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:22cd96db572f370ed9821ecdcf60e4e79597c1e286232a6369732989cf0ff81f",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "128054",
+          "request_sha256": "88c62aa31721aaf2826cb3a1c5b041b1080ba51a24bd09ebc61a27a9acf42f61",
+          "response_sha256": "ba0b22a6e39cd13fa0ca5dc5b393c11981402f632abbdf098e209bfebe95a834",
+          "retrieved_at": "2026-09-10T07:30:39.665782Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1d8f7f12400ac4aaa0af34f2cbf86bcfe6f1e66998421c975e14ac45291d0435",
+          "source_uri": null
+        },
+        "record_sha256": "a5ba657ce56bc13cb1fac43e743aa340e989f52401b3268ac47117fb20ac60a0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "모노레일 / 출렁다리"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:90798ed44e3e0d39cbf297405fedb7fd0cf667212737bc5041b4bc4c89a12168",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "128054",
+          "request_sha256": "e98b3dd90c256577bc88db699788b60710a8b3780024304087f47dff66937c09",
+          "response_sha256": "8363b1bab3ef03fd4d019b1c1debaf643f073d4a2705e3ba19332cf14b5317ba",
+          "retrieved_at": "2026-09-10T07:30:38.976865Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-23T05:30:00Z",
+          "source_record_sha256": "ec0cbc2513ff5defb77315ac1742ed65820d9a06c4b45fea261f15ee92f0f7e4",
+          "source_uri": null
+        },
+        "record_sha256": "18e1fa2adf00b4bcd866beae8b642ad73b8ee6b36564ccd2580bd512e4824b7d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "예당관광지는 예산시가지 남쪽 인근에 조성된 예당저수지 북서부 연안에 위치한 국민관광지이다. 예당저수지는 경관이 아름다워 1986년에 이곳에 국민관광지가 조성되었다. 현재 이곳에는 모노레일, 출렁다리, 음악분수, 조각공원, 팔각정, 수변야외무대, 캠핑장 등이 설치되어 있다. 그중 모노레일은 출렁다리, 조각공원, 저수지 등의 경관을 안전하게 관람할 수 있는 산악열차 방식으로 저수지 수변 1,320m를 약 22분 동안 운행한다. 특히 테마형 야간경관조명 모노레일로서 저수지의 아름다운 사계절과 달 조형물, 조각공원 조명, 미디어파사드, 홀로그램 등 미디어아트를 표현한 것이 특징이다. 은은하게 흔들리는 출렁다리는 연장 402m로 수면 위를 걷는 듯한 느낌을 주며 주탑의 바닥 아래로 수면이 훤히 보인다. 또한 야간에도 형형색색 조명으로 찬란하게 빛난다. 음악분수는 새천년·천백 년 분수와 사과 분수, 개나리 분수, 출렁다리 분수, 황이 분수, 날개 분수, 황새 분수 등 다양한 분수 설비와 함께 워터스크린, 빔 프로젝터 레이저를 도입하여 다채로운 빛과 색을 연출한다. 그리고 조각공원은 여러 작가가 참여하여 조성하였으며 주변 시설과 어우러진 작품 배치로 관광지의 아름다움을 더하고 있다. 그 외에도 관광지 일대에 숙박시설, 낚시터, 음식점, 카페 등이 들어서 있다. 주변에는 봉수산자연휴양림, 봉수산수목원, 예산황새공원, 광시한우거리 등이 있어 연계하여 관광할 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9214297043b607a57a502b16a656f2124d0509c4d477303ed328886cda2dbf8a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128054",
+          "request_sha256": "88c62aa31721aaf2826cb3a1c5b041b1080ba51a24bd09ebc61a27a9acf42f61",
+          "response_sha256": "7a225b0ef9b5534525e47a018068dc38780c5ea5f96cd9e12b28dc16a4985fa7",
+          "retrieved_at": "2026-09-10T08:24:52.682479Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f88a54bf4b0ffe07dd19635d8585a44c028dd8865b2e194678389a493240d55b",
+          "source_uri": null
+        },
+        "record_sha256": "1708568bc0588d4f73620afc3a8a0530ed0774c8bbc36324e49b95c8b03d83cd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[모노레일 개인] - 성인 8,000원 - 청소년 7,000원 - 어린이 6,000원 [모노레일 단체(16인 이상)] - 성인 6,000원 - 청소년 5,000원 - 어린이 4,000원 ※ 무료 : 36개월 미만 영유아"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fe5d7c7258afca9955c4234b7d3feb1cc35d5dccfbb00aa1003074ce858edd43",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128054",
+          "request_sha256": "88c62aa31721aaf2826cb3a1c5b041b1080ba51a24bd09ebc61a27a9acf42f61",
+          "response_sha256": "7a225b0ef9b5534525e47a018068dc38780c5ea5f96cd9e12b28dc16a4985fa7",
+          "retrieved_at": "2026-09-10T08:24:52.682479Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9be412655eb06b0966c7d330947fdb95c2556af0a6f3c9d502591e82d4265794",
+          "source_uri": null
+        },
+        "record_sha256": "f35780cc035cceb885d6c734472f3a19d7a006b346502b66f631ece113ea823e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "f7ce7d8886f8bdd0489e71d2a47a8cc0917ceafca2dfa3060b29088cb1714651",
+    "place": {
+      "address": "충청남도 예산군 응봉면 예당관광로 148",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+      "name_ko": "예당관광지",
+      "place_id": "public:korea:80728064b8706746382e4c9f1edb74da51ad6d4e057b481e197e255dab7c7f33",
+      "provider_content_id": "128054",
+      "region_code": "44810",
+      "region_name": "충청남도 예산군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

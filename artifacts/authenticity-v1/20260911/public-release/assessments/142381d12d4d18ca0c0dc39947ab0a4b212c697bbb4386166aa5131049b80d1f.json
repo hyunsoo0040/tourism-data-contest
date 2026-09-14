@@ -1,0 +1,762 @@
+{
+  "assessed_at": "2026-09-11T16:17:21.479784Z",
+  "assessment_sha256": "142381d12d4d18ca0c0dc39947ab0a4b212c697bbb4386166aa5131049b80d1f",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 38
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 38
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "개관 연도와 건립 목적, 전주국제영화제와의 연혁이 간단히 소개되어 있어 장소 연혁의 간단한 소개 수준(level 1)으로 본다. 깊은 역사 맥락 탐구라 보기는 어렵다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'전주와 영화의 상징', '전주의 봄을 상징하는 축제'라는 구체적 이미지와 의미가 장소와 연결되어 있다. 특정 이미지를 경험하는 것이 방문 경험의 중심이라는 근거까지는 없어 level 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:74e4fa99cbd3c442cf189fc56d6ae70fcd2edeb586ad98d1711e9f6960f5b87b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "붉게 물든 영화의 거리, 사인 포스터 전시 등 제한적인 시각적 표현 단서가 있으나 건물 외관·경관의 일관된 연출에 대한 근거는 부족하여 level 1로 판단한다.",
+      "value": 38
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "감독·배우 친필 사인 포스터 전시를 관람하며 영화 이미지를 접할 수 있으나, 대표 장면·구도의 재현 체험이 방문 경험의 중심이라는 근거는 없어 level 1(제한적 관람)로 본다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1587669e63eec03641441d36ce528e0a421f1ebd33707131b2954d99ddd83487",
+            "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "자료열람실에서 Blu-ray·DVD 시청, VOD 자유 감상 등 자율적으로 선택·탐색할 기회가 확인된다. 여유로운 자기 방식의 탐색이 중심이라는 근거는 없어 level 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:3fd8038a738c5be276624fcc11ef2102cd4a0a6d970eafaa3cef5db44d63ac01"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "자연 환경·저자극·머무를 환경에 대한 단서가 자료에 없다. 실내 문화시설이라는 사실만으로 회복 환경을 추정할 수 없다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "영상교육, 세미나·강연, 영화 관람 등 구체적 참여 활동의 기회가 확인된다. 지속적 도전 활동이 방문 경험의 중심이라는 근거는 없어 level 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "영화제 기간의 세미나·강연 등 교류 기회가 제한적으로 언급되나, 함께 만들거나 자기표현할 활동이 풍부하다는 근거는 없어 level 1로 판단한다.",
+      "value": 25
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 자료는 2009년에 건립된 영화 복합문화공간임을 설명할 뿐, 이 장소가 확인된 실제 원형·유산(건물, 실물 유산)을 보존·관람하게 한다는 근거가 없다. 건립 연도와 시설 구성은 원형 접촉의 증거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 55,
+            "method": "EXACT",
+            "original": "2009년 개관한 전주영화제작소는 한국의 독립영화와 영상 콘텐츠 양성을 위해 세워진 복합문화공간으로",
+            "start": 0,
+            "submitted": "2009년 개관한 전주영화제작소는 한국의 독립영화와 영상 콘텐츠 양성을 위해 세워진 복합문화공간으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 1,
+      "reason": "개관 연도와 건립 목적, 전주국제영화제와의 연혁이 간단히 소개되어 있어 장소 연혁의 간단한 소개 수준(level 1)으로 본다. 깊은 역사 맥락 탐구라 보기는 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "영화제 운영과 독립영화 상영이 언급되지만, 이것이 지역 주체의 전승·생활문화의 실제 지속과 직접 연결된다고 확인할 근거는 부족하다. 전주와 영화의 연결은 이미지적 표현이지 전승의 증거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "자료열람실과 VOD 서비스, 실무 교육이 언급되지만 이는 영화·영상 실무 교육이지 원형·유산·전통에 연결된 역사 해설·탐구라 할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 164,
+            "method": "EXACT",
+            "original": "전주국제영화제는 저예산, 독립영화의 자립을 목표로 하며 2000년 1회를 시작으로 전주의 봄을 상징하는 축제이자 전 세계 영화인들의 축제로 자리매김했다.",
+            "start": 79,
+            "submitted": "전주국제영화제는 저예산, 독립영화의 자립을 목표로 하며 2000년 1회를 시작으로 전주의 봄을 상징하는 축제이자 전 세계 영화인들의 축제로 자리매김했다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 238,
+            "method": "EXACT",
+            "original": "이러한 배경을 바탕으로 전주와 영화의 상징인 제작소를 건립했다.",
+            "start": 203,
+            "submitted": "이러한 배경을 바탕으로 전주와 영화의 상징인 제작소를 건립했다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'전주와 영화의 상징', '전주의 봄을 상징하는 축제'라는 구체적 이미지와 의미가 장소와 연결되어 있다. 특정 이미지를 경험하는 것이 방문 경험의 중심이라는 근거까지는 없어 level 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "인용된 문단은 전주국제영화제라는 축제·거리의 이미지에 관한 것이며, 매체(작품·홍보·SNS 등)를 통해 이 제작소라는 장소의 이미지가 재현·확산된다는 직접 근거는 없다. 인근 축제의 특성을 현재 장소로 옮긴 해석으로, level 2 앵커가 현재 장소에서 뒷받침되는지 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 202,
+            "method": "EXACT",
+            "original": "매년 봄이면 전주영화의 거리가 붉게 물들며 축제의 분위기로 들뜬다.",
+            "start": 165,
+            "submitted": "매년 봄이면 전주영화의 거리가 붉게 물들며 축제의 분위기로 들뜬다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 546,
+            "method": "EXACT",
+            "original": "영화감독과 배우들의 친필 사인이 담긴 포스터를 전시해 놓은 휴게실",
+            "start": 510,
+            "submitted": "영화감독과 배우들의 친필 사인이 담긴 포스터를 전시해 놓은 휴게실",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 1,
+      "reason": "붉게 물든 영화의 거리, 사인 포스터 전시 등 제한적인 시각적 표현 단서가 있으나 건물 외관·경관의 일관된 연출에 대한 근거는 부족하여 level 1로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 546,
+            "method": "EXACT",
+            "original": "영화감독과 배우들의 친필 사인이 담긴 포스터를 전시해 놓은 휴게실",
+            "start": 510,
+            "submitted": "영화감독과 배우들의 친필 사인이 담긴 포스터를 전시해 놓은 휴게실",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 1,
+      "reason": "감독·배우 친필 사인 포스터 전시를 관람하며 영화 이미지를 접할 수 있으나, 대표 장면·구도의 재현 체험이 방문 경험의 중심이라는 근거는 없어 level 1(제한적 관람)로 본다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 895,
+            "method": "EXACT",
+            "original": "한국 영상자료원의 VOD 서비스를 통해 한국고전영화를 마음껏 감상할 수 있다",
+            "start": 853,
+            "submitted": "한국 영상자료원의 VOD 서비스를 통해 한국고전영화를 마음껏 감상할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:1587669e63eec03641441d36ce528e0a421f1ebd33707131b2954d99ddd83487",
+          "quote": {
+            "end": 33,
+            "method": "EXACT",
+            "original": "독립영화관 영화 예매 - 현장 결제 / 홈페이지 인터넷 예매",
+            "start": 0,
+            "submitted": "독립영화관 영화 예매 - 현장 결제 / 홈페이지 인터넷 예매",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c5c0d8162cddf9d1b61323795ad85e8fdfcbe704e592e87d60601dcccaf39ba8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "자료열람실에서 Blu-ray·DVD 시청, VOD 자유 감상 등 자율적으로 선택·탐색할 기회가 확인된다. 여유로운 자기 방식의 탐색이 중심이라는 근거는 없어 level 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "자연 환경·저자극·머무를 환경에 대한 단서가 자료에 없다. 실내 문화시설이라는 사실만으로 회복 환경을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 448,
+            "method": "EXACT",
+            "original": "다양한 실무 교육이 이루어지는 영상교육실이 있다",
+            "start": 422,
+            "submitted": "다양한 실무 교육이 이루어지는 영상교육실이 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 709,
+            "method": "EXACT",
+            "original": "기획사나 영화제가 있는 날에는 세미나, 강연 등을 개최하기도 한다",
+            "start": 673,
+            "submitted": "기획사나 영화제가 있는 날에는 세미나, 강연 등을 개최하기도 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "영상교육, 세미나·강연, 영화 관람 등 구체적 참여 활동의 기회가 확인된다. 지속적 도전 활동이 방문 경험의 중심이라는 근거는 없어 level 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+          "quote": {
+            "end": 709,
+            "method": "EXACT",
+            "original": "기획사나 영화제가 있는 날에는 세미나, 강연 등을 개최하기도 한다",
+            "start": 673,
+            "submitted": "기획사나 영화제가 있는 날에는 세미나, 강연 등을 개최하기도 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 1,
+      "reason": "영화제 기간의 세미나·강연 등 교류 기회가 제한적으로 언급되나, 함께 만들거나 자기표현할 활동이 풍부하다는 근거는 없어 level 1로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "29d0e1c53603f7cbb6e84e90676e2f44d496a8c2ae9af7f32c3128eadabf8356",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+              "quote": {
+                "end": 202,
+                "method": "EXACT",
+                "original": "매년 봄이면 전주영화의 거리가 붉게 물들며 축제의 분위기로 들뜬다.",
+                "start": 165,
+                "submitted": "매년 봄이면 전주영화의 거리가 붉게 물들며 축제의 분위기로 들뜬다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.b",
+          "level": 2,
+          "reason": "전주국제영화제라는 매체·행사를 통해 장소 이미지(영화의 도시)가 재현·확산된다는 연결이 확인된다. 반복적 유통의 강한 근거는 없어 level 2로 본다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "E.b",
+          "reason": "인용된 문단은 전주국제영화제라는 축제·거리의 이미지에 관한 것이며, 매체(작품·홍보·SNS 등)를 통해 이 제작소라는 장소의 이미지가 재현·확산된다는 직접 근거는 없다. 인근 축제의 특성을 현재 장소로 옮긴 해석으로, level 2 앵커가 현재 장소에서 뒷받침되는지 확정하기 어렵다."
+        }
+      },
+      "reason": "인용된 문단은 전주국제영화제라는 축제·거리의 이미지에 관한 것이며, 매체(작품·홍보·SNS 등)를 통해 이 제작소라는 장소의 이미지가 재현·확산된다는 직접 근거는 없다. 인근 축제의 특성을 현재 장소로 옮긴 해석으로, level 2 앵커가 현재 장소에서 뒷받침되는지 확정하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "ff1fcac04669f902d13083c16d5bf658588140b8c00475f9b840587e21b50a70",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 유리·철재·콘크리트 재료의 영화관 건축으로 전통적 외관이나 재료의 흔적이 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:30ac75d658ddb58b3787ae1f866d4a7efa6ac2afdc55dcf3dd61ca08af0ff70c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8f78fac4890c6f532abb66b1a73c3baab8609cf98b682ddf6cecd9dad634aad0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2b9b643876700ef02d161f28e94c0405d95275d19655365092439206dac2079b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3028948_11",
+          "request_sha256": "a306230b4a1cce314ae95a0700e65a63c6e8196c3a69120f6e1283d5cc55b7db",
+          "response_sha256": "be93bbd4f98263846018f4f35044aa9be5225a17bda8689d73db04e6f3b21d94",
+          "retrieved_at": "2026-09-10T08:20:50.214581Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a4fa658fe6382be38fd0a73394877c13d23fb0cce86c974eda67a7a632c1054",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/48/3028948_image2_1.jpg"
+        },
+        "record_sha256": "885ed2b294a127894e88c9933c7d2ba9d586673de9c5f136af4d2bf882c5f800",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "도심 거리 장면으로 녹지는 좁은 화단의 소나무와 관목 정도에 불과하며, 자연 경관보다는 인공적 도시 환경이 지배적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3fd8038a738c5be276624fcc11ef2102cd4a0a6d970eafaa3cef5db44d63ac01",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8f78fac4890c6f532abb66b1a73c3baab8609cf98b682ddf6cecd9dad634aad0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2b9b643876700ef02d161f28e94c0405d95275d19655365092439206dac2079b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3028948_11",
+          "request_sha256": "a306230b4a1cce314ae95a0700e65a63c6e8196c3a69120f6e1283d5cc55b7db",
+          "response_sha256": "be93bbd4f98263846018f4f35044aa9be5225a17bda8689d73db04e6f3b21d94",
+          "retrieved_at": "2026-09-10T08:20:50.214581Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a4fa658fe6382be38fd0a73394877c13d23fb0cce86c974eda67a7a632c1054",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/48/3028948_image2_1.jpg"
+        },
+        "record_sha256": "1503a5868470dcd2b4da35333965c678f3ab5b316dea62e4b9b44fa48d4fa269",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "청록 유리와 강렬한 빨간색 요소(기둥 간판, 바닥 원형 로고, 빨간 테두리)가 대비를 이루며 시각적으로 매우 두드러지고, 넓은 낮은 시점 구도가 건물을 강조한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:74e4fa99cbd3c442cf189fc56d6ae70fcd2edeb586ad98d1711e9f6960f5b87b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8f78fac4890c6f532abb66b1a73c3baab8609cf98b682ddf6cecd9dad634aad0",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:2b9b643876700ef02d161f28e94c0405d95275d19655365092439206dac2079b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3028948_11",
+          "request_sha256": "a306230b4a1cce314ae95a0700e65a63c6e8196c3a69120f6e1283d5cc55b7db",
+          "response_sha256": "be93bbd4f98263846018f4f35044aa9be5225a17bda8689d73db04e6f3b21d94",
+          "retrieved_at": "2026-09-10T08:20:50.214581Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a4fa658fe6382be38fd0a73394877c13d23fb0cce86c974eda67a7a632c1054",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/48/3028948_image2_1.jpg"
+        },
+        "record_sha256": "01e95e3595c606d1e112f13821cd365e6a92c91ce6a257ea3735f45599973e43",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1587669e63eec03641441d36ce528e0a421f1ebd33707131b2954d99ddd83487",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2b9b643876700ef02d161f28e94c0405d95275d19655365092439206dac2079b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3065551",
+          "request_sha256": "673aee1a45ddafe6bd5337a7e13be228cea09f2f81f8361ef01a2f1808157e02",
+          "response_sha256": "43091eaf7b90b51643f05614cc5eb83aa762e9381804c0df8422791d33e5681b",
+          "retrieved_at": "2026-09-10T08:20:49.876520Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ded2dada797c96ae44f839d1f52ce2c5705a930acb7378bcfeae6c4c5523095b",
+          "source_uri": null
+        },
+        "record_sha256": "c5c0d8162cddf9d1b61323795ad85e8fdfcbe704e592e87d60601dcccaf39ba8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "독립영화관 영화 예매 - 현장 결제 / 홈페이지 인터넷 예매"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a46f0e3756c085436e716ecee912401ca592cb497c61595f8dafdbd965d4775d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:2b9b643876700ef02d161f28e94c0405d95275d19655365092439206dac2079b",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3065551",
+          "request_sha256": "433ad60c01e0b9aa90244b66684c67a6479c36675daf365ba29e867fc3cd719a",
+          "response_sha256": "7908e336b3ad23a54872b98558c507d2fe4d04f87e499528e67fcf44baeb54e7",
+          "retrieved_at": "2026-09-10T07:41:15.654274Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-07-28T01:14:23Z",
+          "source_record_sha256": "906f09f0d33d05497e17d5c7db6c5577fbf53b2e39e193766a2df76862380fbd",
+          "source_uri": null
+        },
+        "record_sha256": "ac73442b7f8ac3c5618fca9d99132fac460a1714bb03f788afd16c25f9492ba3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "2009년 개관한 전주영화제작소는 한국의 독립영화와 영상 콘텐츠 양성을 위해 세워진 복합문화공간으로 전주국제영화제조직위원회가 운영하고 있다. 전주국제영화제는 저예산, 독립영화의 자립을 목표로 하며 2000년 1회를 시작으로 전주의 봄을 상징하는 축제이자 전 세계 영화인들의 축제로 자리매김했다. 매년 봄이면 전주영화의 거리가 붉게 물들며 축제의 분위기로 들뜬다. 이러한 배경을 바탕으로 전주와 영화의 상징인 제작소를 건립했다. 지상 4층 건물로 1층은 영화·영상 콘텐츠로 특화되는 기획전시실, 독립예술영화, 한국고전영화 VOD 서비스 및 전주국제영화제의 역대 상영작 및 관련 자료들을 열람할 수 있는 자료열람실이 있으며, 2층은 영상산업 발전을 위한 입주업체 공간, 3층에는 영화·영상의 후반작업이 가능한 디지털 색보정(DI)실 및 3D 입체영상편집실과 다양한 실무 교육이 이루어지는 영상교육실이 있다. 4층에는 지역 및 국내외 독립·예술 영화를 상영하는 지역 유일의 독립예술영화 전용관인 전주디지털독립영화관과 영화감독과 배우들의 친필 사인이 담긴 포스터를 전시해 놓은 휴게실이 있다. 4층에 위치한 영화의 후반 제작 시설을 갖춘 디지털영화영상 통합솔루션 기술센터인 전주디지털독립영화관은 전주 지역 유일의 독립예술 영화 상영관으로 98석으로 이루어져 있다. 독립영화뿐만 아니라 최신 상업영화도 상영하며 기획사나 영화제가 있는 날에는 세미나, 강연 등을 개최하기도 한다. 이곳은 광고가 없고 저렴한 가격 덕분에 많은 사람들이 방문한다. 영화 관람 시 음료를 제외한 주류 및 음식물반입이 금지되어 있어 이 점은 유의해야 한다. 그리고 1층 자료 열람실에서는 국내외 독립·예술영화의 Blu-ray 및 DVD를 시청할 수 있으며, 한국 영상자료원의 VOD 서비스를 통해 한국고전영화를 마음껏 감상할 수 있다."
+      }
+    ],
+    "parent_source_sha256": "a9ea3bcbf23106097b6064a2d193569802883bb2e012c0a3fa536999b12bbd97",
+    "place": {
+      "address": "전북특별자치도 전주시 완산구 전주객사3길 22 (고사동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:2b9b643876700ef02d161f28e94c0405d95275d19655365092439206dac2079b",
+      "name_ko": "전주영화제작소",
+      "place_id": "public:korea:2b9b643876700ef02d161f28e94c0405d95275d19655365092439206dac2079b",
+      "provider_content_id": "3065551",
+      "region_code": "52111",
+      "region_name": "전북특별자치도 전주시 완산구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

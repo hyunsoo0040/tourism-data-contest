@@ -6,7 +6,6 @@ from collections.abc import Mapping
 from types import MappingProxyType
 from typing import TYPE_CHECKING, Any, Final, cast
 
-from itda.contracts.base import ExperienceAxis
 from itda.contracts.place_profile import MismatchTraitId
 from itda.contracts.preference import (
     CompanionType,
@@ -25,6 +24,7 @@ from itda.contracts.recommendation import (
     PreferenceAxisTarget,
     PreferenceTraitTarget,
     RecommendationPreference,
+    RecommendationQualityContext,
     TravelConditionId,
     TravelConditionTarget,
 )
@@ -37,6 +37,7 @@ else:
 
 RECOMMENDATION_PROJECTION_VERSION: Final[str] = "recommendation-projection-v1"
 RECOMMENDATION_PROJECTION_VERSION_V2: Final[str] = "recommendation-projection-v2"
+RECOMMENDATION_PROJECTION_VERSION_V3: Final[str] = "recommendation-projection-v3"
 
 
 def _half_up(numerator: int, denominator: int) -> int:
@@ -114,6 +115,8 @@ def _condition_value_map(conditions: TripConditions) -> tuple[int, ...]:
 
 def project_traveler_condition_targets(
     conditions: TripConditions,
+    *,
+    quality: bool = False,
 ) -> tuple[
     TravelConditionTarget,
     TravelConditionTarget,
@@ -124,7 +127,22 @@ def project_traveler_condition_targets(
 ]:
     """Project each typed trip condition in the canonical Phase 1 order."""
 
-    values = _condition_value_map(conditions)
+    values: list[int | None] = list(_condition_value_map(conditions))
+    if quality:
+        if conditions.visit_time is VisitTime.UNDECIDED:
+            values[0] = None
+        values[1] = (
+            100
+            if conditions.companion
+            in {
+                CompanionType.FAMILY_WITH_CHILDREN,
+                CompanionType.WITH_SENIORS,
+            }
+            else None
+        )
+        values[2] = None if conditions.transport is TransportType.MIXED else 100
+        if conditions.indoor_outdoor_preference is IndoorOutdoorPreference.NO_PREFERENCE:
+            values[4] = None
     result = tuple(
         TravelConditionTarget(condition_id=condition, value=value)
         for condition, value in zip(TravelConditionId, values, strict=True)
@@ -145,6 +163,8 @@ def project_traveler_condition_targets(
 def project_traveler_trait_targets(
     conditions: TripConditions,
     answers: QuestionnaireAnswersV1,
+    *,
+    quality: bool = False,
 ) -> tuple[
     PreferenceTraitTarget,
     PreferenceTraitTarget,
@@ -167,7 +187,7 @@ def project_traveler_trait_targets(
     values = (
         _half_up((100 - normalized_q4) + normalized_q8, 2),
         100 - normalized_q7,
-        crowd_density,
+        100 - crowd_density if quality else crowd_density,
         100 - normalized_q8,
         _half_up(walking + normalized_q6 + normalized_q9, 3),
         _half_up(visit_time_dependence + normalized_q2, 2),
@@ -255,37 +275,19 @@ def project_place_condition_scores(
 
 
 def _v2_normalized_axis_shares(answers: QuestionnaireAnswersV2) -> tuple[int, int, int]:
-    """Compute canonical v2 axis shares (0..100) from the accumulated matrix.
+    """Use the same distribution-corrected scorer as profile creation."""
+    from itda.domain.preference import score_choice_answers
 
-    Each axis's accumulated weights are normalized against the same
-    attainable bounds `score_axis_v2` uses, then rendered as a 0..100
-    percentage with half-up integer math. No fixed denominator: a hardcoded
-    total would pin never-chosen axes to a positive floor and cap most axes
-    below 100.
-    """
-
-    from itda.contracts.questionnaire_v2 import AXIS_ATTAINABLE_BOUNDS, SCORING_CONFIG_V2
-
-    matrix = cast(Mapping[str, Mapping[str, int]], SCORING_CONFIG_V2["scoring_matrix"])
-    answers_by_ordinal = answers.model_dump()
-    accumulated = {axis.value: 0 for axis in ExperienceAxis}
-    for ordinal in range(1, 13):
-        choice_id = f"q{ordinal}o{answers_by_ordinal[f'q{ordinal}']}"
-        for axis_name, weight in matrix[choice_id].items():
-            accumulated[axis_name] += weight
-
-    shares: list[int] = []
-    for axis in ExperienceAxis:
-        lower, upper = AXIS_ATTAINABLE_BOUNDS[axis.value]
-        span = upper - lower
-        share = _half_up((accumulated[axis.value] - lower) * 100, span)
-        shares.append(share)
-    return (shares[0], shares[1], shares[2])
+    scores = score_choice_answers(answers)
+    return (scores[0].display_score, scores[1].display_score, scores[2].display_score)
 
 
 def project_traveler_trait_targets_v2(
     conditions: TripConditions,
     answers: QuestionnaireAnswersV2,
+    *,
+    quality: bool = False,
+    axis_shares: tuple[int, int, int] | None = None,
 ) -> tuple[
     PreferenceTraitTarget,
     PreferenceTraitTarget,
@@ -294,23 +296,23 @@ def project_traveler_trait_targets_v2(
     PreferenceTraitTarget,
     PreferenceTraitTarget,
 ]:
-    """Project the six mismatch expectations from v2 choices plus trip conditions.
+    """Compose mismatch expectations from version-bound profile scores.
 
-    Deterministic v2 projection: canonical selected-option matrix rows are
-    accumulated per axis, normalized against the canonical attainable bounds
-    (the same semantics `score_axis_v2` uses), then mapped onto the same six
-    PreferenceTraitTargets in the same order as the legacy projection.
-    Integer half-up math only.
+    Stored profiles pass their own scores so historical results are never
+    silently rescored under the latest calibration. Standalone answer callers
+    use the current canonical scorer.
     """
 
-    history_share, emotion_share, rest_share = _v2_normalized_axis_shares(answers)
+    history_share, emotion_share, rest_share = (
+        axis_shares if axis_shares is not None else _v2_normalized_axis_shares(answers)
+    )
     walking = _WALKING_VALUES[conditions.walking_tolerance]
     visit_time_dependence = _VISIT_TIME_VALUES[conditions.visit_time]
     crowd_density = _CROWD_VALUES[conditions.crowd_avoidance]
     values = (
         _half_up((100 - history_share) + emotion_share, 2),
         100 - history_share,
-        crowd_density,
+        100 - crowd_density if quality else crowd_density,
         100 - emotion_share,
         _half_up(walking + rest_share + rest_share, 3),
         _half_up(visit_time_dependence + emotion_share, 2),
@@ -345,39 +347,61 @@ def project_traveler_trait_targets_v2(
     )
 
 
-def project_recommendation_preference(profile: PreferenceProfile) -> RecommendationPreference:
+def project_recommendation_preference(
+    profile: PreferenceProfile,
+    *,
+    quality_context: RecommendationQualityContext | None = None,
+) -> RecommendationPreference:
     """Build a version-bound server-owned preference trace from one profile."""
 
     projection_version = (
-        RECOMMENDATION_PROJECTION_VERSION_V2
-        if profile.questionnaire_version == "questionnaire-v2"
-        else RECOMMENDATION_PROJECTION_VERSION
+        RECOMMENDATION_PROJECTION_VERSION_V3
+        if quality_context is not None
+        else (
+            RECOMMENDATION_PROJECTION_VERSION_V2
+            if profile.questionnaire_version == "questionnaire-v2"
+            else RECOMMENDATION_PROJECTION_VERSION
+        )
     )
     input_sha256 = canonical_sha256(
         {
             "projection_version": projection_version,
             "profile": profile.model_dump(mode="json"),
+            **(
+                {"quality_context": quality_context.model_dump(mode="json")}
+                if quality_context is not None
+                else {}
+            ),
         }
     )
     axis_targets = tuple(
         PreferenceAxisTarget(axis=score.axis, value=score.display_score) for score in profile.scores
     )
     if isinstance(profile.answers, QuestionnaireAnswersV2):
-        trait_targets = project_traveler_trait_targets_v2(profile.trip_conditions, profile.answers)
+        trait_targets = project_traveler_trait_targets_v2(
+            profile.trip_conditions,
+            profile.answers,
+            quality=quality_context is not None,
+            axis_shares=cast(tuple[int, int, int], tuple(row.value for row in axis_targets)),
+        )
     else:
         trait_targets = project_traveler_trait_targets(
             profile.trip_conditions,
             profile.answers,
+            quality=quality_context is not None,
         )
     return RecommendationPreference(
         profile_id=profile.profile_id,
         input_sha256=input_sha256,
+        quality_context=quality_context,
         axis_targets=cast(
             tuple[PreferenceAxisTarget, PreferenceAxisTarget, PreferenceAxisTarget],
             axis_targets,
         ),
         trait_targets=trait_targets,
-        condition_targets=project_traveler_condition_targets(profile.trip_conditions),
+        condition_targets=project_traveler_condition_targets(
+            profile.trip_conditions, quality=quality_context is not None
+        ),
     )
 
 

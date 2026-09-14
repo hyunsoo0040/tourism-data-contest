@@ -1,0 +1,944 @@
+{
+  "assessed_at": "2026-09-11T19:40:44.161624Z",
+  "assessment_sha256": "834f4f39dcac0ccf0acd3b2a6a9a4df1b6451704c0dea2569e7a35fd34c8d381",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 78
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "장소 이름과 연결된 '달이 머문 마을'의 서정적 이미지가 구체적으로 제시되어 공유되는 상징적 의미가 확인된다. 여러 표현으로의 일관성 확인은 제한적이어서 수준 3로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "방문객 사진이 유명해져 포토 스폿이 되었다는 매체 통한 이미지 유통의 근거가 있으나, 반복적 유통의 구체적 매체·범위까지는 확인되지 않아 수준 2 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:4bf8e9fed1e1fc50f9b95686737c244f47f62ab9e4267c51c4ad807dbf19cecb",
+            "appearance:8359ce7e5f2848e383a18398f241613cc93988e074da878bcfda98dae0649e60",
+            "appearance:fb4b1370f7c005b2ecf452fb89fa7cf161709f61f73c33832ed6450d7c8c22c3"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "에메랄드빛 바다와 달이 비치는 풍경 등 구별되는 시각적 성격이 확인된다. 연출이 장면 전체를 지배한다는 수준의 근거는 없어 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "방문객이 저마다 다양한 방식으로 경치를 만끽하고 올레길·지질 트레일 도보 연계로 자율적 선택·탐색 기회가 확인된다. 자율 탐색이 경험의 중심이라는 근거는 없어 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2a303a43fe325588c8dc9566431882f78dafb83c137c9e97a56e10b0c7b64c50",
+            "appearance:6f41a33920300da3ff729f66f5a0e9331a8e3172bd5ebaa6fc81192db6a5d4c1",
+            "appearance:a3854c5651e8e6c0226afdd9f937ecf6b42992abfac2305e5dfee41cb6ddb95b"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "value": 83
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "서핑·스노클링·카약 등 구체적 참여·탐방 활동이 확인된다. 지속적 도전 활동이 방문 경험의 중심이라는 근거는 부족하여 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "해변은 자연 해안이며 확인된 원형·유산 실물과의 접촉을 뒷받침하는 근거가 없다. 지질 트레일 언급은 경로 일부일 뿐 유산 접촉의 중심성을 확인하지 못한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "'달이 머문다는 뜻'이라는 이름 유래 소개는 간단한 어원 수준으로, 그 장소의 구체적 역사·사건·인물 맥락을 다루는 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 확인하는 근거가 없다. 카페·숙박시설 확산은 전승 활동이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·전시·학습 프로그램에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc",
+          "quote": {
+            "end": 85,
+            "method": "EXACT",
+            "original": "달이 머문다는 뜻의 이름을 가진 서정적인 풍경의 마을이다. 아름다운 에메랄드빛 바다가 한 폭의 그림처럼 펼쳐져 있고",
+            "start": 21,
+            "submitted": "달이 머문다는 뜻의 이름을 가진 서정적인 풍경의 마을이다. 아름다운 에메랄드빛 바다가 한 폭의 그림처럼 펼쳐져 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "927fba3846619b1e555cb5ce953d419d79f68a33e5b1dd48b0d99dc1f41ea291"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "장소 이름과 연결된 '달이 머문 마을'의 서정적 이미지가 구체적으로 제시되어 공유되는 상징적 의미가 확인된다. 여러 표현으로의 일관성 확인은 제한적이어서 수준 3로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc",
+          "quote": {
+            "end": 382,
+            "method": "EXACT",
+            "original": "이 의자에 앉아 찍은 사진이 유명해지면서 하나의 포토 스폿이 되기도 했다",
+            "start": 342,
+            "submitted": "이 의자에 앉아 찍은 사진이 유명해지면서 하나의 포토 스폿이 되기도 했다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "927fba3846619b1e555cb5ce953d419d79f68a33e5b1dd48b0d99dc1f41ea291"
+        }
+      ],
+      "flags": [],
+      "key": "E.b",
+      "level": 2,
+      "reason": "방문객 사진이 유명해져 포토 스폿이 되었다는 매체 통한 이미지 유통의 근거가 있으나, 반복적 유통의 구체적 매체·범위까지는 확인되지 않아 수준 2 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc",
+          "quote": {
+            "end": 102,
+            "method": "EXACT",
+            "original": "아름다운 에메랄드빛 바다가 한 폭의 그림처럼 펼쳐져 있고, 그 위에는 밝은 달이 비친다",
+            "start": 54,
+            "submitted": "아름다운 에메랄드빛 바다가 한 폭의 그림처럼 펼쳐져 있고, 그 위에는 밝은 달이 비친다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "927fba3846619b1e555cb5ce953d419d79f68a33e5b1dd48b0d99dc1f41ea291"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "에메랄드빛 바다와 달이 비치는 풍경 등 구별되는 시각적 성격이 확인된다. 연출이 장면 전체를 지배한다는 수준의 근거는 없어 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "포토 스폿 촬영과 카메라를 든 방문객의 존재는 확인되지만, 이것이 방문 경험의 '중심'이라는 수준 4를 단정하기에는 원문이 서술적 홍보 개요이고 서핑·도보 등 다른 활동도 병기되어 있다. 수준 3(대표 장면 직접 경험)까지는 지지되나 중심성 판단은 근거 부족으로 UNCERTAIN이다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc",
+          "quote": {
+            "end": 158,
+            "method": "EXACT",
+            "original": "여행객들은 저마다 다양한 방법으로 해변의 경치를 만끽한다",
+            "start": 127,
+            "submitted": "여행객들은 저마다 다양한 방법으로 해변의 경치를 만끽한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "927fba3846619b1e555cb5ce953d419d79f68a33e5b1dd48b0d99dc1f41ea291"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "방문객이 저마다 다양한 방식으로 경치를 만끽하고 올레길·지질 트레일 도보 연계로 자율적 선택·탐색 기회가 확인된다. 자율 탐색이 경험의 중심이라는 근거는 없어 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc",
+          "quote": {
+            "end": 502,
+            "method": "EXACT",
+            "original": "서핑, 스노클링, 카약 등 다양한 수상 레포츠를 즐기며 보다 더 역동적으로 해변에서의 즐거움을 만끽하는 사람들도 있다",
+            "start": 437,
+            "submitted": "서핑, 스노클링, 카약 등 다양한 수상 레포츠를 즐기며 보다 더 역동적으로 해변에서의 즐거움을 만끽하는 사람들도 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "927fba3846619b1e555cb5ce953d419d79f68a33e5b1dd48b0d99dc1f41ea291"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "서핑·스노클링·카약 등 구체적 참여·탐방 활동이 확인된다. 지속적 도전 활동이 방문 경험의 중심이라는 근거는 부족하여 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "가족 동반 물놀이 언급은 관계·자기표현 기회의 직접 근거로 충분하지 않으며, 교류·공동 활동·자기표현 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc",
+              "quote": {
+                "end": 430,
+                "method": "EXACT",
+                "original": "몇몇 카페는 사람들이 바다를 보며 쉬어갈 수 있도록 의자를 두었는데, 이 의자에 앉아 찍은 사진이 유명해지면서 하나의 포토 스폿이 되기도 했다. 월정리엔 카메라를 들고 제주도 여행의 추억을 담는 사람들의 모습을 쉽게 볼 수 있다",
+                "start": 303,
+                "submitted": "몇몇 카페는 사람들이 바다를 보며 쉬어갈 수 있도록 의자를 두었는데, 이 의자에 앉아 찍은 사진이 유명해지면서 하나의 포토 스폿이 되기도 했다. 월정리엔 카메라를 들고 제주도 여행의 추억을 담는 사람들의 모습을 쉽게 볼 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "927fba3846619b1e555cb5ce953d419d79f68a33e5b1dd48b0d99dc1f41ea291"
+            }
+          ],
+          "flags": [],
+          "key": "E.d",
+          "level": 4,
+          "reason": "대표 포토 스폿에서 촬영을 통해 이미지를 재현하는 경험이 활발하며, 카메라를 든 방문객 모습이 쉽게 보인다는 표현은 재현 경험의 중심성을 시사한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "포토 스폿 촬영과 카메라를 든 방문객의 존재는 확인되지만, 이것이 방문 경험의 '중심'이라는 수준 4를 단정하기에는 원문이 서술적 홍보 개요이고 서핑·도보 등 다른 활동도 병기되어 있다. 수준 3(대표 장면 직접 경험)까지는 지지되나 중심성 판단은 근거 부족으로 UNCERTAIN이다."
+        }
+      },
+      "reason": "포토 스폿 촬영과 카메라를 든 방문객의 존재는 확인되지만, 이것이 방문 경험의 '중심'이라는 수준 4를 단정하기에는 원문이 서술적 홍보 개요이고 서핑·도보 등 다른 활동도 병기되어 있다. 수준 3(대표 장면 직접 경험)까지는 지지되나 중심성 판단은 근거 부족으로 UNCERTAIN이다."
+    },
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc",
+              "quote": {
+                "end": 669,
+                "method": "EXACT",
+                "original": "걷다가 바다의 아름다운 풍경과 시원한 바다 내음을 맡으며 쉴 수 있는 아름다운 해변이다",
+                "start": 621,
+                "submitted": "걷다가 바다의 아름다운 풍경과 시원한 바다 내음을 맡으며 쉴 수 있는 아름다운 해변이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "927fba3846619b1e555cb5ce953d419d79f68a33e5b1dd48b0d99dc1f41ea291"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "바다 풍경과 바다 내음, 쉴 수 있는 해변 환경 등 자연 환경 단서가 확인된다. 다만 실제 고요함·저자극성을 확정할 수 없어 수준 3으로 제한한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "bb8eda94ee815c9e04c0b28c2fda23244c28ff342b0e81625cc41367dbd2fe25",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 모래사장과 바다, 갯바위, 전경의 초록 녹지 등 자연 환경 단서가 화면 대부분을 차지하며 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2a303a43fe325588c8dc9566431882f78dafb83c137c9e97a56e10b0c7b64c50",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e0c3e44c89ab2630cb590da4add58aa2c090f3593d3a59137b531ae8f4d46910",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3011836_7",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "466a6d93b39e72d7c087286ba310249792f467f652ce98304514a2624833381d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/36/3011836_image2_1.jpg"
+        },
+        "record_sha256": "33a61dcd0a7ae4f2838675ba3a1d546fb2d4b6b959ba6224f59922870d9e40d5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "건물들은 대체로 현대적 저층 상가 외관이고, 전통적 재료나 공간 구성의 시각적 특징은 뚜렷하지 않다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2dfe636eda02a9f7a16ffcd96da241bc531f3bd8d224abda21f7910b93ed72cc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e0c3e44c89ab2630cb590da4add58aa2c090f3593d3a59137b531ae8f4d46910",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3011836_7",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "466a6d93b39e72d7c087286ba310249792f467f652ce98304514a2624833381d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/36/3011836_image2_1.jpg"
+        },
+        "record_sha256": "12b94fedd7726b7f4c5e185afadd2dcff3f5f99917a52627b76e02b84eb599b5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "흑색 갯바위, 밝은 모래사장, 잔잔한 바다와 수평적 구도가 안정된 해변 풍경을 이루며, 회색 은은한 하늘빛이 전체적으로 절제된 색감을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4bf8e9fed1e1fc50f9b95686737c244f47f62ab9e4267c51c4ad807dbf19cecb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e0c3e44c89ab2630cb590da4add58aa2c090f3593d3a59137b531ae8f4d46910",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3011836_7",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "466a6d93b39e72d7c087286ba310249792f467f652ce98304514a2624833381d",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/36/3011836_image2_1.jpg"
+        },
+        "record_sha256": "8f8022ee1ca5b484408502f3ee0024451088ef11ff052cd0f9340be08f381bce",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "젖은 모래사장과 얕은 물, 물결 자국 등 해변 자연 환경이 화면 대부분을 채우며 뚜렷한 배경 단서로 나타남.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6f41a33920300da3ff729f66f5a0e9331a8e3172bd5ebaa6fc81192db6a5d4c1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35f8238a42474b8d65aa95e4c0b17d15c536ee1ca098f5837d6bd0a4dd7ef707",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4075292_3",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a5fa0fd81bd6e1866b3bbfc95147dd8b5f30ef69f4f17791d64d12ec83e12a2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/4075292_image2_1.jpg"
+        },
+        "record_sha256": "0b3f133b8e29d695863d2cb6ad57e7bc0b81a346ab1a02b8552b4dd103877039",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "빨강·파랑·노랑 등 원색 플라스틱 놀이 도구가 젖은 모래 위에 강렬한 색대비를 이루며 화면을 지배하고, 한쪽에 스키를 세워둔 연출적 구도가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8359ce7e5f2848e383a18398f241613cc93988e074da878bcfda98dae0649e60",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35f8238a42474b8d65aa95e4c0b17d15c536ee1ca098f5837d6bd0a4dd7ef707",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4075292_3",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a5fa0fd81bd6e1866b3bbfc95147dd8b5f30ef69f4f17791d64d12ec83e12a2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/4075292_image2_1.jpg"
+        },
+        "record_sha256": "19ff1e255a13596ca45c187b5dde8056d15be0a5dab75cea46eccdcdcf4539b2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 3,
+          "reason": "화강암질 돌재료의 조상석 조형물과 돌담식 받침이 전통적 외관을 강하게 드러냄",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9d14ba464903b4098ffca7d33f63351057d02cd7a092c6c5b21aa4c3aee7ed1d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0a30760222f52f4fcc59dedef808330f4fb89988f86f5be9e805ee9096762dfc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4075283_4",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "cd98350c760a4e01276dff06ade08a3a0342436b1d00bd5d773a410229329513",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/4075283_image2_1.jpg"
+        },
+        "record_sha256": "b669331d51c8d291793fc0456071172411705fd59327161088302107ce010694",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "広馭한 바다, 밝은 하늘, 모래사장이 화면 대부분을 차지하며 자연 경관이 장면을 지배함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a3854c5651e8e6c0226afdd9f937ecf6b42992abfac2305e5dfee41cb6ddb95b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0a30760222f52f4fcc59dedef808330f4fb89988f86f5be9e805ee9096762dfc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4075283_4",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "cd98350c760a4e01276dff06ade08a3a0342436b1d00bd5d773a410229329513",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/4075283_image2_1.jpg"
+        },
+        "record_sha256": "150d6488fe38730fab3e5cb871f42ed43976615e957be0acc660df8cb23c91fa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 시각적 특성은 보이지 않으며, 현대적 플라스틱 장난감과 모래사장만 있음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d129b76276e87a4b87969907e67f4703e2c3a2c0474b169af1fefc458389db29",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "35f8238a42474b8d65aa95e4c0b17d15c536ee1ca098f5837d6bd0a4dd7ef707",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4075292_3",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0a5fa0fd81bd6e1866b3bbfc95147dd8b5f30ef69f4f17791d64d12ec83e12a2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/4075292_image2_1.jpg"
+        },
+        "record_sha256": "45aebee31207d9d30edc577c5ad585a1a09c3c5436ba019f986c702e15d34ab5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "돌할아버지 조형물이 전경을 지배하고, 안내판과 바다 배경이 안정된 구도를 이루어 시각적 개성이 뚜렷함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fb4b1370f7c005b2ecf452fb89fa7cf161709f61f73c33832ed6450d7c8c22c3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0a30760222f52f4fcc59dedef808330f4fb89988f86f5be9e805ee9096762dfc",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4075283_4",
+          "request_sha256": "ce0bc4d6299e7914375bbb2ee12d5f88a39af252b19680c23e7160c6e1943fb4",
+          "response_sha256": "83db339134a41b56d9c48e010ef40566ef681c98391c784e27fdae62cade755c",
+          "retrieved_at": "2026-09-11T02:12:23.808444Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "cd98350c760a4e01276dff06ade08a3a0342436b1d00bd5d773a410229329513",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/83/4075283_image2_1.jpg"
+        },
+        "record_sha256": "4354690d34892bf0059835713d8c6640812b62ddbf4dd75a1ad0789171ab9907",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4b6a80e5fcf6ba312b95c030fcde910e08faec2a5c8771351c01fe2d994a9c99",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1918639",
+          "request_sha256": "89f18c29b642aeeccb998ed0fe022d32d7b46db000424f9bd17dbfd42523bb63",
+          "response_sha256": "13cb803d84c3c4babe59ee807ecaffc96175dca1bed1f8a3b493ee963b1b31b5",
+          "retrieved_at": "2026-09-11T02:12:23.462967Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "381926b8528c3ef4589cb170ec472ccb27f650c3d80705c7b8308132d666dcab",
+          "source_uri": null
+        },
+        "record_sha256": "217ab006a89b0e0bf7ecfe589a787dd22d1615ce33137c974953d1cd4074747f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b66b4f8409ada733b80f7d149d8d97e60b2bc964272f338866aba328e262cedc",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1918639",
+          "request_sha256": "5094e1a8510716f045380db29a0b79b03cec4c4b58364c4dbf829d0dc2c5a6dd",
+          "response_sha256": "6f987c1327157a4cbcec3c4e7611c974259ed8fc54c47548e30b69ee32a65340",
+          "retrieved_at": "2026-09-10T16:50:01.784281Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-29T01:36:06Z",
+          "source_record_sha256": "6217db8db901a2771d00b27378ff88a17f4c8b032919d52b81eacbf44b854282",
+          "source_uri": null
+        },
+        "record_sha256": "927fba3846619b1e555cb5ce953d419d79f68a33e5b1dd48b0d99dc1f41ea291",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "제주도의 동쪽에 있는 마을인 월정리는 달이 머문다는 뜻의 이름을 가진 서정적인 풍경의 마을이다. 아름다운 에메랄드빛 바다가 한 폭의 그림처럼 펼쳐져 있고, 그 위에는 밝은 달이 비친다. 풍경화처럼 아름다운 월정리 해변을 방문한 여행객들은 저마다 다양한 방법으로 해변의 경치를 만끽한다. 특히 수심이 얕은 편이기 때문에 아이를 동반한 가족들이 물놀이를 즐기기 좋다. 월정리의 아름다운 풍광이 여행객들 사이에서 점점 유명해질수록 월정리의 해변을 방문하는 사람들이 더욱 늘어났고, 그에 맞춰 다양한 식당과 카페, 숙박시설 등이 많이 들어서 있다. 몇몇 카페는 사람들이 바다를 보며 쉬어갈 수 있도록 의자를 두었는데, 이 의자에 앉아 찍은 사진이 유명해지면서 하나의 포토 스폿이 되기도 했다. 월정리엔 카메라를 들고 제주도 여행의 추억을 담는 사람들의 모습을 쉽게 볼 수 있다. 그 밖에 서핑, 스노클링, 카약 등 다양한 수상 레포츠를 즐기며 보다 더 역동적으로 해변에서의 즐거움을 만끽하는 사람들도 있다. 월정리 해변은 일정한 높이의 파도가 지속해서 들어오기 때문에 서핑을 하기 좋아 서퍼들이 즐겨 찾는다. 제주도 올레길 20코스 [김녕-하도 올레]와 [김녕-월정 지질 트레일 코스]의 일부여서, 뚜벅이 여행객들이 걷다가 바다의 아름다운 풍경과 시원한 바다 내음을 맡으며 쉴 수 있는 아름다운 해변이다."
+      }
+    ],
+    "parent_source_sha256": "4daee276edd95ac9cb31f253c8fa3c1139fe3982ed312e1e85e16622f118324c",
+    "place": {
+      "address": "제주특별자치도 제주시 구좌읍 해맞이해안로 485",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+      "name_ko": "월정리해변(월정리해수욕장)",
+      "place_id": "public:korea:f583ffcf70f94202cb27f46245f574627114d8c3928a5dbdb42ce5d5355c2302",
+      "provider_content_id": "1918639",
+      "region_code": "50110",
+      "region_name": "제주특별자치도 제주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

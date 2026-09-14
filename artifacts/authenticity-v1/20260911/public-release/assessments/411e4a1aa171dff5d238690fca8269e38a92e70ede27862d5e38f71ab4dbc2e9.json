@@ -1,0 +1,532 @@
+{
+  "assessed_at": "2026-09-11T19:16:23.829393Z",
+  "assessment_sha256": "411e4a1aa171dff5d238690fca8269e38a92e70ede27862d5e38f71ab4dbc2e9",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "value": 75
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "케이블카에서의 산세, 360도 턴테이블 탐방로, 맑은 날 강릉 앞바다·대관령 풍력 단지 조망 등 구별되는 시각적 경관 표현이 확인된다. 일관된 연출이 장면을 지배한다는 수준까지의 근거는 없어 level 3이다. 공개 근거는 지시가 아니므로 제시된 claim 범위 내에서만 인용한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "포토존이 있어 대표 경관 장면을 직접 경험하고 사진으로 재현할 수 있다는 근거가 있다. 유행 구도나 방문자 의미까지는 추정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "케이블카 이용 후 탐방로를 자율적으로 둘러볼 수 있으나 입장 제한(강풍·강설, 복장)이 있어 자유 선택은 제한적 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "해발 1,458m 산정상의 자연 경관이라는 환경 단서는 확인되지만, 실제 고요함·혼잡·심리적 회복에 대한 근거는 없어 제한적 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "케이블카 탑승과 스카이워크 체험이라는 참여 활동이 있으나 지속적인 도전·집중 활동이라는 근거는 부족하여 제한적 수준이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "발왕산 기 스카이워크는 인공 전망 구조물이며, 제공된 자료에 확인된 원형·유산(문화유산 실물) 접촉에 관한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "자료에 산의 해발 고도 등 기초 정보는 있으나 이 장소의 실제 역사·연혁·사건·인물 맥락에 대한 설명 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 자료에 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'기'를 받는다는 상징적 이미지가 이름에 암시되지만, 공유되는 구체적 의미·이야기가 장소에 부여되었다는 근거는 자료에 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·확산에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66",
+          "quote": {
+            "end": 204,
+            "method": "EXACT",
+            "original": "정상에서 바라보는 산세만으로도 충분히 황홀경이지만",
+            "start": 177,
+            "submitted": "정상에서 바라보는 산세만으로도 충분히 황홀경이지만",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3d5205d56da274fcd41f9b68cf1026d10fdb2d57fd2219334dd53f0955745569"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66",
+          "quote": {
+            "end": 380,
+            "method": "EXACT",
+            "original": "스카이워크의 360도 턴테이블 탐방로는 구름 위에 두둥실 떠 있는 듯한 기분마저 들게 하며",
+            "start": 330,
+            "submitted": "스카이워크의 360도 턴테이블 탐방로는 구름 위에 두둥실 떠 있는 듯한 기분마저 들게 하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3d5205d56da274fcd41f9b68cf1026d10fdb2d57fd2219334dd53f0955745569"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "케이블카에서의 산세, 360도 턴테이블 탐방로, 맑은 날 강릉 앞바다·대관령 풍력 단지 조망 등 구별되는 시각적 경관 표현이 확인된다. 일관된 연출이 장면을 지배한다는 수준까지의 근거는 없어 level 3이다. 공개 근거는 지시가 아니므로 제시된 claim 범위 내에서만 인용한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66",
+          "quote": {
+            "end": 467,
+            "method": "EXACT",
+            "original": "곳곳에 추억을 남길 수 있는 포토존이 있어 멋진 경관을 사진으로 남기기에 좋다",
+            "start": 424,
+            "submitted": "곳곳에 추억을 남길 수 있는 포토존이 있어 멋진 경관을 사진으로 남기기에 좋다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3d5205d56da274fcd41f9b68cf1026d10fdb2d57fd2219334dd53f0955745569"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "포토존이 있어 대표 경관 장면을 직접 경험하고 사진으로 재현할 수 있다는 근거가 있다. 유행 구도나 방문자 의미까지는 추정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66",
+          "quote": {
+            "end": 380,
+            "method": "EXACT",
+            "original": "스카이워크의 360도 턴테이블 탐방로는 구름 위에 두둥실 떠 있는 듯한 기분마저 들게 하며",
+            "start": 330,
+            "submitted": "스카이워크의 360도 턴테이블 탐방로는 구름 위에 두둥실 떠 있는 듯한 기분마저 들게 하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3d5205d56da274fcd41f9b68cf1026d10fdb2d57fd2219334dd53f0955745569"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "케이블카 이용 후 탐방로를 자율적으로 둘러볼 수 있으나 입장 제한(강풍·강설, 복장)이 있어 자유 선택은 제한적 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66",
+          "quote": {
+            "end": 175,
+            "method": "EXACT",
+            "original": "케이블카를 타고 발왕산의 경치를 감상하며 20분가량 오르면 발왕산 정상에 다다른다",
+            "start": 130,
+            "submitted": "케이블카를 타고 발왕산의 경치를 감상하며 20분가량 오르면 발왕산 정상에 다다른다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3d5205d56da274fcd41f9b68cf1026d10fdb2d57fd2219334dd53f0955745569"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "해발 1,458m 산정상의 자연 경관이라는 환경 단서는 확인되지만, 실제 고요함·혼잡·심리적 회복에 대한 근거는 없어 제한적 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66",
+          "quote": {
+            "end": 244,
+            "method": "EXACT",
+            "original": "발왕산의 기를 온몸으로 받고 싶다면 스카이워크에 올라 볼 것을 추천한다",
+            "start": 205,
+            "submitted": "발왕산의 기를 온몸으로 받고 싶다면 스카이워크에 올라 볼 것을 추천한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3d5205d56da274fcd41f9b68cf1026d10fdb2d57fd2219334dd53f0955745569"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "케이블카 탑승과 스카이워크 체험이라는 참여 활동이 있으나 지속적인 도전·집중 활동이라는 근거는 부족하여 제한적 수준이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 관한 근거가 제공된 자료에 없다. 포토존 존재만으로 유대감을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "749d6a6e10280aa5a0b9e99d1ecce4061ba4acef3a830f77cdcd9a04c22ca2cc",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3824341b7013b5b85aa9e29930fc4426d4d9d0b2a1ebf9d0131193c2f41ceb58",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:da7d41bd8a4d1811162238e62ce897eec38093df0bd02f9cb7e1ba71817d6052",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3072031",
+          "request_sha256": "1e55af2ed05fb03396d1a004b6026deeee1af5f9c202136918079ff5ef66da32",
+          "response_sha256": "9815070410f7a1e67c027cf901500f87f8464521f5eb66eda3e67df8b748010b",
+          "retrieved_at": "2026-09-11T02:11:07.715624Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "00dfccd913b55e6056ed904e836b7609090c1754841fb0308280f618273a9f1e",
+          "source_uri": null
+        },
+        "record_sha256": "8e3e6bc738128b82392b2e7e12b728dfd80992897cebbfed08e6fb5cf8be981b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9a538b7606e637648ee3a4602cfa497bfc851ccde7700398c8e864590f7a9e66",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:da7d41bd8a4d1811162238e62ce897eec38093df0bd02f9cb7e1ba71817d6052",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3072031",
+          "request_sha256": "d64082c13d7e0f44e670ae6edfdf6a3adfa65f0f825f4eccac1d652919ac1187",
+          "response_sha256": "6f96c2e44be8dd4372d79a2ba54e6e4200888498339f8ea744c339dd7f27906f",
+          "retrieved_at": "2026-09-10T17:05:24.422925Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-27T02:56:03Z",
+          "source_record_sha256": "23e6bbc3a649189caee9bd91ed03155cc039a4c1c298b4e3f849f6373470e8b9",
+          "source_uri": null
+        },
+        "record_sha256": "3d5205d56da274fcd41f9b68cf1026d10fdb2d57fd2219334dd53f0955745569",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "발왕산 기 스카이워크는 용평 리조트 안에 있는 케이블카를 이용해야 갈 수 있다. 발왕산은 해발 1,458m의 높이로 국내에서 12번째로 높지만 용평 리조트 내에 케이블카가 설치되어 있어 쉽게 등반이 가능하다. 드래곤프라자 탑승장에서 케이블카를 타고 발왕산의 경치를 감상하며 20분가량 오르면 발왕산 정상에 다다른다. 정상에서 바라보는 산세만으로도 충분히 황홀경이지만 발왕산의 기를 온몸으로 받고 싶다면 스카이워크에 올라 볼 것을 추천한다. 국내에서 가장 높은 곳에 위치에 있다는 이곳은 1㎡당 성인 100명의 무게를 견딜 수 있으며 6.5 규모의 지진에도 끄떡없을 정도로 안전하다고 한다. 스카이워크의 360도 턴테이블 탐방로는 구름 위에 두둥실 떠 있는 듯한 기분마저 들게 하며 맑은 날에는 멀리 강릉 경포대 앞바다와 대관령 풍력 단지까지도 볼 수 있다. 곳곳에 추억을 남길 수 있는 포토존이 있어 멋진 경관을 사진으로 남기기에 좋다. 안전을 위해 강풍이 불거나 눈과 비가 올 경우 입장이 제한되며 하이힐이나 스키 부츠, 보드 장비 등도 입장이 제한된다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d164ca1466c7d95c607ba0d96736324544455cbd9e8feae6a8d44b2a6e6b2bc5",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:da7d41bd8a4d1811162238e62ce897eec38093df0bd02f9cb7e1ba71817d6052",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3072031",
+          "request_sha256": "1e55af2ed05fb03396d1a004b6026deeee1af5f9c202136918079ff5ef66da32",
+          "response_sha256": "9815070410f7a1e67c027cf901500f87f8464521f5eb66eda3e67df8b748010b",
+          "retrieved_at": "2026-09-11T02:11:07.715624Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "efd5a4a2e25f5eef9149c90f1bf4bf0947bf9fb55fbda9ab5e4b71b36afc9ede",
+          "source_uri": null
+        },
+        "record_sha256": "002514d120c9991585cd2eacbb496ed147e6a5ea4a27adc9f730ea952333c827",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[왕복]- 대인 25,000원- 소인 21,000원[편도]- 대인 21,000원- 소인 17,000원"
+      }
+    ],
+    "parent_source_sha256": "da5501b35456696c489e1d17576e6b7b667ff5c56665476a5e8a5c0bd32d3789",
+    "place": {
+      "address": "강원특별자치도 평창군 대관령면 올림픽로 715",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:da7d41bd8a4d1811162238e62ce897eec38093df0bd02f9cb7e1ba71817d6052",
+      "name_ko": "발왕산 기 스카이워크",
+      "place_id": "public:korea:da7d41bd8a4d1811162238e62ce897eec38093df0bd02f9cb7e1ba71817d6052",
+      "provider_content_id": "3072031",
+      "region_code": "51760",
+      "region_name": "강원특별자치도 평창군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import type { PreferenceProfile, QuestionnaireDefinition } from "../../api/api";
+import { projectDisplayScores } from "../../features/profile/displayScores";
 
 /**
  * Shared upstream-style result projection over a persisted profile: maps the
@@ -29,7 +30,7 @@ export function pickResultForProfile(
     (byAxis.get(right)?.basis_points ?? 0) - (byAxis.get(left)?.basis_points ?? 0)
   )[0] ?? tieBreak[0]!;
   const info = questionnaire.result_types.find((type) => type.axis === topAxis) ?? questionnaire.result_types[0]!;
-  const match = byAxis.get(topAxis)?.display_score ?? 0;
+  const match = projectDisplayScores(profile.scores, tieBreak)?.[topAxis] ?? 0;
   const keywordCounts = new Map<string, number>();
   for (const keyword of keywords) {
     keywordCounts.set(keyword, (keywordCounts.get(keyword) ?? 0) + 1);
@@ -44,6 +45,11 @@ export function pickResultForProfile(
     description: info.description_ko,
     character: info.character_ko,
     role: info.role_ko,
+    axisLabel: {
+      HISTORY_TRADITION: "대상•원형형",
+      EMOTION_IMAGE: "의미•이미지형",
+      REST_IMMERSION: "자기•몰입형",
+    }[topAxis],
     lens: info.lens_ko,
     recommend: info.recommend_ko,
     image: `/upstream-assets/characters/${assetName}`,

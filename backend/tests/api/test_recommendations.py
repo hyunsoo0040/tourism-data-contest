@@ -411,11 +411,10 @@ def test_router_has_stable_operation_ids_and_closed_models() -> None:
         assert create["responses"][status_code]["content"]["application/json"]["schema"] == {
             "$ref": "#/components/schemas/RecommendationErrorResponse"
         }
-    assert results["responses"]["200"]["content"]["application/json"]["schema"][
-        "anyOf"
-    ] == [
+    assert results["responses"]["200"]["content"]["application/json"]["schema"]["anyOf"] == [
         {"$ref": "#/components/schemas/RecommendationResultsResponse"},
         {"$ref": "#/components/schemas/MvpRecommendationResultsResponse"},
+        {"$ref": "#/components/schemas/GroundedResultsResponse"},
     ]
 
 
@@ -426,6 +425,13 @@ def test_public_results_expose_server_stored_contributions_not_client_targets() 
         "request_id",
         "preference_profile_id",
         "photo_job_id",
+        "purpose",
+        "grounded_input",
+    }
+    assert set(schemas["GroundedTripInput"]["properties"]) == {
+        "visit_date",
+        "visit_time",
+        "required_facilities",
     }
     condition_properties = schemas["ConditionContribution"]["properties"]
     assert {

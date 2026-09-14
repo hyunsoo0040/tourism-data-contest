@@ -22,7 +22,7 @@ export function createProfile(body) {
     ...Object.fromEntries(["questionnaire_version", "scoring_version", "config_hash", "description_template_version"].map((key) => [key, questionnaire[key]])),
     trip_conditions: body.trip_conditions, answers: body.answers,
     is_current_trip_expectation: true,
-    description_ko: "UI 목업 프로필입니다. 세 축의 50점은 화면 확인용 고정값이며, 응답을 분석한 결과가 아닙니다.",
+    description_ko: "UI 목업 프로필입니다. 세 축의 원점수는 모두 같은 고정값이며, 응답을 분석한 결과가 아닙니다.",
     scores: questionnaire.axis_tie_break.map((axis) => ({ axis, basis_points: 5000, display_score: 50 })),
   };
 }

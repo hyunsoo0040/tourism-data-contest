@@ -1,0 +1,549 @@
+{
+  "assessed_at": "2026-09-11T19:52:23.385878Z",
+  "assessment_sha256": "896c1d432a4f5efbb0b27724973d302b3068795a9e8a1866faf598e6d743d1b7",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "장소 이름에 '아름다운 땅'이라는 의미가 부여되어 있고, 이국적 정원·온실이라는 이미지가 장소와 연결된 간단한 이미지 표현 수준으로 판단된다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "전망탑 조망 등 대표 장면을 관람할 수 있으나, 촬영·참여를 통한 이미지 재현 경험의 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "여러 테마 정원을 자율적으로 둘러볼 여지가 있으나, 자율 탐색의 깊이나 일상 이탈 경험이 중심이라는 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "수목 숲, 연못과 습지 등 자연 환경 단서가 확인되나, 실제 고요함·혼잡·심리적 회복 여부는 확정할 수 없어 두드러짐 수준까지만 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "식물 관람·탐방이 가능하나, 만들기·신체 활동 등 지속적으로 참여·도전할 집중 활동의 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "식물원은 인공적으로 조성된 관광 정원으로, 확인된 원형·유산과의 접촉에 관한 근거가 없다. 제주 자생 식물 언급이 있으나 이는 유산 원형 접촉을 입증하지 못한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에는 '아름다운 땅'이라는 이름의 뜻만 있을 뿐 이 장소의 구체적 역사·사건·인물 맥락에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "정원과 식물 소개는 있으나 원형·유산·전통에 연결된 해설·학습 프로그램에 관한 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+          "quote": {
+            "end": 67,
+            "method": "EXACT",
+            "original": "아름다운 땅이란 뜻을 지닌 여미지식물원",
+            "start": 46,
+            "submitted": "아름다운 땅이란 뜻을 지닌 여미지식물원",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "881a367fb9347c371544b2ca7d77a7092702b89769cc43080a6ac4db3ceffad6"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "장소 이름에 '아름다운 땅'이라는 의미가 부여되어 있고, 이국적 정원·온실이라는 이미지가 장소와 연결된 간단한 이미지 표현 수준으로 판단된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 작품·홍보·SNS 등 매체를 통해 재현·확산된다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+          "quote": {
+            "end": 426,
+            "method": "EXACT",
+            "original": "중앙 전망탑이 있어 중문관광단지, 천제연폭포가 한눈에 들어오며 한라산과 인근 해안선 일대를 조망할 수 있음",
+            "start": 367,
+            "submitted": "중앙 전망탑이 있어 중문관광단지, 천제연폭포가 한눈에 들어오며 한라산과 인근 해안선 일대를 조망할 수 있음",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "881a367fb9347c371544b2ca7d77a7092702b89769cc43080a6ac4db3ceffad6"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 2,
+      "reason": "전망탑 조망 등 대표 장면을 관람할 수 있으나, 촬영·참여를 통한 이미지 재현 경험의 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+          "quote": {
+            "end": 549,
+            "method": "EXACT",
+            "original": "다양한 테마로 꾸며진 정원을 볼 수 있는데, 신비의 정원, 꽃의 정원, 물의 정원, 선인장 정원, 열대 정원, 열대 과수원으로 이루어져 있다.",
+            "start": 470,
+            "submitted": "다양한 테마로 꾸며진 정원을 볼 수 있는데, 신비의 정원, 꽃의 정원, 물의 정원, 선인장 정원, 열대 정원, 열대 과수원으로 이루어져 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "881a367fb9347c371544b2ca7d77a7092702b89769cc43080a6ac4db3ceffad6"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "여러 테마 정원을 자율적으로 둘러볼 여지가 있으나, 자율 탐색의 깊이나 일상 이탈 경험이 중심이라는 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+          "quote": {
+            "end": 163,
+            "method": "EXACT",
+            "original": "외부 정원은 야자수와 같은 커다란 나무가 숲을 이루며",
+            "start": 134,
+            "submitted": "외부 정원은 야자수와 같은 커다란 나무가 숲을 이루며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "881a367fb9347c371544b2ca7d77a7092702b89769cc43080a6ac4db3ceffad6"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+          "quote": {
+            "end": 643,
+            "method": "EXACT",
+            "original": "물의 정원은 연못과 습지로 조성되어 있으며",
+            "start": 620,
+            "submitted": "물의 정원은 연못과 습지로 조성되어 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "881a367fb9347c371544b2ca7d77a7092702b89769cc43080a6ac4db3ceffad6"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "수목 숲, 연못과 습지 등 자연 환경 단서가 확인되나, 실제 고요함·혼잡·심리적 회복 여부는 확정할 수 없어 두드러짐 수준까지만 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+          "quote": {
+            "end": 272,
+            "method": "EXACT",
+            "original": "총 2,300여 종의 식물이 살고 있으며 온실 안에서는 약 절반인 1,300여 종의 식물이 살고 있다.",
+            "start": 215,
+            "submitted": "총 2,300여 종의 식물이 살고 있으며 온실 안에서는 약 절반인 1,300여 종의 식물이 살고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "881a367fb9347c371544b2ca7d77a7092702b89769cc43080a6ac4db3ceffad6"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "식물 관람·탐방이 가능하나, 만들기·신체 활동 등 지속적으로 참여·도전할 집중 활동의 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 관한 근거가 제공되지 않았다. 요금 안내의 단체 할인만으로 유대감이나 교류를 추정하지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+            "quote": "가을에는 외부 정원의 나무들이 단풍으로 붉은색과 노란색으로 물들어 이국적인 수목과 어우러진 색다른 가을 풍경을 감상할 수 있다."
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+            "quote": "한국, 일본, 이탈리아, 프랑스식 정원을 만들어 놓아 동·서양의 정원을 감상할 수 있다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "다국적 테마 정원, 온실, 단풍, 전망탑 조망 등 장면에서 구별되는 시각적 성격이 확인된다. 여러 표현이 일관되게 장면을 지배한다는 근거는 없어 수준 3이다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "a5bf72fcbdc977bbcca0e5ddad208d480cab00f68b1117b0f0ef76802993b84e",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:0c3004294a43ff47b8adf4deda7263c0cf27677b68456de8e4d8cba58ae4f19e",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ff98c001ba93b48de2d15744eaeccb8dfba7e6a03b89070059a2fe32e4627774",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126464",
+          "request_sha256": "30c738e40f3d13874143b2edf1dcf03f39441861210200f286d3027dd71ea03f",
+          "response_sha256": "e34385c318b1aab57ed587121abcaccd18b7837ff5b2fd792b2a1b8a2ee9d946",
+          "retrieved_at": "2026-09-10T16:45:46.009941Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-09-08T00:03:16Z",
+          "source_record_sha256": "abf674a0d0bde57e95506caca35de5d4c5cd11e5212017c9991e598afa115229",
+          "source_uri": null
+        },
+        "record_sha256": "881a367fb9347c371544b2ca7d77a7092702b89769cc43080a6ac4db3ceffad6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "여미지식물원은 중문 관광단지 북쪽에 위치하며 1132로를 타면 쉽게 갈 수 있다. 아름다운 땅이란 뜻을 지닌 여미지식물원은 커다란 온실을 지니고 있으며 대지 11만 2200㎡의 외부 정원과 1만 1361㎡의 실내 식물원으로 구성되어 있다. 외부 정원은 야자수와 같은 커다란 나무가 숲을 이루며, 한국, 일본, 이탈리아, 프랑스식 정원을 만들어 놓아 동·서양의 정원을 감상할 수 있다. 총 2,300여 종의 식물이 살고 있으며 온실 안에서는 약 절반인 1,300여 종의 식물이 살고 있다. 가을에는 외부 정원의 나무들이 단풍으로 붉은색과 노란색으로 물들어 이국적인 수목과 어우러진 색다른 가을 풍경을 감상할 수 있다. 실내 식물원은 중앙홀과 높이가 38m인 중앙 전망탑이 있어 중문관광단지, 천제연폭포가 한눈에 들어오며 한라산과 인근 해안선 일대를 조망할 수 있음은 물론 쾌청한 날에는 국토 최남단 마라도까지 선명하게 바라볼 수 있다. 또한 다양한 테마로 꾸며진 정원을 볼 수 있는데, 신비의 정원, 꽃의 정원, 물의 정원, 선인장 정원, 열대 정원, 열대 과수원으로 이루어져 있다. 신비의 정원은 화산 암반석과 양치식물, 자생 식물들로 이루어져 있으며, 꽃의 정원은 열대 및 아열대 식물들로 조성되어 있다. 물의 정원은 연못과 습지로 조성되어 있으며, 열대 정원과 열대 과수원은 열대 과수와 식물들로 조성되어 있다. 선인장 정원은 어린 왕자에도 나오는 바오바브나무를 볼 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:84ae4905ac4d75775105953a2e6a24092dac5f02a6ea9283c895e9fc8262a890",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ff98c001ba93b48de2d15744eaeccb8dfba7e6a03b89070059a2fe32e4627774",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126464",
+          "request_sha256": "6d9eb890a6a577556e74fc6b6983d26809e2051af1f29cdd4ba3414b118dd26c",
+          "response_sha256": "80ffc427ce5190eded0940e57c2ec738386622f479664c5d9ff4a2573c68e483",
+          "retrieved_at": "2026-09-11T02:12:55.970409Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b11b711f83d56b692ce5daaec3125a7cd25e96a8c0496d40c793139bb0e6bf59",
+          "source_uri": null
+        },
+        "record_sha256": "69b77fc5abe020376ce67cb5b321d1ffe9a59a8cd6a6c772d08edf9858c14f43",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[개인] - 어른 12,000원 - 청소년/군경 8,000원 - 어린이 7,000원 - 경로 9,000원 [단체(20인 이상)] - 어른 9,000원 - 청소년/군경 6,000원 - 어린이 5,000원 - 경로 7,000원 ※ 자세한 사항은 홈페이지 참조 및 전화 문의 요망"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9ffdf2e150af13eaf7da0eaa9ea76ab5efef2dd81335e6eaf7cde6b1fb701ea0",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:ff98c001ba93b48de2d15744eaeccb8dfba7e6a03b89070059a2fe32e4627774",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126464",
+          "request_sha256": "6d9eb890a6a577556e74fc6b6983d26809e2051af1f29cdd4ba3414b118dd26c",
+          "response_sha256": "80ffc427ce5190eded0940e57c2ec738386622f479664c5d9ff4a2573c68e483",
+          "retrieved_at": "2026-09-11T02:12:55.970409Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b9689d6af1705e502fefef22d0a5165b0df1079e769e0738fef919b866fa7267",
+          "source_uri": null
+        },
+        "record_sha256": "1b2c6a2747540c84b940f033e41e6c6eba1d4f10ab6ad0f1853631abf4ce3a4e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "b6e4da7585e1fd578b5f15d8f16a8b9155a08e9bea8b61bb8aedce2eb4229ca5",
+    "place": {
+      "address": "제주특별자치도 서귀포시 중문관광로 93 (색달동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:ff98c001ba93b48de2d15744eaeccb8dfba7e6a03b89070059a2fe32e4627774",
+      "name_ko": "여미지식물원",
+      "place_id": "public:korea:ff98c001ba93b48de2d15744eaeccb8dfba7e6a03b89070059a2fe32e4627774",
+      "provider_content_id": "126464",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

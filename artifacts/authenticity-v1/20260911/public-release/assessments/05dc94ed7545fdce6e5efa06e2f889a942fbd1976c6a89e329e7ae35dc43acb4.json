@@ -1,0 +1,926 @@
+{
+  "assessed_at": "2026-09-11T17:35:17.578854Z",
+  "assessment_sha256": "05dc94ed7545fdce6e5efa06e2f889a942fbd1976c6a89e329e7ae35dc43acb4",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 69
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소의 과거 나루터 연혁과 용진이라는 이름 유래가 소개되나, 심층적 역사 맥락 탐구까지의 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'마음정원'이라는 이름과 고요한 힐링 공간이라는 이미지가 장소에 연결되어 있으나, 여러 표현에서 일관된 의미 체계를 확인할 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:48fb767ea00156e9181821793afc171815b3c00ca5cc54ed26c9beb93fe23983",
+            "appearance:9746f4ecff0a06acb911055113bbf8d5495dbc2df7a5f20bcca77beaa29587f7",
+            "appearance:c9131b1541445bfae0cad6be1490773629d3128e2562fea2265f7acc4cd71524"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책길, 자전거길 연결, 벤치에서의 자유로운 체류 등 자율적 탐색·여유의 기회가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:c4015efb42ab6071b97959868cc7bab100fa70057b8758689ae76e0617177f82",
+            "appearance:d485d3e8db82ec426bd53b90ef16666e5a7c92073aaf6d7f38bf8d59c393e312",
+            "appearance:efc27e8659876c1fd60b8355dea8394164a50c924ed76e5dd91728c71931af10"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "북한강변, 어류·수생식물 서식지, 철새 도래지, 조용한 산책 환경 등 회복을 지원하는 자연 환경 단서가 구체적으로 확인된다. 홍보 문구만이 아닌 환경 묘사에 근거했다.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "산책·자전거 등 신체 활동 기회가 있으나 만들기·집중 참여형 활동의 근거는 없어 수준을 제한했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "전시된 작은 배는 과거 나루터임을 알려주는 표지물이지 확인된 원형·유산의 실물이라는 근거가 없다. '확인된 원형·유산을 관람'(수준 2)은 과잉이며, 나루터 흔적과의 제한적 접촉(수준 1) 수준이 적절하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493",
+          "quote": {
+            "end": 349,
+            "method": "EXACT",
+            "original": "마음정원은 과거, 북한강을 가로질러 조안면 송촌리 일대와 앙평 지역을 연결하는 용진나루터였다고 한다.",
+            "start": 293,
+            "submitted": "마음정원은 과거, 북한강을 가로질러 조안면 송촌리 일대와 앙평 지역을 연결하는 용진나루터였다고 한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ee49779b3ac01ba4f8b592665771371644a282ec185ea44727c5dc10942bb93"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "이 장소의 과거 나루터 연혁과 용진이라는 이름 유래가 소개되나, 심층적 역사 맥락 탐구까지의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "과거 나루터라는 연혁은 있으나 현재 지역 주체의 전승·생활문화와의 지속적 연결을 보여주는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "나루터 유래 이야기가 텍스트로 소개되지만 현장에서 제공되는 해설·전시·학습 프로그램의 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493",
+          "quote": {
+            "end": 192,
+            "method": "EXACT",
+            "original": "마음정원은 비어 있는 공간 자체가 찾는 이에게 고요한 힐링을 느끼게 해준다.",
+            "start": 150,
+            "submitted": "마음정원은 비어 있는 공간 자체가 찾는 이에게 고요한 힐링을 느끼게 해준다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ee49779b3ac01ba4f8b592665771371644a282ec185ea44727c5dc10942bb93"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'마음정원'이라는 이름과 고요한 힐링 공간이라는 이미지가 장소에 연결되어 있으나, 여러 표현에서 일관된 의미 체계를 확인할 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체·작품·홍보를 통한 이미지 유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현하는 활동에 대한 근거가 없다. 배 한 척의 전시는 재현 경험의 중심으로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493",
+          "quote": {
+            "end": 247,
+            "method": "EXACT",
+            "original": "북한강변을 바라볼 수 있는 벤치에 앉아 흐르는 강물을 바라보는 것만으로도 시간도 시름도 잊혀진다.",
+            "start": 193,
+            "submitted": "북한강변을 바라볼 수 있는 벤치에 앉아 흐르는 강물을 바라보는 것만으로도 시간도 시름도 잊혀진다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ee49779b3ac01ba4f8b592665771371644a282ec185ea44727c5dc10942bb93"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "산책길, 자전거길 연결, 벤치에서의 자유로운 체류 등 자율적 탐색·여유의 기회가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493",
+          "quote": {
+            "end": 78,
+            "method": "EXACT",
+            "original": "조용하게 산책하기에 좋은 곳이다. 바로 옆 물의 정원 자전거길과 산책길로 연결되어 있다.",
+            "start": 29,
+            "submitted": "조용하게 산책하기에 좋은 곳이다. 바로 옆 물의 정원 자전거길과 산책길로 연결되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ee49779b3ac01ba4f8b592665771371644a282ec185ea44727c5dc10942bb93"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "북한강변, 어류·수생식물 서식지, 철새 도래지, 조용한 산책 환경 등 회복을 지원하는 자연 환경 단서가 구체적으로 확인된다. 홍보 문구만이 아닌 환경 묘사에 근거했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493",
+          "quote": {
+            "end": 149,
+            "method": "EXACT",
+            "original": "이곳에는 네잎클로버 평상, 통나무 의자 같은 아기자기한 쉴 공간이 많아 가족 단위 방문객이 아이와 함께 시간을 보내기에 좋다.",
+            "start": 79,
+            "submitted": "이곳에는 네잎클로버 평상, 통나무 의자 같은 아기자기한 쉴 공간이 많아 가족 단위 방문객이 아이와 함께 시간을 보내기에 좋다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "5ee49779b3ac01ba4f8b592665771371644a282ec185ea44727c5dc10942bb93"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "산책·자전거 등 신체 활동 기회가 있으나 만들기·집중 참여형 활동의 근거는 없어 수준을 제한했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "가족 단위 방문에 적합하다는 묘사만으로 교류·공동 활동·자기표현의 실제 기회를 확인할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493",
+            "quote": "벚꽃이 만발한 봄과 녹음이 푸르른 여름을 지나 단풍과 억새밭이 이어지는 산책길"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "강변, 계절별 경관(벚꽃, 억새밭, 설경), 네잎클로버 평상·통나무 의자 등 장소의 시각적 성격이 구체적으로 묘사된다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493",
+              "quote": {
+                "end": 292,
+                "method": "EXACT",
+                "original": "강변 한쪽에는 이곳이 과거 나루터였음을 알게 해주는 작은 배 한척이 놓여 있다.",
+                "start": 248,
+                "submitted": "강변 한쪽에는 이곳이 과거 나루터였음을 알게 해주는 작은 배 한척이 놓여 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "5ee49779b3ac01ba4f8b592665771371644a282ec185ea44727c5dc10942bb93"
+            }
+          ],
+          "flags": [],
+          "key": "H.a",
+          "level": 2,
+          "reason": "과거 용진나루터였음을 알리는 배가 전시되어 원형 흔적과 제한적으로 접촉할 수 있다. 실제 나루터 유구의 실물이라는 확인은 없어 수준을 제한했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "ORIGINAL_REPLICA_CONFUSION"
+          ],
+          "key": "H.a",
+          "reason": "전시된 작은 배는 과거 나루터임을 알려주는 표지물이지 확인된 원형·유산의 실물이라는 근거가 없다. '확인된 원형·유산을 관람'(수준 2)은 과잉이며, 나루터 흔적과의 제한적 접촉(수준 1) 수준이 적절하다."
+        }
+      },
+      "reason": "전시된 작은 배는 과거 나루터임을 알려주는 표지물이지 확인된 원형·유산의 실물이라는 근거가 없다. '확인된 원형·유산을 관람'(수준 2)은 과잉이며, 나루터 흔적과의 제한적 접촉(수준 1) 수준이 적절하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "00dbace70295f9dd896cadd1d36cd37df34d39c43500f8df5675f09a31f9b291",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "안내판과 잔돌길 외에 전통적 외관·재료·공간 구성의 특성은 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2b00a8397ec26a7c3499edd013fd98be46def43bde27ab2c813500f9ce9dec04",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a2ea2a6d30f3054e2a9d43329d196415173c621ab754ca3c7f57596033a408ce",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063112",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "863f6bdb8eba67aacf6af036361f9bdb440b0d8c63b11d287ad00a7605448c9e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/12/4063112.jpg"
+        },
+        "record_sha256": "53c16ec7565ec3f84062a04b494da551818b778912b8f24955e41046dc508571",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 산과 밝은 하늘, 금빛 억새의 대비가 뚜렷하고 억새를 앞세운 깊이감 있는 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:48fb767ea00156e9181821793afc171815b3c00ca5cc54ed26c9beb93fe23983",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a2ea2a6d30f3054e2a9d43329d196415173c621ab754ca3c7f57596033a408ce",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063112",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "863f6bdb8eba67aacf6af036361f9bdb440b0d8c63b11d287ad00a7605448c9e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/12/4063112.jpg"
+        },
+        "record_sha256": "06506ffb2b563c02476eb42d6800dc260583c22b478ffd5ebbcc1533d0b93e6a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "물결에 비친 갈대와 하늘의 반사, 부드러운 빛의 대비가 화면을 지배하며 시적이고 사진적인 구도가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9746f4ecff0a06acb911055113bbf8d5495dbc2df7a5f20bcca77beaa29587f7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "111f5c6526119612b9b6dac92f9b5df5ab3d7f7e4eb15c059d9d236e50537f90",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063116",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6b6059e9d89b2a846e72005b120084a157fd68cab74fa0215b92318dbdc64867",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/16/4063116.jpg"
+        },
+        "record_sha256": "54d8d2a530aa87fd8254801233c5b99985fc554608932a2d8f8af1ef8d9ec03e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "인공 구조물이나 전통적 외관·재료가 보이지 않고 순수 자연 경관만 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a3e72c43310a424ca74f35c74cdf969febceb80a40e2359f80bada1cf02da737",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c8f98d338c665b8b0d64c415c7205fa644a84931a3a1df4132188c92f589c9e4",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063117",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "29842e2acf881635b0e803252b521d2f2626998140380b2a5a0c38b937997bb6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/17/4063117.jpg"
+        },
+        "record_sha256": "4480527137093c6971775b5e5a367e3a4d38416a035dfca494f07b58533d5aee",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "먼 산 능선, 호수, 초지와 억새밭 등 자연 경관이 화면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c4015efb42ab6071b97959868cc7bab100fa70057b8758689ae76e0617177f82",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a2ea2a6d30f3054e2a9d43329d196415173c621ab754ca3c7f57596033a408ce",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063112",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "863f6bdb8eba67aacf6af036361f9bdb440b0d8c63b11d287ad00a7605448c9e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/12/4063112.jpg"
+        },
+        "record_sha256": "cd4e00189145b7ceede7a84ab01e414b5b397bd470804318d363bfb283cd95e7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "바색의 황금빛 건초와 청록색 물빛의 대비가 강렬하고, 물결과 반사광이 풍부해 시각적 성격이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c9131b1541445bfae0cad6be1490773629d3128e2562fea2265f7acc4cd71524",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c8f98d338c665b8b0d64c415c7205fa644a84931a3a1df4132188c92f589c9e4",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063117",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "29842e2acf881635b0e803252b521d2f2626998140380b2a5a0c38b937997bb6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/17/4063117.jpg"
+        },
+        "record_sha256": "863495ef9e9e06cc517fb4b9e32b898a330f830104757e831f132f664e309d9f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "시냇물, 수초, 갈대, 자연 식생이 화면 전체를 지배하며 트인 자연 환경이 중심",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d485d3e8db82ec426bd53b90ef16666e5a7c92073aaf6d7f38bf8d59c393e312",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c8f98d338c665b8b0d64c415c7205fa644a84931a3a1df4132188c92f589c9e4",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063117",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "29842e2acf881635b0e803252b521d2f2626998140380b2a5a0c38b937997bb6",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/17/4063117.jpg"
+        },
+        "record_sha256": "48ca0c37672f6835f38075d84652f3e2eaf00a9ac6094129bc508c98bfea0e6f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축물이나 재료·공간 구성으로 보이는 시각적 단서는 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d93df68854694a8618211b6fff4e100e43df1de0e9185d625fb51d3a80b5810d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "111f5c6526119612b9b6dac92f9b5df5ab3d7f7e4eb15c059d9d236e50537f90",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063116",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6b6059e9d89b2a846e72005b120084a157fd68cab74fa0215b92318dbdc64867",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/16/4063116.jpg"
+        },
+        "record_sha256": "3f052ff6effb57258c9c70eabcba70e98fec82f6a6411c70e841aab814503a7d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "습지 물가, 갈대와 수초, 오리들이 보이는 자연 환경이 장면 전체를 구성하며 인공 요소는 거의 없음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:efc27e8659876c1fd60b8355dea8394164a50c924ed76e5dd91728c71931af10",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "111f5c6526119612b9b6dac92f9b5df5ab3d7f7e4eb15c059d9d236e50537f90",
+        "match_basis": [
+          "공식 촬영지역 경기도 남양주시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:4063116",
+          "request_sha256": "499dd233186dc53e6b255ad993a461e91de22e7c29df14bd64c3a538a8192e2a",
+          "response_sha256": "6aed0a817d140a1a08449a1dad58aec804fae146fcfdd711758f6b8b20e43341",
+          "retrieved_at": "2026-09-11T02:06:06.668668Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6b6059e9d89b2a846e72005b120084a157fd68cab74fa0215b92318dbdc64867",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/16/4063116.jpg"
+        },
+        "record_sha256": "9a203806abac594f788aaee5f662ebab17444a0bd3985be6606c3f493e9ab0ee",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b8b28f7e7cdcf44d56180ba5fde3cb99e2bfd5f11039ea8d727f13e096aeac25",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3018017",
+          "request_sha256": "ec0aa3755eda5136855633895e0382bbfca7917be41238fd6956a27950536dc3",
+          "response_sha256": "5a686e98eb9f52581ab07b25dc466ddcb3dbf977486a54493a9ac435902cb4fb",
+          "retrieved_at": "2026-09-11T02:06:04.572844Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "0c9e91661e795e668795554ece29ec05a1c5edf676c9f8b4366dfb6ade492a6d",
+          "source_uri": null
+        },
+        "record_sha256": "da8d5f25d1c779e81f5f9960421bde8b7b06e4985ad49bf5422e7830dc8018e9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:dbc060a04684d8e0baf5d116ca597e944338c6379b3613abaeaff48af6522493",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3018017",
+          "request_sha256": "1b4cc3c6968eccb98de4fddff4fcad33ac90fd9cd010f3e2c2346a77973d6da6",
+          "response_sha256": "e047616add952ba379bb8ad87129b790bbb2d27c3e38d8f1e4962d6f6ea14033",
+          "retrieved_at": "2026-09-10T17:09:08.956540Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-18T06:01:10Z",
+          "source_record_sha256": "d9aebc6c3cc2580a58120cc29ede6d21f7881743c24b6042ad3d9a6131d4693b",
+          "source_uri": null
+        },
+        "record_sha256": "5ee49779b3ac01ba4f8b592665771371644a282ec185ea44727c5dc10942bb93",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "마음정원은 경기도 남양주, 북한강변에 위치해 있으며 조용하게 산책하기에 좋은 곳이다. 바로 옆 물의 정원 자전거길과 산책길로 연결되어 있다. 이곳에는 네잎클로버 평상, 통나무 의자 같은 아기자기한 쉴 공간이 많아 가족 단위 방문객이 아이와 함께 시간을 보내기에 좋다. 마음정원은 비어 있는 공간 자체가 찾는 이에게 고요한 힐링을 느끼게 해준다. 북한강변을 바라볼 수 있는 벤치에 앉아 흐르는 강물을 바라보는 것만으로도 시간도 시름도 잊혀진다. 강변 한쪽에는 이곳이 과거 나루터였음을 알게 해주는 작은 배 한척이 놓여 있다. 마음정원은 과거, 북한강을 가로질러 조안면 송촌리 일대와 앙평 지역을 연결하는 용진나루터였다고 한다. 전해오는 옛이야기에 따르면 용이 강을 건넜다 하여 용진이라는 이름을 붙였다 한다. 이처럼 시간의 깊이를 간직한 마음정원은 북한강변을 따라 이어진 산책길이 그야말로 계절을 바꿔가며 감동을 선사한다. 벚꽃이 만발한 봄과 녹음이 푸르른 여름을 지나 단풍과 억새밭이 이어지는 산책길 그리고 설경이 눈이 부신 겨울까지, 지치고 위로받고 싶은 마음을 달래주듯 철을 바꿔 마음의 안식을 선사한다. 이곳은 이 외에도 다양한 종류의 어류와 수생 식물의 서식지이며 철새 도래지로도 알려져 있다. 호위하는 듯한 운길산과 바로 옆 물의 정원을 함께 둘러보는 것도 좋은 여행 코스가 될 것이다."
+      }
+    ],
+    "parent_source_sha256": "1b35ef87fb75b9ac7e71c19fb32fc2810e85b12431c69ec4916eabe30b1ac290",
+    "place": {
+      "address": "경기도 남양주시 조안면 송촌리 739-1",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+      "name_ko": "마음정원",
+      "place_id": "public:korea:782fdb14b418792fc38cb72a84131306059139fa65531e56c647a6f169b2f1bb",
+      "provider_content_id": "3018017",
+      "region_code": "41360",
+      "region_name": "경기도 남양주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

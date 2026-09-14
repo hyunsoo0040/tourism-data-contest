@@ -1,0 +1,979 @@
+{
+  "assessed_at": "2026-09-11T17:03:32.466036Z",
+  "assessment_sha256": "9aac7af83bb257b23da08c1d8b9a0e81d9755b1092cc20d28d57400901f12a94",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c"
+      ],
+      "value": 64
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 65
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "명건축가의 작품이라는 이미지, 건축가의 상징으로 느껴지는 형태, 낭만적 분위기 등 장소에 부여된 구체적 의미·이야기가 확인된다. 일관된 상징이 여러 표현에서 확인되나 방문 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "영화라는 매체를 통한 장소 이미지의 재현이 공식 소개에 명시되어 있다. 단일 매체의 표현이 확인되어 수준 2이며, 반복적 유통이나 방문 목적의 중심성에 대한 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1b3eee9a001bbac4d0c7d4fdfe3fc91b89bdd049d714dd9a88c03f378778c09a",
+            "appearance:6bbe097345555ea2f011236e11197080b0b589a198843e5ffd693473e28ecd34",
+            "appearance:bb9aea572fba7a5f9dbe2446e15408a3209d186efec64267627969189f6d7b26"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 92
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "카페 이용과 섭지코지 연계 둘러보기 등 자율적으로 코스를 선택할 여지가 확인된다. 다만 자유로운 탐색이 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:23f2c17a5236821fc915897a3fab2d192b100584aea496bf91d5e43af32fb316",
+            "appearance:70fb658ede50cbbdc4eff6fdb90a9bbd5daa6d331804a2ff1c638f4a15093673",
+            "appearance:c368a8c30d41e40d9ed2a1067622862139f8fe614037583d0c78ddd1bb37d54f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "통유리 너머 펼쳐진 바다와 노을 등 자연 환경 단서가 확인된다. 자연 환경이 장소 경험의 중심 단서로 확인되나, 실제 고요함·혼잡도에 대한 정보가 없어 수준 3 이상으로 올리지 않는다.",
+      "value": 79
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 현대 건축물(안도 다다오 작품)과 카페·소품샵 소개뿐이며, 확인된 원형·문화유산과의 접촉에 대한 정보가 없다. 현대 건축 작품 자체는 유산 접촉의 근거로 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "근거는 건축가와 건축물의 형태, 카페·영화 촬영지 정보를 다룰 뿐, 이 장소의 실제 역사적 사건·연혁에 대한 구체적 서사는 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 언급이 없다. 카페·소품샵 운영만으로 실제 전통의 지속을 판단할 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·전시·학습 프로그램에 대한 정보가 없다. 건축물 소개 문구가 현장 해설 체계를 의미한다고 볼 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+          "quote": {
+            "end": 115,
+            "method": "EXACT",
+            "original": "노출 콘크리트를 시적으로 승화시킨 독창적인 아이디어와 자연, 빛과 조화롭게 어우러진 건축물",
+            "start": 65,
+            "submitted": "노출 콘크리트를 시적으로 승화시킨 독창적인 아이디어와 자연, 빛과 조화롭게 어우러진 건축물",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+          "quote": {
+            "end": 256,
+            "method": "EXACT",
+            "original": "간결해 보이지만 안도 다다오만의 섬세한 매력이 곳곳에 숨어 있다.",
+            "start": 220,
+            "submitted": "간결해 보이지만 안도 다다오만의 섬세한 매력이 곳곳에 숨어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "명건축가의 작품이라는 이미지, 건축가의 상징으로 느껴지는 형태, 낭만적 분위기 등 장소에 부여된 구체적 의미·이야기가 확인된다. 일관된 상징이 여러 표현에서 확인되나 방문 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+          "quote": {
+            "end": 479,
+            "method": "EXACT",
+            "original": "영화 <마녀2> 마녀 프로젝트를 만든 백총괄의 신비로운 저택은 휘닉스 제주의 글라스 하우스이다.",
+            "start": 426,
+            "submitted": "영화 <마녀2> 마녀 프로젝트를 만든 백총괄의 신비로운 저택은 휘닉스 제주의 글라스 하우스이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "영화라는 매체를 통한 장소 이미지의 재현이 공식 소개에 명시되어 있다. 단일 매체의 표현이 확인되어 수준 2이며, 반복적 유통이나 방문 목적의 중심성에 대한 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+          "quote": {
+            "end": 553,
+            "method": "EXACT",
+            "original": "건물이 위치한 섭지코지와 함께 둘러보기를 추천한다.",
+            "start": 525,
+            "submitted": "건물이 위치한 섭지코지와 함께 둘러보기를 추천한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "카페 이용과 섭지코지 연계 둘러보기 등 자율적으로 코스를 선택할 여지가 확인된다. 다만 자유로운 탐색이 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+          "quote": {
+            "end": 374,
+            "method": "EXACT",
+            "original": "탁 트인 통유리 너머 제주 바다의 아름다움까지 즐길 수 있어 낭만적인 분위기를 즐기기에 좋다.",
+            "start": 322,
+            "submitted": "탁 트인 통유리 너머 제주 바다의 아름다움까지 즐길 수 있어 낭만적인 분위기를 즐기기에 좋다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "통유리 너머 펼쳐진 바다와 노을 등 자연 환경 단서가 확인된다. 자연 환경이 장소 경험의 중심 단서로 확인되나, 실제 고요함·혼잡도에 대한 정보가 없어 수준 3 이상으로 올리지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "인용된 근거는 베이커리 카페와 소품샵 이용, 즉 상업 서비스이다. 이를 참여·탐방 활동으로 보는 것은 상업 서비스의 관광 활동화 우려가 있고, 섭지코지 둘러보기가 이 건물의 참여 활동인지도 불명확해 판단을 유보한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 직접적 근거가 없다. 카페·소품샵의 존재만으로 관계 형성 기회를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+            "quote": "곧게 뻗은 선과 네모반듯한 면이 작가의 상징처럼 느껴진다. 건축물의 모양새는 바다를 향해 기지개를 켜듯 꺾쇠 형태로 뻗어 나간다."
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+            "quote": "해가 질 무렵이면 카페 전체가 붉은 노을에 물든다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "안도 다다오 특유의 꺾쇠 형태·직선과 면의 구성, 통유리를 통한 바다 조망, 노을에 물드는 장면 등 이 장소를 구별하는 시각적 성격이 공식 설명에서 구체적으로 확인된다. 다만 경관 전체를 지배하는 일관된 연출이라는 수준까지의 근거는 없어 수준 3으로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+              "quote": {
+                "end": 374,
+                "method": "EXACT",
+                "original": "탁 트인 통유리 너머 제주 바다의 아름다움까지 즐길 수 있어 낭만적인 분위기를 즐기기에 좋다.",
+                "start": 322,
+                "submitted": "탁 트인 통유리 너머 제주 바다의 아름다움까지 즐길 수 있어 낭만적인 분위기를 즐기기에 좋다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644"
+            },
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+              "quote": {
+                "end": 479,
+                "method": "EXACT",
+                "original": "영화 <마녀2> 마녀 프로젝트를 만든 백총괄의 신비로운 저택은 휘닉스 제주의 글라스 하우스이다.",
+                "start": 426,
+                "submitted": "영화 <마녀2> 마녀 프로젝트를 만든 백총괄의 신비로운 저택은 휘닉스 제주의 글라스 하우스이다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 3,
+          "reason": "바다를 배경으로 한 낭만적 장면과 영화 속 저택이라는 대표 이미지를 현장에서 직접 경험할 수 있음이 확인된다. 촬영·재현 참여 등 적극적 재현의 근거는 없어 수준 3으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+              "quote": {
+                "end": 303,
+                "method": "EXACT",
+                "original": "글라스하우스는 플로이스트 베이커리 카페, 소품샵 페이보릿 아일랜드로 이루어져 있다.",
+                "start": 257,
+                "submitted": "글라스하우스는 플로이스트 베이커리 카페, 소품샵 페이보릿 아일랜드로 이루어져 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 2,
+          "reason": "카페 이용, 소품샵 관람, 섭지코지 둘러보기 등 참여 활동이 확인되나, 지속적으로 몰입·도전할 활동이라는 근거는 없어 수준 2로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "BUSINESS_AS_TOURIST_ACTIVITY"
+          ],
+          "key": "R.c",
+          "reason": "인용된 근거는 베이커리 카페와 소품샵 이용, 즉 상업 서비스이다. 이를 참여·탐방 활동으로 보는 것은 상업 서비스의 관광 활동화 우려가 있고, 섭지코지 둘러보기가 이 건물의 참여 활동인지도 불명확해 판단을 유보한다."
+        }
+      },
+      "reason": "인용된 근거는 베이커리 카페와 소품샵 이용, 즉 상업 서비스이다. 이를 참여·탐방 활동으로 보는 것은 상업 서비스의 관광 활동화 우려가 있고, 섭지코지 둘러보기가 이 건물의 참여 활동인지도 불명확해 판단을 유보한다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "366e0984d5886e9ca3b33a6ee3eeda0fece5e09b74d4ef125917b8b42573dae7",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "흰색과 어두운 지붕의 현대적 건축물과 원형·사각 정원 구성이 보이나 전통적 재료·외관의 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0357279eb738524f6073ca604e93674decbb1423c7d853fc0cb57637acdcc186",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d165a1bceb975bbb5382c30885d7af667ce3cc37c7a757fb2937e6ed061fd48c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3096279_4",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "65bf540b3740e2ec88abf852ed536e59a92a9e70cdd5ff107bf7522c802c9fc5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3096279_image2_1.jpg"
+        },
+        "record_sha256": "cb7fdf71b3fc2d86b4821b5b2d407f3976de13ae5deec92c3d8571738e32e803",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "확장된 항공 구도 속 넓은 바다·섬·초록 해안이 넓게 펼쳐지며, 차분한 톤의 빛과 대비되는 흙색 보행로가 장면에 시각적 리듬을 부여한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1b3eee9a001bbac4d0c7d4fdfe3fc91b89bdd049d714dd9a88c03f378778c09a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d165a1bceb975bbb5382c30885d7af667ce3cc37c7a757fb2937e6ed061fd48c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3096279_4",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "65bf540b3740e2ec88abf852ed536e59a92a9e70cdd5ff107bf7522c802c9fc5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3096279_image2_1.jpg"
+        },
+        "record_sha256": "c3a5bc0b8478785715ae884382887d8a4c4708a2f9b53279abd569d2e068a014",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "건물 주변에 울창한 초록 녹지가 넓게 펼쳐지고, 오른쪽 바다와 먼 산들이 트인 배경으로 보여 자연 경관 단서가 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:23f2c17a5236821fc915897a3fab2d192b100584aea496bf91d5e43af32fb316",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f433b4236d52d55d1acdf8e7db527de365a846c9c7f8b8d32455eae57a585937",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3096356_3",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "986c0e138189afdcec418e414cfd03a33beaa9b58514c1baf9f0abf094a45002",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/56/3096356_image2_1.jpg"
+        },
+        "record_sha256": "d2b19bfaa84c3f53cd30cbf6ebc09db689e3b9b9acaa2bb1d0c0cdc8ff903324",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "정원 위를 내려다본 탑다운 구도로 사각·타원 형태의 지붕과 대각 십자 경로가 강한 기하학적 구성을 이루며, 녹색 배경과 대비되는 회색·흰색 구조물이 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6bbe097345555ea2f011236e11197080b0b589a198843e5ffd693473e28ecd34",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6bf5bf6cb778941cf5419b6d32e1fb36c94caa7f1fab5111cb57caa36677f6e5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3095755_1",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a13767eedc987c71534d46e20760f45e38435ef802cabdf009fc15318f782990",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/55/3095755_image2_1.jpeg"
+        },
+        "record_sha256": "01ef629cc2b9bbd7094a5db1f3b2e18287b8a94c8dac243b2bc21278bf5408c3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "석재 경로와 자연 소재가 일부 보이지만, 건물 지붕과 구조물은 현대적·기하학적 외관이며 전통적 외관 요소는 두드러지지 않다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6d7c2b37e1b5318678091228d6f297adb9231a6533df99386672c13d69c61945",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6bf5bf6cb778941cf5419b6d32e1fb36c94caa7f1fab5111cb57caa36677f6e5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3095755_1",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a13767eedc987c71534d46e20760f45e38435ef802cabdf009fc15318f782990",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/55/3095755_image2_1.jpeg"
+        },
+        "record_sha256": "3aab43c2962a8f98513e9ebaea345cd13e9134dbafd6e4e3e385009731fd8827",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "바다, 먼 섬, 암석 해안, 광활한 초지가 화면 전체를 지배하며 자연 경관이 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:70fb658ede50cbbdc4eff6fdb90a9bbd5daa6d331804a2ff1c638f4a15093673",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d165a1bceb975bbb5382c30885d7af667ce3cc37c7a757fb2937e6ed061fd48c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3096279_4",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "65bf540b3740e2ec88abf852ed536e59a92a9e70cdd5ff107bf7522c802c9fc5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3096279_image2_1.jpg"
+        },
+        "record_sha256": "e801fe45e480a1ddc66a545652716261f08e16b458511def05ed4ab732161294",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전체적으로 현대적 유리·콘크리트 재질의 건축으로 전통적 외관이나 재료의 시각적 특성은 거의 드러나지 않으며, 돌담 정도의 암시적 요소만 약하게 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:78e0e5e0d8730ccb3afe9aaad8c0da0de6af5be4070a82e72b71fcaf4118fdf2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f433b4236d52d55d1acdf8e7db527de365a846c9c7f8b8d32455eae57a585937",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3096356_3",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "986c0e138189afdcec418e414cfd03a33beaa9b58514c1baf9f0abf094a45002",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/56/3096356_image2_1.jpg"
+        },
+        "record_sha256": "ed5eeabae5e2315b74bd96bd650c48a22005f7b6f341af3d7eac6c9f9766f2a5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "수평으로 길게 뻗은 유리 커튼월과 콘크리트 매스의 현대적 건축물이 장면 중앙을 지배하며, 넓은 하늘과 대비되는 절제된 색채와 안정적 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bb9aea572fba7a5f9dbe2446e15408a3209d186efec64267627969189f6d7b26",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "f433b4236d52d55d1acdf8e7db527de365a846c9c7f8b8d32455eae57a585937",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3096356_3",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "986c0e138189afdcec418e414cfd03a33beaa9b58514c1baf9f0abf094a45002",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/56/3096356_image2_1.jpg"
+        },
+        "record_sha256": "2a1e825abdfb8c596c548fe6d643804d42feaaf700700bbc4d3f9928eb71dbeb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "프레임 거의 전체가 울창한 초목, 정원식물, 타원형 녹지로 채워져 자연 환경 단서가 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c368a8c30d41e40d9ed2a1067622862139f8fe614037583d0c78ddd1bb37d54f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6bf5bf6cb778941cf5419b6d32e1fb36c94caa7f1fab5111cb57caa36677f6e5",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3095755_1",
+          "request_sha256": "4f028215fe8f432e8f4d1734ae4f10a091a3c1cf0daa948cb60c16a57768ebd0",
+          "response_sha256": "c2ab5b330e29565ad5d0e29a59dc8a751342d97669c95474abd4b1e7964d3eb8",
+          "retrieved_at": "2026-09-10T08:23:05.976672Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a13767eedc987c71534d46e20760f45e38435ef802cabdf009fc15318f782990",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/55/3095755_image2_1.jpeg"
+        },
+        "record_sha256": "5f7d526e3206c41c3b402fef2e643e898fbfe60dcf3d38a4387c76b0504a36e5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:bc6ebc32faccc538494e7980f47b3ac111fb133157a0935f083bd1c5e1afa715",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2778809",
+          "request_sha256": "1db7f58e0b097833331469d9b17ad8c2bcf28fee5b27a8ee5aec721309f7b247",
+          "response_sha256": "ed90fc91efccd6d0a65474142577a571bed8f33176913ac232bedc3673cd144e",
+          "retrieved_at": "2026-09-10T08:13:35.653233Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-17T10:06:16Z",
+          "source_record_sha256": "f3a51b2839f315c0de38ceabc0a1a32ecd2ff4413850d06f03324b0e01c00683",
+          "source_uri": null
+        },
+        "record_sha256": "7d46721ea381980610ac30331e2feb20f62f178566eb97f99a56dea9e52c1644",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "제주 섭지코지에 자리한 글라스하우스는 현대건축의 거장으로 꼽히는 안도 다다오의 작품이다. 일본 출신의 건축가인 그는 노출 콘크리트를 시적으로 승화시킨 독창적인 아이디어와 자연, 빛과 조화롭게 어우러진 건축물로 국내에서도 뜨거운 인기를 누리고 있다. 글라스하우스는 곧게 뻗은 선과 네모반듯한 면이 작가의 상징처럼 느껴진다. 건축물의 모양새는 바다를 향해 기지개를 켜듯 꺾쇠 형태로 뻗어 나간다. 간결해 보이지만 안도 다다오만의 섬세한 매력이 곳곳에 숨어 있다. 글라스하우스는 플로이스트 베이커리 카페, 소품샵 페이보릿 아일랜드로 이루어져 있다. 특히 플로이스트 베이커리 카페는 탁 트인 통유리 너머 제주 바다의 아름다움까지 즐길 수 있어 낭만적인 분위기를 즐기기에 좋다. 해가 질 무렵이면 카페 전체가 붉은 노을에 물든다. ◎ 한류의 매력을 만나는 여행 정보 - 영화 <마녀2> 마녀 프로젝트를 만든 백총괄의 신비로운 저택은 휘닉스 제주의 글라스 하우스이다. 글라스 하우스의 민트레스토랑은 어느 자리에서든 넓게 펼쳐진 바다를 볼 수 있다. 건물이 위치한 섭지코지와 함께 둘러보기를 추천한다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c5cafeb0c886c6c999e535c6fab51ca7b4ecf4a76a83a149054deefb24173eac",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "2778809",
+          "request_sha256": "7003deca7856d3017bc7752fc0dacd8e189231b1be717925c985bf14c1f3520b",
+          "response_sha256": "00bf41e690935d03426d6b2f19bf38e1bdb8d2cdaf23320e3c22f3571219b080",
+          "retrieved_at": "2026-09-10T08:23:05.640000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b12f81a08e059735d30f913083b4673996c6af824ecd1930132a1046b3e6e3d",
+          "source_uri": null
+        },
+        "record_sha256": "0e8ddffa8d7ca8b67b7841a75b4c8e9788a688d07770c0d3e355b118210b3955",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "eefc2516ac71d5bc51f2564a61b6a7056884a8ffa03a507ca59ff75447ec8d59",
+    "place": {
+      "address": "제주특별자치도 서귀포시 성산읍 고성리",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+      "name_ko": "제주 글라스하우스",
+      "place_id": "public:korea:58b9ac0df5bef401a60177647166709d4e22813b1ad4f04e8e99638b7006cab6",
+      "provider_content_id": "2778809",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

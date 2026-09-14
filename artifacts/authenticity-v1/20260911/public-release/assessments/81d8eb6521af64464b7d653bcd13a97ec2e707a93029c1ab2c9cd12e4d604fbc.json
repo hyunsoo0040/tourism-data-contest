@@ -1,0 +1,942 @@
+{
+  "assessed_at": "2026-09-11T19:38:23.015541Z",
+  "assessment_sha256": "81d8eb6521af64464b7d653bcd13a97ec2e707a93029c1ab2c9cd12e4d604fbc",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 53
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 82
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "예능 '효리네 민박' 촬영지이자 테마 관광지라는 구체적 이미지가 장소에 연결되어 있으며, '제주살이의 상징'이라는 표현으로 공유되는 의미가 확인된다. 다만 이 이미지가 방문 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "예능 프로그램을 통한 장소 이미지의 표현이 한류 여행 정보로 명시되어 있다. 하나의 매체 사례가 확인되지만 반복적 유통 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:25aa06e93613db648ad463e74868264a92fbf1cf989234eaf172c6487b32c29b",
+            "appearance:5b723926f228b388cbe0544f2091f56b7957d4862123528b34511edf2c7c4f6f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 63,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 63
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "촬영지라는 대표 이미지가 안내되어 방문자가 해당 장소를 직접 경험할 수 있으나, 구도 재현·참여형 체험의 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:2814a90a66f8125b8b6582f3232a12439b9e491cccc2660066ce3249d04f7091",
+            "appearance:9519af3420b8992d87796ec03551568601a121656ce3a854b89710764c6a7d35"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 88,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 88
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:21b0466f144b8eabd95efff3ab276e9d8f724babde0b622bad0783afa53ba1bc",
+            "evidence:c87ae172f2cb4e239000a64ca3e73a472da5734ec9064d472524ada37054f9a8"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "자연생태체험 프로그램과 연중 전문가 해설 생태탐방 등 구체적인 참여·탐방 활동이 확인된다. 이것이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 식물 전시·보전 기관으로서의 자연 생태 정보뿐이며, 문화유산·역사 원형과의 접촉을 뒷받침하는 내용이 없다. 희귀 식물 보전은 문화유산 접촉 근거로 볼 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관·지정 연혁(2000년 환경부 지정)은 간단한 사실이고, 이 장소의 구체적 역사·사건·인물 맥락을 탐구하게 하는 근거는 없다. HISTORICAL_NARRATIVE에 해당하는 역사 서사가 확인되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 식물 보전·자연 탐방은 문화적 전승이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "자연생태체험학습관과 생태 해설은 자연 학습이지, 유산·전통과 연결된 역사 해설이 아니다. H.d가 요구하는 원형·전통 연계 해설의 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6",
+          "quote": {
+            "end": 567,
+            "method": "EXACT",
+            "original": "예능 제주살이의 상징이 된 효리네 민박 촬영지로 제주의 자생 수종과 아열대 식물 등 1,100여 종의 식물이 식재, 전시되어 있는 수목원이다.",
+            "start": 488,
+            "submitted": "예능 제주살이의 상징이 된 효리네 민박 촬영지로 제주의 자생 수종과 아열대 식물 등 1,100여 종의 식물이 식재, 전시되어 있는 수목원이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "616ee450c45db850b0aa2be0e205ce08da2a1cc8785b3a3b7c8e8d0bc78d5b2c"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "예능 '효리네 민박' 촬영지이자 테마 관광지라는 구체적 이미지가 장소에 연결되어 있으며, '제주살이의 상징'이라는 표현으로 공유되는 의미가 확인된다. 다만 이 이미지가 방문 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6",
+          "quote": {
+            "end": 514,
+            "method": "EXACT",
+            "original": "◎ 한류의 매력을 만나는 여행 정보 - 예능 제주살이의 상징이 된 효리네 민박 촬영지로",
+            "start": 466,
+            "submitted": "◎ 한류의 매력을 만나는 여행 정보 - 예능 제주살이의 상징이 된 효리네 민박 촬영지로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "616ee450c45db850b0aa2be0e205ce08da2a1cc8785b3a3b7c8e8d0bc78d5b2c"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "예능 프로그램을 통한 장소 이미지의 표현이 한류 여행 정보로 명시되어 있다. 하나의 매체 사례가 확인되지만 반복적 유통 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6",
+          "quote": {
+            "end": 567,
+            "method": "EXACT",
+            "original": "예능 제주살이의 상징이 된 효리네 민박 촬영지로 제주의 자생 수종과 아열대 식물 등 1,100여 종의 식물이 식재, 전시되어 있는 수목원이다.",
+            "start": 488,
+            "submitted": "예능 제주살이의 상징이 된 효리네 민박 촬영지로 제주의 자생 수종과 아열대 식물 등 1,100여 종의 식물이 식재, 전시되어 있는 수목원이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "616ee450c45db850b0aa2be0e205ce08da2a1cc8785b3a3b7c8e8d0bc78d5b2c"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "촬영지라는 대표 이미지가 안내되어 방문자가 해당 장소를 직접 경험할 수 있으나, 구도 재현·참여형 체험의 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:21b0466f144b8eabd95efff3ab276e9d8f724babde0b622bad0783afa53ba1bc",
+          "quote": {
+            "end": 11,
+            "method": "EXACT",
+            "original": "자연생태체험 프로그램",
+            "start": 0,
+            "submitted": "자연생태체험 프로그램",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "7b840c4179b7083ccb302a80666a49c19380950f989a4cd2c35bccf5a1f30e28"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:c87ae172f2cb4e239000a64ca3e73a472da5734ec9064d472524ada37054f9a8",
+          "quote": {
+            "end": 784,
+            "method": "EXACT",
+            "original": "해마다 생태탐방 프로그램도 운영해 시민들의 호응을 얻고 있는데요, 한라산연구소 곶자왈 자연생태탐방 프로그램은 테마별로 한라수목원과 제주 고유의 자연을 탐방하며 자연생태 전문가의 해설을 들을 수 있습니다.",
+            "start": 671,
+            "submitted": "해마다 생태탐방 프로그램도 운영해 시민들의 호응을 얻고 있는데요, 한라산연구소 곶자왈 자연생태탐방 프로그램은 테마별로 한라수목원과 제주 고유의 자연을 탐방하며 자연생태 전문가의 해설을 들을 수 있습니다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "d9b4058372ded5496a55c9fc40c96b8ede39c904329994e744e084ca73826383"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "자연생태체험 프로그램과 연중 전문가 해설 생태탐방 등 구체적인 참여·탐방 활동이 확인된다. 이것이 방문 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6",
+            "quote": "가을에는 수목원 곳곳의 나무들이 붉고 노란 단풍으로 물들어 제주에서 색다른 가을 풍경을 만날 수 있다."
+          },
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:c87ae172f2cb4e239000a64ca3e73a472da5734ec9064d472524ada37054f9a8",
+            "quote": "약 20만제곱미터의 면적에 제주도내 자생식물과 도외수종을 포함한 1,100종 10만여 그루의 식물들이 울창한 숲을 이룹니다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "가을 단풍의 형형색색 풍경과 울창한 숲길이라는 구별되는 시각적 성격이 공식 소개에서 확인된다. 일관된 경관 표현의 근거이나 장면 전체를 지배한다고 단정하기 어려워 수준 3으로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.a",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "AUTONOMOUS_ACTIVITY",
+            "evidence_id": "evidence:c87ae172f2cb4e239000a64ca3e73a472da5734ec9064d472524ada37054f9a8",
+            "quote": "좀 더 걷고 싶다면 광이오름 정상까지 올라보는 건 어떨까요? 1.7 킬로미터의 산책로를 따라 맑은 공기를 마시며 삼림욕을 즐길 수 있습니다."
+          },
+          {
+            "claim": "AUTONOMOUS_ACTIVITY",
+            "evidence_id": "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6",
+            "quote": "야외 산책로는 오후 11시까지 관람 가능해 밤 산책을 하기에도 좋다."
+          }
+        ],
+        "key": "R.a",
+        "level": 3,
+        "reason": "산책로 선택, 광이오름 연계 확장, 야간 산책 가능 등 방문자가 자신의 방식으로 탐색할 기회가 확인된다. 자율 탐색이 경험의 중심이라는 근거는 없어 수준 3으로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.b",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "ENVIRONMENT",
+            "evidence_id": "evidence:c87ae172f2cb4e239000a64ca3e73a472da5734ec9064d472524ada37054f9a8",
+            "quote": "나무들과 들꽃, 약초들이 뿜어내는 향은 전국 수목원 중에서도 최고인데요, 수목의 향을 맡으며 걷다보면 몸도 마음도 건강해집니다."
+          },
+          {
+            "claim": "ENVIRONMENT",
+            "evidence_id": "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6",
+            "quote": "5만 평의 산림욕장은 관광객과 제주도민에게 도심 속 숲과 같은 휴식 공간이 되어준다."
+          }
+        ],
+        "key": "R.b",
+        "level": 4,
+        "reason": "20만㎡ 규모의 울창한 숲, 삼림욕장, 산책로 등 자연 환경 단서가 구체적으로 확인되며 공간 설명에서 두드러진다. 실제 심리적 회복을 단정할 수는 없지만 환경 지원 요소 자체는 수준 4에 해당한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.d",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "RELATIONAL_ACTIVITY",
+            "evidence_id": "evidence:c87ae172f2cb4e239000a64ca3e73a472da5734ec9064d472524ada37054f9a8",
+            "quote": "이곳은 제주도민과 관광객, 학생들에게 환경에 대한 정보와 자연체험학습의 기회를 제공하고 있는데요"
+          }
+        ],
+        "key": "R.d",
+        "level": 2,
+        "reason": "체험학습과 탐방 프로그램을 통한 공동 활동의 기회가 확인되지만, 교류·자기표현이 풍부하거나 중심이라는 근거는 없어 수준 2로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "7518fdb0da7feb48edf7805ecfde6338f220f5835764cc4aacf3577d54e92b0e",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "푸른 하늘과 넓은 잔디, 짙은 수목의 대비가 있으나 특별한 연출보다는 평이한 공원 구도",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:25aa06e93613db648ad463e74868264a92fbf1cf989234eaf172c6487b32c29b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "798ec2a3ced5da0ea26b68a7bc20a2308a3bc3ad146400fe31b24a27b46bc0bf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3541998_2",
+          "request_sha256": "b3b5ef8c99d2b74d468c54ec89f0942cd8f3e1ce590971285dea13d913b137c0",
+          "response_sha256": "df0dbcfc8440f9f4aade580f6b2be7a32192997282d248d18ebdf42d4a4fdca3",
+          "retrieved_at": "2026-09-10T08:30:00.787957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a4abb9b562ae65f409d3df42bb5ce199c6d5b413f0aaef509cfd63a61d534fb7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/98/3541998_image2_1.jpg"
+        },
+        "record_sha256": "0638a1dab6ff48f73cd3748e3a8ce70dfc38b8ff05830e0e6b5f2c77c6ca87c6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 녹지 잔디밭과 울창한 수림, 트인 하늘이 장면 전체를 지배하며 자연 환경 단서가 매우 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2814a90a66f8125b8b6582f3232a12439b9e491cccc2660066ce3249d04f7091",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "798ec2a3ced5da0ea26b68a7bc20a2308a3bc3ad146400fe31b24a27b46bc0bf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3541998_2",
+          "request_sha256": "b3b5ef8c99d2b74d468c54ec89f0942cd8f3e1ce590971285dea13d913b137c0",
+          "response_sha256": "df0dbcfc8440f9f4aade580f6b2be7a32192997282d248d18ebdf42d4a4fdca3",
+          "retrieved_at": "2026-09-10T08:30:00.787957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a4abb9b562ae65f409d3df42bb5ce199c6d5b413f0aaef509cfd63a61d534fb7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/98/3541998_image2_1.jpg"
+        },
+        "record_sha256": "bca25dc0ea825bed4dcfc772600aff89b79e0a84cb84a773a354c680b9bfc9a6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "중앙의 원형 조형물과 돌 재질 요소가 약간 보이나 전통적 외관·재료의 특성은 미미함",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:56becedf7f450d84263b5b598e8af9fa149f1dcc1cf1004cc5c20dac34d3f752",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "798ec2a3ced5da0ea26b68a7bc20a2308a3bc3ad146400fe31b24a27b46bc0bf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3541998_2",
+          "request_sha256": "b3b5ef8c99d2b74d468c54ec89f0942cd8f3e1ce590971285dea13d913b137c0",
+          "response_sha256": "df0dbcfc8440f9f4aade580f6b2be7a32192997282d248d18ebdf42d4a4fdca3",
+          "retrieved_at": "2026-09-10T08:30:00.787957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a4abb9b562ae65f409d3df42bb5ce199c6d5b413f0aaef509cfd63a61d534fb7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/98/3541998_image2_1.jpg"
+        },
+        "record_sha256": "0787e26727d393874e1be01a262ab8757e421275f71d547b8405b6c6fa9c5c0b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "원형 온실 구조와 차광막의 빛·그림자 대비가 두드러지며, 풍부한 녹색 식물 층이 장면의 시각적 성격을 강하게 형성함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5b723926f228b388cbe0544f2091f56b7957d4862123528b34511edf2c7c4f6f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0e480ae48b540335608e1ffb5ebdbf0ef27616fd91cdea4ca80b94a64b1cdf99",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3541996_20",
+          "request_sha256": "b3b5ef8c99d2b74d468c54ec89f0942cd8f3e1ce590971285dea13d913b137c0",
+          "response_sha256": "df0dbcfc8440f9f4aade580f6b2be7a32192997282d248d18ebdf42d4a4fdca3",
+          "retrieved_at": "2026-09-10T08:30:00.787957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e4138bb057b1dddfc14da713fba8cd6432a9c08453ba5beec5d21cc908d2ff00",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/96/3541996_image2_1.jpg"
+        },
+        "record_sha256": "2d1e88bb4f79e7cc997b02bd035ef3c8f9f50ce149cd7c7a16a7d02954b72310",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "온실 내부이지만 울창한 초본·양치류·관엽식물과 돌 재단 화단 등 자연스러운 식생 환경이 화면을 지배적으로 채움.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9519af3420b8992d87796ec03551568601a121656ce3a854b89710764c6a7d35",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0e480ae48b540335608e1ffb5ebdbf0ef27616fd91cdea4ca80b94a64b1cdf99",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3541996_20",
+          "request_sha256": "b3b5ef8c99d2b74d468c54ec89f0942cd8f3e1ce590971285dea13d913b137c0",
+          "response_sha256": "df0dbcfc8440f9f4aade580f6b2be7a32192997282d248d18ebdf42d4a4fdca3",
+          "retrieved_at": "2026-09-10T08:30:00.787957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e4138bb057b1dddfc14da713fba8cd6432a9c08453ba5beec5d21cc908d2ff00",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/96/3541996_image2_1.jpg"
+        },
+        "record_sha256": "5ea83f39e336e4ad8c6e1e94801431660aaa18d5decebd71e0351998a5f57c2d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "석재 축대와 자연석 배치 등 일부 재료에서 전통적 외관 단서가 희미하게 보이나, 전체는 현대적 유리·금속 온실 구조가 중심.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c91c8d403008a21edc02e146994dca79e45c185a7dd7fb71c9191b30ce3b4bea",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0e480ae48b540335608e1ffb5ebdbf0ef27616fd91cdea4ca80b94a64b1cdf99",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3541996_20",
+          "request_sha256": "b3b5ef8c99d2b74d468c54ec89f0942cd8f3e1ce590971285dea13d913b137c0",
+          "response_sha256": "df0dbcfc8440f9f4aade580f6b2be7a32192997282d248d18ebdf42d4a4fdca3",
+          "retrieved_at": "2026-09-10T08:30:00.787957Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e4138bb057b1dddfc14da713fba8cd6432a9c08453ba5beec5d21cc908d2ff00",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/96/3541996_image2_1.jpg"
+        },
+        "record_sha256": "bbd62e0a3769ee0046a041e5ba34fdacddbceed57bc71d7700ccfbbb8a12df79",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1c547b1487b58af4b544c8e886c9cd2809c76f3e2beba8c84ee4ef6e99c16fd1",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127514",
+          "request_sha256": "f828afd0a5d44fca040ad98ba0025edc395d69e2186dfb9259c9e7fa8d1740a8",
+          "response_sha256": "1de094fbcf9b90d59ccc00e955215386a877faf78cc1a14eac2431d0f08aa7f5",
+          "retrieved_at": "2026-09-10T08:30:00.441502Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "03d35dca3e647b5b053dea66917d4f088940b643e0ec574dfe0c2c011e95a945",
+          "source_uri": null
+        },
+        "record_sha256": "49994858b39e709c947cbd20034a7ddbb48ebc32db80ccc3ed141d768ebfd0d2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:21b0466f144b8eabd95efff3ab276e9d8f724babde0b622bad0783afa53ba1bc",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "127514",
+          "request_sha256": "f828afd0a5d44fca040ad98ba0025edc395d69e2186dfb9259c9e7fa8d1740a8",
+          "response_sha256": "58a31663a2bf1e1f5ae9aae5cadcdc9d81cdfcbcf9c1bdbcd5eabadee0f2e056",
+          "retrieved_at": "2026-09-10T07:27:37.387628Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8c8e59257f31ced23dd127c139b709a2ca050615667ecbf1d7c51354b0213fb1",
+          "source_uri": null
+        },
+        "record_sha256": "7b840c4179b7083ccb302a80666a49c19380950f989a4cd2c35bccf5a1f30e28",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "자연생태체험 프로그램"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:61d425da6c074fd7f98a7f593bce44090de0daecc838352d504ab1cd8f0bed33",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127514",
+          "request_sha256": "f828afd0a5d44fca040ad98ba0025edc395d69e2186dfb9259c9e7fa8d1740a8",
+          "response_sha256": "1de094fbcf9b90d59ccc00e955215386a877faf78cc1a14eac2431d0f08aa7f5",
+          "retrieved_at": "2026-09-10T08:30:00.441502Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ccd6ebf9b2d82dffeab5f37f1d0f40baa3a9be9bb4a3cff1f6d4fac382590658",
+          "source_uri": null
+        },
+        "record_sha256": "04d0a151c7d4daf2a6c7a6efc845ba27ebcb4e706d3dbfaa5c6c8bec1d91f7a5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c87ae172f2cb4e239000a64ca3e73a472da5734ec9064d472524ada37054f9a8",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "255",
+          "request_sha256": "b7f7d8d82f6d92425ea4fdd4347153398d60d581fe80d88369fc442d5912a8a8",
+          "response_sha256": "a4fd340fe1b9e9079d66c8ea200fdc45974510a1064aaa43e5f8c4557b920aef",
+          "retrieved_at": "2026-09-10T08:30:01.209604Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-06-08T23:53:40Z",
+          "source_record_sha256": "b33afca69d8f06c50220c6a73ca06ac732a83f20709627d89730d5f8e67ff26f",
+          "source_uri": null
+        },
+        "record_sha256": "d9b4058372ded5496a55c9fc40c96b8ede39c904329994e744e084ca73826383",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "도심 속 힐링숲, 한라수목원 사계절 내내 다양한 나무들과 들꽃들로 가득한 곳. 산책로를 따라 시원한 삼림욕을 즐길 수 있는 숲. 희귀멸종위기 식물들의 안식처이자 도심 속 자연학습장으로 각광받고 있는 힐링 여행지, 한라수목원입니다. 시민들의 휴식 공간이자, 많은 관광객들이 찾는 한라수목원. 약 20만제곱미터의 면적에 제주도내 자생식물과 도외수종을 포함한 1,100종 10만여 그루의 식물들이 울창한 숲을 이룹니다. 교목원과 관목원, 희귀 특산수종원, 수생식물원을 비롯한 열 개의 전문 수종 전시원과 온실, 삼림욕장, 체력단련시설 등 각종 편의시설을 갖추고 있는 명품 숲길입니다. 나무들과 들꽃, 약초들이 뿜어내는 향은 전국 수목원 중에서도 최고인데요, 수목의 향을 맡으며 걷다보면 몸도 마음도 건강해집니다. 좀 더 걷고 싶다면 광이오름 정상까지 올라보는 건 어떨까요? 1.7 킬로미터의 산책로를 따라 맑은 공기를 마시며 삼림욕을 즐길 수 있습니다. 한라수목원의 또 다른 볼거리, 자연생태체험학습관. 이곳은 제주도민과 관광객, 학생들에게 환경에 대한 정보와 자연체험학습의 기회를 제공하고 있는데요~ 해조류, 어류, 제주의 곤충과 양서류, 파충류 등을 비롯해 한라산의 식물과 형성과정 등을 살펴볼 수 있습니다. 연중 환경에 대한 전시회도 열리고 있어 아이들에게도 좋은 환경 학습의 장이 되고 있습니다. 해마다 생태탐방 프로그램도 운영해 시민들의 호응을 얻고 있는데요, 한라산연구소 곶자왈 자연생태탐방 프로그램은 테마별로 한라수목원과 제주 고유의 자연을 탐방하며 자연생태 전문가의 해설을 들을 수 있습니다. 숲이 전해오는 향긋한 냄새. 걷는 내내 이어지는 상쾌한 기분. 철따라 피고 지는 수목과 들꽃들의 향연. 아름다운 새소리와 함께 늘 푸른 제주의 자연을 만끽할 수 있는 제주의 정원, 한라수목원입니다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:de311f93afbee30133a522084a11eac429b61237452dea16dac0fdf8605747e6",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127514",
+          "request_sha256": "03998d2a0963dc05d03ce3462f4b9c15c6fafcbd855043ac27699c2eab07c88b",
+          "response_sha256": "095d2c59b4df209b5edc8246a9092029d7537bffe20a9c6fb94757fe5f7db641",
+          "retrieved_at": "2026-09-10T07:27:37.045658Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-09-08T00:14:45Z",
+          "source_record_sha256": "13a91cc1f568bf69b124d39e2a7e0b5485a6ec1f244a01a4e9484f5d4295719f",
+          "source_uri": null
+        },
+        "record_sha256": "616ee450c45db850b0aa2be0e205ce08da2a1cc8785b3a3b7c8e8d0bc78d5b2c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "제주시 연동 1100 도로변 광이 오름 기슭에 위치한 한라수목원은 제주도 자생 수종과 아열대식물 등의 식물들이 식재, 전시되어 있는 수목원으로 학생 및 전문인들을 위한 교육과 연구의 장 역할을 하고 있으며, 테마 관광지로도 사랑받고 있다. 특히 2000년에 환경부는 이곳을 멸종 위기 보호야생식물의 서식지 외 보전 기관으로 지정했다. 환경부가 멸종 위기 식물로 지정한 나도 풍란, 한란과 파초일엽, 갯대추 등 보호 대상 식물을 포함하여 총 1,321종(목본류 530종, 초본류 791종), 10만여 본을 전시한다. 제주도 자생식물의 유전자원 보존 및 학습·연구의 장을 제공하고 도·시민에게 휴식 공간 제공 및 관광자원으로 활용하고 있다. 가을에는 수목원 곳곳의 나무들이 붉고 노란 단풍으로 물들어 제주에서 색다른 가을 풍경을 만날 수 있다. 울창한 숲길을 따라 형형색색의 단풍이 이어져 여유롭게 산책하며 계절의 정취를 느끼기 좋다. ◎ 한류의 매력을 만나는 여행 정보 - 예능 제주살이의 상징이 된 효리네 민박 촬영지로 제주의 자생 수종과 아열대 식물 등 1,100여 종의 식물이 식재, 전시되어 있는 수목원이다. 멸종 위기종과 희귀한 식물도 많지만 가볍게 산책하며 힐링하기 좋다. 5만 평의 산림욕장은 관광객과 제주도민에게 도심 속 숲과 같은 휴식 공간이 되어준다. 야외 산책로는 오후 11시까지 관람 가능해 밤 산책을 하기에도 좋다."
+      }
+    ],
+    "parent_source_sha256": "abbceb745f2ba2218a4fa6ac411c4790aaf5ead5f3ae275a4fe7e12ef044860a",
+    "place": {
+      "address": "제주특별자치도 제주시 수목원길 72 (연동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+      "name_ko": "한라수목원",
+      "place_id": "public:korea:f2badc517966744eb9312e4e4881dc84a3e2cb148a679172655f096db3bb82e9",
+      "provider_content_id": "127514",
+      "region_code": "50110",
+      "region_name": "제주특별자치도 제주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,922 @@
+{
+  "assessed_at": "2026-09-11T17:33:48.488722Z",
+  "assessment_sha256": "ac7c4efbba0832f35a1f9ad5636ccc99db8fb3e831a2794153e082116f0efb38",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 56
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 77
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "일몰 바다 풍경과 낭만적 이미지가 공유되는 상징적 의미로 제시되며, 드라마 배경지로서의 이미지가 장소와 직접 연결된다. 그러나 여러 표현에서 일관된 의미 체계를 확인하는 수준까지는 근거가 부족하여 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "드라마 촬영 배경지라는 명시된 매체 표현을 통해 장소의 이미지가 유통됨을 확인할 수 있다. 반복되는 매체 표현의 근거는 없어 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:c3a103059ba45e970bbc594b8dbcf14a4882f3b7ca86f108611ce2e78704235f",
+            "appearance:c3aad550a2d95c5af6f91055415af075936fd1b9aba47958f010bb131408e4e8",
+            "appearance:d40793b23792d766199e80039bb26201d182cf7dacec6e27840153b7c6fdee96"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "드라마 속 노을 산책·고백 장면의 배경지로서 대표 장면을 현장에서 경험할 수 있음이 제시된다. 촬영·재현 활동이 직접 안내된다는 근거는 없어 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "해변공원과 생태탐방로가 자율적 탐색의 기회를 제공하며, 해양스포츠 등 자기 선택 활동도 언급된다. '자연이 주는 황홀경을 맘껏 즐길 수 있는' 표현도 여유를 지지하나 일상 이탈이 방문 경험의 중심이라는 근거는 부족하여 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:a23aff8484034811b2e06738827d102e5b4cb459112a74efdd2b03b55da720d7",
+            "appearance:e65f191e7e58268c8a8b93b59fb3b99dcfefad53be5d183fa4f5b7e65289e635",
+            "appearance:e8fc2b6cf74cd84f86f713a4e897b5e2c93f40d9f634f1e18ae2bea68208341e"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "바다·모래밭·일몰 조망, 생태탐방로 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡 수준에 대한 근거는 없어 환경이 장면을 지배한다고 단정하기 어렵다.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "패들보드·카이트보딩 등 사시사철 지속 참여 가능한 신체 활동과 얕은 수심에서의 아이들 물놀이, 생태탐방로 탐방이 제시된다. 참여·도전이 방문 경험 전체의 중심이라는 근거는 없어 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "자료는 해수욕장의 모래와 경관을 소개하지만 확인된 실제 원형·유산(문화유산·사적 등)과의 접촉에 대한 근거가 없다. 자연 지형이 문화유산임을 뒷받침하는 정보가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에 '오랜 풍화작용'이라는 지질학적 배경 설명이 있으나 이는 자연 형성 과정의 간단한 언급일 뿐, 이 장소의 구체적 사건·인물·역사 맥락을 탐구하게 하는 근거로는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 제공되지 않았다. 해양스포츠 활동이 전통 전승에 해당한다고 보기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설·학습 프로그램에 대한 근거가 없다. '생태탐방로'가 언급되지만 이것이 역사적 원형 해설인지 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+          "quote": {
+            "end": 622,
+            "method": "EXACT",
+            "original": "붉게 물든 하늘과 잔잔한 파도가 어우러진 해변 풍경은 보는 이로 하여금 절로 감탄을 자아내며, 드라마 속 감정을 더욱 깊이 있게 전해준다.",
+            "start": 545,
+            "submitted": "붉게 물든 하늘과 잔잔한 파도가 어우러진 해변 풍경은 보는 이로 하여금 절로 감탄을 자아내며, 드라마 속 감정을 더욱 깊이 있게 전해준다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b39762f719bc6d2b523dad43e9e6e05c745e6b2a4c0c58553d3a2b620dc3f005"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "일몰 바다 풍경과 낭만적 이미지가 공유되는 상징적 의미로 제시되며, 드라마 배경지로서의 이미지가 장소와 직접 연결된다. 그러나 여러 표현에서 일관된 의미 체계를 확인하는 수준까지는 근거가 부족하여 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+          "quote": {
+            "end": 544,
+            "method": "EXACT",
+            "original": "드라마 송중기와 천우희 주연의 드라마 에서 성제연과 선우해가 노을이 지는 바닷가를 함께 거닐다, 제연이 선우해에게 고백하는 장면의 배경이 바로 이곳이다.",
+            "start": 459,
+            "submitted": "드라마 송중기와 천우희 주연의 드라마 에서 성제연과 선우해가 노을이 지는 바닷가를 함께 거닐다, 제연이 선우해에게 고백하는 장면의 배경이 바로 이곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b39762f719bc6d2b523dad43e9e6e05c745e6b2a4c0c58553d3a2b620dc3f005"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "드라마 촬영 배경지라는 명시된 매체 표현을 통해 장소의 이미지가 유통됨을 확인할 수 있다. 반복되는 매체 표현의 근거는 없어 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+          "quote": {
+            "end": 544,
+            "method": "EXACT",
+            "original": "드라마 송중기와 천우희 주연의 드라마 에서 성제연과 선우해가 노을이 지는 바닷가를 함께 거닐다, 제연이 선우해에게 고백하는 장면의 배경이 바로 이곳이다.",
+            "start": 459,
+            "submitted": "드라마 송중기와 천우희 주연의 드라마 에서 성제연과 선우해가 노을이 지는 바닷가를 함께 거닐다, 제연이 선우해에게 고백하는 장면의 배경이 바로 이곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b39762f719bc6d2b523dad43e9e6e05c745e6b2a4c0c58553d3a2b620dc3f005"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "드라마 속 노을 산책·고백 장면의 배경지로서 대표 장면을 현장에서 경험할 수 있음이 제시된다. 촬영·재현 활동이 직접 안내된다는 근거는 없어 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+          "quote": {
+            "end": 280,
+            "method": "EXACT",
+            "original": "다대포해수욕장에 해변공원과 생태탐방로가 생기고 난 후 이곳을 찾는 사람들이 훨씬 많아졌다.",
+            "start": 230,
+            "submitted": "다대포해수욕장에 해변공원과 생태탐방로가 생기고 난 후 이곳을 찾는 사람들이 훨씬 많아졌다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b39762f719bc6d2b523dad43e9e6e05c745e6b2a4c0c58553d3a2b620dc3f005"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "해변공원과 생태탐방로가 자율적 탐색의 기회를 제공하며, 해양스포츠 등 자기 선택 활동도 언급된다. '자연이 주는 황홀경을 맘껏 즐길 수 있는' 표현도 여유를 지지하나 일상 이탈이 방문 경험의 중심이라는 근거는 부족하여 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+          "quote": {
+            "end": 41,
+            "method": "EXACT",
+            "original": "낙동강과 남해안이 만나 양질의 모래밭을 만든 곳, 일출과 일몰 조망지이다.",
+            "start": 0,
+            "submitted": "낙동강과 남해안이 만나 양질의 모래밭을 만든 곳, 일출과 일몰 조망지이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b39762f719bc6d2b523dad43e9e6e05c745e6b2a4c0c58553d3a2b620dc3f005"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "바다·모래밭·일몰 조망, 생태탐방로 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡 수준에 대한 근거는 없어 환경이 장면을 지배한다고 단정하기 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+          "quote": {
+            "end": 229,
+            "method": "EXACT",
+            "original": "최근에는 패들보드나 카이트보딩 등 해양스포츠를 즐기는 사람들로 사시사철 활기가 넘치는 곳이다.",
+            "start": 177,
+            "submitted": "최근에는 패들보드나 카이트보딩 등 해양스포츠를 즐기는 사람들로 사시사철 활기가 넘치는 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "b39762f719bc6d2b523dad43e9e6e05c745e6b2a4c0c58553d3a2b620dc3f005"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "패들보드·카이트보딩 등 사시사철 지속 참여 가능한 신체 활동과 얕은 수심에서의 아이들 물놀이, 생태탐방로 탐방이 제시된다. 참여·도전이 방문 경험 전체의 중심이라는 근거는 없어 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 구체적 근거가 없다. '아이들이 놀기에 적격'은 관계 활동을 직접 뒷받침하지 않는다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+            "quote": "꿈의 낙조분수는 화려한 조명과 음악이 춤을 추는 분수와 어우러져 장관을 연출한다."
+          },
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+            "quote": "일출과 일몰 조망지이다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "일출·일몰 조망, 분수쇼의 조명·음악 연출 등 장소를 구별하는 시각적 성격이 구체적으로 기술되어 있다. 일관된 연출이 전체 장면을 지배한다는 수준의 근거는 아니어서 수준 3이다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "c3b4bcb87988fb4a3b7d31f539da6f017e49c2efff89c385b495801597def392",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 시각적 단서가 직접 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:022899fed60f540e963ff57be2e788449902e559596a8354557a6faa704bc76b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c850c585598ea9a56100122974f61931507c0bf2cb1fe108cf5dcce157980a2e",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 사하구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3458404",
+          "request_sha256": "daf7e8ef43ca0da238b4089f807eaa4a238f3035a70a3bde1e710e1a6c3c6c82",
+          "response_sha256": "4323984709d88af9b2eea4442886704dbe0e6cc5ba99303e44b48a1044401998",
+          "retrieved_at": "2026-09-11T02:05:55.767567Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "258e7749c7be2a05848e4bb73d66878713b414bed2b7e56c7e71e29e8b27189a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/04/3458404.jpg"
+        },
+        "record_sha256": "fedcc86f02690f53e92dfe6c10e09f4b11d08601e4ea0ec5c6c0625ef891d0d2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 시각적 단서가 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:34ea4466309458e360e4cce3fc2b29d9780080f3c97a1ec2838f0d612a60e648",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a4baf342918c8627bc4c6487cb8a06d197864b052d1879832287b3de9e53c7ff",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 사하구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2802914",
+          "request_sha256": "daf7e8ef43ca0da238b4089f807eaa4a238f3035a70a3bde1e710e1a6c3c6c82",
+          "response_sha256": "4323984709d88af9b2eea4442886704dbe0e6cc5ba99303e44b48a1044401998",
+          "retrieved_at": "2026-09-11T02:05:55.767567Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "34f4f0739c4c30a5ceddae7cfbc29d50ad125c61299d89eb592f56fae91639d7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/14/2802914.jpg"
+        },
+        "record_sha256": "6ad43111a15c6ec603e37ea723c5c10dbb6d72b96ac8a651b411913a0a84809c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "모래사장, 파도, 먼 해안선과 트인 하늘이 화면 대부분을 차지하며 자연 경관이 장면 전체를 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a23aff8484034811b2e06738827d102e5b4cb459112a74efdd2b03b55da720d7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9b6bb1784c53643ecca3150b5f6d6b914dc683d72b2524bf4820879cbed2781f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3497108_1",
+          "request_sha256": "8b9d2d1a56cb13ab4b4c2b65ab3ff91f38bc0f9451aba877a6002bbecf19230a",
+          "response_sha256": "b800b3d409eac73738bf848c8d84701ae4496dc764bbd3b287e7461b72b6e0c7",
+          "retrieved_at": "2026-09-11T02:05:54.665079Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "80455619af80a8c383ef74e314beef7c613e604a0a5b1d4ee6393112f0e920e2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/08/3497108_image2_1.jpg"
+        },
+        "record_sha256": "ce71d9f05b81a8ebe23073916bfe14cc3887753f783bac9af05a9e85631ae3e8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "넓은 하늘과 바다를 배경으로 일렬로 놓인 무지개색 의자가 강한 대비를 이루며 장면의 시각적 중심이 되고, 여백 중심의 미니멀한 구도가 돋보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c3a103059ba45e970bbc594b8dbcf14a4882f3b7ca86f108611ce2e78704235f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9b6bb1784c53643ecca3150b5f6d6b914dc683d72b2524bf4820879cbed2781f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3497108_1",
+          "request_sha256": "8b9d2d1a56cb13ab4b4c2b65ab3ff91f38bc0f9451aba877a6002bbecf19230a",
+          "response_sha256": "b800b3d409eac73738bf848c8d84701ae4496dc764bbd3b287e7461b72b6e0c7",
+          "retrieved_at": "2026-09-11T02:05:54.665079Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "80455619af80a8c383ef74e314beef7c613e604a0a5b1d4ee6393112f0e920e2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/08/3497108_image2_1.jpg"
+        },
+        "record_sha256": "769872f901253e9a218c0adb9cf15616a8dd5a30bc37c3bff62aac5db3f96d85",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "수폕선을 중심으로 한 안정된 구도에 차분한 청색 하늘과 연갈빛 수변의 절제된 색조가 조화로운 시각적 성격을 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c3aad550a2d95c5af6f91055415af075936fd1b9aba47958f010bb131408e4e8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c850c585598ea9a56100122974f61931507c0bf2cb1fe108cf5dcce157980a2e",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 사하구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3458404",
+          "request_sha256": "daf7e8ef43ca0da238b4089f807eaa4a238f3035a70a3bde1e710e1a6c3c6c82",
+          "response_sha256": "4323984709d88af9b2eea4442886704dbe0e6cc5ba99303e44b48a1044401998",
+          "retrieved_at": "2026-09-11T02:05:55.767567Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "258e7749c7be2a05848e4bb73d66878713b414bed2b7e56c7e71e29e8b27189a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/04/3458404.jpg"
+        },
+        "record_sha256": "40ffea32bde1fd42a4640d68cf8a986e8c6f833f4c360c020f79b26e10660c54",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "노을의 강렬한 태양과 수면 반사, 어두운 실루엣 인물이 장면 전체를 지배하며 극적인 역광 구도가 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d40793b23792d766199e80039bb26201d182cf7dacec6e27840153b7c6fdee96",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a4baf342918c8627bc4c6487cb8a06d197864b052d1879832287b3de9e53c7ff",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 사하구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2802914",
+          "request_sha256": "daf7e8ef43ca0da238b4089f807eaa4a238f3035a70a3bde1e710e1a6c3c6c82",
+          "response_sha256": "4323984709d88af9b2eea4442886704dbe0e6cc5ba99303e44b48a1044401998",
+          "retrieved_at": "2026-09-11T02:05:55.767567Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "34f4f0739c4c30a5ceddae7cfbc29d50ad125c61299d89eb592f56fae91639d7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/14/2802914.jpg"
+        },
+        "record_sha256": "49aa74a44842045c100f50e41046f852fc42d7bb34e70ab83802e186ac7fbfb3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 요소가 보이지 않으며, 의자와 해변은 현대적·설치적 외관임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e3445b68fe72c878de3d5268e23857ab7e07ee0d5b60e684b42698fbc9fa5ae8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9b6bb1784c53643ecca3150b5f6d6b914dc683d72b2524bf4820879cbed2781f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3497108_1",
+          "request_sha256": "8b9d2d1a56cb13ab4b4c2b65ab3ff91f38bc0f9451aba877a6002bbecf19230a",
+          "response_sha256": "b800b3d409eac73738bf848c8d84701ae4496dc764bbd3b287e7461b72b6e0c7",
+          "retrieved_at": "2026-09-11T02:05:54.665079Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "80455619af80a8c383ef74e314beef7c613e604a0a5b1d4ee6393112f0e920e2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/08/3497108_image2_1.jpg"
+        },
+        "record_sha256": "74df8427db989a28d65b4c99b8dc56fd268ce56d4ea96c45fd0e818bfc3e9afc",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 바다, 갯벌과 모래톱, 자갈 돌이 흩어진 해안, 원경의 산등성이가 장면 전체를 지배하는 자연 경관이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e65f191e7e58268c8a8b93b59fb3b99dcfefad53be5d183fa4f5b7e65289e635",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "c850c585598ea9a56100122974f61931507c0bf2cb1fe108cf5dcce157980a2e",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 사하구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3458404",
+          "request_sha256": "daf7e8ef43ca0da238b4089f807eaa4a238f3035a70a3bde1e710e1a6c3c6c82",
+          "response_sha256": "4323984709d88af9b2eea4442886704dbe0e6cc5ba99303e44b48a1044401998",
+          "retrieved_at": "2026-09-11T02:05:55.767567Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "258e7749c7be2a05848e4bb73d66878713b414bed2b7e56c7e71e29e8b27189a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/04/3458404.jpg"
+        },
+        "record_sha256": "6bfe5a96062c70a4da9bb9ee875bac4be9d62f151cada0695ec98a3640f30c70",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 바다와 노을 지는 하늘, 수변 환경이 화면 대부분을 차지하며 트인 자연 경관이 장면을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e8fc2b6cf74cd84f86f713a4e897b5e2c93f40d9f634f1e18ae2bea68208341e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "a4baf342918c8627bc4c6487cb8a06d197864b052d1879832287b3de9e53c7ff",
+        "match_basis": [
+          "공식 촬영지역 부산광역시 사하구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2802914",
+          "request_sha256": "daf7e8ef43ca0da238b4089f807eaa4a238f3035a70a3bde1e710e1a6c3c6c82",
+          "response_sha256": "4323984709d88af9b2eea4442886704dbe0e6cc5ba99303e44b48a1044401998",
+          "retrieved_at": "2026-09-11T02:05:55.767567Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "34f4f0739c4c30a5ceddae7cfbc29d50ad125c61299d89eb592f56fae91639d7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/14/2802914.jpg"
+        },
+        "record_sha256": "f5bc1f9dab18c54af0688f7a5b019b8a570a8a071a7a4b5c69b147d77188d487",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:674e70fe8d52dfe66bae7ad1c4354a0c6b78b50f9647dfb3925d386128fd498b",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "126079",
+          "request_sha256": "9fb1ba3361d720b4fb4d305f08100a9516e4b58771abca46d1d8acef638e32e5",
+          "response_sha256": "2ac6872847e32d91560151479100a3f67bd6ac11120e8ee13a1b43192dcd2522",
+          "retrieved_at": "2026-09-10T16:51:20.928551Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-09T06:06:04Z",
+          "source_record_sha256": "78ca7f89f41a291d7a70a1164fb4070bf39cc360ef41dc927fc6b2e59064fb76",
+          "source_uri": null
+        },
+        "record_sha256": "b39762f719bc6d2b523dad43e9e6e05c745e6b2a4c0c58553d3a2b620dc3f005",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "낙동강과 남해안이 만나 양질의 모래밭을 만든 곳, 일출과 일몰 조망지이다. 대포해수욕장은 자연이 주는 황홀경을 맘껏 즐길 수 있는 기분 좋은 장소이다. 다대포 해수욕장의 희고 고운 모래는 오랜 풍화작용 덕에 매우 부드러운 것이 특징이다. 또한 다대포해수욕장은 수심이 얕고 수온이 차지 않아 아이들이 놀기에 적격이다. 최근에는 패들보드나 카이트보딩 등 해양스포츠를 즐기는 사람들로 사시사철 활기가 넘치는 곳이다. 다대포해수욕장에 해변공원과 생태탐방로가 생기고 난 후 이곳을 찾는 사람들이 훨씬 많아졌다. 해수욕장 입구에 드넓은 광장이 펼쳐지고 세계 최대 규모를 자랑하는 꿈의 낙조 분수와 함께 해변공원이 시작된다. 꿈의 낙조분수는 화려한 조명과 음악이 춤을 추는 분수와 어우러져 장관을 연출한다. 4월 말부터 10월까지 정기적으로 펼쳐지는 화려한 분수쇼가 아름다운 것으로 유명하다. ◎ 한류의 매력을 만나는 여행 정보 - 드라마 송중기와 천우희 주연의 드라마 에서 성제연과 선우해가 노을이 지는 바닷가를 함께 거닐다, 제연이 선우해에게 고백하는 장면의 배경이 바로 이곳이다. 붉게 물든 하늘과 잔잔한 파도가 어우러진 해변 풍경은 보는 이로 하여금 절로 감탄을 자아내며, 드라마 속 감정을 더욱 깊이 있게 전해준다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a01a6e18b2e568bbcbefa7683c078d98f0e21651f12d17d429df797336f4496b",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "126079",
+          "request_sha256": "5fe3862af1b29506c8ee3d362bca22ca681572c21dece6eb966d045c5731ac7b",
+          "response_sha256": "2783fdaeb8a498ae378a1b2d53a84066ec56c3bd28b3cf68e3879916940ebc6d",
+          "retrieved_at": "2026-09-11T02:05:53.989582Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "07d703236384ec8d58e066927a30553a245f287ba4bf7280eff04db5c0e6ab57",
+          "source_uri": null
+        },
+        "record_sha256": "5ac00de91abce243f9f727612b837f0709f6a33e2577a310fcb17c49ebb917a6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "2cb643c2d0ebc90c42561483c581488ff7fb11530a93dc8ffd6293764d62de88",
+    "place": {
+      "address": "부산광역시 사하구 몰운대1길 14",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+      "name_ko": "다대포해수욕장",
+      "place_id": "public:korea:754aa80f27a9e4b381afb7c58916216618122c48857e7fc8d383d9592c60044c",
+      "provider_content_id": "126079",
+      "region_code": "26380",
+      "region_name": "부산광역시 사하구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

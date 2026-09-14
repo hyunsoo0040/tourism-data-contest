@@ -17,6 +17,8 @@ import { ProfileRecommendationCTA } from "../features/profile/ProfileRecommendat
 import { ProfileRecoveryState } from "../features/profile/ProfileRecoveryState";
 import { ResetDraftDialog } from "../features/profile/ResetDraftDialog";
 import { ThreeAxisProfile } from "../features/profile/ThreeAxisProfile";
+import { PhotoMoodIntro } from "../features/profile/PhotoMoodIntro";
+import { ProfileStoryButton } from "../features/profile/ProfileStoryButton";
 import { createAndStorePreferenceProfile } from "../features/profile/profileSubmission";
 import {
   clearConfirmedPhotoReference,
@@ -263,6 +265,28 @@ export function ProfilePage() {
     );
   }
 
+  const editQuestion = (ordinal: number) => {
+    // Legacy v1 answers can never re-enter the v2 quiz flow: editing starts a
+    // fresh v2 questionnaire. Trip conditions are generation-independent and
+    // stay; only the v1 answers are dropped, never re-submitted.
+    const isCurrentProfile = profile !== null && questionnaireAnswersSchema.safeParse(profile.answers).success;
+    if (isCurrentProfile) {
+      updateDraft({ current_route: "/quiz", current_question: ordinal });
+      void navigate("/quiz", { state: quizNavigationState(ordinal, true) });
+      return;
+    }
+    resetDraft();
+    const conditions = tripConditionsSchema.safeParse(profile?.trip_conditions);
+    if (conditions.success) {
+      updateDraft({
+        current_route: "/quiz",
+        current_question: ordinal,
+        trip_conditions: conditions.data,
+      });
+    }
+    void navigate("/quiz", { state: quizNavigationState(ordinal) });
+  };
+
   return (
     <ProfileShell>
       <section className="panel result visible profile-result" aria-labelledby="profile-result-heading">
@@ -283,7 +307,7 @@ export function ProfilePage() {
               </div>
               <div className="match-card">
                 <div className="character-card">
-                  <span>{upstreamResult.role}</span>
+                  <span>{upstreamResult.role.split("|")[0]!.trim()} | {upstreamResult.axisLabel}</span>
                   <b>{upstreamResult.character}</b>
                   <p>{upstreamResult.lens}</p>
                 </div>
@@ -297,7 +321,7 @@ export function ProfilePage() {
         ) : null}
 
         <section className="profile-support-grid" aria-label="세부 취향 결과">
-          <ThreeAxisProfile scores={profile.scores} headingRef={meterHeadingRef} />
+          <ThreeAxisProfile scores={profile.scores} headingRef={meterHeadingRef} tieBreak={upstreamContract?.axis_tie_break} />
         </section>
 
         <div className="result-actions profile-primary-action" ref={ctaRef}>
@@ -312,10 +336,14 @@ export function ProfilePage() {
         </div>
 
         <div className="result-actions profile-actions">
+          {upstreamContract !== null ? <ProfileStoryButton profile={profile} questionnaire={upstreamContract} /> : null}
           <button type="button" className="control" onClick={() => void navigate("/photo")}>사진 추천 페이지 열기</button>
-          <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>테스트 다시하기</button>
+          <button type="button" className="control" onClick={() => editQuestion(1)}>답변 수정하기</button>
+          <button type="button" className="control" onClick={() => void navigate("/start?mode=edit")}>여행 조건 수정하기</button>
+          <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>처음부터 다시</button>
         </div>
       </section>
+      <PhotoMoodIntro />
       <ResetDraftDialog
         open={dialogOpen}
         triggerRef={resetTriggerRef}

@@ -5,9 +5,15 @@ from __future__ import annotations
 import hmac
 from datetime import date, datetime
 from enum import StrEnum
-from typing import Annotated, Literal, Self
+from typing import Annotated, Any, Literal, Self
 
-from pydantic import Field, StrictBool, model_validator
+from pydantic import (
+    Field,
+    SerializerFunctionWrapHandler,
+    StrictBool,
+    model_serializer,
+    model_validator,
+)
 
 from itda.contracts.base import (
     BasisPoints,
@@ -20,12 +26,14 @@ from itda.contracts.base import (
     Version,
     require_utc,
 )
+from itda.contracts.grounded_recommendation import GroundedInputAuthority, GroundedTripInput
 from itda.contracts.place_profile import MismatchTraitId, SubattributeId
 from itda.contracts.profile_fusion import CANONICAL_FUSION_POLICY
 from itda.domain.canonical import canonical_sha256
 
 # Kept for compatibility with callers that introspect the fusion contract.
 _ = CANONICAL_FUSION_POLICY
+
 
 def _recovery_policy():  # type: ignore[no-untyped-def]
     from itda.contracts.phase5_recovery_policy import CANONICAL_PHASE5_RECOVERY_POLICY
@@ -66,12 +74,21 @@ class RecommendationPublicReason(StrEnum):
     INVALID_RECOMMENDATION_REQUEST = "INVALID_RECOMMENDATION_REQUEST"
 
 
+class RecommendationPurpose(StrEnum):
+    SIGHTSEEING = "SIGHTSEEING"
+    FOOD = "FOOD"
+    LODGING = "LODGING"
+    MIXED = "MIXED"
+
+
 class RecommendationRequest(StrictContract):
     """Create request with optional server-owned confirmed-photo authority."""
 
     request_id: StableId
     preference_profile_id: StableId
     photo_job_id: Sha256 | None = None
+    purpose: RecommendationPurpose | None = None
+    grounded_input: GroundedTripInput | None = None
 
 
 class RecommendationErrorDetail(StrictContract):
@@ -234,8 +251,12 @@ class TravelConditionWeights(StrictContract):
 
 
 class RecommendationConfig(StrictContract):
-    schema_version: Literal["recommendation-config.v3"] = "recommendation-config.v3"
-    kernel_version: Literal["recommendation-kernel-v3"] = "recommendation-kernel-v3"
+    schema_version: Literal["recommendation-config.v3", "recommendation-config.v4"] = (
+        "recommendation-config.v3"
+    )
+    kernel_version: Literal["recommendation-kernel-v3", "recommendation-kernel-v4"] = (
+        "recommendation-kernel-v3"
+    )
     experience_fit_bp: BasisPoints = 8_000
     travel_condition_fit_bp: BasisPoints = 2_000
     condition_weights: TravelConditionWeights = TravelConditionWeights()
@@ -264,8 +285,8 @@ class RecommendationConfig(StrictContract):
             raise ValueError("mismatch guidance thresholds must be exactly 30, 45, 60")
         policy_payload = self.model_dump(mode="json", exclude={"config_sha256"})
         expected_policy = {
-            "schema_version": "recommendation-config.v3",
-            "kernel_version": "recommendation-kernel-v3",
+            "schema_version": self.schema_version,
+            "kernel_version": self.schema_version.replace("config.", "kernel-"),
             "experience_fit_bp": 8_000,
             "travel_condition_fit_bp": 2_000,
             "condition_weights": {
@@ -297,6 +318,30 @@ class RecommendationConfig(StrictContract):
 
 
 CANONICAL_RECOMMENDATION_CONFIG = RecommendationConfig()
+QUALITY_RECOMMENDATION_CONFIG = RecommendationConfig(
+    schema_version="recommendation-config.v4", kernel_version="recommendation-kernel-v4"
+)
+
+
+def observed_condition_weights(observed: tuple[bool, ...]) -> tuple[int, ...]:
+    """Redistribute 2,000 bp over observed terms with stable largest remainders."""
+    base = (400, 350, 350, 350, 300, 250)
+    if len(observed) != len(base):
+        raise ValueError("six condition observations are required")
+    total = sum(weight for weight, active in zip(base, observed, strict=True) if active)
+    if total == 0:
+        return (0,) * 6
+    weights = [
+        (weight * 2_000) // total if active else 0
+        for weight, active in zip(base, observed, strict=True)
+    ]
+    order = sorted(
+        (i for i, active in enumerate(observed) if active),
+        key=lambda i: (-(base[i] * 2_000 % total), i),
+    )
+    for index in order[: 2_000 - sum(weights)]:
+        weights[index] += 1
+    return tuple(weights)
 
 
 class PreferenceAxisTarget(StrictContract):
@@ -312,12 +357,34 @@ class PreferenceTraitTarget(StrictContract):
 
 class TravelConditionTarget(StrictContract):
     condition_id: TravelConditionId
-    value: Score100
+    value: Score100 | None
+
+
+class RecommendationQualityContext(StrictContract):
+    companion: Literal["SOLO", "FRIEND_OR_PARTNER", "FAMILY_WITH_CHILDREN", "WITH_SENIORS", "GROUP"]
+    transport: Literal["WALK_OR_TRANSIT", "CAR_OR_TAXI", "MIXED"]
+    purpose: RecommendationPurpose
+    eligible_place_ids: Annotated[tuple[StableId, ...], Field(max_length=100)]
+    grounding: GroundedInputAuthority | None = None
+
+    @model_serializer(mode="wrap")
+    def preserve_ungrounded_shape(self, handler: SerializerFunctionWrapHandler):  # type: ignore[no-untyped-def]
+        result: dict[str, Any] = handler(self)
+        if self.grounding is None:
+            result.pop("grounding", None)
+        return result
+
+    @model_validator(mode="after")
+    def canonical_eligibility(self) -> Self:
+        if self.eligible_place_ids != tuple(sorted(set(self.eligible_place_ids))):
+            raise ValueError("quality eligibility must use sorted unique place IDs")
+        return self
 
 
 class RecommendationPreference(StrictContract):
     profile_id: StableId
     input_sha256: Sha256
+    quality_context: RecommendationQualityContext | None = None
     axis_targets: tuple[PreferenceAxisTarget, PreferenceAxisTarget, PreferenceAxisTarget]
     trait_targets: tuple[
         PreferenceTraitTarget,
@@ -335,6 +402,13 @@ class RecommendationPreference(StrictContract):
         TravelConditionTarget,
         TravelConditionTarget,
     ]
+
+    @model_serializer(mode="wrap")
+    def preserve_legacy_shape(self, handler: SerializerFunctionWrapHandler):  # type: ignore[no-untyped-def]
+        result: dict[str, Any] = handler(self)
+        if self.quality_context is None:
+            result.pop("quality_context", None)
+        return result
 
     @model_validator(mode="after")
     def require_canonical_order(self) -> Self:
@@ -397,8 +471,14 @@ class PlaceTraitSnapshot(StrictContract):
 
 class PlaceConditionSnapshot(StrictContract):
     condition_id: TravelConditionId
-    value: Score100
-    evidence_ids: Annotated[tuple[StableId, ...], Field(min_length=1, max_length=8)]
+    value: Score100 | None
+    evidence_ids: Annotated[tuple[StableId, ...], Field(max_length=8)]
+
+    @model_validator(mode="after")
+    def observed_evidence(self) -> Self:
+        if self.value is not None and not self.evidence_ids:
+            raise ValueError("observed condition requires evidence")
+        return self
 
 
 class RecommendationCandidate(StrictContract):
@@ -513,10 +593,10 @@ class AxisContribution(StrictContract):
 class ConditionContribution(StrictContract):
     contribution_id: StableId
     condition_id: TravelConditionId
-    expected_value: Score100
-    place_value: Score100
-    absolute_difference: Score100
-    fit_score: Score100
+    expected_value: Score100 | None
+    place_value: Score100 | None
+    absolute_difference: Score100 | None
+    fit_score: Score100 | None
     total_score_weight_bp: BasisPoints
     weighted_numerator: Annotated[int, Field(strict=True, ge=0)]
 
@@ -551,15 +631,26 @@ class ScoreContribution(StrictContract):
             for row in self.axis_components
         ):
             raise ValueError("axis contribution arithmetic drifted")
-        expected_weights = (400, 350, 350, 350, 300, 250)
-        if any(
-            row.absolute_difference != abs(row.expected_value - row.place_value)
-            or row.fit_score != 100 - row.absolute_difference
-            or row.total_score_weight_bp != weight
-            or row.weighted_numerator != row.fit_score * weight
-            for row, weight in zip(self.condition_components, expected_weights, strict=True)
-        ):
-            raise ValueError("condition contribution arithmetic drifted")
+        expected_weights = observed_condition_weights(
+            tuple(
+                row.expected_value is not None and row.place_value is not None
+                for row in self.condition_components
+            )
+        )
+        for row, weight in zip(self.condition_components, expected_weights, strict=True):
+            difference = (
+                abs(row.expected_value - row.place_value)
+                if row.expected_value is not None and row.place_value is not None
+                else None
+            )
+            fit = 100 - difference if difference is not None else None
+            if (
+                row.absolute_difference != difference
+                or row.fit_score != fit
+                or row.total_score_weight_bp != weight
+                or row.weighted_numerator != (fit or 0) * weight
+            ):
+                raise ValueError("condition contribution arithmetic drifted")
         if self.experience_fit_score != _half_up(
             sum(row.fit_score for row in self.axis_components), 3
         ):
@@ -569,12 +660,14 @@ class ScoreContribution(StrictContract):
         )
         if self.travel_condition_fit_score != _half_up(expected_condition_numerator, 2_000):
             raise ValueError("travel-condition fit trace drifted")
+        condition_weight = 2_000 if any(expected_weights) else 0
         expected_relevance_numerator = (
-            self.experience_fit_score * 8_000 + self.travel_condition_fit_score * 2_000
+            self.experience_fit_score * 8_000 + self.travel_condition_fit_score * condition_weight
         )
         if (
             self.relevance_numerator != expected_relevance_numerator
-            or self.relevance_score != _half_up(expected_relevance_numerator, 10_000)
+            or self.relevance_score
+            != _half_up(expected_relevance_numerator, 8_000 + condition_weight)
         ):
             raise ValueError("relevance contribution arithmetic drifted")
         expected_rerank_numerator = (
@@ -954,6 +1047,9 @@ class PhotoTraitFitComponent(StrictContract):
 
 class PhotoRecommendationScoreTrace(StrictContract):
     base_relevance: Score100
+    observed_traits: (
+        Annotated[tuple[MismatchTraitId, ...], Field(min_length=1, max_length=6)] | None
+    ) = None
     trait_components: tuple[
         PhotoTraitFitComponent,
         PhotoTraitFitComponent,
@@ -966,11 +1062,27 @@ class PhotoRecommendationScoreTrace(StrictContract):
     effective_relevance: Score100
     explanation_ko: Annotated[str, Field(strict=True, min_length=1, max_length=160)]
 
+    @model_serializer(mode="wrap")
+    def preserve_legacy_shape(self, handler: SerializerFunctionWrapHandler):  # type: ignore[no-untyped-def]
+        result: dict[str, Any] = handler(self)
+        if self.observed_traits is None:
+            result.pop("observed_traits", None)
+        return result
+
     @model_validator(mode="after")
     def validate_photo_score(self) -> Self:
         if tuple(row.trait_id for row in self.trait_components) != tuple(MismatchTraitId):
             raise ValueError("photo trait components must use canonical M1-M6 order")
-        expected_fit = _half_up(sum(row.fit for row in self.trait_components), 6)
+        if self.observed_traits is not None and self.observed_traits != tuple(
+            sorted(set(self.observed_traits))
+        ):
+            raise ValueError("observed photo traits must be unique canonical IDs")
+        observed = [
+            row
+            for row in self.trait_components
+            if self.observed_traits is None or row.trait_id in self.observed_traits
+        ]
+        expected_fit = _half_up(sum(row.fit for row in observed), len(observed))
         expected_relevance = _half_up(
             self.base_relevance * 6_500 + expected_fit * 3_500,
             10_000,
@@ -981,7 +1093,7 @@ class PhotoRecommendationScoreTrace(StrictContract):
 
 
 class PhotoRecommendationAuthorityTrace(MvpRecommendationAuthorityTrace):
-    photo_projection_version: Literal["photo-projection-v1"]
+    photo_projection_version: Literal["photo-projection-v1", "photo-projection-v2"]
     photo_projection_policy_sha256: Sha256
     photo_projection_output_sha256: Sha256
     confirmation_draft_sha256: Sha256
@@ -1017,6 +1129,26 @@ class PhotoMvpRecommendationRun(StrictContract):
     @model_validator(mode="after")
     def validate_photo_run(self) -> Self:
         require_utc(self.created_at, field_name="created_at")
+        _validate_mvp_quality_policy(self.preference, self.authority, self.items)
+        observed = self.photo_scores[0].observed_traits
+        semantic = self.authority.photo_projection_version == "photo-projection-v2"
+        if semantic != (observed is not None) or any(
+            row.observed_traits != observed for row in self.photo_scores
+        ):
+            raise ValueError("photo observation mask must match the shared projection version")
+        if observed is not None:
+            targets = {
+                row.trait_id: row.expected
+                for row in self.photo_scores[0].trait_components
+                if row.trait_id in observed
+            }
+            if any(
+                row.expected != targets[row.trait_id]
+                for score in self.photo_scores
+                for row in score.trait_components
+                if row.trait_id in observed
+            ):
+                raise ValueError("photo expected values must match the shared projection")
         if self.candidate_place_ids != tuple(sorted(self.candidate_place_ids)):
             raise ValueError("photo recommendation candidate IDs must use canonical order")
         if len(self.candidate_place_ids) != len(set(self.candidate_place_ids)):
@@ -1073,6 +1205,7 @@ class MvpRecommendationRun(StrictContract):
     @model_validator(mode="after")
     def validate_mvp_run(self) -> Self:
         require_utc(self.created_at, field_name="created_at")
+        _validate_mvp_quality_policy(self.preference, self.authority, self.items)
         if self.candidate_place_ids != tuple(sorted(self.candidate_place_ids)):
             raise ValueError("MVP candidate place IDs must use canonical order")
         if len(self.candidate_place_ids) != len(set(self.candidate_place_ids)):
@@ -1099,6 +1232,32 @@ class MvpRecommendationRun(StrictContract):
         if self.run_id != f"recommendation-run:{expected[:32]}":
             raise ValueError("MVP recommendation run identity drifted")
         return self
+
+
+def _validate_mvp_quality_policy(
+    preference: RecommendationPreference,
+    authority: MvpRecommendationAuthorityTrace,
+    items: tuple[MvpRecommendationPublicItem, ...],
+) -> None:
+    configs = {
+        "recommendation-kernel-v3": CANONICAL_RECOMMENDATION_CONFIG,
+        "recommendation-kernel-v4": QUALITY_RECOMMENDATION_CONFIG,
+    }
+    config = configs.get(authority.kernel_version)
+    if config is None or authority.config_sha256 != config.config_sha256:
+        raise ValueError("MVP kernel/config binding is unknown")
+    quality = preference.quality_context
+    if (authority.kernel_version == "recommendation-kernel-v4") != (quality is not None):
+        raise ValueError("MVP quality context does not match the kernel version")
+    if quality is not None:
+        if any(item.place_id not in quality.eligible_place_ids for item in items):
+            raise ValueError("MVP item violates purpose eligibility")
+    elif any(
+        row.expected_value is None or row.place_value is None
+        for item in items
+        for row in item.contribution.condition_components
+    ):
+        raise ValueError("legacy MVP kernel cannot reinterpret unknown conditions")
 
 
 class RecommendationRun(StrictContract):
@@ -1271,9 +1430,9 @@ class OperatingInformationSnapshot(StrictContract):
     provider_modifiedtime: Annotated[
         str | None, Field(strict=True, min_length=1, max_length=40)
     ] = None
-    source_label_ko: Literal[
+    source_label_ko: Literal["한국관광공사 TourAPI(KorService2 detailIntro2)"] = (
         "한국관광공사 TourAPI(KorService2 detailIntro2)"
-    ] = "한국관광공사 TourAPI(KorService2 detailIntro2)"
+    )
     cached: StrictBool
 
     @model_validator(mode="after")
@@ -1577,7 +1736,16 @@ class RecommendationComparisonResponse(StrictContract):
 
 class SavedPlaceProjection(StrictContract):
     place_id: StableId
-    place_name_ko: Annotated[str, Field(strict=True, min_length=1, max_length=120)]
+    place_name_ko: Annotated[str, Field(strict=True, min_length=1, max_length=240)]
+    region_code: Annotated[
+        str | None, Field(pattern=r"^\d{5}$", exclude_if=lambda value: value is None)
+    ] = None
+    region_name: Annotated[
+        str | None, Field(min_length=1, max_length=100, exclude_if=lambda value: value is None)
+    ] = None
+    address_ko: Annotated[
+        str | None, Field(min_length=1, max_length=500, exclude_if=lambda value: value is None)
+    ] = None
     saved_release_sha256: Sha256
     resolved_release_sha256: Sha256 | None
     state: SavedPlaceState

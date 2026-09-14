@@ -1,0 +1,623 @@
+{
+  "assessed_at": "2026-09-11T18:52:35.098428Z",
+  "assessment_sha256": "50bd5a09feaaaf80a3849db78f4cce436963fd168ab06bac9736fd0423f3d9cd",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 42
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.b",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.c"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "귤밭 배경 사진이라는 제주 감귤 농장의 이미지와 장소가 간단히 연결되어 있으나, 구체적 상징적 의미의 내용은 드러나지 않아 낮은 수준으로 평가한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "포토존과 귤밭 배경이라는 제한된 시각적 연출이 확인되나 장면을 지배하는 일관된 표현이라고 보기 어렵다.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "현장에서 귤밭 배경 촬영이라는 대표 장면을 직접 경험·재현할 수 있어 수준 3으로 평가한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "예약자만 입장하는 구조로 자율 탐색이 제한적이며, 체험 내 자유로운 먹기 정도의 짧은 자유 선택만 확인된다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "감귤 수확, 감귤청 만들기 등 구체적인 참여 활동이 확인되어 수준 3으로 평가한다. 지속적 도전 활동까지의 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "감귤 농장이라는 사실만으로 확인된 원형·유산과의 접촉을 판단할 근거가 없다. 문화유산 원형의 존재나 접촉에 대한 기술이 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "2019년 농림축산식품부 인증 언급은 개관·인증 연도일 뿐 이 장소의 역사적 맥락을 탐구하게 하는 근거가 아니며, 역사·연혁 서사가 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "감귤 재배가 제주 생활문화와 연결된다고 볼 수 있으나, 자료에는 지역 주체의 전승·생활문화와의 실제 연결이 기술되지 않아 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "수확 방법 안내 외에 원형·전통에 연결된 해설·학습 요소가 제공되지 않아 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d",
+          "quote": {
+            "end": 539,
+            "method": "EXACT",
+            "original": "귤밭을 배경으로 사진을 찍을 수도 있다",
+            "start": 518,
+            "submitted": "귤밭을 배경으로 사진을 찍을 수도 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42ffd4c295c53bec391bdfc4e0c60583ba27eab5e37b92933b85c1ee3df954e1"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 1,
+      "reason": "귤밭 배경 사진이라는 제주 감귤 농장의 이미지와 장소가 간단히 연결되어 있으나, 구체적 상징적 의미의 내용은 드러나지 않아 낮은 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "네이버 예약 언급은 예약 채널일 뿐 장소 이미지의 매체적 재현·확산 근거가 아니어서 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d",
+          "quote": {
+            "end": 539,
+            "method": "EXACT",
+            "original": "농장에 조성된 포토존에서 귤밭을 배경으로 사진을 찍을 수도 있다",
+            "start": 504,
+            "submitted": "농장에 조성된 포토존에서 귤밭을 배경으로 사진을 찍을 수도 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42ffd4c295c53bec391bdfc4e0c60583ba27eab5e37b92933b85c1ee3df954e1"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 1,
+      "reason": "포토존과 귤밭 배경이라는 제한된 시각적 연출이 확인되나 장면을 지배하는 일관된 표현이라고 보기 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d",
+          "quote": {
+            "end": 539,
+            "method": "EXACT",
+            "original": "농장에 조성된 포토존에서 귤밭을 배경으로 사진을 찍을 수도 있다",
+            "start": 504,
+            "submitted": "농장에 조성된 포토존에서 귤밭을 배경으로 사진을 찍을 수도 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42ffd4c295c53bec391bdfc4e0c60583ba27eab5e37b92933b85c1ee3df954e1"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "현장에서 귤밭 배경 촬영이라는 대표 장면을 직접 경험·재현할 수 있어 수준 3으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d",
+          "quote": {
+            "end": 260,
+            "method": "EXACT",
+            "original": "감귤 따기 체험을 예약한 인원만 입장가능 하며",
+            "start": 235,
+            "submitted": "감귤 따기 체험을 예약한 인원만 입장가능 하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42ffd4c295c53bec391bdfc4e0c60583ba27eab5e37b92933b85c1ee3df954e1"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 1,
+      "reason": "예약자만 입장하는 구조로 자율 탐색이 제한적이며, 체험 내 자유로운 먹기 정도의 짧은 자유 선택만 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d",
+          "quote": {
+            "end": 130,
+            "method": "EXACT",
+            "original": "다양한 감귤 체험 프로그램과 직접 수확한 감귤로 감귤청을 만드는 체험을 진행하며",
+            "start": 86,
+            "submitted": "다양한 감귤 체험 프로그램과 직접 수확한 감귤로 감귤청을 만드는 체험을 진행하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "42ffd4c295c53bec391bdfc4e0c60583ba27eab5e37b92933b85c1ee3df954e1"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "감귤 수확, 감귤청 만들기 등 구체적인 참여 활동이 확인되어 수준 3으로 평가한다. 지속적 도전 활동까지의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "인용 문장은 이용 대상층을 나열한 홍보 서술로, 실제 교류·공동 활동·자기표현 기회를 직접 뒷받침하지 않는다. 다만 감귤차 시식 등 함께하는 활동의 간접 단서가 있어 기각보다는 불확실으로 남긴다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "a09b2aef02171f4350fec6be3fa93f7b8f97da1b16d1dc753ed4f1abb78d8692",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_REVIEW_RESPONSE_INVALID",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d",
+              "quote": {
+                "end": 70,
+                "method": "EXACT",
+                "original": "안전하고 건강한 감귤을 재배하고 있다",
+                "start": 50,
+                "submitted": "안전하고 건강한 감귤을 재배하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "42ffd4c295c53bec391bdfc4e0c60583ba27eab5e37b92933b85c1ee3df954e1"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 2,
+          "reason": "감귤 농장이라는 농촌 환경 단서가 있으나 자연 환경이 두드러지거나 회복 환경임을 뒷받침하는 직접 기술은 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.b",
+          "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+        }
+      },
+      "reason": "AI 검토 응답의 누락·중복·형식 모순으로 판단을 확정하지 않았습니다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d",
+              "quote": {
+                "end": 364,
+                "method": "EXACT",
+                "original": "가족단위 여행객이나 친구·연인 등 남녀노소 재미있게 즐길 수 있는",
+                "start": 328,
+                "submitted": "가족단위 여행객이나 친구·연인 등 남녀노소 재미있게 즐길 수 있는",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "42ffd4c295c53bec391bdfc4e0c60583ba27eab5e37b92933b85c1ee3df954e1"
+            }
+          ],
+          "flags": [],
+          "key": "R.d",
+          "level": 1,
+          "reason": "가족·친구·연인 동반 이용 대상이라는 점에서 함께 즐기는 활동이 가능하나, 구체적 교류·공동 제작·자기표현 기회의 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "인용 문장은 이용 대상층을 나열한 홍보 서술로, 실제 교류·공동 활동·자기표현 기회를 직접 뒷받침하지 않는다. 다만 감귤차 시식 등 함께하는 활동의 간접 단서가 있어 기각보다는 불확실으로 남긴다."
+        }
+      },
+      "reason": "인용 문장은 이용 대상층을 나열한 홍보 서술로, 실제 교류·공동 활동·자기표현 기회를 직접 뒷받침하지 않는다. 다만 감귤차 시식 등 함께하는 활동의 간접 단서가 있어 기각보다는 불확실으로 남긴다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "df70385e1bf607b7174ecfe42929889bcdd099727cb056305cd820fb183b8353",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:140e5ea18d4e958524dad0787dd053d50e5c481d4151a3a5a34804565dd966b8",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c23880edb2025fe54d8364eed033e0928e6e4c859abdf3c9176c99a60bc49a9c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3037603",
+          "request_sha256": "ba322a6ef9ba75cc4ad9d2483cebf71c34df56978cb489ab4ff4bec18916913c",
+          "response_sha256": "9a2d01c9a21a474d12cf58f4a024fe5966026b403576bb57c7f4f76790b2333d",
+          "retrieved_at": "2026-09-11T02:09:53.319984Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1269ca632cbe775f558888188799f158cf7a58c6d271e13a70f11f81cbaf7c54",
+          "source_uri": null
+        },
+        "record_sha256": "7ac1dbe24d258cdd67aa097736a4fe6190c589ab719950ac0db01dd84a4e51bf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "※ 시기에 따라 변동되므로 자세한 사항은 홈페이지 참조 및 전화 문의 요망"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3a379796a836bc8332a23ac07baa1edfb4a2aa57a5a07ed310889af12c29e04d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c23880edb2025fe54d8364eed033e0928e6e4c859abdf3c9176c99a60bc49a9c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3037603",
+          "request_sha256": "b1f06f0a5269c159e6462124bd2b932c9cb89e75385ea6f218f6d0cb1d20cde0",
+          "response_sha256": "b64d04c0946b60ff19139a9077e2d1f70bfa9b40ad26a631cfe0cc0c96d5bb8c",
+          "retrieved_at": "2026-09-10T16:44:28.868621Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-10T04:59:15Z",
+          "source_record_sha256": "65d56aad5c65721eba9eb1d49bb530c61b42c57a65057f6baca1292a214bf6fe",
+          "source_uri": null
+        },
+        "record_sha256": "42ffd4c295c53bec391bdfc4e0c60583ba27eab5e37b92933b85c1ee3df954e1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "애월읍에 위치한 맛동산 감귤체험농장은 2019년 농림축산식품부 지정 인증을 받은 농장으로 안전하고 건강한 감귤을 재배하고 있다. 맛동산 감귤체험농장에서는 다양한 감귤 체험 프로그램과 직접 수확한 감귤로 감귤청을 만드는 체험을 진행하며 농장에서 재배하는 풋귤, 하우스귤, 타이백귤, 사백향을 수확할 수 있다. 감귤수확체험은 시기별로 품종과 체험비가 다르니 사전에 전화로 문의하거나 네이버 예약사이트를 이용하기를 추천한다. 감귤 따기 체험을 예약한 인원만 입장가능 하며 만 36개월 미만 소아의 경우 부모와 동반 입장 가능하다. 귤 수확방법도 어렵지 않고, 싱싱한 귤도 실컷 먹을 수 있어 가족단위 여행객이나 친구·연인 등 남녀노소 재미있게 즐길 수 있는 제주 체험이다. 따기 체험을 하면서 감귤을 먹는 것은 무제한이며 체험이 끝나고 수확한 귤 무게를 잰 후에 추가 요금이 발생할 수 있으니 체험 시 참조하면 된다. 체험을 마무리한 후 농장에서 직접 만든 귤청으로 만든 귤차와 귤마들렌을 맛볼 수 있으며 농장에 조성된 포토존에서 귤밭을 배경으로 사진을 찍을 수도 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3d69acd91ab52194f2c79bcc0e2c0b6e6996d4a5d87b5a6e6666d55d3a102c91",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c23880edb2025fe54d8364eed033e0928e6e4c859abdf3c9176c99a60bc49a9c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "3037603",
+          "request_sha256": "ba322a6ef9ba75cc4ad9d2483cebf71c34df56978cb489ab4ff4bec18916913c",
+          "response_sha256": "ce90e816a2285b66f76eec5c667cae20c719d66a2540f817ae6f487ec12bb906",
+          "retrieved_at": "2026-09-10T16:44:29.180190Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "16c2e0cba375cd687b0b0e622966a8084d41714b0e7f112c0655d190a84c6eab",
+          "source_uri": null
+        },
+        "record_sha256": "c194237d8f8a8b79d26145d26a5d02b1823f3b89cce05fd57eb5c4268c42bc6c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "그린향수확체험 / 노지귤수확체험 / 고당도감귤체험 등※ 시기에 따라 변동되므로 자세한 사항은 홈페이지 참조 및 전화 문의 요망"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:937509728aaf6d0eb3d368d607e3ca27035e1f7c25faed770e0af019e7eca312",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c23880edb2025fe54d8364eed033e0928e6e4c859abdf3c9176c99a60bc49a9c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3037603",
+          "request_sha256": "ba322a6ef9ba75cc4ad9d2483cebf71c34df56978cb489ab4ff4bec18916913c",
+          "response_sha256": "9a2d01c9a21a474d12cf58f4a024fe5966026b403576bb57c7f4f76790b2333d",
+          "retrieved_at": "2026-09-11T02:09:53.319984Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a51cb48e72ba9998acbda058fcf60726d79bd86f0a3f513f8c5c8505585dfdb1",
+          "source_uri": null
+        },
+        "record_sha256": "d909bc9a598171b56c60254f2fdc78f2600f51090d40df98575f931499ea83ad",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "109fed863ec329214a56aabb27bbaa2de352929cebedc4abfb709839a0575937",
+    "place": {
+      "address": "제주특별자치도 제주시 애월읍 광령2길 62-1",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:c23880edb2025fe54d8364eed033e0928e6e4c859abdf3c9176c99a60bc49a9c",
+      "name_ko": "맛동산 감귤체험농장",
+      "place_id": "public:korea:c23880edb2025fe54d8364eed033e0928e6e4c859abdf3c9176c99a60bc49a9c",
+      "provider_content_id": "3037603",
+      "region_code": "50110",
+      "region_name": "제주특별자치도 제주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

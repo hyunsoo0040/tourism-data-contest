@@ -1,0 +1,973 @@
+{
+  "assessed_at": "2026-09-11T19:26:36.310024Z",
+  "assessment_sha256": "1ca9aba4563268b952db9a96e0f2b2e37516743f16d5009e592ce2345f711356",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c"
+      ],
+      "value": 56
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "장소명 유래('곰섬')와 지리적 특성(대산읍 7개 도서 중 유일한 유인도)이 간단히 소개된다. 그러나 구체적 사건·인물 중심의 역사 서사는 없어 수준 2(연혁·유래 간단 소개)가 적절하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'곰섬'이라는 형상에서 온 상징적 명칭과, 조수에 따라 섬/육지가 되는 독특한 장소 이미지가 장소와 연결된다. 여러 표현에서 일관된 의미가 확인되는 수준까지는 근거가 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "기관 선정('휴가철 찾아가고 싶은 33섬' 2년 연속)이라는 명시적 매체·홍보 맥락에서 장소 이미지가 표현된다. 반복적 유통이나 매체 이미지가 방문 목적의 중심이라는 근거는 없어 수준 2로 제한한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:085d4e370aac2facb23986f06cc6ffbb91c63c39e0a1542ba870c1b1a78fa225",
+            "appearance:9f8045b7d3a6105832c6c5c22fc99747dcb4b6b77c2930303a08a51353376fb9",
+            "appearance:a1cd5bcd7064dd5fbe6787e9661171e52fb6170daa55bae83cb5e34bc75cb019"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 67,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "제시된 근거는 '장관'이라는 홍보 서술로, 간조 시 구별되는 시각적 장면(수준 3)으로 읽힐 수도 있으나 실제 관찰 근거가 아니다. 수준 2와 3 사이에서 원문만으로 확정하기 어렵다.",
+      "value": 67
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:a8e7daac564786e3c34bf44d27293c578d199b8e119f88d771c8f3f986f92a19"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "둘레길(어슬렁길)이라는 다초점 코스가 제공되어 방문자가 여러 지점을 자율적으로 탐색할 기회가 확인된다. 자율 탐색이 방문 경험의 전체 중심이라고 단정하기는 어려워 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:4a481c8e7cc3fe58ffa42bf93e166ac6bb4cc3659bcb65fbdf46e49d0728e2ef",
+            "appearance:b3c82d381002d6ec86baad34f735d5c1b5b9b23bc60904f6285da8a648ac0e06",
+            "appearance:daaaf86d943084ccecc4efa86467292056489b637933b0aceb9531b6d45dadf0"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "드넓은 갯벌, 가로림만 내해, 큰산 소나무 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡·심리적 회복을 확정할 수는 없고, 환경이 장면을 지배한다고 보기에는 근거가 부족해 수준 3으로 판단한다.",
+      "value": 77
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "간조 시 걸어서 섬에 들어가는 이동 자체가 조수에 따른 참여적 경험이 될 수 있으나, 체험·도전 프로그램 등 구체적 집중 활동에 대한 명시는 없어 수준 2로 제한한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "둘레길 경로에 '옛날초소'가 언급되어 원형 흔적의 가능성이 있으나, 해당 시설의 실제 유적 여부·보존 상태·방문자 접촉 방식에 대한 근거가 없어 원형·유산 접촉을 확정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda",
+          "quote": {
+            "end": 303,
+            "method": "EXACT",
+            "original": "웅도는 섬의 모양이 웅크리고 있는 곰과 같이 생겼다 해서 ‘웅도’ 또는 ‘곰섬’이라 불리고 있다.",
+            "start": 249,
+            "submitted": "웅도는 섬의 모양이 웅크리고 있는 곰과 같이 생겼다 해서 ‘웅도’ 또는 ‘곰섬’이라 불리고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "be605c61015bb3d6fe38debfa31f34e9fb9a3b335c6a8afc03189f7ae2da3e78"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 2,
+      "reason": "장소명 유래('곰섬')와 지리적 특성(대산읍 7개 도서 중 유일한 유인도)이 간단히 소개된다. 그러나 구체적 사건·인물 중심의 역사 서사는 없어 수준 2(연혁·유래 간단 소개)가 적절하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "'전형적인 어촌마을'이라는 표현은 어촌이라는 정체성을 보여주나, 현재 지역 주체의 전승·생활문화가 방문 경험으로 연결된다는 실제 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "갯벌 생태자원과 특산물에 대한 소개는 있으나, 원형·유산·전통에 연결된 해설·학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda",
+          "quote": {
+            "end": 303,
+            "method": "EXACT",
+            "original": "웅도는 섬의 모양이 웅크리고 있는 곰과 같이 생겼다 해서 ‘웅도’ 또는 ‘곰섬’이라 불리고 있다.",
+            "start": 249,
+            "submitted": "웅도는 섬의 모양이 웅크리고 있는 곰과 같이 생겼다 해서 ‘웅도’ 또는 ‘곰섬’이라 불리고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "be605c61015bb3d6fe38debfa31f34e9fb9a3b335c6a8afc03189f7ae2da3e78"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'곰섬'이라는 형상에서 온 상징적 명칭과, 조수에 따라 섬/육지가 되는 독특한 장소 이미지가 장소와 연결된다. 여러 표현에서 일관된 의미가 확인되는 수준까지는 근거가 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda",
+          "quote": {
+            "end": 83,
+            "method": "EXACT",
+            "original": "행정자치부, 한국관광공사, 도서문화연구원 등에서 뽑은 ‘휴가철 찾아가고 싶은 33섬’으로 2016년과 2017년 2년 연속 선정된 바가 있다.",
+            "start": 4,
+            "submitted": "행정자치부, 한국관광공사, 도서문화연구원 등에서 뽑은 ‘휴가철 찾아가고 싶은 33섬’으로 2016년과 2017년 2년 연속 선정된 바가 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "be605c61015bb3d6fe38debfa31f34e9fb9a3b335c6a8afc03189f7ae2da3e78"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "기관 선정('휴가철 찾아가고 싶은 33섬' 2년 연속)이라는 명시적 매체·홍보 맥락에서 장소 이미지가 표현된다. 반복적 유통이나 매체 이미지가 방문 목적의 중심이라는 근거는 없어 수준 2로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "제시된 근거는 '장관'이라는 홍보 서술로, 간조 시 구별되는 시각적 장면(수준 3)으로 읽힐 수도 있으나 실제 관찰 근거가 아니다. 수준 2와 3 사이에서 원문만으로 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "이유는 간조 시 바다 위를 걸어 들어가는 대표 장면을 '직접 경험'한다고 기술하는데 이는 수준 3 앵커에 해당하고, 수준 2(제한적 관람)와 모순된다. 수준 배정의 일관성을 원문만으로 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:a8e7daac564786e3c34bf44d27293c578d199b8e119f88d771c8f3f986f92a19",
+          "quote": {
+            "end": 61,
+            "method": "EXACT",
+            "original": "웅도 둘레길 (어슬렁길) 유두교 - 남측해변 - 선창 - 옛날초소 - 둥둥바위 - 큰산 소나무 - 마을회관",
+            "start": 2,
+            "submitted": "웅도 둘레길 (어슬렁길) 유두교 - 남측해변 - 선창 - 옛날초소 - 둥둥바위 - 큰산 소나무 - 마을회관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f4f743efa4e697b0ce51b6040e0169bfd0f1eb59ba6c74e002f46879013cf426"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "둘레길(어슬렁길)이라는 다초점 코스가 제공되어 방문자가 여러 지점을 자율적으로 탐색할 기회가 확인된다. 자율 탐색이 방문 경험의 전체 중심이라고 단정하기는 어려워 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda",
+          "quote": {
+            "end": 135,
+            "method": "EXACT",
+            "original": "해안선 길이 5㎞의 드넓고 오염되지 않은 신선한 갯벌이 관광객들로부터 각광을 받기 시작했다.",
+            "start": 84,
+            "submitted": "해안선 길이 5㎞의 드넓고 오염되지 않은 신선한 갯벌이 관광객들로부터 각광을 받기 시작했다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "be605c61015bb3d6fe38debfa31f34e9fb9a3b335c6a8afc03189f7ae2da3e78"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "드넓은 갯벌, 가로림만 내해, 큰산 소나무 등 자연 환경 단서가 확인된다. 다만 실제 고요함·혼잡·심리적 회복을 확정할 수는 없고, 환경이 장면을 지배한다고 보기에는 근거가 부족해 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda",
+          "quote": {
+            "end": 399,
+            "method": "EXACT",
+            "original": "웅도마을은 조수간만의 차에 따라 육지와 연결된 마을이 되기도, 섬마을이 되기도 하여",
+            "start": 353,
+            "submitted": "웅도마을은 조수간만의 차에 따라 육지와 연결된 마을이 되기도, 섬마을이 되기도 하여",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "be605c61015bb3d6fe38debfa31f34e9fb9a3b335c6a8afc03189f7ae2da3e78"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "간조 시 걸어서 섬에 들어가는 이동 자체가 조수에 따른 참여적 경험이 될 수 있으나, 체험·도전 프로그램 등 구체적 집중 활동에 대한 명시는 없어 수준 2로 제한한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "'훈훈하고 넉넉한 인심'이라는 서술은 주민의 인심을 소개하지만, 방문자가 참여하는 교류·공동 활동·자기표현의 기회에 대한 구체적 근거는 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "0cb055b32ab736e0ebd114390ca93b2fef2d786ffe7a14e3c9b621cf81c34dc4",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda",
+              "quote": {
+                "end": 172,
+                "method": "EXACT",
+                "original": "물이 빠지는 간조시에는 바닥이 드러나 육지가 되는 장관이 펼쳐지고",
+                "start": 136,
+                "submitted": "물이 빠지는 간조시에는 바닥이 드러나 육지가 되는 장관이 펼쳐지고",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "be605c61015bb3d6fe38debfa31f34e9fb9a3b335c6a8afc03189f7ae2da3e78"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.c",
+          "level": 2,
+          "reason": "간조 시 갯벌이 드러나 육지가 되는 '장관'이라는 시각적으로 구별되는 장면이 표현된다. 일관된 연출이 장면을 지배한다는 수준의 근거는 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.c",
+          "reason": "제시된 근거는 '장관'이라는 홍보 서술로, 간조 시 구별되는 시각적 장면(수준 3)으로 읽힐 수도 있으나 실제 관찰 근거가 아니다. 수준 2와 3 사이에서 원문만으로 확정하기 어렵다."
+        }
+      },
+      "reason": "제시된 근거는 '장관'이라는 홍보 서술로, 간조 시 구별되는 시각적 장면(수준 3)으로 읽힐 수도 있으나 실제 관찰 근거가 아니다. 수준 2와 3 사이에서 원문만으로 확정하기 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda",
+              "quote": {
+                "end": 206,
+                "method": "EXACT",
+                "original": "사람들은 걸어서 또는 자동차를 이용해 웅도에 갈 수 있다.",
+                "start": 174,
+                "submitted": "사람들은 걸어서 또는 자동차를 이용해 웅도에 갈 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "be605c61015bb3d6fe38debfa31f34e9fb9a3b335c6a8afc03189f7ae2da3e78"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.d",
+          "level": 2,
+          "reason": "간조 시 바다 위를 걸어 섬에 들어가는 대표 장면을 방문자가 직접 경험할 수 있다. 다만 촬영·재현 활동이 경험의 중심이라는 근거는 없어 수준 2로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "이유는 간조 시 바다 위를 걸어 들어가는 대표 장면을 '직접 경험'한다고 기술하는데 이는 수준 3 앵커에 해당하고, 수준 2(제한적 관람)와 모순된다. 수준 배정의 일관성을 원문만으로 확정하기 어렵다."
+        }
+      },
+      "reason": "이유는 간조 시 바다 위를 걸어 들어가는 대표 장면을 '직접 경험'한다고 기술하는데 이는 수준 3 앵커에 해당하고, 수준 2(제한적 관람)와 모순된다. 수준 배정의 일관성을 원문만으로 확정하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "d8163b3d7a244c1abbe27afdf91190d8c666e570e17676e46c326db2ee3c8448",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "안개 낀 회색빛 수면과 S자로 이어지는 방파제 도로의 곡선 구도가 인상적이나 전반적으로 흐리고 절제된 톤이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:085d4e370aac2facb23986f06cc6ffbb91c63c39e0a1542ba870c1b1a78fa225",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "06d2fddd3770424c35442b9b15b5de33e9e0dba9363cc33f84c9173d0372b889",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664328",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b4bd1f9239b156dc5614bc54c8ef38b8c1e94723fc5f38db53ebe7699390ea0c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/28/2664328.jpg"
+        },
+        "record_sha256": "88746d3c97faba013fb0a1f7ee49204c2c7fbb1a78774bafecaa4623741e726b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "도로 양옆으로 넓은 바다가 펼쳐지고, 먼 산봉우리와 끝의 숲섬·해안이 트인 자연 경관을 두드러지게 보여준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4a481c8e7cc3fe58ffa42bf93e166ac6bb4cc3659bcb65fbdf46e49d0728e2ef",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "65651749940f174092807b91c702d7bff9d941d8a1836e049514794af3ae5bad",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664326",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7985bee437dbc5caa90d336e66ae25e415fa09ff5fcf6a75a4ce2f77cd2c5884",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/26/2664326.jpg"
+        },
+        "record_sha256": "bc2cb2bdfe9e45e913be5698fdf0c5bb2ecb4dc8a0274dae42b4e66c6ce95f3f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "돌로 쌓은 옹벽과 섬 마을 흔적이 있으나 도로, 가로등, 현대식 주택 등 현대적 외관이 우세하여 전통적 외관은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:8e391499dbec70218c03bee30c74ce3c63ba9211a38acd67e9ad72d2f036f376",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "06d2fddd3770424c35442b9b15b5de33e9e0dba9363cc33f84c9173d0372b889",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664328",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b4bd1f9239b156dc5614bc54c8ef38b8c1e94723fc5f38db53ebe7699390ea0c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/28/2664328.jpg"
+        },
+        "record_sha256": "ba8b9e5afb04a7bcabcf2d06d3ca20e64ffb3e42a7344a072364252c5544ed97",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "곡선으로 이어지는 방파제 도로의 S자 구도와 잔잔한 수면, 흐린 회색 하늘이 차분하고 절제된 시각적 인상을 만든다. 노란 교통표지가 유일한 강한 색채 포인트로 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9f8045b7d3a6105832c6c5c22fc99747dcb4b6b77c2930303a08a51353376fb9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "aa2b8ae035fcbc86c669e1f9efadbef03b360fbc1f2255a7bdb59d9488612946",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664327",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a9811292c5e5e8a1259c37a3db2a0d3dfac02812c51541b686a344737b074d5f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/27/2664327.jpg"
+        },
+        "record_sha256": "61bc8eaac226d533a840c78853a6b21f8049b8b661b3dc4cc62067537f6ea166",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "바다 위로 뻗은 긴 방파제 도로의 대칭적 원근 구도가 장면을 지배하며, 흐린 회색 톤과 젖은 노면이 차분하고 절제된 시각적 분위기를 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a1cd5bcd7064dd5fbe6787e9661171e52fb6170daa55bae83cb5e34bc75cb019",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "65651749940f174092807b91c702d7bff9d941d8a1836e049514794af3ae5bad",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664326",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7985bee437dbc5caa90d336e66ae25e415fa09ff5fcf6a75a4ce2f77cd2c5884",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/26/2664326.jpg"
+        },
+        "record_sha256": "9cf68f1efd6b942745a6ed4bc84f56c99eaf5e10bdd2b083f2444eb374a30c18",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 바닷물, 먼 안개 낀 섬, 모래사장, 섬의 울창한 소나무 숲 등 자연 경관 단서가 화면 대부분을 차지한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b3c82d381002d6ec86baad34f735d5c1b5b9b23bc60904f6285da8a648ac0e06",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "06d2fddd3770424c35442b9b15b5de33e9e0dba9363cc33f84c9173d0372b889",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664328",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b4bd1f9239b156dc5614bc54c8ef38b8c1e94723fc5f38db53ebe7699390ea0c",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/28/2664328.jpg"
+        },
+        "record_sha256": "77bd69c91866e747ecf84691a1e464d0cf5f0a19cc581a1180438cbe2987b541",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "콘크리트 방파제와 금속 가드레일, 태양광 가로등 등 현대적 시설이 대부분으로 전통적 외관·재료의 특성은 약하게만 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:bc3393b9f9001a71af87a387592ec1066cf2df113a13c28ddc177724cb9bff15",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "aa2b8ae035fcbc86c669e1f9efadbef03b360fbc1f2255a7bdb59d9488612946",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664327",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a9811292c5e5e8a1259c37a3db2a0d3dfac02812c51541b686a344737b074d5f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/27/2664327.jpg"
+        },
+        "record_sha256": "f4fc1bf5361e64deb734e2c9de404da2fce7e9a3fbfb5f1525b97feb229d58ab",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "도로 양옆으로 광활하게 트인 바다가 장면 전체를 지배하며, 먼 저도와 섬의 녹지, 자갈 해안이 자연 경관 단서로 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:daaaf86d943084ccecc4efa86467292056489b637933b0aceb9531b6d45dadf0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "aa2b8ae035fcbc86c669e1f9efadbef03b360fbc1f2255a7bdb59d9488612946",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664327",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a9811292c5e5e8a1259c37a3db2a0d3dfac02812c51541b686a344737b074d5f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/27/2664327.jpg"
+        },
+        "record_sha256": "9f50a0129e21f5c1e46b3934cdc83e919857bad846299476cb6589f62721ac05",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "콘크리트 방파제, 금속 가드레일, 태양광 가로등 등 현대적 시설이 대부분이며 전통적 외관의 단서는 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e6fb5d88feb3dc530878b887b76bbe1fe513f2afbdc9733ad8f6dcfad50e5aa3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "65651749940f174092807b91c702d7bff9d941d8a1836e049514794af3ae5bad",
+        "match_basis": [
+          "공식 촬영지역 충청남도 서산시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:2664326",
+          "request_sha256": "e168530869688f1f85feabd9d258b8864b764d76a87da5d4ba8504e74a99be2d",
+          "response_sha256": "293e656db0d049fa5bd84de67c43ce6bc12815904961b9c6daf22a4dfd8fd71e",
+          "retrieved_at": "2026-09-11T02:11:37.095335Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7985bee437dbc5caa90d336e66ae25e415fa09ff5fcf6a75a4ce2f77cd2c5884",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/26/2664326.jpg"
+        },
+        "record_sha256": "9ec92ec46a6de7ef6530c67377de26fe7af43ec659f9051860886a593f358492",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:a8e7daac564786e3c34bf44d27293c578d199b8e119f88d771c8f3f986f92a19",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "577593",
+          "request_sha256": "ca9ea1cce3697b47b93007722b7f593cbccdb4a3bb155b2e53edc37fcb07b848",
+          "response_sha256": "d36b5e4c4380a76f52779d30281dbf5448e5232769755fb60a691e964c52f8f1",
+          "retrieved_at": "2026-09-11T02:11:35.911612Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "1cb2f6947d12ca8410d44bcbe941ad2d6819f254606d711fcf19566bf1548870",
+          "source_uri": null
+        },
+        "record_sha256": "f4f743efa4e697b0ce51b6040e0169bfd0f1eb59ba6c74e002f46879013cf426",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "* 웅도 둘레길 (어슬렁길) 유두교 - 남측해변 - 선창 - 옛날초소 - 둥둥바위 - 큰산 소나무 - 마을회관"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d78bb7c6b96a50cc59c7471aa413023d7bac6079656c907f34ac1353995e7dda",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "577593",
+          "request_sha256": "80253ca77d687bd6d410c361c996e08e22c3fa05af5bfce6b9bb7b3777948317",
+          "response_sha256": "fdabfcebb51dd872a573ad4172a17d41e4881b92963f5b8a977107a0d924eef9",
+          "retrieved_at": "2026-09-10T17:01:23.594133Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-03-12T04:54:01Z",
+          "source_record_sha256": "12d4d5e65711115bc54c684c170304c88cc64406c39f7231be963995ce8280c0",
+          "source_uri": null
+        },
+        "record_sha256": "be605c61015bb3d6fe38debfa31f34e9fb9a3b335c6a8afc03189f7ae2da3e78",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "웅도는 행정자치부, 한국관광공사, 도서문화연구원 등에서 뽑은 ‘휴가철 찾아가고 싶은 33섬’으로 2016년과 2017년 2년 연속 선정된 바가 있다. 해안선 길이 5㎞의 드넓고 오염되지 않은 신선한 갯벌이 관광객들로부터 각광을 받기 시작했다. 물이 빠지는 간조시에는 바닥이 드러나 육지가 되는 장관이 펼쳐지고, 사람들은 걸어서 또는 자동차를 이용해 웅도에 갈 수 있다. 전형적인 어촌마을로, 아직도 훈훈하고 넉넉한 인심을 간직한 곳이기도 하다. 웅도는 섬의 모양이 웅크리고 있는 곰과 같이 생겼다 해서 ‘웅도’ 또는 ‘곰섬’이라 불리고 있다. 가로림만 내해의 정중앙에 자리하고 있으면서 대산읍의 7개 도서 중 유일한 유인도서이다. 웅도마을은 조수간만의 차에 따라 육지와 연결된 마을이 되기도, 섬마을이 되기도 하여 시간에 따라 다양한 경관을 자랑하고 있다. 세계 5대 갯벌 중 하나인 가로림만을 중심으로 형성되어 있어 생태자원도 풍부하다. 웅도의 특산물로는 낙지, 바지락, 굴, 김 등이 있는데 6월 말에서 7월 초에 잡히는 낙지는 연하고 맛이 좋으며 바지락은 쌀뜨물 같이 희고 맛이 시원하며 해장국 감으로 으뜸이다."
+      }
+    ],
+    "parent_source_sha256": "ce619766c547dcc3824d443416b9bbdd0fecbb1b5d630e761e7e4b244971649e",
+    "place": {
+      "address": "충청남도 서산시 대산읍 웅도리",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+      "name_ko": "웅도",
+      "place_id": "public:korea:e4cbaa6b9262d52bd0051a8398dfb688a87f2089cbc9413d71126f2da6070ba9",
+      "provider_content_id": "577593",
+      "region_code": "44210",
+      "region_name": "충청남도 서산시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

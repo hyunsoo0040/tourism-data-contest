@@ -1136,6 +1136,7 @@ def test_gateway_submit_failure_boundaries_create_exact_terminal_proof(
         quarantine_root=FilePath(quarantine_root),
         runtime_role=postgres_harness.role_names["runtime"],  # type: ignore[attr-defined]
         builder_role=postgres_harness.role_names["dev"],  # type: ignore[attr-defined]
+        synthetic_test_mode=True,
     )
     job_id = secrets.token_hex(32)
     profile_id = f"profile-submit-{cause}"
@@ -1194,6 +1195,7 @@ def test_startup_projection_is_bounded_and_actual_lifespan_converges_all_classes
         quarantine_root=quarantine_root,
         runtime_role=postgres_harness.role_names["runtime"],  # type: ignore[attr-defined]
         builder_role=postgres_harness.role_names["dev"],  # type: ignore[attr-defined]
+        synthetic_test_mode=True,
     )
     candidates = {
         "worker_crash": (secrets.token_hex(32), "running"),
@@ -1346,6 +1348,7 @@ def test_route_gateway_success_uses_full_identity_and_dual_proof(
         quarantine_root=FilePath(quarantine_root),
         runtime_role=postgres_harness.role_names["runtime"],  # type: ignore[attr-defined]
         builder_role=postgres_harness.role_names["dev"],  # type: ignore[attr-defined]
+        synthetic_test_mode=True,
     )
     assert isinstance(factory, sessionmaker)
     job_id = secrets.token_hex(32)
@@ -1715,7 +1718,161 @@ def _f05_gateway(postgres_harness: object, quarantine_root: Path, service_dsn: s
         quarantine_root=FilePath(quarantine_root),
         runtime_role=postgres_harness.role_names["runtime"],  # type: ignore[attr-defined]
         builder_role=postgres_harness.role_names["dev"],  # type: ignore[attr-defined]
+        synthetic_test_mode=True,
     )
+
+
+def test_unconfigured_provider_finishes_cleanup_and_truthfully_reports_unavailable(
+    postgres_harness: object,
+    quarantine_root: Path,
+    phase6_deletion_schema: None,
+) -> None:
+    from itda.photo.provider.live import PhotoLiveAnalysisUnavailable
+
+    dsn = _service_dsn(postgres_harness)
+    gateway = _f05_gateway(postgres_harness, quarantine_root, dsn)
+    gateway._provider = None  # noqa: SLF001
+    job_id = secrets.token_hex(32)
+    owner = "unconfigured-semantic-provider"
+    with psycopg.connect(dsn, autocommit=True) as connection:
+        _seed_owned_lifecycle(connection, job_id=job_id, profile_id=owner, state="queued")
+        written = _seed_quarantine_objects(quarantine_root, job_id, owner, count=1)
+        connection.execute(
+            "SELECT dev_eval.reserve_photo_image_slot_v3(%s, %s, 1, %s, 'image/png')",
+            (job_id, owner, written[0].name),
+        )
+        connection.execute(
+            "SELECT dev_eval.commit_photo_image_slot_v3(%s, %s, 1, %s, %s)",
+            (job_id, owner, written[0].name, written[0].stat().st_size),
+        )
+    with pytest.raises(PhotoLiveAnalysisUnavailable):
+        gateway.submit_job(job_id=job_id, profile_id=owner)
+    assert not written[0].exists()
+    with psycopg.connect(dsn) as connection:
+        assert connection.execute(
+            "SELECT status, terminal_cause FROM dev_eval.read_photo_job_v2(%s,%s)",
+            (job_id, owner),
+        ).fetchone() == ("failed", "provider_error")
+        assert connection.execute(
+            "SELECT dev_eval.read_photo_cleanup_status_v3(%s,%s)",
+            (job_id, owner),
+        ).fetchone() == (False,)
+        assert connection.execute(
+            "SELECT reason_code FROM dev_eval.list_photo_deletion_ledger_v3(%s,%s)",
+            (job_id, owner),
+        ).fetchall() == [("PHOTO_ANALYSIS_UNAVAILABLE",)]
+
+
+@pytest.mark.parametrize(
+    "observations",
+    [(["M5.long_stay"],), ([], ["M5.long_stay"]), ([], ["M5.long_stay"], []), ([], [])],
+    ids=["single-observed", "mixed-two-images", "mixed-three-images", "all-empty"],
+)
+def test_semantic_provider_submit_confirm_and_projection_with_mock_transport(
+    postgres_harness: object,
+    quarantine_root: Path,
+    phase6_deletion_schema: None,
+    monkeypatch: pytest.MonkeyPatch,
+    observations: tuple[list[str], ...],
+) -> None:
+    import json
+
+    import httpx
+
+    from itda.api.routes.photo import PhotoConfirmedTraitView
+    from itda.db.photo_repositories import PhotoRecommendationProjectionReader
+    from itda.domain.photo_projection import combine_confirmed_photo_traits
+    from itda.photo.provider.live import PhotoLiveAnalysisUnavailable
+    from itda.photo.provider.vlm import SemanticVlmPhotoAnalysisProvider
+
+    for variable in ("CI", "ITDA_OFFLINE", "ITDA_NO_NETWORK"):
+        monkeypatch.delenv(variable, raising=False)
+    dsn = _service_dsn(postgres_harness)
+    gateway = _f05_gateway(postgres_harness, quarantine_root, dsn)
+    requests = []
+
+    def handler(request):
+        requests.append(request)
+        return httpx.Response(
+            200,
+            json={
+                "choices": [
+                    {
+                        "finish_reason": "stop",
+                        "message": {
+                            "content": json.dumps({"semantic_ids": observations[len(requests) - 1]})
+                        },
+                    }
+                ]
+            },
+        )
+
+    gateway._provider = SemanticVlmPhotoAnalysisProvider(  # noqa: SLF001
+        endpoint="https://example.invalid/v1/chat/completions",
+        model="glm-4.6v",
+        api_key="test-only-key",
+        explicit_opt_in=True,
+        transport=httpx.MockTransport(handler),
+    )
+    job, owner = secrets.token_hex(32), "semantic-submit-confirm"
+    with psycopg.connect(dsn, autocommit=True) as connection:
+        connection.execute("SELECT dev_eval.create_photo_job_v3(%s,%s,NULL)", (job, owner))
+    import asyncio
+
+    payload = _f05_png_bytes()
+
+    async def chunks():
+        yield payload
+
+    for image_index in range(1, len(observations) + 1):
+        asyncio.run(
+            gateway.store_image_stream(
+                job_id=job,
+                job_directory=job,
+                profile_id=owner,
+                image_index=image_index,
+                chunks=chunks(),
+                declared_byte_length=len(payload),
+                media_type="image/png",
+            )
+        )
+    if not any(observations):
+        with pytest.raises(PhotoLiveAnalysisUnavailable):
+            gateway.submit_job(job_id=job, profile_id=owner)
+        assert len(requests) == len(observations) and _fs_residue(quarantine_root, job) == []
+        assert gateway.read_traits(job_id=job, profile_id=owner)["candidates"] == []
+        assert gateway.read_job_state(job_id=job, profile_id=owner) == {
+            "state": "failed",
+            "terminal_cause": "provider_error",
+            "cleanup_pending": False,
+        }
+        return
+    gateway.submit_job(job_id=job, profile_id=owner)
+    assert len(requests) == len(observations) and _fs_residue(quarantine_root, job) == []
+    candidate = gateway.read_traits(job_id=job, profile_id=owner)["candidates"][0]
+    assert candidate.analysis_kind == "semantic" and candidate.semantic_id == "M5.long_stay"
+    gateway.confirm_traits(
+        job_id=job,
+        profile_id=owner,
+        confirmations=(
+            PhotoConfirmedTraitView(
+                trait_id="M5",
+                text_ko=candidate.text_ko,
+                included=True,
+                source_candidate_id=candidate.candidate_id,
+            ),
+        ),
+    )
+    projection = PhotoRecommendationProjectionReader(gateway._factory).read(job, owner)  # noqa: SLF001
+    assert projection.traits[0].observed and projection.traits[0].value == 100
+    assert projection.images_count == len(observations)
+    assert projection.traits[0].image_index == next(
+        index for index, values in enumerate(observations, 1) if values
+    )
+    combined = combine_confirmed_photo_traits(
+        confirmed_traits=projection.traits, images_count=projection.images_count
+    )
+    assert len(combined.photo_trait_values) == 1 and combined.photo_trait_values[0][1] == 100
 
 
 def _f05_png_bytes() -> bytes:
@@ -4668,6 +4825,7 @@ def _rev10_gateway_from_module(
         quarantine_root=Path(quarantine_root),
         runtime_role=runtime_role,
         builder_role=builder_role,
+        synthetic_test_mode=True,
     )
 
 

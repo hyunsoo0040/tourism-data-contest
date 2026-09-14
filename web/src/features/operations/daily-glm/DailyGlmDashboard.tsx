@@ -4,7 +4,10 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import {
   createDailyGlmOperationsClient,
+  LEGACY_RECOLLECTION_RETIRED,
+  OperationsApiError,
   operationsErrorMessage,
+  RETIRED_RECOLLECTION_MESSAGE,
   type Execution,
   type ExecutionDetail,
   type Overview,
@@ -64,6 +67,8 @@ export function DailyGlmDashboard() {
   const [detailError, setDetailError] = useState<string | null>(null);
   const [commandError, setCommandError] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
+  const [recollectionRetired, setRecollectionRetired] = useState(false);
+  const retired = recollectionRetired || overview?.recollection.safe_reason === LEGACY_RECOLLECTION_RETIRED;
   const refreshRequest = useRef<AbortController | null>(null);
   const recollectionRequest = useRef<AbortController | null>(null);
   const recollectionKey = useRef<{ runDate: string; key: string } | null>(null);
@@ -138,7 +143,7 @@ export function DailyGlmDashboard() {
   }, [client, selected]);
 
   const commandId = command?.command_id;
-  const commandPending = command !== null && !terminalCommands.has(command.status);
+  const commandPending = !retired && command !== null && !terminalCommands.has(command.status);
   useEffect(() => {
     if (commandId === undefined || !commandPending) return;
     const controller = new AbortController();
@@ -169,7 +174,7 @@ export function DailyGlmDashboard() {
 
   const recollect = async () => {
     const runDate = overview?.latest_execution?.run_date;
-    if (runDate === undefined || recollectionRequest.current !== null) return;
+    if (retired || runDate === undefined || recollectionRequest.current !== null) return;
     const controller = new AbortController();
     recollectionRequest.current = controller;
     if (recollectionKey.current?.runDate !== runDate) {
@@ -186,7 +191,14 @@ export function DailyGlmDashboard() {
       await refresh();
     } catch (error) {
       if (!controller.signal.aborted) {
-        setCommandError(`${operationsErrorMessage(error, "재수집 요청 결과를 확인하지 못했습니다.")} 서버에서 접수되었을 수 있으므로 상태를 새로고침해 주세요.`);
+        if (error instanceof OperationsApiError && error.code === LEGACY_RECOLLECTION_RETIRED) {
+          setRecollectionRetired(true);
+          setConfirming(false);
+          recollectionKey.current = null;
+          setCommandError(RETIRED_RECOLLECTION_MESSAGE);
+        } else {
+          setCommandError(`${operationsErrorMessage(error, "재수집 요청 결과를 확인하지 못했습니다.")} 서버에서 접수되었을 수 있으므로 상태를 새로고침해 주세요.`);
+        }
       }
     } finally {
       if (recollectionRequest.current === controller) {
@@ -201,7 +213,7 @@ export function DailyGlmDashboard() {
       <header className="evaluator-intro">
         <p className="eyebrow">IT-DA · daily operations</p>
         <h1 tabIndex={-1}>Daily GLM 관제</h1>
-        <p>PUBLIC-100 TourAPI 수집과 GLM 증분 실행 상태를 안전한 운영 정보로 확인합니다.</p>
+        <p>{retired ? "과거 일일 GLM 실행 이력을 조회합니다. 현재 근거 기반 분석은 운영 CLI에서 관리합니다." : "공개 카탈로그의 TourAPI 수집과 GLM 실행 상태를 확인합니다."}</p>
         <button className="button button--secondary" disabled={refreshing} onClick={() => void refresh()} type="button">
           새로고침
         </button>
@@ -222,16 +234,21 @@ export function DailyGlmDashboard() {
       <section className="daily-glm-panel" aria-labelledby="availability-heading">
         <h2 id="availability-heading">최신 수집 판정</h2>
         <AvailabilityCounts execution={overview?.latest_execution ?? null} />
-        <p>모집단은 PUBLIC 100개로 유지합니다. 현재 정보 조회 불가는 폐업이나 행사 종료의 증거가 아닙니다.</p>
+        <p>현재 공개 카탈로그의 여행지를 대상으로 자료를 확인합니다. 현재 정보 조회 불가는 폐업이나 행사 종료의 증거가 아닙니다.</p>
         <p>입력·상태 변경 수에는 제외 판정 변경도 포함되므로 실제 GLM 분석 장소 수와 다를 수 있습니다.</p>
         <RejectedReleaseNotice execution={overview?.latest_execution ?? null} />
       </section>
 
       <section className="daily-glm-panel" aria-labelledby="recollection-heading">
-        <h2 id="recollection-heading">안전한 즉시 재수집</h2>
-        <p>{overview?.recollection.safe_reason ?? "상태 확인 중"}</p>
+        <h2 id="recollection-heading">{retired ? "기존 재수집 종료" : "안전한 즉시 재수집"}</h2>
+        {retired ? <>
+          <p>{RETIRED_RECOLLECTION_MESSAGE}</p>
+          <p><code>python -m itda.cli.run_daily_glm_refresh --once --run-date YYYY-MM-DD</code></p>
+          <p>새 후보의 활성화에는 해당 후보를 검증한 게이트와 실제 보고서 세 개가 필요합니다.</p>
+        </> : <p>{overview?.recollection.safe_reason ?? "상태 확인 중"}</p>}
         {command ? <p>최근 command: <strong>{command.status}</strong>{command.safe_reason ? ` · ${command.safe_reason}` : ""}</p> : null}
-        {!confirming ? (
+        {retired && command && !terminalCommands.has(command.status) ? <p>이전 대기 요청은 현재 스케줄러에서 처리되지 않습니다.</p> : null}
+        {retired ? null : !confirming ? (
           <button
             className="button button--primary"
             disabled={!overview?.recollection.eligible || busy}

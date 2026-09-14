@@ -1,0 +1,943 @@
+{
+  "assessed_at": "2026-09-11T17:53:30.092652Z",
+  "assessment_sha256": "c2786e782c015c2e7b8f94154cf006bb9fffc38ecaf3d365ff8981ad469f32fa",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 61
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "홍보 문구가 '치유농장', '힐링', '명품장소' 등 힐링·치유 이미지를 부여한다. 다만 이는 운영자가 부여한 이미지이며 사회적 공유 정도는 확인되지 않아 낮은 수준으로 판단한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:4857e48d85dd946d47927f82b36a46a9ac52570a2f9fdc3ed0ff3f61fcea563d",
+            "appearance:6b1330880c0b9f159efb79d29cc6e23ff847a56bc2c25218ea1e829545204510",
+            "appearance:cede535e918d7c016e6322d1cb51652b0649dcc914efffa611c1493cb8ad4915"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "팜크닉 같은 대표 장면을 경험할 수 있다는 안내가 있으나 특정 이미지·구도의 재현 중심 경험이라는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "걷기, 족욕, 명상 등 스스로 선택해 즐길 수 있는 여유 활동이 소개되나 프로그램 중심 운영이라 자율 탐색의 깊이는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:99354c3d63701691f6106b220da51f071fce863d3679263358183591c1e60c44",
+            "appearance:9dadcd17451539ff3ff7bd125817ae7eaad9bd2bf122497ef61778fb73c70667",
+            "appearance:cccfe16575b77a0f416060118f9f69f3d5ac191a5a4c2505c6061b431034010e"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 42,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "'천혜의 자원', '청정지역' 등은 홍보 문구이며 옥정호 조망이 실제 저자극·고요한 환경임을 확인해주지 않는다. 사과과수원 등 자연 단서는 있으나 '두드러짐(수준 3)'을 직접 관찰 근거로 단정하기 어렵다. 수준 2 정도가 적절할 수 있어 UNCERTAIN으로 남긴다.",
+      "value": 42
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+            "evidence:9f970bce82f01acf2624a860ed69de8857f68f3a16a77dc76ed67e7da3ab1609"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "치유농업 프로그램 24회차, 푸드·아로마·원예·공예테라피 등 지속적으로 참여·몰입할 구체적 활동이 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "레크리에이션, 치매예방·정서발달 프로그램, 관계자원이 풍부하다는 서술 등 교류·공동 활동 기회가 확인된다. 자기표현의 풍부함까지는 확인되지 않는다.",
+      "value": 75
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "개요는 사과농장과 치유농업 시설 설명이며, 이 장소 자체의 확인된 원형·유산 접촉 근거가 없다. 필봉농악전수관은 연계 관광자원으로 본 장소의 유산 경험이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "농장 자체의 역사·연혁·사건·인물에 대한 설명이 없고 '역사 이야기가 있는 성수산'은 인근 연계 자원일 뿐이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "유네스코 등재 필봉농악전수관과의 연계 숙박·관람을 언급하나 이는 주변 자원 연계 상품이며, 본 농장의 지역 주체 전승 활동과의 직접 연결은 확인되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "제공되는 프로그램은 치유농업·테라피 중심이며 원형·유산·전통에 연결된 해설·탐구는 확인되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+          "quote": {
+            "end": 554,
+            "method": "EXACT",
+            "original": "쉼, 힐링, 여유, 맛, 멋, 일상의 지친 스트레스 해소로 건강 회복 및 유지 증진 등 치유의 시간을 제공하는",
+            "start": 493,
+            "submitted": "쉼, 힐링, 여유, 맛, 멋, 일상의 지친 스트레스 해소로 건강 회복 및 유지 증진 등 치유의 시간을 제공하는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dda227e8fd3c4322c65ec8e3d99b181773c6b78cc4259cf91d7c3c2ff388eafa"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 1,
+      "reason": "홍보 문구가 '치유농장', '힐링', '명품장소' 등 힐링·치유 이미지를 부여한다. 다만 이는 운영자가 부여한 이미지이며 사회적 공유 정도는 확인되지 않아 낮은 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 유통·재현에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+          "quote": {
+            "end": 490,
+            "method": "EXACT",
+            "original": "사과과수원에서의 팜크닉 등 오감을 만족 장소 제공",
+            "start": 463,
+            "submitted": "사과과수원에서의 팜크닉 등 오감을 만족 장소 제공",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dda227e8fd3c4322c65ec8e3d99b181773c6b78cc4259cf91d7c3c2ff388eafa"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "팜크닉 같은 대표 장면을 경험할 수 있다는 안내가 있으나 특정 이미지·구도의 재현 중심 경험이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+          "quote": {
+            "end": 383,
+            "method": "EXACT",
+            "original": "황토길 몽골돌길 걷기, 족욕, 차향명상, 건강체조 및 레크리에이션",
+            "start": 347,
+            "submitted": "황토길 몽골돌길 걷기, 족욕, 차향명상, 건강체조 및 레크리에이션",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dda227e8fd3c4322c65ec8e3d99b181773c6b78cc4259cf91d7c3c2ff388eafa"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "걷기, 족욕, 명상 등 스스로 선택해 즐길 수 있는 여유 활동이 소개되나 프로그램 중심 운영이라 자율 탐색의 깊이는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "'천혜의 자원', '청정지역' 등은 홍보 문구이며 옥정호 조망이 실제 저자극·고요한 환경임을 확인해주지 않는다. 사과과수원 등 자연 단서는 있으나 '두드러짐(수준 3)'을 직접 관찰 근거로 단정하기 어렵다. 수준 2 정도가 적절할 수 있어 UNCERTAIN으로 남긴다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+          "quote": {
+            "end": 282,
+            "method": "EXACT",
+            "original": "24회차 치유농업 프로그램과 푸드테라피, 아로마테라피, 허브&원예테라피, 공예테라피",
+            "start": 236,
+            "submitted": "24회차 치유농업 프로그램과 푸드테라피, 아로마테라피, 허브&원예테라피, 공예테라피",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dda227e8fd3c4322c65ec8e3d99b181773c6b78cc4259cf91d7c3c2ff388eafa"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:9f970bce82f01acf2624a860ed69de8857f68f3a16a77dc76ed67e7da3ab1609",
+          "quote": {
+            "end": 24,
+            "method": "EXACT",
+            "original": "푸드테라피 / 아로마테라피 / 원예테라피 등",
+            "start": 0,
+            "submitted": "푸드테라피 / 아로마테라피 / 원예테라피 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "008311fa7055bdea03bb0dccfe71455f693bc0d453137795a2a9a35678ef2b9a"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "치유농업 프로그램 24회차, 푸드·아로마·원예·공예테라피 등 지속적으로 참여·몰입할 구체적 활동이 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+          "quote": {
+            "end": 430,
+            "method": "EXACT",
+            "original": "치매예방 프로그램, 아동*청소년 정서발달 프로그램 등 다양한 치유 프로그램을 제공",
+            "start": 385,
+            "submitted": "치매예방 프로그램, 아동*청소년 정서발달 프로그램 등 다양한 치유 프로그램을 제공",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "dda227e8fd3c4322c65ec8e3d99b181773c6b78cc4259cf91d7c3c2ff388eafa"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 3,
+      "reason": "레크리에이션, 치매예방·정서발달 프로그램, 관계자원이 풍부하다는 서술 등 교류·공동 활동 기회가 확인된다. 자기표현의 풍부함까지는 확인되지 않는다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+            "quote": "아름다운 옥정호가 내려다 보이는 430m 청정지역에 위치한 명품장소"
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+            "quote": "안전함, 편안함, 청결함, 아름다움, 이색공간 방갈로, 사과과수원에서의 팜크닉"
+          }
+        ],
+        "key": "E.c",
+        "level": 2,
+        "reason": "옥정호가 내려다보이는 위치, 이색공간 방갈로, 사과과수원 등 시각적 환경 단서가 제한적으로 표현되지만, 일관된 연출이 지배한다는 근거는 없다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+              "quote": {
+                "end": 42,
+                "method": "EXACT",
+                "original": "임실 천혜의 자원 아름다운 옥정호가 내려다 보이는 430m 청정지역에 위치한",
+                "start": 0,
+                "submitted": "임실 천혜의 자원 아름다운 옥정호가 내려다 보이는 430m 청정지역에 위치한",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "dda227e8fd3c4322c65ec8e3d99b181773c6b78cc4259cf91d7c3c2ff388eafa"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "옥정호를 내려다보는 청정지역, 황토방, 사과과수원 등 자연 환경 단서가 두드러지며 농장 전체가 자연 환경 위에 구성되어 있다. 실제 고요함·혼잡은 확인되지 않는다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "'천혜의 자원', '청정지역' 등은 홍보 문구이며 옥정호 조망이 실제 저자극·고요한 환경임을 확인해주지 않는다. 사과과수원 등 자연 단서는 있으나 '두드러짐(수준 3)'을 직접 관찰 근거로 단정하기 어렵다. 수준 2 정도가 적절할 수 있어 UNCERTAIN으로 남긴다."
+        }
+      },
+      "reason": "'천혜의 자원', '청정지역' 등은 홍보 문구이며 옥정호 조망이 실제 저자극·고요한 환경임을 확인해주지 않는다. 사과과수원 등 자연 단서는 있으나 '두드러짐(수준 3)'을 직접 관찰 근거로 단정하기 어렵다. 수준 2 정도가 적절할 수 있어 UNCERTAIN으로 남긴다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "6092003b2b0dcce12dc6ed92123d8ea20a72ab82d89178279c66ccb2f125d65e",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "금테 백자 접시와 트레이, 베이커리 실내 환경으로 전통적 외관·재료의 시각적 특성이 나타나지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:268b98e4d28b40555e232e1d37f5cfc8fc58fc99dffc31bba72e93aebc98ede9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "240e493b59e505ddd2d780e056bb3ce1a73a1026bff8f8970b2b47b081cd13ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353494_2",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d7820ba81839417bf4809d12f7446b51e3d2955e73744e79a6b5d924aa84daaa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/94/3353494_image2_1.png"
+        },
+        "record_sha256": "85b7ab2cba84d00172674ead65f3ca1f8adca3573eced8663bbb626444d13447",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "붉은색과 흰색 줄무늬 천막이 장면의 시선을 끌며, 잔잔한 초록 잔디와 습한 구름 낀 하늘의 색감 대비가 뚜렷함. 돌을 깐 산책로가 중앙 구도를 이끌고 다양한 조형물과 화초가 연출적으로 배치되어 시각적 개성이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4857e48d85dd946d47927f82b36a46a9ac52570a2f9fdc3ed0ff3f61fcea563d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e5239b029c13e1b3fb4661c9b0ce0ec8f9f9092dd1fdf09f04d4b41862d30452",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353497_4",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "80f99e4141b62f32681182d532b88bdee9909b548cbb01bdcd5568183779200c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3353497_image2_1.png"
+        },
+        "record_sha256": "0a4e47cb23f4b2399241a80a6c76d7df2f6a77b165f5a1e86241817daac47fe0",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "건물 옆에 항아리(옹기)가 늘어서 있고 소박한 정원 조형물이 일부 전통적 정원 느낌을 주지만, 천막과 서구식 정자·잔디밭 위주로 전통 외관의 비중은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:51ae3a45ae02d579e22ac9582744775a4a3f7d62487415d69b18c9d8ef6b37e2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e5239b029c13e1b3fb4661c9b0ce0ec8f9f9092dd1fdf09f04d4b41862d30452",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353497_4",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "80f99e4141b62f32681182d532b88bdee9909b548cbb01bdcd5568183779200c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3353497_image2_1.png"
+        },
+        "record_sha256": "9cc766b2066bb9fc42615c22e779756c471903c99b3f8dace741b3ac7948a89e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "사과 모양으로 연출된 진한 붉은 빵이 화면을 지배하며, 줄기와 민트 잎 장식으로 극적인 연출성이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6b1330880c0b9f159efb79d29cc6e23ff847a56bc2c25218ea1e829545204510",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "240e493b59e505ddd2d780e056bb3ce1a73a1026bff8f8970b2b47b081cd13ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353494_2",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d7820ba81839417bf4809d12f7446b51e3d2955e73744e79a6b5d924aa84daaa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/94/3353494_image2_1.png"
+        },
+        "record_sha256": "c4955913fd4eab07fb413078f3975ee62d97b8bb35a08fd7384d3ff6e4689238",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "넓은 잔디밭, 큰 나무, 화단, 그리고 배경으로 트인 산 능선과 안개 낀 하늘이 화면 대부분을 차지해 자연 환경 단서가 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:99354c3d63701691f6106b220da51f071fce863d3679263358183591c1e60c44",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "e5239b029c13e1b3fb4661c9b0ce0ec8f9f9092dd1fdf09f04d4b41862d30452",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353497_4",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "80f99e4141b62f32681182d532b88bdee9909b548cbb01bdcd5568183779200c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/97/3353497_image2_1.png"
+        },
+        "record_sha256": "92d210de5528298abe43da18d9ca15e7787335c4492f4771d1b5a82872b7c459",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "민트 잎 한 장 외에 자연 경관이나 녹지·물 등 자연 환경 단서가 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9dadcd17451539ff3ff7bd125817ae7eaad9bd2bf122497ef61778fb73c70667",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "240e493b59e505ddd2d780e056bb3ce1a73a1026bff8f8970b2b47b081cd13ed",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353494_2",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d7820ba81839417bf4809d12f7446b51e3d2955e73744e79a6b5d924aa84daaa",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/94/3353494_image2_1.png"
+        },
+        "record_sha256": "9435c5d0c34eba0cf054fc176e978b840e7796ea9f18d4b5f40f20e4acb4763d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "우측의 큰 나무와 관목, 화단과 흰 자갈 길, 푸른 하늘이 보이나 녹지가 화면 일부에 머문다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cccfe16575b77a0f416060118f9f69f3d5ac191a5a4c2505c6061b431034010e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "22a31add96b4f1c79fcd3bed4db991dc6994d0ad2b622ccc76605f7ccada8433",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353493_1",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "84f694c78d7dc533821ab2d8aecd098584fb3f2995c4bacd7e4a042e65b0cbf3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3353493_image2_1.png"
+        },
+        "record_sha256": "d322ad8877fb6579fc3c0be0d026b89ee8d6368950562771d89866dae4a77850",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "짙은 차색 외벽에 붉은 사과 로고와 노란·흰색 입체 간판이 대비되어 시각적 인상이 강하고, 경사진 구도가 건물을 역동적으로 보이게 한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cede535e918d7c016e6322d1cb51652b0649dcc914efffa611c1493cb8ad4915",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "22a31add96b4f1c79fcd3bed4db991dc6994d0ad2b622ccc76605f7ccada8433",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353493_1",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "84f694c78d7dc533821ab2d8aecd098584fb3f2995c4bacd7e4a042e65b0cbf3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3353493_image2_1.png"
+        },
+        "record_sha256": "a3c7a90423d55fb9eb32bc1edddd5bb92cb4d43e62501826a027b0e1c20e2356",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대식 판넬 재질의 간이 건축 외관으로 전통적 재료나 공간 구성의 특성은 거의 드러나지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f1241e1e0c2e4cb263e69d889626e683f42b6efea6bd4bee59f4bd09558e32b6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "22a31add96b4f1c79fcd3bed4db991dc6994d0ad2b622ccc76605f7ccada8433",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3353493_1",
+          "request_sha256": "679b1263325d60bbf1ef8f808b2e696b268d6126d19d9a11b691657de3b27534",
+          "response_sha256": "a984b8a15c78b3a1c336d5b4e138804f9a3412f7167cdadb3ddda69d563823f4",
+          "retrieved_at": "2026-09-11T02:07:06.126679Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "84f694c78d7dc533821ab2d8aecd098584fb3f2995c4bacd7e4a042e65b0cbf3",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3353493_image2_1.png"
+        },
+        "record_sha256": "0550c7bf1138227d18a6c6ed80184eaef2e8d5c61fd0d4e0c56384e0f9b6e022",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4eebf0b97e5b41baedd5b90439bd3be32c787b24dc3efc694693b84617dd31b5",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2996825",
+          "request_sha256": "06ffa4b049590ae69abb4101111ddb1f6a01d7a49f0e35e3e7f16795397f9cb3",
+          "response_sha256": "e0200bce5bc4ba228aeb3f25e87e52b8a6413cb797975b08065fa380ea3e8a37",
+          "retrieved_at": "2026-09-10T16:51:24.981430Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-08-08T06:23:18Z",
+          "source_record_sha256": "99b1885dcdfc54564a71686fe00fe9bcd623c4021dd7181b5a3d02ddfada5c48",
+          "source_uri": null
+        },
+        "record_sha256": "dda227e8fd3c4322c65ec8e3d99b181773c6b78cc4259cf91d7c3c2ff388eafa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "임실 천혜의 자원 아름다운 옥정호가 내려다 보이는 430m 청정지역에 위치한 명품장소로 대상자들에게 주변 옥정호 붕어섬 출렁다리, 유네스코 등재된 필봉농악전수관, 임실사격장, 임실테마파크, 역사 이야기가 있는 치유숲 성수산등 관광자원과 네트워크를 연계 하고 주변 고급 한옥 숙박 이랑, 전통 황토방 숙박 흙집연, 토요일은 국악 창작극을 관람하며 전통기와 필봉농악 전수관 숙박 등과 연계하여 고객의 다양 니즈를 충족 시키고 24회차 치유농업 프로그램과 푸드테라피, 아로마테라피, 허브&원예테라피, 공예테라피와 교육농장 인증체험처, 교육기부진로직업체험처인증, 치유농업양성교육을 이수한 전문가 대표가 운영하는 치유 농장으로, 황토길 몽골돌길 걷기, 족욕, 차향명상, 건강체조 및 레크리에이션, 치매예방 프로그램, 아동*청소년 정서발달 프로그램 등 다양한 치유 프로그램을 제공, 안전함, 편안함, 청결함, 아름다움, 이색공간 방갈로, 사과과수원에서의 팜크닉 등 오감을 만족 장소 제공으로 쉼, 힐링, 여유, 맛, 멋, 일상의 지친 스트레스 해소로 건강 회복 및 유지 증진 등 치유의 시간을 제공하는 감각, 감성, 인지, 행동, 관계자원이 풍부한 사과농장이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:9f970bce82f01acf2624a860ed69de8857f68f3a16a77dc76ed67e7da3ab1609",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "2996825",
+          "request_sha256": "cca1b55bdccefa634ebdad1eb0b6a6d276fc8fef45efb78cea006e73ac4f7e9c",
+          "response_sha256": "bcdf6922df1093c74219e7540c0ff2550b1a1067bbef48778abf9c7250153dfe",
+          "retrieved_at": "2026-09-10T16:51:25.336092Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "78251ddb6fc31b57b0bd17accd93d24c84e9d2f4d4fb80c734e0fae5403e184d",
+          "source_uri": null
+        },
+        "record_sha256": "008311fa7055bdea03bb0dccfe71455f693bc0d453137795a2a9a35678ef2b9a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "푸드테라피 / 아로마테라피 / 원예테라피 등"
+      }
+    ],
+    "parent_source_sha256": "37fddd96e016b402646d4a067e6e64fa5c0f44479575863c3853b4f5a04e1d37",
+    "place": {
+      "address": "전북특별자치도 임실군 강진면 옥정호로 937-12",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+      "name_ko": "애플트리 힐링팜",
+      "place_id": "public:korea:88a426697d964eb9ca35a33139ba7a55d0bc1896a6f3026cf739d46059a1b7e4",
+      "provider_content_id": "2996825",
+      "region_code": "52750",
+      "region_name": "전북특별자치도 임실군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

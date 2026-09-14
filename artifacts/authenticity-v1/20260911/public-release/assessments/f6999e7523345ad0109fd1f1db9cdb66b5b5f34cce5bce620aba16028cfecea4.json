@@ -1,0 +1,507 @@
+{
+  "assessed_at": "2026-09-11T17:08:09.260425Z",
+  "assessment_sha256": "f6999e7523345ad0109fd1f1db9cdb66b5b5f34cce5bce620aba16028cfecea4",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 56
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "촬영지로서 많은 사람들에게 각인되었다는 표현이 이 장소에 부여된 이미지·의미를 직접 보여준다. 드라마·영화 촬영지라는 단일 이미지 연결이 확인되나 일관된 의미 체계의 다층 근거는 부족해 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "드라마·영화 촬영지로서 매체에 재현되고 대중에게 각인되었다는 명시적 서술이 있다. 매체 표현의 존재는 확인되지만 반복적 유통의 근거는 제한적이어서 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "수준과 취향에 따라 해안코스·숲 코스 등 다양한 코스를 선택할 수 있다는 서술이 자기 선택의 기회를 보여준다. 다만 코스 선택의 자유 정도만 확인되고 깊은 자율 탐색의 근거는 부족해 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "일출봉과 해변을 배경으로 하고 숲 코스가 있다는 자연 환경 단서가 확인된다. 그러나 고요함·저자극·회복 환경이 두드러진다는 근거나 실제 혼잡도 정보는 없어 제한적 환경 단서인 수준 2로 판단했다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "전문 강사와 함께 해안·숲 코스를 직접 말을 타고 다녀오는 구체적 신체 참여 활동이 확인된다. 지속적 도전까지는 확인되지 않지만 승마는 집중을 요하는 활동이므로 수준 3으로 판단했다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "가족·연인·친구와 함께 승마를 즐기며 추억을 만들 수 있다는 교류 맥락이 있다. 다만 함께함을 권장하는 서술일 뿐 공동 제작·자기표현 활동의 구체적 근거는 제한적이어서 수준 2로 판단했다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "승마장이라는 시설 설명만 있으며 확인된 원형·유산의 실물이나 공간과의 접촉을 뒷받침하는 근거가 없다. '유네스코 자연경관으로 등재된 바다'는 배경 경관 언급일 뿐 유산 접촉 경험 자체가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "장소 자체의 역사나 연혁, 사건·인물 맥락에 대한 설명이 제공되지 않았다. 정식 허가·지정 농장이라는 사실은 이 장소의 역사 탐구 경험을 구성하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "'전문 승용마 생산 지정 농장'이라는 사실이 있으나 지역 주체의 전승·생활문화와의 지속적 연결을 확인하는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "전문 강사가 안전과 기술을 가르친다는 내용은 승마 기술 교육일 뿐 원형·유산·전통에 연결된 해설·탐구 활동의 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+          "quote": {
+            "end": 155,
+            "method": "EXACT",
+            "original": "그동안 드라마, 영화 촬영을 진행해 많은 연예인들이 찾았던 곳이며 제주도에서 촬영해 많은 사람들에게 각인되었던 드라마",
+            "start": 90,
+            "submitted": "그동안 드라마, 영화 촬영을 진행해 많은 연예인들이 찾았던 곳이며 제주도에서 촬영해 많은 사람들에게 각인되었던 드라마",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "efa5618ab4e31649c834798258dfeb80450095097c6a3ce604e991286b6dcb9e"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "촬영지로서 많은 사람들에게 각인되었다는 표현이 이 장소에 부여된 이미지·의미를 직접 보여준다. 드라마·영화 촬영지라는 단일 이미지 연결이 확인되나 일관된 의미 체계의 다층 근거는 부족해 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+          "quote": {
+            "end": 167,
+            "method": "EXACT",
+            "original": "드라마 의 촬영지이기도 하다",
+            "start": 152,
+            "submitted": "드라마 의 촬영지이기도 하다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "efa5618ab4e31649c834798258dfeb80450095097c6a3ce604e991286b6dcb9e"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "드라마·영화 촬영지로서 매체에 재현되고 대중에게 각인되었다는 명시적 서술이 있다. 매체 표현의 존재는 확인되지만 반복적 유통의 근거는 제한적이어서 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "과거 촬영이 이루어졌다는 사실만 있고 방문자가 대표 장면·구도·이야기를 현장에서 직접 경험하거나 재현할 수 있다는 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+          "quote": {
+            "end": 249,
+            "method": "EXACT",
+            "original": "처음 승마를 접하는 사람부터 쉽게 즐길 수 있으며 전문가까지 즐길 수 있는 다양한 코스가 마련되어 있다",
+            "start": 192,
+            "submitted": "처음 승마를 접하는 사람부터 쉽게 즐길 수 있으며 전문가까지 즐길 수 있는 다양한 코스가 마련되어 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "efa5618ab4e31649c834798258dfeb80450095097c6a3ce604e991286b6dcb9e"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "수준과 취향에 따라 해안코스·숲 코스 등 다양한 코스를 선택할 수 있다는 서술이 자기 선택의 기회를 보여준다. 다만 코스 선택의 자유 정도만 확인되고 깊은 자율 탐색의 근거는 부족해 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+          "quote": {
+            "end": 26,
+            "method": "EXACT",
+            "original": "성산 일출봉과 광치기 해변이 배경인 쇠와꽃승마장",
+            "start": 0,
+            "submitted": "성산 일출봉과 광치기 해변이 배경인 쇠와꽃승마장",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "efa5618ab4e31649c834798258dfeb80450095097c6a3ce604e991286b6dcb9e"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+          "quote": {
+            "end": 348,
+            "method": "EXACT",
+            "original": "숲 코스",
+            "start": 344,
+            "submitted": "숲 코스",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "efa5618ab4e31649c834798258dfeb80450095097c6a3ce604e991286b6dcb9e"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 2,
+      "reason": "일출봉과 해변을 배경으로 하고 숲 코스가 있다는 자연 환경 단서가 확인된다. 그러나 고요함·저자극·회복 환경이 두드러진다는 근거나 실제 혼잡도 정보는 없어 제한적 환경 단서인 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+          "quote": {
+            "end": 447,
+            "method": "EXACT",
+            "original": "전문강사와 함께 직접 말을 타고 다녀오는 코스이다",
+            "start": 420,
+            "submitted": "전문강사와 함께 직접 말을 타고 다녀오는 코스이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "efa5618ab4e31649c834798258dfeb80450095097c6a3ce604e991286b6dcb9e"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "전문 강사와 함께 해안·숲 코스를 직접 말을 타고 다녀오는 구체적 신체 참여 활동이 확인된다. 지속적 도전까지는 확인되지 않지만 승마는 집중을 요하는 활동이므로 수준 3으로 판단했다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+          "quote": {
+            "end": 305,
+            "method": "EXACT",
+            "original": "가족, 연인, 친구와 함께 특별한 추억을 만들기 위해",
+            "start": 276,
+            "submitted": "가족, 연인, 친구와 함께 특별한 추억을 만들기 위해",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "efa5618ab4e31649c834798258dfeb80450095097c6a3ce604e991286b6dcb9e"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "가족·연인·친구와 함께 승마를 즐기며 추억을 만들 수 있다는 교류 맥락이 있다. 다만 함께함을 권장하는 서술일 뿐 공동 제작·자기표현 활동의 구체적 근거는 제한적이어서 수준 2로 판단했다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+            "quote": "성산 일출봉의 아름다운 단면과 푸른 하늘, 바다가 한눈에 들어오는 황홀한 순간을 더 높은 시야에서 가득 담을 수 있다"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "일출봉·바다·하늘이 한눈에 들어오는 경관이 장소의 시각적 성격을 분명히 표현한다고 서술되어 있다. 경관이 장면 전체를 지배한다는 근거는 아니어서 수준 3으로 판단했다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "699945b1a674b0e1dcc6d9cbff7c1489ed84c0d9bc02cc071094fbce63d9096b",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fea0c0de9ad352ae1711a75ffc8f8bcad352f8c3f276749955e3cfcf71dbadec",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:5c6ef70df220031b1fe70c7c2575dd206e64c3e1b7eb0d1c007fa653893390f9",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3030978",
+          "request_sha256": "c01577a65cb37aacb3024d36bd2ce018485d0d3ad1e0cdfc7f620eb52e46259f",
+          "response_sha256": "834ae218fdfdf7f02553d709cc3df446874fd5704ea4733fa02922511d1a294e",
+          "retrieved_at": "2026-09-10T08:03:14.394867Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-16T05:28:07Z",
+          "source_record_sha256": "df7edb2d96c1a94bc1ef6406abffe3d4167ecf61909f7d7ffaa7923b7cd0a177",
+          "source_uri": null
+        },
+        "record_sha256": "efa5618ab4e31649c834798258dfeb80450095097c6a3ce604e991286b6dcb9e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "성산 일출봉과 광치기 해변이 배경인 쇠와꽃승마장은 성산읍의 유일한 정식 허가업체로 제주관광공사가 추천하는 곳이다. 또한 전문 승용마 생산 지정 농장이기도 하다. 그동안 드라마, 영화 촬영을 진행해 많은 연예인들이 찾았던 곳이며 제주도에서 촬영해 많은 사람들에게 각인되었던 드라마 의 촬영지이기도 하다. 전문 강사진이 안전과 기술을 가르쳐 주어 처음 승마를 접하는 사람부터 쉽게 즐길 수 있으며 전문가까지 즐길 수 있는 다양한 코스가 마련되어 있다. 성산 일출봉과 광치기 해변의 경치를 배경으로 가족, 연인, 친구와 함께 특별한 추억을 만들기 위해 여행 중 편리하게 방문 가능하다. 가장 대표적인 코스로는 해안코스와 숲 코스 두 가지가 있는데 가장 많이 찾는 코스는 해안코스로 솨외꽃승마장에서 출발해 유네스코 자연경관으로 등재된 바다인 광치기 해변까지 전문강사와 함께 직접 말을 타고 다녀오는 코스이다. 성산 일출봉의 아름다운 단면과 푸른 하늘, 바다가 한눈에 들어오는 황홀한 순간을 더 높은 시야에서 가득 담을 수 있다. 쇠와꽃승마장 주변은 관광지가 많아서 빛의 벙커, 사려니숲길, 녹산로 유채꽃밭, 섭지코지와 한화 아쿠아플라넷 제주 등 함께 방문하기 좋다."
+      }
+    ],
+    "parent_source_sha256": "a5b4baf86fdaef332bdd4c070d85df13e0ec4eb1ce07a309a60a54778c209f42",
+    "place": {
+      "address": "제주특별자치도 서귀포시 성산읍 섭지코지로25번길 88-17",
+      "category": "레포츠",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:5c6ef70df220031b1fe70c7c2575dd206e64c3e1b7eb0d1c007fa653893390f9",
+      "name_ko": "쇠와꽃승마장",
+      "place_id": "public:korea:5c6ef70df220031b1fe70c7c2575dd206e64c3e1b7eb0d1c007fa653893390f9",
+      "provider_content_id": "3030978",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

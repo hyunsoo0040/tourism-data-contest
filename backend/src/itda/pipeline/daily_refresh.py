@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 
+import logging
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, time, timedelta
 from typing import Protocol
 from zoneinfo import ZoneInfo
 
+from itda.analysis.recommendation_quality import (
+    DEFAULT_SCENARIO_SUITE_SHA256,
+    build_release_consistency_report,
+)
 from itda.contracts.mvp_daily_refresh import (
     DAILY_REFRESH_AUTHORITY_V2,
     DailyRefreshRunStatus,
@@ -20,7 +25,10 @@ from itda.contracts.mvp_public_catalog import (
     PublicPlaceCatalog,
     PublicPlaceRelations,
 )
+from itda.contracts.place_facts import PLACE_FACT_POLICY_VERSION
+from itda.contracts.recommendation import QUALITY_RECOMMENDATION_CONFIG
 from itda.db.mvp_release_overlay import DailyRefreshStore
+from itda.domain.recommendation_projection import RECOMMENDATION_PROJECTION_VERSION_V3
 from itda.pipeline.daily_incremental_scoring import (
     DailyTerminalScoringError,
     execute_incremental_scoring,
@@ -38,8 +46,10 @@ from itda.pipeline.daily_scored_release import (
     scoring_targets,
 )
 from itda.pipeline.mvp_place_scoring import ScoringAttemptEvent, ScoringTransport
+from itda.pipeline.recommendation_quality_gate import assess_release_quality
 
 SEOUL = ZoneInfo("Asia/Seoul")
+LOGGER = logging.getLogger(__name__)
 
 
 class ActiveReleaseResolver(Protocol):
@@ -55,6 +65,8 @@ class DailyRefreshOutcome:
     call_count: int
     release_sha256: str | None = None
     safe_reason: str | None = None
+    quality_report: dict[str, object] | None = None
+    quality_gate: dict[str, object] | None = None
 
 
 def due_run_date(now: datetime) -> date | None:
@@ -277,6 +289,9 @@ def run_daily_refresh(
             )
         finally:
             transport.close()
+    quality_report: dict[str, object] | None = None
+    quality_gate: dict[str, object] | None = None
+    rejection_reason = "RELEASE_VALIDATION_REJECTED"
     try:
         release = materialize_daily_scored_release(
             previous_release=previous_release,
@@ -292,6 +307,37 @@ def run_daily_refresh(
             reusable_entries=entries,
             reusable_failed=failed,
         )
+        rejection_reason = "QUALITY_REPORT_GENERATION_FAILED"
+        quality_report = build_release_consistency_report(
+            release,
+            previous_release=previous_release,
+            kernel_version=QUALITY_RECOMMENDATION_CONFIG.kernel_version,
+            projection_version=RECOMMENDATION_PROJECTION_VERSION_V3,
+            policy_version=PLACE_FACT_POLICY_VERSION,
+        )
+        decision = assess_release_quality(
+            release,
+            previous_release=previous_release,
+            catalog=catalog,
+            report=quality_report,
+            scenario_suite_sha256=DEFAULT_SCENARIO_SUITE_SHA256,
+            kernel_version=QUALITY_RECOMMENDATION_CONFIG.kernel_version,
+            projection_version=RECOMMENDATION_PROJECTION_VERSION_V3,
+            policy_version=PLACE_FACT_POLICY_VERSION,
+        )
+        quality_gate = decision.as_dict()
+        LOGGER.info(
+            "daily_recommendation_quality_gate",
+            extra={
+                "run_date": run_date.isoformat(),
+                "quality_report": quality_report,
+                "quality_gate": quality_gate,
+            },
+        )
+        if decision.status != "pass":
+            rejection_reason = decision.reasons[0]
+            raise ValueError("daily quality gate did not pass")
+        rejection_reason = "RELEASE_VALIDATION_REJECTED"
         store.publish(release)
         store.activate(
             run_date=run_date,
@@ -299,7 +345,7 @@ def run_daily_refresh(
             expected_current=previous_release.release_sha256,
         )
     except ValueError:
-        reason = "RELEASE_VALIDATION_REJECTED"
+        reason = rejection_reason
         store.finish(
             run_date=run_date,
             status=DailyRefreshRunStatus.RELEASE_REJECTED,
@@ -314,6 +360,8 @@ def run_daily_refresh(
             failed_count=len(scoring_failures),
             call_count=reserved_calls,
             safe_reason=reason,
+            quality_report=quality_report,
+            quality_gate=quality_gate,
         )
 
     store.finish(
@@ -329,4 +377,6 @@ def run_daily_refresh(
         failed_count=len(scoring_failures),
         call_count=reserved_calls,
         release_sha256=release.release_sha256,
+        quality_report=quality_report,
+        quality_gate=quality_gate,
     )

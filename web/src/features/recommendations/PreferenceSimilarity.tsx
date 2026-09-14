@@ -8,5 +8,5 @@ export function SimilaritySummary({ value }: { value: number | null }) {
   </p>;
 }
 
-export const SIMILARITY_DESCRIPTION = "역사·전통, 감성·이미지, 휴식·몰입에서 내가 기대한 경험과 얼마나 가까운지 보여줘요.";
+export const SIMILARITY_DESCRIPTION = "대상•원형형, 의미•이미지형, 자기•몰입형에서 내가 기대한 경험과 얼마나 가까운지 보여줘요.";
 export const RECOMMENDATION_ORDER_DESCRIPTION = "추천 순서는 여행 조건과 사진 분위기, 장소의 다양성도 함께 고려해요.";

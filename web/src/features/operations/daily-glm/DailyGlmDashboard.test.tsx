@@ -84,6 +84,57 @@ describe("DailyGlmDashboard", () => {
     expect(screen.getByRole<HTMLButtonElement>("button", { name: "즉시 재수집" }).disabled).toBe(false);
   });
 
+  it("keeps retired history readable and does not submit or poll abandoned commands", async () => {
+    vi.useFakeTimers();
+    const fetchMock = vi.fn((input: RequestInfo | URL) => {
+      const path = String(input);
+      if (path.endsWith("/overview")) return response({
+        latest_execution: execution, next_run_at: "2026-09-06T23:00:00Z", active_release_sha256: null,
+        recollection: { eligible: false, safe_reason: "LEGACY_RECOLLECTION_RETIRED" },
+        pending_command: {
+          command_id: "12345678-1234-4234-9234-123456789abc", run_date: execution.run_date,
+          status: "REQUESTED", execution_sequence: null, safe_reason: null,
+          requested_at: execution.started_at, claimed_at: null, finished_at: null,
+        },
+      });
+      if (path.includes("/history/")) return response({ execution, collection_failures: [], attempts: [] });
+      return response({ executions: [execution] });
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    await act(async () => { render(<DailyGlmDashboard />); });
+    expect(screen.getByRole("heading", { name: "기존 재수집 종료" })).toBeTruthy();
+    expect(screen.getByText(/python -m itda.cli.run_daily_glm_refresh --once --run-date/)).toBeTruthy();
+    expect(screen.getByText("이전 대기 요청은 현재 스케줄러에서 처리되지 않습니다.")).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "즉시 재수집" })).toBeNull();
+    expect(screen.getByText("COLLECTION_INCOMPLETE")).toBeTruthy();
+    await act(async () => { await vi.advanceTimersByTimeAsync(9_000); });
+    expect(fetchMock.mock.calls.some(([input]) => String(input).includes("/commands/"))).toBe(false);
+  });
+
+  it("handles a stale page's retired POST without implying acceptance or allowing another request", async () => {
+    const fetchMock = vi.fn((input: RequestInfo | URL) => {
+      const path = String(input);
+      if (path.endsWith("/overview")) return response({
+        latest_execution: execution, next_run_at: "2026-09-06T23:00:00Z", active_release_sha256: null,
+        recollection: { eligible: true, safe_reason: "RECOLLECTION_ALLOWED" }, pending_command: null,
+      });
+      if (path.endsWith("/commands/recollect")) return response({ detail: "LEGACY_RECOLLECTION_RETIRED" }, 410);
+      if (path.includes("/history/")) return response({ execution, collection_failures: [], attempts: [] });
+      return response({ executions: [execution] });
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    render(<DailyGlmDashboard />);
+    const recollect = await screen.findByRole("button", { name: "즉시 재수집" });
+    await waitFor(() => expect(recollect).toHaveProperty("disabled", false));
+    fireEvent.click(recollect);
+    fireEvent.click(screen.getByRole("button", { name: "이 날짜를 재수집" }));
+    expect(await screen.findByRole("heading", { name: "기존 재수집 종료" })).toBeTruthy();
+    expect(screen.queryByText(/서버에서 접수되었을 수 있으므로/)).toBeNull();
+    expect(screen.queryByRole("button", { name: "즉시 재수집" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "이 날짜를 재수집" })).toBeNull();
+    expect(fetchMock.mock.calls.filter(([input]) => String(input).endsWith("/commands/recollect"))).toHaveLength(1);
+  });
+
   it.each([
     { unknown: undefined, excluded: undefined },
     { unknown: null, excluded: null },

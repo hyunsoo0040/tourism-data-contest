@@ -1,0 +1,1042 @@
+{
+  "assessed_at": "2026-09-11T16:36:04.944971Z",
+  "assessment_sha256": "a7ee9dbe0b33401b4719217e11414335737df44809e790ae11d3433c8a1340bd",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 60
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 47
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+            "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "우주공항·공룡이라는 명확한 이미지와 콘셉트가 장소에 부여되고 건물·전시·야외 공원에서 일관되게 표현된다. 다만 그 의미가 방문 경험의 중심이라는 수준의 근거는 부족해 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0309b284cf56eece751a2b49d0cb0d5b7708adbf3c33ac4f915831dc46ddafe7",
+            "appearance:b30fd2632e469a19c15219bd755bbf763fa2f2d26311f3da974153f824389ffc",
+            "appearance:d79139106d9f3d74e5077e1f9f1360b0f23b42e7b371708fb3fd175cec992379"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "공식 소개에서 이 장소(옥토끼우주센터)의 나선형 콘셉트 건축물과 공룡 뼈대를 형상화한 주차장·경관 램프 등 구별되는 시각적 성격이 직접 확인된다. 다만 일관된 연출이 전체 장면을 지배한다는 근거까지는 없어 수준 3으로 판단한다.",
+      "value": 79
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+            "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "공룡의 숲, 공룡 뱃속 탐험 느낌 등 콘셉트 이미지를 현장에서 체험할 수 있다는 근거는 있으나, 대표 장면의 재현이 방문 경험의 중심이라는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "다양한 테마존과 전망탑 등 자율적으로 선택해 둘러볼 야외 공간이 확인된다. 다만 관람 동선을 따라 관람한다는 내용도 있어 자유 탐색은 제한적으로 보이며 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:41ca25a2824832603eaeea292d450c304465b74dcd2a73b29196554a16be27ce",
+            "appearance:49d43c6d76341d4b63e49dd6327a34e42432ff8dbc9a79829ac87548c97bbfae",
+            "appearance:5b50d8fdc57c2efd122171dcd19353669ba149565bc3568d982680bdeabf0499"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 17,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 17
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+            "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "체험기구, 만들기 체험존, 공룡의 숲, 물놀이, 썰매장 등 구체적인 참여 활동이 다수 확인된다. 다만 실제 몰입 여부는 단정할 수 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "항공우주과학 테마파크로서 확인된 실제 원형·유산과의 접촉에 대한 근거가 없다. 건축물과 전시는 재현·콘셉트 시설이며 문화유산 실물 접촉은 언급되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소 자체의 실제 역사·연혁 맥락 제시는 없다. '우주항공 기술의 역사' 전시는 일반 과학 서사이며 이 장소 고유의 역사가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 전혀 없다. 과학 테마파크로서 전통 전승 요소는 언급되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설은 없다. 우주과학 전시와 체험교육은 일반 과학 학습으로, 문화유산 해설에 해당하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+          "quote": {
+            "end": 251,
+            "method": "EXACT",
+            "original": "옥토끼우주센터는 우주공항과 공룡의 몸통이라는 두 가지의 콘셉트를 가지고",
+            "start": 212,
+            "submitted": "옥토끼우주센터는 우주공항과 공룡의 몸통이라는 두 가지의 콘셉트를 가지고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fb710638e1b024acf9b748b58819c6c967d860ca1fc65c6fdea1e681a50a8752"
+        },
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda",
+          "quote": {
+            "end": 198,
+            "method": "EXACT",
+            "original": "나선형의 건물은 우주 공항과 공룡의 몸통이라는 독특한 콘셉트로 만들어졌답니다",
+            "start": 156,
+            "submitted": "나선형의 건물은 우주 공항과 공룡의 몸통이라는 독특한 콘셉트로 만들어졌답니다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c55f098227066584147737fcde5018119ab891c465d04d0c987daaec02e9c13f"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "우주공항·공룡이라는 명확한 이미지와 콘셉트가 장소에 부여되고 건물·전시·야외 공원에서 일관되게 표현된다. 다만 그 의미가 방문 경험의 중심이라는 수준의 근거는 부족해 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 대한 근거가 없다. Odii 해설은 해설 서지일 뿐 이미지 유통의 확인 자료가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+          "quote": {
+            "end": 285,
+            "method": "EXACT",
+            "original": "노출콘크리트와 스테인리스 그물망으로 지어진 나선형태의 건축물",
+            "start": 252,
+            "submitted": "노출콘크리트와 스테인리스 그물망으로 지어진 나선형태의 건축물",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fb710638e1b024acf9b748b58819c6c967d860ca1fc65c6fdea1e681a50a8752"
+        },
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+          "quote": {
+            "end": 500,
+            "method": "EXACT",
+            "original": "건물의 뛰어난 조형성을 보여주는 상층부와 공룡의 뼈대를 형상화한 주차장",
+            "start": 461,
+            "submitted": "건물의 뛰어난 조형성을 보여주는 상층부와 공룡의 뼈대를 형상화한 주차장",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fb710638e1b024acf9b748b58819c6c967d860ca1fc65c6fdea1e681a50a8752"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "공식 소개에서 이 장소(옥토끼우주센터)의 나선형 콘셉트 건축물과 공룡 뼈대를 형상화한 주차장·경관 램프 등 구별되는 시각적 성격이 직접 확인된다. 다만 일관된 연출이 전체 장면을 지배한다는 근거까지는 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda",
+          "quote": {
+            "end": 621,
+            "method": "EXACT",
+            "original": "움직이고 소리를 내는 63마리의 공룡들이 있는 공룡의 숲",
+            "start": 590,
+            "submitted": "움직이고 소리를 내는 63마리의 공룡들이 있는 공룡의 숲",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c55f098227066584147737fcde5018119ab891c465d04d0c987daaec02e9c13f"
+        },
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+          "quote": {
+            "end": 539,
+            "method": "EXACT",
+            "original": "경관 램프는 아이들에게 공룡 뱃속을 탐험하는 느낌을 줄 것이다",
+            "start": 505,
+            "submitted": "경관 램프는 아이들에게 공룡 뱃속을 탐험하는 느낌을 줄 것이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fb710638e1b024acf9b748b58819c6c967d860ca1fc65c6fdea1e681a50a8752"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "공룡의 숲, 공룡 뱃속 탐험 느낌 등 콘셉트 이미지를 현장에서 체험할 수 있다는 근거는 있으나, 대표 장면의 재현이 방문 경험의 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+          "quote": {
+            "end": 459,
+            "method": "EXACT",
+            "original": "외부공간은 넓은 옥토끼우주센터 전체를 한눈에 조망할 수 있는 전망 탑을 중심으로 공룡의 숲, 물대포 공원, 로봇 공원, 천체영상관, 사계절 썰매장, 로고스 가든 등으로 구성되어 있다",
+            "start": 358,
+            "submitted": "외부공간은 넓은 옥토끼우주센터 전체를 한눈에 조망할 수 있는 전망 탑을 중심으로 공룡의 숲, 물대포 공원, 로봇 공원, 천체영상관, 사계절 썰매장, 로고스 가든 등으로 구성되어 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fb710638e1b024acf9b748b58819c6c967d860ca1fc65c6fdea1e681a50a8752"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "다양한 테마존과 전망탑 등 자율적으로 선택해 둘러볼 야외 공간이 확인된다. 다만 관람 동선을 따라 관람한다는 내용도 있어 자유 탐색은 제한적으로 보이며 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+          "quote": {
+            "end": 157,
+            "method": "EXACT",
+            "original": "항공우주 관련 체험기구와 체험교육 프로그램을 개발, 운영하고 있다",
+            "start": 121,
+            "submitted": "항공우주 관련 체험기구와 체험교육 프로그램을 개발, 운영하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "fb710638e1b024acf9b748b58819c6c967d860ca1fc65c6fdea1e681a50a8752"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda",
+          "quote": {
+            "end": 444,
+            "method": "NORMALIZED_AND_MAPPED",
+            "original": "중력저항을 체험할 수 있는 ‘사이버 인 스페이스’부터, 먼 미래에는 실현될까 궁금한 ‘우주 엘리베이터’, 중력가속도를 느낄 수 있는 ‘지포스’",
+            "start": 365,
+            "submitted": "중력저항을 체험할 수 있는 '사이버 인 스페이스'부터, 먼 미래에는 실현될까 궁금한 '우주 엘리베이터', 중력가속도를 느낄 수 있는 '지포스'",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c55f098227066584147737fcde5018119ab891c465d04d0c987daaec02e9c13f"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 3,
+      "reason": "체험기구, 만들기 체험존, 공룡의 숲, 물놀이, 썰매장 등 구체적인 참여 활동이 다수 확인된다. 다만 실제 몰입 여부는 단정할 수 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.b",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "ENVIRONMENT",
+            "evidence_id": "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+            "quote": "공룡의 숲, 물대포 공원, 로봇 공원, 천체영상관, 사계절 썰매장, 로고스 가든 등으로 구성되어 있다"
+          },
+          {
+            "claim": "ENVIRONMENT",
+            "evidence_id": "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda",
+            "quote": "시원한 물놀이를 즐길 수 있는 물대포 공원"
+          }
+        ],
+        "key": "R.b",
+        "level": 2,
+        "reason": "이 장소의 야외 공원 구성과 물놀이 공원 등 환경 단서가 일부 확인된다. 그러나 실제 고요함·자연 기반 회복 환경이 두드러진다는 근거는 없고 테마파크 시설이 중심이므로 수준 2로 제한한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "R.d",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "RELATIONAL_ACTIVITY",
+            "evidence_id": "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda",
+            "quote": "만들기 체험존에서는 나만의 별자리 목걸이도 만들어 볼 수 있답니다"
+          }
+        ],
+        "key": "R.d",
+        "level": 2,
+        "reason": "이 장소에서 나만의 별자리 목걸이를 만드는 자기표현·참여 기회가 확인된다. 교류·공동 활동이 풍부하거나 방문 경험의 중심이라는 근거는 부족하여 수준 2로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "c9a3992785045aedd80e6fef58111216421be8007aaa8cc4722b4319e6482fe1",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "청보라색 조명이 전체 공간을 지배하며 행성 모형과 원형 천창, 광원 밴드 등 우주 테마의 강렬한 연출이 장면을 완전히 채운다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0309b284cf56eece751a2b49d0cb0d5b7708adbf3c33ac4f915831dc46ddafe7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "80c80ea74bbcb068a723012eb0c9796fa5d72ae563f61df9e7d6584c5b7f4a7b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3537432_14",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dc668a336fba0ea288871c42ffac202a9536f7adf55804be4c5ad0617fc9ff76",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/32/3537432_image2_1.jpg"
+        },
+        "record_sha256": "f7e4a21b1033dbd8aa44ccba0209cff31954b6a79b02ba835c1c0647ed0dfd37",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 과학관 인테리어와 미디어 전시로 전통적 외관·재료·공간 구성의 특성은 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:257469f56a117964db89f2efa7bcc5d0091bc70e38638a3b60a10c2030c4ed16",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "80c80ea74bbcb068a723012eb0c9796fa5d72ae563f61df9e7d6584c5b7f4a7b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3537432_14",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dc668a336fba0ea288871c42ffac202a9536f7adf55804be4c5ad0617fc9ff76",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/32/3537432_image2_1.jpg"
+        },
+        "record_sha256": "9f9150b673314eaa0e068262d36b5a860e0922844318f35dfb5a6dc36aad3fc3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시관 내부로 녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:41ca25a2824832603eaeea292d450c304465b74dcd2a73b29196554a16be27ce",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ccbf4c72fd89a8e2b5c2d745ffdb254778b137c8ae2bcd57d5b46099f825205f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3537433_15",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dfb043c24e9c33684192603b5bf8a7b62912a2853f6c22bfb5c26b120fd41895",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/33/3537433_image2_1.jpg"
+        },
+        "record_sha256": "b0c487d81f6c0668fcb82091bddc4a0bd7f935e20ba8524834c6b5db5b3be52d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시 공간으로 녹지·물·자연 경관 등 자연 환경 단서는 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:49d43c6d76341d4b63e49dd6327a34e42432ff8dbc9a79829ac87548c97bbfae",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "80c80ea74bbcb068a723012eb0c9796fa5d72ae563f61df9e7d6584c5b7f4a7b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3537432_14",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dc668a336fba0ea288871c42ffac202a9536f7adf55804be4c5ad0617fc9ff76",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/32/3537432_image2_1.jpg"
+        },
+        "record_sha256": "6801b0810f4d6b57b6b62dce96a0b8836f9bba08f5c207a0919053e426e4c384",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "뒤편에 맨 언덕과 나무 숲, 일부 녹지가 보이나 워터파크 시설이 전경을 차지해 자연 단서는 보통 수준.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5b50d8fdc57c2efd122171dcd19353669ba149565bc3568d982680bdeabf0499",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "74be017885cdbbf86c877b976954b63a647585691b5f9f5e7fb597af61f6c231",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4057143_1",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d89b73718ee31729a09b5ccd83cdc05b184819d25252241a7b21f9af5bec9d2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/43/4057143_image2_1.jpg"
+        },
+        "record_sha256": "ed2db00e31245139b66f36dd0d0ef0fbccc3ae8800b9fe30dc4ec7c8f2704a3c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 워터파크·콘크리트 건물과 합성 재료 시설뿐으로 전통적 외관·재료의 시각적 특성이 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:859e4ec1075f95a2a58f5673597a77d78a814b6a13b876dabe8f53a0a0561063",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "74be017885cdbbf86c877b976954b63a647585691b5f9f5e7fb597af61f6c231",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4057143_1",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d89b73718ee31729a09b5ccd83cdc05b184819d25252241a7b21f9af5bec9d2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/43/4057143_image2_1.jpg"
+        },
+        "record_sha256": "c15c9edd579f885230fdd785aa5827b1f75217eadc8077073eac57cc76b131a6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "우주 테마의 어두운 실내 전시 공간으로 천장과 벽에 별·행성 조형이 반복 배치되어 강한 연출적 시각 성격이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b30fd2632e469a19c15219bd755bbf763fa2f2d26311f3da974153f824389ffc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ccbf4c72fd89a8e2b5c2d745ffdb254778b137c8ae2bcd57d5b46099f825205f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3537433_15",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dfb043c24e9c33684192603b5bf8a7b62912a2853f6c22bfb5c26b120fd41895",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/33/3537433_image2_1.jpg"
+        },
+        "record_sha256": "c4592fc98ae7c30f55b3d6b94951145efe3714799b0a3f15ce4464162dddd08a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "파란 워터슬라이드, 흰 타워, 화려한 물놀이 구조물이 장면 전체를 지배하며 위원회 캠핑 의자·파라솔 등 강한 연출이 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d79139106d9f3d74e5077e1f9f1360b0f23b42e7b371708fb3fd175cec992379",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "74be017885cdbbf86c877b976954b63a647585691b5f9f5e7fb597af61f6c231",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4057143_1",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d89b73718ee31729a09b5ccd83cdc05b184819d25252241a7b21f9af5bec9d2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/43/4057143_image2_1.jpg"
+        },
+        "record_sha256": "23ece816a6044fbe0c874795cff491d00721102277361beef483013fc455f855",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 재료나 전통적 공간 구성의 흔적이 없으며 현대적 과학 전시 관람 동선과 유리 난간 등이 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ed6b4369ce04ad2e9b66b81bda9d986260e0460ccd017e28b9db791cef095c09",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "ccbf4c72fd89a8e2b5c2d745ffdb254778b137c8ae2bcd57d5b46099f825205f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3537433_15",
+          "request_sha256": "e9d40cf450afeec0fa46053a1b7a07cb76a86151dc49f45af1895bc1e83f6bd1",
+          "response_sha256": "335f7bd37cac637dc730340a3a927b1f40e899576d95aee8f22f3e2940f2f268",
+          "retrieved_at": "2026-09-11T02:03:21.321234Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dfb043c24e9c33684192603b5bf8a7b62912a2853f6c22bfb5c26b120fd41895",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/33/3537433_image2_1.jpg"
+        },
+        "record_sha256": "d6832467660ccb5515c319981a6aa03ff0bffc907ef503c236ad25c2e5f3998c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1035cb0a4b59b696b9918df7a6bea59eba73ee2f8a2989915a78bcd46cbf53c3",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1039170",
+          "request_sha256": "11e2b50f162ef4e24bcbc46d2bc3d10cd8db4594f512625faebeae6d93e281c3",
+          "response_sha256": "629f9efe36b469d39385601fbc3534612e8f4e61b35e8a8a895095d2fc139f0f",
+          "retrieved_at": "2026-09-10T17:19:13.731568Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-11T02:08:38Z",
+          "source_record_sha256": "41fa76f9aa9637087838d47663dab0e1371d30bcc9789a6d8e1183957849af41",
+          "source_uri": null
+        },
+        "record_sha256": "fb710638e1b024acf9b748b58819c6c967d860ca1fc65c6fdea1e681a50a8752",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "옥토끼우주센터는 국내 최초의 항공우주과학 테마파크이다. 항공우주 관련 자료를 수집, 보존하여 일반 대중들의 항공우주과학에 대한 이해를 돕기 위한 전시 및 교육을 실시하고 있다. 특히 어린이들의 체험교육에 중점을 두어 항공우주 관련 체험기구와 체험교육 프로그램을 개발, 운영하고 있다. 또한 과학, 예술, 탐험, 놀이가 결합된 복합문화공간으로 사계절 내내 방문할 수 있는 곳이다. 옥토끼우주센터는 우주공항과 공룡의 몸통이라는 두 가지의 콘셉트를 가지고 노출콘크리트와 스테인리스 그물망으로 지어진 나선형태의 건축물이다. 건물은 내부와 외부공간으로 구분되는데, 내부공간은 관람 동선을 따라 과학전시물 체험을 하며 우주센터를 관람하게 되어 있다. 외부공간은 넓은 옥토끼우주센터 전체를 한눈에 조망할 수 있는 전망 탑을 중심으로 공룡의 숲, 물대포 공원, 로봇 공원, 천체영상관, 사계절 썰매장, 로고스 가든 등으로 구성되어 있다. 건물의 뛰어난 조형성을 보여주는 상층부와 공룡의 뼈대를 형상화한 주차장을 잇는 경관 램프는 아이들에게 공룡 뱃속을 탐험하는 느낌을 줄 것이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c738ae92a4f15c9e328aa64933c40238ba9ce3e3c3a59ffe718d0f41f64efe6d",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1039170",
+          "request_sha256": "1ee540be2cd269544464380fdbe3080a317e969d8e63ce5ae39f4b398470ba0f",
+          "response_sha256": "ef64a0d9931239ab057dd284a0ed9d50fef8b28778db51174f845d2f55c12cfa",
+          "retrieved_at": "2026-09-11T02:03:20.986108Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8ab46f62eac06016a39078d15c2bd799edd4fdade9264f55621a9d46dc841773",
+          "source_uri": null
+        },
+        "record_sha256": "37a8731c5eaad692a16ae5395ba9bf9ebdc2c662f80dfec57799bc3725aead50",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[개인] - 유아(24개월 이상~36개월 미만) 13,000원 - 소인(36개월 이상~만 12세 미만) 18,800원 - 대인(만 13세 이상~만 65세 미만) 19,800원 - 장애/유공자/경로/강화군민 15,000원 [단체(20명 이상)] - 유아(24개월 이상~36개월 미만) 11,000원 - 소인(36개월 이상~만 12세 미만) 15,000원 - 대인(만 13세 이상~만 65세 미만) 15,000원 ※ 무료 : 영아(0개월 이상~24개월 미만) ※ 자세한 사항은 홈페이지 참조"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e6ecc2ae277107681896b9c21aa47895af64c1ece4a0e0c0eb93f460726eebda",
+        "field": "script",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "정확한 명칭과 기준좌표 150m 이내 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "storyBasedList",
+          "provider": "Odii",
+          "provider_record_id": "3545",
+          "request_sha256": "e710a1d217724193232cfd6cbe0a06ae26f4e64b7fe873935b40e18f51217db9",
+          "response_sha256": "f948f63aeadf006e85deb4563e9e40a5a4ea4801da6b5ef09c206bf2eb1dd2d0",
+          "retrieved_at": "2026-09-11T02:03:21.760194Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-02-10T02:57:17Z",
+          "source_record_sha256": "781ae6c5408fb1eab85e443c3e5f554e65a53d442513db4cf4c7aa96121abd78",
+          "source_uri": null
+        },
+        "record_sha256": "c55f098227066584147737fcde5018119ab891c465d04d0c987daaec02e9c13f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_NARRATIVE",
+        "state": "AVAILABLE",
+        "text": "옥토끼우주센터 인천 강화군에 자리하고 있는 옥토끼우주센터는 우주와 공룡, 로봇이 한데 어우러진 국내 최초의 우주과학 테마파크랍니다. 우주과학 테마파크이자 복합문화공간으로서, 이곳은 특히 어린이들의 체험과 교육에 신경을 쓰고 있어요. 이 테마파크는 겉모습부터 독특하게 생겼는데요, 나선형의 건물은 우주 공항과 공룡의 몸통이라는 독특한 콘셉트로 만들어졌답니다. 옥토끼우주센터는 우주과학박물관과 야외 테마공원으로 이루어져 있어요. 우선 우주과학박물관에 들어서면, 우주에 닿고 싶은 인간의 발자취와 우주항공 기술의 역사가 잘 담긴 과학 전시를 만나볼 수 있답니다. 특별한 점은 다양한 우주 체험 기구를 통해 몸으로 느껴볼 수 있다는 점이에요. 우주인들이 겪는 중력저항을 체험할 수 있는 ‘사이버 인 스페이스’부터, 먼 미래에는 실현될까 궁금한 ‘우주 엘리베이터’, 중력가속도를 느낄 수 있는 ‘지포스’ 등, 아이들이 가진 우주에 대한 호기심을 채워줄 멋진 경험을 선사한답니다. 여기서 끝이 아니라, 3D 영화관에서는 신나는 영상도 보고, 만들기 체험존에서는 나만의 별자리 목걸이도 만들어 볼 수 있답니다. 야외 테마공원에는 더 색다른 즐거움이 기다리고 있어요. 움직이고 소리를 내는 63마리의 공룡들이 있는 공룡의 숲도 있고요, 시원한 물놀이를 즐길 수 있는 물대포 공원, 그리고 그리스 로마 신화 속 조각상들이 있는 로고스 가든까지 다양한 테마존이 자리하고 있답니다. 이렇게 다채로운 볼거리와 체험이 가득한 옥토끼우주센터에서 호기심 가득한 아이들과 함께 신나는 우주 탐험을 떠나 보는 것은 어떨까요?"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fb08155d0aa38f447b21506fa6d8ff983c23e87c13aea7169d87f6e004eb126a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "1039170",
+          "request_sha256": "1ee540be2cd269544464380fdbe3080a317e969d8e63ce5ae39f4b398470ba0f",
+          "response_sha256": "ef64a0d9931239ab057dd284a0ed9d50fef8b28778db51174f845d2f55c12cfa",
+          "retrieved_at": "2026-09-11T02:03:20.986108Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "529fb9fdef512ac6b563f00e58abc253a5cb9cbe1a54f7514dbb4ede50307f45",
+          "source_uri": null
+        },
+        "record_sha256": "924f58400bae27d6d94ebe270d5d154fa7a4ed393732900d0241875e9790f6ba",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "e63ef741137b7de35d34ef9dbdc307ebeba04d407338ffba1914454a68c8a489",
+    "place": {
+      "address": "인천광역시 강화군 불은면 강화동로 403",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+      "name_ko": "옥토끼우주센터",
+      "place_id": "public:korea:3f573134224bebb1fcda1b0f87dcc227bfae87c58cea610ab05cb2207f89516a",
+      "provider_content_id": "1039170",
+      "region_code": "28710",
+      "region_name": "인천광역시 강화군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

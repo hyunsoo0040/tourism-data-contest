@@ -161,12 +161,10 @@ def test_real_profile_and_scored_place_use_typed_non_neutral_projection() -> Non
         100,
         100,
     )
-    # v2 choice projection: axis shares H=33, E=60, R=18 from the reviewed
-    # matrix normalized against each axis's attainable bounds, then the same
-    # six-target composition: M1 M2 M3 M4 M5 M6. Importance flags follow the
-    # v2 extremes: H=33/E=60 stay below the 75 threshold; crowd HIGH, rest
-    # walking flag, and evening+E>=50 stay marked.
-    assert tuple(row.value for row in preference.trait_targets) == (64, 67, 100, 40, 45, 80)
+    # Signed PDF evidence H=3/E=6/R=2 divided by 14/11/11 is 21/55/18.
+    # All six traits use these SAME persisted scores, including Q5-B's penalty.
+    assert tuple(row.value for row in preference.axis_targets) == (21, 55, 18)
+    assert tuple(row.value for row in preference.trait_targets) == (67, 79, 100, 45, 45, 78)
     assert tuple(row.important for row in preference.trait_targets) == (
         False,
         False,
@@ -385,3 +383,22 @@ def test_recovery_active_projection_rejects_incomplete_release_before_candidates
 
     with pytest.raises(NoActiveScoredRelease):
         _recommendation_candidates(incomplete)
+
+
+def test_historical_v2_recommendation_uses_stored_scores_not_current_answers() -> None:
+    from itda.contracts.preference import (
+        LEGACY_VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+        PreferenceProfile,
+    )
+
+    payload = _profile().model_dump(mode="json")
+    payload.update({
+        key: value for key, value in LEGACY_VERSION_BOUND_BY_QUESTIONNAIRE_V2.items()
+        if key != "answers_type"
+    })
+    for row, points in zip(payload["scores"], (3333, 6000, 1818), strict=True):
+        row.update(basis_points=points, display_score=(points + 50) // 100)
+    old = PreferenceProfile.model_validate(payload)
+    preference = _recommendation_preference(old)
+    assert tuple(row.value for row in preference.axis_targets) == (33, 60, 18)
+    assert tuple(row.value for row in preference.trait_targets) == (64, 67, 100, 40, 45, 80)

@@ -1,0 +1,480 @@
+{
+  "assessed_at": "2026-09-11T15:49:26.124896Z",
+  "assessment_sha256": "95e61d004ae5f2f122d88d4038c687878cd3a81bbf28b9f4f2649a51c7226f63",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "설립 연혁과 관장의 개인 배경이 간단히 소개되나, 장소 자체의 심층 역사 맥락 탐구로 이어지는 근거는 부족하여 낮은 수준으로 평가.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "커피 조형물, 단아한 한옥 등 장소에 연결된 이미지·이야기가 확인되나 여러 표현에서 일관된 의미라 보기엔 부족하여 수준 2로 평가.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "조형물·한옥·수목원 등 뚜렷한 시각적 성격과 경관 연출이 확인되어 수준 3으로 평가.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "무인 자율 관람 방식으로 방문자가 자신의 방식으로 공간을 탐색할 기회가 확인되어 수준 3으로 평가.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "수목원, 연못, 산책로 등 자연 환경과 머무를 공간이 구체적으로 확인되어 두드러진 환경 단서로 수준 3으로 평가. 실제 고요함·회복까지는 단정하지 않음.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "2007년에 지어진 사립미술관 건물이며 한옥도 실내 리모델링을 거친 전시·카페 공간으로, 확인된 실제 원형·문화유산과의 접촉을 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06",
+          "quote": {
+            "end": 93,
+            "method": "EXACT",
+            "original": "성마루미술관은 2007년 12월에 개관한 충주 최초의 사립미술관이다. 이곳은 조태남 관장이 32년 동안 교직 생활을 마치고 나서 태어나고 자란 고향에 지은 미술관이다.",
+            "start": 0,
+            "submitted": "성마루미술관은 2007년 12월에 개관한 충주 최초의 사립미술관이다. 이곳은 조태남 관장이 32년 동안 교직 생활을 마치고 나서 태어나고 자란 고향에 지은 미술관이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a39f6727cd5de09c9cf86d7ca5db1c6329ef3401b4dc3ec00646a4140ff9ef10"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 1,
+      "reason": "설립 연혁과 관장의 개인 배경이 간단히 소개되나, 장소 자체의 심층 역사 맥락 탐구로 이어지는 근거는 부족하여 낮은 수준으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "한옥은 리모델링된 전시·카페 공간이며 지역 주체의 실제 전승·생활문화와의 연결을 확인할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "무인 관람 방식(안내문에 따른 관람)만 언급되고 원형·역사와 연결된 해설·전시·학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06",
+          "quote": {
+            "end": 201,
+            "method": "EXACT",
+            "original": "논 사이에 커다란 커피 조형물이 있어 눈에 띄는 곳이며 단아하게 지은 한옥은 전시 공간이기도 하지만 찾는 이들을 위해 무료로 운영하는 카페이기도 하다.",
+            "start": 117,
+            "submitted": "논 사이에 커다란 커피 조형물이 있어 눈에 띄는 곳이며 단아하게 지은 한옥은 전시 공간이기도 하지만 찾는 이들을 위해 무료로 운영하는 카페이기도 하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a39f6727cd5de09c9cf86d7ca5db1c6329ef3401b4dc3ec00646a4140ff9ef10"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "커피 조형물, 단아한 한옥 등 장소에 연결된 이미지·이야기가 확인되나 여러 표현에서 일관된 의미라 보기엔 부족하여 수준 2로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 매체를 통해 재현·확산된다는 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06",
+          "quote": {
+            "end": 535,
+            "method": "EXACT",
+            "original": "넓은 대지에 아기자기하게 자리 잡은 조형물과 공간 배치가 사람들의 마음을 편안하게 만들어주고 있다.",
+            "start": 480,
+            "submitted": "넓은 대지에 아기자기하게 자리 잡은 조형물과 공간 배치가 사람들의 마음을 편안하게 만들어주고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a39f6727cd5de09c9cf86d7ca5db1c6329ef3401b4dc3ec00646a4140ff9ef10"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "조형물·한옥·수목원 등 뚜렷한 시각적 성격과 경관 연출이 확인되어 수준 3으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06",
+          "quote": {
+            "end": 452,
+            "method": "EXACT",
+            "original": "미술관은 직원이 상주해 있지 않아 안내문에 따라 전시실 관람을 하면 된다. 만약 불이 꺼져 있다면 불을 켜고 관람 후 불을 끄고 나오면 된다.",
+            "start": 373,
+            "submitted": "미술관은 직원이 상주해 있지 않아 안내문에 따라 전시실 관람을 하면 된다. 만약 불이 꺼져 있다면 불을 켜고 관람 후 불을 끄고 나오면 된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a39f6727cd5de09c9cf86d7ca5db1c6329ef3401b4dc3ec00646a4140ff9ef10"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "무인 자율 관람 방식으로 방문자가 자신의 방식으로 공간을 탐색할 기회가 확인되어 수준 3으로 평가.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06",
+          "quote": {
+            "end": 603,
+            "method": "EXACT",
+            "original": "한옥 주변은 다양한 나무들과 꽃이 가득하고 부대시설로 쉼터, 연못, 수목원, 야외전시장, 산책로, 등산로를 갖추고 있다.",
+            "start": 536,
+            "submitted": "한옥 주변은 다양한 나무들과 꽃이 가득하고 부대시설로 쉼터, 연못, 수목원, 야외전시장, 산책로, 등산로를 갖추고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a39f6727cd5de09c9cf86d7ca5db1c6329ef3401b4dc3ec00646a4140ff9ef10"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "수목원, 연못, 산책로 등 자연 환경과 머무를 공간이 구체적으로 확인되어 두드러진 환경 단서로 수준 3으로 평가. 실제 고요함·회복까지는 단정하지 않음.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "산책로·등산로 등 시설 나열은 단순 산책 가능성을 보여줄 뿐, 구체적인 참여·탐방 활동(anchor_ko 수준) 또는 제한된 체험(제시 수준) 중 어느 쪽으로도 명확히 뒷받침되지 않는다. 제시된 anchor_ko와 판단 수준(2)이 불일치하여 현재 수준의 적합성을 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다. 무료 카페 운영만으로 관계 형성을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "1f090642b8534040f28f99cd8bb16eed8c9ba3b771450fe490b510613a040e96",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06",
+              "quote": {
+                "end": 603,
+                "method": "EXACT",
+                "original": "부대시설로 쉼터, 연못, 수목원, 야외전시장, 산책로, 등산로를 갖추고 있다.",
+                "start": 560,
+                "submitted": "부대시설로 쉼터, 연못, 수목원, 야외전시장, 산책로, 등산로를 갖추고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a39f6727cd5de09c9cf86d7ca5db1c6329ef3401b4dc3ec00646a4140ff9ef10"
+            }
+          ],
+          "flags": [],
+          "key": "R.c",
+          "level": 2,
+          "reason": "산책로·등산로 등 탐방 활동 기회가 있으나 구조화된 참여·도전 활동의 근거는 제한적이어서 수준 2로 평가.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "산책로·등산로 등 시설 나열은 단순 산책 가능성을 보여줄 뿐, 구체적인 참여·탐방 활동(anchor_ko 수준) 또는 제한된 체험(제시 수준) 중 어느 쪽으로도 명확히 뒷받침되지 않는다. 제시된 anchor_ko와 판단 수준(2)이 불일치하여 현재 수준의 적합성을 확정하기 어렵다."
+        }
+      },
+      "reason": "산책로·등산로 등 시설 나열은 단순 산책 가능성을 보여줄 뿐, 구체적인 참여·탐방 활동(anchor_ko 수준) 또는 제한된 체험(제시 수준) 중 어느 쪽으로도 명확히 뒷받침되지 않는다. 제시된 anchor_ko와 판단 수준(2)이 불일치하여 현재 수준의 적합성을 확정하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "4ae7bc3ce351430763c80015d02e1ca9001361f76626cc8ac17b8e25785ab0e2",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4efd50acf062b4367ff96074961432b3c1124cff438b45eed34a9b38d44b0a06",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:129bd89cd33a0db46bfdb88555f52eda429e76243957b0da4157de08293426ce",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "1687304",
+          "request_sha256": "4b49abdd74f48e533882a67041df52341bdc1f56246376beb54cafd04d8745a4",
+          "response_sha256": "d5637311f10969ad8bce0112c9b67220608908208b8b697284a36bf21ba43539",
+          "retrieved_at": "2026-09-10T05:32:20.452153Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-02-10T23:10:09Z",
+          "source_record_sha256": "5335cdc19de6fbb61b88e77fe41fe6a47fcca3ac426f2bc81412458a356cede6",
+          "source_uri": null
+        },
+        "record_sha256": "a39f6727cd5de09c9cf86d7ca5db1c6329ef3401b4dc3ec00646a4140ff9ef10",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "성마루미술관은 2007년 12월에 개관한 충주 최초의 사립미술관이다. 이곳은 조태남 관장이 32년 동안 교직 생활을 마치고 나서 태어나고 자란 고향에 지은 미술관이다. 충주 장성길에 자리 잡은 성마루 미술관은 논 사이에 커다란 커피 조형물이 있어 눈에 띄는 곳이며 단아하게 지은 한옥은 전시 공간이기도 하지만 찾는 이들을 위해 무료로 운영하는 카페이기도 하다. 카페는 한옥의 틀은 그대로 두고 실내만 리모델링하여 한옥의 아늑함을 느낄 수 있어서 찾는 이들이 차를 마시며 편안히 관람할 수 있게 마련하였다. 미술관 건물은 따로 자리 잡고 있고 이곳에는 조태남 관장이 그동안 모아 온 서예작품, 한국화, 서양화, 유화, 도자기류 등 애장품 200여 점이 전시되어 있다. 미술관은 직원이 상주해 있지 않아 안내문에 따라 전시실 관람을 하면 된다. 만약 불이 꺼져 있다면 불을 켜고 관람 후 불을 끄고 나오면 된다. 이곳 역시 카페처럼 연중 무료로 개방하고 있다. 넓은 대지에 아기자기하게 자리 잡은 조형물과 공간 배치가 사람들의 마음을 편안하게 만들어주고 있다. 한옥 주변은 다양한 나무들과 꽃이 가득하고 부대시설로 쉼터, 연못, 수목원, 야외전시장, 산책로, 등산로를 갖추고 있다."
+      }
+    ],
+    "parent_source_sha256": "e31e7e5c92bb915bf2b8ee5612d9a1bbebd2aec34a0b59513f927a82d2f65fc7",
+    "place": {
+      "address": "충청북도 충주시 대소원면 장성길 38-1",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:129bd89cd33a0db46bfdb88555f52eda429e76243957b0da4157de08293426ce",
+      "name_ko": "성마루미술관",
+      "place_id": "public:korea:129bd89cd33a0db46bfdb88555f52eda429e76243957b0da4157de08293426ce",
+      "provider_content_id": "1687304",
+      "region_code": "43130",
+      "region_name": "충청북도 충주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

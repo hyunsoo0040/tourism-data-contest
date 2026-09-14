@@ -1,0 +1,522 @@
+{
+  "assessed_at": "2026-09-11T18:59:10.299306Z",
+  "assessment_sha256": "3d5b0cea8adfa7a35a2555caa4a614fe86f65363fad5adc1f67c4e16f1985c7b",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 38
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 63
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "시설 이름에 '휴식·유토피아'라는 간단한 이미지와 의미가 부여되어 있으나, 이는 명칭 수준의 표현이고 상징적 의미의 경험이 방문의 중심이라는 근거는 없어 낮은 수준으로 판단한다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "자연과 어우러진 공간 조성이라는 제한적 시각적 표현이 확인되나, 분명한 외관·경관 연출이 장면을 지배한다는 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책로·여러 운동시설 등 방문자가 자신의 방식으로 선택·이용할 수 있는 기회가 확인되나, 자율 탐색이 경험의 중심이라는 근거는 없어 중간 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "생태연못·실개천·숲 같은 자연 환경 단서가 구체적으로 확인되며 두드러지나, 실제 고요함·심리적 회복을 확정할 수는 없어 4단계까지 올리지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "수생생물 관찰, 운동시설, 에너지 교육형 놀이기구 등 구체적 참여·탐방 활동이 확인되나, 지속적 도전이나 몰입형 활동이 방문 경험의 중심이라는 근거는 부족하다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "가족 나들이, 반려견 놀이공원, 야외무대 등 교류 기회가 부분적으로 확인되나 공동 제작·자기표현 활동이 풍부하다는 근거는 없다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 하수처리시설 상부에 조성된 자연생태공원에 관한 것으로, 확인된 실제 원형·문화유산과의 접촉 근거가 없다. 인근 수원화성·융건릉 언급은 인근 관광지 특성이므로 이 장소에 적용하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "시설 명칭 유래(레스트+유토피아)와 2005년 완공, 2006년 수상 사실만 있으며 이 장소 자체의 역사적 사건·인물 맥락에 대한 서사는 제공되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 광장 명칭 등은 전통풍 표지에 불과하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "자연학습장·에너지교육형 놀이기구는 일반 생태·과학 학습이지 원형·유산·전통에 연결된 역사 해설·탐구가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 187,
+            "method": "EXACT",
+            "original": "휴식을 의미하는 레스트(Rest)와 이상향을 뜻하는 유토피아(Utopia)가 합성된 뜻",
+            "start": 139,
+            "submitted": "휴식을 의미하는 레스트(Rest)와 이상향을 뜻하는 유토피아(Utopia)가 합성된 뜻",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 1,
+      "reason": "시설 이름에 '휴식·유토피아'라는 간단한 이미지와 의미가 부여되어 있으나, 이는 명칭 수준의 표현이고 상징적 의미의 경험이 방문의 중심이라는 근거는 없어 낮은 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 재현·유통에 관한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 284,
+            "method": "EXACT",
+            "original": "지상에는 자연과 잘 어우러진 휴식 공간을 조성하여",
+            "start": 257,
+            "submitted": "지상에는 자연과 잘 어우러진 휴식 공간을 조성하여",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "자연과 어우러진 공간 조성이라는 제한적 시각적 표현이 확인되나, 분명한 외관·경관 연출이 장면을 지배한다는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험하거나 재현하는 활동에 관한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 656,
+            "method": "EXACT",
+            "original": "힐링하기 좋은 산책로이다.",
+            "start": 642,
+            "submitted": "힐링하기 좋은 산책로이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        },
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 375,
+            "method": "EXACT",
+            "original": "건강마당(농구장∙배드민턴장∙게이트볼장∙미니풋살장∙놀이시설3개∙놀이광장 1개∙산책로)",
+            "start": 329,
+            "submitted": "건강마당(농구장∙배드민턴장∙게이트볼장∙미니풋살장∙놀이시설3개∙놀이광장 1개∙산책로)",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "산책로·여러 운동시설 등 방문자가 자신의 방식으로 선택·이용할 수 있는 기회가 확인되나, 자율 탐색이 경험의 중심이라는 근거는 없어 중간 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 624,
+            "method": "EXACT",
+            "original": "레스피아에서 정화된 물이 흐르는 자연학습장의 실개천과 생태연못",
+            "start": 590,
+            "submitted": "레스피아에서 정화된 물이 흐르는 자연학습장의 실개천과 생태연못",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 95,
+            "method": "EXACT",
+            "original": "멀리 떠나지 않아도 마치 숲에 온 듯 편안한 쉼터를 찾을 수 있어",
+            "start": 59,
+            "submitted": "멀리 떠나지 않아도 마치 숲에 온 듯 편안한 쉼터를 찾을 수 있어",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "생태연못·실개천·숲 같은 자연 환경 단서가 구체적으로 확인되며 두드러지나, 실제 고요함·심리적 회복을 확정할 수는 없어 4단계까지 올리지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 641,
+            "method": "EXACT",
+            "original": "다양한 수생생물 관찰과 함께",
+            "start": 626,
+            "submitted": "다양한 수생생물 관찰과 함께",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 562,
+            "method": "EXACT",
+            "original": "발전기가 내장된 놀이기구를 통해 직접 에너지 생성의 원리를 배울 수 있는 에너지교육형 놀이공원",
+            "start": 510,
+            "submitted": "발전기가 내장된 놀이기구를 통해 직접 에너지 생성의 원리를 배울 수 있는 에너지교육형 놀이공원",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "수생생물 관찰, 운동시설, 에너지 교육형 놀이기구 등 구체적 참여·탐방 활동이 확인되나, 지속적 도전이나 몰입형 활동이 방문 경험의 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 112,
+            "method": "EXACT",
+            "original": "가족 나들이 장소로 제격이다.",
+            "start": 96,
+            "submitted": "가족 나들이 장소로 제격이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        },
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+          "quote": {
+            "end": 499,
+            "method": "EXACT",
+            "original": "대형견과 중소형견 놀이터가 분리되어 안전하게 즐길 수 있고",
+            "start": 467,
+            "submitted": "대형견과 중소형견 놀이터가 분리되어 안전하게 즐길 수 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "가족 나들이, 반려견 놀이공원, 야외무대 등 교류 기회가 부분적으로 확인되나 공동 제작·자기표현 활동이 풍부하다는 근거는 없다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "88580d87b744a134de63cdceaa8a566b69382c9d0063aba3505916961d9727c1",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "085371b5a1cf779d1dd850643e3dbb8627b33f82f698680664800010b70f2136",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c0d7cb55f1c6a43228eb276fe902db12987b827166ee05964fe1226b1ef3b81a",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c900040ecd106299f9fbd2222acbf4c3322fc30f4c5ef561510eac85953b17af",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "2666534",
+          "request_sha256": "b1dcdb1a9c91027e299ac1646df8ad01f8edd20b877ad1763c3c94267371e39e",
+          "response_sha256": "32589568b9ea0f899dfcb7323b02337e8d134281299710bcbd819c1791b13494",
+          "retrieved_at": "2026-09-10T17:20:44.357287Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-10-27T07:00:46Z",
+          "source_record_sha256": "40d93f1d1d43eafcce41e26e9375a8e6cf28c2fed610192efaaf116190a4bc70",
+          "source_uri": null
+        },
+        "record_sha256": "f7619f3fbf8857c06cafefc4340c700ca9e999dba8be025ff2dd7cecad3170e3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "한국민속촌 부근에 위치한 구갈레스피아는 어린이, 반려견 놀이터와 다양한 운동시설이 있는 자연생태공원이다. 멀리 떠나지 않아도 마치 숲에 온 듯 편안한 쉼터를 찾을 수 있어 가족 나들이 장소로 제격이다. 용인시의 친환경 하수종말처리시설 ‘레스피아’는 휴식을 의미하는 레스트(Rest)와 이상향을 뜻하는 유토피아(Utopia)가 합성된 뜻으로 단순한 하수처리 시설이 아닌 시민 친화 시설을 함께 조성하여 2005년 완공하였다. 하수처리시설은 모두 지하에 매설하고 지상에는 자연과 잘 어우러진 휴식 공간을 조성하여 2006년 환경부 주관 환경혁신사례 우수상을 수상하기도 하였다. 구갈레스피아는 건강마당(농구장∙배드민턴장∙게이트볼장∙미니풋살장∙놀이시설3개∙놀이광장 1개∙산책로), 자연학습장(생태연못 및 습지원∙실개천), 기타 시설(야외무대∙처인광장∙용구광장분수대∙반딧불이광장∙하늘다리)로 조성되어 있다. 2016년 개장한 반려견 놀이공원은 대형견과 중소형견 놀이터가 분리되어 안전하게 즐길 수 있고, 어린이 놀이터는 발전기가 내장된 놀이기구를 통해 직접 에너지 생성의 원리를 배울 수 있는 에너지교육형 놀이공원으로 놀이와 교육, 두 마리 토끼를 모두 잡았다. 레스피아에서 정화된 물이 흐르는 자연학습장의 실개천과 생태연못은 다양한 수생생물 관찰과 함께 힐링하기 좋은 산책로이다. 공원 내 텐트와 타프 설치는 금지이며, 공영주차장인 구갈자투리주차장을 이용해 무지개다리를 건너 공원으로 진입하면 된다. 수원신갈IC에서 차량으로 약 7분, 에버라인 지석역에서 도보 약 6분(360m) 소요된다. 인근에 에버랜드, 한국민속촌, 세계문화유산 수원화성과 융건릉, 물향기수목원 등이 있다."
+      }
+    ],
+    "parent_source_sha256": "a915f858056e2d32dfd44b61d40e51b103f9829d9bb8d1007c73e6fef85a9409",
+    "place": {
+      "address": "경기도 용인시 기흥구 중부대로 640 (구갈동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:c900040ecd106299f9fbd2222acbf4c3322fc30f4c5ef561510eac85953b17af",
+      "name_ko": "용인 구갈레스피아",
+      "place_id": "public:korea:c900040ecd106299f9fbd2222acbf4c3322fc30f4c5ef561510eac85953b17af",
+      "provider_content_id": "2666534",
+      "region_code": "41463",
+      "region_name": "경기도 용인시 기흥구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,867 @@
+{
+  "assessed_at": "2026-09-11T16:38:36.230470Z",
+  "assessment_sha256": "76e794208f10ea47cb65bb7b250795a70a95a78878bac5760cab18d032f815b9",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 64
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4ae7487de3329c2ba8c648860389fb319c06620b5ec109f7e2f7fb4203943610"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:a32a07b3a3ff7a2a68194653a26e0e55d3938d89b42cfeafb564d15d9bf9a318",
+            "appearance:a5cec9e10946dedaeac005e3e44fc35993a800186f093b286ce61cd1aa3e8e5e",
+            "appearance:dd47cff43938273ee22b0779cc941fab2433ff9e9a9c42c5fd078b793ae53ad9"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 50,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "대청댐 자체의 경관에 대해 물안개, 잔잔한 물결, 산봉우리 등 구별되는 시각적 성격이 공식 개요에서 구체적으로 묘사되어 제한적이나 명확한 시각적 표현의 단서로 본다. 실제 현재 상태까지는 확정하지 않는다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4ae7487de3329c2ba8c648860389fb319c06620b5ec109f7e2f7fb4203943610"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "두 개의 드라이브 코스 정보는 방문자가 자신의 방식으로 호수 일대를 자율적으로 탐색할 수 있는 기회를 시사한다. 다만 프로그램성 자유 선택의 깊이는 확인이 제한적이어서 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4ae7487de3329c2ba8c648860389fb319c06620b5ec109f7e2f7fb4203943610"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:43d6014619a888d6bd46271d92256a1ccd4d582672aaa25f8da44ec7d5245975",
+            "appearance:cc0d7fda06186b25419287c300d17befdc27e16e65f88cb1af31fd2c58ac4377",
+            "appearance:deee2197b807f2dc34ffa8dc3c6bb3efa0e94b143a28c46d5fe02674926f8f79"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "대청호의 호수, 산간 계곡, 울창한 숲 등 자연 환경 단서가 공식 개요에서 두드러지게 묘사되어 회복 지원 환경의 가능성을 보여준다. 실제 고요함·혼잡은 확정하지 않는다.",
+      "value": 77
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "대청댐 자체는 1980년 완공된 시설이지만, 제공된 자료는 개요 서술일 뿐 방문자가 확인된 원형·유산 실물에 접촉하는 경험 요소를 확인할 수 없다. 호반의 문화유적 언급은 인근 장소로 대상이 다르다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에 댐 완공 연도와 용수 공급 기능의 사실적 서술이 있으나, 이는 시설 개요일 뿐 방문자가 이 장소의 역사 맥락을 탐구·이해할 수 있는 해설 경험 요소의 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "현암사, 문의향교 등 문화유적 언급이 있으나 대상이 인근 유적이며, 대청댐 자체의 지역 주체 전승·생활문화와의 연결 경험에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "댐이나 호수의 원형·역사에 연결된 해설·전시·학습 프로그램에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'빼어난 경관', '드라이브 코스로 알려져 있다'는 서술로 아름다운 호수 경관 이미지가 암시되지만, 사회적으로 공유되는 상징적 의미의 구체적 내용을 확인할 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "'드라이브 코스로 알려져 있다'는 표현이 명성의 유통을 간접 암시하나, 매체를 통한 이미지 재현·확산의 구체적 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:4ae7487de3329c2ba8c648860389fb319c06620b5ec109f7e2f7fb4203943610",
+          "quote": {
+            "end": 386,
+            "method": "EXACT",
+            "original": "대청호의 끝없이 이어지는 잔잔한 물결과 호반 위에 섬처럼 떠 있는 산봉우리들이 이른 아침에는 하얀 물안개로 가려지고 낮에는 쪽빛 하늘과 흰 구름으로 장식된다.",
+            "start": 298,
+            "submitted": "대청호의 끝없이 이어지는 잔잔한 물결과 호반 위에 섬처럼 떠 있는 산봉우리들이 이른 아침에는 하얀 물안개로 가려지고 낮에는 쪽빛 하늘과 흰 구름으로 장식된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c78bcca9772a86c532ed8e44b521b83c4f87d4b956ba1ca883b57e7012937337"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "대청댐 자체의 경관에 대해 물안개, 잔잔한 물결, 산봉우리 등 구별되는 시각적 성격이 공식 개요에서 구체적으로 묘사되어 제한적이나 명확한 시각적 표현의 단서로 본다. 실제 현재 상태까지는 확정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "드라이브 코스와 경관 언급이 있으나, 대표 장면·구도·이야기를 현장에서 체험·재현하는 경험 지원 요소의 근거는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:4ae7487de3329c2ba8c648860389fb319c06620b5ec109f7e2f7fb4203943610",
+          "quote": {
+            "end": 558,
+            "method": "EXACT",
+            "original": "물길을 따라 이어지다가 사이사이 울창한 숲을 지나는 호반도로는 드라이브 코스로 알려져 있다. 대청호 드라이브 코스는 청주와 신탄진을 잇는 호수 북쪽 코스와 보은과 옥천으로 이어지는 남쪽 코스가 있다.",
+            "start": 447,
+            "submitted": "물길을 따라 이어지다가 사이사이 울창한 숲을 지나는 호반도로는 드라이브 코스로 알려져 있다. 대청호 드라이브 코스는 청주와 신탄진을 잇는 호수 북쪽 코스와 보은과 옥천으로 이어지는 남쪽 코스가 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c78bcca9772a86c532ed8e44b521b83c4f87d4b956ba1ca883b57e7012937337"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "두 개의 드라이브 코스 정보는 방문자가 자신의 방식으로 호수 일대를 자율적으로 탐색할 수 있는 기회를 시사한다. 다만 프로그램성 자유 선택의 깊이는 확인이 제한적이어서 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:4ae7487de3329c2ba8c648860389fb319c06620b5ec109f7e2f7fb4203943610",
+          "quote": {
+            "end": 296,
+            "method": "EXACT",
+            "original": "산간 계곡과 어울려 빼어난 경관을 이루고 있다",
+            "start": 271,
+            "submitted": "산간 계곡과 어울려 빼어난 경관을 이루고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c78bcca9772a86c532ed8e44b521b83c4f87d4b956ba1ca883b57e7012937337"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:4ae7487de3329c2ba8c648860389fb319c06620b5ec109f7e2f7fb4203943610",
+          "quote": {
+            "end": 480,
+            "method": "EXACT",
+            "original": "물길을 따라 이어지다가 사이사이 울창한 숲을 지나는 호반도로",
+            "start": 447,
+            "submitted": "물길을 따라 이어지다가 사이사이 울창한 숲을 지나는 호반도로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c78bcca9772a86c532ed8e44b521b83c4f87d4b956ba1ca883b57e7012937337"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "대청호의 호수, 산간 계곡, 울창한 숲 등 자연 환경 단서가 공식 개요에서 두드러지게 묘사되어 회복 지원 환경의 가능성을 보여준다. 실제 고요함·혼잡은 확정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "드라이브가 언급되나 만들기·신체 활동·탐방 등 참여·몰입형 활동 기회에 대한 구체적 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "867c672b0f57fc228ae00dbe651a3742f464f459c159deb8041a0e8def994a8f",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대적 난간과 가로등 위주로 전통적 외관·재료의 시각적 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:171ca0df9d94e7d1f1aa73c14edfd99f02d11727d9558be9d003dec625163071",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "517559cfb4948d6475eff4504770bd89fd22ea928e5d1163897531607466bd36",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:1Uy3wb",
+          "request_sha256": "8a4f851bb024f3ea389e568957e7098a55c393e0ce837745a7cfaa34a056691c",
+          "response_sha256": "b1e24c17ebaa7be76c5559f68b99ee5c8b0356d275217f137cd61dea5fa6baf2",
+          "retrieved_at": "2026-09-10T08:21:55.437765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "deaee498cc8662ddd255861f565c867cbc74571262ea5c755be6ddcdb6c3d461",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource_photo/55/3403355_image2_1.jpg"
+        },
+        "record_sha256": "eddc167537a98936cf18474edc2929e210fe40fc13c291020e07ab2d434b8723",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "호수, 둑, 연이은 산림, 넓은 하늘과 구름 등 트인 자연 경관이 화면 대부분을 차지하며 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:43d6014619a888d6bd46271d92256a1ccd4d582672aaa25f8da44ec7d5245975",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "51e23f5edb78ed676cd9690fdc124622b14ff24d55d4d39cae634ef0ac7178eb",
+        "match_basis": [
+          "공식 촬영지역 대전광역시 대덕구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3403337",
+          "request_sha256": "248ad592721f1f068c011ed4d8899c8b9f592038bad75f8216dc22c988179b0a",
+          "response_sha256": "055e01c2e59f5461a72215b470fb6f9ca915a72a306765ff61ade42d34d69175",
+          "retrieved_at": "2026-09-10T08:21:56.284380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d48dd2afae858bcfdb046b9269ada42da4d5d5577db22975077077beaf91552e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/37/3403337.jpg"
+        },
+        "record_sha256": "68c4d8db80b43a89ebb6bfcb5fe31360526cae13ef5f142875fd04b234d7afde",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "원목 데크와 목재 난간 등 자연재료 느낌의 전통적 외관이 일부 보이나 전체적으로 현대적 관람 시설 외관이 우세하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:66c6b5e2e431c4995abe5a1f8e2cb1ed3c300b0f07e68a285df9c8f05c101c39",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "51e23f5edb78ed676cd9690fdc124622b14ff24d55d4d39cae634ef0ac7178eb",
+        "match_basis": [
+          "공식 촬영지역 대전광역시 대덕구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3403337",
+          "request_sha256": "248ad592721f1f068c011ed4d8899c8b9f592038bad75f8216dc22c988179b0a",
+          "response_sha256": "055e01c2e59f5461a72215b470fb6f9ca915a72a306765ff61ade42d34d69175",
+          "retrieved_at": "2026-09-10T08:21:56.284380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d48dd2afae858bcfdb046b9269ada42da4d5d5577db22975077077beaf91552e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/37/3403337.jpg"
+        },
+        "record_sha256": "172155a7fd1054db5cd510420c0a3cdbefcc5d6c8844a77f6b1ce008299075ac",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대식 콘크리트·유리·금속 외관의 시설물로 전통적 재료나 구성의 시각적 특성은 거의 드러나지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:90c8310d114ab5204a3e8843ee24136b29e5fc3a00f432a42fc249f7c232fa6e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1d5d8acf605d34b906685d846ab3b67a877955c0e8f44aabddd38071dcf56499",
+        "match_basis": [
+          "공식 촬영지역 대전광역시 대덕구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3403348",
+          "request_sha256": "248ad592721f1f068c011ed4d8899c8b9f592038bad75f8216dc22c988179b0a",
+          "response_sha256": "055e01c2e59f5461a72215b470fb6f9ca915a72a306765ff61ade42d34d69175",
+          "retrieved_at": "2026-09-10T08:21:56.284380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "acca7c72cca24ac5f055d41064e64ea818a8137f40b58a31f2079d132cf2f7fb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/48/3403348.jpg"
+        },
+        "record_sha256": "a23a7572a0ac0796e21c7f0c605b0a7475c9e1b31a1057f2d605dd1a64263db1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "중앙 대칭 구도의 보도블록 다리와 가로등이 반복되며 안정적 원근감을 보이나 색채는 흐린 하늘로 절제되어 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a32a07b3a3ff7a2a68194653a26e0e55d3938d89b42cfeafb564d15d9bf9a318",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "517559cfb4948d6475eff4504770bd89fd22ea928e5d1163897531607466bd36",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:1Uy3wb",
+          "request_sha256": "8a4f851bb024f3ea389e568957e7098a55c393e0ce837745a7cfaa34a056691c",
+          "response_sha256": "b1e24c17ebaa7be76c5559f68b99ee5c8b0356d275217f137cd61dea5fa6baf2",
+          "retrieved_at": "2026-09-10T08:21:55.437765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "deaee498cc8662ddd255861f565c867cbc74571262ea5c755be6ddcdb6c3d461",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource_photo/55/3403355_image2_1.jpg"
+        },
+        "record_sha256": "645fb7c3e5caeea27f52844f2b591423c003ea660c831a7f7d5cca8d7e830d3f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "현대적 원통형 유리 전망실과 수평 창 배열의 시설 건물이 넓은 광장과 대비되어 보이며, 잔잔한 구름 낀 하늘이 배경을 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a5cec9e10946dedaeac005e3e44fc35993a800186f093b286ce61cd1aa3e8e5e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1d5d8acf605d34b906685d846ab3b67a877955c0e8f44aabddd38071dcf56499",
+        "match_basis": [
+          "공식 촬영지역 대전광역시 대덕구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3403348",
+          "request_sha256": "248ad592721f1f068c011ed4d8899c8b9f592038bad75f8216dc22c988179b0a",
+          "response_sha256": "055e01c2e59f5461a72215b470fb6f9ca915a72a306765ff61ade42d34d69175",
+          "retrieved_at": "2026-09-10T08:21:56.284380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "acca7c72cca24ac5f055d41064e64ea818a8137f40b58a31f2079d132cf2f7fb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/48/3403348.jpg"
+        },
+        "record_sha256": "f3396de73242d90ddcb4b22c124b31a6750bf40098a95fa87ecb01032c9a3abd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "건물 뒤편으로 울창한 나무 언덕이 크게 펼쳐져 있고, 녹지가 장면의 상당 부분을 차지한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:cc0d7fda06186b25419287c300d17befdc27e16e65f88cb1af31fd2c58ac4377",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "1d5d8acf605d34b906685d846ab3b67a877955c0e8f44aabddd38071dcf56499",
+        "match_basis": [
+          "공식 촬영지역 대전광역시 대덕구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3403348",
+          "request_sha256": "248ad592721f1f068c011ed4d8899c8b9f592038bad75f8216dc22c988179b0a",
+          "response_sha256": "055e01c2e59f5461a72215b470fb6f9ca915a72a306765ff61ade42d34d69175",
+          "retrieved_at": "2026-09-10T08:21:56.284380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "acca7c72cca24ac5f055d41064e64ea818a8137f40b58a31f2079d132cf2f7fb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/48/3403348.jpg"
+        },
+        "record_sha256": "1f04ff5a43eec918cde203295ab773425d935f0dd32161915a5abc4b561d42aa",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "사진 프레임형 조형물이 중앙에 배치되어 경관을 담는 구도 연출이 보이며, 푸른 하늘과 녹색 산·호수의 대비가 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:dd47cff43938273ee22b0779cc941fab2433ff9e9a9c42c5fd078b793ae53ad9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "51e23f5edb78ed676cd9690fdc124622b14ff24d55d4d39cae634ef0ac7178eb",
+        "match_basis": [
+          "공식 촬영지역 대전광역시 대덕구 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3403337",
+          "request_sha256": "248ad592721f1f068c011ed4d8899c8b9f592038bad75f8216dc22c988179b0a",
+          "response_sha256": "055e01c2e59f5461a72215b470fb6f9ca915a72a306765ff61ade42d34d69175",
+          "retrieved_at": "2026-09-10T08:21:56.284380Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d48dd2afae858bcfdb046b9269ada42da4d5d5577db22975077077beaf91552e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/37/3403337.jpg"
+        },
+        "record_sha256": "30602c74f0f6e312411f4ebb80a200a90c0e87f6b989de796b0d44726f27e271",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "좌우로 강물과 울창한 산림이 트인 자연 경관을 두드러지게 보여준다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:deee2197b807f2dc34ffa8dc3c6bb3efa0e94b143a28c46d5fe02674926f8f79",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "517559cfb4948d6475eff4504770bd89fd22ea928e5d1163897531607466bd36",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:1Uy3wb",
+          "request_sha256": "8a4f851bb024f3ea389e568957e7098a55c393e0ce837745a7cfaa34a056691c",
+          "response_sha256": "b1e24c17ebaa7be76c5559f68b99ee5c8b0356d275217f137cd61dea5fa6baf2",
+          "retrieved_at": "2026-09-10T08:21:55.437765Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "deaee498cc8662ddd255861f565c867cbc74571262ea5c755be6ddcdb6c3d461",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource_photo/55/3403355_image2_1.jpg"
+        },
+        "record_sha256": "34c9c884419252ab2b599ba0716ee5d5f8ec6e3a9d440dfea079a07efa9600b7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1292ae90749c4c1bd8d2859f7cdf858fbabde7e60e0c55dcfd96d1a68bb28e12",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127663",
+          "request_sha256": "ad39d4f8db8a539d120616723f2523ce296f63580edd5d9b442eba08e5d8e883",
+          "response_sha256": "d1a2a56e9400370413c820f1746919df31af86ec82e68200edc03b266d4bc0c9",
+          "retrieved_at": "2026-09-10T08:21:54.760749Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c055e332d0957af8775608a26b6248536665f55da184abcd66dc6673e0ce3d51",
+          "source_uri": null
+        },
+        "record_sha256": "0c8941b0f270de8b60149514176db5e9d47cf4a2f2c275197d2a125ae561e71a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4ae7487de3329c2ba8c648860389fb319c06620b5ec109f7e2f7fb4203943610",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127663",
+          "request_sha256": "ff971c373f8dffa5df880d8a254b44527d4faf3e1ebcf84c5dfd4556f1a793e8",
+          "response_sha256": "2cd0f0f7ad0e30409d49d6cf73c333500d0be4e575a4f0bf532df7f90d29e59e",
+          "retrieved_at": "2026-09-10T07:56:49.121927Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-24T08:22:02Z",
+          "source_record_sha256": "a31033b5b0ee6946f7cbc024ef8850b8ecb6872e9e84b51758aa55997c251328",
+          "source_uri": null
+        },
+        "record_sha256": "c78bcca9772a86c532ed8e44b521b83c4f87d4b956ba1ca883b57e7012937337",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "비단처럼 아름다운 강이라하여 이름 붙여진 금강에 위치한 대청댐은 대전광역시 대덕구와 충청북도 청주시 사이에 위치해 있는 다목적댐이다. 댐 건설로 생긴 대청호는 저수용량이 14억 9천만 톤에 이르러 중부권에서는 충주호 다음으로 큰 호수이다. 1980년 댐의 완공으로 댐 하류지역의 홍수피해를 경감시키는 한편, 하류지역 농경지에 농업용수를 공급하고, 대전광역시, 청주시, 전주시, 군산시 등 충청과 호남지역에 생활용수 및 공업용수를 공급하고 있다. 국내 최장의 다목적 인공호수인 대청댐은 산간 계곡과 어울려 빼어난 경관을 이루고 있다. 대청호의 끝없이 이어지는 잔잔한 물결과 호반 위에 섬처럼 떠 있는 산봉우리들이 이른 아침에는 하얀 물안개로 가려지고 낮에는 쪽빛 하늘과 흰 구름으로 장식된다. 호수 주변에는 20년 만에 개방된 청남대를 비롯해 현암사, 문의향교 등 많은 문화유적이 잘 보존되어 있다. 물길을 따라 이어지다가 사이사이 울창한 숲을 지나는 호반도로는 드라이브 코스로 알려져 있다. 대청호 드라이브 코스는 청주와 신탄진을 잇는 호수 북쪽 코스와 보은과 옥천으로 이어지는 남쪽 코스가 있다. 특히 북쪽의 청주시 문의면과 현도면 오가리 사이의 경관이 빼어나다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:8dbc3ad618ec7aee95f18812427b0715f2e64b5210903fca9cb1d64f8afbe2dd",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127663",
+          "request_sha256": "ad39d4f8db8a539d120616723f2523ce296f63580edd5d9b442eba08e5d8e883",
+          "response_sha256": "d1a2a56e9400370413c820f1746919df31af86ec82e68200edc03b266d4bc0c9",
+          "retrieved_at": "2026-09-10T08:21:54.760749Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d162e927dff32389a0b15281cc05b1b62dc6edac65783bf309a14193326e30ed",
+          "source_uri": null
+        },
+        "record_sha256": "fcece3849971efb9968dca95fabd687ed27b84a44cb1d0ce84fc26edaf884e58",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "e4d0f1032be560e0f2acdc889995e62ad23747015eea8dffed2fc9102eaa2b84",
+    "place": {
+      "address": "대전광역시 대덕구 대청로 618-136 (미호동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+      "name_ko": "대청댐",
+      "place_id": "public:korea:409aefd314407eefa3def5befa70698ea8b500356eefc970ef358707b651629d",
+      "provider_content_id": "127663",
+      "region_code": "30230",
+      "region_name": "대전광역시 대덕구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,984 @@
+{
+  "assessed_at": "2026-09-11T15:52:01.529934Z",
+  "assessment_sha256": "5c5e656922ca117eb7682856a2a63dfa705e6856254daa9fe809743e7814c7fd",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 60
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 70
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소 자체의 연혁(1928년 서해안 최초 개장)이 간단히 소개된다. 그 이상의 사건·인물 맥락 탐구는 제시되지 않아 수준 1이다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'모세의 기적', '신비의 바닷길'이라는 구체적 이미지와 이야기가 이 장소에 연결되어 있다. 여러 표현에서 일관성을 확인하거나 방문 경험의 중심이라는 근거는 부족해 수준 2이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:50b322e5fc46d9d78461729a9c5ebee5d62e04e5c09520aacc007278b1ec2505",
+            "appearance:71e6d3f271a49eb68e407f1bb924c9a96797ce30aacabea1c9445e8ff5f5ce2d",
+            "appearance:f69dae03a8ac45bc859e975470f6e82c1a55e4462e260ed7286863a95e155c2c"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "기암괴석과 해송의 경관, 바닷길이 열리는 장관 등 구별되는 시각적 성격이 서술된다. 그러나 일관된 연출이 장면을 지배한다는 수준의 근거는 없어 수준 2이다.",
+      "value": 56
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면인 '신비의 바닷길'을 현장에서 직접 경험할 수 있고(바닷길 보행, 전망대 조망), 바닷길에 맞춘 축제·대행진으로 이미지를 체험할 수 있다. 촬영·재현 중심성의 근거는 부족해 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "1.5km 바닷길을 자율적으로 걷고 채집하며 탐색할 수 있는 기회가 제시된다. 자신의 방식으로 여유롭게 탐색한다는 더 강한 근거는 부족해 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:393015272b2530258da71763f072cec11616384faa24756e599294c55ff6e1c7",
+            "appearance:52a2a76f7e544be0eb5270eb8586e9188c26d32f16d9891e31f4be1519e43d48",
+            "appearance:fa240aabc963c785da0427b5d7c5a53c6ae625d142333720d74a214d8567d2a7"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "울창한 송림, 백사장, 바다 등 자연 환경 단서가 구체적으로 확인된다. 환경이 장면 전체를 지배한다고 단정하기엔 부족해 수준 3이다. 실제 고요함·혼잡은 추정하지 않는다.",
+      "value": 79
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "바닷길에서의 조개·게 잡기와 축제 기간 다양한 참여형 체험(맨손 고기잡이, 바지락 잡기 등)이 구체적으로 제공된다. 지속적 도전 활동 중심이라는 근거는 부족해 수준 3이다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "축제 공연과 대행진 등 공동 참여·교류의 기회가 확인된다. 그러나 함께 만들거나 자기표현할 활동이 풍부하다는 근거는 부족해 수준 2이다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "근거는 1928년 최초 개장이라는 연혁과 '모세의 기적' 바닷길 현상을 다루지만, 확인된 원형·유산 실물이나 문화유산 공간의 접촉을 직접 뒷받침하는 서술은 부족하다. 자연현상이 유산 접촉임을 단정할 수 없어 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+          "quote": {
+            "end": 36,
+            "method": "EXACT",
+            "original": "무창포해수욕장은 1928년 서해안에서 최초로 개장된 해수욕장이다.",
+            "start": 0,
+            "submitted": "무창포해수욕장은 1928년 서해안에서 최초로 개장된 해수욕장이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 1,
+      "reason": "이 장소 자체의 연혁(1928년 서해안 최초 개장)이 간단히 소개된다. 그 이상의 사건·인물 맥락 탐구는 제시되지 않아 수준 1이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "바닷길 축제의 햇불어업체험 등이 언급되지만 이것이 지역 주체에 의한 실제 전승·생활문화의 지속인지 확인하는 근거가 없다. 재현형 축제와 실제 전승의 구별이 불가하므로 UNKNOWN이다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "바닷길 현상에 대한 물 갈림 설명이 일부 있으나 이것이 방문자를 위한 원형·유산 연결 해설·학습 체계라 보기 어렵고, Odii 등 해설 자료도 없어 근거가 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+          "quote": {
+            "end": 295,
+            "method": "EXACT",
+            "original": "이것을 ‘모세의 기적’이라고 한다.",
+            "start": 276,
+            "submitted": "이것을 ‘모세의 기적’이라고 한다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'모세의 기적', '신비의 바닷길'이라는 구체적 이미지와 이야기가 이 장소에 연결되어 있다. 여러 표현에서 일관성을 확인하거나 방문 경험의 중심이라는 근거는 부족해 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 유통(작품, 홍보, SNS 등)에 대한 근거가 제공되지 않았다. 축제 홍보성 서술만으로는 매체 표현·유통의 반복 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+          "quote": {
+            "end": 170,
+            "method": "EXACT",
+            "original": "기암괴석, 해송의 수려한 자연경관으로 운치를 더하는 무창포 해수욕장",
+            "start": 133,
+            "submitted": "기암괴석, 해송의 수려한 자연경관으로 운치를 더하는 무창포 해수욕장",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "기암괴석과 해송의 경관, 바닷길이 열리는 장관 등 구별되는 시각적 성격이 서술된다. 그러나 일관된 연출이 장면을 지배한다는 수준의 근거는 없어 수준 2이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+          "quote": {
+            "end": 462,
+            "method": "EXACT",
+            "original": "무창포 전망대에 오르면 신비의 바닷길이 열리는 장관을 한눈에 바라볼 수 있다.",
+            "start": 419,
+            "submitted": "무창포 전망대에 오르면 신비의 바닷길이 열리는 장관을 한눈에 바라볼 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대표 장면인 '신비의 바닷길'을 현장에서 직접 경험할 수 있고(바닷길 보행, 전망대 조망), 바닷길에 맞춘 축제·대행진으로 이미지를 체험할 수 있다. 촬영·재현 중심성의 근거는 부족해 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+          "quote": {
+            "end": 391,
+            "method": "EXACT",
+            "original": "바닷길이 열리면 이 길을 따라 게, 조개 등을 잡는 재미가 쏠쏠하다.",
+            "start": 353,
+            "submitted": "바닷길이 열리면 이 길을 따라 게, 조개 등을 잡는 재미가 쏠쏠하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "1.5km 바닷길을 자율적으로 걷고 채집하며 탐색할 수 있는 기회가 제시된다. 자신의 방식으로 여유롭게 탐색한다는 더 강한 근거는 부족해 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+          "quote": {
+            "end": 132,
+            "method": "EXACT",
+            "original": "주변에는 송림이 울창하여 해수욕과 산림욕을 함께 즐길 수 있는 곳이다.",
+            "start": 93,
+            "submitted": "주변에는 송림이 울창하여 해수욕과 산림욕을 함께 즐길 수 있는 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "울창한 송림, 백사장, 바다 등 자연 환경 단서가 구체적으로 확인된다. 환경이 장면 전체를 지배한다고 단정하기엔 부족해 수준 3이다. 실제 고요함·혼잡은 추정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+          "quote": {
+            "end": 631,
+            "method": "EXACT",
+            "original": "맨손 고기잡이 체험, 독살어업생태체험, 바지락 잡기 체험, 맛살 잡기 체험 등 다양한 체험거리를 즐길 수 있다.",
+            "start": 569,
+            "submitted": "맨손 고기잡이 체험, 독살어업생태체험, 바지락 잡기 체험, 맛살 잡기 체험 등 다양한 체험거리를 즐길 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "바닷길에서의 조개·게 잡기와 축제 기간 다양한 참여형 체험(맨손 고기잡이, 바지락 잡기 등)이 구체적으로 제공된다. 지속적 도전 활동 중심이라는 근거는 부족해 수준 3이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+          "quote": {
+            "end": 557,
+            "method": "EXACT",
+            "original": "신비의 바닷길 축제도 열리는데, 연예인들의 축하공연, 햇불어업체험, 신비의 바닷길 햇불 대행진",
+            "start": 505,
+            "submitted": "신비의 바닷길 축제도 열리는데, 연예인들의 축하공연, 햇불어업체험, 신비의 바닷길 햇불 대행진",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "축제 공연과 대행진 등 공동 참여·교류의 기회가 확인된다. 그러나 함께 만들거나 자기표현할 활동이 풍부하다는 근거는 부족해 수준 2이다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "ccc3a8a472762c2c18c67c54066e567f16c05d53a90a9be5d48bb707dbfdc34c",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "6d7fc8787f753e0918d5e28770806a4817ad8b7c37293bacc3049db2315e9b7e",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "트인 바다, 갯벌, 모래사장, 초록으로 덮인 섬 등 자연 경관이 장면 전체를 채움",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:393015272b2530258da71763f072cec11616384faa24756e599294c55ff6e1c7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9197d9faa743373efd3563fabf59231dc0e18f79780ebc1d17c74d10f959ca03",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513910_3",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "229608794ad6aca2853f136bd282f3a5e20165ad2c024bef55ea2c14943fa83a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3513910_image2_1.jpg"
+        },
+        "record_sha256": "f86b449f8b27b177ff98fd14f54218f7508c98fee17523af7b9e339a6ddd38b5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "금색과 은색 대형 조형물이 분수 형태로 장면 중앙을 지배하며, 현대적 금속 재질과 곡선 구도가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:50b322e5fc46d9d78461729a9c5ebee5d62e04e5c09520aacc007278b1ec2505",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "66f13c692f939067c20a86738924a8bf13ee8a0deb57da3f93660f01214095df",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513911_2",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7383937255827af5c6108192113084290bded7efa3d00e28b7e8b3e889462735",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/11/3513911_image2_1.jpg"
+        },
+        "record_sha256": "30ebd3658948cb83ffab73f85a71e502519f04b80cece6b4356c65b9c8539a19",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "조형물 뒤로 넓은 바다와 하늘, 저지대 해안 경관이 트여 보이며 자연 배경이 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:52a2a76f7e544be0eb5270eb8586e9188c26d32f16d9891e31f4be1519e43d48",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "66f13c692f939067c20a86738924a8bf13ee8a0deb57da3f93660f01214095df",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513911_2",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7383937255827af5c6108192113084290bded7efa3d00e28b7e8b3e889462735",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/11/3513911_image2_1.jpg"
+        },
+        "record_sha256": "e34cf71b75ff00fab2a6769b395b042654c69e666958c4d52186f440d9da2587",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "넓은 백사장과 잔잔한 바다, 원경의 섬이 수평 구도로 이어져 차분하고 트인 시각적 성격이 보통 수준으로 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:71e6d3f271a49eb68e407f1bb924c9a96797ce30aacabea1c9445e8ff5f5ce2d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0fd3bbabd044af6470e28cec70f37aa6a7c4995a97fc5797fbb3b9400d0545f8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513909_4",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9753596136f2dc9d4e08e9cfa7d1ebcb7dd817ed3addceb3b32883b27eb8e6e7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/09/3513909_image2_1.jpg"
+        },
+        "record_sha256": "b4f6a2c4da905c6c514dd57038e1b0276fbf8a1284d9aaf0d85aacaf02ddec92",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 시각적 단서가 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:789dfdd55f43d4f75119ce80dd6d8acf7f239faa025f82e04ea432be567c38fd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9197d9faa743373efd3563fabf59231dc0e18f79780ebc1d17c74d10f959ca03",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513910_3",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "229608794ad6aca2853f136bd282f3a5e20165ad2c024bef55ea2c14943fa83a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3513910_image2_1.jpg"
+        },
+        "record_sha256": "e847cd5738336621dd7736116829be0dcefa991164a370b3e8e57f0c88b35d4a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관이나 재료, 공간 구성의 시각적 단서는 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b42db1d979c0ad9081e9449d46604f370d151a7b21a667ec6ae19776124f497d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0fd3bbabd044af6470e28cec70f37aa6a7c4995a97fc5797fbb3b9400d0545f8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513909_4",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9753596136f2dc9d4e08e9cfa7d1ebcb7dd817ed3addceb3b32883b27eb8e6e7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/09/3513909_image2_1.jpg"
+        },
+        "record_sha256": "fda041db26c15adc1aa80b5fc22f10df3071a4d15eb2e5160cf2891ec981cb65",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "석재 원형 화단과 잔디 등 일부 전통적 재료가 보이나 전체는 현대적 조형 공간이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d8b6b247b35b41144f41debfa5367df1baaffeed4bca8af589d8ba1f75e768a6",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "66f13c692f939067c20a86738924a8bf13ee8a0deb57da3f93660f01214095df",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513911_2",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7383937255827af5c6108192113084290bded7efa3d00e28b7e8b3e889462735",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/11/3513911_image2_1.jpg"
+        },
+        "record_sha256": "df9c26b6ba47c8114716c553d1f9f0981f315842c3bc680a400bc342ea4d1765",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "넓은 수평 구도, 밝은 하늘과 갯벌·모래의 부드러운 색 대비가 화면을 지배하며 개방감 있는 연출이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f69dae03a8ac45bc859e975470f6e82c1a55e4462e260ed7286863a95e155c2c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "9197d9faa743373efd3563fabf59231dc0e18f79780ebc1d17c74d10f959ca03",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513910_3",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "229608794ad6aca2853f136bd282f3a5e20165ad2c024bef55ea2c14943fa83a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3513910_image2_1.jpg"
+        },
+        "record_sha256": "af479d579dcab4252f08fc125a81893d6f1121031a0ba3421425e7b2262e49eb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "모래사장, 바다, 하늘, 멀리 숲으로 덮인 섬까지 자연 경관이 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:fa240aabc963c785da0427b5d7c5a53c6ae625d142333720d74a214d8567d2a7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "0fd3bbabd044af6470e28cec70f37aa6a7c4995a97fc5797fbb3b9400d0545f8",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3513909_4",
+          "request_sha256": "654d4e33f31be8dad90347160f929caa743a96e2aceadbca7290966e3266e862",
+          "response_sha256": "dba1fb1a615224ee2d8ab966535eea3f7af09508599767c0b7ebeb8a52fd871d",
+          "retrieved_at": "2026-09-10T08:19:35.306583Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9753596136f2dc9d4e08e9cfa7d1ebcb7dd817ed3addceb3b32883b27eb8e6e7",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/09/3513909_image2_1.jpg"
+        },
+        "record_sha256": "dbb0b2268b1706bdf958400e5b98d2adea987af50a8399f33768564fe5738b63",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c7e003e804102c2b75fcba6859402bcb04141fd389ffa0163e0cd3a90c62a30c",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "125841",
+          "request_sha256": "0d26c8ed0a7d49f9930d87b55747a67e69a3e1366e5a8314ad360c68f31e5037",
+          "response_sha256": "e10a68b79f5d64a6d6de881638a8f5af6d3f82997f206364aed4483f80a7b1bc",
+          "retrieved_at": "2026-09-10T08:16:09.870136Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-13T01:05:58Z",
+          "source_record_sha256": "31cca8fa60be859e3286539af6ebb38ebdd7d2e8df8d93f94c1983caccbcffc4",
+          "source_uri": null
+        },
+        "record_sha256": "516c5cc47357cffc4e5a4e20708f9d0b246ed6e906577379a5edbc8a6ca69c07",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무창포해수욕장은 1928년 서해안에서 최초로 개장된 해수욕장이다. 백사장 길이 1.5㎞ 수심 1~2m, 백사장 50m, 수온 섭씨 22도, 경사도 4도의 해수욕장으로 주변에는 송림이 울창하여 해수욕과 산림욕을 함께 즐길 수 있는 곳이다. 기암괴석, 해송의 수려한 자연경관으로 운치를 더하는 무창포 해수욕장은 주변의 바다낚시와 풍부한 지하수 등으로 해마다 많은 관광객들이 방문한다. 특히 이곳은 매월 음력 보름날과 그믐날을 전후하여 2~3회 해변에서부터 석대도까지 1.5㎞의 바닷길이 열리는데, 이것을 ‘모세의 기적’이라고 한다. 무창포 신비의 바닷길이 열리는 현상은 바다 물 갈림 현상으로 썰물 상태에서 바닷물이 드러나는 것이며, 바닷길이 열리면 이 길을 따라 게, 조개 등을 잡는 재미가 쏠쏠하다. 무창포 입구에서 50m 떨어진 언덕 위에 위치한 무창포 전망대에 오르면 신비의 바닷길이 열리는 장관을 한눈에 바라볼 수 있다. 물 갈라짐 현상을 모티브로 매년 음력 보름과 그믐에 열리는 바닷길에 맞추어 신비의 바닷길 축제도 열리는데, 연예인들의 축하공연, 햇불어업체험, 신비의 바닷길 햇불 대행진 등 다양한 볼거리와 맨손 고기잡이 체험, 독살어업생태체험, 바지락 잡기 체험, 맛살 잡기 체험 등 다양한 체험거리를 즐길 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:cedcade629a322ea1a2669ab0d5c456ae06d31c6c789294c137a75ef9d2b2124",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125841",
+          "request_sha256": "0ffdd4069e86449e7052cc6299dcff19f4a978f6b9965f6fd67873c20174f68c",
+          "response_sha256": "893d92c3834383b9851d76598d599f31079e190e2154c83f808e54183fb7600f",
+          "retrieved_at": "2026-09-10T08:19:34.999103Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4f9943d9ad33f26b627fd2e968e8f26db25186ab32b6fe431d0c0232d18877b9",
+          "source_uri": null
+        },
+        "record_sha256": "8865b3a5deae3334c597e80dde54dfce0510e4bda83e1a60265073cb41020c9a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d840a3b86882477e2e55c4f622bafdcb25ff71cf20ee412cef22ab148f7487c9",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "125841",
+          "request_sha256": "0ffdd4069e86449e7052cc6299dcff19f4a978f6b9965f6fd67873c20174f68c",
+          "response_sha256": "893d92c3834383b9851d76598d599f31079e190e2154c83f808e54183fb7600f",
+          "retrieved_at": "2026-09-10T08:19:34.999103Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ff0143de9a6bf516cc7724700a0e02d8bec1a6bd1296a541451ec81fe30fd7bb",
+          "source_uri": null
+        },
+        "record_sha256": "ce0f123db825b4cf924d2c9d6785093bbecb0768724e61a0fe8c422545369745",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "7d7711c086998752dc6a0e6f629bc4a95ef254ea398f16ff56d7c911ac935e9d",
+    "place": {
+      "address": "충청남도 보령시 웅천읍 열린바다1길 10",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+      "name_ko": "무창포해수욕장",
+      "place_id": "public:korea:14d6a06cff24de34da75ca8bc88b8b7a2b8ad9c5c81ed51c16ef0f848c48b497",
+      "provider_content_id": "125841",
+      "region_code": "44180",
+      "region_name": "충청남도 보령시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

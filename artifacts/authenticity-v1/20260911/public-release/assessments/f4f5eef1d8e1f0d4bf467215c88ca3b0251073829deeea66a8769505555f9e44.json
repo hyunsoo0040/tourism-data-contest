@@ -1,0 +1,485 @@
+{
+  "assessed_at": "2026-09-11T17:19:14.788363Z",
+  "assessment_sha256": "f4f5eef1d8e1f0d4bf467215c88ca3b0251073829deeea66a8769505555f9e44",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.d"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "드라이브 명소, 단풍의 바다, 가을 단풍 명소라는 공유된 이미지가 장소에 부여되어 있으나, 여러 표현에서 일관된 심층 의미까지 확인되지는 않아 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "9개의 경치 감상 지점과 유명한 산길 등 대표 장면을 직접 관람·경험할 수 있으나, 촬영·참여를 통한 재현 경험의 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "드라이브 코스 선택, 전망대·댐·트레킹 코스 중 자율적으로 선택해 둘러보고 탐색할 수 있는 기회가 구체적으로 안내되어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "북한강·파로호·계곡·단풍·산길 등 자연 환경 단서가 장면의 중심으로 확인된다. 다만 실제 고요함·혼잡 수준은 확인할 수 없어 수준 3으로 판단한다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "해산령은 자연 경관 중심의 고개·드라이브 명소로 소개되며, 확인된 실제 원형·유산(문화유산 실물·역사 공간)과의 접촉 근거가 없다. '평화의 댐'은 시설 언급일 뿐 유산 접촉의 근거로 불충분하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "해산·일산이라는 이름과 아침이 가장 빠른 곳이라는 사실 외에 이 장소의 실제 역사·사건·인물 맥락을 설명하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "비수구미 마을이 언급되지만 지역 주체의 전승·생활문화와의 실제 연결을 뒷받침하는 내용이 없다. 트레킹 코스 안내는 전승 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "경치 감상과 트레킹·캠핑·레저 안내만 있고 원형·유산·전통에 연결된 해설·학습 자료에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed",
+          "quote": {
+            "end": 78,
+            "method": "EXACT",
+            "original": "해산령은 화천군에 있는 드라이브 명소로 알려진 아름다운 관광지이며 비수구미 계곡과 함께 단풍의 바다라고 할 만큼 가을 단풍 명소로 유명하다.",
+            "start": 0,
+            "submitted": "해산령은 화천군에 있는 드라이브 명소로 알려진 아름다운 관광지이며 비수구미 계곡과 함께 단풍의 바다라고 할 만큼 가을 단풍 명소로 유명하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a9fb0466c6b40049bf9b5fa98561943e9a570dfdc1adbbc84ca9f15da072edb4"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "드라이브 명소, 단풍의 바다, 가을 단풍 명소라는 공유된 이미지가 장소에 부여되어 있으나, 여러 표현에서 일관된 심층 의미까지 확인되지는 않아 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "'알려진', '유명하다'는 표현은 이미지 확산의 암시일 뿐 특정 매체를 통한 재현·유통의 확인된 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed",
+          "quote": {
+            "end": 168,
+            "method": "EXACT",
+            "original": "총 9개의 아름다운 경치를 감상할 수 있는 곳으로, 그중에서도 꼬불꼬불한 산길을 넘어 재안산의 산 고개로 이어지는 길은 특히 아름답기로 유명하다.",
+            "start": 87,
+            "submitted": "총 9개의 아름다운 경치를 감상할 수 있는 곳으로, 그중에서도 꼬불꼬불한 산길을 넘어 재안산의 산 고개로 이어지는 길은 특히 아름답기로 유명하다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a9fb0466c6b40049bf9b5fa98561943e9a570dfdc1adbbc84ca9f15da072edb4"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "9개의 경치 감상 지점과 유명한 산길 등 대표 장면을 직접 관람·경험할 수 있으나, 촬영·참여를 통한 재현 경험의 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed",
+          "quote": {
+            "end": 497,
+            "method": "EXACT",
+            "original": "철책 사이로 다시 비포장도로가 나타난다. 파로호와 산길 사이로 난 길을 따라 2㎞ 정도 들어간 후 선착장 앞에 차를 세워두고 산길을 따라 걸으면 된다.",
+            "start": 413,
+            "submitted": "철책 사이로 다시 비포장도로가 나타난다. 파로호와 산길 사이로 난 길을 따라 2㎞ 정도 들어간 후 선착장 앞에 차를 세워두고 산길을 따라 걸으면 된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a9fb0466c6b40049bf9b5fa98561943e9a570dfdc1adbbc84ca9f15da072edb4"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "드라이브 코스 선택, 전망대·댐·트레킹 코스 중 자율적으로 선택해 둘러보고 탐색할 수 있는 기회가 구체적으로 안내되어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed",
+          "quote": {
+            "end": 382,
+            "method": "EXACT",
+            "original": "골짜기 사이로 새파란 파로호를 내려다볼 수 있다.",
+            "start": 355,
+            "submitted": "골짜기 사이로 새파란 파로호를 내려다볼 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a9fb0466c6b40049bf9b5fa98561943e9a570dfdc1adbbc84ca9f15da072edb4"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "북한강·파로호·계곡·단풍·산길 등 자연 환경 단서가 장면의 중심으로 확인된다. 다만 실제 고요함·혼잡 수준은 확인할 수 없어 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "트레킹, 전망대 걷기, 캠핑, 수상레저 등 구체적 참여·탐방 활동은 확인되어 수준 3('구체적인 참여·탐방 활동')은 지지되나, 제시된 앵커 '지속적으로 참여·도전할 활동'은 수준 4 문구이며 원문은 각 활동의 지속적·도전적 성격을 뒷받침하지 않는다. level-앵커 불일치로 인해 제안된 항목을 그대로 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 대한 근거가 없다. 캠핑·레저 언급만으로 유대감이나 교류 기회를 추정할 수 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed",
+            "quote": "북한강과 파로호를 따라 자리한 국도로 잔잔한 물결을 감상하거나 연둣빛 산자락을 조망할 수 있으며 이어지는 산길을 따라 다채로운 가을 풍경을 즐길 수 있다."
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "잔잔한 물결, 연둣빛 산자락, 다채로운 가을 풍경, 꼬불꼬불한 산길 등 장면에서 구별되는 시각적 성격이 구체적으로 묘사되어 수준 3으로 판단한다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed",
+              "quote": {
+                "end": 554,
+                "method": "EXACT",
+                "original": "비수구미 마을을 제대로 트레킹 하고 싶다면 해산터널에서 비수구미 계곡으로 향하는 생태길 코스가 좋다.",
+                "start": 498,
+                "submitted": "비수구미 마을을 제대로 트레킹 하고 싶다면 해산터널에서 비수구미 계곡으로 향하는 생태길 코스가 좋다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "a9fb0466c6b40049bf9b5fa98561943e9a570dfdc1adbbc84ca9f15da072edb4"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "트레킹, 걷기 좋은 전망대, 캠핑, 수상레저 등 구체적인 참여·탐방 활동 기회가 확인된다. 지속적 도전 수준의 근거는 없어 수준 3으로 판단한다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "트레킹, 전망대 걷기, 캠핑, 수상레저 등 구체적 참여·탐방 활동은 확인되어 수준 3('구체적인 참여·탐방 활동')은 지지되나, 제시된 앵커 '지속적으로 참여·도전할 활동'은 수준 4 문구이며 원문은 각 활동의 지속적·도전적 성격을 뒷받침하지 않는다. level-앵커 불일치로 인해 제안된 항목을 그대로 확정하기 어렵다."
+        }
+      },
+      "reason": "트레킹, 전망대 걷기, 캠핑, 수상레저 등 구체적 참여·탐방 활동은 확인되어 수준 3('구체적인 참여·탐방 활동')은 지지되나, 제시된 앵커 '지속적으로 참여·도전할 활동'은 수준 4 문구이며 원문은 각 활동의 지속적·도전적 성격을 뒷받침하지 않는다. level-앵커 불일치로 인해 제안된 항목을 그대로 확정하기 어렵다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "02e2233f6ae04d32c9a7567be1bab4777e63494ec0c912872c33bd7161209444",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5876e11b85d8702c631c9757258802497b424890672892cd26d34054bca1e8ed",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:686d48122d377f3ae53cbbcb56326c1ab45244fc8e62f893f7e01d9046a1e00c",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3072040",
+          "request_sha256": "79992b350609666a5b3e0c72f85a07e5dea7b5e55bb9e0942a521297497e4669",
+          "response_sha256": "e01677076ddaff347ba75944d90f644082eda96f1fcb23a5e1ab73fac889f8c6",
+          "retrieved_at": "2026-09-10T17:24:31.608346Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-06T07:33:03Z",
+          "source_record_sha256": "e82a0a6615017f5c4ceab0eacff9479cc970e889d9d4307d2d9516bf5c747795",
+          "source_uri": null
+        },
+        "record_sha256": "a9fb0466c6b40049bf9b5fa98561943e9a570dfdc1adbbc84ca9f15da072edb4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "해산령은 화천군에 있는 드라이브 명소로 알려진 아름다운 관광지이며 비수구미 계곡과 함께 단풍의 바다라고 할 만큼 가을 단풍 명소로 유명하다. 화천 해산령은 총 9개의 아름다운 경치를 감상할 수 있는 곳으로, 그중에서도 꼬불꼬불한 산길을 넘어 재안산의 산 고개로 이어지는 길은 특히 아름답기로 유명하다. 북한강과 파로호를 따라 자리한 국도로 잔잔한 물결을 감상하거나 연둣빛 산자락을 조망할 수 있으며 이어지는 산길을 따라 다채로운 가을 풍경을 즐길 수 있다. 가볍게 걷기 좋은 해산전망대와 웅장한 경치를 자랑하는 평화의 댐이 자리해 함께 둘러볼 수 있다. 해산 혹은 일산이라고 하는 해산전망대는 화천에서 가장 먼저 아침을 맞는 곳이다. 골짜기 사이로 새파란 파로호를 내려다볼 수 있다. 해산전망대에서 평화의 댐 갈림길까지 가면 철책이 있고 철책 사이로 다시 비포장도로가 나타난다. 파로호와 산길 사이로 난 길을 따라 2㎞ 정도 들어간 후 선착장 앞에 차를 세워두고 산길을 따라 걸으면 된다. 비수구미 마을을 제대로 트레킹 하고 싶다면 해산터널에서 비수구미 계곡으로 향하는 생태길 코스가 좋다. 화천해산령 산기슭에는 캠핑장이 있어서 자연과 함께 캠핑을 즐길 수 있으며 가까운 곳에 수상레저활동을 할 수 있는 곳으로도 유명하다."
+      }
+    ],
+    "parent_source_sha256": "b481fcf4486ca57ae28f2970b317ca4d79f4f64270c9ccf710a40215ab423b8e",
+    "place": {
+      "address": "강원특별자치도 화천군 화천읍 평화로 2393",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:686d48122d377f3ae53cbbcb56326c1ab45244fc8e62f893f7e01d9046a1e00c",
+      "name_ko": "해산령",
+      "place_id": "public:korea:686d48122d377f3ae53cbbcb56326c1ab45244fc8e62f893f7e01d9046a1e00c",
+      "provider_content_id": "3072040",
+      "region_code": "51790",
+      "region_name": "강원특별자치도 화천군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

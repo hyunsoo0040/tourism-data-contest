@@ -1,0 +1,499 @@
+{
+  "assessed_at": "2026-09-11T19:12:17.217024Z",
+  "assessment_sha256": "a6c8276a7ceea582cd51b767d280d455cc0588663a54a6902345af0aa7f92952",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 67
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:df1c64473ed5bf76986d663ad47a6d20370594a1184e8170d089d921b1867574"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "방문자가 여러 프로그램 중 자기에게 맞는 체험을 선택할 수 있다는 자율 선택 기회가 명시됨. 그러나 자율 탐색이 경험의 중심이라는 근거는 없어 중간 수준으로 평가",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:df1c64473ed5bf76986d663ad47a6d20370594a1184e8170d089d921b1867574"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "맑은 계곡·청정 자연 환경과 잔디구장·휴식공간 등 머무를 환경이 공식 소개로 확인됨. 실제 고요함·혼잡 수준은 확인 불가하므로 환경 단서가 확인된 수준으로 평가",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0c75fd21d9c167c7aa885d593ab5f31048b9321afa31b0ef5f042b7ec1d79d11",
+            "evidence:df1c64473ed5bf76986d663ad47a6d20370594a1184e8170d089d921b1867574"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "퐁당 자연놀이, 사과 따기, 숙박·캠핑, 요리·만들기 등 구체적 참여 활동이 다수 확인됨. 지속적 도전·몰입 활동이 방문의 중심이라고까지 단정할 근거는 부족하여 참여 활동이 확인된 수준으로 평가",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "자료는 체험 프로그램·계곡·농사체험장을 언급하나 확인된 원형·문화유산의 실물 접촉 근거가 없어 평가 불가",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 마을의 실제 역사·연혁·사건·인물 맥락에 대한 서사가 제공되지 않음",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "농사체험이 언급되지만 지역 주체의 실제 전승·생활문화와의 지속적 연결을 확인할 근거 부족",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "자연학습 언급이 있으나 원형·유산·전통에 연결된 해설·전시라는 근거는 없음",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'청정지역', '산촌의 정취'라는 서술이 있으나 사회적으로 공유되는 구체적 상징·이미지의 부여 근거 부족",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지 유통에 대한 근거 없음",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "계곡·산촌 풍경 서술이 있으나 외관·경관·연출의 시각적 표현 성격을 판단할 구체 근거 부족",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 경험·재현할 수 있다는 근거 없음",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:df1c64473ed5bf76986d663ad47a6d20370594a1184e8170d089d921b1867574",
+          "quote": {
+            "end": 507,
+            "method": "EXACT",
+            "original": "다양한 체험 중에서 자기에게 맞는 체험을 해보며",
+            "start": 481,
+            "submitted": "다양한 체험 중에서 자기에게 맞는 체험을 해보며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a983fdacd524d8265419a305b41db01216fdb27e77db4a1b7a6e4f7178bbfec5"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "방문자가 여러 프로그램 중 자기에게 맞는 체험을 선택할 수 있다는 자율 선택 기회가 명시됨. 그러나 자율 탐색이 경험의 중심이라는 근거는 없어 중간 수준으로 평가",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:df1c64473ed5bf76986d663ad47a6d20370594a1184e8170d089d921b1867574",
+          "quote": {
+            "end": 37,
+            "method": "EXACT",
+            "original": "물 맑고 공기 깨끗한 가평에 위치한 청정지역으로",
+            "start": 11,
+            "submitted": "물 맑고 공기 깨끗한 가평에 위치한 청정지역으로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a983fdacd524d8265419a305b41db01216fdb27e77db4a1b7a6e4f7178bbfec5"
+        },
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:df1c64473ed5bf76986d663ad47a6d20370594a1184e8170d089d921b1867574",
+          "quote": {
+            "end": 133,
+            "method": "EXACT",
+            "original": "잔디구장은 물론 운동시설과 휴식공간이 잘 마련되어 있고",
+            "start": 103,
+            "submitted": "잔디구장은 물론 운동시설과 휴식공간이 잘 마련되어 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a983fdacd524d8265419a305b41db01216fdb27e77db4a1b7a6e4f7178bbfec5"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "맑은 계곡·청정 자연 환경과 잔디구장·휴식공간 등 머무를 환경이 공식 소개로 확인됨. 실제 고요함·혼잡 수준은 확인 불가하므로 환경 단서가 확인된 수준으로 평가",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:df1c64473ed5bf76986d663ad47a6d20370594a1184e8170d089d921b1867574",
+          "quote": {
+            "end": 219,
+            "method": "EXACT",
+            "original": "계절 체험, 요리 만들기 체험, 쉼체험, 만들기 체험 등의 프로그램이 준비되어 있다.",
+            "start": 172,
+            "submitted": "계절 체험, 요리 만들기 체험, 쉼체험, 만들기 체험 등의 프로그램이 준비되어 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "a983fdacd524d8265419a305b41db01216fdb27e77db4a1b7a6e4f7178bbfec5"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:0c75fd21d9c167c7aa885d593ab5f31048b9321afa31b0ef5f042b7ec1d79d11",
+          "quote": {
+            "end": 24,
+            "method": "EXACT",
+            "original": "계절 체험 / 요리 체험 / 만들기 체험 등",
+            "start": 0,
+            "submitted": "계절 체험 / 요리 체험 / 만들기 체험 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "2e6d09f58d49e1b2703cc4ea2a3e4f7e745014fa98e39bfb6ad840fce4dcb7f8"
+        }
+      ],
+      "flags": [
+        "AI_LIMITED_CONTEXT",
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "퐁당 자연놀이, 사과 따기, 숙박·캠핑, 요리·만들기 등 구체적 참여 활동이 다수 확인됨. 지속적 도전·몰입 활동이 방문의 중심이라고까지 단정할 근거는 부족하여 참여 활동이 확인된 수준으로 평가",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "체험 프로그램 언급은 있으나 교류·공동 활동·자기표현의 기회라는 구체 근거 없음",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "a744d358f69347dc5b83c106a8c463fb6e2f8ebaa6c818bdbd0195f9efbd51a0",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "678e80aaf3f575b488daaf2991d307355b053d4c61e9f053815a4f075748cbfa",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:0c75fd21d9c167c7aa885d593ab5f31048b9321afa31b0ef5f042b7ec1d79d11",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d648afc4e8811f05f0ec49bf0c3f89f9363298b5e0cb6b621be57f190b564807",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "129285",
+          "request_sha256": "1668e0f2294ba34745e1d4db11c6484d7c737b26e8010f351b87014d99caf5b7",
+          "response_sha256": "ccadd138a1175386f55952b161989e6ee85e07551b8a71bb1b0d338a0629c009",
+          "retrieved_at": "2026-09-10T17:19:33.357521Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "f4dd4b23571007433ccd7b5e7af4ef8554b270085ccf0b5a1f4b4c9248a64e4a",
+          "source_uri": null
+        },
+        "record_sha256": "2e6d09f58d49e1b2703cc4ea2a3e4f7e745014fa98e39bfb6ad840fce4dcb7f8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "계절 체험 / 요리 체험 / 만들기 체험 등 ※ 자세한 안내는 홈페이지 및 전화 문의 요망"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:3ee85d4fee162c1f3277e4cbb2efa57e527db222911b1f7fe406a5e38f560495",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d648afc4e8811f05f0ec49bf0c3f89f9363298b5e0cb6b621be57f190b564807",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "129285",
+          "request_sha256": "1668e0f2294ba34745e1d4db11c6484d7c737b26e8010f351b87014d99caf5b7",
+          "response_sha256": "2cf88c863ec93339539e72701928235c85d0d13c7669feddbb66a321aa0f97bc",
+          "retrieved_at": "2026-09-11T02:10:59.243015Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ae08c8f70e5cfe016875fd88848c21da562072aa78f372699a0c29e8ba829b41",
+          "source_uri": null
+        },
+        "record_sha256": "2571e0911909cac12f15847e451f0e6083b0809b84ef2dbac45a5a2981e775e8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:df1c64473ed5bf76986d663ad47a6d20370594a1184e8170d089d921b1867574",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d648afc4e8811f05f0ec49bf0c3f89f9363298b5e0cb6b621be57f190b564807",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "129285",
+          "request_sha256": "1348981fb9268f8c50dd685c24e282c062e35b1b27976d8926a848e6b32dabe2",
+          "response_sha256": "679b561dea216e4c5630262c199623d2e613581977a8b1a85543b97089ed5a47",
+          "retrieved_at": "2026-09-10T17:19:32.332719Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-04-09T04:57:46Z",
+          "source_record_sha256": "1869ac854c71da340b02b62d04e70e8d78dd0fcaf60b3133cb858c7014bf16cc",
+          "source_uri": null
+        },
+        "record_sha256": "a983fdacd524d8265419a305b41db01216fdb27e77db4a1b7a6e4f7178bbfec5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "가평 연인산 마을은 물 맑고 공기 깨끗한 가평에 위치한 청정지역으로 명지산 깊은 산자락에 자리 잡고 있는 마을이며 백둔 계곡은 맑고 깨끗하여 사계절 즐겨 찾는 휴양지로 유명한 곳이다. 잔디구장은 물론 운동시설과 휴식공간이 잘 마련되어 있고 농사체험장 등 자연학습과 더불어 산촌의 정취를 만끽하기에 충분하다. 계절 체험, 요리 만들기 체험, 쉼체험, 만들기 체험 등의 프로그램이 준비되어 있다. 계절 체험 중 퐁당 자연놀이는 여름에 계곡에서의 물놀이와 자연놀이를 함께 즐기는 체험이다. 자연놀이는 산책하며 들에 핀 꽃과 풀, 맑은 계곡엔 어떤 것들 있는지 알아보고 산, 들의 산촌 풍경과 자연을 감상하며 자연에서 얻은 다양한 재료(꽃, 나뭇잎, 조약돌 등)를 이용해서 놀이를 하는 체험이다. 사과 따기 체험은 늦여름부터 늦가을까지 수확을 할 수 있어 이 시기에 직접 따보고 딴 사과를 가져가는 체험이다. 또한 쉼 체험에서는 숙박체험과 캠핑 체험을 할 수 있다. 다양한 체험 중에서 자기에게 맞는 체험을 해보며 쉬면서 여러 가지를 배우고 느낄 수 있는 곳이다."
+      }
+    ],
+    "parent_source_sha256": "8ccd95362152cfa80c8d51821602927503eab21d4def9063a884be13b0cc2ddb",
+    "place": {
+      "address": "경기도 가평군 북면 백둔로 417-11",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:d648afc4e8811f05f0ec49bf0c3f89f9363298b5e0cb6b621be57f190b564807",
+      "name_ko": "가평 연인산마을",
+      "place_id": "public:korea:d648afc4e8811f05f0ec49bf0c3f89f9363298b5e0cb6b621be57f190b564807",
+      "provider_content_id": "129285",
+      "region_code": "41820",
+      "region_name": "경기도 가평군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

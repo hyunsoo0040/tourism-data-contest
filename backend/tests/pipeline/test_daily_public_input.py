@@ -16,6 +16,7 @@ from itda.contracts.mvp_public_catalog import (
     PublicPlaceRelations,
 )
 from itda.contracts.mvp_scored_release import MvpScoredRelease
+from itda.contracts.place_facts import FactSource
 from itda.db.mvp_release_overlay import ActiveReleaseOverlayResolver, DailyRefreshStoreError
 from itda.domain.canonical import canonical_sha256
 from itda.operating.service import ProviderPlace
@@ -33,13 +34,54 @@ from itda.pipeline.daily_public_input import (
 )
 from itda.pipeline.daily_scored_release import materialize_daily_scored_release
 from itda.pipeline.mvp_place_scoring import MvpScoringError, ScoringAttemptEvent
+from itda.pipeline.place_facts import extract_place_facts
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
-CATALOG_PATH = REPO_ROOT / "artifacts/public/catalog/public-place-catalog-v1.json"
-EVIDENCE_PATH = REPO_ROOT / "artifacts/public/catalog/public-evidence-inventory-v1.json"
-RELATIONS_PATH = REPO_ROOT / "artifacts/public/catalog/public-place-relations-v1.json"
-RELEASE_ROOT = REPO_ROOT / "artifacts/public/catalog/mvp-scored-releases/releases"
+CATALOG_PATH = REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-place-catalog-v1.json"
+EVIDENCE_PATH = REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-evidence-inventory-v1.json"
+RELATIONS_PATH = REPO_ROOT / "fixtures/historical-gyeongju/catalog/public-place-relations-v1.json"
+RELEASE_ROOT = REPO_ROOT / "fixtures/historical-gyeongju/catalog/mvp-scored-releases/releases"
 COLLECTED_AT = datetime(2026, 9, 6, 0, 0, tzinfo=UTC)
+
+
+def test_collected_intro_fact_survives_daily_scoring_request() -> None:
+    class FacilityProvider(SyntheticDailyProvider):
+        def fetch_intro(self, place):
+            response = super().fetch_intro(place)
+            response.payload["response"]["body"]["items"]["item"]["parking"] = "주차 가능"
+            return self._response("detailIntro2", response.payload)
+
+    catalog = PublicPlaceCatalog.model_validate_json(CATALOG_PATH.read_bytes())
+    inventory = PublicEvidenceInventory.model_validate_json(EVIDENCE_PATH.read_bytes())
+    snapshot = collect_daily_snapshot(
+        catalog=catalog,
+        evidence_inventory=inventory,
+        provider=FacilityProvider(),
+        run_date=COLLECTED_AT.date(),
+        collected_at=COLLECTED_AT,
+        previous_snapshot_sha256=None,
+    )
+    row = snapshot.places[0]
+    assert "TourAPI parking: 주차 가능" in row.request.evidence[0].excerpt
+    evidence = row.evidence
+    facts = extract_place_facts(
+        row.place_id,
+        (
+            FactSource(
+                place_id=row.place_id,
+                evidence_id=evidence.evidence_id,
+                provider=evidence.provider,
+                provider_source_id=evidence.provider_source_id,
+                excerpt=evidence.excerpt,
+                reference_date=evidence.reference_date,
+                source_response_sha256=evidence.source_response_sha256,
+            ),
+        ),
+    )
+    assert facts.observations["parking"].value is True
+    assert facts.observations["child_access"].value is None
+    assert facts.observations["parking"].evidence[0].source.provider_source_id == row.content_id
+    assert row.request.place.category.startswith(catalog.places[0].category)
 
 
 class SyntheticDailyProvider:

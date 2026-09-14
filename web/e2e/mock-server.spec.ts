@@ -24,7 +24,39 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
       await page.getByRole("radio", { name: question.options[0].text_ko, exact: true }).click();
     }
     await expect(page.getByRole("button", { name: "바로 추천 보기", exact: true })).toBeVisible();
+    await expect(page.getByRole("meter")).toHaveCount(3);
+    const display = await page.getByRole("meter").evaluateAll((meters) => meters.map((meter) => Number(meter.getAttribute("aria-valuenow"))));
+    expect(display).toEqual([34, 33, 33]);
+    expect(display.reduce((sum, value) => sum + value, 0)).toBe(100);
+    await expect(page.getByText(/의 원점수가 같아요/)).toHaveCount(0);
+    await expect(page.getByText(/표시 점수 1점 차이/)).toHaveCount(0);
+    for (const label of ["대상•원형형 34점 / 100점", "의미•이미지형 33점 / 100점", "자기•몰입형 33점 / 100점"]) {
+      await expect(page.getByRole("meter", { name: label, exact: true })).toBeVisible();
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
     const profileUrl = page.url();
+    const previousAnswers = await page.evaluate(() => JSON.parse(localStorage.getItem("itda.phase2.draft.v2")!).answers);
+    await page.goto("/");
+    await expect(page.locator(".photo-intro-copy")).toHaveCount(0);
+    const start = page.getByRole("link", { name: viewport.name === "mobile" ? "여행 취향 찾기" : "시작하기", exact: true });
+    await expect(start).toHaveAttribute("href", "/start?resume=profile");
+    await start.click();
+    await expect(page).toHaveURL(/\/start\?resume=profile$/);
+    await page.getByLabel("방문 날짜 (선택)").fill("2099-10-03");
+    await page.getByRole("radio", { name: "친구", exact: true }).check();
+    const updatedRequest = page.waitForRequest((request) => request.method() === "POST" && new URL(request.url()).pathname === "/v1/preference-profiles");
+    await page.getByRole("button", { name: "여행 조건 반영하고 프로필 보기", exact: true }).click();
+    const updatedBody = (await updatedRequest).postDataJSON();
+    expect(updatedBody.answers).toEqual(previousAnswers);
+    expect(updatedBody.trip_conditions).toMatchObject({ visit_date: "2099-10-03", companion: "FRIEND_OR_PARTNER" });
+    await expect(page).toHaveURL(profileUrl);
+    await expect(page.getByRole("button", { name: "바로 추천 보기", exact: true })).toBeVisible();
+    const photoIntro = page.locator(".profile-photo-intro");
+    await expect(photoIntro).toBeVisible();
+    await expect(photoIntro.getByText("선택 입력", { exact: true })).toHaveCount(0);
+    await expect(photoIntro.getByText("내가 끌리는 장면이, 여행의 힌트가 되도록.")).toHaveCount(0);
+    expect(await photoIntro.evaluate((section) => section.previousElementSibling?.classList.contains("profile-result"))).toBe(true);
+    await photoIntro.screenshot({ path: info.outputPath("profile-photo-intro.png") });
     await page.screenshot({ path: info.outputPath("design-profile.png"), fullPage: true });
     await page.getByRole("button", { name: "바로 추천 보기", exact: true }).click();
     await expect(page.locator("[data-grounded-item]")).toHaveCount(5);

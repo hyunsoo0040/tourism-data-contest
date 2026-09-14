@@ -1,0 +1,983 @@
+{
+  "assessed_at": "2026-09-11T18:00:23.968603Z",
+  "assessment_sha256": "9443cc2aa4126cc6c7cedf64bef1c4bdf2d94df6200b9e0ac47885e9299cebd5",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b",
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 44
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 44
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "개관 연혁과 생가 터 위치, 소장품 구성 등 장소 자체의 유래가 개관 소개 수준으로 제시되지만, 구체적 사건·인물 맥락의 깊은 탐구 근거는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c3cf882b3bd63ecab2e6c56cdf09d0004050926aa775953fda45c7277f9d1751",
+            "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "작품세계에 연결된 연구·전시·교육과 전시해설이 제공되나, 해설의 깊이나 원형·전통 탐구의 중심성에 대한 상세 근거는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'가장 한국적인 화가'라는 사회적으로 부여된 이미지가 장소의 정체성과 연결되어 있으나, 여러 표현에서 일관되게 확인되는 근거는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:146f55a87a8a210469e46391feded33746ef5ab248eb8a3669b7cf4d7a74540a",
+            "appearance:f38075a01a9fea5955b434c50c923645a356f1f1883e33d341998729568f5923",
+            "appearance:ff55fdbfe38363810bd065080a7e42eb33396d98a7e3e540b57e81f0fb9d94e3"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "외관·경관·연출 등 시각적 표현에 대한 직접적 서술이 없음.",
+      "value": 58
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "작가의 이미지와 연결된 기념전시관 등 관람 공간이 있으나, 대표 장면·구도를 현장에서 체험·재현하는 활동 근거는 제한적.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "5개 전시관을 선택적으로 둘러볼 수 있는 구조로 자율 탐색 기회가 추정되나, 자유로운 탐색 경험의 중심성에 대한 직접 근거는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:4b9fd89dd35216c430336b07a97d97e9b06067a85c298072608bcd06af0a9491",
+            "appearance:7712cc37c145c004d3f6adbf18b9ed0d8b2e697ecf75a97ebeda1fe2df2fd5dd",
+            "appearance:b897c2fc61f069e8509f582cc484709f9be1ec0442ece769b9708a46021135eb"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 33,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "미술관 언저리 조성 언급이 있으나 자연·저자극 환경이나 머무를 환경에 대한 직접 근거 없음.",
+      "value": 33
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "사생대회·창작스튜디오 등 참여 활동이 확인되나, 이러한 활동이 일반 방문자가 지속 참여할 기회인지에 대한 근거는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "생가 터라는 언급이 있으나 해당 터에 원형 건물이나 유산 실물을 방문자가 직접 접촉할 수 있는지에 대한 근거가 없어 판단 불가.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+          "quote": {
+            "end": 61,
+            "method": "EXACT",
+            "original": "양구군립박수근미술관은 2002년 화가 박수근선생의 생가 터인 강원특별자치도 양구군 양구읍 정림리마을에 세워졌다",
+            "start": 0,
+            "submitted": "양구군립박수근미술관은 2002년 화가 박수근선생의 생가 터인 강원특별자치도 양구군 양구읍 정림리마을에 세워졌다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 2,
+      "reason": "개관 연혁과 생가 터 위치, 소장품 구성 등 장소 자체의 유래가 개관 소개 수준으로 제시되지만, 구체적 사건·인물 맥락의 깊은 탐구 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "박수근의 예술세계를 이어가는 전업작가 지원 언급이 있으나 이것이 지역 주체의 전승·생활문화와의 실제 연결임을 확인할 근거 부족.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+          "quote": {
+            "end": 117,
+            "method": "EXACT",
+            "original": "박수근선생의 예술혼과 작품세계를 연구·수집·전시·교육하는 활동",
+            "start": 83,
+            "submitted": "박수근선생의 예술혼과 작품세계를 연구·수집·전시·교육하는 활동",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354"
+        },
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:c3cf882b3bd63ecab2e6c56cdf09d0004050926aa775953fda45c7277f9d1751",
+          "quote": {
+            "end": 31,
+            "method": "EXACT",
+            "original": "전시해설 / 교육프로그램 ※ 자세한 사항은 홈페이지 참조",
+            "start": 0,
+            "submitted": "전시해설 / 교육프로그램 ※ 자세한 사항은 홈페이지 참조",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "e724a517d124b7274462c1a14cfa1b12e23123c77cd8cd91c840e9378e12091a"
+        }
+      ],
+      "flags": [],
+      "key": "H.d",
+      "level": 2,
+      "reason": "작품세계에 연결된 연구·전시·교육과 전시해설이 제공되나, 해설의 깊이나 원형·전통 탐구의 중심성에 대한 상세 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+          "quote": {
+            "end": 99,
+            "method": "EXACT",
+            "original": "가장 한국적인 화가로 평가받고 있는 박수근선생의 예술혼과 작품세계",
+            "start": 63,
+            "submitted": "가장 한국적인 화가로 평가받고 있는 박수근선생의 예술혼과 작품세계",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'가장 한국적인 화가'라는 사회적으로 부여된 이미지가 장소의 정체성과 연결되어 있으나, 여러 표현에서 일관되게 확인되는 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "박수근미술상·전국사생대회는 운영 콘텐츠일 뿐, 장소 이미지의 매체 표현·유통이라는 facet과 직접 연결되는 근거가 원문에 없음. 확산·재현의 확인된 사례가 부족하여 UNCERTAIN.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "외관·경관·연출 등 시각적 표현에 대한 직접적 서술이 없음.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+          "quote": {
+            "end": 204,
+            "method": "EXACT",
+            "original": "박수근기념전시관, 양구군립박수근미술관 내 현대미술관, 박수근파빌리온",
+            "start": 167,
+            "submitted": "박수근기념전시관, 양구군립박수근미술관 내 현대미술관, 박수근파빌리온",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 1,
+      "reason": "작가의 이미지와 연결된 기념전시관 등 관람 공간이 있으나, 대표 장면·구도를 현장에서 체험·재현하는 활동 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+          "quote": {
+            "end": 302,
+            "method": "EXACT",
+            "original": "각 전시관마다 정체성과 비전을 고려한 차별화 전략으로 운영하고 있다",
+            "start": 265,
+            "submitted": "각 전시관마다 정체성과 비전을 고려한 차별화 전략으로 운영하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "5개 전시관을 선택적으로 둘러볼 수 있는 구조로 자율 탐색 기회가 추정되나, 자유로운 탐색 경험의 중심성에 대한 직접 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "미술관 언저리 조성 언급이 있으나 자연·저자극 환경이나 머무를 환경에 대한 직접 근거 없음.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+          "quote": {
+            "end": 165,
+            "method": "EXACT",
+            "original": "창작스튜디오, 박수근미술상, 전국사생대회 등 다양한 콘텐츠를 운영하고 있다",
+            "start": 124,
+            "submitted": "창작스튜디오, 박수근미술상, 전국사생대회 등 다양한 콘텐츠를 운영하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "사생대회·창작스튜디오 등 참여 활동이 확인되나, 이러한 활동이 일반 방문자가 지속 참여할 기회인지에 대한 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "인용된 문장은 전업작가 지원과 예술가 간 국내외 활동 매개, 즉 제작·지원 업무에 관한 것으로 일반 방문자의 교류·자기표현 기회를 뒷받침하지 않음. 현재 수준(수준 2)도 원문으로 확인 불가.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "1192ffd193d51c29fcdf3892c7d95e6a5e2a308af8b61c0c8d5126bc5edcc808",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "MEDIA_REPRESENTATION",
+              "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+              "quote": {
+                "end": 165,
+                "method": "EXACT",
+                "original": "박수근미술상, 전국사생대회 등 다양한 콘텐츠를 운영하고 있다",
+                "start": 132,
+                "submitted": "박수근미술상, 전국사생대회 등 다양한 콘텐츠를 운영하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.b",
+          "level": 2,
+          "reason": "미술상·사생대회 등을 통한 장소 이미지의 확산 활동이 언급되나, 반복되는 매체 표현과 유통의 구체적 근거는 부족.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "E.b",
+          "reason": "박수근미술상·전국사생대회는 운영 콘텐츠일 뿐, 장소 이미지의 매체 표현·유통이라는 facet과 직접 연결되는 근거가 원문에 없음. 확산·재현의 확인된 사례가 부족하여 UNCERTAIN."
+        }
+      },
+      "reason": "박수근미술상·전국사생대회는 운영 콘텐츠일 뿐, 장소 이미지의 매체 표현·유통이라는 facet과 직접 연결되는 근거가 원문에 없음. 확산·재현의 확인된 사례가 부족하여 UNCERTAIN."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+              "quote": {
+                "end": 373,
+                "method": "EXACT",
+                "original": "국내외 예술활동을 매개하고 있다",
+                "start": 356,
+                "submitted": "국내외 예술활동을 매개하고 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "예술가 간 교류 매개 활동이 언급되나, 일반 방문자의 교류·자기표현 기회로 이어지는지에 대한 근거는 부족.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "BUSINESS_AS_TOURIST_ACTIVITY",
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "인용된 문장은 전업작가 지원과 예술가 간 국내외 활동 매개, 즉 제작·지원 업무에 관한 것으로 일반 방문자의 교류·자기표현 기회를 뒷받침하지 않음. 현재 수준(수준 2)도 원문으로 확인 불가."
+        }
+      },
+      "reason": "인용된 문장은 전업작가 지원과 예술가 간 국내외 활동 매개, 즉 제작·지원 업무에 관한 것으로 일반 방문자의 교류·자기표현 기회를 뒷받침하지 않음. 현재 수준(수준 2)도 원문으로 확인 불가."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "f12b7d7ba3001a186db881a71a0ab6a7cc6f26e5b042ed356fc58957cf871f8e",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "짙은 초록의 잔디와 다양한 나무, 진한 분홍 철쭉 군락이 대비되며 완성된 조경 구도가 장면의 인상을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:146f55a87a8a210469e46391feded33746ef5ab248eb8a3669b7cf4d7a74540a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "149977a020a1675dbf551d62f48bf0d0abf4febbddf351bb53c7ec2e3bd4d735",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 양구군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3513126",
+          "request_sha256": "1b1a9483767f8997b6effffd84e4c84263c5944d536dfebd20a31d23e0221a64",
+          "response_sha256": "b1dd40d9f2f24853c24a8ebf87d55d6d6a34a93afc4c9c74f30f188e950baba3",
+          "retrieved_at": "2026-09-10T08:25:39.153037Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7a2e8b62237c18c1055efbe49e1eda8f3a38e4f362abbe2d7ae215cc1fc8fe7e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/26/3513126.jpg"
+        },
+        "record_sha256": "06e3125e27281574e327ac932a8e25a7122ed46ef26b9ac071701eed9975796a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시 공간으로 녹지·물·자연 경관 등 자연 환경 단서가 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4b9fd89dd35216c430336b07a97d97e9b06067a85c298072608bcd06af0a9491",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "62e3f270e690fdf0ede3def0e830b4e101d8499e7fc7469e13480361501d26f7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3533379_4",
+          "request_sha256": "c6860c6698c141329c309eaeded912bf58453dc9af8b505973eafee8ad06536b",
+          "response_sha256": "eb278318021d891982417ca944e8e39c5472ed8bfea9b9627e110dbffb3c844f",
+          "retrieved_at": "2026-09-10T08:25:38.320000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "20a915824395c4685d8ec4bb7df94a069baf23142770194276ed4c6b97f9785c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3533379_image2_1.jpg"
+        },
+        "record_sha256": "cd3016fc8564be16f9502649092641d9ab771363e0cd2e087c60752631d4f3d1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "녹지, 활엽수, 관목, 넓은 잔디밭, 하늘이 개방된 배경이 화면 전체를 채워 자연 환경 단서가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7712cc37c145c004d3f6adbf18b9ed0d8b2e697ecf75a97ebeda1fe2df2fd5dd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "149977a020a1675dbf551d62f48bf0d0abf4febbddf351bb53c7ec2e3bd4d735",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 양구군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3513126",
+          "request_sha256": "1b1a9483767f8997b6effffd84e4c84263c5944d536dfebd20a31d23e0221a64",
+          "response_sha256": "b1dd40d9f2f24853c24a8ebf87d55d6d6a34a93afc4c9c74f30f188e950baba3",
+          "retrieved_at": "2026-09-10T08:25:39.153037Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7a2e8b62237c18c1055efbe49e1eda8f3a38e4f362abbe2d7ae215cc1fc8fe7e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/26/3513126.jpg"
+        },
+        "record_sha256": "c1b1f378cb283594d63ae3c81f98dc83576ed257dde8f363b69e7ca239a5d25b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "현대식 리셉션 데스크와 매끈한 마감재가 주를 이루며, 좌측 나무 패널 정도만 재료감이 있어 전통적 외관 특성은 미약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7e07d7b59cc4e09a497823a4cf322afbdd2af18d1f32fbdcde95abd29861035a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a21593e5e5f1e7c12ab45bb79dfab8099b4c50595d3eb3209ef59c251a2f915",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3533377_5",
+          "request_sha256": "c6860c6698c141329c309eaeded912bf58453dc9af8b505973eafee8ad06536b",
+          "response_sha256": "eb278318021d891982417ca944e8e39c5472ed8bfea9b9627e110dbffb3c844f",
+          "retrieved_at": "2026-09-10T08:25:38.320000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8f1fc62d049196d7f0911dc72800d1c0680a9e7210a922d637a8ec84cdecf81b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/77/3533377_image2_1.jpg"
+        },
+        "record_sha256": "22c8c03556cc68f7104d0fa7c6338afe92ea9e8920451c327b0ca3f94eb3f31d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "원형·타원형 관목 단지 조경된 공원 형태로 전통적 외관의 뚜렷한 단서는 약하고, 우측 현대적 파고라만 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9a4ab9e0376aceeff22633242d767a8144424877d52fa22774d4ae8d927ec65f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "149977a020a1675dbf551d62f48bf0d0abf4febbddf351bb53c7ec2e3bd4d735",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 양구군 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3513126",
+          "request_sha256": "1b1a9483767f8997b6effffd84e4c84263c5944d536dfebd20a31d23e0221a64",
+          "response_sha256": "b1dd40d9f2f24853c24a8ebf87d55d6d6a34a93afc4c9c74f30f188e950baba3",
+          "retrieved_at": "2026-09-10T08:25:39.153037Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "7a2e8b62237c18c1055efbe49e1eda8f3a38e4f362abbe2d7ae215cc1fc8fe7e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/26/3513126.jpg"
+        },
+        "record_sha256": "557d1ed31655344c913d349b0c08488bf25e5dc2cc350fffe037c014a116d612",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "한글 섹션 제목과 전통 화폭·액자가 보이지만, 전시장 건축 자체는 현대적 미니멀 구성이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a29242e7e5a40672bde318493918427f16f21c79c59f3cae4573b506d684862a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "62e3f270e690fdf0ede3def0e830b4e101d8499e7fc7469e13480361501d26f7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3533379_4",
+          "request_sha256": "c6860c6698c141329c309eaeded912bf58453dc9af8b505973eafee8ad06536b",
+          "response_sha256": "eb278318021d891982417ca944e8e39c5472ed8bfea9b9627e110dbffb3c844f",
+          "retrieved_at": "2026-09-10T08:25:38.320000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "20a915824395c4685d8ec4bb7df94a069baf23142770194276ed4c6b97f9785c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3533379_image2_1.jpg"
+        },
+        "record_sha256": "0751956eccf2f8ab010d33dc05ea98a63b5343b78922aec504bc3889a80a1747",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지, 물, 자연 경관 등 자연 환경 단서가 보이지 않는 완전한 실내 장면이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:b897c2fc61f069e8509f582cc484709f9be1ec0442ece769b9708a46021135eb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a21593e5e5f1e7c12ab45bb79dfab8099b4c50595d3eb3209ef59c251a2f915",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3533377_5",
+          "request_sha256": "c6860c6698c141329c309eaeded912bf58453dc9af8b505973eafee8ad06536b",
+          "response_sha256": "eb278318021d891982417ca944e8e39c5472ed8bfea9b9627e110dbffb3c844f",
+          "retrieved_at": "2026-09-10T08:25:38.320000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8f1fc62d049196d7f0911dc72800d1c0680a9e7210a922d637a8ec84cdecf81b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/77/3533377_image2_1.jpg"
+        },
+        "record_sha256": "b292d72ecff2c782b44b6b62c4b7e75c5ea5acbe81353ffbc126f44971f59f37",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "어두운 배경과 스포트라이트로 작품만 조명하는 연출이 뚜렷하며, 명암 대비가 장면의 인상을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f38075a01a9fea5955b434c50c923645a356f1f1883e33d341998729568f5923",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "62e3f270e690fdf0ede3def0e830b4e101d8499e7fc7469e13480361501d26f7",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3533379_4",
+          "request_sha256": "c6860c6698c141329c309eaeded912bf58453dc9af8b505973eafee8ad06536b",
+          "response_sha256": "eb278318021d891982417ca944e8e39c5472ed8bfea9b9627e110dbffb3c844f",
+          "retrieved_at": "2026-09-10T08:25:38.320000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "20a915824395c4685d8ec4bb7df94a069baf23142770194276ed4c6b97f9785c",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/79/3533379_image2_1.jpg"
+        },
+        "record_sha256": "4c059ef5f2f19730b161e259357a4478c109b75b84928bb1e9d407b3aae78723",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 1,
+          "reason": "흰 벽과 회색 안내대, 따뜻한 조명의 절제된 실내 구성으로 시각적 연출이 강하지 않고 평이한 안내 공간의 모습이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ff55fdbfe38363810bd065080a7e42eb33396d98a7e3e540b57e81f0fb9d94e3",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a21593e5e5f1e7c12ab45bb79dfab8099b4c50595d3eb3209ef59c251a2f915",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3533377_5",
+          "request_sha256": "c6860c6698c141329c309eaeded912bf58453dc9af8b505973eafee8ad06536b",
+          "response_sha256": "eb278318021d891982417ca944e8e39c5472ed8bfea9b9627e110dbffb3c844f",
+          "retrieved_at": "2026-09-10T08:25:38.320000Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "8f1fc62d049196d7f0911dc72800d1c0680a9e7210a922d637a8ec84cdecf81b",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/77/3533377_image2_1.jpg"
+        },
+        "record_sha256": "903737298ffda2788a641e3537f0606bc5fe10a2d14a3946befd2da835bdd506",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c3cf882b3bd63ecab2e6c56cdf09d0004050926aa775953fda45c7277f9d1751",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "130493",
+          "request_sha256": "122fb09db86be5d1d5d581d747a5ce15b7c9679d8430307c60f5d6321b2f0c84",
+          "response_sha256": "adcf54de712205d878e9237618c11fb9c066ae97c604d58c151b1243eaa5c54a",
+          "retrieved_at": "2026-09-10T08:25:37.972827Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "08bc7075f4d8ac241e07b256846e7c8db8543965853676501c2a3ed154a36951",
+          "source_uri": null
+        },
+        "record_sha256": "e724a517d124b7274462c1a14cfa1b12e23123c77cd8cd91c840e9378e12091a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "전시해설 / 교육프로그램 ※ 자세한 사항은 홈페이지 참조"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:d14cf98979b89d8b97e7c2fece2cf5c4f5f28d60c67a952dbab04fa3c8d99256",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "130493",
+          "request_sha256": "d1d667ff3b46bd0057c64a05a65d0724c10660f776e9a4efdebacd9afc9cc64f",
+          "response_sha256": "b896c22a23955316f54cc56e19d54ef9102bbcd712d5c030a080454eb03b9de5",
+          "retrieved_at": "2026-09-09T16:38:24.205691Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-11-14T04:43:27Z",
+          "source_record_sha256": "a170e29e73fdbdc0abc55ebb59a43435b3841fb3d53ba88ff1ed54b3f953bf8d",
+          "source_uri": null
+        },
+        "record_sha256": "c447187b9cd81b1d8e124cbbbea63e2f558afbb8ae78ac53587d143dc889d354",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "양구군립박수근미술관은 2002년 화가 박수근선생의 생가 터인 강원특별자치도 양구군 양구읍 정림리마을에 세워졌다. 가장 한국적인 화가로 평가받고 있는 박수근선생의 예술혼과 작품세계를 연구·수집·전시·교육하는 활동을 위시하여 창작스튜디오, 박수근미술상, 전국사생대회 등 다양한 콘텐츠를 운영하고 있다. 박수근기념전시관, 양구군립박수근미술관 내 현대미술관, 박수근파빌리온, 양구군립박수근미술관 내 어린이미술관, 양구군립박수근미술관 내 라키비움까지 총 5개의 전시관을 건립하였고, 각 전시관마다 정체성과 비전을 고려한 차별화 전략으로 운영하고 있다. 또한 미술관 언저리에 미석예술인촌을 조성하여 박수근의 예술세계를 이어가는 전업작가를 지원하고 국내외 예술활동을 매개하고 있다. 그 외 박수근미술관 전시와 교육프로그램에 역량 있는 예술강사를 채용하여 국내·외 예술가들의 활동을 지원하고 있다. 개관 당시 박수근선양사업위원회와 박수근유가족이 주 측이 되어 작품과 자료를 다수 기증받은 바 있고, 이후 매년 양구군에서 작품을 구입하여 현재 박수근의 작품은 254점이며, 그 외 근·현대작가 작품 및 자료를 포함해 987점의 소장품을 보유하고 있다."
+      }
+    ],
+    "parent_source_sha256": "f4fe30fa3ca67561a5d78b81dbd5527fc476329fc68c0f69187818f01c0b9985",
+    "place": {
+      "address": "강원특별자치도 양구군 양구읍 박수근로 265-15",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+      "name_ko": "박수근미술관",
+      "place_id": "public:korea:8e8407c1beea663e01c7165ab8e23ddfeca76c7dc80c02ed8d487f142d4e1501",
+      "provider_content_id": "130493",
+      "region_code": "51800",
+      "region_name": "강원특별자치도 양구군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -1,0 +1,916 @@
+{
+  "assessed_at": "2026-09-11T19:40:40.623933Z",
+  "assessment_sha256": "685463757b593d8d28c2438bfbe217182c2f181d0ba5dbe0535135f16d37abe3",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 67
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "비현실적 공간 유영, 시간 여행 등 장소에 부여된 이미지·주제가 간단히 제시되지만 사회적으로 공유된 구체적 의미의 내용에 대한 근거는 제한적이다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:5ed696a5f965d80b7486e761e631ddfd3bfefd2c05656bc4d1da0d1b928db21d",
+            "appearance:644a38485dd0ab5f0326933483c87036dcf5077264da6eeb3fcb358529d2a00d",
+            "appearance:a2b6b0ca0ed690b5f70c2acdb59f2a1123bfe8f3c86eb761739a4dba87a3507f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 100
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "AI 생성 이미지를 배경으로 사진을 찍는 등 대표 장면을 직접 경험하고 재현할 수 있는 근거가 있다. 이미지 재현이 방문 경험 전체의 중심이라고 단정하기는 어렵다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0fa1d65fe0920f6f0a0edaab5fbd99e81c05694ba9917b2dd02d27c09926f52b",
+            "appearance:75644df9e3247ec2b3f19cab7273b9f4296cde9678cd41c26aa1997bd5e8406a",
+            "appearance:d867465cc9313bc3386550c261507dfa6dc0c7d6cfc80fc76cd443456f8c4cb8"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "실내 미디어 체험 공간이라는 설명만 있고 자연 환경·시각적 저자극·머무를 환경에 대한 근거가 없다. 몰입형 자극 공간이라는 성격만으로 회복 환경을 추정하지 않는다.",
+      "value": 25
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 소개는 미디어 아트 체험 공간만 설명하며 확인된 실제 원형·유산과의 접촉에 대한 근거가 없다. 디지털 재현물이 실제 유산의 진위를 담보하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관 연도와 설립사 정보만 있을 뿐 이 장소 자체의 역사·연혁 맥락을 다루는 근거가 없다. 개관 연도만으로 역사 경험을 판단하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 언급이 없다. 기술 기업이 설립한 미디어 전시 공간이라는 사실만으로 실제 전승을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "기술 체험 설명은 있으나 원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+          "quote": {
+            "end": 646,
+            "method": "EXACT",
+            "original": "시공간의 한계를 넘어 비현실적인 공간을 유영하는 듯한 느낌을 경험할 수 있다",
+            "start": 604,
+            "submitted": "시공간의 한계를 넘어 비현실적인 공간을 유영하는 듯한 느낌을 경험할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "86086035670f62fba844f7077cddf149c840b4fa4c98fef444d62fa295b9cd22"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 1,
+      "reason": "비현실적 공간 유영, 시간 여행 등 장소에 부여된 이미지·주제가 간단히 제시되지만 사회적으로 공유된 구체적 의미의 내용에 대한 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품·홍보·SNS 등 매체를 통한 장소 이미지의 유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+          "quote": {
+            "end": 830,
+            "method": "EXACT",
+            "original": "AI Composer와의 채팅을 통해 만들어진 이미지를 배경으로 사진을 찍을 수 있으며",
+            "start": 782,
+            "submitted": "AI Composer와의 채팅을 통해 만들어진 이미지를 배경으로 사진을 찍을 수 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "86086035670f62fba844f7077cddf149c840b4fa4c98fef444d62fa295b9cd22"
+        }
+      ],
+      "flags": [],
+      "key": "E.d",
+      "level": 3,
+      "reason": "AI 생성 이미지를 배경으로 사진을 찍는 등 대표 장면을 직접 경험하고 재현할 수 있는 근거가 있다. 이미지 재현이 방문 경험 전체의 중심이라고 단정하기는 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "16개 체험 시설의 존재는 탐색 기회의 정황이 되지만, 제안된 anchor_ko('자율적으로 선택·탐색할 기회')는 수준 3 앵커인데 판정 수준은 2로 기재되어 수준과 앵커가 불일치한다. 자율적 선택의 폭이나 관람 동선의 자유에 대한 직접 근거도 부족하여 확정하기 어렵다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "실내 미디어 체험 공간이라는 설명만 있고 자연 환경·시각적 저자극·머무를 환경에 대한 근거가 없다. 몰입형 자극 공간이라는 성격만으로 회복 환경을 추정하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "신체 움직임 인터랙션과 AI와의 창작 활동 등 구체적 참여 활동은 원문으로 확인되며 수준 3(구체적인 참여·탐방 활동)에 해당한다. 그러나 제안된 anchor_ko('지속적으로 참여·도전할 활동')는 수준 4 앵커로 수준과 불일치하고, 지속적 도전·몰입에 대한 근거는 없어 제안된 형태 그대로는 확정할 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "생성 이미지를 휴대폰으로 전송받는 기능은 개인적 결과물 수령이지 사람 간 교류·공동 활동·자기표현의 기회를 직접 보여주지 않는다. 관계·자기표현이라는 패싯으로의 확대 해석이며 수준 2(제한된 공동 활동)조차 뒷받침되지 않는다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_EXPRESSION",
+            "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+            "quote": "130K 해상도의 빔 프로젝터, 총 2,200만 개의 LED로 구현되는 빛과 영상"
+          },
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+            "quote": "사방이 미디어 스크린으로 이루어진 층고 7.5m의 공간"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "대형 프로젝터·LED·사방 미디어 스크린 등 빛과 영상 중심의 뚜렷이 구별되는 시각적 성격이 확인된다. 전체 장면을 지배하는 일관된 연출 수준까지는 근거가 부족하다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+              "quote": {
+                "end": 373,
+                "method": "EXACT",
+                "original": "총 4개의 존과 16개의 체험 시설로 이루어져 있다",
+                "start": 345,
+                "submitted": "총 4개의 존과 16개의 체험 시설로 이루어져 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "86086035670f62fba844f7077cddf149c840b4fa4c98fef444d62fa295b9cd22"
+            }
+          ],
+          "flags": [],
+          "key": "R.a",
+          "level": 2,
+          "reason": "여러 존과 체험 시설을 둘러보며 선택·탐색할 여지가 있으나, 자율적 탐색의 폭과 여유에 대한 구체적 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "16개 체험 시설의 존재는 탐색 기회의 정황이 되지만, 제안된 anchor_ko('자율적으로 선택·탐색할 기회')는 수준 3 앵커인데 판정 수준은 2로 기재되어 수준과 앵커가 불일치한다. 자율적 선택의 폭이나 관람 동선의 자유에 대한 직접 근거도 부족하여 확정하기 어렵다."
+        }
+      },
+      "reason": "16개 체험 시설의 존재는 탐색 기회의 정황이 되지만, 제안된 anchor_ko('자율적으로 선택·탐색할 기회')는 수준 3 앵커인데 판정 수준은 2로 기재되어 수준과 앵커가 불일치한다. 자율적 선택의 폭이나 관람 동선의 자유에 대한 직접 근거도 부족하여 확정하기 어렵다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+              "quote": {
+                "end": 437,
+                "method": "EXACT",
+                "original": "몸의 움직임에 따라 빛과 소리가 변화하는 것을 경험할 수 있는 공간이다",
+                "start": 398,
+                "submitted": "몸의 움직임에 따라 빛과 소리가 변화하는 것을 경험할 수 있는 공간이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "86086035670f62fba844f7077cddf149c840b4fa4c98fef444d62fa295b9cd22"
+            },
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+              "quote": {
+                "end": 780,
+                "method": "EXACT",
+                "original": "이전의 공간에서 경험했던 것들을 바탕으로 나만의 새로운 공간을 창작하는 인터랙티브 공간이다",
+                "start": 730,
+                "submitted": "이전의 공간에서 경험했던 것들을 바탕으로 나만의 새로운 공간을 창작하는 인터랙티브 공간이다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "86086035670f62fba844f7077cddf149c840b4fa4c98fef444d62fa295b9cd22"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "신체 움직임 인터랙션, AI와의 채팅으로 이미지 창작 등 구체적 참여 활동이 확인된다. 지속적 도전·몰입 수준까지는 근거가 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "신체 움직임 인터랙션과 AI와의 창작 활동 등 구체적 참여 활동은 원문으로 확인되며 수준 3(구체적인 참여·탐방 활동)에 해당한다. 그러나 제안된 anchor_ko('지속적으로 참여·도전할 활동')는 수준 4 앵커로 수준과 불일치하고, 지속적 도전·몰입에 대한 근거는 없어 제안된 형태 그대로는 확정할 수 없다."
+        }
+      },
+      "reason": "신체 움직임 인터랙션과 AI와의 창작 활동 등 구체적 참여 활동은 원문으로 확인되며 수준 3(구체적인 참여·탐방 활동)에 해당한다. 그러나 제안된 anchor_ko('지속적으로 참여·도전할 활동')는 수준 4 앵커로 수준과 불일치하고, 지속적 도전·몰입에 대한 근거는 없어 제안된 형태 그대로는 확정할 수 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+              "quote": {
+                "end": 854,
+                "method": "EXACT",
+                "original": "모든 이미지를 휴대폰으로 전송받을 수 있다",
+                "start": 831,
+                "submitted": "모든 이미지를 휴대폰으로 전송받을 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "86086035670f62fba844f7077cddf149c840b4fa4c98fef444d62fa295b9cd22"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "생성 이미지를 휴대폰으로 전송받아 공유할 수 있는 등 제한적 표현·공유 기회가 있으나, 교류·공동 활동의 풍부함에 대한 근거는 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "생성 이미지를 휴대폰으로 전송받는 기능은 개인적 결과물 수령이지 사람 간 교류·공동 활동·자기표현의 기회를 직접 보여주지 않는다. 관계·자기표현이라는 패싯으로의 확대 해석이며 수준 2(제한된 공동 활동)조차 뒷받침되지 않는다."
+        }
+      },
+      "reason": "생성 이미지를 휴대폰으로 전송받는 기능은 개인적 결과물 수령이지 사람 간 교류·공동 활동·자기표현의 기회를 직접 보여주지 않는다. 관계·자기표현이라는 패싯으로의 확대 해석이며 수준 2(제한된 공동 활동)조차 뒷받침되지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "9b508bf03a86f00c7ba6802e0d69da8dbd057aebc9d2d558793e2c3bab7b2960",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 전시형 인공 환경으로 녹지·물·자연 경관 등 자연 환경 단서가 전혀 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0fa1d65fe0920f6f0a0edaab5fbd99e81c05694ba9917b2dd02d27c09926f52b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8f1d29c886020bf030afbcad44d1e7950ab4b5e0cec57e943ecb2fbf572f7baf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577488_4",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5ca950051737e5ddcd453ba30c11f4ea323fa05a56acdbc9375969c0cdbd3a92",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/88/3577488_image2_1.jpg"
+        },
+        "record_sha256": "4c7233d61b2b42326c7da41616ce2edda93491e86b4a09cb7f45948ea3c95b23",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "미디어아트 전시관의 현대적 곡면 구조와 매체 설비 중심으로 전통적 외관·재료·공간 구성의 특성이 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:44ed92edcfb2eca405328b7805fe15203255ce8d49d4dd0cc93d013437cdae17",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "593ece9b892e5c9f2eeecdd927a0b9cf8b1c84a36d88a3f984a64951ab9ba35e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577489_3",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "455be16879f5616e0cf91a2f38f3f7f1c0f833969975005452395d148ab3141e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/3577489_image2_1.jpg"
+        },
+        "record_sha256": "4a5a1df6601d93765e46de8d3b8449fa549d2d01ee1c3139783daac48d7da44e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "미래적 로봇·전자 화면·인공 조명만 있으며 전통적 외관·재료·공간 구성의 시각적 특성이 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5cacfd53e4afb5d82b9c29fd63452c1fa7ed7ce00c43a7b761e42531826b29f7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8f1d29c886020bf030afbcad44d1e7950ab4b5e0cec57e943ecb2fbf572f7baf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577488_4",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5ca950051737e5ddcd453ba30c11f4ea323fa05a56acdbc9375969c0cdbd3a92",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/88/3577488_image2_1.jpg"
+        },
+        "record_sha256": "fce86bf711a6a154040e692f92c446a3c52e89cf58d00b73e5659325ceaecaa9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "푸사아·마젠타·보라색의 강렬한 네옹빛 미디어아트 영상이 돔 전체를 채우고, 나무와 별·성운 이미지가 장면 전체를 지배하는 고도로 연출된 시각적 성격.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5ed696a5f965d80b7486e761e631ddfd3bfefd2c05656bc4d1da0d1b928db21d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b60b2af20900658fbeee9c2c7136f23af6ae547a89a2eebbb02f35734cbe6912",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577495_2",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "436cf5593717c96f5c46383330d28311fb9a72d0cf90b86b147a4ce375892c28",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/95/3577495_image2_1.jpg"
+        },
+        "record_sha256": "b7e0efcc63728ebe102b47f58d0f441508ddbafd2efe7ba3d0bfd27fb29b6700",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "청보라색 프로젝션 매핑과 곡면 스크린, 나비와 달 모티프의 미디어 아트가 장면 전체를 지배하며 강한 연출적 시각 성격을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:644a38485dd0ab5f0326933483c87036dcf5077264da6eeb3fcb358529d2a00d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "593ece9b892e5c9f2eeecdd927a0b9cf8b1c84a36d88a3f984a64951ab9ba35e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577489_3",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "455be16879f5616e0cf91a2f38f3f7f1c0f833969975005452395d148ab3141e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/3577489_image2_1.jpg"
+        },
+        "record_sha256": "4067bbbc7cb4cfeb382ba7d0ca6779975abdfb133d32efb43255c6f2a0e8e8b7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 1,
+          "reason": "실내 전시 공간으로 실제 녹지·자연 경관은 없고, 스크린에 투사된 숲·하늘 영상만 자연 단서로 약하게 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:75644df9e3247ec2b3f19cab7273b9f4296cde9678cd41c26aa1997bd5e8406a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "593ece9b892e5c9f2eeecdd927a0b9cf8b1c84a36d88a3f984a64951ab9ba35e",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577489_3",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "455be16879f5616e0cf91a2f38f3f7f1c0f833969975005452395d148ab3141e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/3577489_image2_1.jpg"
+        },
+        "record_sha256": "1abe03184ec1b277332263e35792b0b8d5d47da00b374717bc61695aea7bfebf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성의 시각적 단서가 보이지 않으며, 현대적 미디어아트 전시 공간과 빈백 좌석만 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:976338e69a77d5639560de8625745c2a1c3a5d63f479d8c28517ce4d1bfd604a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b60b2af20900658fbeee9c2c7136f23af6ae547a89a2eebbb02f35734cbe6912",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577495_2",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "436cf5593717c96f5c46383330d28311fb9a72d0cf90b86b147a4ce375892c28",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/95/3577495_image2_1.jpg"
+        },
+        "record_sha256": "40a7090daf9ff3cea9973e36dcc0aecc18351d50059cbfd75fa5c9674eccccdd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "어두운 배경 속 분홍빛으로 빛나는 로봇 얼굴과 흰 조명, 드로잉 로봇 팔이 강한 연출적 대비를 이루며 장면 전체를 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a2b6b0ca0ed690b5f70c2acdb59f2a1123bfe8f3c86eb761739a4dba87a3507f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8f1d29c886020bf030afbcad44d1e7950ab4b5e0cec57e943ecb2fbf572f7baf",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577488_4",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5ca950051737e5ddcd453ba30c11f4ea323fa05a56acdbc9375969c0cdbd3a92",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/88/3577488_image2_1.jpg"
+        },
+        "record_sha256": "cee524f9fd364ed3c39cbe78be935369d1dcfd9421739cba7810629fb7bc58d8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "나무, 구름, 별하늘, 지평선 등 자연 모티프가 화면 속에 크게 보이나 실제 녹지·물·트인 자연 배경이 아니라 투사된 이미지이므로 보통 수준.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d867465cc9313bc3386550c261507dfa6dc0c7d6cfc80fc76cd443456f8c4cb8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "b60b2af20900658fbeee9c2c7136f23af6ae547a89a2eebbb02f35734cbe6912",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3577495_2",
+          "request_sha256": "5b91af843ed749d970a257025bddc3b06357eafc52971973f9502aa22c2b350c",
+          "response_sha256": "f13faee0c745779442267ba5e6c0f7cc45ce0316aa401ec8502f5ccd2c2c6e51",
+          "retrieved_at": "2026-09-10T08:30:12.485261Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "436cf5593717c96f5c46383330d28311fb9a72d0cf90b86b147a4ce375892c28",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/95/3577495_image2_1.jpg"
+        },
+        "record_sha256": "38b1e047ebc27e112619ddc4e18dc2d20f4cba5a0ed0f27bed673c9cf025a25d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1a12dc1596019261a4ddf40cd6da18a671a499f0f861c041bf0542bb80172d9d",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3083216",
+          "request_sha256": "af61c4c06cfe8ed89adb35062aaacd9c0522676af576925ed9ae862e6c9b13ab",
+          "response_sha256": "00dd90be74b729be70e88d4468c154d75b7e8d7c6a558dfb6b4dde3d82f8ea0e",
+          "retrieved_at": "2026-09-09T16:40:39.805291Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-30T06:56:51Z",
+          "source_record_sha256": "1acbeabeba21e512e9e755ba06ef6d424f1f0d40d748de9f75764068b95377d0",
+          "source_uri": null
+        },
+        "record_sha256": "86086035670f62fba844f7077cddf149c840b4fa4c98fef444d62fa295b9cd22",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "뮤지엄엑스는 2023년 7월에 개관한 몰입형 전시 체험 공간이다. 국립중앙박물관, 대한민국임시정부 기념관 등을 비롯한 수많은 전시관, 박물관 등의 실감 콘텐츠를 제작 및 구축한 기업인 엑스오비스가 설립한 공간으로 엑스오비스의 기술력이 동원된 신개념 전시 공간이다. 총면적 약 530평, 4층 규모의 전시관에는 가상현실, 인공지능, 홀로그램, 게임 등 현존하는 미디어 테크놀로지를 오감으로 경험할 수 있는 다양한 체험시설로 가득하다. 130K 해상도의 빔 프로젝터, 총 2,200만 개의 LED로 구현되는 빛과 영상, 아티스트, 디자이너, 건축가, AI엔지니어, 뮤지션 등 각 분야를 대표하는 최고 작가들이 참여했다. 총 4개의 존과 16개의 체험 시설로 이루어져 있다. ZONE 1은 6개의 체험 시설이 있으며 몸의 움직임에 따라 빛과 소리가 변화하는 것을 경험할 수 있는 공간이다. ZONE 2는 시간 여행 공간으로 3개의 체험 시설에서는 빛과 소리, 파동을 시각적으로 경험할 수 있다. 사방이 미디어 스크린으로 이루어진 층고 7.5m의 공간은 영상 아티스트와 사운드 아티스트, 전문 조향사가 참여하여 실감 나는 체험 공간을 조성하였다. ZONE 3는 다차원 엠비언스 공간으로 시공간의 한계를 넘어 비현실적인 공간을 유영하는 듯한 느낌을 경험할 수 있다. 인공지능을 탑재한 휴머노이드 로봇이 즉석에서 초상화를 그려주는 스케치엑스는 체험시설 중 가장 많은 호응을 얻은 콘텐츠 중 하나이다. ZONE 4는 이전의 공간에서 경험했던 것들을 바탕으로 나만의 새로운 공간을 창작하는 인터랙티브 공간이다. AI Composer와의 채팅을 통해 만들어진 이미지를 배경으로 사진을 찍을 수 있으며 모든 이미지를 휴대폰으로 전송받을 수 있다."
+      }
+    ],
+    "parent_source_sha256": "0f235fc46eb1779619b1ab330a661b15d4a614bef3f22edef9ed3d5528e6a2c8",
+    "place": {
+      "address": "강원특별자치도 속초시 중앙로 338 (영랑동)",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+      "name_ko": "뮤지엄엑스",
+      "place_id": "public:korea:f5f0a4ab11eca736d555848de34a03877dc0573e876b99fd4674f400fe5e65ed",
+      "provider_content_id": "3083216",
+      "region_code": "51210",
+      "region_name": "강원특별자치도 속초시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

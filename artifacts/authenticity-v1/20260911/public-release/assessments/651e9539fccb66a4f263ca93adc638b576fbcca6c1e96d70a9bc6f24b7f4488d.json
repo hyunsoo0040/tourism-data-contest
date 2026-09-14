@@ -1,0 +1,977 @@
+{
+  "assessed_at": "2026-09-11T15:46:56.732592Z",
+  "assessment_sha256": "651e9539fccb66a4f263ca93adc638b576fbcca6c1e96d70a9bc6f24b7f4488d",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b",
+        "H.d"
+      ],
+      "value": 42
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 54
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 60
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 25,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "원래 매립지 원형은 공원화로 대체되었으나, 매립지라는 역사적 장소의 흔적 위에 조성된 공원이라는 사실은 확인된다. 다만 실물 유산이나 원형의 직접 접촉 근거는 약해 낮은 수준.",
+      "value": 25
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "이 장소 자체(난지도 매립장)의 연혁과 변천을 구체적 연도와 함께 설명하고 있어 역사 맥락 소개 근거가 있음.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "이 장소의 역사·변천을 다루는 전시관이 있어 유산 연결 해설·전시의 근거는 있으나 깊은 탐구 중심이라는 근거는 부족.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "평화, 환경·생태공원, 쓰레기 매립지의 탈바꿈이라는 구체적 의미와 이야기가 장소에 연결되어 있음. 다만 상징 경험이 방문 중심이라는 근거는 없음.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:03ff1d766b7904bf108b274a230d9900c99a4f01575efebe608fb2f776a7f259",
+            "appearance:24925878878b49bbdf947f5c8a40af8e775b6d900e47f59128e2fac48477a313",
+            "appearance:c09bccf7ffcc81e9f8fc589d3e019607524b8734dd28d2f7a7b235785a2c2a71"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "자연경관, 하늘공원·노을공원 등 테마별 경관의 시각적 성격이 언급되나, 장면을 지배하는 일관된 연출이라는 근거는 부족.",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "5개 테마공원에서 시민이 자율적으로 산책·탐색한다는 표현이 있으나 일상 이탈이 방문 경험의 중심이라는 근거는 부족.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0e0d88843bb7133c85f731a95d45f3bb75acd005990595207b846c457cbc508a",
+            "appearance:66c3c8bd689c1c919180c8b2a865a12f7922fcef0cd1952e22d3e4d88ebc46fd",
+            "appearance:a575aa575e57cf2ec35ce1ebc58498c3b6409138c87340417c77e820dc9ef476"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "270만㎡ 규모의 환경·생태공원, 대규모 수림과 연못·천 등 자연 환경 단서가 두드러진다는 구체적 근거가 있음. 실제 고요함·혼잡은 확인되지 않음.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "학습 프로그램·행사와 전기차 이용 등 참여 기회가 있으나 지속적 도전·몰입 활동이 중심이라는 근거는 부족.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+          "quote": {
+            "end": 137,
+            "method": "EXACT",
+            "original": "난지도 쓰레기매립장을 안정화 및 공원화하였다",
+            "start": 113,
+            "submitted": "난지도 쓰레기매립장을 안정화 및 공원화하였다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 1,
+      "reason": "원래 매립지 원형은 공원화로 대체되었으나, 매립지라는 역사적 장소의 흔적 위에 조성된 공원이라는 사실은 확인된다. 다만 실물 유산이나 원형의 직접 접촉 근거는 약해 낮은 수준.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+          "quote": {
+            "end": 84,
+            "method": "EXACT",
+            "original": "1978년부터 1993년까지 15년간 서울시 쓰레기로 만들어진 2개의 거대한 산과 넓은 면적의 평매립지를",
+            "start": 26,
+            "submitted": "1978년부터 1993년까지 15년간 서울시 쓰레기로 만들어진 2개의 거대한 산과 넓은 면적의 평매립지를",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 2,
+      "reason": "이 장소 자체(난지도 매립장)의 연혁과 변천을 구체적 연도와 함께 설명하고 있어 역사 맥락 소개 근거가 있음.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결에 관한 근거가 제공되지 않음.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+          "quote": {
+            "end": 590,
+            "method": "EXACT",
+            "original": "난지도의 역사와 변천에 대한 전반적인 모습을 볼 수 있는 월드컵공원 전시관",
+            "start": 549,
+            "submitted": "난지도의 역사와 변천에 대한 전반적인 모습을 볼 수 있는 월드컵공원 전시관",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 2,
+      "reason": "이 장소의 역사·변천을 다루는 전시관이 있어 유산 연결 해설·전시의 근거는 있으나 깊은 탐구 중심이라는 근거는 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+          "quote": {
+            "end": 463,
+            "method": "NORMALIZED_AND_MAPPED",
+            "original": "자연과 인간의 공존과 공생을 추구하고 ‘평화’를 기원하는 공간이다",
+            "start": 427,
+            "submitted": "자연과 인간의 공존과 공생을 추구하고 '평화'를 기원하는 공간이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "평화, 환경·생태공원, 쓰레기 매립지의 탈바꿈이라는 구체적 의미와 이야기가 장소에 연결되어 있음. 다만 상징 경험이 방문 중심이라는 근거는 없음.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 장소 이미지의 재현·확산에 관한 근거가 제공되지 않음.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+          "quote": {
+            "end": 547,
+            "method": "EXACT",
+            "original": "난지연못과 난지천 등이 더해져 아름다운 자연경관을 이루고 있다",
+            "start": 513,
+            "submitted": "난지연못과 난지천 등이 더해져 아름다운 자연경관을 이루고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "자연경관, 하늘공원·노을공원 등 테마별 경관의 시각적 성격이 언급되나, 장면을 지배하는 일관된 연출이라는 근거는 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 제공되지 않음.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+          "quote": {
+            "end": 680,
+            "method": "EXACT",
+            "original": "축구 경기가 없는 날에도 자연스레 시민들의 가벼운 발걸음이 이어지고",
+            "start": 643,
+            "submitted": "축구 경기가 없는 날에도 자연스레 시민들의 가벼운 발걸음이 이어지고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "5개 테마공원에서 시민이 자율적으로 산책·탐색한다는 표현이 있으나 일상 이탈이 방문 경험의 중심이라는 근거는 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+          "quote": {
+            "end": 511,
+            "method": "EXACT",
+            "original": "92종 73만 3000그루의 나무가 공원을 가득 메우고 있으며",
+            "start": 477,
+            "submitted": "92종 73만 3000그루의 나무가 공원을 가득 메우고 있으며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "270만㎡ 규모의 환경·생태공원, 대규모 수림과 연못·천 등 자연 환경 단서가 두드러진다는 구체적 근거가 있음. 실제 고요함·혼잡은 확인되지 않음.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+          "quote": {
+            "end": 721,
+            "method": "EXACT",
+            "original": "다양한 학습 프로그램과 행사를 기획해 교육 생태공원의 역할도 하고 있다",
+            "start": 682,
+            "submitted": "다양한 학습 프로그램과 행사를 기획해 교육 생태공원의 역할도 하고 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "학습 프로그램·행사와 전기차 이용 등 참여 기회가 있으나 지속적 도전·몰입 활동이 중심이라는 근거는 부족.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현의 기회에 관한 구체적 근거가 제공되지 않음.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "45aefc1833ca629ef47db0c51f532de96aae4c1b9ae39f9be118e219c9a78b47",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "098531d7130740332be541e0240a7f598cc60b4f25523afc0a2dbbf73e501b3a",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "흰색 프레임 조형물에 채도 높은 초록 나무 실루엣과 사람 형태 오려내기가 배치되어 시선을 강하게 끄는 연출된 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:03ff1d766b7904bf108b274a230d9900c99a4f01575efebe608fb2f776a7f259",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d8904e7efe1f6dd802a9d2ac1d628baee7365721a06080d108bcdf8296148868",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500989_1",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d25ae64b46aff19ba82f2b6d68f8a323f39787243d155ab772f7c6806fa60675",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/3500989_image2_1.jpg"
+        },
+        "record_sha256": "8e7b2f13a0a74953a741923649ed33e39201f327a771a182f4e0f19e10a78cfd",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "가로수길, 울창한 수림, 풀과 화초, 흙길 등 자연 환경 요소가 화면 전체를 채우고 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0e0d88843bb7133c85f731a95d45f3bb75acd005990595207b846c457cbc508a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4877477c5f215bba8030c022fd65fb7146e107f8d3b8eef8e387aeacdb80e4ba",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500992_4",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e0df63f053e41455499cef0cca71521a1ee483d24a5d554392fa3d720433a6c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/3500992_image2_1.jpg"
+        },
+        "record_sha256": "e07bad1406d872a71cf3828b45ea7f88db16c794da376d8068feaab97244eb02",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 건축·재료·공간 구성의 시각적 단서가 거의 보이지 않고 자연 수림로 중심의 장면.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2000c6e9730f3a8cf8a12c5a6326d8b0a3937eab1df67b941e56054ebbe7cf62",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "37cfbe09ac8f7d89aa6c89bad5924a06776a0cc8a929df952ab759a2efb1ca89",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500990_2",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2a6be2bbb7cbb81ead489796b56d6c4b204bf1307e7466b1843756d541c8e43e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/90/3500990_image2_1.jpg"
+        },
+        "record_sha256": "b9808c01c65d4c000d1d6dcdf8093fc551bba12df09debaf02a536e65d05b2c8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "나무 열을 따라 흐르는 따뜻한 역광과 녹색·황금빛 대비, 중앙 소실점 구도가 장면 전체를 지배하는 강한 연출적 인상.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:24925878878b49bbdf947f5c8a40af8e775b6d900e47f59128e2fac48477a313",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "37cfbe09ac8f7d89aa6c89bad5924a06776a0cc8a929df952ab759a2efb1ca89",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500990_2",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2a6be2bbb7cbb81ead489796b56d6c4b204bf1307e7466b1843756d541c8e43e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/90/3500990_image2_1.jpg"
+        },
+        "record_sha256": "8dcbad4ac87e4fefecdae8c67b8428df977bf96814ad6b53cf2b70707e9dcd4b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 재료나 옛 건축·공간 구성의 시각적 단서는 보이지 않으며, 현대적 조형물과 자연 정원으로만 구성되어 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2abf8b645b61931d8eb6fb929da1e9629acf0f3967d3397b1d914e5bd5709952",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4877477c5f215bba8030c022fd65fb7146e107f8d3b8eef8e387aeacdb80e4ba",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500992_4",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e0df63f053e41455499cef0cca71521a1ee483d24a5d554392fa3d720433a6c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/3500992_image2_1.jpg"
+        },
+        "record_sha256": "1bdfa688fe2dabedf21f54c686bf95a9cb04ee24303465205ddf0a3483fb696f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "우거진 수목, 잔디, 덤불 등 자연 녹지가 화면 대부분을 차지하며 자연 경관이 장면을 지배.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:66c3c8bd689c1c919180c8b2a865a12f7922fcef0cd1952e22d3e4d88ebc46fd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "37cfbe09ac8f7d89aa6c89bad5924a06776a0cc8a929df952ab759a2efb1ca89",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500990_2",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "2a6be2bbb7cbb81ead489796b56d6c4b204bf1307e7466b1843756d541c8e43e",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/90/3500990_image2_1.jpg"
+        },
+        "record_sha256": "f15000f81225f45500958da9bed552f21ee47f849a610215bbcca2662aa5dff9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통적 재료나 기법으로 보이는 요소는 뚜렷하지 않고, 현대적 조형물과 정비된 산책로가 주를 이룬다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:953fc9edb71a7f046eb841d0a08370df9dcfb20b841240a7162898e53a57d5ec",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d8904e7efe1f6dd802a9d2ac1d628baee7365721a06080d108bcdf8296148868",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500989_1",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d25ae64b46aff19ba82f2b6d68f8a323f39787243d155ab772f7c6806fa60675",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/3500989_image2_1.jpg"
+        },
+        "record_sha256": "b4ea4a8ad4b3daa88195ed3d19bda9a7e4ee4b06ff6b7cad261ca0c12784d9f1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 메타세쿼이아 숲, 잔디, 수목과 숲길이 화면 전체를 채우며 자연 환경이 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a575aa575e57cf2ec35ce1ebc58498c3b6409138c87340417c77e820dc9ef476",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "d8904e7efe1f6dd802a9d2ac1d628baee7365721a06080d108bcdf8296148868",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500989_1",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "d25ae64b46aff19ba82f2b6d68f8a323f39787243d155ab772f7c6806fa60675",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/89/3500989_image2_1.jpg"
+        },
+        "record_sha256": "5e1f87c60a1e0386c507aee6b98a66a9196cae06a5aa482677df3410af9b91cb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "대형 빨간 하트 조형물이 장면의 중심을 지배하며, 따뜻한 역광과 녹색 배경 속에서 강렬한 색채 대비와 연출된 구도가 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c09bccf7ffcc81e9f8fc589d3e019607524b8734dd28d2f7a7b235785a2c2a71",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "4877477c5f215bba8030c022fd65fb7146e107f8d3b8eef8e387aeacdb80e4ba",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3500992_4",
+          "request_sha256": "bc59d07b9d89006aa6112e9ff05c33460fa28ac3e9d458d5b5317d2138e3cd2c",
+          "response_sha256": "daa29fcaa277af7e98aa509792810f3985be4635ffc938cb398cb40765821759",
+          "retrieved_at": "2026-09-11T02:01:21.400979Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e0df63f053e41455499cef0cca71521a1ee483d24a5d554392fa3d720433a6c2",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/3500992_image2_1.jpg"
+        },
+        "record_sha256": "bb6823752c45216adeb0282ca1cea2a199e58acd17d6cc62906bf61bf5be2f7c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:0783d83a202bdbfd9fd61c8abf234c4ce7ba6d61dfbd4c3f7820b983c30032c7",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "128021",
+          "request_sha256": "9f439ce6659ecf941f3b65e9e538d07aaee57b0f0395a066738e85d8f0bb5f79",
+          "response_sha256": "d73ac9c325346bb0d25877d03840f145b0195fb7026a7267357b0afaa9bc9f42",
+          "retrieved_at": "2026-09-10T17:21:21.584855Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-11T01:03:40Z",
+          "source_record_sha256": "83b877c10231ccf154eaf52f4cb5232636c10f81d5cd9b7a7e67ac21fc82a5bd",
+          "source_uri": null
+        },
+        "record_sha256": "f512a7aebf0b8b8f5a0d0f792ee8c38997d1bb1131e284699f200b07f1ab6b5e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "월드컵공원은 아름다운 섬 난지도 80여 만평에 1978년부터 1993년까지 15년간 서울시 쓰레기로 만들어진 2개의 거대한 산과 넓은 면적의 평매립지를 2002 월드컵 개최와 새 천년을 기념하기 위하여 난지도 쓰레기매립장을 안정화 및 공원화하였다. 270만㎡의 면적을 대규모 환경·생태공원으로 조성하면서 서울 시민들의 사랑받는 월드컵 공원으로 거듭났다. 대표 공원인 평화의 공원을 비롯하여, 하늘공원, 노을공원, 난지천공원, 난지한강공원의 5개 테마공원으로 조성되었다. 월드컵 경기장 앞 135,000평에 조성된 평화의 공원은 21세기 최초의 월드컵경기를 기념하며, 한국과 서울의 이미지를 제고할 수 있는 현대적이고 품격 높은 열린 광장이다. 월드컵 경기장의 앞마당으로서의 역할과 서울 서북부 지역의 중심공원으로 조성되었다. 월드컵공원 전체를 대표하는 공원으로서 자연과 인간의 공존과 공생을 추구하고 ‘평화’를 기원하는 공간이다. 현재 월드컵 공원에는 92종 73만 3000그루의 나무가 공원을 가득 메우고 있으며, 난지연못과 난지천 등이 더해져 아름다운 자연경관을 이루고 있다. 난지도의 역사와 변천에 대한 전반적인 모습을 볼 수 있는 월드컵공원 전시관과 수종 동식물과 다양한 새들을 볼 수 있는 난지 연못은 공원의 명소라고 할 수 있다. 이제는 축구 경기가 없는 날에도 자연스레 시민들의 가벼운 발걸음이 이어지고, 다양한 학습 프로그램과 행사를 기획해 교육 생태공원의 역할도 하고 있다. 세계인들이 탐내는 환경생태 에너지 테마 공원으로 발돋움한 것이다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:13586c279751ba86a647385c8159fd3c16d67bf47f0f0500a268da9a3b3a68e4",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128021",
+          "request_sha256": "575bb5687cd995445e81f5c0d047b85af8a6e9ce1a8901e3bc96ea9b9211bb92",
+          "response_sha256": "0cc8913d13a34ba445d6dd9017874e432e92b3e9e041a71fb4f1617650134457",
+          "retrieved_at": "2026-09-11T02:01:21.054874Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "77cac820b6f98c02c1c93a17acf9ba0cfa45e2183d75ee47057cfe68f08fef4b",
+          "source_uri": null
+        },
+        "record_sha256": "e2528a3f466a3742c3f92e8449ccf5de47d26056b0cec1e8fcb7bb40605c1c52",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1b9abaa63d2fd386bba700cc9a58c0542d24ce19afc45a1a7d41e54ccc9ac75f",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "128021",
+          "request_sha256": "575bb5687cd995445e81f5c0d047b85af8a6e9ce1a8901e3bc96ea9b9211bb92",
+          "response_sha256": "0cc8913d13a34ba445d6dd9017874e432e92b3e9e041a71fb4f1617650134457",
+          "retrieved_at": "2026-09-11T02:01:21.054874Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "06b33dfc0e149de826b216d3cdb30e1fbfab829b2f5f3742dbd8d18529da7b85",
+          "source_uri": null
+        },
+        "record_sha256": "094d5c829edb6a727acb079876f2392ca983ef21d69609905c575543a343a0a7",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "[맹꽁이전기차 1노선]- 일반 편도 2,000원- 일반 왕복 3,000원- 어린이(만4세~12세) 편도 1,500원- 어린이(만4세~12세 왕복 2,200원[맹꽁이전기차 2노선]- 일반 편도 2,000원- 어린이(만4세~12세) 편도 1,500원[맹꽁이전기차 3노선]- 일반 편도 2,000원- 일반 왕복 3,000원- 어린이(만4세~12세) 편도 1,500원- 어린이(만4세~12세 왕복 2,200원※ 자세한 사항은 홈페이지 참조"
+      }
+    ],
+    "parent_source_sha256": "913d1fe04f8eb124d8080ad2e77582f00223aeda92a469264ee50931a7158a1c",
+    "place": {
+      "address": "서울특별시 마포구 월드컵로 243-60 (성산동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+      "name_ko": "월드컵공원",
+      "place_id": "public:korea:0face18e754fb758704831e2516873ae3b80779ebf7f1489500c322091ffa2c2",
+      "provider_content_id": "128021",
+      "region_code": "11440",
+      "region_name": "서울특별시 마포구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

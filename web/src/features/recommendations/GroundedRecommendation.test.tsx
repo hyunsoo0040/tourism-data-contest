@@ -44,8 +44,8 @@ describe("grounded result journey", () => {
     expect(cards).toHaveLength(5);
     expect(within(cards[0]!).getAllByRole("meter")).toHaveLength(2);
     expect(within(cards[0]!).getByText("비교 어려움")).toBeTruthy();
-    expect(within(cards[0]!).getByRole("meter", { name: "감성·이미지 취향 유사도 100%" })).toBeTruthy();
-    expect(within(cards[0]!).getByRole("meter", { name: "휴식·몰입 취향 유사도 100%" })).toBeTruthy();
+    expect(within(cards[0]!).getByRole("meter", { name: "의미•이미지형 취향 유사도 100%" })).toBeTruthy();
+    expect(within(cards[0]!).getByRole("meter", { name: "자기•몰입형 취향 유사도 100%" })).toBeTruthy();
     expect(within(cards[0]!).queryByText("50%")).toBeNull();
     await waitFor(() => expect(screen.getByText(/방문 날짜 2026-09-10 · 새로 조회한 참고 정보/)).toBeTruthy());
     fireEvent.click(within(cards[0]!).getByText("방문 참고 정보", { exact: true }));

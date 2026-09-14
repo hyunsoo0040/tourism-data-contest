@@ -1,0 +1,948 @@
+{
+  "assessed_at": "2026-09-11T19:11:45.643432Z",
+  "assessment_sha256": "d80a5bd833b4ec58a8801df77436c0ef7e1be9b7609c77051eff84bb52ce2fe6",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.c"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "H.b",
+        "H.d"
+      ],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c",
+        "E.d"
+      ],
+      "value": 61
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.c",
+        "R.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "R.b"
+      ],
+      "value": null
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "테디베어의 탄생(1902년)과 20세기 인류사를 전시를 통해 소개한다고 하므로, 대상(테디베어)에 대한 사건·시대 맥락이 제시된다고 본다. 다만 장소 자체(중문 부지)의 역사는 아니다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.d",
+      "missing_channels": [],
+      "reason": "전시물을 매개로 테디베어 역사와 근현대 인류사를 설명하는 전시 해설이 있다고 하므로 유산 연결 학습 기회는 있다. 다만 깊은 탐구형 해설·다층 자료의 근거는 없어 4 이상은 판단하지 않았다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "테디베어라는 친숙·애정의 상징적 이미지를 장소의 핵심 소재로 삼는다고 볼 수 있으나, 여러 표현에서 일관된 의미가 확인된다는 수준의 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:3b8cf589a218f9633bff37f9bd4d55b0ec00d6e9c37c630a6382263c267cc988",
+            "appearance:c2c16b121c97e96be85d25e6b6d106ff0b0dcde718738870780d9f96813191ad",
+            "appearance:c4ef6cf486dd32fec88a6c42c519a818a3be73ff995d80beec29aaa48936b506"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 83,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "level=2로 제안했으나 anchor_ko '장면에서 구별되는 시각적 성격'은 수준 3의 앵커이다. 근거(잔디광장·야외정원)는 제한된 경관 표현인 수준 2 쪽에 가깝고, 장면을 구별하는 시각적 성격의 근거는 없다. 수준-앵커 불일치로 현재 제안은 부정확하다.",
+      "value": 83
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "명화 패러디 장면·공연 재현 장면을 현장에서 관람할 수 있다고 하나, 촬영·참여를 통한 이미지 재현이 방문 경험의 중심이라는 근거는 없다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1e25d3d8174c7af33d4eff37439db69af70c8394df2e560f4ac57d0ae1c903e2",
+            "appearance:3b496b2747aa3e197b86ba102de74c651113c96ecd505a33c169fbbd573359e8",
+            "appearance:89ddda9c41997da965acedf3714ce99cd5a7ae08d5684f566d3f3b1bf1dfdcf4"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 33,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "야외정원·잔디광장·바닷바람 등 회복을 지원하는 자연 환경 단서가 확인된다. 실제 고요함·혼잡 수준은 확인되지 않아 4 이상으로 판단하지 않았다.",
+      "value": 65
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "level=2로 제안했으나 anchor_ko '확인된 원형·유산을 관람'은 수준 3의 앵커로, 수준-앵커가 불일치한다. 인용문(세계 각국에서 모아 온 진귀한 테디베어 전시)은 실물 원형 관람인 수준 3을 직접 뒷받침하며, '제한적 접촉'(수준 2)을 뒷받침하지 않는다. 테디베어가 토착 유산은 아니라는 해석 자체는 타당하나, 제안된 수준·앵커 조합은 부정확하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+          "quote": {
+            "end": 166,
+            "method": "EXACT",
+            "original": "1902년에 탄생한 테디베어의 역사를 전시한 국내 최초이자 최대 규모의 박물관이다.",
+            "start": 120,
+            "submitted": "1902년에 탄생한 테디베어의 역사를 전시한 국내 최초이자 최대 규모의 박물관이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342"
+        }
+      ],
+      "flags": [],
+      "key": "H.b",
+      "level": 3,
+      "reason": "테디베어의 탄생(1902년)과 20세기 인류사를 전시를 통해 소개한다고 하므로, 대상(테디베어)에 대한 사건·시대 맥락이 제시된다고 본다. 다만 장소 자체(중문 부지)의 역사는 아니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다. 박물관 관람은 실제 전승 활동의 확인 자료가 되지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_INTERPRETATION",
+          "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+          "quote": {
+            "end": 240,
+            "method": "EXACT",
+            "original": "테디베어 전시를 통해서 20세기 인류 역사를 소개하고 있다.",
+            "start": 207,
+            "submitted": "테디베어 전시를 통해서 20세기 인류 역사를 소개하고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.d",
+      "level": 3,
+      "reason": "전시물을 매개로 테디베어 역사와 근현대 인류사를 설명하는 전시 해설이 있다고 하므로 유산 연결 학습 기회는 있다. 다만 깊은 탐구형 해설·다층 자료의 근거는 없어 4 이상은 판단하지 않았다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+          "quote": {
+            "end": 345,
+            "method": "EXACT",
+            "original": "누구나 좋아하고 사랑하는 테디베어를 만날 수 있다.",
+            "start": 317,
+            "submitted": "누구나 좋아하고 사랑하는 테디베어를 만날 수 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "테디베어라는 친숙·애정의 상징적 이미지를 장소의 핵심 소재로 삼는다고 볼 수 있으나, 여러 표현에서 일관된 의미가 확인된다는 수준의 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체(작품·홍보·SNS 등)를 통한 장소 이미지의 유통에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "level=2로 제안했으나 anchor_ko '장면에서 구별되는 시각적 성격'은 수준 3의 앵커이다. 근거(잔디광장·야외정원)는 제한된 경관 표현인 수준 2 쪽에 가깝고, 장면을 구별하는 시각적 성격의 근거는 없다. 수준-앵커 불일치로 현재 제안은 부정확하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+          "quote": {
+            "end": 299,
+            "method": "EXACT",
+            "original": "엘비스 프레슬리의 유명 공연을 감상할 수 있고, 세계적인 명화를 패러디한 베어 등 흥미롭고 다채로운 구성",
+            "start": 241,
+            "submitted": "엘비스 프레슬리의 유명 공연을 감상할 수 있고, 세계적인 명화를 패러디한 베어 등 흥미롭고 다채로운 구성",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "명화 패러디 장면·공연 재현 장면을 현장에서 관람할 수 있다고 하나, 촬영·참여를 통한 이미지 재현이 방문 경험의 중심이라는 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "level=2로 제안했으나 anchor_ko '자율적으로 선택·탐색할 기회'는 수준 3의 앵커이다. 근거는 산책 여유라는 제한적 자유 선택에 불과해 수준 2 앵커('짧고 제한된 자유 선택')와 맞아야 하며, 제안된 수준-앵커 조합은 불일치한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+          "quote": {
+            "end": 527,
+            "method": "EXACT",
+            "original": "중문 색달해변이 내려가 보이는 잔디광장과 야외정원이 조성되어 있어 싱그러운 바닷바람과 함께",
+            "start": 477,
+            "submitted": "중문 색달해변이 내려가 보이는 잔디광장과 야외정원이 조성되어 있어 싱그러운 바닷바람과 함께",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "야외정원·잔디광장·바닷바람 등 회복을 지원하는 자연 환경 단서가 확인된다. 실제 고요함·혼잡 수준은 확인되지 않아 4 이상으로 판단하지 않았다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "관람 중심의 테마 박물관이라는 설명 외에 만들기·탐방 등 구체적 참여·집중 활동의 근거가 없다. 부대시설은 집중 활동이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "교류·공동 활동·자기표현 기회에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "94b7ff24f351d408178319b601d50532eb7c6a27cc8b418aba990fdd4b5a9039",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_FACT",
+              "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+              "quote": {
+                "end": 240,
+                "method": "EXACT",
+                "original": "세계 각국에서 모아 온 진귀한 테디베어들이 전시되어 있을 뿐만 아니라, 테디베어 전시를 통해서 20세기 인류 역사를 소개하고 있다.",
+                "start": 167,
+                "submitted": "세계 각국에서 모아 온 진귀한 테디베어들이 전시되어 있을 뿐만 아니라, 테디베어 전시를 통해서 20세기 인류 역사를 소개하고 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342"
+            }
+          ],
+          "flags": [],
+          "key": "H.a",
+          "level": 2,
+          "reason": "테디베어라는 문화유물 원형(실물 인형)의 전시 관람은 가능하나, 이는 장소 자체의 토착 유산이 아니라 수집된 인형 유물이므로 제한적 접촉 수준으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "H.a",
+          "reason": "level=2로 제안했으나 anchor_ko '확인된 원형·유산을 관람'은 수준 3의 앵커로, 수준-앵커가 불일치한다. 인용문(세계 각국에서 모아 온 진귀한 테디베어 전시)은 실물 원형 관람인 수준 3을 직접 뒷받침하며, '제한적 접촉'(수준 2)을 뒷받침하지 않는다. 테디베어가 토착 유산은 아니라는 해석 자체는 타당하나, 제안된 수준·앵커 조합은 부정확하다."
+        }
+      },
+      "reason": "level=2로 제안했으나 anchor_ko '확인된 원형·유산을 관람'은 수준 3의 앵커로, 수준-앵커가 불일치한다. 인용문(세계 각국에서 모아 온 진귀한 테디베어 전시)은 실물 원형 관람인 수준 3을 직접 뒷받침하며, '제한적 접촉'(수준 2)을 뒷받침하지 않는다. 테디베어가 토착 유산은 아니라는 해석 자체는 타당하나, 제안된 수준·앵커 조합은 부정확하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "E.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "VISUAL_EXPRESSION",
+              "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+              "quote": {
+                "end": 546,
+                "method": "EXACT",
+                "original": "중문 색달해변이 내려가 보이는 잔디광장과 야외정원이 조성되어 있어 싱그러운 바닷바람과 함께 산책의 여유로움도 찾을 수 있다.",
+                "start": 477,
+                "submitted": "중문 색달해변이 내려가 보이는 잔디광장과 야외정원이 조성되어 있어 싱그러운 바닷바람과 함께 산책의 여유로움도 찾을 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "E.c",
+          "level": 2,
+          "reason": "해변이 내려다 보이는 잔디광장·야외정원 등 제한된 경관 연출의 표현은 있으나, 장소 이미지를 지배하는 일관된 시각적 성격이라는 근거는 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.c",
+          "reason": "level=2로 제안했으나 anchor_ko '장면에서 구별되는 시각적 성격'은 수준 3의 앵커이다. 근거(잔디광장·야외정원)는 제한된 경관 표현인 수준 2 쪽에 가깝고, 장면을 구별하는 시각적 성격의 근거는 없다. 수준-앵커 불일치로 현재 제안은 부정확하다."
+        }
+      },
+      "reason": "level=2로 제안했으나 anchor_ko '장면에서 구별되는 시각적 성격'은 수준 3의 앵커이다. 근거(잔디광장·야외정원)는 제한된 경관 표현인 수준 2 쪽에 가깝고, 장면을 구별하는 시각적 성격의 근거는 없다. 수준-앵커 불일치로 현재 제안은 부정확하다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "AUTONOMOUS_ACTIVITY",
+              "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+              "quote": {
+                "end": 546,
+                "method": "EXACT",
+                "original": "산책의 여유로움도 찾을 수 있다.",
+                "start": 528,
+                "submitted": "산책의 여유로움도 찾을 수 있다.",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.a",
+          "level": 2,
+          "reason": "잔디광장·야외정원에서의 산책이라는 자유 선택적 여유 기회가 언급되지만, 깊은 자율 탐색이 경험의 중심이라는 근거는 없어 제한적 수준으로 판단했다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.a",
+          "reason": "level=2로 제안했으나 anchor_ko '자율적으로 선택·탐색할 기회'는 수준 3의 앵커이다. 근거는 산책 여유라는 제한적 자유 선택에 불과해 수준 2 앵커('짧고 제한된 자유 선택')와 맞아야 하며, 제안된 수준-앵커 조합은 불일치한다."
+        }
+      },
+      "reason": "level=2로 제안했으나 anchor_ko '자율적으로 선택·탐색할 기회'는 수준 3의 앵커이다. 근거는 산책 여유라는 제한적 자유 선택에 불과해 수준 2 앵커('짧고 제한된 자유 선택')와 맞아야 하며, 제안된 수준-앵커 조합은 불일치한다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "eb943b10db36783e97ba93721e0e4c1f1f4f8213d5659242e66859247f3f3679",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "실내 진열 벽면만 보이며 녹지·물·자연 경관 등 환경 단서가 전혀 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1e25d3d8174c7af33d4eff37439db69af70c8394df2e560f4ac57d0ae1c903e2",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "40b0bc160641c304c63a0de7b8463f166b17c8b14ff715cf15c7a997d36dc014",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548677_3",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09274407f43446cf1db09137d5a0727a8940e4d2980938640ad3c4235c36b857",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/77/3548677_image2_1.jpg"
+        },
+        "record_sha256": "eac7f413241f0199d1bf51be1ccca01b0316ae2d58eb2b207dd345a00fb7f9ba",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "인형 의상과 액자 테두리에 옛 정취가 일부 보이나 전통 건축·재료의 시각적 특성은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:212df281c0f715d1de91c1747db176fcec643b416b53554d591e6298ccd686ab",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "40b0bc160641c304c63a0de7b8463f166b17c8b14ff715cf15c7a997d36dc014",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548677_3",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09274407f43446cf1db09137d5a0727a8940e4d2980938640ad3c4235c36b857",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/77/3548677_image2_1.jpg"
+        },
+        "record_sha256": "f641e1fb5a86eb4d43695d86fe97bbf3ffd390451460b4609156d08a377faab5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "큰 유리창 너머로 울창한 녹지가 보이고 실내 화초도 있으나 자연 경관 자체는 배경 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3b496b2747aa3e197b86ba102de74c651113c96ecd505a33c169fbbd573359e8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3b1d9cba908d02d3355538d4e748be077e9472b535402421d08a2b110e6c979f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548692_8",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a34e2cc85393e006f59f36db7dfc84ed46ab004af43ca416383029105afbeddb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/3548692_image2_1.jpg"
+        },
+        "record_sha256": "23be2da3593bcdfce323a57dee34286cb73ea89a5b93596784975988680b72d2",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "점묘화풍 배경과 입체 인형을 결합한 연출로 색채와 구성이 매우 세심하게 디자인되어 시각적 성격이 뚜렷함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3b8cf589a218f9633bff37f9bd4d55b0ec00d6e9c37c630a6382263c267cc988",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a997007f00138cf9aa3584889a0d8141312692d4878e7282153b3074cf7c24d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548673_2",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9fa49c143139b317142b18436c6f7518279570aad1b8fa0ab18f60da0179af5b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/73/3548673_image2_1.jpg"
+        },
+        "record_sha256": "e134352263ce736c307b20e700861e37a82849057171d900033bf327ba47cc6b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "원목 바닥과 라탄 의자 등 재질의 따뜻함은 있으나 전통적 외관·구성의 특성은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:68d79dbc75b540f0b93beb31ef4d9efa84f97e444716dd8147b58bb66a59a662",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3b1d9cba908d02d3355538d4e748be077e9472b535402421d08a2b110e6c979f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548692_8",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a34e2cc85393e006f59f36db7dfc84ed46ab004af43ca416383029105afbeddb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/3548692_image2_1.jpg"
+        },
+        "record_sha256": "2b5205261ee4dc5db4a2ada5ffb4a0f974a631467bc9bea0be241caab7a88930",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "나무, 강, 잔디, 배 등 자연 경관 요소가 배경 그림과 소품으로 잘 표현되어 있으나 실내 전시 연출 이미지임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:89ddda9c41997da965acedf3714ce99cd5a7ae08d5684f566d3f3b1bf1dfdcf4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a997007f00138cf9aa3584889a0d8141312692d4878e7282153b3074cf7c24d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548673_2",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9fa49c143139b317142b18436c6f7518279570aad1b8fa0ab18f60da0179af5b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/73/3548673_image2_1.jpg"
+        },
+        "record_sha256": "70dee3e11876591146d9ae03088c28b129e81abd49ffa885a5765cff49111c71",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "창가에 앉힌 대형 곰 인형과 따뜻한 원목·라탄 가구의 반복 배치가 귀엽고 연출된 분위기를 뚜렷하게 만든다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c2c16b121c97e96be85d25e6b6d106ff0b0dcde718738870780d9f96813191ad",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "3b1d9cba908d02d3355538d4e748be077e9472b535402421d08a2b110e6c979f",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548692_8",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a34e2cc85393e006f59f36db7dfc84ed46ab004af43ca416383029105afbeddb",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/92/3548692_image2_1.jpg"
+        },
+        "record_sha256": "de26230a0a65d03d5c6a1eae719dbe88e2214b86dc0923cc21ef96cf2005944b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "어두운 벽에 주황빛 조명이 켜진 액자형 진열장이 격자로 배치되어 강한 명암 대비와 연출이 장면을 지배함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c4ef6cf486dd32fec88a6c42c519a818a3be73ff995d80beec29aaa48936b506",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "40b0bc160641c304c63a0de7b8463f166b17c8b14ff715cf15c7a997d36dc014",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548677_3",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "09274407f43446cf1db09137d5a0727a8940e4d2980938640ad3c4235c36b857",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/77/3548677_image2_1.jpg"
+        },
+        "record_sha256": "514cd8d11f7017fcb58705c1622a86d6a565392758730992da9e818c9146dfa4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "인형들의 빅토리아풍 복장과 우산, 모자 등 옛 시대 복장 재현이 보이나 전통 건축 재질보다는 복장 중심의 재현.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f58ba90eb2a4699c7e47155075ff2d92ded3d49a32489b3eb38259ab38994ce4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5a997007f00138cf9aa3584889a0d8141312692d4878e7282153b3074cf7c24d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3548673_2",
+          "request_sha256": "bef5ef254ac1499ec7d7aa8841c5ba227b59a8eada874a07f399e405dc4b99d8",
+          "response_sha256": "96d511c3bf9078e1f701a1e1892d6db2ac67bb32a41e6a5128e885a562b432c4",
+          "retrieved_at": "2026-09-10T08:28:37.341286Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9fa49c143139b317142b18436c6f7518279570aad1b8fa0ab18f60da0179af5b",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/73/3548673_image2_1.jpg"
+        },
+        "record_sha256": "b4c68da66c1f0b822f2bf34ba52854fd7b82b34f64140ff3f0f3550489f71a60",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:c8720efa413875b7059ff726e1b37cfa0a10f869d6f82d968886f6d4dfcac309",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "130317",
+          "request_sha256": "7bb799d1447fe0d0a67dd23c1977ee61d3476941dc1f43904071b1bc5b431acf",
+          "response_sha256": "31442e11ce2742cae593665750f85cbc06133f3d0936751ba17ae72607b54713",
+          "retrieved_at": "2026-09-10T05:26:38.393797Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-20T00:27:38Z",
+          "source_record_sha256": "1c3adc75484ccdfbd0954b8c03ae41cba6f95e02a3b9b32de7d07df823990f92",
+          "source_uri": null
+        },
+        "record_sha256": "3beb646da7cce9c04b1b4cb51f54e09acbb4b65fe752a8f54e7d9f1f12239342",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "100년이 넘는 테디베어의 역사와 서울의 역사, 근현대 100년 인류사, 서울의 역사와 현재의 모습, 예술, 세계여행 등의 여러 가지 테마를 테디베어와 접목해 재미있는 볼거리와 알 거리를 제공하는 테마 박물관이다. 1902년에 탄생한 테디베어의 역사를 전시한 국내 최초이자 최대 규모의 박물관이다. 세계 각국에서 모아 온 진귀한 테디베어들이 전시되어 있을 뿐만 아니라, 테디베어 전시를 통해서 20세기 인류 역사를 소개하고 있다. 엘비스 프레슬리의 유명 공연을 감상할 수 있고, 세계적인 명화를 패러디한 베어 등 흥미롭고 다채로운 구성으로 아이에서 어른 할 것 없이 누구나 좋아하고 사랑하는 테디베어를 만날 수 있다. 기념품 매장, 카페테리아, 수유실 등의 부대시설이 운영되고 있다. 2021년 5월, 20주년을 맞아 새롭게 단장하고 재개관해 새로운 테디베어들을 만나볼 수 있다. 테디베어뮤지엄은 중문 관광단지에 위치해 다른 관광지로 이동이 수월하고, 중문 색달해변이 내려가 보이는 잔디광장과 야외정원이 조성되어 있어 싱그러운 바닷바람과 함께 산책의 여유로움도 찾을 수 있다."
+      }
+    ],
+    "parent_source_sha256": "9f1c3a0d08a5006d45c984cd425d1dcf4630df49442d43a4aaf7c5e03cb999be",
+    "place": {
+      "address": "제주특별자치도 서귀포시 중문관광로110번길 31",
+      "category": "문화시설",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+      "name_ko": "테디베어뮤지엄 제주",
+      "place_id": "public:korea:d348f4d6caa9392bfea91f6ee0a799c028db7a371d45684891e15629642c7015",
+      "provider_content_id": "130317",
+      "region_code": "50130",
+      "region_name": "제주특별자치도 서귀포시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

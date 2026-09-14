@@ -1,0 +1,558 @@
+{
+  "assessed_at": "2026-09-11T16:10:16.527941Z",
+  "assessment_sha256": "276ea13ba2cae5335c277062a351c10c36ea5dbe9a6d7a1ddcc8d075f417d6cf",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.a",
+        "E.b"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.c",
+        "E.d"
+      ],
+      "value": 63
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 75
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "바다와 호수의 대비, 일출·일몰·야경 등 뚜렷한 시각적 경관 성격이 확인됩니다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "일출·일몰·야경 등 대표 장면을 직접 관람할 수 있는 관람 포인트가 명시되나, 재현·참여까지의 근거는 없습니다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책·나들이 등 자율적으로 탐색할 공간이 명시되나, 일상 이탈 경험이 중심이라는 근거까지는 없습니다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "바다·호수·철새 등 자연 환경 단서와 한적함이 공식 설명으로 확인되나, 환경이 공간을 지배한다는 수준의 근거는 제한적입니다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "낚시, 서해랑길 걷기 등 구체적 참여 활동 기회가 확인되나 지속적 도전 활동이 중심이라는 근거는 없습니다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "방조제 자체는 인공 구조물이며, 원형·유산과의 접촉을 지원하는 근거가 없습니다. 준공 연도는 역사적 원형 접촉을 증명하지 않습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개관·준공·교통 단축 사실만 있을 뿐, 장소의 구체적 역사 맥락 탐구 지원 근거는 부족합니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 실제 연결을 보여주는 근거가 없습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산에 연결된 해설·학습 프로그램에 대한 근거가 없습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "제시된 근거는 '낚시 명소로 인기가 많다'는 인기 서술입니다. 유명세·인기만으로 공유되는 상징·의미의 내용을 만들 수 없다는 지침에 따라, '낚시 명소'라는 명칭이 간단한 이미지 표현(수준 1)으로 인정할 수 있는지는 원문만으로 확정하기 어렵습니다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 재현·확산에 대한 근거가 없습니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab",
+          "quote": {
+            "end": 362,
+            "method": "EXACT",
+            "original": "한쪽은 파란 바다가 펼쳐지고 뒤로 돌아보면 인공 호수인 영암호가 평화롭게 펼쳐진다",
+            "start": 317,
+            "submitted": "한쪽은 파란 바다가 펼쳐지고 뒤로 돌아보면 인공 호수인 영암호가 평화롭게 펼쳐진다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "316974f3e9ad46d756cca03e0fe5539ade352f678f54ce9caca395499bab1570"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 3,
+      "reason": "바다와 호수의 대비, 일출·일몰·야경 등 뚜렷한 시각적 경관 성격이 확인됩니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab",
+          "quote": {
+            "end": 510,
+            "method": "EXACT",
+            "original": "방조제의 일출과 일몰, 야경의 관람 포인트로 선박 제조회사인 현대삼호중공업의 야경 등을 넓은 공간에서 호젓하게 조망할 수 있는",
+            "start": 440,
+            "submitted": "방조제의 일출과 일몰, 야경의 관람 포인트로 선박 제조회사인 현대삼호중공업의 야경 등을 넓은 공간에서 호젓하게 조망할 수 있는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "316974f3e9ad46d756cca03e0fe5539ade352f678f54ce9caca395499bab1570"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 2,
+      "reason": "일출·일몰·야경 등 대표 장면을 직접 관람할 수 있는 관람 포인트가 명시되나, 재현·참여까지의 근거는 없습니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab",
+          "quote": {
+            "end": 431,
+            "method": "EXACT",
+            "original": "산책하면서 영암호를 둘러보고 바닷바람을 쐬며 나들이하기 좋은 한적한 공간이다",
+            "start": 389,
+            "submitted": "산책하면서 영암호를 둘러보고 바닷바람을 쐬며 나들이하기 좋은 한적한 공간이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "316974f3e9ad46d756cca03e0fe5539ade352f678f54ce9caca395499bab1570"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 3,
+      "reason": "산책·나들이 등 자율적으로 탐색할 공간이 명시되나, 일상 이탈 경험이 중심이라는 근거까지는 없습니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab",
+          "quote": {
+            "end": 431,
+            "method": "EXACT",
+            "original": "바닷바람을 쐬며 나들이하기 좋은 한적한 공간이다",
+            "start": 405,
+            "submitted": "바닷바람을 쐬며 나들이하기 좋은 한적한 공간이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "316974f3e9ad46d756cca03e0fe5539ade352f678f54ce9caca395499bab1570"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "바다·호수·철새 등 자연 환경 단서와 한적함이 공식 설명으로 확인되나, 환경이 공간을 지배한다는 수준의 근거는 제한적입니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab",
+          "quote": {
+            "end": 265,
+            "method": "EXACT",
+            "original": "해수어와 담수어를 동시에 낚을 수 있는 매력적인 낚시터이다",
+            "start": 233,
+            "submitted": "해수어와 담수어를 동시에 낚을 수 있는 매력적인 낚시터이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "316974f3e9ad46d756cca03e0fe5539ade352f678f54ce9caca395499bab1570"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 3,
+      "reason": "낚시, 서해랑길 걷기 등 구체적 참여 활동 기회가 확인되나 지속적 도전 활동이 중심이라는 근거는 없습니다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "'서해랑길 15코스'라는 사실은 걷기 코스의 존재를 알릴 뿐, 교류·공동 활동·자기표현의 기회를 직접 보여주지 않습니다. 제안서 스스로 '추정'임을 인정한 만큼 수준 2 '구체적인 교류·표현 기회'로 SUPPORTED할 수 없습니다.",
+      "state": "REJECTED"
+    }
+  ],
+  "model_request_sha256": "f0dcd247e77a7d16a04ae7cc1a478e4192ddd53e299b8e347992df19a339e33e",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.a",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "REPRESENTED_MEANING",
+              "evidence_id": "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab",
+              "quote": {
+                "end": 232,
+                "method": "EXACT",
+                "original": "가을철 갈치낚시 명소로 인근 시민들과 낚시꾼에게 인기가 많으며",
+                "start": 198,
+                "submitted": "가을철 갈치낚시 명소로 인근 시민들과 낚시꾼에게 인기가 많으며",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "316974f3e9ad46d756cca03e0fe5539ade352f678f54ce9caca395499bab1570"
+            }
+          ],
+          "flags": [],
+          "key": "E.a",
+          "level": 1,
+          "reason": "낚시 명소라는 간단한 장소 이미지가 공유되어 있다는 표현은 있으나, 구체적 의미·이야기 체계의 근거는 약해 수준 1로 판단합니다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "E.a",
+          "reason": "제시된 근거는 '낚시 명소로 인기가 많다'는 인기 서술입니다. 유명세·인기만으로 공유되는 상징·의미의 내용을 만들 수 없다는 지침에 따라, '낚시 명소'라는 명칭이 간단한 이미지 표현(수준 1)으로 인정할 수 있는지는 원문만으로 확정하기 어렵습니다."
+        }
+      },
+      "reason": "제시된 근거는 '낚시 명소로 인기가 많다'는 인기 서술입니다. 유명세·인기만으로 공유되는 상징·의미의 내용을 만들 수 없다는 지침에 따라, '낚시 명소'라는 명칭이 간단한 이미지 표현(수준 1)으로 인정할 수 있는지는 원문만으로 확정하기 어렵습니다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "RELATIONAL_ACTIVITY",
+              "evidence_id": "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab",
+              "quote": {
+                "end": 545,
+                "method": "EXACT",
+                "original": "서해랑길 15코스이기도 하다",
+                "start": 530,
+                "submitted": "서해랑길 15코스이기도 하다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "316974f3e9ad46d756cca03e0fe5539ade352f678f54ce9caca395499bab1570"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.d",
+          "level": 2,
+          "reason": "둘레길 코스라는 점에서 동행 걷기 등 관계 형성 여지를 제한적으로 추정할 수 있으나, 교류·자기표현 활동에 대한 직접 근거는 부족합니다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "UNSUPPORTED_INFERENCE"
+          ],
+          "key": "R.d",
+          "reason": "'서해랑길 15코스'라는 사실은 걷기 코스의 존재를 알릴 뿐, 교류·공동 활동·자기표현의 기회를 직접 보여주지 않습니다. 제안서 스스로 '추정'임을 인정한 만큼 수준 2 '구체적인 교류·표현 기회'로 SUPPORTED할 수 없습니다."
+        }
+      },
+      "reason": "'서해랑길 15코스'라는 사실은 걷기 코스의 존재를 알릴 뿐, 교류·공동 활동·자기표현의 기회를 직접 보여주지 않습니다. 제안서 스스로 '추정'임을 인정한 만큼 수준 2 '구체적인 교류·표현 기회'로 SUPPORTED할 수 없습니다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "3072846c681a75d5fb121078501e1f6d23bd7a92413958e0c5eaf87fd9ee19b7",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:e28c58a77fdcb34f3256dfdd99a05afaab05fc838e415bf57538f86c6d8e50ab",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:260dd0f245975bd92734e04e60591d28c1b0ea7afbb29e6c7046d4237e1be588",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3014405",
+          "request_sha256": "adb02df6c40b1a1f109da0ebebf92fe38cda6a2593b6838b8bf7c2d8ba99dfab",
+          "response_sha256": "7f490adf5b619e2e8740e1c2d844b33b79153b4ca2b59d6688083ae1974bd578",
+          "retrieved_at": "2026-09-10T07:30:09.901058Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-06-30T09:44:28Z",
+          "source_record_sha256": "065f8d1ebb19105fce029cce6efa35ccf27528ceeca504e0a14461ac2617747f",
+          "source_uri": null
+        },
+        "record_sha256": "316974f3e9ad46d756cca03e0fe5539ade352f678f54ce9caca395499bab1570",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "영암금호방조제는 해남군 화원면과 영암군 삼호읍을 연결하는 방조제로 대규모 농경지와 수자원 확보를 위해 완성된 길이 4.3㎞의 방조제이다. 1996년 영암금호방조제가 준공되면서 해남에서 영암을 거쳐 목포로 가는 시간이 단축되었으며, 멀리는 진도~해남군 화원면~산이면~영암군 삼호읍~목포시가 하루 생활권이 되었다. 현재 영암금호방조제 배수갑문 옆 방조제에는 가을철 갈치낚시 명소로 인근 시민들과 낚시꾼에게 인기가 많으며 해수어와 담수어를 동시에 낚을 수 있는 매력적인 낚시터이다. 또한 이곳은 겨울철 금호호로 찾아오는 철새들의 장관을 볼 수 있다. 방조제 둑 위에 서면 한쪽은 파란 바다가 펼쳐지고 뒤로 돌아보면 인공 호수인 영암호가 평화롭게 펼쳐진다. 한국농어촌공사 건물이 있는 문가도 해남광장은 산책하면서 영암호를 둘러보고 바닷바람을 쐬며 나들이하기 좋은 한적한 공간이다. 또한 이곳은 방조제의 일출과 일몰, 야경의 관람 포인트로 선박 제조회사인 현대삼호중공업의 야경 등을 넓은 공간에서 호젓하게 조망할 수 있는 숨겨진 명소이다. 영암금호방조제는 서해랑길 15코스이기도 하다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:f0c62eb4dc4e76ab862d259fa04acd4df4cbb7e6c447b7548f4aa750b0ede9e4",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:260dd0f245975bd92734e04e60591d28c1b0ea7afbb29e6c7046d4237e1be588",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3014405",
+          "request_sha256": "fd4f8081f61eb86e3061750df0e0fcfde5082175b7abc9aeb2e9787068c4eba7",
+          "response_sha256": "f0c5650f4ae279134b34e93eb6b3684e48344aa7b7e8114b947883a21151abcd",
+          "retrieved_at": "2026-09-10T08:20:29.456539Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e7f9f2b912915f5d26afafa88a5bc9240d2cdbb96d13bc15e0e977c8ee32dea8",
+          "source_uri": null
+        },
+        "record_sha256": "ecb6216c3dac8f0c077e67cedd20be9bee8119db62ad362d3542d499975757a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      }
+    ],
+    "parent_source_sha256": "a18913ec6bbbe0fb5d6eff4fcb10d8f3ddb57f69c6ac2f36dd34a552c20b172f",
+    "place": {
+      "address": "전남광주통합특별시 해남군 산이면 구성리",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:260dd0f245975bd92734e04e60591d28c1b0ea7afbb29e6c7046d4237e1be588",
+      "name_ko": "영암금호방조제",
+      "place_id": "public:korea:260dd0f245975bd92734e04e60591d28c1b0ea7afbb29e6c7046d4237e1be588",
+      "provider_content_id": "3014405",
+      "region_code": "12790",
+      "region_name": "전남광주통합특별시 해남군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

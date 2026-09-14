@@ -1,0 +1,1012 @@
+{
+  "assessed_at": "2026-09-11T18:55:09.822767Z",
+  "assessment_sha256": "53956ddb7a7e1622d88521476fd1313566433490d84184b1d9bc3b7324eea409",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 54
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.d"
+      ],
+      "value": 68
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "붓꽃이라는 주제 이미지가 장소와 연결되어 있으나, 그 의미가 여러 표현에서 일관되게 확인된다는 근거는 제한적.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:301d0d376fdb2c47e97e0a27463fdd49de31ee9f893e9d5912409c8d0ecb150a",
+            "appearance:46338f9624d3fc6bc593da34d3c5f6e7b3cd95d6fe0ff436429e43ec0848eaad",
+            "appearance:94a02b87c6866e69e5ae0441bb1c58845dbaa41c8e7331bfed869831e8a65407"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 58,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "value": 58
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "둘레길 걷기와 스탬프 트래킹 등 자율적 탐색 기회가 확인되며, 12개 테마원을 스스로 둘러볼 여지가 있다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:53af5f93bcf6c4aa48310035b569b67753ab236909f58dd793568bee0a98a315",
+            "appearance:54fba28150b9180c0357ce5b695ffa8389fe708bf30d4c94ea4c90c39b25a8d4",
+            "appearance:6266be0d12d889dfc333c61b5226b8a8ee20754c6e0144173a803aa477da09f1"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "습지, 숲속 쉼터, 잔디마당 등 자연 환경 단서와 머무를 환경이 확인되나, 실제 고요함·저자극성을 확정할 근거는 없어 상위 수준으로 보기 어렵다.",
+      "value": 79
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "주민 대상 생태교육이 교류 기회로 확인되나, 공동 활동·자기표현이 풍부하다는 근거는 제한적. 북카페 등도 제한적 단서 수준.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "북꽃(붓꽃) 생태공원이라는 설명만 있고, 확인된 실제 원형·유산과의 접촉에 대한 근거가 없다. 생태공원 조성은 문화유산 원형을 증명하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "장소의 실제 역사·연혁·사건·인물 맥락에 대한 설명이 자료에 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 근거가 없다. 붓꽃 주제 자체가 전통 전승을 의미하지 않는다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "앵커는 '유산·전통에 연결된 설명·전시'이나 제시된 근거(천이관찰원, 생태교육)는 자연 생태 해설이지 원형·유산·전통과 연결된 역사적 해설·탐구가 아니다. 재판정 사유 자체가 이를 인정하고 있어 현재 수준의 부적합이며, 유산 해설로 볼 수 없다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9",
+          "quote": {
+            "end": 38,
+            "method": "EXACT",
+            "original": "세계 4대 꽃 중 하나인 붓꽃을 주제로 하는 생태공원이다",
+            "start": 7,
+            "submitted": "세계 4대 꽃 중 하나인 붓꽃을 주제로 하는 생태공원이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4da1960aef03de2f6d848c8bf2037b0a69c91f3c0dcd88302fdb4f61b596427d"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 2,
+      "reason": "붓꽃이라는 주제 이미지가 장소와 연결되어 있으나, 그 의미가 여러 표현에서 일관되게 확인된다는 근거는 제한적.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체·작품·홍보·SNS를 통한 장소 이미지의 재현·확산에 대한 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있다는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9",
+          "quote": {
+            "end": 525,
+            "method": "EXACT",
+            "original": "자연을 감상하면서 도봉산 둘레길을 걸으며 스탬프도 찍을 수 있다",
+            "start": 490,
+            "submitted": "자연을 감상하면서 도봉산 둘레길을 걸으며 스탬프도 찍을 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4da1960aef03de2f6d848c8bf2037b0a69c91f3c0dcd88302fdb4f61b596427d"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 3,
+      "reason": "둘레길 걷기와 스탬프 트래킹 등 자율적 탐색 기회가 확인되며, 12개 테마원을 스스로 둘러볼 여지가 있다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9",
+          "quote": {
+            "end": 268,
+            "method": "EXACT",
+            "original": "습지원에서는 각종 수생식물과 습지 생물들을 관찰할 수 있도록 관찰 데크가 설치되어 있다",
+            "start": 220,
+            "submitted": "습지원에서는 각종 수생식물과 습지 생물들을 관찰할 수 있도록 관찰 데크가 설치되어 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4da1960aef03de2f6d848c8bf2037b0a69c91f3c0dcd88302fdb4f61b596427d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "습지, 숲속 쉼터, 잔디마당 등 자연 환경 단서와 머무를 환경이 확인되나, 실제 고요함·저자극성을 확정할 근거는 없어 상위 수준으로 보기 어렵다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "제안 앵커는 '지속적으로 참여·도전할 활동'(상위 수준)이나, 관찰 데크, 둘레길 걷기, 스탬프 수집은 제한적이거나 일회성 탐방 활동으로 지속적 참여·도전·몰입 활동의 근거가 부족하다. 재판정 사유도 이를 인정한다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9",
+          "quote": {
+            "end": 435,
+            "method": "EXACT",
+            "original": "주민들에게 생태교육 및 여가와 휴식 공간으로 제공한다",
+            "start": 406,
+            "submitted": "주민들에게 생태교육 및 여가와 휴식 공간으로 제공한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "4da1960aef03de2f6d848c8bf2037b0a69c91f3c0dcd88302fdb4f61b596427d"
+        }
+      ],
+      "flags": [],
+      "key": "R.d",
+      "level": 2,
+      "reason": "주민 대상 생태교육이 교류 기회로 확인되나, 공동 활동·자기표현이 풍부하다는 근거는 제한적. 북카페 등도 제한적 단서 수준.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED",
+      "key": "E.c",
+      "proposed": {
+        "basis": "DIRECT_SUPPORT",
+        "citations": [
+          {
+            "claim": "VISUAL_APPEARANCE",
+            "evidence_id": "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9",
+            "quote": "노랑꽃창포, 부처붓꽃, 타래붓꽃, 범부채 등 130종의 다양한 붓꽃 30만 본을 약 15,000㎡의 면적에 심어"
+          }
+        ],
+        "key": "E.c",
+        "level": 3,
+        "reason": "130종 30만 본의 붓꽃과 계절별 초화, 습지원 등 시각적으로 구별되는 경관의 성격이 확인되나, 연출이 장면을 지배한다는 근거까지는 부족하다.",
+        "state": "SUPPORTED",
+        "subject": "THIS_PLACE"
+      },
+      "reason": "SOURCE_CLAIM_FACET_NOT_AUTHORIZED"
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "H.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "HERITAGE_INTERPRETATION",
+              "evidence_id": "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9",
+              "quote": {
+                "end": 416,
+                "method": "EXACT",
+                "original": "군락지 식생의 변화 과정을 관찰할 수 있는 천이관찰원을 비롯해 숲속 쉼터 등을 조성하고 주민들에게 생태교육",
+                "start": 357,
+                "submitted": "군락지 식생의 변화 과정을 관찰할 수 있는 천이관찰원을 비롯해 숲속 쉼터 등을 조성하고 주민들에게 생태교육",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "4da1960aef03de2f6d848c8bf2037b0a69c91f3c0dcd88302fdb4f61b596427d"
+            }
+          ],
+          "flags": [],
+          "key": "H.d",
+          "level": 2,
+          "reason": "생태교육과 천이·식물 관찰 해설 제공이 확인되나, 이는 자연 생태 해설이지 원형·유산·전통에 연결된 역사 탐구는 아니므로 제한적 수준으로 평가.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "WRONG_FACET"
+          ],
+          "key": "H.d",
+          "reason": "앵커는 '유산·전통에 연결된 설명·전시'이나 제시된 근거(천이관찰원, 생태교육)는 자연 생태 해설이지 원형·유산·전통과 연결된 역사적 해설·탐구가 아니다. 재판정 사유 자체가 이를 인정하고 있어 현재 수준의 부적합이며, 유산 해설로 볼 수 없다."
+        }
+      },
+      "reason": "앵커는 '유산·전통에 연결된 설명·전시'이나 제시된 근거(천이관찰원, 생태교육)는 자연 생태 해설이지 원형·유산·전통과 연결된 역사적 해설·탐구가 아니다. 재판정 사유 자체가 이를 인정하고 있어 현재 수준의 부적합이며, 유산 해설로 볼 수 없다."
+    },
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9",
+              "quote": {
+                "end": 268,
+                "method": "EXACT",
+                "original": "각종 수생식물과 습지 생물들을 관찰할 수 있도록 관찰 데크가 설치되어 있다",
+                "start": 227,
+                "submitted": "각종 수생식물과 습지 생물들을 관찰할 수 있도록 관찰 데크가 설치되어 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "4da1960aef03de2f6d848c8bf2037b0a69c91f3c0dcd88302fdb4f61b596427d"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "식물 관찰, 둘레길 걷기, 스탬프 수집 등 참여형 탐방 활동이 확인되나, 지속적 도전·몰입 활동의 중심이라는 근거는 부족.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "제안 앵커는 '지속적으로 참여·도전할 활동'(상위 수준)이나, 관찰 데크, 둘레길 걷기, 스탬프 수집은 제한적이거나 일회성 탐방 활동으로 지속적 참여·도전·몰입 활동의 근거가 부족하다. 재판정 사유도 이를 인정한다."
+        }
+      },
+      "reason": "제안 앵커는 '지속적으로 참여·도전할 활동'(상위 수준)이나, 관찰 데크, 둘레길 걷기, 스탬프 수집은 제한적이거나 일회성 탐방 활동으로 지속적 참여·도전·몰입 활동의 근거가 부족하다. 재판정 사유도 이를 인정한다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "e4b540e7a1db22323a4a5fb31f3eada4cd68b0b24bd2598407b0729a699cdc0d",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "노란색과 붉은색 단풍이 파란 하늘과 대비를 이루며 화면을 지배하고, 좁은 흙길이 중앙으로 시선을 끄는 구도가 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:301d0d376fdb2c47e97e0a27463fdd49de31ee9f893e9d5912409c8d0ecb150a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f07d7c17d27878d8aa626d53a8b8ef6128c8b3fb515bcb37c726dd7e81289ab",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569093_13",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b3c2f2dd7fa7b644e68f5492a615eccf41e66ee68ded5c6f8ebd98137711709",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3569093_image2_1.jpg"
+        },
+        "record_sha256": "af61d3ca829e28bbebd44d152ba8a888c4782f9aecca6e07c25d45f0a7e1bd63",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "넓은 회색 포장 광장, 흰 지붕의 아치형 건물, 녹색·황색으로 물든 나무들이 어우러진 개방적이고 정돈된 구도. 색채는 절제되어 있으나 곡선 지붕과 우산형 그늘막 등 형태의 변화가 보통 수준으로 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:46338f9624d3fc6bc593da34d3c5f6e7b3cd95d6fe0ff436429e43ec0848eaad",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "38d50ef07eca89fddad36099768ea1df8506a1ac8a74353baa7091ec90853814",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569111_19",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b72e24343741bc8b7d714d5173e9c69a104f984aa28d2859f91af09bdaf4f447",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3569111_image2_1.jpg"
+        },
+        "record_sha256": "ed6c67ee4200f86c5e039761d5e5afce763d14acec99a2e17cf1c7b88bf64741",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "억새와 다양한 초화, 단풍나무, 배경의 산과 하늘이 장면 전체를 채우며 자연 환경 단서가 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:53af5f93bcf6c4aa48310035b569b67753ab236909f58dd793568bee0a98a315",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f07d7c17d27878d8aa626d53a8b8ef6128c8b3fb515bcb37c726dd7e81289ab",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569093_13",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b3c2f2dd7fa7b644e68f5492a615eccf41e66ee68ded5c6f8ebd98137711709",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3569093_image2_1.jpg"
+        },
+        "record_sha256": "c1d260ba78f5150675f71a4fbca3243b3f3cc1f310f930ba1b23708406711730",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "울창한 수목, 시냇물, 잔디밭, 돌과 갈대 등 자연 환경 요소가 장면 전체를 지배하며 녹지와 물이 뚜렷하게 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:54fba28150b9180c0357ce5b695ffa8389fe708bf30d4c94ea4c90c39b25a8d4",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "169bee17f1b1adcbf62e3313d59b3f74a73b46c0cd10137de5e353a12b4a689b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569092_11",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "835af25f8966f68b1f0017b097c23ab9735ee5a01bda31f90fd68fcc91c581b5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3569092_image2_1.jpg"
+        },
+        "record_sha256": "b5f2f6809ce79f95094e8d8009f394b2e126345f56b978209859752a6fdff84c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "수관이 크고 단단한 나무, 소나무 숲, 원경의 산자락, 푸른 하늘과 구름이 화면 상당 부분을 차지하며 자연 환경 단서가 뚜렷함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:6266be0d12d889dfc333c61b5226b8a8ee20754c6e0144173a803aa477da09f1",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "38d50ef07eca89fddad36099768ea1df8506a1ac8a74353baa7091ec90853814",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569111_19",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b72e24343741bc8b7d714d5173e9c69a104f984aa28d2859f91af09bdaf4f447",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3569111_image2_1.jpg"
+        },
+        "record_sha256": "c3ca84c01ed3ef6d83164a0bf23ce4151b6112e2ed04ebc54cd7c44bdff9e104",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "목재 아치교, 자연석 돌, 수변 갈대 등 전통 정원을 연상시키는 외관 요소가 보이나 규모가 작고 절제되어 있다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:628ccd7cadd7e8ca2f3fa216ae18ea1caeed7f2771b7ede90144b66579789457",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "169bee17f1b1adcbf62e3313d59b3f74a73b46c0cd10137de5e353a12b4a689b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569092_11",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "835af25f8966f68b1f0017b097c23ab9735ee5a01bda31f90fd68fcc91c581b5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3569092_image2_1.jpg"
+        },
+        "record_sha256": "b6fca616bee0adba448d9ac5c027da49ddfcbb0604887d83b29eef31d5a2a183",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "전통 재료나 기와·한옥형 구성은 보이지 않고, 흰 지붕의 현대적 건축물과 포장 광장이 중심이라 전통적 외관 특성은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:72720c640dfc3618e0230c39d226b2d75102e86247c3ca36381ad6349971a829",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "38d50ef07eca89fddad36099768ea1df8506a1ac8a74353baa7091ec90853814",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569111_19",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "b72e24343741bc8b7d714d5173e9c69a104f984aa28d2859f91af09bdaf4f447",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/11/3569111_image2_1.jpg"
+        },
+        "record_sha256": "7dea687cf715446af81a93c534e6cf1d0ca9975dec6f6d40acd4468923bbab10",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "둥근 아치형 목교와 곡선적인 하천, 울창한 나무들이 조화로운 공원 구도를 이루나 전반적으로 차분하고 평범한 채광의 풍경 사진이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:94a02b87c6866e69e5ae0441bb1c58845dbaa41c8e7331bfed869831e8a65407",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "169bee17f1b1adcbf62e3313d59b3f74a73b46c0cd10137de5e353a12b4a689b",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569092_11",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "835af25f8966f68b1f0017b097c23ab9735ee5a01bda31f90fd68fcc91c581b5",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/92/3569092_image2_1.jpg"
+        },
+        "record_sha256": "70f9eba4a0ae4aaa1e3b648f68b47485ade9ab2be53c49e9f1233921aeff92d5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "돌로 만든 계단과 비석형 석물, 잔돌로 보석 길이 보이지만 배경의 현대적 건물과 혼재하여 전통적 외관은 보통 수준이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:d0062c636696181cdada92ca2e18d01caa1b6b1f83440a0af9058d7054420fcd",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "5f07d7c17d27878d8aa626d53a8b8ef6128c8b3fb515bcb37c726dd7e81289ab",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3569093_13",
+          "request_sha256": "db8b858a2f0e5458bcd906ba451afd071475bf9d4a74c148ae75898642e3d358",
+          "response_sha256": "b0f526b37f7cfcae228f7f281392cf05b82460947819ff29339a01844c7f9be0",
+          "retrieved_at": "2026-09-11T02:10:04.313824Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "5b3c2f2dd7fa7b644e68f5492a615eccf41e66ee68ded5c6f8ebd98137711709",
+          "source_uri": "http://tong.visitkorea.or.kr/cms/resource/93/3569093_image2_1.jpg"
+        },
+        "record_sha256": "61cd0ffe14960b63ec2952341e455e6f847f14220a402f1cc8f2070b84bc434d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:23afdd08491cdd965a785812ad213317df500ff1619fea4391c39278e2956db9",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "749216",
+          "request_sha256": "e3d8a85e6401dd3350168ba0f98a7e29ebbfd67aa9db913857b9c6cd27a7af7a",
+          "response_sha256": "2c1f447055c1c960a1c85343fdff1a84ae4e5f73d6c5e10721b5b57c5760fab8",
+          "retrieved_at": "2026-09-10T16:40:05.671995Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2025-12-04T08:49:46Z",
+          "source_record_sha256": "5e16f497ebbc13110d1cd11921c2713b0251abadcd1a30ce87968ca0b627f367",
+          "source_uri": null
+        },
+        "record_sha256": "4da1960aef03de2f6d848c8bf2037b0a69c91f3c0dcd88302fdb4f61b596427d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "서울창포원은 세계 4대 꽃 중 하나인 붓꽃을 주제로 하는 생태공원이다. 붓꽃원, 습지원, 초화원, 약용식물원 등 12개의 테마로 조성되었다. 붓꽃원에는 노랑꽃창포, 부처붓꽃, 타래붓꽃, 범부채 등 130종의 다양한 붓꽃 30만 본을 약 15,000㎡의 면적에 심어 다양한 종류의 붓꽃을 감상할 수 있다. 붓꽃은 매년 5~6월 개화하며, 꽃이 없을 때는 잎 모양이 난과 비슷해 관상용으로 좋다. 습지원에서는 각종 수생식물과 습지 생물들을 관찰할 수 있도록 관찰 데크가 설치되어 있다. 초화원에는 꽃나리, 튤립 등 화려한 꽃들이 계절별로 피어난다. 약용식물원에는 70종 13만 본을 심어 국내에서 생산되는 약용식물을 관찰할 수 있다. 이밖에 군락지 식생의 변화 과정을 관찰할 수 있는 천이관찰원을 비롯해 숲속 쉼터 등을 조성하고 주민들에게 생태교육 및 여가와 휴식 공간으로 제공한다. 수도권 지하철 1호선, 7호선 도봉산역 2번 출구에서 125m로 도봉산과 수락산 사이에 있다. 자연을 감상하면서 도봉산 둘레길을 걸으며 스탬프도 찍을 수 있다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:271ca188e6395800c3178b9f75587bc0ba73b6f4f787d0037ec98a36052db4cb",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "749216",
+          "request_sha256": "3f41775f7a838d0e69aec530fb12951421e1a4b7dd148920f17f8abb77b74002",
+          "response_sha256": "761c842cb0810f48ce3ef5b2d1f01eed7c9841bbc84be3d06b46024bb3298b29",
+          "retrieved_at": "2026-09-11T02:10:03.974852Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "9eb258fae43f86256e2e009a2c6ffedb971540c5e8f64204ad821a2c0da0568c",
+          "source_uri": null
+        },
+        "record_sha256": "b17726989c2c8f7230581f316bb1f0f4dc792a58b6db3e6e87e5734ccb28e296",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5dbc6c563db7bd223046c008799a39b128d14c4cc39d4635a434e1c96e6b8407",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "749216",
+          "request_sha256": "3f41775f7a838d0e69aec530fb12951421e1a4b7dd148920f17f8abb77b74002",
+          "response_sha256": "761c842cb0810f48ce3ef5b2d1f01eed7c9841bbc84be3d06b46024bb3298b29",
+          "retrieved_at": "2026-09-11T02:10:03.974852Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "185ee04492b82479136e07d7d581306ccc94824b3d38945efc4b8d47c71d5c13",
+          "source_uri": null
+        },
+        "record_sha256": "a4e07b3a2df709d22badd49bf7ec53245823c0ed3db42a9813141012341787db",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "잔디마당 / 북카페 / 방문자 센터 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:cea749acc82662c7be11bf375842dd2edc3e0367b1201d6c6f9b1f83fd639269",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "749216",
+          "request_sha256": "3f41775f7a838d0e69aec530fb12951421e1a4b7dd148920f17f8abb77b74002",
+          "response_sha256": "761c842cb0810f48ce3ef5b2d1f01eed7c9841bbc84be3d06b46024bb3298b29",
+          "retrieved_at": "2026-09-11T02:10:03.974852Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "e9de9836db1cd16ff157a5b5f149d076d31c5aa7857e43cf15cdc2e3814b4804",
+          "source_uri": null
+        },
+        "record_sha256": "ea9705996125b169d6ce35a1ffc9d5a86e036500a2c684efafa14a8caa745c24",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      }
+    ],
+    "parent_source_sha256": "6e490fb5f65dddd454a588004bac5226288ab73d0593e97a52ff77eb99806972",
+    "place": {
+      "address": "서울특별시 도봉구 마들로 916 (도봉동)",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+      "name_ko": "서울창포원",
+      "place_id": "public:korea:c42971c8c87da5a7612a54f9f6f473f579ec187dbab5ceb470bfcb42bd4724d0",
+      "provider_content_id": "749216",
+      "region_code": "11320",
+      "region_name": "서울특별시 도봉구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

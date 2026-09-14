@@ -1,0 +1,732 @@
+{
+  "assessed_at": "2026-09-11T18:02:06.474641Z",
+  "assessment_sha256": "dfca8756ac047774810fe01fdd3bf4eb8194d2ba3ac834243a3e4263d3ad4a7e",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": false,
+      "missing_facets": [
+        "E.a",
+        "E.b",
+        "E.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [
+        "E.c"
+      ],
+      "value": null
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "value": 78
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:410e3c17f5c5774624cebb6efb81bfc0ff35ee6fd25da1b6793b91a65c94d9fb",
+            "appearance:a297b45a665e98cde54ba97f60782925b4c7eb33c284eaf54bfa3a5e07094144",
+            "appearance:c50f7f081f818c283b3ade264136ca11eb2a3155fe0782ca1539c75c8f790bdc"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "타워 구조에 대한 기능적 설명은 있으나 장소 이미지를 표현하는 외관·경관·연출의 시각적 성격에 관한 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:09216458c058b402d3af247f9e9c9173103d56dc7f48f2cfcb6918eea526cce4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:9a16de012827fdb3dc6f7723a54c0641014f5dd59691388d1baca50780321b31",
+            "appearance:f2aeab9f4275edff24b3388e6f1eca47eb9b2a23619b45d2d3d11744949ec312"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "내린천을 바라보는 하천·자연 경관이라는 환경 단서가 확인된다. 다만 실제 고요함이나 회복 효과는 확인되지 않아 제한적인 환경 단서 수준(level 2)으로 판단한다.",
+      "value": 56
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:09216458c058b402d3af247f9e9c9173103d56dc7f48f2cfcb6918eea526cce4"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 100,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "63m 번지점프, 슬링샷, 래프팅, ATV, 서바이벌게임, 스카이집트렉 등 지속적으로 참여·도전할 신체 활동이 다수 확인되며 참여형 활동이 장소 경험의 중심이다.",
+      "value": 100
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제시된 개요는 번지점프 타워 등 레포츠 시설 설명뿐이며, 이 장소의 확인된 실제 원형·유산과의 접촉에 관한 근거가 없다. 호주 기술 이전은 문화유산 원형이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요는 시설 규격과 안전 구조만 설명하고 이 장소의 역사·연혁·사건·인물 맥락에 관한 내용이 없어 평가 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 내용이 제공된 자료에 없다. 레포츠 프로그램 나열만으로 전통 지속을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "유산·전통에 연결된 해설·전시·학습 프로그램에 관한 근거가 없다. 기술 구조 설명은 원형·전통 해설이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.a",
+      "level": null,
+      "reason": "'스릴만점', '두려움의 한계를 극복' 등 스릴 이미지 묘사가 있으나 이 장소에 사회적으로 공유되는 상징·의미가 표현·재현되었다는 근거로는 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "작품, 홍보 매체, SNS 등 장소 이미지의 매체 유통에 관한 내용이 제공된 자료에 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "타워 구조에 대한 기능적 설명은 있으나 장소 이미지를 표현하는 외관·경관·연출의 시각적 성격에 관한 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현(촬영 등)할 수 있다는 근거가 없다. 번지점프 자체가 이미지 재현 활동임을 확인할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.a",
+      "level": null,
+      "reason": "다양한 프로그램 나열은 있으나 방문자가 자율적으로 탐색·선택하고 여유롭게 머물 수 있는 환경에 관한 직접 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:09216458c058b402d3af247f9e9c9173103d56dc7f48f2cfcb6918eea526cce4",
+          "quote": {
+            "end": 64,
+            "method": "EXACT",
+            "original": "63m의 높이에서 내린천을 바라보며 뛰어내리는 스릴만점의 레포츠이다.",
+            "start": 26,
+            "submitted": "63m의 높이에서 내린천을 바라보며 뛰어내리는 스릴만점의 레포츠이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "37a7766bd093454375680367c865c59c2ff06310d6655b05da350fc6d29940d3"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 2,
+      "reason": "내린천을 바라보는 하천·자연 경관이라는 환경 단서가 확인된다. 다만 실제 고요함이나 회복 효과는 확인되지 않아 제한적인 환경 단서 수준(level 2)으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:09216458c058b402d3af247f9e9c9173103d56dc7f48f2cfcb6918eea526cce4",
+          "quote": {
+            "end": 51,
+            "method": "EXACT",
+            "original": "내린천 번지점프는 호주의 리닝타워형 번지점프로 63m의 높이에서 내린천을 바라보며 뛰어내리는",
+            "start": 0,
+            "submitted": "내린천 번지점프는 호주의 리닝타워형 번지점프로 63m의 높이에서 내린천을 바라보며 뛰어내리는",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "37a7766bd093454375680367c865c59c2ff06310d6655b05da350fc6d29940d3"
+        },
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:09216458c058b402d3af247f9e9c9173103d56dc7f48f2cfcb6918eea526cce4",
+          "quote": {
+            "end": 557,
+            "method": "EXACT",
+            "original": "이외에도 내린천래프팅, ATV, 서바이벌게임, 스카이집트렉등 다양한 프로그램이 운영되고 있다.",
+            "start": 505,
+            "submitted": "이외에도 내린천래프팅, ATV, 서바이벌게임, 스카이집트렉등 다양한 프로그램이 운영되고 있다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "37a7766bd093454375680367c865c59c2ff06310d6655b05da350fc6d29940d3"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 4,
+      "reason": "63m 번지점프, 슬링샷, 래프팅, ATV, 서바이벌게임, 스카이집트렉 등 지속적으로 참여·도전할 신체 활동이 다수 확인되며 참여형 활동이 장소 경험의 중심이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "'가족 단위 및 연인들이 함께 이용하기에 적합'하다는 문구와 2인 탑승 언급은 이용 대상 안내일 뿐, 교류·공동 활동·자기표현의 기회를 직접 뒷받침하는 근거로는 부족하다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": "44a7db806d3b774b99d35c2918a7c1b20973ce15e3f1040b748d884e3f537ca7",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "10131b88b1b003c05a109c62ab255f8872dc72b4dc190a5248de3a8d68f1b70c",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "푸른 하늘을 가로지르는 대형 붉은 철제 크레인 구조물이 장면을 지배하며, 공중의 인물과 로프가 역동적 대각 구도를 형성해 시각적 긴장감이 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:410e3c17f5c5774624cebb6efb81bfc0ff35ee6fd25da1b6793b91a65c94d9fb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "303c0a1245a9cf7254d80a54b3e6f6e7b582649b90f7ec6687259ce22dee030c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4066130_5",
+          "request_sha256": "13128ad56c598f321d2b038a491b8b145514e526c1d42f911b6466047eb5ca48",
+          "response_sha256": "5f91d1a452793350177f74fc5caded3cbdfbfcc4f0d88c8c99a03d20ccb31d00",
+          "retrieved_at": "2026-09-11T02:07:33.724301Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d7ad68014e33f22d181a0441785e9710021c8c6153d27e3bf1f2b1303eaf278",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/30/4066130_image2_1.jpg"
+        },
+        "record_sha256": "505724cd2c24297f8f2029c8d41c3e140dafe360f4eda40f720e729b843836ec",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "현대적 강철 탑과 금속 난간 데크 플랫폼만 보이며 전통적 외관·재료·공간 구성의 특징은 거의 보이지 않는다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:4b0c75e755d40e814010fa67dd41a8aad4403040799571431685b4088379430b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6407e420f0bebed9225ef2793ef4150fdb7adc51628656f67fcabf575be0c249",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4066134_12",
+          "request_sha256": "13128ad56c598f321d2b038a491b8b145514e526c1d42f911b6466047eb5ca48",
+          "response_sha256": "5f91d1a452793350177f74fc5caded3cbdfbfcc4f0d88c8c99a03d20ccb31d00",
+          "retrieved_at": "2026-09-11T02:07:33.724301Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4a15c394bee13f5f05b6a74576f9c865f9494aab651269623c650dcc8ea1ac3a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/34/4066134_image2_1.jpg"
+        },
+        "record_sha256": "0d5333458e87256dce21ee95626aeddd4dadc6dfacfbf7f63aafaca1b086a82f",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성으로 보이는 요소가 보이지 않고 현대적 철구조물과 레저 장비만 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:94bb0278462a319b4a5244e59b2556a76b072a1fddeb7a682b180f84978238e7",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "303c0a1245a9cf7254d80a54b3e6f6e7b582649b90f7ec6687259ce22dee030c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4066130_5",
+          "request_sha256": "13128ad56c598f321d2b038a491b8b145514e526c1d42f911b6466047eb5ca48",
+          "response_sha256": "5f91d1a452793350177f74fc5caded3cbdfbfcc4f0d88c8c99a03d20ccb31d00",
+          "retrieved_at": "2026-09-11T02:07:33.724301Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d7ad68014e33f22d181a0441785e9710021c8c6153d27e3bf1f2b1303eaf278",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/30/4066130_image2_1.jpg"
+        },
+        "record_sha256": "2026864da4752b19f1208be435ea74d8ef8e90d18be1fa93af2e2848dd84e3ef",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "아래쪽에 울창한 초록빛 산 능선이 넓게 펼쳐져 있고 맑은 하늘이 트여 있어 자연 환경 단서가 뚜렷하나 산 전경이 부분적으로만 보임",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:9a16de012827fdb3dc6f7723a54c0641014f5dd59691388d1baca50780321b31",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "303c0a1245a9cf7254d80a54b3e6f6e7b582649b90f7ec6687259ce22dee030c",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4066130_5",
+          "request_sha256": "13128ad56c598f321d2b038a491b8b145514e526c1d42f911b6466047eb5ca48",
+          "response_sha256": "5f91d1a452793350177f74fc5caded3cbdfbfcc4f0d88c8c99a03d20ccb31d00",
+          "retrieved_at": "2026-09-11T02:07:33.724301Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4d7ad68014e33f22d181a0441785e9710021c8c6153d27e3bf1f2b1303eaf278",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/30/4066130_image2_1.jpg"
+        },
+        "record_sha256": "d1ed8cf5c92e09dbdd1ecbd313ea88a290a0d4fa9aa5f9a84bc475acc900089e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "짙은 녹색 수림과 강빛, 붉은 철골 구조물의 색 대비가 보통 수준으로 두드러지며, 전경 나뭇잎 프레임을 둔 구도가 연출감을 더한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a297b45a665e98cde54ba97f60782925b4c7eb33c284eaf54bfa3a5e07094144",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6407e420f0bebed9225ef2793ef4150fdb7adc51628656f67fcabf575be0c249",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4066134_12",
+          "request_sha256": "13128ad56c598f321d2b038a491b8b145514e526c1d42f911b6466047eb5ca48",
+          "response_sha256": "5f91d1a452793350177f74fc5caded3cbdfbfcc4f0d88c8c99a03d20ccb31d00",
+          "retrieved_at": "2026-09-11T02:07:33.724301Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4a15c394bee13f5f05b6a74576f9c865f9494aab651269623c650dcc8ea1ac3a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/34/4066134_image2_1.jpg"
+        },
+        "record_sha256": "7c16257f8ff30e2e9249a883a4be69b19cedf7513d1a0f399ebb22a04c1b5be1",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "맑은 하늘을 배경으로 붉은 레일과 파란 지지 구조물이 대각선 구도로 화면을 지배하며, 강렬한 색 대비와 역동적 구성이 매우 두드러짐",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c50f7f081f818c283b3ade264136ca11eb2a3155fe0782ca1539c75c8f790bdc",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "fa4cc4758b663a83a37f37159bf15b65efeb7d050d2bb223a3bd6f820fa8da63",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4066127_4",
+          "request_sha256": "13128ad56c598f321d2b038a491b8b145514e526c1d42f911b6466047eb5ca48",
+          "response_sha256": "5f91d1a452793350177f74fc5caded3cbdfbfcc4f0d88c8c99a03d20ccb31d00",
+          "retrieved_at": "2026-09-11T02:07:33.724301Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "97425182f090b18f9c4139366244c4adc4519c83cf243f9d7038aaf011f8fc77",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/27/4066127_image2_1.jpg"
+        },
+        "record_sha256": "d769012514a7100707c9289e0441ae95de09a078381421095da2ac2f280d525c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "철골 트러스와 현대 놀이기구 구조만 보이며 전통적 외관·재료·공간 구성의 특성은 보이지 않음",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f0c6b41e0a5d603497a904fd193ee147de59e4f7896bf8a243dcdeaa8331178b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "fa4cc4758b663a83a37f37159bf15b65efeb7d050d2bb223a3bd6f820fa8da63",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4066127_4",
+          "request_sha256": "13128ad56c598f321d2b038a491b8b145514e526c1d42f911b6466047eb5ca48",
+          "response_sha256": "5f91d1a452793350177f74fc5caded3cbdfbfcc4f0d88c8c99a03d20ccb31d00",
+          "retrieved_at": "2026-09-11T02:07:33.724301Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "97425182f090b18f9c4139366244c4adc4519c83cf243f9d7038aaf011f8fc77",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/27/4066127_image2_1.jpg"
+        },
+        "record_sha256": "4927a9234cf30b4b305e3183d05699f22d3f4dccd0d34f25cf5a093bfc7c7c2a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "넓은 강, 갯벌과 모래사장, 울창한 숲과 자연 하천 지형이 장면 전체를 지배하며 트인 자연 경관이 강하게 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:f2aeab9f4275edff24b3388e6f1eca47eb9b2a23619b45d2d3d11744949ec312",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6407e420f0bebed9225ef2793ef4150fdb7adc51628656f67fcabf575be0c249",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:4066134_12",
+          "request_sha256": "13128ad56c598f321d2b038a491b8b145514e526c1d42f911b6466047eb5ca48",
+          "response_sha256": "5f91d1a452793350177f74fc5caded3cbdfbfcc4f0d88c8c99a03d20ccb31d00",
+          "retrieved_at": "2026-09-11T02:07:33.724301Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "4a15c394bee13f5f05b6a74576f9c865f9494aab651269623c650dcc8ea1ac3a",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/34/4066134_image2_1.jpg"
+        },
+        "record_sha256": "daffb2c846703204f18c00785a36e7d23a07254151270478a6a964db12b810c9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:09216458c058b402d3af247f9e9c9173103d56dc7f48f2cfcb6918eea526cce4",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "131806",
+          "request_sha256": "43f64c867b67a58d691ddc6c0183b6f44331e84753cab1c106a92e5af55a61ac",
+          "response_sha256": "8721b1aad94e8768a8d1e06713a4c7ce16e6cec7ad8dcb8fdc2cc129b5f052ae",
+          "retrieved_at": "2026-09-10T17:05:52.156546Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-05-21T07:32:59Z",
+          "source_record_sha256": "1d022f34a9d27f4a3c75cc564ae611a5b7c94379a2584fcc5d33a4e0dfd1508a",
+          "source_uri": null
+        },
+        "record_sha256": "37a7766bd093454375680367c865c59c2ff06310d6655b05da350fc6d29940d3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "내린천 번지점프는 호주의 리닝타워형 번지점프로 63m의 높이에서 내린천을 바라보며 뛰어내리는 스릴만점의 레포츠이다. 최고의 안전성을 위해 번지점프 타워를 60도 각도로 기울이고, 타워의 양쪽을 강철 구조물로 지지, 세계적으로 유명한 호주의 번지빅사의 기술을 이전해 만들어 안전도 면에서 최고를 자랑하고 있다. 슬링샷은 새로운 형식의 번지로 번지점프가 내린천을 향해 돌진하며 두려움의 한계를 극복한다면, 슬링샷은 하늘을 향해 튀어 오르며 동심을 자극하는 놀이기구다. 슬링샷은 번지점프의 변형된 형태로 기존 번지점프의 스릴과 안정성을 향상한 것으로 번지점프는 고공에서 지상으로 점프하여야 하는 모험심이 요구되지만, 슬링샷은 고공에 대한 부담감이 없어 누구나 쉽게 접근이 가능하며 가족 단위 및 연인들이 함께 이용하기에 적합하다. 슬링샷은 2명이 함께 탑승할 수 있으며, 번지 코드와 안전카를 지탱하여 주는 30m 높이의 타워가 양쪽으로 설치되어 있고 안전카 밑부분의 자력에 의해 발사되도록 구성되어 있다. 이외에도 내린천래프팅, ATV, 서바이벌게임, 스카이집트렉등 다양한 프로그램이 운영되고 있다."
+      }
+    ],
+    "parent_source_sha256": "b34736a7b60fc619230efcf4fbbbb5c4f09c00701356097789cac4e1aa8a2552",
+    "place": {
+      "address": "강원특별자치도 인제군 인제읍 설악로 2254",
+      "category": "레포츠",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+      "name_ko": "엑스게임리조트(내린천 번지점프)",
+      "place_id": "public:korea:90beee7f7e2fd60d2c2e1c888888fd54a0c654ef1a81cad8b35a325a49c06e58",
+      "provider_content_id": "131806",
+      "region_code": "51810",
+      "region_name": "강원특별자치도 인제군"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

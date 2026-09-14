@@ -1,0 +1,608 @@
+{
+  "assessed_at": "2026-09-11T19:41:18.417786Z",
+  "assessment_sha256": "64cfefc3833225aae50646fb3acfae79a57b16b7c5ef19d99e9d932bbf1d4205",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.b",
+        "R.c"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.d"
+      ],
+      "value": 50
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "예술과 기술·자연의 조화라는 이미지가 장소에 연결되어 소개되나, 단일 서술 수준으로 일관된 다중 표현 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "PHOTO"
+      ],
+      "reason": "자연 속 뮤지엄이라는 시각적 성격이 표현되지만 장면을 지배하는 일관된 연출의 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "독서·휴식 등 자유로운 선택 요소가 언급되나 자율 탐색이 경험 중심이라는 근거는 없어 낮은 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.b",
+      "missing_channels": [
+        "TEXT",
+        "PHOTO"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "음악 이벤트 등 공동 관람 기회가 있으나 교류·자기표현이 중심이라는 근거는 부족하다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "현대 판화·타피스트리 전시와 아트북 등 새로 제작된 콘텐츠만 언급되어 있고, 확인된 실제 원형·유산과의 접촉 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "장소 자체의 역사·연혁·사건·인물 맥락에 대한 설명이 제공되지 않아 구체적 역사 이해 지원을 판단할 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결에 대한 언급이 없어 실제 전통 지속 여부를 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "도슨트 안내가 있으나 원형·유산·전통에 연결된 해설이라는 근거가 없어 역사 맥락 탐구 지원으로 판단하기 어렵다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23",
+          "quote": {
+            "end": 365,
+            "method": "EXACT",
+            "original": "예술과 기술, 자연과 아날로그가 조화를 이루며 방문객에게 독특하고 풍부한 문화적 경험을 제공한다",
+            "start": 312,
+            "submitted": "예술과 기술, 자연과 아날로그가 조화를 이루며 방문객에게 독특하고 풍부한 문화적 경험을 제공한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8c2ccc01c6b2db7d186697f7f08baff96fed351d49a0eea95586789725f6d927"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "예술과 기술·자연의 조화라는 이미지가 장소에 연결되어 소개되나, 단일 서술 수준으로 일관된 다중 표현 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "매체를 통한 이미지 유통·재현에 대한 구체적 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23",
+          "quote": {
+            "end": 127,
+            "method": "EXACT",
+            "original": "아름다운 야외 풍경을 볼 수 있는 공간에 현대적인 판화와 타피스트리가 전시된 자연 속의 뮤지엄",
+            "start": 75,
+            "submitted": "아름다운 야외 풍경을 볼 수 있는 공간에 현대적인 판화와 타피스트리가 전시된 자연 속의 뮤지엄",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8c2ccc01c6b2db7d186697f7f08baff96fed351d49a0eea95586789725f6d927"
+        }
+      ],
+      "flags": [],
+      "key": "E.c",
+      "level": 2,
+      "reason": "자연 속 뮤지엄이라는 시각적 성격이 표현되지만 장면을 지배하는 일관된 연출의 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "인용된 '매 시즌 새롭게 변화하는 컨텐츠'는 콘텐츠 갱신 빈도에 관한 서술일 뿐, 대표 장면·상징·구도를 현장에서 직접 경험하거나 재현할 수 있는지에 대한 근거가 없다. 홍보 문구이며 이미지 체험·재현 가능성을 직접 뒷받침하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23",
+          "quote": {
+            "end": 214,
+            "method": "EXACT",
+            "original": "영감을 주는 독서와 고요한 휴식을 취할 수 있다",
+            "start": 188,
+            "submitted": "영감을 주는 독서와 고요한 휴식을 취할 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8c2ccc01c6b2db7d186697f7f08baff96fed351d49a0eea95586789725f6d927"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "독서·휴식 등 자유로운 선택 요소가 언급되나 자율 탐색이 경험 중심이라는 근거는 없어 낮은 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.b",
+      "level": null,
+      "reason": "'평화로운 숲속 도서관을 모티브로 디자인된 곳'은 실제 숲속 환경이 아니라 디자인 모티브이며, '평화로운'은 홍보 표현이다. 야외 풍경·자연 속 뮤지엄 등 자연 단서는 있으나 레벨 3(두드러짐)까지 직접 확인되지 않아 현재 제안 수준은 과도하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "'단순한 관람을 넘어 직접 체험하고 참여할 수 있다'는 일반적 홍보 문구로, 참여 기회의 존재 가능성은 시사하지만 구체적 활동 내용이 없어 레벨 3(지속적 참여·도전 활동)을 직접 뒷받침하지 않는다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23",
+          "quote": {
+            "end": 275,
+            "method": "EXACT",
+            "original": "유명 뮤지션들이 참여하는 음악 이벤트가 열리는 공간",
+            "start": 247,
+            "submitted": "유명 뮤지션들이 참여하는 음악 이벤트가 열리는 공간",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "8c2ccc01c6b2db7d186697f7f08baff96fed351d49a0eea95586789725f6d927"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "음악 이벤트 등 공동 관람 기회가 있으나 교류·자기표현이 중심이라는 근거는 부족하다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "0ad726a499b0273b0502c258f4a51daf30e3647bee432466de87c1d5d4081788",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "E.d",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "IMAGE_ENACTMENT",
+              "evidence_id": "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23",
+              "quote": {
+                "end": 301,
+                "method": "EXACT",
+                "original": "매 시즌 새롭게 변화하는 컨텐츠를 제공한다",
+                "start": 278,
+                "submitted": "매 시즌 새롭게 변화하는 컨텐츠를 제공한다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8c2ccc01c6b2db7d186697f7f08baff96fed351d49a0eea95586789725f6d927"
+            }
+          ],
+          "flags": [],
+          "key": "E.d",
+          "level": 2,
+          "reason": "시즌별 변화하는 전시 콘텐츠로 장면을 경험할 수 있으나 대표 이미지·구도의 재현 경험 근거는 제한적이다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "E.d",
+          "reason": "인용된 '매 시즌 새롭게 변화하는 컨텐츠'는 콘텐츠 갱신 빈도에 관한 서술일 뿐, 대표 장면·상징·구도를 현장에서 직접 경험하거나 재현할 수 있는지에 대한 근거가 없다. 홍보 문구이며 이미지 체험·재현 가능성을 직접 뒷받침하지 않는다."
+        }
+      },
+      "reason": "인용된 '매 시즌 새롭게 변화하는 컨텐츠'는 콘텐츠 갱신 빈도에 관한 서술일 뿐, 대표 장면·상징·구도를 현장에서 직접 경험하거나 재현할 수 있는지에 대한 근거가 없다. 홍보 문구이며 이미지 체험·재현 가능성을 직접 뒷받침하지 않는다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.b",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "ENVIRONMENT",
+              "evidence_id": "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23",
+              "quote": {
+                "end": 161,
+                "method": "EXACT",
+                "original": "평화로운 숲속 도서관을 모티브로 디자인된 곳",
+                "start": 137,
+                "submitted": "평화로운 숲속 도서관을 모티브로 디자인된 곳",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8c2ccc01c6b2db7d186697f7f08baff96fed351d49a0eea95586789725f6d927"
+            }
+          ],
+          "flags": [],
+          "key": "R.b",
+          "level": 3,
+          "reason": "숲속·야외 풍경 등 자연 환경 단서가 확인되나 실제 고요함·회복 효과까지는 확정할 수 없다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.b",
+          "reason": "'평화로운 숲속 도서관을 모티브로 디자인된 곳'은 실제 숲속 환경이 아니라 디자인 모티브이며, '평화로운'은 홍보 표현이다. 야외 풍경·자연 속 뮤지엄 등 자연 단서는 있으나 레벨 3(두드러짐)까지 직접 확인되지 않아 현재 제안 수준은 과도하다."
+        }
+      },
+      "reason": "'평화로운 숲속 도서관을 모티브로 디자인된 곳'은 실제 숲속 환경이 아니라 디자인 모티브이며, '평화로운'은 홍보 표현이다. 야외 풍경·자연 속 뮤지엄 등 자연 단서는 있으나 레벨 3(두드러짐)까지 직접 확인되지 않아 현재 제안 수준은 과도하다."
+    },
+    {
+      "code": "AI_SEMANTIC_UNCERTAIN",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23",
+              "quote": {
+                "end": 428,
+                "method": "EXACT",
+                "original": "단순한 관람을 넘어서 직접 체험하고 느끼며 참여할 수 있는 활동을 통해 예술을 새로운 방식으로 경험할 수 있다",
+                "start": 367,
+                "submitted": "단순한 관람을 넘어서 직접 체험하고 느끼며 참여할 수 있는 활동을 통해 예술을 새로운 방식으로 경험할 수 있다",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "8c2ccc01c6b2db7d186697f7f08baff96fed351d49a0eea95586789725f6d927"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "참여형 체험 활동이 명시되어 있으나 지속적 도전·몰입 수준의 활동이라는 근거는 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "UNCERTAIN",
+          "issues": [
+            "MARKETING_AS_FIELD_FACT"
+          ],
+          "key": "R.c",
+          "reason": "'단순한 관람을 넘어 직접 체험하고 참여할 수 있다'는 일반적 홍보 문구로, 참여 기회의 존재 가능성은 시사하지만 구체적 활동 내용이 없어 레벨 3(지속적 참여·도전 활동)을 직접 뒷받침하지 않는다."
+        }
+      },
+      "reason": "'단순한 관람을 넘어 직접 체험하고 참여할 수 있다'는 일반적 홍보 문구로, 참여 기회의 존재 가능성은 시사하지만 구체적 활동 내용이 없어 레벨 3(지속적 참여·도전 활동)을 직접 뒷받침하지 않는다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "0457d6be22b2e3bbf2fb851c697b75b2d9ae9f1324987bc877d79f8b418da6dc",
+    "evidence": [
+      {
+        "appearance": null,
+        "evidence_id": "evidence:22af70b8496a40483cc7f93cc8531256b24d77119a4d0f60370d4331bbebfc23",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f57d00b8ad7be5e6d511e138715ea41868bdce0304f11c7505b57ed637c690ec",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "130704",
+          "request_sha256": "5a7e4650606bbb990e376450373b47f21a667232b087ab162e46fe79ab7798ee",
+          "response_sha256": "e7bd9e8ffb6fb1d9c063ec14c9efaef0e2e2c6a7496e0781d6e790fd638385d3",
+          "retrieved_at": "2026-09-10T16:40:22.838748Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-05-07T02:18:59Z",
+          "source_record_sha256": "40db238f958cef294c20e9e0c4618c633b3da98194a41b17fc43cd5d55c40f0b",
+          "source_uri": null
+        },
+        "record_sha256": "8c2ccc01c6b2db7d186697f7f08baff96fed351d49a0eea95586789725f6d927",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "문아트그라운드는 문갤러리, 아카이브, 실버스크린 각각의 테마가 있는 공간에서 커피와 함께 디저트를 즐길 수 있는 공간이다. 문갤러리는 아름다운 야외 풍경을 볼 수 있는 공간에 현대적인 판화와 타피스트리가 전시된 자연 속의 뮤지엄이며, 아카이브는 평화로운 숲속 도서관을 모티브로 디자인된 곳에서 30년간 수집된 아트북, 한정판 책과 함께 영감을 주는 독서와 고요한 휴식을 취할 수 있다. 실버스크린은 국제적인 미디어 아트 팀들이 기획한 전시와 유명 뮤지션들이 참여하는 음악 이벤트가 열리는 공간으로 매 시즌 새롭게 변화하는 컨텐츠를 제공한다. 문아트그라운드는 예술과 기술, 자연과 아날로그가 조화를 이루며 방문객에게 독특하고 풍부한 문화적 경험을 제공한다. 단순한 관람을 넘어서 직접 체험하고 느끼며 참여할 수 있는 활동을 통해 예술을 새로운 방식으로 경험할 수 있다. 자연과 기술이 어우러진 공간의 미디어 아트부터 전통적인 아트북에 이르기까지 다양한 예술 작품을 추구한다. 매 시즌 다채로운 음악 공연과 특별 이벤트를 통해 예술과 엔터테인먼트가 결합된 새로운 ‘아트테인먼트’ 문화를 소개한다."
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:7be7ca405d521bc6fe2cdf2bf7e74562a265220a807fed746eba2cf78d821e6c",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f57d00b8ad7be5e6d511e138715ea41868bdce0304f11c7505b57ed637c690ec",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "130704",
+          "request_sha256": "fe2379cb2bcc866df239ef446df59dba208894bc3aad7b36d40f383064eb84b4",
+          "response_sha256": "28c73218b4bce4a62ab8f890b1c671b7b9d7ef96d5a89a0913478cb930075b16",
+          "retrieved_at": "2026-09-11T02:12:22.587887Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "edacc4d11fcb8e859d09bcb0baa20a7093beeb14ae8d68ede6055be48f619157",
+          "source_uri": null
+        },
+        "record_sha256": "5536b0d76639b5c31a13691853c7ab136fa3c2fd8b38bf60fb29e1648e70cb63",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "도슨트 안내 및 오디오 가이드문의 031-334-0365"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:bec4fc96cc2c730716cae757a674dc1b95f2061464d50095dfae8adab745994a",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:f57d00b8ad7be5e6d511e138715ea41868bdce0304f11c7505b57ed637c690ec",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "130704",
+          "request_sha256": "fe2379cb2bcc866df239ef446df59dba208894bc3aad7b36d40f383064eb84b4",
+          "response_sha256": "28c73218b4bce4a62ab8f890b1c671b7b9d7ef96d5a89a0913478cb930075b16",
+          "retrieved_at": "2026-09-11T02:12:22.587887Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "6feb618493f3455a329c64c66fb27226630d52a2c87a6056e539b5d36605d12d",
+          "source_uri": null
+        },
+        "record_sha256": "cefd5d76fc254903e0c40ebff7420057088214f0c7710ed0f1b93a4d7e8af4ff",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "단체 관람예약- 20명 이상 단체관람 시 사전예약 필수- 단체관람예약 시 전화문의(031-334-0365)"
+      }
+    ],
+    "parent_source_sha256": "e436fda15f654c576d94bb7551d16641628124c638cfbe86f8de8c780b911692",
+    "place": {
+      "address": "경기도 용인시 처인구 모현읍 문형동림로101번길 37",
+      "category": "문화시설",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:f57d00b8ad7be5e6d511e138715ea41868bdce0304f11c7505b57ed637c690ec",
+      "name_ko": "문아트그라운드 뮤지엄",
+      "place_id": "public:korea:f57d00b8ad7be5e6d511e138715ea41868bdce0304f11c7505b57ed637c690ec",
+      "provider_content_id": "130704",
+      "region_code": "41461",
+      "region_name": "경기도 용인시 처인구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

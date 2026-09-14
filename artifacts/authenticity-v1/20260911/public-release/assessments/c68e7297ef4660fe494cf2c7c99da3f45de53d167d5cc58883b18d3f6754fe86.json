@@ -1,0 +1,870 @@
+{
+  "assessed_at": "2026-09-11T19:24:24.727385Z",
+  "assessment_sha256": "c68e7297ef4660fe494cf2c7c99da3f45de53d167d5cc58883b18d3f6754fe86",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 46
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c",
+        "R.d"
+      ],
+      "value": 54
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "하마 동상과 '하마공원' 별칭이 이 장소에 부여된 구체적 이미지·이야기로 확인된다. 다만 상징이 방문 경험의 중심이라는 근거까지는 없어 수준 2로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:a69beb12d72a531b0f1138b0bd46f55be70b277993504c8498c62775de9edf55",
+            "appearance:c3de79a54c61ba73862a18dbe6025d555eac9196c46a659915c6209a0f56adba",
+            "appearance:e873a8b35b0cd588beba9901ae7f2b911102fb5031611f26458a14392760eac0"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 42,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "그늘막·산책길 등 환경 묘사는 있으나 장소의 이미지를 표현하는 일관된 외관·경관·연출의 시각적 성격에 대한 직접 근거는 없다.",
+      "value": 42
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "산책길과 개방된 출입 구조가 자율적 산책·여유를 지원한다. '어느 방향에서나 출입할 수 있게 트여있고'라는 서술도 자유로운 동선을 보여주지만, 이것이 방문 경험의 중심이라는 근거는 없어 수준 2로 본다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:a8883f2b6dadcbc555d9b1aa25bada02108c480dfb74956004f6d78a7e425c9a",
+            "appearance:c31c0eac4606fdf458ab6c333b2339e2e7b87963c3cbe6a334a78fbe9af08adb",
+            "appearance:c6d84bf037e50dd72b3e3418be822d06db722889c9be7cbaa2ea2d61b9090680"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 42,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "평시 한적함, 잘 조성된 산책길, 많은 그늘과 벤치 등 머무르기·회복을 지원하는 환경 단서가 공식 개요에서 확인된다. 환경이 장면을 지배한다고까지 단정하기는 어려워 수준 3으로 판단한다.",
+      "value": 67
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "바닥분수 물놀이와 격주 하마 마켓 등 참여형 활동의 기회가 확인된다. 다만 지속적 도전·몰입 활동이라는 근거는 없고 계절·운영시간 제한이 있어 수준 2로 본다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "정기 하마 마켓이 교류·공동 활동의 기회를 제공하는 것으로 확인된다. 그러나 연중 상시가 아니고 자기표현 활동의 풍부함에 대한 근거는 없어 수준 2로 판단한다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 개요는 근린 생활공원 묘사만 담고 있으며 확인된 원형·유산·실물 문화재와의 접촉에 대한 근거가 없다. 공원 이름이나 동상이 역사적 원형임을 뒷받침하는 자료도 없으므로 판단을 유보한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "개요에는 조성 연혁, 역사적 사건, 인물 맥락에 대한 설명이 없다. '하마공원'이라는 별칭 유래만 있을 뿐 그 장소의 실제 역사 서사를 이해하게 하는 근거가 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "하마 마켓이 플리마켓·핸드메이드 마켓이라는 사실은 지역 전통·생활문화의 지속 여부를 확인해 주지 않는다. 지역 주체의 전승 활동과의 연결을 뒷받침하는 근거가 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "개요에는 유산·전통에 연결된 해설, 전시, 학습 프로그램에 대한 언급이 없다. 마켓과 물놀이터 정보만으로 원형 맥락 탐구를 지원한다고 볼 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80",
+          "quote": {
+            "end": 86,
+            "method": "EXACT",
+            "original": "하마 마켓이라는 플리마켓도 열리고 공원 안에 하마 동상도 있어서 하마공원이라고도 한다",
+            "start": 39,
+            "submitted": "하마 마켓이라는 플리마켓도 열리고 공원 안에 하마 동상도 있어서 하마공원이라고도 한다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3bee2caf3f3858f054ef8e57d39ceb4092f3446844c486e710d3c6a2ab72c2d4"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "하마 동상과 '하마공원' 별칭이 이 장소에 부여된 구체적 이미지·이야기로 확인된다. 다만 상징이 방문 경험의 중심이라는 근거까지는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "마켓·동상 등 장소 이미지의 존재는 확인되지만, 이를 재현·확산하는 매체(작품, 홍보, SNS 등)와의 연결에 대한 근거는 제공되지 않았다. 게시물 수 등 확산 지표도 없으므로 유보한다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.c",
+      "level": null,
+      "reason": "그늘막·산책길 등 환경 묘사는 있으나 장소의 이미지를 표현하는 일관된 외관·경관·연출의 시각적 성격에 대한 직접 근거는 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험하거나 재현(촬영·참여)할 수 있는지에 대한 근거가 개요에 없다. 하마 동상이 촬영 대상이라는 서술도 없어 판단할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80",
+          "quote": {
+            "end": 277,
+            "method": "EXACT",
+            "original": "산책길도 잘 조성되어 있어 차분히 걸으며 여유를 즐길 수 있다. 그늘도 많아 중간중간 쉬어갈 수 있고",
+            "start": 221,
+            "submitted": "산책길도 잘 조성되어 있어 차분히 걸으며 여유를 즐길 수 있다. 그늘도 많아 중간중간 쉬어갈 수 있고",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3bee2caf3f3858f054ef8e57d39ceb4092f3446844c486e710d3c6a2ab72c2d4"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "산책길과 개방된 출입 구조가 자율적 산책·여유를 지원한다. '어느 방향에서나 출입할 수 있게 트여있고'라는 서술도 자유로운 동선을 보여주지만, 이것이 방문 경험의 중심이라는 근거는 없어 수준 2로 본다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80",
+          "quote": {
+            "end": 219,
+            "method": "EXACT",
+            "original": "평상시에는 사람들이 많지 않아 한적하고 분수 놀이터가 있어 아이들이 더위를 식히며 신나게 놀 수 있다",
+            "start": 163,
+            "submitted": "평상시에는 사람들이 많지 않아 한적하고 분수 놀이터가 있어 아이들이 더위를 식히며 신나게 놀 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3bee2caf3f3858f054ef8e57d39ceb4092f3446844c486e710d3c6a2ab72c2d4"
+        }
+      ],
+      "flags": [],
+      "key": "R.b",
+      "level": 3,
+      "reason": "평시 한적함, 잘 조성된 산책길, 많은 그늘과 벤치 등 머무르기·회복을 지원하는 환경 단서가 공식 개요에서 확인된다. 환경이 장면을 지배한다고까지 단정하기는 어려워 수준 3으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80",
+          "quote": {
+            "end": 219,
+            "method": "EXACT",
+            "original": "분수 놀이터가 있어 아이들이 더위를 식히며 신나게 놀 수 있다",
+            "start": 185,
+            "submitted": "분수 놀이터가 있어 아이들이 더위를 식히며 신나게 놀 수 있다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3bee2caf3f3858f054ef8e57d39ceb4092f3446844c486e710d3c6a2ab72c2d4"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.c",
+      "level": 2,
+      "reason": "바닥분수 물놀이와 격주 하마 마켓 등 참여형 활동의 기회가 확인된다. 다만 지속적 도전·몰입 활동이라는 근거는 없고 계절·운영시간 제한이 있어 수준 2로 본다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80",
+          "quote": {
+            "end": 140,
+            "method": "EXACT",
+            "original": "4월부터 11월까지 격 주로 화정중앙공원과 덕양구청 가로수길에서 총 4일간 하마 마켓이 열린다",
+            "start": 88,
+            "submitted": "4월부터 11월까지 격 주로 화정중앙공원과 덕양구청 가로수길에서 총 4일간 하마 마켓이 열린다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "3bee2caf3f3858f054ef8e57d39ceb4092f3446844c486e710d3c6a2ab72c2d4"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "정기 하마 마켓이 교류·공동 활동의 기회를 제공하는 것으로 확인된다. 그러나 연중 상시가 아니고 자기표현 활동의 풍부함에 대한 근거는 없어 수준 2로 판단한다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "395489fa9eeecc0e6a32a142f5222099beffc46f4ac283eca3db57595486e766",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "ddb9269ddd8430e12432d2be1c46b8479554d91586ebc14aae8e707e79e7b6e1",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "우드빈 마감과 스퀘어 타일 바닥이 있으나 전통 재료·공간 구성의 시각적 특성은 미미함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:37408d8279e5c11c5e15cbfc79c2493cc7ad4752d4ef46f84ab1219d5f151e1a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2694298f11f5a0e96f4594d42a6fad2f9343e0b9abae8c46a543952ecf968369",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430414_4",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a821425351749003a8b05b12d0c8738f9bb6cdc8b6a263fbc58076a452d0b132",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3430414_image2_1.jpg"
+        },
+        "record_sha256": "f99312c4c3f2ddeb06af4deb1b30a980d71d81b744d6a90313203df42c9d9dfb",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "목재 판잇대와 벤치 형태가 옛 정자를 연상시키지만 현대적 소재와 도시 배경으로 전통 외관의 두드러짐은 약하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:57fe68919ac1ff3dedbe6c0ed3e4eda95cbd59ed91bf14a349983431eed9ea1e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "196b7a6f4ca5990086da1b7a4d8ae7b0412ae3030f14f643762958f3097de167",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430416_2",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "20208ea0058d4ba23a452a796d120dc48f4b57fd18c16fdbe6f5a41867b26d43",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/3430416_image2_1.jpg"
+        },
+        "record_sha256": "f5a61786c5c0cf70d5ccf9374e18449dec0c00f19730f942e37dbcd4aa7f3b9e",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통적 외관·재료·공간 구성의 시각적 단서가 거의 보이지 않고 현대적 포장과 도시 환경이 지배적",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:7f3eb938f1fef5d12993ddd6d73e81b03c67250a63ec413a271b99a9e0e866f8",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8300957221aca076507b22fbdb7b7bc0509843b8488d579278ed13e0f75fc73d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430410_6",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "caa006838cd5a6e214c1bd44b9c1922b00d8db5eea381be9e3e8fa2b84e279a5",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3430410_image2_1.jpg"
+        },
+        "record_sha256": "521e32f165f4fada2fd690cd1dd3142a336b8f40992ddbc1e17576f508dbbb24",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "곡선형 목재 차양 구조가 구도의 중심이며 잔디색 바닥과 나무 초록이 조화를 이루지만 전반적으로 일상적 공원 풍경이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a69beb12d72a531b0f1138b0bd46f55be70b277993504c8498c62775de9edf55",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "196b7a6f4ca5990086da1b7a4d8ae7b0412ae3030f14f643762958f3097de167",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430416_2",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "20208ea0058d4ba23a452a796d120dc48f4b57fd18c16fdbe6f5a41867b26d43",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/3430416_image2_1.jpg"
+        },
+        "record_sha256": "e7c9bcc6d1a71580dea7795002e01c95889d8e4e06bd385a49ac334ffa32f9b6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 0,
+          "reason": "녹지, 물, 자연 경관 등 자연 환경 단서가 전혀 보이지 않는 폐쇄적 실내 공간.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a8883f2b6dadcbc555d9b1aa25bada02108c480dfb74956004f6d78a7e425c9a",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2694298f11f5a0e96f4594d42a6fad2f9343e0b9abae8c46a543952ecf968369",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430414_4",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a821425351749003a8b05b12d0c8738f9bb6cdc8b6a263fbc58076a452d0b132",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3430414_image2_1.jpg"
+        },
+        "record_sha256": "7910c9268e2916fa710b0d3c552e10e6379d77872711beaaa7f6cbe5c5fcc6a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "울창한 교목, 관목 사이시장, 트인 나무들이 화면 대부분을 차지하며 도심 속 녹지 환경이 뚜렷이 보인다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c31c0eac4606fdf458ab6c333b2339e2e7b87963c3cbe6a334a78fbe9af08adb",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "196b7a6f4ca5990086da1b7a4d8ae7b0412ae3030f14f643762958f3097de167",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430416_2",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "20208ea0058d4ba23a452a796d120dc48f4b57fd18c16fdbe6f5a41867b26d43",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/16/3430416_image2_1.jpg"
+        },
+        "record_sha256": "5aa242b091f5de5f4bba9192cf061e5d4043d543096c678e6a60f04ede0d2b72",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "곡선형 보행로와 첩석, 수목이 정돈된 도심 공원 구성으로 무난한 시각적 성격이 있으나 강한 연출은 아님",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c3de79a54c61ba73862a18dbe6025d555eac9196c46a659915c6209a0f56adba",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8300957221aca076507b22fbdb7b7bc0509843b8488d579278ed13e0f75fc73d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430410_6",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "caa006838cd5a6e214c1bd44b9c1922b00d8db5eea381be9e3e8fa2b84e279a5",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3430410_image2_1.jpg"
+        },
+        "record_sha256": "505fbd253e7f9e9e54c209870640c58b3a9acf05d61bddcb7f73c1f87844a91c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "용착 초목, 관목 울타리, 수목 녹지가 뚜렷하나 배경에 상가 건물과 도로가 함께 보이는 도심 녹지 환경",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c6d84bf037e50dd72b3e3418be822d06db722889c9be7cbaa2ea2d61b9090680",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "8300957221aca076507b22fbdb7b7bc0509843b8488d579278ed13e0f75fc73d",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430410_6",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "caa006838cd5a6e214c1bd44b9c1922b00d8db5eea381be9e3e8fa2b84e279a5",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/10/3430410_image2_1.jpg"
+        },
+        "record_sha256": "644062bf2c00231e20295bf9ca97807c67f8304efaea9a8e8b134324bf69c993",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 1,
+          "reason": "백색 타일과 우드빈 가림막의 단순한 실내 화장실 구조로, 특별한 연출이나 두드러진 시각적 성격은 약함.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e873a8b35b0cd588beba9901ae7f2b911102fb5031611f26458a14392760eac0",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "2694298f11f5a0e96f4594d42a6fad2f9343e0b9abae8c46a543952ecf968369",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3430414_4",
+          "request_sha256": "a8bc874c7da35ac715816a56ab4ed1e3fac1c0bf63768924f8b5b60c026bdf8b",
+          "response_sha256": "86945bbfb952d3b564a06fd3118fc59791adddaab26a59dda30c30a5e300a29f",
+          "retrieved_at": "2026-09-10T08:29:21.085122Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "a821425351749003a8b05b12d0c8738f9bb6cdc8b6a263fbc58076a452d0b132",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/14/3430414_image2_1.jpg"
+        },
+        "record_sha256": "8592ee8789155a21226f7f11e720fbdc9b727b492a825d1b6d5f9ea7349188f8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:5d651802ac8344f08012a4cec897bce6372cd7410533cb71cbe9fe6dfa1140e5",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3022743",
+          "request_sha256": "6f9bd03f74366bbf054dffe0b4dcd0b94f3ad23f34cec01b584676276ca6d6fa",
+          "response_sha256": "e095a9b27bed816779797f776f762c99e8f793b9bce1520aa9f0f67cdfa4a8c4",
+          "retrieved_at": "2026-09-10T08:29:20.067353Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "16ced6e3bafcb0f17ffa5edd2ae3f6a6ab7d4e6df137514d7acfbba46c192e81",
+          "source_uri": null
+        },
+        "record_sha256": "e73d31a1058671cfdc81ed8b7750cb7ce3f074cbf6089fc5b3197fb9f4682ca3",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:ab666a7db047490e94cf915191bc69271c215857bf047f026378db021ba64d80",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3022743",
+          "request_sha256": "63c99b5e4bc0199ead6fc242ee6680c5bdc742ac92b3a71c137b6e1bed66bea4",
+          "response_sha256": "36275a4e7f0ad03f69dc490d5300b61e86b43f31fa7fb73658f1436c300a1e7d",
+          "retrieved_at": "2026-09-09T16:39:05.341066Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-04-21T06:02:51Z",
+          "source_record_sha256": "5ec947c3a6be34a0498d32e16fd05470ba0385306cdaa5ade50ffcea77d21b4c",
+          "source_uri": null
+        },
+        "record_sha256": "3bee2caf3f3858f054ef8e57d39ceb4092f3446844c486e710d3c6a2ab72c2d4",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "화정중앙공원은 3호선 화정역에서 도보 5분 거리 이내에 있는 공원으로 하마 마켓이라는 플리마켓도 열리고 공원 안에 하마 동상도 있어서 하마공원이라고도 한다. 4월부터 11월까지 격 주로 화정중앙공원과 덕양구청 가로수길에서 총 4일간 하마 마켓이 열린다. 핸드메이드 마켓의 줄임말이라고 한다. 평상시에는 사람들이 많지 않아 한적하고 분수 놀이터가 있어 아이들이 더위를 식히며 신나게 놀 수 있다. 산책길도 잘 조성되어 있어 차분히 걸으며 여유를 즐길 수 있다. 그늘도 많아 중간중간 쉬어갈 수 있고 가벼운 산책을 하기 좋다. 물놀이터인 바닥분수는 운영시간이 정해져 있어서 확인하고 가는 것이 좋다. 어느 방향에서나 출입할 수 있게 트여있고 가운데에 분수 놀이터인 바닥분수가 있다. 바닥분수 근처에 그늘막(벤치)과 화장실이 있지만 샤워실은 없으니 보호자가 집에서 수건과 옷가지를 챙겨 가는 걸 추천한다. 또한 깊이가 조금씩 다르니 보호자가 곁에서 살펴주는 것이 안전사고 예방에 도움이 되고 위나 아래에서 갑자기 나오는 물줄기에 영유아가 놀라지 않게 살펴야 한다. 수질 관리는 잘 되어있는 편이며 근처에 편의점이나 대형마트가 있어서 장을 보거나 간식을 먹기 좋다."
+      }
+    ],
+    "parent_source_sha256": "7c25f5a888f01970522b5ef2e998e9c5fe6a57b65a16a439cd5365f4eb12c437",
+    "place": {
+      "address": "경기도 고양시 덕양구 화신로 266-1 (화정동)",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+      "name_ko": "화정중앙공원",
+      "place_id": "public:korea:e264c76d5df2a23bd40b13e5796dc155c118105d3bc315175ab279da07760b86",
+      "provider_content_id": "3022743",
+      "region_code": "41281",
+      "region_name": "경기도 고양시 덕양구"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

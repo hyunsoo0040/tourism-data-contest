@@ -1,0 +1,1029 @@
+{
+  "assessed_at": "2026-09-11T17:29:51.307494Z",
+  "assessment_sha256": "6bcd5c2ed9456a30caeb996699e1efa3783ebf5713c57f412cd6c677a64abe38",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": false,
+      "missing_facets": [
+        "H.a",
+        "H.b",
+        "H.c",
+        "H.d"
+      ],
+      "reason": "축의 핵심 의미 또는 최소 항목 근거가 부족합니다.",
+      "supported_facets": [],
+      "value": null
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [],
+      "reason": "핵심 의미와 4/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.b",
+        "E.c",
+        "E.d"
+      ],
+      "value": 70
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.c"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.d"
+      ],
+      "value": 58
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [],
+      "key": "H.a",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "드라마 배경지, CNN 추천 명소라는 구체적 이미지와 이야기가 이 장소에 연결되어 있음을 공식 설명이 제시한다. 여러 표현(드라마, 언론 선정)에서 일관된 의미가 확인된다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.b",
+      "missing_channels": [],
+      "reason": "드라마 촬영지로서의 매체 표현과 CNN 선정이라는 언론 노출이 명시되어 장소 이미지의 매체 유통 근거는 있으나, 반복적·다층적 유통의 추가 근거는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:092f2ee2b874e874eb6bad7b0f73ec676cb29f9c2488afffa2644023ff3f3071",
+            "appearance:25e203013096f9d782e4d9742a30bce0415dbc2dd641a7951b09eab83f074aef",
+            "appearance:5b9755c51b96ae8f9e0b5b8d3b075ad909f655058b76bd2825e797179aed0c0f"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 92,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "테마별 조각공원·정원 연출과 예술정원 조성 등 의도된 시각적 성격의 표현이 구체적으로 서술되어 있으나, 전체 장면을 지배하는 일관된 연출이라고 단정할 추가 근거는 부족하다.",
+      "value": 79
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.d",
+      "missing_channels": [],
+      "reason": "대표 장면(야외 전시관에서 바다 조망, 인생 사진 촬영)을 현장에서 직접 경험·재현할 수 있다고 명시되어 있다. 촬영 재현이 방문 경험의 중심이라는 수준까지의 근거는 없다.",
+      "value": 75
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "여러 테마 구역과 산책로가 있어 자율적으로 선택·탐색할 기회는 확인되지만, 여유로운 자기 방식 탐색이 경험의 중심이라는 근거는 부족하여 제한적 수준으로 평가한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:67acab9816dbc1286c3201200d5627966c4b39bbfa3f185ed96f16e11b1df5f9",
+            "appearance:77e6477cc17b558524c459b49eb7339535a6c0f721cd17a70643c5f9eaae9efa",
+            "appearance:c02e277c18c0ece5dc750424696a2b394af884f4355db0b8d0edc93b9a19e39d"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 75,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "자연훼손 최소화 조성, 소나무 정원·바다정원 등 자연 환경 단서가 두드러지게 확인된다. 다만 실제 고요함·심리적 회복 효과는 방문자 반응 근거 없이 확정하지 않는다.",
+      "value": 75
+    },
+    {
+      "contributions": [],
+      "key": "R.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:1b99b7c3d63943d5b890a6f0d79b595922a97bd5c994af665cac4d3927e0e050"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.d",
+      "missing_channels": [],
+      "reason": "단체체험이 언급되어 공동 활동의 기회가 일부 확인되지만, 교류·자기표현의 내용과 폭에 대한 근거가 제한적이다.",
+      "value": 50
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.a",
+      "level": null,
+      "reason": "제공된 근거는 조각공원과 현대 미술관·피노키오 마리오네트 미술관 소개뿐이며, 확인된 실제 원형·문화유산과의 접촉에 대한 정보가 없다. 전통풍 재현과 실제 유산을 구별할 근거도 부족하다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.b",
+      "level": null,
+      "reason": "이 장소 자체의 역사적 연혁, 사건, 인물 맥락에 대한 설명이 근거에 없다. 조성 방식(손으로 직접 만듦)은 역사 서사가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화와의 연결을 보여주는 근거가 없다. 유럽에서 수집한 마리오네트 전시는 현지 전승의 지속이 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산·전통에 연결된 해설이나 학습 프로그램에 대한 근거가 없다. 예술 관람·체험 안내는 역사 해설로 볼 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5",
+          "quote": {
+            "end": 519,
+            "method": "NORMALIZED_AND_MAPPED",
+            "original": "드라마 예리가 전 연인과의 추억을 정리하는 장면의 배경이 된 곳이다. CNN이 선정한 ‘강원의 추천 명소’로",
+            "start": 459,
+            "submitted": "드라마 예리가 전 연인과의 추억을 정리하는 장면의 배경이 된 곳이다. CNN이 선정한 '강원의 추천 명소'로",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6618cdc4d631c8ce5d365a0e212826ad5874e33940d67b0191fb7cee60bf0490"
+        }
+      ],
+      "flags": [],
+      "key": "E.a",
+      "level": 3,
+      "reason": "드라마 배경지, CNN 추천 명소라는 구체적 이미지와 이야기가 이 장소에 연결되어 있음을 공식 설명이 제시한다. 여러 표현(드라마, 언론 선정)에서 일관된 의미가 확인된다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "MEDIA_REPRESENTATION",
+          "evidence_id": "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5",
+          "quote": {
+            "end": 496,
+            "method": "EXACT",
+            "original": "드라마 예리가 전 연인과의 추억을 정리하는 장면의 배경이 된 곳이다",
+            "start": 459,
+            "submitted": "드라마 예리가 전 연인과의 추억을 정리하는 장면의 배경이 된 곳이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6618cdc4d631c8ce5d365a0e212826ad5874e33940d67b0191fb7cee60bf0490"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.b",
+      "level": 2,
+      "reason": "드라마 촬영지로서의 매체 표현과 CNN 선정이라는 언론 노출이 명시되어 장소 이미지의 매체 유통 근거는 있으나, 반복적·다층적 유통의 추가 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5",
+          "quote": {
+            "end": 211,
+            "method": "EXACT",
+            "original": "자연을 가장 아름답게 볼 수 있는 각도로 길을 내고 예술정원으로 꾸몄다",
+            "start": 172,
+            "submitted": "자연을 가장 아름답게 볼 수 있는 각도로 길을 내고 예술정원으로 꾸몄다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6618cdc4d631c8ce5d365a0e212826ad5874e33940d67b0191fb7cee60bf0490"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 3,
+      "reason": "테마별 조각공원·정원 연출과 예술정원 조성 등 의도된 시각적 성격의 표현이 구체적으로 서술되어 있으나, 전체 장면을 지배하는 일관된 연출이라고 단정할 추가 근거는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "IMAGE_ENACTMENT",
+          "evidence_id": "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5",
+          "quote": {
+            "end": 562,
+            "method": "EXACT",
+            "original": "자연을 배경으로 인생 사진을 찍을 수 있는 인기 관광지다",
+            "start": 531,
+            "submitted": "자연을 배경으로 인생 사진을 찍을 수 있는 인기 관광지다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6618cdc4d631c8ce5d365a0e212826ad5874e33940d67b0191fb7cee60bf0490"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.d",
+      "level": 3,
+      "reason": "대표 장면(야외 전시관에서 바다 조망, 인생 사진 촬영)을 현장에서 직접 경험·재현할 수 있다고 명시되어 있다. 촬영 재현이 방문 경험의 중심이라는 수준까지의 근거는 없다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5",
+          "quote": {
+            "end": 101,
+            "method": "NORMALIZED_AND_MAPPED",
+            "original": "3만 3천여 평의 조각공원은 ‘성성활엽길’, ‘소나무 정원’, ‘시간의 광장’, ‘바다정원’, ‘하늘전망대’",
+            "start": 41,
+            "submitted": "3만 3천여 평의 조각공원은 '성성활엽길', '소나무 정원', '시간의 광장', '바다정원', '하늘전망대'",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6618cdc4d631c8ce5d365a0e212826ad5874e33940d67b0191fb7cee60bf0490"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.a",
+      "level": 2,
+      "reason": "여러 테마 구역과 산책로가 있어 자율적으로 선택·탐색할 기회는 확인되지만, 여유로운 자기 방식 탐색이 경험의 중심이라는 근거는 부족하여 제한적 수준으로 평가한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5",
+          "quote": {
+            "end": 39,
+            "method": "EXACT",
+            "original": "하슬라아트월드는 자연과 사람, 예술이 조화롭게 공존하는 종합예술공간이다",
+            "start": 0,
+            "submitted": "하슬라아트월드는 자연과 사람, 예술이 조화롭게 공존하는 종합예술공간이다",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "6618cdc4d631c8ce5d365a0e212826ad5874e33940d67b0191fb7cee60bf0490"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "자연훼손 최소화 조성, 소나무 정원·바다정원 등 자연 환경 단서가 두드러지게 확인된다. 다만 실제 고요함·심리적 회복 효과는 방문자 반응 근거 없이 확정하지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.c",
+      "level": null,
+      "reason": "제안된 앵커는 '지속적으로 참여·도전할 활동'(수준 4)이나 근거는 채색·DIY·액티비티 체험 목록뿐으로, 제안 사유 스스로 지속적 도전·몰입 근거가 부족하다고 인정한다. 현재 수준도 뒷받침되지 않는다. '구체적인 참여 활동'(수준 3)이 적절하다.",
+      "state": "REJECTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "RELATIONAL_ACTIVITY",
+          "evidence_id": "evidence:1b99b7c3d63943d5b890a6f0d79b595922a97bd5c994af665cac4d3927e0e050",
+          "quote": {
+            "end": 38,
+            "method": "EXACT",
+            "original": "특별체험(단체체험) 등",
+            "start": 26,
+            "submitted": "특별체험(단체체험) 등",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "deb0bf81cc7da0cec195b02b86d8c5dbae2eea7a6dc00e0c7521d1e68a3cc8a8"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.d",
+      "level": 2,
+      "reason": "단체체험이 언급되어 공동 활동의 기회가 일부 확인되지만, 교류·자기표현의 내용과 폭에 대한 근거가 제한적이다.",
+      "state": "SUPPORTED"
+    }
+  ],
+  "model_request_sha256": "85a6a6050edaf9456a8e9435623e67b571e2ff9c45852503f65ae9c2e33d73cf",
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [
+    {
+      "code": "AI_SEMANTIC_REJECTED",
+      "key": "R.c",
+      "proposed": {
+        "original": {
+          "citations": [
+            {
+              "claim": "PARTICIPATORY_ACTIVITY",
+              "evidence_id": "evidence:1b99b7c3d63943d5b890a6f0d79b595922a97bd5c994af665cac4d3927e0e050",
+              "quote": {
+                "end": 38,
+                "method": "EXACT",
+                "original": "채색체험 / DIY 체험 / 액티비티 체험 / 특별체험(단체체험) 등",
+                "start": 0,
+                "submitted": "채색체험 / DIY 체험 / 액티비티 체험 / 특별체험(단체체험) 등",
+                "version": "quote-offset-mapping-v1"
+              },
+              "record_sha256": "deb0bf81cc7da0cec195b02b86d8c5dbae2eea7a6dc00e0c7521d1e68a3cc8a8"
+            }
+          ],
+          "flags": [
+            "INFERENCE_SCOPE_REVIEW"
+          ],
+          "key": "R.c",
+          "level": 3,
+          "reason": "채색, DIY, 액티비티 등 구체적인 참여 체험 활동이 공식 안내로 확인된다. 지속적 도전·몰입 활동으로 확장하기에는 세부 내용 근거가 부족하다.",
+          "state": "SUPPORTED"
+        },
+        "review": {
+          "decision": "REJECTED",
+          "issues": [
+            "INSUFFICIENT_CONTEXT"
+          ],
+          "key": "R.c",
+          "reason": "제안된 앵커는 '지속적으로 참여·도전할 활동'(수준 4)이나 근거는 채색·DIY·액티비티 체험 목록뿐으로, 제안 사유 스스로 지속적 도전·몰입 근거가 부족하다고 인정한다. 현재 수준도 뒷받침되지 않는다. '구체적인 참여 활동'(수준 3)이 적절하다."
+        }
+      },
+      "reason": "제안된 앵커는 '지속적으로 참여·도전할 활동'(수준 4)이나 근거는 채색·DIY·액티비티 체험 목록뿐으로, 제안 사유 스스로 지속적 도전·몰입 근거가 부족하다고 인정한다. 현재 수준도 뒷받침되지 않는다. '구체적인 참여 활동'(수준 3)이 적절하다."
+    }
+  ],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "122920e9133f28f2e37c6fcbd0c580f7c408bc7dad819a9c263111c96ba19790",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "노란 종이 등롱, 천장에 매달린 다수의 병 설치미술, 거대한 조형물 등 연출된 시각 요소가 장면 전체를 지배하며 강한 개성을 보임.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:092f2ee2b874e874eb6bad7b0f73ec676cb29f9c2488afffa2644023ff3f3071",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6309d470de9ff77f454eb7da4bc2628cdfbd1823c439954c84d15c34e2c6d005",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3422718_22",
+          "request_sha256": "1f40388fde813ffc3e3dfc4b69087dab63e3eca5db9450441e70b2776dc402ab",
+          "response_sha256": "682462bb0a8c83ea7da8243f8b3f3cced8007d330c95425dc5a7e076d2a663d7",
+          "retrieved_at": "2026-09-10T08:24:16.287478Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "84c67279672933d91762604639de0d149986348489ea5a55331643cb12d9b12f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/18/3422718_image2_1.png"
+        },
+        "record_sha256": "5e6beb33a15f5b0b179ed7b90a44c7067b4e6ec2d9f0776333b1b4dde1a5a844",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "바다와 숲을 배경으로 한 강철 잔가지 조형물과 파란 철골 전망 구조물이 현대적 연출로 두드러지며, 노란 우산이 색 포인트가 된다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:25e203013096f9d782e4d9742a30bce0415dbc2dd641a7951b09eab83f074aef",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "34d09e6fc9d6db26ceca515f9c4281373751e89b4a652ad8fe0e81d43d1a59e9",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 강릉시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3020983",
+          "request_sha256": "f28415d818f5aaa7da4f85e9f55c079f486b492b860a624bb766b6965e88cfad",
+          "response_sha256": "241bba3d74ee3559cd9ea57ab9bfb6db63e432c283eebf6ce4e16afe1132bd45",
+          "retrieved_at": "2026-09-10T08:24:17.111847Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "539b7caba035f8430dea1d5c85005c9db3d2b87edaba8f2eac46843c4f5ac319",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/83/3020983.jpg"
+        },
+        "record_sha256": "99482ef44e65329bf9c9ec77800407e61b23c6879f4149bf1e7d9cf8b8332341",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "철골 노출 현대 건축과 철근 콘크리트 벽체로 전통적 외관·재료의 시각적 특성이 거의 보이지 않음.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:2c1795be889e015afe35c85c8e6ebccc17bf0ec5b497107801a13fab06de418b",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "eaa3dbe92e8f1b36bcfdb76bb91df1317922b7a69e27df45a0e261cbe818f623",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3422720_24",
+          "request_sha256": "1f40388fde813ffc3e3dfc4b69087dab63e3eca5db9450441e70b2776dc402ab",
+          "response_sha256": "682462bb0a8c83ea7da8243f8b3f3cced8007d330c95425dc5a7e076d2a663d7",
+          "retrieved_at": "2026-09-10T08:24:16.287478Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "51eb581758a2e085a22b018e98529c7be0af5708e38c7bd3a9f7790264620110",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/20/3422720_image2_1.png"
+        },
+        "record_sha256": "36d8094ac6e401c84c40210ae0ce52693b0e5b78a8bebc01eb74a897f002ad0c",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 4,
+          "reason": "콘크리트 건물 가장자리에서 도약하는 듯한 조형물이 하늘을 배경으로 장면을 지배하며, 건축 프레임과 넓은 하늘을 활용한 연출이 매우 두드러짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:5b9755c51b96ae8f9e0b5b8d3b075ad909f655058b76bd2825e797179aed0c0f",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "eaa3dbe92e8f1b36bcfdb76bb91df1317922b7a69e27df45a0e261cbe818f623",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3422720_24",
+          "request_sha256": "1f40388fde813ffc3e3dfc4b69087dab63e3eca5db9450441e70b2776dc402ab",
+          "response_sha256": "682462bb0a8c83ea7da8243f8b3f3cced8007d330c95425dc5a7e076d2a663d7",
+          "retrieved_at": "2026-09-10T08:24:16.287478Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "51eb581758a2e085a22b018e98529c7be0af5708e38c7bd3a9f7790264620110",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/20/3422720_image2_1.png"
+        },
+        "record_sha256": "6592de642fc1031964f8726417680d57f010042e8645aba1e5dbf4095614cc1a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "탁 트인 바다, 모래사장, 울창한 침엽수 숲이 장면 대부분을 차지하며 자연 경관이 지배적이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:67acab9816dbc1286c3201200d5627966c4b39bbfa3f185ed96f16e11b1df5f9",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "34d09e6fc9d6db26ceca515f9c4281373751e89b4a652ad8fe0e81d43d1a59e9",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 강릉시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3020983",
+          "request_sha256": "f28415d818f5aaa7da4f85e9f55c079f486b492b860a624bb766b6965e88cfad",
+          "response_sha256": "241bba3d74ee3559cd9ea57ab9bfb6db63e432c283eebf6ce4e16afe1132bd45",
+          "retrieved_at": "2026-09-10T08:24:17.111847Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "539b7caba035f8430dea1d5c85005c9db3d2b87edaba8f2eac46843c4f5ac319",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/83/3020983.jpg"
+        },
+        "record_sha256": "b51870e84766326ff9eea6327d5579ccb07446584162ee23abeab325bd6612a9",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 3,
+          "reason": "큰 창 너머로 바다와 지평선, 야외 녹지가 뚜렷하게 보이며 자연 채광이 실내에 풍부하게 들어옴.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:77e6477cc17b558524c459b49eb7339535a6c0f721cd17a70643c5f9eaae9efa",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6309d470de9ff77f454eb7da4bc2628cdfbd1823c439954c84d15c34e2c6d005",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3422718_22",
+          "request_sha256": "1f40388fde813ffc3e3dfc4b69087dab63e3eca5db9450441e70b2776dc402ab",
+          "response_sha256": "682462bb0a8c83ea7da8243f8b3f3cced8007d330c95425dc5a7e076d2a663d7",
+          "retrieved_at": "2026-09-10T08:24:16.287478Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "84c67279672933d91762604639de0d149986348489ea5a55331643cb12d9b12f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/18/3422718_image2_1.png"
+        },
+        "record_sha256": "0117557160d344992b75e6cb6568f0f41f4a5a6057b849d83f8c3b4df61a7740",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 2,
+          "reason": "넓은 하늘과 건물 뒤로 보이는 울창한 나무 숲 등 자연 배경이 일부 보이나, 인공 구조물에 가려짐.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:c02e277c18c0ece5dc750424696a2b394af884f4355db0b8d0edc93b9a19e39d",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "eaa3dbe92e8f1b36bcfdb76bb91df1317922b7a69e27df45a0e261cbe818f623",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3422720_24",
+          "request_sha256": "1f40388fde813ffc3e3dfc4b69087dab63e3eca5db9450441e70b2776dc402ab",
+          "response_sha256": "682462bb0a8c83ea7da8243f8b3f3cced8007d330c95425dc5a7e076d2a663d7",
+          "retrieved_at": "2026-09-10T08:24:16.287478Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "51eb581758a2e085a22b018e98529c7be0af5708e38c7bd3a9f7790264620110",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/20/3422720_image2_1.png"
+        },
+        "record_sha256": "f72ea7c5740dec92cfe02e1a52e5c01ceb867324ba514b85b674a80924f7a0ef",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 0,
+          "reason": "전통 재료나 전통적 공간 구성의 흔적은 보이지 않고 현대적 금속 구조물과 조형물이 중심이다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:e6c87b823212dd39bd6500258fff5ccca3c0837b7dccbd39263222b6c96fee9e",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "34d09e6fc9d6db26ceca515f9c4281373751e89b4a652ad8fe0e81d43d1a59e9",
+        "match_basis": [
+          "공식 촬영지역 강원특별자치도 강릉시 및 목록 내 유일한 정확한 장소명/명시적 별칭 일치; 사진 좌표는 미제공"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "galleryDetailList1",
+          "provider": "PhotoGalleryService1",
+          "provider_record_id": "gallery:3020983",
+          "request_sha256": "f28415d818f5aaa7da4f85e9f55c079f486b492b860a624bb766b6965e88cfad",
+          "response_sha256": "241bba3d74ee3559cd9ea57ab9bfb6db63e432c283eebf6ce4e16afe1132bd45",
+          "retrieved_at": "2026-09-10T08:24:17.111847Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "539b7caba035f8430dea1d5c85005c9db3d2b87edaba8f2eac46843c4f5ac319",
+          "source_uri": "https://tong.visitkorea.or.kr/cms2/website/83/3020983.jpg"
+        },
+        "record_sha256": "6cc7502788af4e53dc5d8b14dca91f56cede1a6307267a6f840396f5a6a5bd81",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 2,
+          "reason": "노출 콘크리트와 원목 가구·나무 조형 등 재료 감각이 전통적·수공예적 외관을 어느 정도 드러냄.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:ebeace600d013edb7d9d70100143fe02a22707dc86e2e26897fce6b51d59e96c",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "6309d470de9ff77f454eb7da4bc2628cdfbd1823c439954c84d15c34e2c6d005",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3422718_22",
+          "request_sha256": "1f40388fde813ffc3e3dfc4b69087dab63e3eca5db9450441e70b2776dc402ab",
+          "response_sha256": "682462bb0a8c83ea7da8243f8b3f3cced8007d330c95425dc5a7e076d2a663d7",
+          "retrieved_at": "2026-09-10T08:24:16.287478Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "84c67279672933d91762604639de0d149986348489ea5a55331643cb12d9b12f",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/18/3422718_image2_1.png"
+        },
+        "record_sha256": "d74837ab11b37e617c825322dba1855a75e2d8d331de604214655fcaab3237cf",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:1b99b7c3d63943d5b890a6f0d79b595922a97bd5c994af665cac4d3927e0e050",
+        "field": "expguide",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailIntro2",
+          "provider": "KorService2",
+          "provider_record_id": "127951",
+          "request_sha256": "64cdbb528c9e94c54b1a9ca4dd3827b1556776fee334c4360bef14e4fadb6569",
+          "response_sha256": "96789c785613665eb4d5e19758c1762d380a33262175cb0e3541a7b1a45e1372",
+          "retrieved_at": "2026-09-10T08:13:31.605375Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "035643685653e30a6b7c885d9c19210ecbd29d1637136fc58462b0abea8ec261",
+          "source_uri": null
+        },
+        "record_sha256": "deb0bf81cc7da0cec195b02b86d8c5dbae2eea7a6dc00e0c7521d1e68a3cc8a8",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "채색체험 / DIY 체험 / 액티비티 체험 / 특별체험(단체체험) 등"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b22fd1efb0960a299230dab55bd533a6210e319863be466a3c1eef599f79f0bd",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127951",
+          "request_sha256": "64cdbb528c9e94c54b1a9ca4dd3827b1556776fee334c4360bef14e4fadb6569",
+          "response_sha256": "908900736a1e90e0d6a6ef98a24c272a62e752a4572d58e6ab44fb5f1858c2e2",
+          "retrieved_at": "2026-09-10T08:24:15.948667Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "020cb9f598e616b23666f0b18d57ba5c53a164e596c888eb7901f136cb8989d8",
+          "source_uri": null
+        },
+        "record_sha256": "ee51cea223ed67383a8f183502ef473b55c687321b5dceae846730b2f50ed72b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:b6dfda8f176ea98320d3d12071f741d05ef9378e6db501dab1b5e4d6fec180ab",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "127951",
+          "request_sha256": "64cdbb528c9e94c54b1a9ca4dd3827b1556776fee334c4360bef14e4fadb6569",
+          "response_sha256": "908900736a1e90e0d6a6ef98a24c272a62e752a4572d58e6ab44fb5f1858c2e2",
+          "retrieved_at": "2026-09-10T08:24:15.948667Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "901d74161e905389cc04e3c70af12f8345da3c402649c25371fb9645f8cc3af3",
+          "source_uri": null
+        },
+        "record_sha256": "4c2a2e9f33fba7282f69aec2274feeced83e485c14ecb698eeb37d7306e592be",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "- 성인 17,000원 - 청소년 13,000원 - 어린이 11,000원 - 36개월 미만 무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:fe1b5e3825434e6a64c54ffe0eba92aef3d74b155a00a69364c4e3c10d6bcaa5",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "127951",
+          "request_sha256": "333cc49e13b7175ea4f3e9fa05d40d58b22cab461ef1a1a2f7e0be380b6fbeca",
+          "response_sha256": "fff6df5e049326f7bb1b66dafbcdfb1e1a75f650702d14a3e2b2bc894546ae4c",
+          "retrieved_at": "2026-09-10T08:13:30.921710Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-13T05:51:44Z",
+          "source_record_sha256": "e684f70f00c0e434c05b62e22b22350343e2509d29914dbf3116e8fcc3126689",
+          "source_uri": null
+        },
+        "record_sha256": "6618cdc4d631c8ce5d365a0e212826ad5874e33940d67b0191fb7cee60bf0490",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "하슬라아트월드는 자연과 사람, 예술이 조화롭게 공존하는 종합예술공간이다. 3만 3천여 평의 조각공원은 ‘성성활엽길’, ‘소나무 정원’, ‘시간의 광장’, ‘바다정원’, ‘하늘전망대’, ‘돌갤러리와 소똥미술관’의 테마로 자연훼손을 최소화하기 위하여 비탈면과 산의 높이를 그대로 이용하여 손으로 직접 만들었으며 자연을 가장 아름답게 볼 수 있는 각도로 길을 내고 예술정원으로 꾸몄다. 하슬라아트월드는 국내외 작가들과 함께 하는 예술 작업 및 공연 전시 축제가 1년 내내 끊이지 않는 특별한 경험과 행복을 주는 공간이다. 실내미술관에는 현대 미술 200여 점이 전시된 ‘현대 미술관’과 유럽 각국에서 수집한 마리오네트와 피노키오 작품들이 전시된 ‘피노키오 & 마리오네트 미술관’이 있다. 하슬라 미술관은 기획전시, 초대전시, 상설전시가 진행 중이며 전시 스케줄에 따라 관람할 수 있다. ◎ 한류의 매력을 만나는 여행 정보 - 드라마 예리가 전 연인과의 추억을 정리하는 장면의 배경이 된 곳이다. CNN이 선정한 ‘강원의 추천 명소’로, 미술품을 감상하고 자연을 배경으로 인생 사진을 찍을 수 있는 인기 관광지다. 예리가 마음을 추슬렀던 야외 전시관에 서서 바다를 바라보면 탁 트인 풍경에 답답했던 마음이 뻥 뚫리는 기분이다."
+      }
+    ],
+    "parent_source_sha256": "8387f40f879846e6c3881c00de33c07adc821657c6c87a5d9c27fa370ab38062",
+    "place": {
+      "address": "강원특별자치도 강릉시 강동면 율곡로 1441",
+      "category": "관광지",
+      "cohort": "initial",
+      "duplicate_group_id": "duplicate:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+      "name_ko": "하슬라아트월드",
+      "place_id": "public:korea:72cc76dd6ebcf14b35413d206c1175353a3611a4f952a4173901dc780fd29c66",
+      "provider_content_id": "127951",
+      "region_code": "51150",
+      "region_name": "강원특별자치도 강릉시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

@@ -352,7 +352,7 @@ describe("/quiz canonical twelve-question journey", () => {
           config_hash: questionnaireArtifact.config_hash,
           created_at: "2026-07-22T12:00:00Z",
           is_current_trip_expectation: true,
-          description_ko: "이번 여행에서는 역사·전통과 감성·이미지 경험을 더 기대하고 있어요.",
+          description_ko: "이번 여행에서는 대상•원형형과 의미•이미지형 경험을 더 기대하고 있어요.",
           trip_conditions: submission.trip_conditions,
           answers: submission.answers,
           scores: [
@@ -546,7 +546,7 @@ describe("/quiz canonical twelve-question journey", () => {
             schema_version: "preference-profile-v2",
             created_at: "2026-07-22T12:00:00Z",
             is_current_trip_expectation: true,
-            description_ko: "이번 여행에서는 역사·전통과 감성·이미지 경험을 더 기대하고 있어요.",
+            description_ko: "이번 여행에서는 대상•원형형과 의미•이미지형 경험을 더 기대하고 있어요.",
             trip_conditions: submission.trip_conditions,
             answers: submission.answers,
             scores: [

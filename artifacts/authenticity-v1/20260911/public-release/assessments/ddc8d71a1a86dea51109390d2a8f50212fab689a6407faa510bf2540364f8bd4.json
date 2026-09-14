@@ -1,0 +1,826 @@
+{
+  "assessed_at": "2026-09-11T17:46:37.866836Z",
+  "assessment_sha256": "ddc8d71a1a86dea51109390d2a8f50212fab689a6407faa510bf2540364f8bd4",
+  "axes": [
+    {
+      "axis": "H",
+      "core_satisfied": true,
+      "missing_facets": [
+        "H.c",
+        "H.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "H.a",
+        "H.b"
+      ],
+      "value": 50
+    },
+    {
+      "axis": "E",
+      "core_satisfied": true,
+      "missing_facets": [
+        "E.b",
+        "E.d"
+      ],
+      "reason": "핵심 의미와 2/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "E.a",
+        "E.c"
+      ],
+      "value": 52
+    },
+    {
+      "axis": "R",
+      "core_satisfied": true,
+      "missing_facets": [
+        "R.d"
+      ],
+      "reason": "핵심 의미와 3/4개 항목에 근거가 있어 집계했습니다.",
+      "supported_facets": [
+        "R.a",
+        "R.b",
+        "R.c"
+      ],
+      "value": 60
+    }
+  ],
+  "facets": [
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.a",
+      "missing_channels": [],
+      "reason": "경천대비, 무우정, 말먹이통 등 유적·명승을 관광지 내에서 만날 수 있다고 명시되어 원형·유산과의 접촉이 가능하나, 실물 접촉의 구체적 탐구 근거는 제한적이므로 중간 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "H.b",
+      "missing_channels": [],
+      "reason": "채득기 선생의 은거·학문, 정기룡 장군의 용마전설 등 이 장소와 연결된 역사 맥락이 제시되나 여러 맥락의 체계적 탐구 근거까지는 부족하다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "H.c",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [],
+      "key": "H.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "E.a",
+      "missing_channels": [],
+      "reason": "'낙동강 제1경', '하늘이 만든 자천대'라는 구체적 이미지·이야기가 장소와 연결되어 있으나 여러 표현에서 일관된 의미의 근거까지는 확인되지 않는다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "E.b",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:1044c6ae0f738314af13f16c9094c0e195da5537a4fcb4e5613eaba5b140a553",
+            "appearance:3b2e0f5009c8b69e76ef3799ab34b184c805e0ad433e4ad8a3f9d803e54d3250"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 63,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "E.c",
+      "missing_channels": [],
+      "reason": "해당 근거는 경천대 자체의 기암절벽, 굽이치는 강물, 노송숲 등 구별되는 경관적 시각 성격을 설명하므로 E.c 시각적 표현으로 이 장소에 대한 직접 근거가 된다. 다만 연출이 장면 전체를 지배한다는 근거는 없어 수준 2로 판단했다. 원 제안의 VISUAL_APPEARANCE 주장은 해당 출처의 allowed_claims에 없어 VISUAL_EXPRESSION으로 수정해 반환한다.",
+      "value": 53
+    },
+    {
+      "contributions": [],
+      "key": "E.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.a",
+      "missing_channels": [],
+      "reason": "지정된 탐방코스를 따라 걷는 자율적 탐색 기회가 확인되나 코스가 단일·제한적이므로 낮은 수준으로 판단한다.",
+      "value": 50
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 75,
+          "weight_bp": 7500
+        },
+        {
+          "channel": "PHOTO",
+          "evidence_ids": [
+            "appearance:0e82ac807827564a30cb17db5a7dba7cd24b387e272cd88326f1a406cc7d3515",
+            "appearance:3ac0a3f072c69d86e3bd451fcf4f3ed3b74f59d18f61e10b97b6bf01f43f83ac"
+          ],
+          "rule": "OBSERVED_APPEARANCE_ONLY",
+          "value": 100,
+          "weight_bp": 2500
+        }
+      ],
+      "key": "R.b",
+      "missing_channels": [],
+      "reason": "강물, 기암절벽, 울창한 노송숲 등 자연 환경 단서가 구체적으로 확인되며 휴식 환경으로 언급되나 장면 전체를 지배한다는 근거까지는 부족하다.",
+      "value": 81
+    },
+    {
+      "contributions": [
+        {
+          "channel": "TEXT",
+          "evidence_ids": [
+            "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26"
+          ],
+          "rule": "ANCHORED_TEXT_LEVEL_0_TO_4",
+          "value": 50,
+          "weight_bp": 10000
+        }
+      ],
+      "key": "R.c",
+      "missing_channels": [],
+      "reason": "수영장, 눈썰매장, 야영장 등 참여 활동 기회가 확인되나 지속적 몰입·도전 활동의 중심이라는 근거는 제한적이다.",
+      "value": 50
+    },
+    {
+      "contributions": [],
+      "key": "R.d",
+      "missing_channels": [
+        "TEXT"
+      ],
+      "reason": "이 항목을 판단할 허용된 근거가 없습니다.",
+      "value": null
+    }
+  ],
+  "judgments": [
+    {
+      "citations": [
+        {
+          "claim": "HERITAGE_FACT",
+          "evidence_id": "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26",
+          "quote": {
+            "end": 281,
+            "method": "EXACT",
+            "original": "무우정과 경천대비, 임란의 명장 정기룡장군의 용마전설과 말먹이통등 이루 말할 수 없는 명승지와 유적지를 만날 수 있는 곳이다.",
+            "start": 211,
+            "submitted": "무우정과 경천대비, 임란의 명장 정기룡장군의 용마전설과 말먹이통등 이루 말할 수 없는 명승지와 유적지를 만날 수 있는 곳이다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0db337dc8c584b5a71419577486134929170b071d7123f092260a110767da77d"
+        }
+      ],
+      "flags": [],
+      "key": "H.a",
+      "level": 2,
+      "reason": "경천대비, 무우정, 말먹이통 등 유적·명승을 관광지 내에서 만날 수 있다고 명시되어 원형·유산과의 접촉이 가능하나, 실물 접촉의 구체적 탐구 근거는 제한적이므로 중간 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "HISTORICAL_NARRATIVE",
+          "evidence_id": "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26",
+          "quote": {
+            "end": 214,
+            "method": "EXACT",
+            "original": "1637년 당대의 석학 우담 채득기 선생이 은거하며 학문을 닦던 무우정",
+            "start": 175,
+            "submitted": "1637년 당대의 석학 우담 채득기 선생이 은거하며 학문을 닦던 무우정",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0db337dc8c584b5a71419577486134929170b071d7123f092260a110767da77d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "H.b",
+      "level": 2,
+      "reason": "채득기 선생의 은거·학문, 정기룡 장군의 용마전설 등 이 장소와 연결된 역사 맥락이 제시되나 여러 맥락의 체계적 탐구 근거까지는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.c",
+      "level": null,
+      "reason": "지역 주체의 전승·생활문화의 현재 지속 활동에 대한 근거가 제공되지 않았다. 과거 인물·전설의 언급만으로 현재 전승을 추정할 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "H.d",
+      "level": null,
+      "reason": "원형·유산에 연결된 해설·학습 프로그램에 대한 근거가 없다. 관광코스 소개는 해설 탐구의 근거가 아니다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "REPRESENTED_MEANING",
+          "evidence_id": "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26",
+          "quote": {
+            "end": 89,
+            "method": "EXACT",
+            "original": "낙동강 제1경의 칭송받아 온 곳으로 하늘이 만들었다 하여 일명 자천대라고도 불린다.",
+            "start": 43,
+            "submitted": "낙동강 제1경의 칭송받아 온 곳으로 하늘이 만들었다 하여 일명 자천대라고도 불린다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0db337dc8c584b5a71419577486134929170b071d7123f092260a110767da77d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.a",
+      "level": 2,
+      "reason": "'낙동강 제1경', '하늘이 만든 자천대'라는 구체적 이미지·이야기가 장소와 연결되어 있으나 여러 표현에서 일관된 의미의 근거까지는 확인되지 않는다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.b",
+      "level": null,
+      "reason": "이 장소의 이미지가 매체를 통해 재현·확산되는 근거가 없다. MBC 드라마 세트장은 인근 시설이며 이 장소의 매체 표현으로 옮길 수 없다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "VISUAL_EXPRESSION",
+          "evidence_id": "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26",
+          "quote": {
+            "end": 173,
+            "method": "EXACT",
+            "original": "천주봉, 기암절벽과 굽이쳐 흐르는 강물을 감상하며 쉴 수 있는 울창한 노송숲과 전망대",
+            "start": 126,
+            "submitted": "천주봉, 기암절벽과 굽이쳐 흐르는 강물을 감상하며 쉴 수 있는 울창한 노송숲과 전망대",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0db337dc8c584b5a71419577486134929170b071d7123f092260a110767da77d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "E.c",
+      "level": 2,
+      "reason": "해당 근거는 경천대 자체의 기암절벽, 굽이치는 강물, 노송숲 등 구별되는 경관적 시각 성격을 설명하므로 E.c 시각적 표현으로 이 장소에 대한 직접 근거가 된다. 다만 연출이 장면 전체를 지배한다는 근거는 없어 수준 2로 판단했다. 원 제안의 VISUAL_APPEARANCE 주장은 해당 출처의 allowed_claims에 없어 VISUAL_EXPRESSION으로 수정해 반환한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "E.d",
+      "level": null,
+      "reason": "대표 장면·구도·이야기를 현장에서 체험·재현할 수 있는 활동에 대한 근거가 제공되지 않았다.",
+      "state": "UNKNOWN"
+    },
+    {
+      "citations": [
+        {
+          "claim": "AUTONOMOUS_ACTIVITY",
+          "evidence_id": "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26",
+          "quote": {
+            "end": 646,
+            "method": "EXACT",
+            "original": "경천대 관광코스로는 인공폭포를 출발하여 유래비~인공폭포로 되돌아오는 코스로 약 1시간 정도 소요된다.",
+            "start": 590,
+            "submitted": "경천대 관광코스로는 인공폭포를 출발하여 유래비~인공폭포로 되돌아오는 코스로 약 1시간 정도 소요된다.",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0db337dc8c584b5a71419577486134929170b071d7123f092260a110767da77d"
+        }
+      ],
+      "flags": [],
+      "key": "R.a",
+      "level": 2,
+      "reason": "지정된 탐방코스를 따라 걷는 자율적 탐색 기회가 확인되나 코스가 단일·제한적이므로 낮은 수준으로 판단한다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "ENVIRONMENT",
+          "evidence_id": "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26",
+          "quote": {
+            "end": 173,
+            "method": "EXACT",
+            "original": "기암절벽과 굽이쳐 흐르는 강물을 감상하며 쉴 수 있는 울창한 노송숲과 전망대",
+            "start": 131,
+            "submitted": "기암절벽과 굽이쳐 흐르는 강물을 감상하며 쉴 수 있는 울창한 노송숲과 전망대",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0db337dc8c584b5a71419577486134929170b071d7123f092260a110767da77d"
+        }
+      ],
+      "flags": [
+        "INFERENCE_SCOPE_REVIEW"
+      ],
+      "key": "R.b",
+      "level": 3,
+      "reason": "강물, 기암절벽, 울창한 노송숲 등 자연 환경 단서가 구체적으로 확인되며 휴식 환경으로 언급되나 장면 전체를 지배한다는 근거까지는 부족하다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [
+        {
+          "claim": "PARTICIPATORY_ACTIVITY",
+          "evidence_id": "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26",
+          "quote": {
+            "end": 342,
+            "method": "EXACT",
+            "original": "상주시에서는 전망대, 인공폭포, 경천대 어린이 랜드와 야영장, 여름에는 수영장과 겨울에는 눈썰매장을 운영하며",
+            "start": 282,
+            "submitted": "상주시에서는 전망대, 인공폭포, 경천대 어린이 랜드와 야영장, 여름에는 수영장과 겨울에는 눈썰매장을 운영하며",
+            "version": "quote-offset-mapping-v1"
+          },
+          "record_sha256": "0db337dc8c584b5a71419577486134929170b071d7123f092260a110767da77d"
+        }
+      ],
+      "flags": [],
+      "key": "R.c",
+      "level": 2,
+      "reason": "수영장, 눈썰매장, 야영장 등 참여 활동 기회가 확인되나 지속적 몰입·도전 활동의 중심이라는 근거는 제한적이다.",
+      "state": "SUPPORTED"
+    },
+    {
+      "citations": [],
+      "flags": [],
+      "key": "R.d",
+      "level": null,
+      "reason": "가족 단위 이용 언급만으로 교류·자기표현 기회를 추정할 수 없으며, 구체적 공동 활동·표현 프로그램의 근거가 없다.",
+      "state": "UNKNOWN"
+    }
+  ],
+  "model_request_sha256": null,
+  "policy": {
+    "authority_version": "authenticity-authority-v1",
+    "construct_version": "authenticity-construct-v1",
+    "minimum_facets": 2,
+    "photo_mode": "ER",
+    "photo_share_bp": 2500,
+    "publication_status": "EXPERIMENTAL",
+    "rubric_sha256": "0ddd0da72d7e0167ebb9a1fe8975a1f994edd02a9a79610215d8ce618690cecc",
+    "social_log_ceiling": 1000000,
+    "social_mode": "NONE",
+    "social_share_bp": 1000,
+    "version": "authenticity-aggregation-v1"
+  },
+  "rejections": [],
+  "schema_version": "authenticity-assessment.v1",
+  "source": {
+    "bundle_sha256": "b50fbd9e0df20c106efc50ac08960b8869ea5884632fd93344b425c14e0cb710",
+    "evidence": [
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "강물, 들판, 산과 나무 등 자연 경관이 장면 전체를 지배하며 트인 자연 배경이 매우 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:0e82ac807827564a30cb17db5a7dba7cd24b387e272cd88326f1a406cc7d3515",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7393284e4b355651a66b0e7d354197fd135238ccb8f911e2e19039d3f4d8fdbb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3557842_1",
+          "request_sha256": "a2948705ffe3b231695b8bc8a2f28d691a5729976505d5121af87df9b19f740e",
+          "response_sha256": "2ba77a8f4f53345c1af3038257f59efe87e24e97cbe735b3245b5d94e564247f",
+          "retrieved_at": "2026-09-11T02:06:40.048382Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ad4d7e6524e81341dd160e0f4290a7dd2f355afb3609687bbf9f2ee897da2067",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/42/3557842_image2_1.jpg"
+        },
+        "record_sha256": "a43af812e6b3aefaf45e33f0dafc39bbcf1b08e13aaa369aee570b2d21b6bca5",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 2,
+          "reason": "맑은 하늘, 노란 들판과 녹색 산, 물에 비친 반영 등 자연스러운 풍경 사진 구도가 보통 수준으로 드러난다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:1044c6ae0f738314af13f16c9094c0e195da5537a4fcb4e5613eaba5b140a553",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7393284e4b355651a66b0e7d354197fd135238ccb8f911e2e19039d3f4d8fdbb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3557842_1",
+          "request_sha256": "a2948705ffe3b231695b8bc8a2f28d691a5729976505d5121af87df9b19f740e",
+          "response_sha256": "2ba77a8f4f53345c1af3038257f59efe87e24e97cbe735b3245b5d94e564247f",
+          "retrieved_at": "2026-09-11T02:06:40.048382Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ad4d7e6524e81341dd160e0f4290a7dd2f355afb3609687bbf9f2ee897da2067",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/42/3557842_image2_1.jpg"
+        },
+        "record_sha256": "b54418170e9ced4159635e8ae822c4553140e1704cc77a032b9b0dcd0b92742a",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "natural_setting",
+          "level": 4,
+          "reason": "호수와 저 멀리 산봉우리, 소나무 숲, 잔디와 흙바닥이 장면 전체를 지배하며 트인 자연 배경이 매우 뚜렷하다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3ac0a3f072c69d86e3bd451fcf4f3ed3b74f59d18f61e10b97b6bf01f43f83ac",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "179f982591724c560d72502405913a4803cfa3db3ba393da5d8ce8a9e11d1279",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3557843_2",
+          "request_sha256": "a2948705ffe3b231695b8bc8a2f28d691a5729976505d5121af87df9b19f740e",
+          "response_sha256": "2ba77a8f4f53345c1af3038257f59efe87e24e97cbe735b3245b5d94e564247f",
+          "retrieved_at": "2026-09-11T02:06:40.048382Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c4c2dc7a0b46acca0b1df529d03de8d4d0b12e9ec6632d5cfcfc0795e81da3f9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/43/3557843_image2_1.jpg"
+        },
+        "record_sha256": "4ff2f839cd62e7c62a2fadd7d67ee169fe96a4536b0ffd2ea21b66723d35bca6",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "visual_character",
+          "level": 3,
+          "reason": "짚지붕 정자가 구도 중심을 차지하며 따뜻한 갈색톤과 소나무 그늘 대비가 뚜렷해 연출된 듯한 안정된 구성이 두드러진다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:3b2e0f5009c8b69e76ef3799ab34b184c805e0ad433e4ad8a3f9d803e54d3250",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "179f982591724c560d72502405913a4803cfa3db3ba393da5d8ce8a9e11d1279",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3557843_2",
+          "request_sha256": "a2948705ffe3b231695b8bc8a2f28d691a5729976505d5121af87df9b19f740e",
+          "response_sha256": "2ba77a8f4f53345c1af3038257f59efe87e24e97cbe735b3245b5d94e564247f",
+          "retrieved_at": "2026-09-11T02:06:40.048382Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c4c2dc7a0b46acca0b1df529d03de8d4d0b12e9ec6632d5cfcfc0795e81da3f9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/43/3557843_image2_1.jpg"
+        },
+        "record_sha256": "f815b8f8465e9d4068d405aaa08b6ff44c254c96303990e39d6e7a831c71e528",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 1,
+          "reason": "논과 시골 들판의 전통적 농촌 외관이 약간 보이나 건물·재료의 전통적 특성은 뚜렷하지 않다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:69abe14b289b72838842037e1ef32506e66b476b85fe4e01fed7f2b10af2e274",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "7393284e4b355651a66b0e7d354197fd135238ccb8f911e2e19039d3f4d8fdbb",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3557842_1",
+          "request_sha256": "a2948705ffe3b231695b8bc8a2f28d691a5729976505d5121af87df9b19f740e",
+          "response_sha256": "2ba77a8f4f53345c1af3038257f59efe87e24e97cbe735b3245b5d94e564247f",
+          "retrieved_at": "2026-09-11T02:06:40.048382Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "ad4d7e6524e81341dd160e0f4290a7dd2f355afb3609687bbf9f2ee897da2067",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/42/3557842_image2_1.jpg"
+        },
+        "record_sha256": "15915990e90bf5afba9a21ff6416c7155bdfc232016f055ca03917649017158b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": {
+          "key": "traditional_appearance",
+          "level": 4,
+          "reason": "원형 축지 초가 지붕과 목재 기둥, 격자 난간, 돌기단 정자 등 전통 정자의 외관적 특징이 장면을 지배한다.",
+          "state": "OBSERVED"
+        },
+        "evidence_id": "appearance:a3b3f3e77aba57b7555e81f60e5052a513ced8a755cabec3d03f8b0285e1d6df",
+        "field": "pixels",
+        "image_license": "KOGL_TYPE_1",
+        "image_sha256": "179f982591724c560d72502405913a4803cfa3db3ba393da5d8ce8a9e11d1279",
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "IMAGE",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailImage2",
+          "provider": "KorService2",
+          "provider_record_id": "tour:3557843_2",
+          "request_sha256": "a2948705ffe3b231695b8bc8a2f28d691a5729976505d5121af87df9b19f740e",
+          "response_sha256": "2ba77a8f4f53345c1af3038257f59efe87e24e97cbe735b3245b5d94e564247f",
+          "retrieved_at": "2026-09-11T02:06:40.048382Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "c4c2dc7a0b46acca0b1df529d03de8d4d0b12e9ec6632d5cfcfc0795e81da3f9",
+          "source_uri": "https://tong.visitkorea.or.kr/cms/resource/43/3557843_image2_1.jpg"
+        },
+        "record_sha256": "314f1dc3d9d8344e7ca10946392ae14c9b9c9126bc78b97c37a8d88552e01e79",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_PHOTO",
+        "state": "AVAILABLE",
+        "text": null
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:0745ed3d062ced5925036bfbda2be39ca3d0b5aaed7dd550e28efcd6b0c3dca5",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3056679",
+          "request_sha256": "7e0b2ca07ca61e06242a80f24fcef33bc0016b9ed593b466927da5b36e80e9df",
+          "response_sha256": "c255906e978b09ee86d14aa0c1648d4c5dc85554fc1d9567b7adad08bb1adc46",
+          "retrieved_at": "2026-09-11T02:06:39.699999Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "dca28870dc0e7bbf0f126d2b7322a990545161aadcceb5f19c30e96c88d886da",
+          "source_uri": null
+        },
+        "record_sha256": "71870a12503f38c8ef793e9adbbbdc16ece009de8e97e891b6d5e12b6a79ca20",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "무료"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:10483fcc48a52e1811f729b269bc522a7b2d37c7b7a22aba8f9aa2b8225c7d42",
+        "field": "infotext",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailInfo2",
+          "provider": "KorService2",
+          "provider_record_id": "3056679",
+          "request_sha256": "7e0b2ca07ca61e06242a80f24fcef33bc0016b9ed593b466927da5b36e80e9df",
+          "response_sha256": "c255906e978b09ee86d14aa0c1648d4c5dc85554fc1d9567b7adad08bb1adc46",
+          "retrieved_at": "2026-09-11T02:06:39.699999Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": null,
+          "source_record_sha256": "62bb43a9b748008edfb9d010bd2c598021fcd2c2c66c011c6fba92a9083ada9b",
+          "source_uri": null
+        },
+        "record_sha256": "bd3db6df2c7cba328669fd7c20e77b7f01e9ad1f4c9232becfefa2f00840bc5b",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "있음"
+      },
+      {
+        "appearance": null,
+        "evidence_id": "evidence:4c6863f8357e50493b0e08942d0597c44cd685fc929b65cc6dee88b762f77a26",
+        "field": "overview",
+        "image_license": null,
+        "image_sha256": null,
+        "match_basis": [
+          "TourAPI contentId·명칭·기준좌표 일치"
+        ],
+        "modality": "TEXT",
+        "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+        "place_match": "VERIFIED",
+        "primary_tag": null,
+        "receipt": {
+          "actor_build_id": null,
+          "actor_id": null,
+          "actor_run_id": null,
+          "operation": "detailCommon2",
+          "provider": "KorService2",
+          "provider_record_id": "3056679",
+          "request_sha256": "0ded4c585143401ed974dbeebf8f2177bea2a9999e51abec3451e43b3583b615",
+          "response_sha256": "4b375a751b17d7de05c26a97f495e8b6de59f3685a4e1719bac6398d235e62b3",
+          "retrieved_at": "2026-09-10T16:40:07.358066Z",
+          "schema_version": "authenticity-receipt.v1",
+          "source_modified_at": "2026-03-30T08:36:20Z",
+          "source_record_sha256": "c8744d2fa5b8145341878bafcadf2b63f44c143f760eac69a0a2ba5a71e7b8ef",
+          "source_uri": null
+        },
+        "record_sha256": "0db337dc8c584b5a71419577486134929170b071d7123f092260a110767da77d",
+        "reported_count": null,
+        "reported_count_raw": null,
+        "schema_version": "authenticity-evidence.v1",
+        "source_role": "OFFICIAL_DESCRIPTION",
+        "state": "AVAILABLE",
+        "text": "상주 경천대는 태백산 황지에서 발원한 낙동강 물길 중 경관이 가장 아름답다는 낙동강 제1경의 칭송받아 온 곳으로 하늘이 만들었다 하여 일명 자천대라고도 불린다. 경천대와 낙동강 물을 마시고 하늘로 솟구치는 학을 떠올리게 하는 천주봉, 기암절벽과 굽이쳐 흐르는 강물을 감상하며 쉴 수 있는 울창한 노송숲과 전망대, 1637년 당대의 석학 우담 채득기 선생이 은거하며 학문을 닦던 무우정과 경천대비, 임란의 명장 정기룡장군의 용마전설과 말먹이통등 이루 말할 수 없는 명승지와 유적지를 만날 수 있는 곳이다. 상주시에서는 전망대, 인공폭포, 경천대 어린이 랜드와 야영장, 여름에는 수영장과 겨울에는 눈썰매장을 운영하며 이 주변 일대를 경천대 관광지로 조성하여 상주 시민들은 휴식과 여가를 즐길 수 있고 관광객들은 인근 지역과 연계해 문화 관광을 할 수 있도록 하였다. 인근에는 전사벌왕릉과 전 고령가야왕릉, 화달리 3층 석탑, 임진왜란의 명장 정기룡 장군의 유적지인 충의사와 도남서원 등 여러 문화유적지가 있으며 상주활공장, MBC 드라마 의 저잣거리 세트장, 상주예술촌 등이 있어 가족과 함께 편안한 휴식과 관광을 할 수 있는 최적의 장소로 주목받고 있다. 경천대 관광코스로는 인공폭포를 출발하여 유래비~인공폭포로 되돌아오는 코스로 약 1시간 정도 소요된다."
+      }
+    ],
+    "parent_source_sha256": "a86dcd50c8876fdf4c9cdca29790f05de5171e34f7f4c3ceab5419aff9713074",
+    "place": {
+      "address": "경상북도 상주시 사벌국면 경천로 652",
+      "category": "관광지",
+      "cohort": "additional",
+      "duplicate_group_id": "duplicate:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+      "name_ko": "경천대관광지",
+      "place_id": "public:korea:8331a0f1aff7345813f891c532059490089d4ce0da405c5b96d947ebc4774e98",
+      "provider_content_id": "3056679",
+      "region_code": "47250",
+      "region_name": "경상북도 상주시"
+    },
+    "schema_version": "authenticity-source.v1"
+  }
+}

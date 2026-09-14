@@ -5,6 +5,11 @@ virtualStoreDir: .pnpm.nosync
 
 onlyBuiltDependencies: []
 
+# Pin fixes for dependencies traced into the standalone deployment image.
+overrides:
+  postcss@8.4.31: 8.5.21
+  nanoid@3.3.16: 3.3.18
+
 minimumReleaseAgeExclude:
   - '@vitejs/plugin-react@6.0.4'
   - react-dom@19.2.8
