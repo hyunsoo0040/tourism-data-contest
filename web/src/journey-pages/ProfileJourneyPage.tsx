@@ -242,8 +242,14 @@ export function ProfilePage() {
     <ProfileShell>
       <section className="panel result visible profile-result" aria-labelledby="profile-result-heading">
         <p className="eyebrow">Result</p>
-        <h1 id="profile-result-heading" tabIndex={-1}>당신이 기대하는 여행의 시간</h1>
-        <p className="profile-scope">이 결과는 평소 성격이나 여행 만족도를 예측하지 않아요. 지금 입력한 여행 조건과 답변을 정리한 값이에요.</p>
+        <div className="profile-authenticity-intro">
+          <h1 id="profile-result-heading" tabIndex={-1}>여행에서의 진짜다움(진정성)이란?</h1>
+          <p>
+            관광에서 말하는 진짜다움은 단순히 ‘진짜인지 가짜인지’를 판단하는 것이 아닙니다.
+            같은 장소를 방문하더라도 무엇을 중요하게 바라보고 어떤 의미를 부여하느냐에 따라,
+            그 장소에서 느끼는 진짜다움은 사람마다 다를 수 있습니다.
+          </p>
+        </div>
         <p className="visually-hidden" role="status" aria-live="polite">{announcement}</p>
         {upstreamResult !== null ? (
           <>
@@ -275,17 +281,13 @@ export function ProfilePage() {
           <ThreeAxisProfile scores={profile.scores} headingRef={meterHeadingRef} tieBreak={upstreamContract?.axis_tie_break} />
         </section>
 
-        <div className="result-actions profile-primary-action" ref={ctaRef}>
+        <div className="result-actions profile-actions profile-primary-action profile-actions--primary" ref={ctaRef}>
+          {upstreamContract !== null ? <ProfileStoryButton profile={profile} questionnaire={upstreamContract} /> : null}
+          <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>처음부터 다시</button>
           <ScenarioRecommendationCTA profile={profile} />
         </div>
-
-        <div className="result-actions profile-actions">
-          {upstreamContract !== null ? <ProfileStoryButton profile={profile} questionnaire={upstreamContract} /> : null}
-          <button type="button" className="control" onClick={() => void navigate("/photo")}>사진 추천 페이지 열기</button>
-          <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>처음부터 다시</button>
-        </div>
       </section>
-      <PhotoMoodIntro />
+      <PhotoMoodIntro onOpenPhoto={() => void navigate("/photo")} />
       <ResetDraftDialog
         open={dialogOpen}
         triggerRef={resetTriggerRef}

@@ -26,7 +26,7 @@ async function loadProfile(page: Page, winner: number) {
     }));
   }, { created, questionnaire });
   await page.goto("/profile");
-  await expect(page.getByRole("button", { name: "스토리 이미지 공유·저장" })).toBeEnabled({ timeout: 25_000 });
+  await expect(page.getByRole("button", { name: "이미지 공유·저장" })).toBeEnabled({ timeout: 25_000 });
 }
 
 test("1080 × 1920 PNGs for all three types, with mobile and desktop button checks", async ({ page }) => {
@@ -37,7 +37,7 @@ test("1080 × 1920 PNGs for all three types, with mobile and desktop button chec
   for (const [winner, slug] of ["original-seeker", "mood-weaver", "flow-walker"].entries()) {
     await page.setViewportSize({ width: winner === 0 ? 1440 : 390, height: winner === 0 ? 1000 : 844 });
     await loadProfile(page, winner);
-    const button = page.getByRole("button", { name: "스토리 이미지 공유·저장" });
+    const button = page.getByRole("button", { name: "이미지 공유·저장" });
     await button.scrollIntoViewIfNeeded();
     const before = await page.getByRole("meter").allTextContents();
     const download = page.waitForEvent("download");
@@ -75,7 +75,7 @@ test("native sharing receives the PNG within user activation, without downloadin
   let downloads = 0;
   page.on("download", () => { downloads += 1; });
   await loadProfile(page, 1);
-  await page.getByRole("button", { name: "스토리 이미지 공유·저장" }).click();
+  await page.getByRole("button", { name: "이미지 공유·저장" }).click();
   const shared = JSON.parse(await page.locator("html").getAttribute("data-native-story") ?? "null");
   expect(shared).toMatchObject({ type: "image/png", active: true, count: 1 });
   expect(shared.size).toBeGreaterThan(100_000);

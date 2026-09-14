@@ -177,7 +177,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
       // The bootstrap enforces ITDA_NO_NETWORK=1; exercise real upload and the
       // disabled-provider path without a paid model request or mock provider.
       await page.goto("/profile");
-      await page.getByRole("button", { name: "사진 추천 페이지 열기" }).click();
+      await page.getByRole("button", { name: "사진으로 추천받기" }).click();
       await page.getByRole("checkbox").check();
       await page.getByRole("button", { name: "동의하고 사진 고르기" }).click();
       await page.locator('input[type="file"]').setInputFiles({ name: "offline-preview.png", mimeType: "image/png", buffer: tinyPng });

@@ -68,7 +68,7 @@ export function ProfileStoryButton({ profile, questionnaire }: {
         title={message || "1080 × 1920 PNG · 공유창에서 이미지 저장 또는 공유 대상을 선택해 주세요"}
         onClick={() => void share()}
       >
-        {sharing ? "공유창 여는 중…" : failed ? "스토리 이미지 다시 준비" : !file ? "스토리 이미지 준비 중…" : "스토리 이미지 공유·저장"}
+        {sharing ? "공유창 여는 중…" : failed ? "이미지 다시 준비" : !file ? "이미지 준비 중…" : "이미지 공유·저장"}
       </button>
       <span className="visually-hidden" role="status" aria-live="polite">{message}</span>
     </>

@@ -31,7 +31,7 @@ function nativeShare(share?: ReturnType<typeof vi.fn>) {
 async function ready() {
   vi.mocked(renderProfileStory).mockResolvedValue(file);
   render(<ProfileStoryButton profile={profile} questionnaire={FRONTEND_QUESTIONNAIRE} />);
-  return screen.findByRole("button", { name: "스토리 이미지 공유·저장" });
+  return screen.findByRole("button", { name: "이미지 공유·저장" });
 }
 
 afterEach(() => { vi.resetAllMocks(); nativeShare(); });
@@ -79,15 +79,15 @@ describe("profile story sharing", () => {
     nativeShare();
     vi.mocked(renderProfileStory).mockRejectedValueOnce(new Error("image failed")).mockResolvedValueOnce(file);
     const { rerender } = render(<ProfileStoryButton profile={profile} questionnaire={FRONTEND_QUESTIONNAIRE} />);
-    fireEvent.click(await screen.findByRole("button", { name: "스토리 이미지 다시 준비" }));
-    await screen.findByRole("button", { name: "스토리 이미지 공유·저장" });
+    fireEvent.click(await screen.findByRole("button", { name: "이미지 다시 준비" }));
+    await screen.findByRole("button", { name: "이미지 공유·저장" });
     let finish: (file: File) => void = () => {};
     vi.mocked(renderProfileStory).mockImplementationOnce(() => new Promise((resolve) => { finish = resolve; }));
     rerender(<ProfileStoryButton profile={{ ...profile, scores: [...profile.scores].reverse() as PreferenceProfile["scores"] }} questionnaire={FRONTEND_QUESTIONNAIRE} />);
     expect(screen.getByRole("button").getAttribute("disabled")).not.toBeNull();
     expect(downloadProfileStory).not.toHaveBeenCalled();
     await act(async () => finish(new File(["new"], "new.png")));
-    fireEvent.click(screen.getByRole("button", { name: "스토리 이미지 공유·저장" }));
+    fireEvent.click(screen.getByRole("button", { name: "이미지 공유·저장" }));
     expect(vi.mocked(downloadProfileStory).mock.lastCall?.[0].name).toBe("new.png");
   });
 

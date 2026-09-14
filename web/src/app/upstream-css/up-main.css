@@ -292,6 +292,10 @@
   .up-main .photo-feature{grid-template-columns:1fr}
   .up-main .phone-card{min-height:auto}
   .up-main .cards, .up-main .flow, .up-main .data-list{grid-template-columns:1fr 1fr}
+  .up-main .nav{gap:8px}
+  .up-main .nav-cta{order:1;
+    margin-left:auto;}
+  .up-main .menu-toggle{order:2}
   .up-main .menu-toggle{display:flex}
   .up-main .nav-menu{position:absolute;
     top:74px;
@@ -337,7 +341,10 @@
   .up-main .badge{font-size:12px;padding:8px 11px}
   .up-main .place{grid-template-columns:1fr}
   .up-main .cta-box{padding:36px 20px}
-  .up-main .nav-cta{display:none}
+  .up-main .nav-cta{display:inline-flex;
+    align-items:center;
+    padding:10px 14px;
+    font-size:14px;}
   .up-main .site-header{background:rgba(247,249,252,.92)}
   .up-main .nav{height:64px}
   .up-main .logo{font-size:20px}

@@ -116,7 +116,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     profile = await response.json(); review = await reviewFor(String(profile!.profile_id), jobId);
     await expect(page.getByRole("button", { name: "바로 추천 보기", exact: true })).toBeVisible();
     const before = await page.locator(".axis-score-list").allTextContents();
-    await page.getByRole("button", { name: "사진 추천 페이지 열기" }).click();
+    await page.getByRole("button", { name: "사진으로 추천받기" }).click();
     await expect(page).toHaveURL(/\/photo$/);
     await expect(page.getByRole("heading", { name: "사진 사용 내용을 먼저 확인해 주세요" })).toBeVisible();
     await page.screenshot({ path: info.outputPath("design-photo.png"), fullPage: true });

@@ -36,7 +36,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await expect(button).toBeEnabled();
     await expect(page.getByRole("button", { name: "답변 수정하기" })).toHaveCount(0);
     await expect(page.getByRole("button", { name: "여행 조건 수정하기" })).toHaveCount(0);
-    await expect(page.getByRole("button", { name: "사진 추천 페이지 열기" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "사진으로 추천받기" })).toBeVisible();
     await page.clock.install(); await button.click();
     const progress = page.getByRole("region", { name: "추천 진행 상황" });
     await expect(progress).toBeVisible();

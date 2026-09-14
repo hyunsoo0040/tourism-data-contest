@@ -197,6 +197,15 @@ function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
 
 export function UpstreamMainPage() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [activeTypeReason, setActiveTypeReason] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveTypeReason((current) => (current + 1) % 3);
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, []);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<keyof typeof RECOMMENDATIONS>("rest");
   const rootRef = useRef<HTMLElement>(null);
@@ -346,10 +355,10 @@ export function UpstreamMainPage() {
               </div>
               <div className="type-visual" aria-label="어떤 사람은 장소에 담긴 이야기, 분위기와 이미지, 조용히 머무는 시간에 끌립니다">
                 <strong className="type-visual__word type-visual__word--start">어떤 사람은</strong>
-                <div className="type-visual__reasons">
-                  <span>장소에 담긴 이야기에</span>
-                  <span>분위기와 이미지에</span>
-                  <span>또는 조용히 머무는 시간에</span>
+                <div className={`type-visual__reasons type-visual__reasons--${activeTypeReason}`}>
+                  <span className={activeTypeReason === 0 ? "is-active" : undefined}>장소에 담긴 이야기에</span>
+                  <span className={activeTypeReason === 1 ? "is-active" : undefined}>분위기와 이미지에</span>
+                  <span className={activeTypeReason === 2 ? "is-active" : undefined}>또는 조용히 머무는 시간에</span>
                 </div>
                 <strong className="type-visual__word type-visual__word--end">끌립니다.</strong>
               </div>

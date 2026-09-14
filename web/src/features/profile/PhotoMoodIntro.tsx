@@ -1,4 +1,4 @@
-export function PhotoMoodIntro() {
+export function PhotoMoodIntro({ onOpenPhoto }: { onOpenPhoto: () => void }) {
   return (
     <section id="photo" className="profile-photo-intro photo-feature--intro" aria-labelledby="profile-photo-intro-heading">
       <div className="photo-intro-copy">
@@ -26,6 +26,9 @@ export function PhotoMoodIntro() {
           </figure>
         </div>
       </div>
+      <button type="button" className="button button--primary photo-mood-cta" onClick={onOpenPhoto}>
+        사진으로 추천받기
+      </button>
     </section>
   );
 }

@@ -285,7 +285,7 @@ async function createProfileJourney(page: Page) {
 async function openPhotoPanel(page: Page) {
   const consentHeading = page.getByRole("heading", { name: CONSENT_HEADING });
   if (!(await consentHeading.isVisible())) {
-    await page.getByRole("button", { name: "사진 추천 페이지 열기" }).click();
+    await page.getByRole("button", { name: "사진으로 추천받기" }).click();
     await expect(page).toHaveURL(/\/photo$/);
     await expect(consentHeading).toBeVisible();
   }
@@ -471,7 +471,7 @@ test("no-photo entry stays first-class and the photo journey stays synthetic", a
   await createProfileJourney(page);
 
   const noPhoto = page.getByRole("button", { name: PROFILE_RECOMMENDATION_CTA });
-  const photoPageButton = page.getByRole("button", { name: "사진 추천 페이지 열기" });
+  const photoPageButton = page.getByRole("button", { name: "사진으로 추천받기" });
   await expect(noPhoto).toBeVisible();
   await expect(photoPageButton).toBeVisible();
   await expect(page.locator("details.profile-photo-panel")).toHaveCount(0);
@@ -1113,10 +1113,9 @@ test("UI-BS-06 keyboard and accessibility journeys cover every optional-photo st
     },
   });
 
-  // Entry: the independent recommendation CTA stays first and the dedicated photo page is keyboard-reachable.
-  await page.getByRole("button", { name: PROFILE_RECOMMENDATION_CTA }).focus();
-  await page.keyboard.press("Tab");
-  const panelSummary = page.getByRole("button", { name: "사진 추천 페이지 열기" });
+  // Entry: the independent recommendation CTA stays first and the photo banner's CTA is keyboard-reachable.
+  const panelSummary = page.getByRole("button", { name: "사진으로 추천받기" });
+  await panelSummary.focus();
   await expect(panelSummary).toBeFocused();
 
   // Consent: single h1, described checkbox, keyboard-only activation.
