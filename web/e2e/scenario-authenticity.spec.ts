@@ -93,6 +93,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await expect(cards.first().getByRole("button", { name: / 저장됨$/ })).toHaveAttribute("aria-pressed", "true");
     await page.getByRole("link", { name: "저장한 장소", exact: true }).click();
     await expect(page).toHaveURL(/\/saved$/);
+    await page.reload();
     await expect(page.locator('a[href*="/recommendations/a-"]')).toHaveCount(1);
     await page.goto("/photo");
     await expect(page.getByRole("button", { name: "사진 없이 추천 보기", exact: true })).toBeEnabled();
