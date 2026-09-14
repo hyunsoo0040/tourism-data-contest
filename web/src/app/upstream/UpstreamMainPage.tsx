@@ -16,22 +16,14 @@
  * verified PUBLIC release. The phone illustrates type-based matching;
  * the homepage does not create a personalized ranking.
  * The type-test entry links route into the IT-DA journey (/start, /quiz,
- * /photo) which is served by the local backend as sole authority.
+ * /profile) which is served by the local backend as sole authority.
  */
-import { useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import examples from "../../content/public-place-examples.json";
 import "../styles/place-examples.css";
 import "../styles/phone-preview.css";
 import { PlacePhotos } from "../../features/authenticity/PlacePhotos";
 import { placeMapUrl } from "../../features/authenticity/placeMetadata";
-
-function startDestination(): "/start?resume=profile" | "/trip" {
-  return "/trip";
-}
-
-function refreshStartLink(event: MouseEvent<HTMLAnchorElement>) {
-  event.currentTarget.href = startDestination();
-}
 
 const MAIN_NAV_ITEMS = [
   { id: "type", label: "여행 유형" },
@@ -207,21 +199,7 @@ export function UpstreamMainPage() {
   const [openMenu, setOpenMenu] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<keyof typeof RECOMMENDATIONS>("rest");
-  const [startHref, setStartHref] = useState<"/start?resume=profile" | "/trip">("/trip");
   const rootRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const refreshDestination = () => setStartHref(startDestination());
-    refreshDestination();
-    window.addEventListener("storage", refreshDestination);
-    window.addEventListener("focus", refreshDestination);
-    window.addEventListener("pageshow", refreshDestination);
-    return () => {
-      window.removeEventListener("storage", refreshDestination);
-      window.removeEventListener("focus", refreshDestination);
-      window.removeEventListener("pageshow", refreshDestination);
-    };
-  }, []);
 
   useEffect(() => {
     const saved = readUpstreamPreference();
@@ -331,7 +309,7 @@ export function UpstreamMainPage() {
                 </a>
               ))}
             </nav>
-            <a href={startHref} className="nav-cta" onClick={refreshStartLink}>시작하기</a>
+            <a href="/start" className="nav-cta">시작하기</a>
           </div>
         </header>
 
@@ -433,7 +411,7 @@ export function UpstreamMainPage() {
                 >
                   <i></i><span>사진으로 남기고 싶은 감성적인 장소</span>
                 </button>
-                <a className="test-link" href="/trip">12문항 취향 테스트로 자세히 보기</a>
+                <a className="test-link" href="/start">12문항 취향 테스트로 자세히 보기</a>
               </div>
               <div className="result">
                 <h2 id="resultTitle">{data.title}</h2>

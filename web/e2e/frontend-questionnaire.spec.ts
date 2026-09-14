@@ -13,7 +13,9 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
       apiCalls.push({ path: new URL(route.request().url()).pathname, method: route.request().method() });
       return route.fulfill({ status: 503, contentType: "application/json", body: '{"detail":"offline UI verification"}' });
     });
-    await page.goto("/start");
+    await page.goto("/#demo");
+    await page.getByRole("link", { name: "12문항 취향 테스트로 자세히 보기", exact: true }).click();
+    await expect(page).toHaveURL(/\/start$/);
     await expect(page.getByRole("heading", { name: JOURNEY_COPY.start.title })).toBeVisible();
     for (const choices of Object.values(TRIP_CHOICES)) {
       await page.getByRole("radio", { name: choices[0]!.label, exact: true }).check();

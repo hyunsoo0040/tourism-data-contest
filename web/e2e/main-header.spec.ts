@@ -45,7 +45,7 @@ for (const width of [1440, 390]) {
     await expect(menu.getByRole("link", { name: "사진 분위기 입력", exact: true })).toHaveCount(0);
     const start = header.getByRole("link", { name: "시작하기", exact: true });
     await expect(start).toBeVisible();
-    await expect(start).toHaveAttribute("href", "/trip");
+    await expect(start).toHaveAttribute("href", "/start");
     if (width < 920) {
       const tabs = page.getByRole("navigation", { name: "모바일 빠른 이동" });
       await expect(tabs.getByRole("link")).toHaveCount(2);

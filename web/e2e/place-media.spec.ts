@@ -39,7 +39,8 @@ for (const [name, width, height] of [["desktop", 1440, 1000], ["mobile", 390, 84
     await page.locator("#demo").scrollIntoViewIfNeeded();
     await page.locator("#demo").screenshot({ path: path.join(output, `${name}-examples.png`) });
     expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
-    await page.getByRole("link", { name: "시작하기", exact: true }).click();
+    // Gallery coverage for the separate authenticity routes; home starts at /start.
+    await page.goto("/trip");
     for (const axis of ["H", "E", "R"]) {
       for (const letter of ["a", "b", "c", "d"]) {
         const value = axis === "H" && letter !== "c" ? "2" : "0";
