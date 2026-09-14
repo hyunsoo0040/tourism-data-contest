@@ -1,0 +1,14 @@
+.progress{flex-basis:100%;min-width:0;width:100%;margin-block:12px 4px;padding-block:20px 8px;border-block-start:1px solid #e0ddd8;text-align:start;color:#20283a}
+.heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;font-size:16px}
+.elapsed{color:#566174;font-size:14px;font-variant-numeric:tabular-nums}
+.message{margin:12px 0 16px;font-size:16px;line-height:1.6;word-break:keep-all;overflow-wrap:anywhere}
+.steps{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.step{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:10px;font-size:16px;line-height:1.5;word-break:keep-all;overflow-wrap:anywhere}
+.marker{display:grid;place-items:center;width:28px;height:28px;border:1px solid #b6bbc4;border-radius:50%;font-size:14px;font-weight:700;color:#566174}
+.marker svg{width:20px;height:20px}
+.step[data-state=active]{font-weight:700}
+.step[data-state=active] .marker{border-color:#bd4b08;background:#bd4b08;color:#fff}
+.step[data-state=done] .marker{border-color:#14664b;color:#14664b;background:#edf7f2}
+.state{font-size:14px;color:#566174;white-space:nowrap}
+.step[data-state=active] .state{color:#984008}
+.waiting{margin:18px 0 0;font-size:14px;line-height:1.6;color:#566174;word-break:keep-all;overflow-wrap:anywhere}

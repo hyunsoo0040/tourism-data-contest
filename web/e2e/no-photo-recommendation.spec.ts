@@ -139,7 +139,7 @@ async function createInitialProfile(page: Page) {
 }
 
 async function confirmChangedProfile(page: Page) {
-  await page.getByRole("button", { name: "답변 수정하기" }).click();
+  await page.goto("/quiz?q=1");
   return answerQuiz(page, (ordinal) => (ordinal === 1 ? 2 : 0));
 }
 

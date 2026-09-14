@@ -6,6 +6,7 @@ import { PhotoCameraIcon, PhotoWorkspace } from "../photo/PhotoWorkspace";
 import { api, ensureSession, escapeId, json, type Info, type Photo } from "./api";
 import { readScenarioPhoto, recommendScenario, scenarioResultsPath, writeScenarioPhoto } from "./scenario";
 import "./scenario.css";
+import { RecommendationProgress, type RecommendationProgressState } from "./RecommendationProgress";
 
 const labels: Record<string, string> = { greenery: "녹지", water: "물", open_composition: "트인 구도", traditional_appearance: "전통적 외관", contemporary_design: "현대적 디자인", warm_light: "따뜻한 빛", vivid_color: "선명한 색", night_lighting: "야간 조명" };
 
@@ -15,6 +16,7 @@ export function ScenarioPhotoPage() {
   const [loading, setLoading] = useState(true), [busy, setBusy] = useState(false), [error, setError] = useState<string | null>(null);
   const [photo, setPhoto] = useState<Photo | null>(null), [chosen, setChosen] = useState<string[]>([]), [urls, setUrls] = useState<string[]>([]);
   const [consent, setConsent] = useState(false), [attempt, setAttempt] = useState(0);
+  const [progress, setProgress] = useState<RecommendationProgressState | null>(null);
   const picker = useRef<HTMLInputElement>(null), active = useRef<AbortController | null>(null);
   useEffect(() => {
     const controller = new AbortController(); setLoading(true); setError(null);
@@ -34,7 +36,7 @@ export function ScenarioPhotoPage() {
     const controller = new AbortController(); active.current = controller; setBusy(true); setError(null);
     try { await action(controller.signal); }
     catch (reason) { if (!controller.signal.aborted) setError(reason instanceof Error ? reason.message : "사진 처리를 완료하지 못했어요. 사진 없이도 추천을 받을 수 있어요."); }
-    finally { if (active.current === controller) { active.current = null; setBusy(false); } }
+    finally { if (active.current === controller) { active.current = null; setBusy(false); setProgress(null); } }
   }
   async function upload() {
     const files = Array.from(picker.current?.files ?? []);
@@ -55,12 +57,15 @@ export function ScenarioPhotoPage() {
     if (!profile) return;
     await run(async signal => {
       let confirmed: Photo | null = null;
+      const startedAt = Date.now(); setProgress({ stage: "PREFERENCES", startedAt });
       if (usePhoto && photo) {
         if (!chosen.length) throw new Error("반영할 분위기를 하나 이상 선택해 주세요.");
         confirmed = await api<Photo>(`/photos/${escapeId(photo.photo_id)}/confirm`, { method: "POST", body: json({ candidate_ids: chosen }), signal });
         signal.throwIfAborted(); writeScenarioPhoto(profile.profile_id, confirmed); setPhoto(confirmed);
       } else writeScenarioPhoto(profile.profile_id, null);
-      const result = await recommendScenario(profile, confirmed, signal);
+      const result = await recommendScenario(profile, confirmed, signal, stage => {
+        if (!signal.aborted) setProgress({ stage, startedAt });
+      });
       if (!signal.aborted) navigate(scenarioResultsPath(result.run_sha256));
     });
   }
@@ -81,7 +86,7 @@ export function ScenarioPhotoPage() {
         </section>
         <div className="photo-action-bar"><button className="button button--secondary" disabled={busy} onClick={() => recommend(false)}>사진 없이 추천 보기</button>{photo && <button className="button button--primary" disabled={busy || !chosen.length} onClick={() => recommend(true)}>선택한 분위기로 추천 보기</button>}</div>
       </>}
-      {busy && <p role="status">입력과 근거를 확인하고 있어요…</p>}{error && <p role="alert">{error}</p>}
+      {busy && (progress ? <RecommendationProgress {...progress} /> : <p role="status">입력과 근거를 확인하고 있어요…</p>)}{error && <p role="alert">{error}</p>}
     </PhotoWorkspace></main>
   </div></div>;
 }

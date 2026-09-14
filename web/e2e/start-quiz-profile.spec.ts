@@ -86,27 +86,6 @@ async function answerFreshQuiz(page: Page) {
   return assertProfileEcho(await profileResponse);
 }
 
-async function submitEditedAnswers(page: Page) {
-  let profileResponse: Promise<Response> | null = null;
-  for (const [index] of QUESTIONNAIRE.questions.entries()) {
-    await expect(page).toHaveURL(/\/quiz$/);
-    await expect(page.getByText(`${index + 1} / 12`, { exact: true })).toBeVisible();
-    await expect(page.getByText(CANONICAL_TITLES[index], { exact: true })).toBeVisible();
-    const option = QUESTIONNAIRE.questions[index]!.options[index === 0 ? 2 : 0]!;
-    const radio = page.getByRole("radio", { name: option.text_ko, exact: true });
-    if (index > 0) {
-      await expect(radio).toBeChecked();
-    }
-    if (index === QUESTIONNAIRE.questions.length - 1) {
-      profileResponse = waitForProfile(page);
-    }
-    await radio.click();
-  }
-
-  if (profileResponse === null) throw new Error("profile submission was not observed");
-  return assertProfileEcho(await profileResponse);
-}
-
 async function expectDisplayedScores(page: Page, profile: PreferenceProfile) {
   const axes = ["HISTORY_TRADITION", "EMOTION_IMAGE", "REST_IMMERSION"];
   await expect(page.getByRole("meter")).toHaveCount(3);
@@ -146,7 +125,7 @@ async function expectInitialProfile(page: Page, profile: PreferenceProfile) {
   }
 }
 
-test("fresh loopback topology completes the canonical journey and both edits", async ({
+test("fresh loopback topology completes the canonical journey and travel-condition edit", async ({
   page,
 }) => {
   await guardLoopbackTraffic(page);
@@ -171,26 +150,9 @@ test("fresh loopback topology completes the canonical journey and both edits", a
   expect(initial.request.trip_conditions.crowd_avoidance).toBe("MEDIUM");
   await expectInitialProfile(page, initial.profile);
 
-  await page.getByRole("button", { name: "답변 수정하기" }).click();
-  await expect(page).toHaveURL(/\/quiz$/);
-  await expect(page.getByText("1 / 12", { exact: true })).toBeVisible();
-  const answerEdit = await submitEditedAnswers(page);
-  expect(answerEdit.request.request_id).not.toBe(initial.request.request_id);
-  expect(answerEdit.request.answers.q1).toBe(3);
-  await expectDisplayedScores(page, answerEdit.profile);
-  await expect(
-    page.getByText(
-      "나는 오래된 이야기와 마음속에 그려온 모습에 끌려요.",
-      { exact: true },
-    ),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("status").filter({
-      hasText: "수정한 답변으로 기대 프로필을 다시 만들었어요.",
-    }),
-  ).toBeAttached();
-
-  await page.getByRole("button", { name: "여행 조건 수정하기" }).first().click();
+  await expect(page.getByRole("button", { name: "답변 수정하기" })).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "여행 조건 수정하기" })).toHaveCount(0);
+  await page.getByRole("link", { name: "지역·조건 변경", exact: true }).click();
   await expect(page).toHaveURL(/\/start\?mode=edit$/);
   await page
     .getByRole("radio", { name: "많이 피하고 싶어요", exact: true })
@@ -198,7 +160,7 @@ test("fresh loopback topology completes the canonical journey and both edits", a
   const tripEditResponse = waitForProfile(page);
   await page.getByRole("button", { name: "수정 내용 반영하기" }).click();
   const tripEdit = await assertProfileEcho(await tripEditResponse);
-  expect(tripEdit.request.request_id).not.toBe(answerEdit.request.request_id);
+  expect(tripEdit.request.request_id).not.toBe(initial.request.request_id);
   expect(tripEdit.request.trip_conditions.crowd_avoidance).toBe("HIGH");
   expect(tripEdit.profile.trip_conditions.crowd_avoidance).toBe("HIGH");
   await expect(page).toHaveURL(/\/profile$/);

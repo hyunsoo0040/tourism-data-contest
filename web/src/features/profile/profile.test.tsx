@@ -359,6 +359,29 @@ describe("/profile result, reload, and recovery", () => {
     expect(wire.inputs[0]).toMatchObject({ answers: current.answers, visual_input_kind: "CONFIRMED_PHOTO", photo_receipt_sha256: photoFixture.confirmed.receipt_sha256, visual_targets: { greenery: 3 } });
   });
 
+  it("advances progress only after real request boundaries and clears it after failure", async () => {
+    const current = profile({ profile_id: "profile-stage-check" });
+    writeProfileReference(current.profile_id);
+    const wire = scenarioWire(current), original = wire.fetchMock.getMockImplementation()!;
+    let resolveProfile!: (response: Response) => void, resolveRun!: (response: Response) => void;
+    wire.fetchMock.mockImplementation(async (path, init) => {
+      if (String(path) === "/v1/authenticity/scenario-profiles") return new Promise<Response>(resolve => { resolveProfile = resolve; });
+      if (String(path) === "/v1/authenticity/runs" && init?.method === "POST") return new Promise<Response>(resolve => { resolveRun = resolve; });
+      return original(path, init);
+    });
+    await renderProfile(); fireEvent.click(await screen.findByRole("button", { name: "바로 추천 보기" }));
+    await waitFor(() => expect(resolveProfile).toBeDefined());
+    expect(screen.getByText("취향·여행 조건 확인").closest("li")?.getAttribute("aria-current")).toBe("step");
+    expect(resolveRun).toBeUndefined();
+    await act(async () => resolveProfile(jsonResponse({ profile_id: "a".repeat(64), intent_sha256: "b".repeat(64) })));
+    await waitFor(() => expect(resolveRun).toBeDefined());
+    expect(screen.getByText("관광지 특성과 선호 비교").closest("li")?.getAttribute("aria-current")).toBe("step");
+    await act(async () => resolveRun(jsonResponse({ detail: "일시적인 연결 실패" }, 503)));
+    expect(await screen.findByRole("alert")).toBeTruthy();
+    expect(screen.queryByRole("region", { name: "추천 진행 상황" })).toBeNull();
+    expect((screen.getByRole("button", { name: "바로 추천 보기" }) as HTMLButtonElement).disabled).toBe(false);
+  });
+
   it("waits for profile review and sends unchanged scenario answers to the latest API", async () => {
     const current = profile({ profile_id: "profile-no-photo" });
     writeProfileReference(current.profile_id);
@@ -599,20 +622,15 @@ describe("/profile result, reload, and recovery", () => {
     expect(screen.queryByRole("meter")).toBeNull();
   });
 
-  it("opens answer editing from the first question after restoring the server echo", async () => {
+  it("keeps recommendation, photo and reset actions without the two profile edit buttons", async () => {
     writeProfileReference("profile-current");
-    vi.stubGlobal("fetch", vi.fn().mockImplementation(async (input: RequestInfo | URL) =>
-      jsonResponse(String(input) === "/v1/questionnaires/current" ? questionnaireArtifact : profile()),
-    ));
-    const router = await renderProfile();
-    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
-    fireEvent.click(screen.getByRole("button", { name: "답변 수정하기" }));
-    await waitFor(() => expect(router.state.location.pathname).toBe("/quiz"));
-    expect(router.state.location).toMatchObject({ search: "", hash: "", state: { questionOrdinal: 1 } });
-    expect(router.state.location.state).toEqual({ questionOrdinal: 1, editingProfile: true });
-    expect(await screen.findByRole("heading", { name: FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko })).toBeTruthy();
-    expect(screen.getByText("1 / 12")).toBeTruthy();
-    expect(screen.getAllByRole("radio")[0]?.getAttribute("aria-checked")).toBe("true");
+    scenarioWire(profile());
+    await renderProfile();
+    await screen.findByRole("button", { name: "바로 추천 보기" });
+    expect(screen.queryByRole("button", { name: "답변 수정하기" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "여행 조건 수정하기" })).toBeNull();
+    expect(screen.getByRole("button", { name: "사진 추천 페이지 열기" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "처음부터 다시" })).toBeTruthy();
   });
 
   it("announces answer recalculation and focuses the three-axis heading after refetch", async () => {
@@ -631,7 +649,7 @@ describe("/profile result, reload, and recovery", () => {
     vi.stubGlobal("fetch", fetchMock);
     const router = await renderProfile();
     await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
-    fireEvent.click(screen.getByRole("button", { name: "답변 수정하기" }));
+    await act(async () => router.navigate("/quiz", { state: { questionOrdinal: 1, editingProfile: true } }));
     await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko);
     fireEvent.click(screen.getAllByRole("radio")[1]);
     for (let ordinal = 1; ordinal < 12; ordinal += 1) {
@@ -720,27 +738,6 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
     await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
     // No v2 draft is seeded from v1 answers.
     expect(window.localStorage.getItem(DRAFT_STORAGE_KEY)).toBeNull();
-  });
-
-  it("starts a fresh v2 questionnaire when editing a legacy profile's answers", async () => {
-    writeProfileReference("profile-legacy-v1");
-    const fetchMock = vi
-      .fn()
-      .mockResolvedValueOnce(jsonResponse(legacyV1Profile))
-      .mockResolvedValue(jsonResponse(questionnaireArtifact));
-    vi.stubGlobal("fetch", fetchMock);
-
-    const router = await renderProfile();
-    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
-
-    fireEvent.click(screen.getByRole("button", { name: "답변 수정하기" }));
-
-    await waitFor(() => expect(router.state.location.pathname).toBe("/quiz"));
-    // Fresh v2 flow: no legacy answer survived into the draft record.
-    const draft = JSON.parse(window.localStorage.getItem(DRAFT_STORAGE_KEY) ?? "null") as {
-      answers: Record<string, number> | null;
-    } | null;
-    expect(draft?.answers ?? {}).toEqual({});
   });
 
   it("never routes a v1 profile through the draft-mismatch rebuild path", async () => {

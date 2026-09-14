@@ -44,7 +44,10 @@ export function scenarioInput(profile: PreferenceProfile, photo: Photo | null): 
 }
 
 let pendingMemory: { fingerprint: string; profileRequest: string; runRequest: string } | null = null;
-export async function recommendScenario(profile: PreferenceProfile, photo: Photo | null, signal: AbortSignal): Promise<Run> {
+export type RecommendationStage = "PREFERENCES" | "MATCHING" | "READY";
+export async function recommendScenario(profile: PreferenceProfile, photo: Photo | null, signal: AbortSignal, onProgress?: (stage: RecommendationStage) => void): Promise<Run> {
+  signal.throwIfAborted();
+  onProgress?.("PREFERENCES");
   const input = scenarioInput(profile, photo);
   await ensureSession();
   signal.throwIfAborted();
@@ -58,6 +61,7 @@ export async function recommendScenario(profile: PreferenceProfile, photo: Photo
   try { sessionStorage.setItem(pendingKey, json(pending)); } catch { /* current page still retries safely */ }
   const intent = await api<Intent>("/scenario-profiles", { method: "POST", body: json({ ...input, request_id: pending.profileRequest }), signal });
   signal.throwIfAborted();
+  onProgress?.("MATCHING");
   const run = await api<Run>("/runs", { method: "POST", body: json({ profile_id: intent.profile_id, request_id: pending.runRequest }), signal });
   if (run.profile_id !== intent.profile_id || run.intent_sha256 !== intent.intent_sha256 || run.ranking_version !== "scenario-axis-bridge-ranking.v1") {
     throw new Error("현재 답변과 추천 결과의 연결을 확인하지 못했어요. 다시 시도해 주세요.");
@@ -65,5 +69,6 @@ export async function recommendScenario(profile: PreferenceProfile, photo: Photo
   signal.throwIfAborted();
   pendingMemory = null;
   try { sessionStorage.removeItem(pendingKey); } catch { /* completed request remains idempotent */ }
+  onProgress?.("READY");
   return run;
 }

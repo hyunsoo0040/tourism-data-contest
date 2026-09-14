@@ -4,6 +4,7 @@ import { useNavigate } from "../../app/react-router-dom";
 import { travelRegionName, useTravelRegions } from "../../api/recommendation-regions";
 import { readGroundedTripInput } from "../journey/groundedTrip";
 import { JourneyError } from "./api";
+import { RecommendationProgress, type RecommendationProgressState } from "./RecommendationProgress";
 import { readScenarioPhoto, recommendScenario, scenarioResultsPath, writeScenarioPhoto } from "./scenario";
 
 export function ScenarioRecommendationCTA({ profile, withoutPhoto = false }: { profile: PreferenceProfile; withoutPhoto?: boolean }) {
@@ -12,6 +13,7 @@ export function ScenarioRecommendationCTA({ profile, withoutPhoto = false }: { p
   const regions = useTravelRegions(regionCode != null);
   const [photo, setPhoto] = useState(() => withoutPhoto ? null : readScenarioPhoto(profile.profile_id));
   const [busy, setBusy] = useState(false), [error, setError] = useState<string | null>(null);
+  const [progress, setProgress] = useState<RecommendationProgressState | null>(null);
   const request = useRef<AbortController | null>(null);
   useEffect(() => {
     setPhoto(withoutPhoto ? null : readScenarioPhoto(profile.profile_id));
@@ -21,8 +23,11 @@ export function ScenarioRecommendationCTA({ profile, withoutPhoto = false }: { p
     if (request.current) return;
     const controller = new AbortController(); request.current = controller;
     setBusy(true); setError(null);
+    const startedAt = Date.now(); setProgress({ stage: "PREFERENCES", startedAt });
     try {
-      const run = await recommendScenario(profile, photo, controller.signal);
+      const run = await recommendScenario(profile, photo, controller.signal, stage => {
+        if (!controller.signal.aborted) setProgress({ stage, startedAt });
+      });
       if (!controller.signal.aborted) navigate(scenarioResultsPath(run.run_sha256));
     } catch (reason) {
       if (controller.signal.aborted) return;
@@ -30,7 +35,7 @@ export function ScenarioRecommendationCTA({ profile, withoutPhoto = false }: { p
         ? "여행 연결 시간이 만료됐어요. 사진을 사용했다면 다시 확인하고, 추천 버튼을 다시 눌러 주세요."
         : reason instanceof Error ? reason.message : "추천을 불러오지 못했어요. 답변은 유지되며 다시 시도할 수 있어요.");
     } finally {
-      if (request.current === controller) { request.current = null; setBusy(false); }
+      if (request.current === controller) { request.current = null; setBusy(false); setProgress(null); }
     }
   }
   return <>
@@ -43,5 +48,6 @@ export function ScenarioRecommendationCTA({ profile, withoutPhoto = false }: { p
     {photo && <button type="button" className="control" disabled={busy} onClick={() => {
       try { writeScenarioPhoto(profile.profile_id, null); setPhoto(null); } catch { setError("사진 선택을 해제하지 못했어요. 브라우저 저장 설정을 확인해 주세요."); }
     }}>사진 선택 해제</button>}
+    {busy && progress && <RecommendationProgress {...progress} />}
   </>;
 }
