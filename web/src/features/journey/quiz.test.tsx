@@ -565,7 +565,7 @@ describe("/quiz canonical twelve-question journey", () => {
     fireEvent.click(selectedOption);
     await waitFor(() => expect(selectedOption.disabled).toBe(true));
     fireEvent.click(selectedOption);
-    expect(submissions).toHaveLength(1);
+    await waitFor(() => expect(submissions).toHaveLength(1));
     resolveFirstResponse(
       new Response(JSON.stringify({ detail: "temporary" }), { status: 503 }),
     );

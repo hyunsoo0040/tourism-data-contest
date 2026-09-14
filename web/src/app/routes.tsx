@@ -13,7 +13,9 @@ import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "rea
 
 import { AppShell } from "./AppShell";
 import { TripPage, ResultsPage as AuthenticityResults, DetailPage as AuthenticityDetail, ComparePage as AuthenticityCompare, SavedPage as AuthenticitySaved } from "../features/authenticity/Journey";
-import { useLocation, useNavigate, type RouteObject } from "./react-router-dom";
+import { useLocation, useNavigate, useParams, type RouteObject } from "./react-router-dom";
+import { ScenarioResultsPage } from "../features/authenticity/ScenarioResultsPage";
+import { ScenarioPhotoPage } from "../features/authenticity/ScenarioPhotoPage";
 import {
   EvaluatorApiError,
   createProfileReleaseClient,
@@ -30,7 +32,7 @@ import {
 import { EvaluatorWorkspace } from "../features/evaluation/EvaluatorWorkspace";
 import { ComparePage } from "../journey-pages/CompareJourneyPage";
 import { PlaceDetailPage } from "../journey-pages/PlaceDetailJourneyPage";
-import { PhotoJobRoute, PhotoPage } from "../journey-pages/PhotoJourneyPage";
+import { PhotoJobRoute } from "../journey-pages/PhotoJourneyPage";
 import { DailyGlmDashboard } from "../features/operations/daily-glm/DailyGlmDashboard";
 import { ProfilePage } from "../journey-pages/ProfileJourneyPage";
 import { RecommendationsPage } from "../journey-pages/RecommendationsJourneyPage";
@@ -291,6 +293,15 @@ function ProfileRouteSwitch() {
   return <ProfilePage />;
 }
 
+function RecommendationRouteSwitch({ view }: { view: "results" | "detail" | "compare" }) {
+  const { runId } = useParams();
+  // Explicit namespace keeps historical run URLs and the separate /trip journey intact.
+  const scenario = runId?.startsWith("a-") === true;
+  if (view === "detail") return scenario ? <AuthenticityDetail scenario /> : <PlaceDetailPage />;
+  if (view === "compare") return scenario ? <AuthenticityCompare scenario /> : <ComparePage />;
+  return scenario ? <ScenarioResultsPage /> : <RecommendationsPage />;
+}
+
 export const appRoutes: RouteObject[] = [
   { path: "/trip", element: <TripPage /> },
   { path: "/trip/saved", element: <AuthenticitySaved /> },
@@ -375,12 +386,13 @@ export const appRoutes: RouteObject[] = [
       { path: "start", element: <UpstreamStartJourney /> },
       { path: "quiz", element: <UpstreamQuizPage /> },
       { path: "profile", element: <ProfilePage /> },
-      { path: "photo", element: <PhotoPage /> },
+      { path: "photo", element: <ScenarioPhotoPage /> },
       { path: "photo/jobs/:jobId", element: <PhotoJobRoute /> },
       { path: "photo/jobs/:jobId/review", element: <PhotoJobRoute /> },
-      { path: "recommendations/:runId", element: <RecommendationsPage /> },
-      { path: "recommendations/:runId/places/:placeId", element: <PlaceDetailPage /> },
-      { path: "recommendations/:runId/compare", element: <ComparePage /> },
+      { path: "saved", element: <AuthenticitySaved scenario /> },
+      { path: "recommendations/:runId", element: <RecommendationRouteSwitch view="results" /> },
+      { path: "recommendations/:runId/places/:placeId", element: <RecommendationRouteSwitch view="detail" /> },
+      { path: "recommendations/:runId/compare", element: <RecommendationRouteSwitch view="compare" /> },
     ],
   },
 ];

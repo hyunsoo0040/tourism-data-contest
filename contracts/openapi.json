@@ -4384,28 +4384,47 @@
             "type": "array"
           },
           "facet": {
-            "enum": [
-              "H.a",
-              "H.b",
-              "H.c",
-              "H.d",
-              "E.a",
-              "E.b",
-              "E.c",
-              "E.d",
-              "R.a",
-              "R.b",
-              "R.c",
-              "R.d"
+            "anyOf": [
+              {
+                "enum": [
+                  "H.a",
+                  "H.b",
+                  "H.c",
+                  "H.d",
+                  "E.a",
+                  "E.b",
+                  "E.c",
+                  "E.d",
+                  "R.a",
+                  "R.b",
+                  "R.c",
+                  "R.d"
+                ],
+                "type": "string"
+              },
+              {
+                "enum": [
+                  "H",
+                  "E",
+                  "R"
+                ],
+                "type": "string"
+              }
             ],
-            "title": "Facet",
-            "type": "string"
+            "title": "Facet"
           },
           "importance": {
-            "maximum": 4.0,
-            "minimum": 0.0,
-            "title": "Importance",
-            "type": "integer"
+            "anyOf": [
+              {
+                "maximum": 4.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Importance"
           },
           "place_value": {
             "anyOf": [
@@ -4445,7 +4464,7 @@
             "type": "array"
           },
           "weight": {
-            "maximum": 4.0,
+            "maximum": 10000.0,
             "minimum": 0.0,
             "title": "Weight",
             "type": "integer"
@@ -5863,7 +5882,15 @@
             "type": "string"
           },
           "submission": {
-            "$ref": "#/components/schemas/IntentSubmission"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/IntentSubmission"
+              },
+              {
+                "$ref": "#/components/schemas/ScenarioSubmission"
+              }
+            ],
+            "title": "Submission"
           }
         },
         "required": [
@@ -5976,7 +6003,7 @@
             "title": "Photo Receipt Sha256"
           },
           "questionnaire_sha256": {
-            "default": "5fd1a9ca18babea6b70ffad1e25e09ab7a822e74e9c14ba86227562d03897ff7",
+            "default": "e8645b8def042bf43901882771f1c6682ddce41e1d5ebef55cd7638b871f81df",
             "pattern": "^[0-9a-f]{64}$",
             "title": "Questionnaire Sha256",
             "type": "string"
@@ -12916,6 +12943,91 @@
         "title": "SavedPlaceState",
         "type": "string"
       },
+      "ScenarioSubmission": {
+        "additionalProperties": false,
+        "description": "Retained scenarios supply axis preferences, never invented facet answers.",
+        "properties": {
+          "answers": {
+            "$ref": "#/components/schemas/QuestionnaireAnswersV2"
+          },
+          "exact_visit_time": {
+            "anyOf": [
+              {
+                "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Exact Visit Time"
+          },
+          "photo_receipt_sha256": {
+            "anyOf": [
+              {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Photo Receipt Sha256"
+          },
+          "questionnaire_config_hash": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Questionnaire Config Hash",
+            "type": "string"
+          },
+          "request_id": {
+            "maxLength": 160,
+            "minLength": 1,
+            "title": "Request Id",
+            "type": "string"
+          },
+          "requirements": {
+            "$ref": "#/components/schemas/TripRequirements"
+          },
+          "schema_version": {
+            "const": "scenario-expectation-bridge.v1",
+            "default": "scenario-expectation-bridge.v1",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "trip_conditions": {
+            "$ref": "#/components/schemas/TripConditions"
+          },
+          "visual_input_kind": {
+            "default": "NONE",
+            "enum": [
+              "NONE",
+              "CONFIRMED_PHOTO"
+            ],
+            "title": "Visual Input Kind",
+            "type": "string"
+          },
+          "visual_targets": {
+            "additionalProperties": {
+              "maximum": 4.0,
+              "minimum": 0.0,
+              "type": "integer"
+            },
+            "propertyNames": {
+              "$ref": "#/components/schemas/VisualMoodDimension"
+            },
+            "title": "Visual Targets",
+            "type": "object"
+          }
+        },
+        "required": [
+          "request_id",
+          "questionnaire_config_hash",
+          "answers",
+          "trip_conditions"
+        ],
+        "title": "ScenarioSubmission",
+        "type": "object"
+      },
       "ScoreContribution": {
         "additionalProperties": false,
         "properties": {
@@ -17914,6 +18026,65 @@
           }
         },
         "summary": "Saved",
+        "tags": [
+          "authenticity"
+        ]
+      }
+    },
+    "/v1/authenticity/scenario-profiles": {
+      "post": {
+        "operationId": "createScenarioAuthenticityIntent",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "authorization",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScenarioSubmission"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Intent"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Scenario Profile",
         "tags": [
           "authenticity"
         ]

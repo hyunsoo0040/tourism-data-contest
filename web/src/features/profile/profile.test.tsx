@@ -26,6 +26,9 @@ import {
   CONFIRMED_MOOD_REFERENCE_STORAGE_KEY,
 } from "../photo/photoProjection";
 import { ProfileRecommendationCTA } from "./ProfileRecommendationCTA";
+import { writeScenarioPhoto } from "../authenticity/scenario";
+import type { Photo } from "../authenticity/api";
+import photoFixture from "../authenticity/__fixtures__/scenario-photo.json";
 import { groundedTripInputSha256, writeGroundedTripInput } from "../journey/groundedTrip";
 
 const tripConditions = {
@@ -272,157 +275,142 @@ describe("/profile result, reload, and recovery", () => {
     const router = createMemoryRouter(appRoutes, { initialEntries: ["/photo"] });
     render(<RouterProvider router={router} />);
 
-    expect(await screen.findByRole("heading", { name: "사진 사용 내용을 먼저 확인해 주세요" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "사진으로 전하는 취향" })).toBeTruthy();
     expect(router.state.location.pathname).toBe("/photo");
     expect(screen.queryByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeNull();
   });
 
-  it("keeps the no-photo CTA independent and omits photo_job_id from its request", async () => {
-    const currentProfile = profile({ profile_id: "profile-no-photo" });
-    const inputSha256 = await profileSubmissionFingerprint(
-      currentProfile.trip_conditions,
-      currentProfile,
-    );
-    writeProfileReference(currentProfile.profile_id);
-    let recommendationBody: Record<string, unknown> | null = null;
-    const fetchMock = vi.fn().mockImplementation(
-      async (input: RequestInfo | URL, init?: RequestInit) => {
-        if (String(input) === `/v1/preference-profiles/${currentProfile.profile_id}`) {
-          return jsonResponse(currentProfile);
-        }
-        if (String(input) === "/v1/recommendation-runs" && init?.method === "POST") {
-          recommendationBody = JSON.parse(String(init.body)) as Record<string, unknown>;
-          return jsonResponse({
-            schema_version: "itda.recommendation-run-created.v1",
-            recommendation_run_id: "recommendation-run:no-photo",
-            request_id: recommendationBody.request_id,
-            preference_profile_id: currentProfile.profile_id,
-            preference_input_sha256: inputSha256,
-          }, 201);
-        }
-        return new Promise<Response>(() => undefined);
-      },
-    );
-    vi.stubGlobal("fetch", fetchMock);
-
-    const router = await renderProfile();
-    const cta = await screen.findByRole("button", { name: "바로 추천 보기" });
-    expect(screen.queryByText("사진으로 더 정확하게")).toBeNull();
-    expect(screen.getByRole("button", { name: "사진 추천 페이지 열기" })).toBeTruthy();
-    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
-    fireEvent.click(cta);
-
-    await waitFor(() => expect(router.state.location.pathname).toBe("/recommendations/recommendation-run%3Ano-photo"));
-    expect(recommendationBody).not.toHaveProperty("photo_job_id");
-    expect(Object.keys(recommendationBody ?? {}).sort()).toEqual([
-      "preference_profile_id",
-      "purpose",
-      "request_id",
-    ]);
-  });
-
-  it("recovers the profile-bound photo reference and sends only its opaque job ID", async () => {
-    const currentProfile = profile({ profile_id: "profile-with-photo" });
-    const photoJobId = "c".repeat(64);
-    const inputSha256 = await profileSubmissionFingerprint(
-      currentProfile.trip_conditions,
-      currentProfile,
-    );
-    writeProfileReference(currentProfile.profile_id);
-    expect(writeConfirmedMoodReference(currentProfile.profile_id, photoJobId, "e".repeat(64))).toBe(true);
-    let recommendationBody: Record<string, unknown> | null = null;
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) => {
-        if (String(input) === `/v1/preference-profiles/${currentProfile.profile_id}`) {
-          return jsonResponse(currentProfile);
-        }
-        if (String(input) === "/v1/recommendation-runs" && init?.method === "POST") {
-          recommendationBody = JSON.parse(String(init.body)) as Record<string, unknown>;
-          return jsonResponse({
-            schema_version: "itda.recommendation-run-created.v1",
-            recommendation_run_id: "recommendation-run:with-photo",
-            request_id: recommendationBody.request_id,
-            preference_profile_id: currentProfile.profile_id,
-            preference_input_sha256: inputSha256,
-          }, 201);
-        }
-        return new Promise<Response>(() => undefined);
-      }),
-    );
-
-    const router = await renderProfile();
-    const cta = await screen.findByRole("button", { name: "사진 취향을 반영해 추천 보기" });
-    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
-    fireEvent.click(cta);
-
-    await waitFor(() => expect(router.state.location.pathname).toBe("/recommendations/recommendation-run%3Awith-photo"));
-    expect(recommendationBody).toEqual({
-      request_id: expect.any(String),
-      preference_profile_id: currentProfile.profile_id,
-      photo_job_id: photoJobId,
-      purpose: "SIGHTSEEING",
-    });
-    const serializedReference = window.sessionStorage.getItem(
-      CONFIRMED_MOOD_REFERENCE_STORAGE_KEY,
-    );
-    expect(serializedReference).not.toContain("traits");
-    expect(JSON.parse(serializedReference!).receipt_id).toBe("e".repeat(64));
-    expect(serializedReference).not.toContain("provider");
-  });
-
-  it("does not restore a historical mixed-purpose photo run as sightseeing", async () => {
-    const currentProfile = profile({ profile_id: "profile-photo-current" });
-    const photoJobId = "d".repeat(64);
-    const inputSha256 = await profileSubmissionFingerprint(
-      currentProfile.trip_conditions,
-      currentProfile,
-    );
-    writeProfileReference(currentProfile.profile_id);
-    writeConfirmedPhotoReference(currentProfile.profile_id, photoJobId);
-    window.sessionStorage.setItem(
-      "itda:phase5:current-recommendation:v2",
-      JSON.stringify({
-        schema_version: "phase5-current-recommendation-v2",
-        recommendation_run_id: "recommendation-run:recovered-photo",
-        preference_profile_id: currentProfile.profile_id,
-        preference_input_sha256: inputSha256,
-        photo_job_id: photoJobId,
-      }),
-    );
-    const fetchMock = vi.fn().mockImplementation((input: RequestInfo | URL) => {
-      if (String(input) === `/v1/preference-profiles/${currentProfile.profile_id}`) {
-        return Promise.resolve(jsonResponse(currentProfile));
+  function scenarioWire(current: PreferenceProfile) {
+    const inputs: Record<string, unknown>[] = [];
+    const runs: Record<string, unknown>[] = [];
+    const fetchMock = vi.fn().mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) => {
+      const path = String(input);
+      if (path === `/v1/preference-profiles/${current.profile_id}`) return jsonResponse(current);
+      if (path === "/v1/authenticity/sessions") return jsonResponse({ token: "scenario-test-token" });
+      if (path === "/v1/authenticity/scenario-profiles") {
+        inputs.push(JSON.parse(String(init?.body)));
+        return jsonResponse({ profile_id: "a".repeat(64), intent_sha256: "b".repeat(64) });
       }
+      if (path === "/v1/authenticity/runs" && init?.method === "POST") {
+        runs.push(JSON.parse(String(init.body)));
+        return jsonResponse({ profile_id: "a".repeat(64), intent_sha256: "b".repeat(64), run_sha256: "c".repeat(64), ranking_version: "scenario-axis-bridge-ranking.v1" });
+      }
+      if (path === "/v1/authenticity/saved") return jsonResponse([]);
       return new Promise<Response>(() => undefined);
     });
     vi.stubGlobal("fetch", fetchMock);
+    return { inputs, runs, fetchMock };
+  }
 
+  it("retries a failed scenario run with the same request IDs after explicit retry", async () => {
+    const current = profile({ profile_id: "profile-retry-scenario" });
+    writeProfileReference(current.profile_id);
+    const wire = scenarioWire(current), original = wire.fetchMock.getMockImplementation()!;
+    const runBodies: unknown[] = []; let failed = false;
+    wire.fetchMock.mockImplementation(async (path, init) => {
+      if (String(path) === "/v1/authenticity/runs" && init?.method === "POST") {
+        runBodies.push(JSON.parse(String(init.body)));
+        if (!failed) { failed = true; return jsonResponse({ detail: "일시적인 연결 실패" }, 503); }
+      }
+      return original(path, init);
+    });
     const router = await renderProfile();
-    expect(screen.queryByRole("combobox", { name: "추천 여행 목적" })).toBeNull();
-    const cta = await screen.findByRole("button", { name: "사진 취향을 반영해 추천 보기" });
-    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
-    fireEvent.click(cta);
-
-    expect(await screen.findByText("사진 분위기를 새로 확정해 주세요.")).toBeTruthy();
-    expect(router.state.location.pathname).toBe("/profile");
-    expect(fetchMock.mock.calls.filter(([, init]) => init?.method === "POST")).toHaveLength(0);
+    fireEvent.click(await screen.findByRole("button", { name: "바로 추천 보기" }));
+    expect((await screen.findByRole("alert")).textContent).toContain("일시적인 연결 실패");
+    expect(runBodies).toHaveLength(1);
+    fireEvent.click(screen.getByRole("button", { name: "바로 추천 보기" }));
+    await waitFor(() => expect(router.state.location.pathname).toContain("/recommendations/a-"));
+    expect(wire.inputs).toHaveLength(2); expect(wire.inputs[0]).toEqual(wire.inputs[1]);
+    expect(runBodies).toHaveLength(2); expect(runBodies[0]).toEqual(runBodies[1]);
   });
 
-  it("does not create a new recommendation from a historical factual-trait photo reference", async () => {
-    const currentProfile = profile({ profile_id: "profile-legacy-photo-new-run" });
-    writeProfileReference(currentProfile.profile_id);
-    writeConfirmedPhotoReference(currentProfile.profile_id, "e".repeat(64));
-    const fetchMock = vi.fn().mockResolvedValue(jsonResponse(currentProfile));
-    vi.stubGlobal("fetch", fetchMock);
-    await renderProfile();
-    const cta = await screen.findByRole("button", { name: "사진 취향을 반영해 추천 보기" });
-    await waitFor(() => expect(cta).toHaveProperty("disabled", false));
+  it("keeps a failed photo replacement and submits only explicitly confirmed atmosphere", async () => {
+    const current = profile({ profile_id: "profile-photo-api" });
+    writeProfileReference(current.profile_id);
+    const wire = scenarioWire(current), original = wire.fetchMock.getMockImplementation()!;
+    let uploads = 0; const confirmations: unknown[] = [];
+    const createUrl = vi.fn(() => "blob:synthetic-photo");
+    vi.stubGlobal("URL", Object.assign(URL, { createObjectURL: createUrl, revokeObjectURL: vi.fn() }));
+    wire.fetchMock.mockImplementation(async (path, init) => {
+      if (String(path) === "/v1/authenticity/info") return jsonResponse({ photo_enabled: true });
+      if (String(path) === "/v1/authenticity/photos") {
+        expect(init.body).toBeInstanceOf(FormData);
+        return ++uploads === 1 ? jsonResponse(photoFixture.review) : jsonResponse({ detail: "사진 교체 실패" }, 503);
+      }
+      if (String(path).endsWith("/confirm")) { confirmations.push(JSON.parse(String(init.body))); return jsonResponse(photoFixture.confirmed); }
+      return original(path, init);
+    });
+    const router = createMemoryRouter(appRoutes, { initialEntries: ["/photo"] });
+    render(<RouterProvider router={router} />);
+    const picker = await screen.findByLabelText("여행 분위기 참고 사진");
+    expect((picker as HTMLInputElement).disabled).toBe(true);
+    fireEvent.click(screen.getByRole("checkbox", { name: "사진을 분위기 분석에 사용하는 데 동의해요." }));
+    await waitFor(() => expect((picker as HTMLInputElement).disabled).toBe(false));
+    const file = new File(["synthetic fixture: provider is stubbed"], "test.jpg", { type: "image/jpeg" });
+    fireEvent.change(picker, { target: { files: [file] } });
+    const greenery = await screen.findByRole("checkbox", { name: "사진 1 · 녹지 3/4" });
+    expect((greenery as HTMLInputElement).checked).toBe(false); fireEvent.click(greenery);
+    fireEvent.change(picker, { target: { files: [file] } });
+    expect((await screen.findByRole("alert")).textContent).toContain("사진 교체 실패");
+    expect((greenery as HTMLInputElement).checked).toBe(true); expect(screen.getByAltText("선택한 여행 사진 1").getAttribute("src")).toBe("blob:synthetic-photo");
+    fireEvent.click(screen.getByRole("button", { name: "선택한 분위기로 추천 보기" }));
+    await waitFor(() => expect(router.state.location.pathname).toContain("/recommendations/a-"));
+    expect(confirmations).toEqual([{ candidate_ids: photoFixture.confirmed.selected_candidate_ids }]);
+    expect(wire.inputs[0]).toMatchObject({ answers: current.answers, visual_input_kind: "CONFIRMED_PHOTO", photo_receipt_sha256: photoFixture.confirmed.receipt_sha256, visual_targets: { greenery: 3 } });
+  });
+
+  it("waits for profile review and sends unchanged scenario answers to the latest API", async () => {
+    const current = profile({ profile_id: "profile-no-photo" });
+    writeProfileReference(current.profile_id);
+    const wire = scenarioWire(current);
+    const router = await renderProfile();
+    const cta = await screen.findByRole("button", { name: "바로 추천 보기" });
+    expect(wire.inputs).toHaveLength(0); expect(wire.runs).toHaveLength(0);
     fireEvent.click(cta);
-    expect(await screen.findByText("사진 분위기를 새로 확정해 주세요.")).toBeTruthy();
-    expect(fetchMock.mock.calls.filter((args) => (args[1] as RequestInit | undefined)?.method === "POST")).toHaveLength(0);
-    fireEvent.click(screen.getByRole("button", { name: "사진 없이 계속하기" }));
+    await waitFor(() => expect(router.state.location.pathname).toBe(`/recommendations/a-${"c".repeat(64)}`));
+    expect(wire.inputs[0]).toMatchObject({ schema_version: "scenario-expectation-bridge.v1", questionnaire_config_hash: current.config_hash, answers: current.answers, trip_conditions: current.trip_conditions, visual_input_kind: "NONE", visual_targets: {}, photo_receipt_sha256: null });
+    expect(wire.inputs[0]).not.toHaveProperty("photo_job_id");
+    expect(wire.inputs[0]).not.toHaveProperty("desired_levels");
+    expect(wire.runs).toHaveLength(1);
+    expect(wire.fetchMock.mock.calls.some(([path]) => path === "/v1/recommendation-runs")).toBe(false);
+  });
+
+  it("binds only explicitly confirmed current-profile photo targets to the scenario bridge", async () => {
+    const current = profile({ profile_id: "profile-with-photo" });
+    writeProfileReference(current.profile_id);
+    writeScenarioPhoto(current.profile_id, { photo_id: "photo-current", state: "CONFIRMED", targets: { greenery: 3 }, receipt_sha256: "d".repeat(64), batches: [], created_at: "2026-09-14T00:00:00Z", deletion_state: "ORIGINAL_DISCARDED", original_retained: false, selected_candidate_ids: [] } satisfies Photo);
+    const wire = scenarioWire(current);
+    const router = await renderProfile();
+    fireEvent.click(await screen.findByRole("button", { name: "사진 취향을 반영해 추천 보기" }));
+    await waitFor(() => expect(router.state.location.pathname).toContain("/recommendations/a-"));
+    expect(wire.inputs[0]).toMatchObject({ photo_receipt_sha256: "d".repeat(64), visual_input_kind: "CONFIRMED_PHOTO", visual_targets: { greenery: 3 } });
+    expect(wire.inputs[0]).not.toHaveProperty("photo_job_id");
+  });
+
+  it("does not reuse historical mixed-purpose runs or another profile's photo targets", async () => {
+    const current = profile({ profile_id: "profile-photo-current" });
+    writeProfileReference(current.profile_id);
+    writeConfirmedPhotoReference(current.profile_id, "e".repeat(64));
+    writeScenarioPhoto("another-profile", { photo_id: "foreign", state: "CONFIRMED", targets: { greenery: 3 }, receipt_sha256: "d".repeat(64), batches: [], created_at: "2026-09-14T00:00:00Z", deletion_state: "ORIGINAL_DISCARDED", original_retained: false, selected_candidate_ids: [] } satisfies Photo);
+    window.sessionStorage.setItem("itda:phase5:current-recommendation:v2", JSON.stringify({ recommendation_run_id: "historical-mixed-purpose", preference_profile_id: current.profile_id }));
+    const wire = scenarioWire(current);
+    const router = await renderProfile();
+    fireEvent.click(await screen.findByRole("button", { name: "바로 추천 보기" }));
+    await waitFor(() => expect(router.state.location.pathname).toContain("/recommendations/a-"));
+    expect(wire.inputs[0]).toMatchObject({ visual_targets: {}, photo_receipt_sha256: null });
+    expect(wire.runs).toHaveLength(1);
+  });
+
+  it("does not infer current photo preferences from historical trait or mood receipts", async () => {
+    const current = profile({ profile_id: "profile-legacy-photo" });
+    writeProfileReference(current.profile_id);
+    writeConfirmedPhotoReference(current.profile_id, "e".repeat(64));
+    writeConfirmedMoodReference(current.profile_id, "e".repeat(64), "f".repeat(64));
+    const wire = scenarioWire(current);
+    await renderProfile();
     expect(await screen.findByRole("button", { name: "바로 추천 보기" })).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "사진 취향을 반영해 추천 보기" })).toBeNull();
+    expect(wire.inputs).toHaveLength(0);
   });
 
   it("recovers a generated-contract-valid 160-character profile ID", async () => {
@@ -539,7 +527,7 @@ describe("/profile result, reload, and recovery", () => {
     vi.stubGlobal(
       "fetch",
       vi.fn().mockImplementation((input: RequestInfo | URL, init?: RequestInit) => {
-        if (String(input).endsWith("/recommendation-regions")) return Promise.resolve(jsonResponse({ candidate_sha256: null, regions: [] }));
+        if (String(input).endsWith("/authenticity/info")) return Promise.resolve(jsonResponse({ candidate_sha256: null, regions: [] }));
         requestSignal = init?.signal ?? undefined;
         return delayedGet;
       }),

@@ -13,18 +13,13 @@ import { questionnaireAnswersSchema, tripConditionsSchema } from "../app/schemas
 import { readProfileReference } from "../app/storage";
 import { pickResultForProfile } from "../app/upstream/resultProjection";
 import { quizNavigationState } from "../features/journey/quizNavigation";
-import { ProfileRecommendationCTA } from "../features/profile/ProfileRecommendationCTA";
+import { ScenarioRecommendationCTA } from "../features/authenticity/ScenarioRecommendationCTA";
 import { ProfileRecoveryState } from "../features/profile/ProfileRecoveryState";
 import { ResetDraftDialog } from "../features/profile/ResetDraftDialog";
 import { ThreeAxisProfile } from "../features/profile/ThreeAxisProfile";
 import { PhotoMoodIntro } from "../features/profile/PhotoMoodIntro";
 import { ProfileStoryButton } from "../features/profile/ProfileStoryButton";
 import { createAndStorePreferenceProfile } from "../features/profile/profileSubmission";
-import {
-  clearConfirmedPhotoReference,
-  readConfirmedMoodReference,
-  readConfirmedPhotoReference,
-} from "../features/photo/photoProjection";
 
 type PageState = "loading" | "ready" | "empty" | "recovery" | "api-error" | "invalid";
 
@@ -53,7 +48,6 @@ export function ProfilePage() {
   const navigationState = location.state as {
     announcement?: string;
     focusProfile?: boolean;
-    autoRecommend?: boolean;
   } | null;
   const [state, setState] = useState<PageState>("loading");
   const [profile, setProfile] = useState<PreferenceProfile | null>(null);
@@ -66,7 +60,6 @@ export function ProfilePage() {
     navigationState?.announcement ?? "",
   );
   const [retryKind, setRetryKind] = useState<"fetch" | "rebuild">("fetch");
-  const [confirmedPhotoJobId, setConfirmedPhotoJobId] = useState<string | null>(null);
   const profileIdRef = useRef<string | null>(null);
   const ctaRef = useRef<HTMLDivElement | null>(null);
   const meterHeadingRef = useRef<HTMLHeadingElement>(null);
@@ -94,10 +87,6 @@ export function ProfilePage() {
     options: { message?: string; restoreDraft?: boolean; focusMeter?: boolean } = {},
   ) => {
     setProfile(nextProfile);
-    setConfirmedPhotoJobId(
-      readConfirmedMoodReference(nextProfile.profile_id)?.photo_job_id ??
-        readConfirmedPhotoReference(nextProfile.profile_id),
-    );
     // Result visuals and answer labels use the frontend presentation; scores stay server-owned.
     setUpstreamContract(FRONTEND_QUESTIONNAIRE);
     // Drafts are v2-only: a restored draft must carry answers that parse under
@@ -181,22 +170,6 @@ export function ProfilePage() {
       window.setTimeout(() => stateHeadingRef.current?.focus(), 0);
     }
   }, [state]);
-
-  useEffect(() => {
-    if (state !== "ready" || navigationState?.autoRecommend !== true || profile === null) return;
-    let attempts = 0;
-    const clickWhenReady = () => {
-      const button = ctaRef.current?.querySelector<HTMLButtonElement>("button.button--primary");
-      if (button !== undefined && button !== null && !button.disabled) {
-        button.click();
-        return;
-      }
-      attempts += 1;
-      if (attempts < 100) window.setTimeout(clickWhenReady, 25);
-    };
-    const timer = window.setTimeout(clickWhenReady, 0);
-    return () => window.clearTimeout(timer);
-  }, [state, navigationState?.autoRecommend, profile]);
 
   const rebuild = async () => {
     if (!completeTrip.success || !completeAnswers.success || busy) return;
@@ -325,14 +298,7 @@ export function ProfilePage() {
         </section>
 
         <div className="result-actions profile-primary-action" ref={ctaRef}>
-          <ProfileRecommendationCTA
-            profile={profile}
-            photoJobId={confirmedPhotoJobId}
-            onClearPhoto={() => {
-              clearConfirmedPhotoReference(profile.profile_id);
-              setConfirmedPhotoJobId(null);
-            }}
-          />
+          <ScenarioRecommendationCTA profile={profile} />
         </div>
 
         <div className="result-actions profile-actions">

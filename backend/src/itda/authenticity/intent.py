@@ -12,6 +12,11 @@ from itda.authenticity.rubric import AXES, AXIS_LABELS, AXIS_THEORY, FACET_KEYS,
 from itda.authenticity.visual import VISUAL_FACETS
 from itda.contracts.base import Sha256, StableId, StrictContract, require_utc
 from itda.contracts.grounded_recommendation import RequiredFacility
+from itda.contracts.preference import (
+    VERSION_BOUND_BY_QUESTIONNAIRE_V2,
+    QuestionnaireAnswersV2,
+    TripConditions,
+)
 from itda.contracts.visual_mood import VisualMoodDimension
 from itda.domain.canonical import canonical_sha256
 from itda.domain.grounded_scoring import half_up
@@ -85,10 +90,52 @@ class IntentSubmission(StrictContract):
         return self
 
 
+class ScenarioSubmission(StrictContract):
+    """Retained scenarios supply axis preferences, never invented facet answers."""
+
+    schema_version: Literal["scenario-expectation-bridge.v1"] = "scenario-expectation-bridge.v1"
+    request_id: StableId
+    questionnaire_config_hash: Sha256
+    answers: QuestionnaireAnswersV2
+    trip_conditions: TripConditions
+    exact_visit_time: str | None = Field(default=None, pattern=r"^([01]\d|2[0-3]):[0-5]\d$")
+    requirements: TripRequirements = Field(default_factory=TripRequirements)
+    visual_targets: dict[VisualMoodDimension, Level] = Field(default_factory=dict)
+    visual_input_kind: Literal["NONE", "CONFIRMED_PHOTO"] = "NONE"
+    photo_receipt_sha256: Sha256 | None = None
+
+    @model_validator(mode="after")
+    def meaning(self) -> Self:
+        if self.questionnaire_config_hash != VERSION_BOUND_BY_QUESTIONNAIRE_V2["config_hash"]:
+            raise ValueError("SCENARIO_QUESTIONNAIRE_VERSION_MISMATCH")
+        if bool(self.visual_targets) != (self.visual_input_kind == "CONFIRMED_PHOTO"):
+            raise ValueError("VISUAL_PREFERENCE_SOURCE_MISMATCH")
+        if (self.visual_input_kind == "CONFIRMED_PHOTO") != (self.photo_receipt_sha256 is not None):
+            raise ValueError("PHOTO_TARGETS_REQUIRE_CONFIRMED_RECEIPT")
+        return self
+
+
+def scenario_weights(submission: ScenarioSubmission, total: int = 10_000) -> dict[Axis, int]:
+    """Reuse the sealed scenario matrix, then apportion its axis evidence exactly."""
+    from itda.domain.preference import score_choice_answers
+
+    scores = score_choice_answers(submission.answers)
+    raw = {axis: score.basis_points for axis, score in zip(AXES, scores, strict=True)}
+    denominator = sum(raw.values())
+    if denominator == 0:
+        return {axis: 0 for axis in AXES}
+    weights = {axis: raw[axis] * total // denominator for axis in AXES}
+    remainder = total - sum(weights.values())
+    order = sorted(AXES, key=lambda axis: (-(raw[axis] * total % denominator), AXES.index(axis)))
+    for axis in order[:remainder]:
+        weights[axis] += 1
+    return weights
+
+
 class Intent(StrictContract):
     schema_version: Literal["authenticity-intent.v1"] = "authenticity-intent.v1"
     profile_id: Sha256
-    submission: IntentSubmission
+    submission: IntentSubmission | ScenarioSubmission
     axis_importance: dict[Axis, Score | None]
     requested_axes: tuple[Axis, ...]
     required_axes: tuple[Axis, ...]
@@ -123,8 +170,16 @@ def effective_importance(submission: IntentSubmission) -> dict[FacetKey, int | N
 
 
 def expectations(
-    submission: IntentSubmission,
+    submission: IntentSubmission | ScenarioSubmission,
 ) -> tuple[dict[Axis, int | None], tuple[Axis, ...], tuple[Axis, ...]]:
+    if isinstance(submission, ScenarioSubmission):
+        relative = scenario_weights(submission)
+        maximum = max(relative.values())
+        return (
+            {axis: half_up(relative[axis], 100) for axis in AXES},
+            tuple(axis for axis in AXES if relative[axis] > 0),
+            tuple(axis for axis in AXES if maximum > 0 and relative[axis] == maximum),
+        )
     weights = effective_importance(submission)
     importance: dict[Axis, int | None] = {}
     requested = []
@@ -144,8 +199,10 @@ def expectations(
     return importance, tuple(requested), tuple(required)
 
 
-def build_intent(submission: IntentSubmission, *, created_at: datetime) -> Intent:
-    IntentSubmission.model_validate_json(submission.model_dump_json())
+def build_intent(
+    submission: IntentSubmission | ScenarioSubmission, *, created_at: datetime
+) -> Intent:
+    type(submission).model_validate_json(submission.model_dump_json())
     importance, requested, required = expectations(submission)
     payload = {
         "schema_version": "authenticity-intent.v1",

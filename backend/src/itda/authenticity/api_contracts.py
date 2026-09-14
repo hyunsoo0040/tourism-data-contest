@@ -73,13 +73,13 @@ class VisualPart(StrictContract):
 
 
 class FitPart(StrictContract):
-    facet: FacetKey
-    importance: Level
+    facet: FacetKey | Axis
+    importance: Level | None
     avoidance: Level
     desired_level: Level | None
     place_value: Score | None
     utility: Score | None
-    weight: Level
+    weight: int = Field(ge=0, le=10_000, strict=True)
     compared: bool
     visual_comparison: tuple[VisualPart, ...]
     evidence_ids: tuple[str, ...]

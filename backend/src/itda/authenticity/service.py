@@ -16,7 +16,7 @@ from itda.authenticity.api_contracts import (
 )
 from itda.authenticity.auxiliary import Auxiliary
 from itda.authenticity.contracts import Assessment
-from itda.authenticity.intent import Intent, IntentSubmission, build_intent
+from itda.authenticity.intent import Intent, IntentSubmission, ScenarioSubmission, build_intent
 from itda.authenticity.photo import PhotoReview
 from itda.authenticity.ranking import rank
 from itda.authenticity.release import Release
@@ -71,7 +71,7 @@ class Service:
             }
         )
 
-    def profile(self, session_id: str, submission: IntentSubmission) -> Intent:
+    def profile(self, session_id: str, submission: IntentSubmission | ScenarioSubmission) -> Intent:
         if submission.photo_receipt_sha256:
             photo = PhotoReview.model_validate(
                 self.repository.confirmed_photo(session_id, submission.photo_receipt_sha256)

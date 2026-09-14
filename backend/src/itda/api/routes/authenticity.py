@@ -24,7 +24,13 @@ from itda.authenticity.api_contracts import (
     ServiceInfo,
     SessionCreated,
 )
-from itda.authenticity.intent import QUESTIONNAIRE, QUESTIONNAIRE_SHA256, Intent, IntentSubmission
+from itda.authenticity.intent import (
+    QUESTIONNAIRE,
+    QUESTIONNAIRE_SHA256,
+    Intent,
+    IntentSubmission,
+    ScenarioSubmission,
+)
 from itda.authenticity.photo import PhotoReview, analyze_uploads, confirm
 from itda.authenticity.repository import OwnershipError, Repository, RequestConflict
 from itda.authenticity.service import Service
@@ -129,6 +135,23 @@ def create_profile(
     require_same_origin_mutation(request)
     try:
         return service.profile(sid, submission)
+    except (ValueError, SQLAlchemyError) as error:
+        raise guarded_error(error) from None
+
+
+@router.post(
+    "/scenario-profiles", response_model=Intent, operation_id="createScenarioAuthenticityIntent"
+)
+def create_scenario_profile(
+    body: ScenarioSubmission,
+    request: Request,
+    sid: Annotated[str, Depends(principal)],
+    service: Annotated[Service, Depends(get_service)],
+) -> Intent:
+    require_same_origin_mutation(request)
+    enforce_profile_create_rate(request)
+    try:
+        return service.profile(sid, body)
     except (ValueError, SQLAlchemyError) as error:
         raise guarded_error(error) from None
 

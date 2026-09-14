@@ -363,6 +363,8 @@ export function TripConditionForm({
           error={errors.crowd_avoidance?.message}
         />
 
+        <p className="privacy-note">지역과 필수 시설은 추천 조건으로 적용해요. 날짜·시간·동행·이동·걷기·실내외·혼잡 선호는 방문 계획에 함께 보관하며, 현재 점수나 실시간 방문 가능 여부를 바꾸지는 않아요.</p>
+
         <div className="start-action-bar">
           {secondaryLabel && onSecondary ? (
             <button type="button" className="button button--secondary" onClick={onSecondary} disabled={busy}>

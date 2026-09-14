@@ -872,6 +872,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/v1/authenticity/scenario-profiles": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Create Scenario Profile */
+        post: operations["createScenarioAuthenticityIntent"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/v1/authenticity/session": {
         parameters: {
             query?: never;
@@ -2768,13 +2785,10 @@ export interface components {
             desired_level: number | null;
             /** Evidence Ids */
             evidence_ids: string[];
-            /**
-             * Facet
-             * @enum {string}
-             */
-            facet: "H.a" | "H.b" | "H.c" | "H.d" | "E.a" | "E.b" | "E.c" | "E.d" | "R.a" | "R.b" | "R.c" | "R.d";
+            /** Facet */
+            facet: ("H.a" | "H.b" | "H.c" | "H.d" | "E.a" | "E.b" | "E.c" | "E.d" | "R.a" | "R.b" | "R.c" | "R.d") | ("H" | "E" | "R");
             /** Importance */
-            importance: number;
+            importance: number | null;
             /** Place Value */
             place_value: number | null;
             /** Rule */
@@ -3232,7 +3246,8 @@ export interface components {
              * @constant
              */
             schema_version: "authenticity-intent.v1";
-            submission: components["schemas"]["IntentSubmission"];
+            /** Submission */
+            submission: components["schemas"]["IntentSubmission"] | components["schemas"]["ScenarioSubmission"];
         };
         /** IntentSubmission */
         IntentSubmission: {
@@ -3252,7 +3267,7 @@ export interface components {
             photo_receipt_sha256?: string | null;
             /**
              * Questionnaire Sha256
-             * @default 5fd1a9ca18babea6b70ffad1e25e09ab7a822e74e9c14ba86227562d03897ff7
+             * @default e8645b8def042bf43901882771f1c6682ddce41e1d5ebef55cd7638b871f81df
              */
             questionnaire_sha256: string;
             /** Request Id */
@@ -5766,6 +5781,39 @@ export interface components {
          * @enum {string}
          */
         SavedPlaceState: "CURRENT" | "STALE" | "UNAVAILABLE";
+        /**
+         * ScenarioSubmission
+         * @description Retained scenarios supply axis preferences, never invented facet answers.
+         */
+        ScenarioSubmission: {
+            answers: components["schemas"]["QuestionnaireAnswersV2"];
+            /** Exact Visit Time */
+            exact_visit_time?: string | null;
+            /** Photo Receipt Sha256 */
+            photo_receipt_sha256?: string | null;
+            /** Questionnaire Config Hash */
+            questionnaire_config_hash: string;
+            /** Request Id */
+            request_id: string;
+            requirements?: components["schemas"]["TripRequirements"];
+            /**
+             * Schema Version
+             * @default scenario-expectation-bridge.v1
+             * @constant
+             */
+            schema_version: "scenario-expectation-bridge.v1";
+            trip_conditions: components["schemas"]["TripConditions"];
+            /**
+             * Visual Input Kind
+             * @default NONE
+             * @enum {string}
+             */
+            visual_input_kind: "NONE" | "CONFIRMED_PHOTO";
+            /** Visual Targets */
+            visual_targets?: {
+                [key: string]: number;
+            };
+        };
         /** ScoreContribution */
         ScoreContribution: {
             /** Axis Components */
@@ -8587,6 +8635,41 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["SavedItem"][];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    createScenarioAuthenticityIntent: {
+        parameters: {
+            query?: never;
+            header?: {
+                authorization?: string | null;
+            };
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ScenarioSubmission"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Intent"];
                 };
             };
             /** @description Validation Error */

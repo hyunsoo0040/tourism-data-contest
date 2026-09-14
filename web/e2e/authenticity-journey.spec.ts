@@ -11,8 +11,7 @@ for (const [name, width, height] of [["desktop",1440,1000],["mobile",390,844]] a
   test(`${name}: actual API and data journey`, async ({ page }) => {
     await page.setViewportSize({width,height});
     const errors:string[]=[]; page.on("pageerror",e=>errors.push(e.message));
-    await page.goto("/");
-    await page.getByRole("link",{name:"시작하기",exact:true}).click();
+    await page.goto("/trip");
     await expect(page).toHaveURL(/\/trip$/);
     await expect(page.getByRole("heading",{name:"이번 여행에서 원하는 순간"})).toBeVisible();
     await page.evaluate(()=>document.fonts.ready);

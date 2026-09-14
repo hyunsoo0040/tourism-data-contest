@@ -16,10 +16,10 @@ const EMPTY = { visit_date: null, visit_time: null, required_facilities: [] };
 
 beforeEach(() => {
   window.sessionStorage.clear();
-  vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response(JSON.stringify({ candidate_sha256: "a".repeat(64), regions: [
-    { region_code: "11", region_name: "서울특별시", place_count: 50 },
-    { region_code: "12", region_name: "전남광주통합특별시", place_count: 42 },
-    { region_code: "51", region_name: "강원특별자치도", place_count: 30 },
+  vi.stubGlobal("fetch", vi.fn().mockResolvedValue(new Response(JSON.stringify({ release_sha256: "a".repeat(64), scope: "PUBLIC", places: 122, regions: [
+    { code: "11", name: "서울특별시", places: 50 },
+    { code: "12", name: "전남광주통합특별시", places: 42 },
+    { code: "51", name: "강원특별자치도", places: 30 },
   ] }))));
 });
 afterEach(() => vi.unstubAllGlobals());

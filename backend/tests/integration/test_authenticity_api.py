@@ -15,6 +15,7 @@ from itda.authenticity.service import Service
 from itda.db.session import create_database_engine
 from tests.authenticity.test_intent_and_ranking import assessment
 from tests.authenticity.test_private_photo import TestMoodProvider, photo_bytes
+from tests.authenticity.test_scenario_bridge import scenario
 from tests.integration.test_daily_glm_refresh_migration import _config
 
 
@@ -111,10 +112,50 @@ def test_complete_api_journey_and_private_photos(postgres_harness, tmp_path, mon
             )
             assert confirmed.status_code == 200, confirmed.text
             assert confirmed.json()["receipt_sha256"]
+            # Retained scenarios share the current private-photo ownership and replay contract.
+            confirmed_photo = confirmed.json()
+            scenario_body = scenario(
+                visual_targets=confirmed_photo["targets"],
+                visual_input_kind="CONFIRMED_PHOTO",
+                photo_receipt_sha256=confirmed_photo["receipt_sha256"],
+            ).model_dump(mode="json")
+            assert client.post(base + "/scenario-profiles", json=scenario_body).status_code == 401
+            assert (
+                client.post(
+                    base + "/scenario-profiles",
+                    json=scenario_body,
+                    headers={"Authorization": headers["Authorization"]},
+                ).status_code
+                == 403
+            )
+            bridged = client.post(base + "/scenario-profiles", json=scenario_body, headers=headers)
+            assert bridged.status_code == 200, bridged.text
+            assert (
+                client.post(base + "/scenario-profiles", json=scenario_body, headers=headers).json()
+                == bridged.json()
+            )
+            scenario_run = client.post(
+                base + "/runs",
+                json={"profile_id": bridged.json()["profile_id"], "request_id": "scenario-run"},
+                headers=headers,
+            )
+            assert scenario_run.status_code == 200, scenario_run.text
+            assert scenario_run.json()["ranking_version"] == "scenario-axis-bridge-ranking.v1"
+            assert scenario_run.json()["result_count"] == 5
+            scenario_path = base + "/runs/" + scenario_run.json()["run_sha256"]
+            assert client.get(scenario_path, headers=headers).json() == scenario_run.json()
             deleted = client.delete(base + "/photos/" + photo["photo_id"], headers=headers)
             assert deleted.json()["state"] == "DELETED" and deleted.json()["batches"] == []
             # A new anonymous session cannot read another session's run.
             other = client.post(base + "/sessions", headers={"Origin": "http://testserver"}).json()
+            other_headers = headers | {"Authorization": "Bearer " + other["token"]}
+            assert client.get(scenario_path, headers=other_headers).status_code == 404
+            assert (
+                client.post(
+                    base + "/scenario-profiles", json=scenario_body, headers=other_headers
+                ).status_code
+                == 404
+            )
             assert (
                 client.get(path, headers={"Authorization": "Bearer " + other["token"]}).status_code
                 == 404

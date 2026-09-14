@@ -7,7 +7,7 @@ from datetime import datetime
 from typing import Any, cast
 
 from itda.authenticity.contracts import Assessment
-from itda.authenticity.intent import Intent, effective_importance
+from itda.authenticity.intent import Intent, ScenarioSubmission, effective_importance
 from itda.authenticity.rubric import FACET_KEYS, Axis
 from itda.authenticity.scoring import verify_assessment
 from itda.authenticity.visual import VISUAL_FACETS, compare_visual
@@ -46,6 +46,24 @@ def rank(
     if any(len(p) != 2 or not p <= set(ids) for p in forbidden):
         raise ValueError("FORBIDDEN_RELATION_MEMBERSHIP_MISMATCH")
     sub = intent.submission
+    if isinstance(sub, ScenarioSubmission):
+        from itda.authenticity.scenario_ranking import scenario_candidates
+
+        scenario_scored, scenario_excluded = scenario_candidates(
+            assessments, intent, facility_facts, visual_references
+        )
+        return finish_rank(
+            assessments=assessments,
+            intent=intent,
+            created_at=created_at,
+            scored=scenario_scored,
+            excluded=scenario_excluded,
+            forbidden_pairs=forbidden_pairs,
+            limit=limit,
+            request_id=request_id,
+            visual_references=visual_references,
+            ranking_version="scenario-axis-bridge-ranking.v1",
+        )
     weights = effective_importance(sub)
     total_weight = sum(v or 0 for v in weights.values()) + sum(sub.avoid.values())
     excluded: list[dict[str, Any]] = []
@@ -171,6 +189,36 @@ def rank(
                 "warnings": ["MISSING_EXPECTATION_EVIDENCE"] if known_weight < total_weight else [],
             }
         )
+    return finish_rank(
+        assessments=assessments,
+        intent=intent,
+        created_at=created_at,
+        scored=scored,
+        excluded=excluded,
+        forbidden_pairs=forbidden_pairs,
+        limit=limit,
+        request_id=request_id,
+        visual_references=visual_references,
+        ranking_version=RANKING_VERSION,
+    )
+
+
+def finish_rank(
+    *,
+    assessments: tuple[Assessment, ...],
+    intent: Intent,
+    created_at: datetime,
+    scored: list[dict[str, Any]],
+    excluded: list[dict[str, Any]],
+    forbidden_pairs: tuple[tuple[str, str], ...],
+    limit: int,
+    request_id: str | None,
+    visual_references: Mapping[str, DestinationMoodBundle] | None,
+    ranking_version: str,
+) -> dict[str, Any]:
+    ids = [a.source.place.place_id for a in assessments]
+    policy_hashes = {a.policy.policy_sha256 for a in assessments}
+    forbidden = {frozenset(p) for p in forbidden_pairs}
     ordered = sorted(scored, key=lambda r: (-r["score"], r["place_id"]))
 
     def compatible(left: dict[str, Any], right: dict[str, Any]) -> bool:
@@ -200,7 +248,7 @@ def rank(
     selected = [row | {"rank": index + 1} for index, row in enumerate(chosen)]
     payload = {
         "schema_version": "authenticity-recommendation-run.v1",
-        "ranking_version": RANKING_VERSION,
+        "ranking_version": ranking_version,
         "request_id": request_id or intent.submission.request_id,
         "intent_sha256": intent.intent_sha256,
         "profile_id": intent.profile_id,
