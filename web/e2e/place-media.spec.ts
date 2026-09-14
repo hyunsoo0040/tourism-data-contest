@@ -26,8 +26,8 @@ for (const [name, width, height] of [["desktop", 1440, 1000], ["mobile", 390, 84
     for (const kind of ["history", "image", "rest"] as const) {
       await page.locator(`#demo button[data-type=${kind}]`).click();
       const cards = page.locator("#recommendations article");
-      await expect(cards).toHaveCount(2);
-      for (const [i, place] of examples.examples[kind].entries()) {
+      await expect(cards).toHaveCount(1);
+      for (const [i, place] of examples.examples[kind].slice(0, 1).entries()) {
         await expect(cards.nth(i).getByRole("heading")).toHaveText(place.name);
         await expect(cards.nth(i)).toContainText(`${place.axis_value}점`);
         await loadedPhoto(cards.nth(i).getByRole("img"));

@@ -1,6 +1,8 @@
 /* PUBLIC examples extend the generated upstream layout without changing its source. */
-.up-main #demo .quiz{align-self:start}
-.up-main #demo .place{grid-template-columns:180px minmax(0,1fr);align-items:start}
+.up-main #demo .quiz{align-self:stretch}
+.up-main #demo .result{display:flex;flex-direction:column;min-width:0}
+.up-main #demo #recommendations{display:grid;align-content:center;flex:1}
+.up-main #demo .place{grid-template-columns:minmax(160px,.95fr) minmax(0,1fr);align-items:start;margin-top:0}
 .up-main #demo .place h3{font-size:21px;line-height:1.45;margin:10px 0 6px}
 .up-main #demo .place-region{font-size:13px;color:#485366;margin-bottom:10px}
 .up-main #demo .preview-date{font-size:13px;color:#485366;margin:0 0 18px}

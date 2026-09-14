@@ -439,14 +439,13 @@ export function UpstreamMainPage() {
                 <h2 id="resultTitle">{data.title}</h2>
                 <p className="preview-date">공개 자료 기준 {examples.release_created_at.slice(0, 10)}</p>
                 <div id="recommendations">
-                  {data.places.map((place) => (
+                  {data.places.slice(0, 1).map((place) => (
                     <article className="place" key={place.place_id}>
                       <PlacePhotos name={place.name} photos={[place.photo]} gallery={false} />
                       <div>
                         <span className="tag">{data.axisLabel} {place.axis_value}점</span>
                         <h3>{place.name}</h3>
                         <p className="place-region">{place.region} · {place.category}</p>
-                        <p>{place.description}</p>
                         <details className="place-address"><summary>주소 확인</summary><p>{place.address}</p></details>
                         <a className="place-map" href={placeMapUrl(place.name, place.address)} target="_blank" rel="noreferrer">지도에서 보기</a>
                       </div>
