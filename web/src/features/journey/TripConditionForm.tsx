@@ -156,7 +156,7 @@ export function TripConditionForm({
     let selectedDate = input.value;
     if (selectedDate && selectedDate < currentDate) {
       selectedDate = lastValidDateRef.current >= currentDate ? lastValidDateRef.current : currentDate;
-      setDateNotice(`지난 날짜는 선택할 수 없어요. ${selectedDate}로 되돌렸어요.`);
+      setDateNotice(`지난 날짜는 선택할 수 없어요.\n${selectedDate}로 되돌렸어요.`);
     } else {
       setDateNotice("");
     }
@@ -315,7 +315,7 @@ export function TripConditionForm({
             />
           </label>
           {errors.visit_date ? <p className="field-error" id="visit_date-error">{errors.visit_date.message}</p> : null}
-          <p id="visit_date-notice" role="status" aria-live="polite" hidden={!dateNotice}>{dateNotice}</p>
+          <p id="visit_date-notice" role="status" aria-live="polite" hidden={!dateNotice} style={{ whiteSpace: "pre-line" }}>{dateNotice}</p>
           <ChoiceGroup
             name="visit_time"
             register={register}
