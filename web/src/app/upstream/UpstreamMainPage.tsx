@@ -13,13 +13,15 @@
  *   preselect the preview type
  *
  * The upstream script never executes. Example scores are exported from the
- * verified PUBLIC release; the homepage does not create a personalized ranking.
+ * verified PUBLIC release. The phone illustrates type-based matching;
+ * the homepage does not create a personalized ranking.
  * The type-test entry links route into the IT-DA journey (/start, /quiz,
  * /photo) which is served by the local backend as sole authority.
  */
 import { useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
 import examples from "../../content/public-place-examples.json";
 import "../styles/place-examples.css";
+import "../styles/phone-preview.css";
 import { PlacePhotos } from "../../features/authenticity/PlacePhotos";
 import { placeMapUrl } from "../../features/authenticity/placeMetadata";
 
@@ -78,6 +80,127 @@ const RECOMMENDATIONS = {
 function PhoneTypeCopy({ html }: { html: string }) {
   // Upstream stores the two-line phone headline with an explicit <br>.
   return <b id="phoneType" dangerouslySetInnerHTML={{ __html: html }} />;
+}
+
+type RecommendationType = keyof typeof RECOMMENDATIONS;
+
+const PHONE_TYPES = [
+  { type: "history", icon: "原", label: "대상·원형형", description: "문화, 유적, 자연 보존" },
+  { type: "image", icon: "像", label: "의미·이미지형", description: "SNS, 분위기, 포토 스팟" },
+  { type: "rest", icon: "我", label: "자기·몰입형", description: "산책, 조용함, 감정적 만족" },
+] as const;
+
+function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
+  const [phoneType, setPhoneType] = useState(selectedType);
+  const [paused, setPaused] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [focused, setFocused] = useState(false);
+  const [inView, setInView] = useState(false);
+  const [pageVisible, setPageVisible] = useState(true);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const phoneRef = useRef<HTMLDivElement>(null);
+  const data = RECOMMENDATIONS[phoneType];
+
+  useEffect(() => setPhoneType(selectedType), [selectedType]);
+
+  useEffect(() => {
+    const phone = phoneRef.current;
+    if (phone === null) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting), { threshold: 0.25 },
+    );
+    observer.observe(phone);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const updateVisibility = () => setPageVisible(!document.hidden);
+    const preference = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+    const updateMotion = () => setReducedMotion(preference?.matches ?? false);
+    updateVisibility();
+    updateMotion();
+    document.addEventListener("visibilitychange", updateVisibility);
+    preference?.addEventListener("change", updateMotion);
+    return () => {
+      document.removeEventListener("visibilitychange", updateVisibility);
+      preference?.removeEventListener("change", updateMotion);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (paused || hovered || focused || !inView || !pageVisible || reducedMotion) return;
+    const timer = window.setInterval(() => {
+      setPhoneType((current) => {
+        const index = PHONE_TYPES.findIndex(({ type }) => type === current);
+        return PHONE_TYPES[(index + 1) % PHONE_TYPES.length].type;
+      });
+    }, 5_000);
+    return () => window.clearInterval(timer);
+  }, [paused, hovered, focused, inView, pageVisible, reducedMotion, selectedType]);
+
+  return (
+    <div className="phone-card" aria-label="IT-DA 모바일 추천 화면 미리보기">
+      <div className="blob" aria-hidden="true"></div>
+      <div
+        className="phone phone-preview"
+        ref={phoneRef}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onFocus={() => setFocused(true)}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
+        }}
+      >
+        <div className="screen">
+          <div className="screen-top">
+            <span>IT-DA</span>
+            <span id="phoneMatch" aria-label={`${data.axisLabel} 예시 ${data.places[0].axis_value}% 일치`}>
+              {data.places[0].axis_value}% 일치
+            </span>
+          </div>
+          <div className="mini-hero phone-preview-copy" key={phoneType}>
+            <PhoneTypeCopy html={data.phoneType} />
+            <p id="phoneDesc">{data.phoneDesc}</p>
+          </div>
+          <div role="group" aria-label="휴대폰 여행 유형 선택">
+            {PHONE_TYPES.map(({ type, icon, label, description }) => (
+              <button
+                className={`type-card${phoneType === type ? " is-active" : ""}`}
+                key={type}
+                type="button"
+                aria-pressed={phoneType === type}
+                onClick={() => { setPhoneType(type); setPaused(true); }}
+              >
+                <span className="type-icon" aria-hidden="true">{icon}</span>
+                <span><strong>{label}</strong><span>{description}</span></span>
+              </button>
+            ))}
+          </div>
+          <div className="match">
+            <strong className="phone-preview-copy" key={phoneType}>{data.places[0].name} · {data.axisLabel}</strong>
+            <div className="bar" aria-hidden="true">
+              <i id="matchBar" style={{ transform: `scaleX(${data.places[0].axis_value / 100})` }}></i>
+            </div>
+            <p id="matchText">선택한 유형을 가정한 일치도 예시예요. 나의 일치도는 테스트 후 확인할 수 있어요.</p>
+          </div>
+          <div className="phone-preview-controls">
+            {reducedMotion ? <span>위 유형을 눌러 예시를 바꿔보세요</span> : (
+              <button type="button" onClick={() => { setPaused((current) => !current); setFocused(false); }}>
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
+                  {paused ? <path d="M5 2.5v11L13 8Z" /> : <path d="M4 3h3v10H4zm5 0h3v10H9z" />}
+                </svg>
+                자동 전환 {paused ? "재생" : "일시정지"}
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export function UpstreamMainPage() {
@@ -230,44 +353,7 @@ export function UpstreamMainPage() {
                 </p>
 
               </div>
-              <div className="phone-card" aria-label="IT-DA 모바일 추천 화면 미리보기">
-                <div className="blob"></div>
-                <div className="phone">
-                  <div className="screen">
-                    <div className="screen-top"><span>IT-DA</span><span id="phoneMatch">{data.places[0].axis_value}점 · 장소 예시</span></div>
-                    <div className="mini-hero">
-                      <PhoneTypeCopy html={data.phoneType} />
-                      <p id="phoneDesc">{data.phoneDesc}</p>
-                    </div>
-                    <div className="type-card">
-                      <div className="type-icon">原</div>
-                      <div>
-                        <strong>대상·원형형</strong>
-                        <span>문화, 유적, 자연 보존</span>
-                      </div>
-                    </div>
-                    <div className="type-card">
-                      <div className="type-icon">像</div>
-                      <div>
-                        <strong>의미·이미지형</strong>
-                        <span>SNS, 분위기, 포토 스팟</span>
-                      </div>
-                    </div>
-                    <div className="type-card">
-                      <div className="type-icon">我</div>
-                      <div>
-                        <strong>자기·몰입형</strong>
-                        <span>산책, 조용함, 감정적 만족</span>
-                      </div>
-                    </div>
-                    <div className="match">
-                      <strong>{data.places[0].name} · {data.axisLabel}</strong>
-                      <div className="bar"><i id="matchBar" style={{ width: `${data.places[0].axis_value}%` }}></i></div>
-                      <p id="matchText">공식 자료로 분석한 장소 점수예요. 내 취향과의 연결 정도는 테스트 후 확인할 수 있어요.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <PhonePreview selectedType={selectedType} />
             </div>
           </section>
 
