@@ -99,7 +99,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     expect(response.status()).toBe(201);
     profile = await response.json();
     await expect(page).toHaveURL(/\/profile$/);
-    await page.getByRole("button", { name: "바로 추천 보기" }).click();
+    await page.getByRole("button", { name: "추천 장소 보기" }).click();
     const known = page.locator('[data-trip-fact="accessible_toilet"][data-support-state="SUPPORTED_FACT"]');
     const unknown = page.locator('[data-trip-fact="accessible_toilet"][data-support-state="UNKNOWN"]');
     await expect(known.first()).toBeVisible({ timeout: 70_000 });

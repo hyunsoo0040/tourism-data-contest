@@ -41,8 +41,8 @@ describe("actual mood family flow", () => {
   it("resumes the server mood family and confirms only its stored references", async () => {
     const data = await fixture(), onMoodConfirmed = vi.fn(), onConfirmed = vi.fn();
     render(<PhotoPreferenceFlow profileId={data.profile} client={data.client} onNoPhoto={vi.fn()} onConfirmed={onConfirmed} onMoodConfirmed={onMoodConfirmed} />);
-    await screen.findByText("사진에서 마음에 든 분위기를 골라 주세요");
-    fireEvent.click(screen.getByRole("button", { name: "선택한 분위기로 계속" }));
+    await screen.findByText("사진 분위기 분석을 완료했어요");
+    fireEvent.click(screen.getByRole("button", { name: "사진 분위기로 계속" }));
     await waitFor(() => expect(onMoodConfirmed).toHaveBeenCalledTimes(1));
     expect(data.client.getPhotoJobTraits).not.toHaveBeenCalled();
     expect(onConfirmed).not.toHaveBeenCalled();
@@ -50,15 +50,14 @@ describe("actual mood family flow", () => {
       choices: [{ candidate_id: data.review.batches[0]!.candidates[1]!.candidate_id, included: true }] });
   });
 
-  it("retains a confirmed receipt when all appearance choices are excluded", async () => {
+  it("allows skipping without confirming photo atmosphere", async () => {
     const data = await fixture(), confirmed = vi.fn(), noPhoto = vi.fn();
     render(<PhotoPreferenceFlow profileId={data.profile} client={data.client} onNoPhoto={noPhoto} onMoodConfirmed={confirmed} />);
-    await screen.findByText("사진에서 마음에 든 분위기를 골라 주세요");
-    fireEvent.click(screen.getByRole("checkbox"));
-    fireEvent.click(screen.getByRole("button", { name: "사진 분위기 없이 계속" }));
-    await waitFor(() => expect(confirmed).toHaveBeenCalledTimes(1));
-    expect(confirmed.mock.calls[0]![0].moods.every((row: { value: number | null }) => row.value === null)).toBe(true);
-    expect(noPhoto).not.toHaveBeenCalled();
+    await screen.findByText("사진 분위기 분석을 완료했어요");
+    fireEvent.click(screen.getByRole("button", { name: "사진 입력 건너뛰기" }));
+    await waitFor(() => expect(noPhoto).toHaveBeenCalledTimes(1));
+    expect(confirmed).not.toHaveBeenCalled();
+    expect(data.confirm).not.toHaveBeenCalled();
   });
 
   it("does not reinterpret a corrupted mood payload as historical traits", async () => {
@@ -76,8 +75,8 @@ describe("actual mood family flow", () => {
     data.confirm.mockClear();
     data.client.getPhotoJobMoods.mockResolvedValue({ ...data.review, confirmation: receipt });
     render(<PhotoPreferenceFlow profileId={data.profile} client={data.client} onNoPhoto={vi.fn()} onMoodConfirmed={confirmed} />);
-    await screen.findByText("이미 확정한 사진 분위기입니다. 저장된 선택으로 계속할 수 있어요.");
-    expect(screen.getByRole("checkbox").matches(":disabled")).toBe(true);
+    await screen.findByText("이미 저장된 사진 분위기로 계속할 수 있어요.");
+    expect(screen.queryByRole("checkbox")).toBeNull();
     fireEvent.click(screen.getByRole("button", { name: "사진 분위기 없이 계속" }));
     await waitFor(() => expect(confirmed).toHaveBeenCalledWith(receipt, data.job));
     expect(data.confirm).not.toHaveBeenCalled();

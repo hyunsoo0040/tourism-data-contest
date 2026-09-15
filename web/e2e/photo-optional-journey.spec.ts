@@ -19,7 +19,7 @@ import { expect, type Page, type Response, type Route, test } from "@playwright/
  * (UI-BS-04 is component-owned and must already be green; it is not duplicated here.)
  */
 
-const PROFILE_RECOMMENDATION_CTA = "바로 추천 보기";
+const PROFILE_RECOMMENDATION_CTA = "추천 장소 보기";
 const PHOTO_RECOMMENDATION_CTA = "사진 취향을 반영해 추천 보기";
 const NO_PHOTO_CTA = "사진 없이 추천 5곳 보기";
 const PHOTO_PATH_CTA = "사진으로 취향 더하기";

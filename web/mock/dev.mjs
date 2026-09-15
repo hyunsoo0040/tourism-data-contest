@@ -11,7 +11,7 @@ api.listen(port, "127.0.0.1", () => {
     cwd: fileURLToPath(new URL("..", import.meta.url)), stdio: "inherit",
     env: { ...process.env, ITDA_BACKEND_ORIGIN: `http://127.0.0.1:${port}`, ITDA_MOCK_UI: "1", NEXT_PUBLIC_ITDA_MOCK_UI: "1" },
   });
-  console.log(`UI 목업: http://127.0.0.1:${webPort}/start (가상 데이터만 사용)`);
+  console.log(`UI 목업: http://127.0.0.1:${webPort}/start (공개 장소·사진의 고정 예시, 실제 추천 계산 없음)`);
   const stop = () => { child.kill("SIGTERM"); api.close(); };
   process.on("SIGINT", stop); process.on("SIGTERM", stop);
   child.on("error", (error) => { console.error(error.message); api.close(); process.exitCode = 1; });

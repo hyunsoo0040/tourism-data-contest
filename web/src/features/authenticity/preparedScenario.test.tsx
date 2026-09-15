@@ -52,6 +52,7 @@ it("waits for every photo to decode, then renders all details on the first paint
   expect(screen.queryByText("최신 분석으로 추천한 장소를 불러오고 있어요.")).toBeNull();
   expect(screen.queryByText("장소 정보를 불러오고 있어요.")).toBeNull();
   expect(screen.getAllByRole("link", { name: "지도에서 보기" })).toHaveLength(5);
+  expect(fetchMock.mock.calls.some(([url]) => url.endsWith("/saved"))).toBe(false);
   await act(async () => {});
   expect(fetchMock.mock.calls).toHaveLength(requests);
   expect(readPreparedScenario(run.run_sha256)).toBeNull();

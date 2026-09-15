@@ -82,7 +82,7 @@ for (const [name, width, height] of [["desktop", 1440, 1000], ["mobile", 390, 84
     expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
     await first.getByRole("button", { name: "장소 저장", exact: true }).click();
     await expect(first.getByRole("button", { name: "저장 취소" })).toBeVisible();
-    await first.getByRole("link", { name: "사진·장소 정보" }).click();
+    await first.getByRole("link", { name: "장소 상세 보기" }).click();
     await expect(page.getByRole("heading", { name: "장소 소개" })).toBeVisible();
     await loadedPhoto(page.getByRole("img"));
     await page.getByRole("button", { name: /사진 2 보기$/ }).click();

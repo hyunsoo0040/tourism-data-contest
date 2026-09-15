@@ -85,10 +85,10 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await page.getByRole("button", { name: "취향 테스트 시작하기" }).click();
     const profile = await answerQuiz(page);
     expect(Object.keys(profile.answers)).toHaveLength(12);
-    await expect(page.getByRole("button", { name: "바로 추천 보기", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "추천 장소 보기", exact: true })).toBeVisible();
     const createdResponse = page.waitForResponse((response) => response.request().method() === "POST" &&
       new URL(response.url()).pathname === "/v1/recommendation-runs");
-    await page.getByRole("button", { name: "바로 추천 보기", exact: true }).click();
+    await page.getByRole("button", { name: "추천 장소 보기", exact: true }).click();
     const createdHttp = await createdResponse;
     expect(createdHttp.status()).toBe(201);
     const created = await createdHttp.json();

@@ -240,7 +240,7 @@ test.describe("07-02 no-photo recommendation journey", () => {
       (response) => response.request().method() === "POST" && response.url().includes("/v1/recommendation-runs"),
       { timeout: 180_000 },
     );
-    await page.getByRole("button", { name: "바로 추천 보기", exact: true }).click();
+    await page.getByRole("button", { name: "추천 장소 보기", exact: true }).click();
     await resultsResponse;
 
     await page.waitForURL(/\/recommendations\//, { timeout: 180_000 });

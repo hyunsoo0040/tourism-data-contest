@@ -120,7 +120,7 @@ async function verifyRun(page: Page, profile: Profile, candidate: NationalCandid
     new URL(response.url()).pathname === "/v1/recommendation-runs");
   const contextPromise = page.waitForResponse((response) => response.request().method() === "GET" &&
     /^\/v1\/recommendation-runs\/[^/]+\/tourism-context$/.test(new URL(response.url()).pathname));
-  await page.getByRole("button", { name: "바로 추천 보기", exact: true }).click();
+  await page.getByRole("button", { name: "추천 장소 보기", exact: true }).click();
   const createdHttp = await createdPromise;
   expect(createdHttp.status()).toBe(201);
   const createdResponse = await recordResponse(createdHttp);

@@ -318,20 +318,25 @@ describe("/profile result, reload, and recovery", () => {
       return original(path, init);
     });
     const router = await renderProfile();
-    fireEvent.click(await screen.findByRole("button", { name: "바로 추천 보기" }));
+    fireEvent.click(await screen.findByRole("button", { name: "추천 장소 보기" }));
     expect((await screen.findByRole("alert")).textContent).toContain("일시적인 연결 실패");
     expect(runBodies).toHaveLength(1);
-    fireEvent.click(screen.getByRole("button", { name: "바로 추천 보기" }));
+    fireEvent.click(screen.getByRole("button", { name: "추천 장소 보기" }));
     await waitFor(() => expect(router.state.location.pathname).toContain("/recommendations/a-"));
     expect(wire.inputs).toHaveLength(2); expect(wire.inputs[0]).toEqual(wire.inputs[1]);
     expect(runBodies).toHaveLength(2); expect(runBodies[0]).toEqual(runBodies[1]);
   });
 
-  it("keeps a failed photo replacement and submits only explicitly confirmed atmosphere", async () => {
+  it("keeps a failed photo replacement and automatically confirms every observed atmosphere", async () => {
     const current = profile({ profile_id: "profile-photo-api" });
     writeProfileReference(current.profile_id);
     const wire = scenarioWire(current), original = wire.fetchMock.getMockImplementation()!;
     let uploads = 0; const confirmations: unknown[] = [];
+    const candidates = photoFixture.review.batches.flatMap(batch => batch.candidates);
+    const allConfirmed = { ...photoFixture.confirmed,
+      selected_candidate_ids: candidates.map(candidate => candidate.candidate_id),
+      targets: Object.fromEntries(candidates.map(candidate => [candidate.observation.dimension, candidate.observation.level])),
+    };
     const createUrl = vi.fn(() => "blob:synthetic-photo");
     vi.stubGlobal("URL", Object.assign(URL, { createObjectURL: createUrl, revokeObjectURL: vi.fn() }));
     wire.fetchMock.mockImplementation(async (path, init) => {
@@ -340,7 +345,7 @@ describe("/profile result, reload, and recovery", () => {
         expect(init.body).toBeInstanceOf(FormData);
         return ++uploads === 1 ? jsonResponse(photoFixture.review) : jsonResponse({ detail: "사진 교체 실패" }, 503);
       }
-      if (String(path).endsWith("/confirm")) { confirmations.push(JSON.parse(String(init.body))); return jsonResponse(photoFixture.confirmed); }
+      if (String(path).endsWith("/confirm")) { confirmations.push(JSON.parse(String(init.body))); return jsonResponse(allConfirmed); }
       return original(path, init);
     });
     const router = createMemoryRouter(appRoutes, { initialEntries: ["/photo"] });
@@ -351,15 +356,56 @@ describe("/profile result, reload, and recovery", () => {
     await waitFor(() => expect((picker as HTMLInputElement).disabled).toBe(false));
     const file = new File(["synthetic fixture: provider is stubbed"], "test.jpg", { type: "image/jpeg" });
     fireEvent.change(picker, { target: { files: [file] } });
-    const greenery = await screen.findByRole("checkbox", { name: "사진 1 · 녹지 3/4" });
-    expect((greenery as HTMLInputElement).checked).toBe(false); fireEvent.click(greenery);
+    await screen.findByText("사진에서 확인한 분위기를 모두 추천에 자동으로 반영해요.");
+    expect(screen.getAllByRole("checkbox")).toHaveLength(1);
+    expect(screen.queryByText(/녹지|greenery|3\/4/)).toBeNull();
     fireEvent.change(picker, { target: { files: [file] } });
     expect((await screen.findByRole("alert")).textContent).toContain("사진 교체 실패");
-    expect((greenery as HTMLInputElement).checked).toBe(true); expect(screen.getByAltText("선택한 여행 사진 1").getAttribute("src")).toBe("blob:synthetic-photo");
-    fireEvent.click(screen.getByRole("button", { name: "선택한 분위기로 추천 보기" }));
+    expect(screen.getByAltText("선택한 여행 사진 1").getAttribute("src")).toBe("blob:synthetic-photo");
+    fireEvent.click(screen.getByRole("button", { name: "사진 분위기로 추천 보기" }));
     await waitFor(() => expect(router.state.location.pathname).toContain("/recommendations/a-"));
-    expect(confirmations).toEqual([{ candidate_ids: photoFixture.confirmed.selected_candidate_ids }]);
-    expect(wire.inputs[0]).toMatchObject({ answers: current.answers, visual_input_kind: "CONFIRMED_PHOTO", photo_receipt_sha256: photoFixture.confirmed.receipt_sha256, visual_targets: { greenery: 3 } });
+    expect(confirmations).toEqual([{ candidate_ids: allConfirmed.selected_candidate_ids }]);
+    expect(wire.inputs[0]).toMatchObject({ answers: current.answers, visual_input_kind: "CONFIRMED_PHOTO", photo_receipt_sha256: allConfirmed.receipt_sha256, visual_targets: allConfirmed.targets });
+  });
+
+  it.each(["unknown", "confirmation failure"])("does not submit photo preferences for %s", async mode => {
+    const current = profile({ profile_id: "profile-photo-unavailable" });
+    writeProfileReference(current.profile_id);
+    const wire = scenarioWire(current), original = wire.fetchMock.getMockImplementation()!;
+    const review = structuredClone(photoFixture.review) as Photo;
+    if (mode === "unknown") review.batches.forEach(batch => batch.candidates.forEach(candidate => {
+      candidate.observation = { ...candidate.observation, state: "UNKNOWN", level: null, certainty: "LOW" };
+    }));
+    vi.stubGlobal("URL", Object.assign(URL, { createObjectURL: () => "blob:synthetic-photo", revokeObjectURL: vi.fn() }));
+    let confirmations = 0;
+    wire.fetchMock.mockImplementation(async (path, init) => {
+      if (String(path) === "/v1/authenticity/info") return jsonResponse({ photo_enabled: true });
+      if (String(path) === "/v1/authenticity/photos") return jsonResponse(review);
+      if (String(path).endsWith("/confirm")) { confirmations++; return jsonResponse({ detail: "사진 반영 실패" }, 503); }
+      return original(path, init);
+    });
+    const router = createMemoryRouter(appRoutes, { initialEntries: ["/photo"] });
+    render(<RouterProvider router={router} />);
+    const picker = await screen.findByLabelText("여행 분위기 참고 사진");
+    fireEvent.click(screen.getByRole("checkbox", { name: "사진을 분위기 분석에 사용하는 데 동의해요." }));
+    await waitFor(() => expect(picker).toHaveProperty("disabled", false));
+    fireEvent.change(picker, { target: { files: [new File(["synthetic"], "test.png", { type: "image/png" })] } });
+    const apply = await screen.findByRole("button", { name: "사진 분위기로 추천 보기" });
+    if (mode === "unknown") {
+      expect(apply).toHaveProperty("disabled", true);
+      expect(screen.getByText(/사진에서 분위기를 확인하지 못했어요/)).toBeTruthy();
+      expect(confirmations).toBe(0);
+    } else {
+      fireEvent.click(apply);
+      expect((await screen.findByRole("alert")).textContent).toContain("사진 반영 실패");
+      expect(apply).toHaveProperty("disabled", false);
+      expect(confirmations).toBe(1);
+    }
+    expect(wire.inputs).toHaveLength(0);
+    expect(router.state.location.pathname).toBe("/photo");
+    expect(screen.queryByRole("button", { name: "사진 없이 추천 보기" })).toBeNull();
+    expect(picker).toHaveProperty("disabled", false);
+
   });
 
   it("advances progress only after real request boundaries and clears it after failure", async () => {
@@ -372,17 +418,17 @@ describe("/profile result, reload, and recovery", () => {
       if (String(path) === "/v1/authenticity/runs" && init?.method === "POST") return new Promise<Response>(resolve => { resolveRun = resolve; });
       return original(path, init);
     });
-    await renderProfile(); fireEvent.click(await screen.findByRole("button", { name: "바로 추천 보기" }));
+    await renderProfile(); fireEvent.click(await screen.findByRole("button", { name: "추천 장소 보기" }));
     await waitFor(() => expect(resolveProfile).toBeDefined());
-    expect(screen.getByText("취향·여행 조건 확인").closest("li")?.getAttribute("aria-current")).toBe("step");
+    expect(screen.getByRole("progressbar", { name: "추천 진행 상황" }).getAttribute("aria-valuenow")).toBe("0");
     expect(resolveRun).toBeUndefined();
     await act(async () => resolveProfile(jsonResponse({ profile_id: "a".repeat(64), intent_sha256: "b".repeat(64) })));
     await waitFor(() => expect(resolveRun).toBeDefined());
-    expect(screen.getByText("관광지 특성과 선호 비교").closest("li")?.getAttribute("aria-current")).toBe("step");
+    expect(screen.getByRole("progressbar", { name: "추천 진행 상황" }).getAttribute("aria-valuenow")).toBe("1");
     await act(async () => resolveRun(jsonResponse({ detail: "일시적인 연결 실패" }, 503)));
     expect(await screen.findByRole("alert")).toBeTruthy();
-    expect(screen.queryByRole("region", { name: "추천 진행 상황" })).toBeNull();
-    expect((screen.getByRole("button", { name: "바로 추천 보기" }) as HTMLButtonElement).disabled).toBe(false);
+    expect(screen.queryByRole("progressbar", { name: "추천 진행 상황" })).toBeNull();
+    expect((screen.getByRole("button", { name: "추천 장소 보기" }) as HTMLButtonElement).disabled).toBe(false);
   });
 
   it("waits for profile review and sends unchanged scenario answers to the latest API", async () => {
@@ -390,7 +436,7 @@ describe("/profile result, reload, and recovery", () => {
     writeProfileReference(current.profile_id);
     const wire = scenarioWire(current);
     const router = await renderProfile();
-    const cta = await screen.findByRole("button", { name: "바로 추천 보기" });
+    const cta = await screen.findByRole("button", { name: "추천 장소 보기" });
     expect(wire.inputs).toHaveLength(0); expect(wire.runs).toHaveLength(0);
     fireEvent.click(cta);
     await waitFor(() => expect(router.state.location.pathname).toBe(`/recommendations/a-${"c".repeat(64)}`));
@@ -421,7 +467,7 @@ describe("/profile result, reload, and recovery", () => {
     window.sessionStorage.setItem("itda:phase5:current-recommendation:v2", JSON.stringify({ recommendation_run_id: "historical-mixed-purpose", preference_profile_id: current.profile_id }));
     const wire = scenarioWire(current);
     const router = await renderProfile();
-    fireEvent.click(await screen.findByRole("button", { name: "바로 추천 보기" }));
+    fireEvent.click(await screen.findByRole("button", { name: "추천 장소 보기" }));
     await waitFor(() => expect(router.state.location.pathname).toContain("/recommendations/a-"));
     expect(wire.inputs[0]).toMatchObject({ visual_targets: {}, photo_receipt_sha256: null });
     expect(wire.runs).toHaveLength(1);
@@ -434,7 +480,7 @@ describe("/profile result, reload, and recovery", () => {
     writeConfirmedMoodReference(current.profile_id, "e".repeat(64), "f".repeat(64));
     const wire = scenarioWire(current);
     await renderProfile();
-    expect(await screen.findByRole("button", { name: "바로 추천 보기" })).toBeTruthy();
+    expect(await screen.findByRole("button", { name: "추천 장소 보기" })).toBeTruthy();
     expect(screen.queryByRole("button", { name: "사진 취향을 반영해 추천 보기" })).toBeNull();
     expect(wire.inputs).toHaveLength(0);
   });
@@ -629,11 +675,11 @@ describe("/profile result, reload, and recovery", () => {
     writeProfileReference("profile-current");
     scenarioWire(profile());
     await renderProfile();
-    await screen.findByRole("button", { name: "바로 추천 보기" });
+    await screen.findByRole("button", { name: "추천 장소 보기" });
     expect(screen.queryByRole("button", { name: "답변 수정하기" })).toBeNull();
     expect(screen.queryByRole("button", { name: "여행 조건 수정하기" })).toBeNull();
     expect(screen.getByRole("button", { name: "사진으로 추천받기" })).toBeTruthy();
-    expect(screen.getByRole("button", { name: "처음부터 다시" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "테스트 다시하기" })).toBeTruthy();
   });
 
   it("announces answer recalculation and focuses the three-axis heading after refetch", async () => {

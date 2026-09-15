@@ -30,8 +30,8 @@ export function PhotoWorkspace({ children, headingLevel = 1, headingId = "photo-
           <h2 id={`${headingId}-guide`}>사진은 이렇게 반영돼요</h2>
           <ol className="photo-guide__steps">
             <li><span>1</span><div><strong>장면 고르기</strong><p>좋아했던 여행의 분위기가 잘 보이는 사진을 선택해요.</p></div></li>
-            <li><span>2</span><div><strong>분위기 확인</strong><p>분석이 제안한 인상 중 마음에 드는 것만 남겨요.</p></div></li>
-            <li><span>3</span><div><strong>추천에 더하기</strong><p>직접 확정한 분위기만 장소 추천에 참고해요.</p></div></li>
+            <li><span>2</span><div><strong>분위기 분석</strong><p>사진에 담긴 빛과 색, 풍경의 분위기를 분석해요.</p></div></li>
+            <li><span>3</span><div><strong>추천에 더하기</strong><p>사진에서 확인한 분위기를 모두 자동으로 반영해요.</p></div></li>
           </ol>
         </aside>
       </div>

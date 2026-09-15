@@ -35,17 +35,17 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     });
     await page.route("**/tourism/*.webp", async route => { photoRequests++; await photoGate; await route.continue(); });
     await page.goto("/profile");
-    await page.getByRole("button", { name: "바로 추천 보기", exact: true }).click();
+    await page.getByRole("button", { name: "추천 장소 보기", exact: true }).click();
     await expect.poll(() => detailRequests).toBe(5);
     await expect(page).toHaveURL(/\/profile$/);
-    const progress = page.getByRole("region", { name: "추천 진행 상황" });
-    await expect(progress.locator('[aria-current="step"]')).toContainText("사진·설명 준비");
+    const progress = page.getByRole("progressbar", { name: "추천 진행 상황" });
+    await expect(progress).toHaveAttribute("aria-valuenow", "2");
     expect(photoRequests).toBe(0);
     releaseDetails();
     await expect.poll(() => photoRequests).toBe(5);
     await expect(page).toHaveURL(/\/profile$/);
-    await progress.scrollIntoViewIfNeeded();
-    await progress.screenshot({ path: info.outputPath("preparing-details.png") });
+    await page.locator("button.button--primary[aria-busy=true]").scrollIntoViewIfNeeded();
+    await page.locator("button.button--primary[aria-busy=true]").screenshot({ path: info.outputPath("preparing-details.png") });
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
     // Observe the very first committed result DOM, before a second request could fill it.
     await page.evaluate(() => {

@@ -27,13 +27,14 @@ function PreparedPhoto({ image, alt }: { image: HTMLImageElement; alt: string })
   return <span ref={host} style={{ display: "contents" }} />;
 }
 
-export function PlacePhotos({ name, photos, loading = false, unavailable = false, size = "card", gallery = true, preparedImages, failedUrls = [] }: {
+export function PlacePhotos({ name, photos, loading = false, unavailable = false, size = "card", gallery = true, captionMode = "full", preparedImages, failedUrls = [] }: {
   name: string;
   photos: readonly Readonly<Record<string, string>>[];
   loading?: boolean;
   unavailable?: boolean;
   size?: "card" | "full";
   gallery?: boolean;
+  captionMode?: "full" | "source-only";
   preparedImages?: Readonly<Record<string, HTMLImageElement>>;
   failedUrls?: readonly string[];
 }) {
@@ -47,6 +48,11 @@ export function PlacePhotos({ name, photos, loading = false, unavailable = false
   const active = available.find(photo => photo.url === selected) ?? available[0];
   const position = active ? all.findIndex(photo => photo.url === active.url) + 1 : 0;
   const original = photoUrl(active?.original_url ?? active?.url);
+  const attribution = active?.attribution_ko || "공식 관광사진";
+  const captionDetails = [
+    captionMode === "full" && (active?.license === "KOGL_TYPE_1" ? "공공누리 제1유형" : active?.license),
+    gallery && all.length > 1 && `${position}/${all.length}`,
+  ].filter(Boolean).join(" · ");
 
   return <figure className={styles.gallery} data-size={size} aria-label={`${name} 사진`}>
     <div className={styles.frame}>
@@ -67,10 +73,9 @@ export function PlacePhotos({ name, photos, loading = false, unavailable = false
         </button>)}
       </div>}
       <figcaption className={styles.caption}>
-        <span>{active.attribution_ko || "공식 관광사진"}</span>
-        <span>{active.license === "KOGL_TYPE_1" ? "공공누리 제1유형" : active.license}
-          {gallery && all.length > 1 && ` · ${position}/${all.length}`}
-          {original && <> · <a href={original} target="_blank" rel="noreferrer">원본 사진</a></>}
+        <span>{captionMode === "source-only" ? attribution.split(" · ")[0] : attribution}</span>
+        <span>{captionDetails}
+          {original && <>{captionDetails && " · "}<a href={original} target="_blank" rel="noreferrer">원본 사진</a></>}
         </span>
       </figcaption>
     </>}

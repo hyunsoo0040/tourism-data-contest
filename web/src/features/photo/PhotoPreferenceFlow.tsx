@@ -557,7 +557,7 @@ export function PhotoPreferenceFlow({
     setMoodReview((previous) => previous ? { ...previous, confirmation: parsed.data } : previous);
     onMoodConfirmed?.(parsed.data, jobId);
     const count = parsed.data.moods.filter((row) => row.value !== null).length;
-    setAnnounce(count ? `사진 분위기 ${count}개를 직접 확정했어요.` : "사진 분위기 없이 설문 기준으로 계속해요.");
+    setAnnounce(count ? "사진 분위기를 추천에 반영할 준비가 됐어요." : "사진 분위기 없이 설문 기준으로 계속해요.");
     setConfirmAnnounced(true);
   };
 

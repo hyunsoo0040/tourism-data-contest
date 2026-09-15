@@ -531,7 +531,7 @@ async function assertTop5Results(
 test("@real-demo real demo Top 5 results", async ({ page }) => {
   await guardLoopbackTraffic(page);
   await createInitialProfile(page);
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await assertTop5Results(page, "GLM_CODING_PLAN_PUBLIC_MODEL_DERIVED");
 });
 
@@ -547,7 +547,7 @@ test("synthetic clean Top 5 results", async ({ page }) => {
   await page.route("**/v1/recommendation-runs/*", async (route) => {
     await fulfillRecommendationResults(route, results);
   });
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await assertTop5Results(page, "DEMO_MODEL_DERIVED");
 });
 
@@ -598,7 +598,7 @@ test("synthetic current operating information joins results, detail, and compari
     await fulfillRecommendationResults(route, results);
   });
 
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   const firstCard = page.locator("[data-recommendation-card]").first();
   await expect(firstCard.getByText("영업시간")).toBeVisible();
   await expect(firstCard.getByText("11:00~20:00")).toBeVisible();
@@ -635,7 +635,7 @@ test("@real-demo real demo place detail stays pinned through similar, back, forw
   });
 
   await createInitialProfile(page);
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await assertTop5Results(page, "GLM_CODING_PLAN_PUBLIC_MODEL_DERIVED");
   const runUrl = page.url();
   await page.getByRole("link", { name: /상세 보기/ }).first().click();
@@ -678,7 +678,7 @@ test("@real-demo @private-real-demo private real demo complete journey", async (
   });
 
   await createInitialProfile(page);
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await assertTop5Results(page, "GLM_CODING_PLAN_PUBLIC_MODEL_DERIVED");
 
   let cards = page.getByRole("list", { name: "추천 5곳" }).getByRole("listitem");
@@ -742,7 +742,7 @@ test("synthetic clean place detail is GET-only, text-first, and mobile-safe", as
     await fulfillRecommendationResults(route, results);
   });
 
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await page.getByRole("link", { name: "합성 검증 장소 1 상세 보기" }).click();
   await expect(page.getByRole("heading", { name: "합성 검증 장소 1" })).toBeFocused();
   await expect(page.getByText("대표 이미지 없음", { exact: true })).toBeVisible();
@@ -810,7 +810,7 @@ test("compare keeps two same-run places through detail, refresh, and mobile tabl
     await fulfillRecommendationResults(route, results);
   });
 
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await page.getByRole("button", { name: "합성 검증 장소 1 비교에 추가" }).click();
   await expect(page.getByText("1/3")).toBeVisible();
   await page.getByRole("link", { name: "합성 검증 장소 2 상세 보기" }).click();
@@ -864,7 +864,7 @@ test("map-free journey keeps 320px overflow contained and honors reduced motion"
     await fulfillRecommendationResults(route, results);
   });
 
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await assertTop5Results(page, "DEMO_MODEL_DERIVED");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   const cards = page.locator("[data-recommendation-card]");
@@ -944,7 +944,7 @@ test("save and reload keeps the exact release-bound place without another recomm
     });
   });
 
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await page.getByRole("button", { name: "합성 검증 장소 1 저장" }).click();
   await expect(page.getByRole("button", { name: "합성 검증 장소 1 저장됨" })).toHaveAttribute(
     "aria-pressed",
@@ -1012,7 +1012,7 @@ test("NO_ACTIVE_SCORED_RELEASE preserves the confirmed profile and offers bounde
       response.request().method() === "POST" &&
       response.url().endsWith("/v1/recommendation-runs"),
   );
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   expect((await unavailableResponse).status()).toBe(503);
 
   const heading = page.getByRole("heading", {
@@ -1078,7 +1078,7 @@ test("request identity changes with confirmed profile", async ({ page }) => {
     await fulfillRecommendationResults(route, results);
   });
 
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await expect(page.getByRole("heading", { name: "추천을 불러오지 못했어요." })).toBeFocused();
   const uncertainPending = await page.evaluate((key) => {
     const raw = sessionStorage.getItem(key);
@@ -1113,10 +1113,10 @@ test("request identity changes with confirmed profile", async ({ page }) => {
   );
   expect(changedProfile.profile_id).not.toBe(initialProfile.profile_id);
   expect(profileInputSha256(changedProfile)).not.toBe(profileInputSha256(initialProfile));
-  await expect(page.getByRole("button", { name: "바로 추천 보기" })).toBeEnabled();
+  await expect(page.getByRole("button", { name: "추천 장소 보기" })).toBeEnabled();
   expect(await page.evaluate((key) => sessionStorage.getItem(key), PENDING_RECOMMENDATION_KEY)).toBeNull();
   expect(await page.evaluate((key) => sessionStorage.getItem(key), CURRENT_RECOMMENDATION_KEY)).toBeNull();
-  await page.getByRole("button", { name: "바로 추천 보기" }).click();
+  await page.getByRole("button", { name: "추천 장소 보기" }).click();
   await expect(page).toHaveURL(
     `/recommendations/${encodeURIComponent(changedResults.run.run_id)}`,
   );

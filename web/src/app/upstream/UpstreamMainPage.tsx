@@ -18,7 +18,7 @@
  * The type-test entry links route into the IT-DA journey (/start, /quiz,
  * /profile) which is served by the local backend as sole authority.
  */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import examples from "../../content/public-place-examples.json";
 import "../styles/place-examples.css";
 import "../styles/phone-preview.css";
@@ -86,7 +86,6 @@ const PHONE_TYPES = [
 
 function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
   const [phoneType, setPhoneType] = useState(selectedType);
-  const [paused, setPaused] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
   const [inView, setInView] = useState(false);
@@ -126,7 +125,7 @@ function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
   }, []);
 
   useEffect(() => {
-    if (paused || hovered || focused || !inView || !pageVisible || reducedMotion) return;
+    if (hovered || focused || !inView || !pageVisible || reducedMotion) return;
     const timer = window.setInterval(() => {
       setPhoneType((current) => {
         const index = PHONE_TYPES.findIndex(({ type }) => type === current);
@@ -134,7 +133,7 @@ function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
       });
     }, 5_000);
     return () => window.clearInterval(timer);
-  }, [paused, hovered, focused, inView, pageVisible, reducedMotion, selectedType]);
+  }, [hovered, focused, inView, pageVisible, reducedMotion, selectedType]);
 
   return (
     <div className="phone-card" aria-label="IT-DA 모바일 추천 화면 미리보기">
@@ -167,7 +166,7 @@ function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
                 key={type}
                 type="button"
                 aria-pressed={phoneType === type}
-                onClick={() => { setPhoneType(type); setPaused(true); }}
+                onClick={() => setPhoneType(type)}
               >
                 <span className="type-icon" aria-hidden="true">{icon}</span>
                 <span><strong>{label}</strong><span>{description}</span></span>
@@ -286,7 +285,6 @@ export function UpstreamMainPage() {
     };
   }, []);
 
-  const data = useMemo(() => RECOMMENDATIONS[selectedType] ?? RECOMMENDATIONS.rest!, [selectedType]);
 
   return (
     <div className="up-root">
@@ -426,22 +424,28 @@ export function UpstreamMainPage() {
                 <a className="test-link" href="/start">12문항 취향 테스트로 자세히 보기</a>
               </div>
               <div className="result">
-                <h2 id="resultTitle">{data.title}</h2>
-                <p className="preview-date">공개 자료 기준 {examples.release_created_at.slice(0, 10)}</p>
-                <div id="recommendations">
-                  {data.places.slice(0, 1).map((place) => (
-                    <article className="place" key={place.place_id}>
-                      <PlacePhotos name={place.name} photos={[place.photo]} gallery={false} />
-                      <div>
-                        <span className="tag">{data.axisLabel} {place.axis_value}점</span>
-                        <h3>{place.name}</h3>
-                        <p className="place-region">{place.region} · {place.category}</p>
-                        <details className="place-address"><summary>주소 확인</summary><p>{place.address}</p></details>
-                        <a className="place-map" href={placeMapUrl(place.name, place.address)} target="_blank" rel="noreferrer">지도에서 보기</a>
-                      </div>
-                    </article>
-                  ))}
-                </div>
+                {/* Shared grid cell reserves the tallest example at each viewport without clipping text. */}
+                {RECOMMENDATION_TYPES.map(type => {
+                  const data = RECOMMENDATIONS[type];
+                  const active = selectedType === type;
+                  const place = data.places[0];
+                  return <div className="result-preview" key={type} aria-hidden={!active} inert={!active}>
+                    <h2 id={active ? "resultTitle" : undefined}>{data.title}</h2>
+                    <p className="preview-date">공개 자료 기준 {examples.release_created_at.slice(0, 10)}</p>
+                    <div className="place-list" id={active ? "recommendations" : undefined}>
+                      <article className="place">
+                        <PlacePhotos name={place.name} photos={[place.photo]} gallery={false} captionMode="source-only" />
+                        <div className="place-info">
+                          <span className="tag">{data.axisLabel} {place.axis_value}점</span>
+                          <h3>{place.name}</h3>
+                          <p className="place-region">{place.region} · {place.category}</p>
+                          <div className="place-address"><span>주소</span><p>{place.address}</p></div>
+                          <a className="place-map" href={placeMapUrl(place.name, place.address)} target="_blank" rel="noreferrer">지도에서 보기</a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>;
+                })}
               </div>
             </div>
           </section>

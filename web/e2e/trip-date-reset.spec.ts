@@ -85,7 +85,7 @@ for (const environment of [
           await expect(page).toHaveURL(/\/profile$/);
         }
 
-        const trigger = page.getByRole("button", { name: entry === "start" ? "처음부터 시작하기" : "처음부터 다시", exact: true });
+        const trigger = page.getByRole("button", { name: entry === "start" ? "처음부터 시작하기" : "테스트 다시하기", exact: true });
         const dialog = page.getByRole("dialog", { name: "작성한 내용을 지울까요?" });
         const original = await page.evaluate((key) => localStorage.getItem(key), DRAFT_KEY);
         await press(trigger);

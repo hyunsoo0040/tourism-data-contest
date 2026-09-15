@@ -1,11 +1,11 @@
-import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { fetchPreferenceProfile, type PreferenceProfile } from "../../api/api";
 import { createAndStorePreferenceProfile } from "../../features/profile/profileSubmission";
 import { AppShell } from "../AppShell";
-import { createEmptyDraft, readDraft, resetJourneyStorage, writeDraft, writeProfileReference } from "../storage";
+import { createEmptyDraft, readDraft, readProfileReference, resetJourneyStorage, writeDraft, writeProfileReference } from "../storage";
 import { UpstreamStartPage } from "./UpstreamStartPage";
 
 vi.mock("../../api/api", async (original) => ({
@@ -18,7 +18,14 @@ const answers = { q1: 1, q2: 2, q3: 3, q4: 1, q5: 2, q6: 3, q7: 1, q8: 2, q9: 3,
 // The resume controller consumes only answers; response validation belongs to the API client.
 const previous = { profile_id: "previous-profile", answers } as PreferenceProfile;
 
-async function renderResume() {
+function fillConditions() {
+  fireEvent.change(screen.getByLabelText("방문 날짜 (선택)"), { target: { value: "2099-10-03" } });
+  for (const name of ["아직 미정", "친구", "도보·대중교통", "30분 이내로 가볍게", "상관없어요", "조금 피하고 싶어요"]) {
+    fireEvent.click(screen.getByRole("radio", { name }));
+  }
+}
+
+async function renderResume(path = "/start") {
   const router = createMemoryRouter([{
     element: <AppShell />,
     children: [
@@ -26,13 +33,10 @@ async function renderResume() {
       { path: "/profile", element: <main><h1>프로필 결과</h1></main> },
       { path: "/quiz", element: <main><h1>취향 테스트</h1></main> },
     ],
-  }], { initialEntries: ["/start?resume=profile"] });
+  }], { initialEntries: [path] });
   const view = render(<RouterProvider router={router} />);
   await screen.findByRole("heading", { name: "이번 여행, 어떤 시간을 보내고 싶나요?" });
-  fireEvent.change(screen.getByLabelText("방문 날짜 (선택)"), { target: { value: "2099-10-03" } });
-  for (const name of ["아직 미정", "친구", "도보·대중교통", "30분 이내로 가볍게", "상관없어요", "조금 피하고 싶어요"]) {
-    fireEvent.click(screen.getByRole("radio", { name }));
-  }
+  fillConditions();
   return { router, ...view };
 }
 
@@ -54,10 +58,13 @@ describe("resuming a saved test through trip conditions", () => {
     expect(screen.getByRole("link", { name: "IT-DA 소개로 이동" }).classList.contains("main-page-logo")).toBe(true);
   });
 
-  it("uses completed server answers instead of a partial draft and applies new conditions", async () => {
+  it.each(["/start", "/start?resume=profile"])("reuses completed answers and applies new conditions from %s", async (path) => {
     writeProfileReference(previous.profile_id);
     writeDraft({ ...createEmptyDraft(), answers: { q1: 3 } });
-    const { router } = await renderResume();
+    const { router } = await renderResume(path);
+    expect(router.state.location.pathname).toBe("/start");
+    expect(screen.getByRole("button", { name: "여행 조건 반영하고 프로필 보기" })).toBeTruthy();
+    expect(screen.getAllByRole("button", { name: "처음부터 시작하기" })).toHaveLength(1);
     submit();
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
     expect(fetchPreferenceProfile).toHaveBeenCalledWith(previous.profile_id, { signal: expect.any(AbortSignal) });
@@ -69,6 +76,36 @@ describe("resuming a saved test through trip conditions", () => {
       current_route: "/profile", answers,
       trip_conditions: { visit_date: "2099-10-03", companion: "FRIEND_OR_PARTNER" },
     });
+  });
+
+  it("keeps restart available after dismissing recovery and only discards results after confirmation", async () => {
+    writeProfileReference(previous.profile_id);
+    writeDraft({ ...createEmptyDraft(), answers });
+    const { router } = await renderResume();
+    fireEvent.click(screen.getByRole("button", { name: "계속 작성하기" }));
+    fireEvent.click(screen.getByRole("button", { name: "처음부터 시작하기" }));
+    fireEvent.click(within(screen.getByRole("dialog")).getByRole("button", { name: "계속 작성하기" }));
+    expect(readProfileReference().profile?.profile_id).toBe(previous.profile_id);
+    expect(screen.getByRole("button", { name: "여행 조건 반영하고 프로필 보기" })).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "처음부터 시작하기" }));
+    fireEvent.click(screen.getByRole("button", { name: "모두 지우고 새로 시작하기" }));
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+    expect(readProfileReference().profile).toBeNull();
+    expect(readDraft().draft).toBeNull();
+    expect(screen.getByRole("button", { name: "취향 테스트 시작하기" })).toBeTruthy();
+    fillConditions();
+    submit();
+    await waitFor(() => expect(router.state.location.pathname).toBe("/quiz"));
+    expect(fetchPreferenceProfile).not.toHaveBeenCalled();
+    expect(createAndStorePreferenceProfile).not.toHaveBeenCalled();
+    expect(readDraft().draft?.answers).toEqual({});
+  });
+
+  it("offers restart when only a completed profile reference remains", async () => {
+    writeProfileReference(previous.profile_id);
+    await renderResume();
+    expect(screen.getByRole("button", { name: "처음부터 시작하기" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "여행 조건 반영하고 프로필 보기" })).toBeTruthy();
   });
 
   it("retains entered conditions after a failed lookup and allows retry", async () => {

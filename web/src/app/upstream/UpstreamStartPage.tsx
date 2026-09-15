@@ -8,7 +8,7 @@ import { readProfileReference } from "../storage";
 
 import { TripConditionForm } from "../../features/journey/TripConditionForm";
 import { quizNavigationState } from "../../features/journey/quizNavigation";
-import { useNavigate, useSearchParams } from "../react-router-dom";
+import { useNavigate } from "../react-router-dom";
 import { useJourneyDraft } from "../AppShell";
 import {
   type TripConditionFormValues,
@@ -30,8 +30,7 @@ function formValues(conditions: Partial<TripConditions> | undefined): TripCondit
 
 export function UpstreamStartPage() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const [resumeEnabled, setResumeEnabled] = useState(searchParams.get("resume") === "profile");
+  const [resumeEnabled, setResumeEnabled] = useState(false);
   const [busy, setBusy] = useState(false);
   const [requestError, setRequestError] = useState<string | null>(null);
   const activeRequest = useRef<AbortController | null>(null);
@@ -40,9 +39,9 @@ export function UpstreamStartPage() {
   const recovered = state === "recovered";
 
   useEffect(() => {
-    setResumeEnabled(searchParams.get("resume") === "profile");
+    setResumeEnabled(readProfileReference().profile !== null);
     return () => { activeRequest.current?.abort(); activeRequest.current = null; };
-  }, [searchParams.get("resume")]);
+  }, []);
 
   const beginQuiz = (conditions: TripConditions) => {
     updateDraft({
@@ -136,6 +135,7 @@ export function UpstreamStartPage() {
                 recovered={recovered}
                 onDismissRecovery={dismissNotice}
                 onReset={resetTrip}
+                allowRestart={resumeEnabled}
                 onSubmit={(conditions) => void submitTrip(conditions)}
                 primaryLabel={resumeEnabled ? "여행 조건 반영하고 프로필 보기" : JOURNEY_COPY.start.primaryLabel}
                 busy={busy}

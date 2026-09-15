@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useLocation, useNavigate, useParams } from "../../app/react-router-dom";
 import { api, ensureSession, escapeId, json, JourneyError, type Axis, type Definition, type Detail, type Facet, type Info, type Intent, type Photo, type Run, type Submission } from "./api";
+import { photoCandidateIds } from "./photoCandidates";
 import styles from "./Journey.module.css";
 import { RecommendationShell } from "../recommendations/RecommendationShell";
 import { scenarioResultsPath, scenarioRunId } from "./scenario";
@@ -14,18 +15,22 @@ const labels: Record<Axis,string> = { H:"대상•원형형", E:"의미•이미
 const facetLabels: Record<string,string> = { "H.a":"원형·유산과의 접촉","H.b":"역사·출처의 구체성","H.c":"전통의 실제 지속","H.d":"원형 맥락의 탐구","E.a":"공유되는 상징·의미","E.b":"매체를 통한 이미지 유통","E.c":"이미지의 시각적 표현","E.d":"이미지의 체험·재현","R.a":"일상에서 벗어날 여지","R.b":"회복을 지원하는 환경","R.c":"참여·도전·몰입","R.d":"관계·자기표현" };
 const sourceLabels:Record<string,string>={KorService2:"한국관광공사",Odii:"오디오 해설",PhotoGalleryService1:"관광사진",APIFY_INSTAGRAM:"인스타그램"};
 const roleLabels:Record<string,string>={OFFICIAL_DESCRIPTION:"공식 설명",OFFICIAL_NARRATIVE:"공식 해설",OFFICIAL_PHOTO:"공식 사진",OFFICIAL_PROMOTION:"관광 홍보",ADVERTISEMENT:"광고 표시 게시물",VISITOR_POST:"방문자 게시물",UNCLASSIFIED:"작성 주체 미확인"};
-const moodLabels: Record<string,string> = { greenery:"녹지",water:"물",open_composition:"트인 구도",traditional_appearance:"전통적 외관",contemporary_design:"현대적 디자인",warm_light:"따뜻한 빛",vivid_color:"선명한 색",night_lighting:"야간 조명" };
 function message(error: unknown): string { return error instanceof Error ? error.message : "요청을 완료하지 못했습니다."; }
 function Shell({children, scenario = false}: {children:ReactNode; scenario?:boolean}) { if (scenario) return <RecommendationShell><article className={`recommendations-page panel ${styles.main}`}>{children}</article></RecommendationShell>; return <div className={styles.root}><div className={styles.wrap}><header className={styles.header}><Link className={styles.brand} to="/">IT-DA</Link><nav className={styles.nav}><Link to="/trip">새 여행 기대</Link><Link to="/trip/saved">저장한 장소</Link></nav></header><main className={styles.main}>{children}</main><footer className={styles.footer}>이번 여행의 기대와 장소의 근거를 연결합니다. 미확인은 낮은 점수와 구분합니다.</footer></div></div>; }
 function ErrorBox({text}: {text:string|null}) { return text ? <p className={styles.error} role="alert">{text}</p> : null; }
-function Axes({values}: {values:Partial<Record<Axis,number|null>>}) { return <div className={styles.axisList}>{(["H","E","R"] as const).map(axis=><div className={styles.axis} key={axis}><span>{labels[axis]}</span><div className={styles.bar}><span style={{transform:`scaleX(${(values[axis]??0)/100})`,background:`var(--axis-${axis==="H"?"history":axis==="E"?"emotion":"rest"})`}} /></div><b>{values[axis]??"미확인"}</b></div>)}</div>; }
+function Axes({values, hideUnconfirmed = false}: {values:Partial<Record<Axis,number|null>>; hideUnconfirmed?:boolean}) {
+  const axes = (["H","E","R"] as const).filter(axis => !hideUnconfirmed || values[axis] != null);
+  if (!axes.length) return null;
+  return <div className={styles.axisList}>{axes.map(axis=><div className={styles.axis} key={axis}><span>{labels[axis]}</span><div className={styles.bar}><span style={{transform:`scaleX(${(values[axis]??0)/100})`,background:`var(--axis-${axis==="H"?"history":axis==="E"?"emotion":"rest"})`}} /></div><b>{values[axis]??"미확인"}</b></div>)}</div>;
+}
 
 export function TripPage() {
   const navigate=useNavigate();
   const [definition,setDefinition]=useState<Definition|null>(null),[info,setInfo]=useState<Info|null>(null);
   const [answers,setAnswers]=useState<Partial<Record<Facet,number|null>>>({}),[step,setStep]=useState(0),[region,setRegion]=useState("");
   const [options,setOptions]=useState(emptyOptions);
-  const [photo,setPhoto]=useState<Photo|null>(null),[chosen,setChosen]=useState<string[]>([]),[urls,setUrls]=useState<string[]>([]);
+  const [photo,setPhoto]=useState<Photo|null>(null),[urls,setUrls]=useState<string[]>([]);
+  const candidateIds=photoCandidateIds(photo);
   const [busy,setBusy]=useState(false),[error,setError]=useState<string|null>(null),[loading,setLoading]=useState(true);
   const heading=useRef<HTMLHeadingElement>(null), files=useRef<HTMLInputElement>(null), pending=useRef<{profile:string;run:string}|null>(null);
   useEffect(()=>{let live=true;Promise.all([api<Definition>("/definition"),api<Info>("/info")]).then(([d,i])=>{if(live){setDefinition(d);setInfo(i);try{const saved=JSON.parse(sessionStorage.getItem("itda.authenticity.draft")??"null");if(saved?.sha===d.questionnaire_sha256&&saved.answers&&typeof saved.answers==="object"){const valid=Object.fromEntries(Object.entries(saved.answers).filter(([k,v])=>d.questions.some(q=>q.key===k)&&d.choices.some(c=>c.value===v)));setAnswers(valid);setOptions(restoreOptions(saved.options,valid));setRegion(i.regions.some(r=>r.code===saved.region)?saved.region:"");}}catch{/* fresh form */}}}).catch(e=>live&&setError(message(e))).finally(()=>live&&setLoading(false));return()=>{live=false};},[]);
@@ -38,18 +43,18 @@ export function TripPage() {
     const selected=Array.from(files.current?.files??[]);if(!selected.length)return;
     if(selected.length>3||selected.some(f=>f.size>10*1024*1024)){setError("사진은 최대 3장, 한 장당 10MB까지 선택할 수 있어요.");return;}
     setBusy(true);setError(null);
-    try{await ensureSession();const form=new FormData();selected.forEach(f=>form.append("files",f));const p=await api<Photo>("/photos",{method:"POST",body:form});setUrls(selected.map(f=>URL.createObjectURL(f)));setPhoto(p);setChosen([]);pending.current=null;}
+    try{await ensureSession();const form=new FormData();selected.forEach(f=>form.append("files",f));const p=await api<Photo>("/photos",{method:"POST",body:form});setUrls(selected.map(f=>URL.createObjectURL(f)));setPhoto(p);pending.current=null;}
     catch(e){setError(message(e));}finally{setBusy(false);if(files.current)files.current.value="";}
   }
-  async function removePhoto(){if(!photo)return;setBusy(true);try{await api(`/photos/${escapeId(photo.photo_id)}`,{method:"DELETE"});setPhoto(null);setChosen([]);setUrls([]);}catch(e){setError(message(e));}finally{setBusy(false);}}
+  async function removePhoto(){if(!photo)return;setBusy(true);try{await api(`/photos/${escapeId(photo.photo_id)}`,{method:"DELETE"});setPhoto(null);setUrls([]);}catch(e){setError(message(e));}finally{setBusy(false);}}
   async function recommend(usePhoto:boolean) {
     if(!definition)return;setBusy(true);setError(null);
     try{
       await ensureSession();let confirmed:Photo|null=null;
       if(usePhoto&&photo){
-        const dimensions=photo.batches.flatMap(b=>b.candidates.filter(c=>chosen.includes(c.candidate_id)).map(c=>c.observation.dimension));
-        if(photoConflict(dimensions,options.avoid))throw new Error("선택한 사진 분위기가 피하기 설정과 겹쳐요. 분위기 선택을 해제하거나 이전 단계에서 피하기를 수정해 주세요.");
-        if(!chosen.length)throw new Error("반영할 분위기를 하나 이상 선택하거나 사진 없이 진행해 주세요.");confirmed=await api<Photo>(`/photos/${escapeId(photo.photo_id)}/confirm`,{method:"POST",body:json({candidate_ids:chosen})});setPhoto(confirmed);}
+        const dimensions=photo.batches.flatMap(b=>b.candidates.filter(c=>candidateIds.includes(c.candidate_id)).map(c=>c.observation.dimension));
+        if(photoConflict(dimensions,options.avoid))throw new Error("사진 분위기가 피하기 설정과 겹쳐요. 사진 없이 진행하거나 이전 단계에서 피하기 설정을 수정해 주세요.");
+        if(!candidateIds.length)throw new Error("사진에서 분위기를 확인하지 못했어요. 다른 사진을 고르거나 사진 없이 추천을 받아보세요.");confirmed=await api<Photo>(`/photos/${escapeId(photo.photo_id)}/confirm`,{method:"POST",body:json({candidate_ids:candidateIds})});setPhoto(confirmed);}
       pending.current??={profile:crypto.randomUUID(),run:crypto.randomUUID()};
       const body:Submission={request_id:pending.current.profile,questionnaire_sha256:definition.questionnaire_sha256,answers:answers as Submission["answers"],requirements:{region_code:region||null,required_facilities:options.facilities},desired_levels:options.desired,avoid:options.avoid,visual_targets:confirmed?.targets??{},visual_input_kind:confirmed?"CONFIRMED_PHOTO":"NONE",photo_receipt_sha256:confirmed?.receipt_sha256??null};
       const profile=await api<Intent>("/profiles",{method:"POST",body:json(body)});
@@ -59,7 +64,7 @@ export function TripPage() {
   }
   if(loading)return <Shell><p className={styles.spinner} role="status">여행 기대 문항을 불러오고 있어요.</p></Shell>;
   if(!definition)return <Shell><h1>여행을 준비하지 못했어요</h1><ErrorBox text={error}/><button className={styles.secondary} onClick={()=>window.location.reload()}>다시 불러오기</button></Shell>;
-  return <Shell><h1 ref={heading} tabIndex={-1}>{step<3?"이번 여행에서 원하는 순간":"원하는 분위기를 더해보세요"}</h1><p className={styles.muted}>{step<3?"경험마다 원하는 정도를 골라주세요. 여러 경험을 모두 원해도 괜찮아요.":"사진은 선택 사항이에요. 분석한 분위기 중 실제로 원하는 것만 골라주세요."}</p>
+  return <Shell><h1 ref={heading} tabIndex={-1}>{step<3?"이번 여행에서 원하는 순간":"원하는 분위기를 더해보세요"}</h1><p className={styles.muted}>{step<3?"경험마다 원하는 정도를 골라주세요. 여러 경험을 모두 원해도 괜찮아요.":"사진은 선택 사항이에요. 사진에서 확인한 분위기를 모두 추천에 자동으로 반영해요."}</p>
     <ol className={styles.steps} aria-label="여행 기대 입력 단계">{["대상•원형형","의미•이미지형","자기•몰입형","사진·추천"].map((s,i)=><li key={s} aria-current={i===step?"step":undefined}>{s}</li>)}</ol>
     {info?.scope==="DEVELOPMENT"&&<p className={styles.notice}>현재 개발 표본 {info.places}곳을 연결한 화면입니다.</p>}
     <ErrorBox text={error}/>
@@ -74,8 +79,8 @@ export function TripPage() {
       <button type="button" className="button button--secondary photo-picker__trigger" disabled={busy||!info?.photo_enabled} onClick={()=>files.current?.click()}><span className="photo-picker__trigger-icon"><PhotoCameraIcon /></span><span className="photo-picker__trigger-copy"><strong>{urls.length ? "사진 다시 고르기" : "사진 고르기"}</strong><small>내 기기에서 여행 사진을 선택해 주세요</small></span></button>
       {!info?.photo_enabled&&<p className={styles.small}>현재 사진 분석을 준비 중입니다. 사진 없이 추천을 받을 수 있습니다.</p>}
       <div className={styles.preview}>{urls.map((url,i)=><img key={url} src={url} alt={`내가 선택한 분위기 참고 사진 ${i+1}`}/>)}</div>
-      {photo&&<><p>반영할 분위기를 직접 선택해 주세요. 사진의 역사적 진위나 실제 혼잡을 판단한 결과는 아닙니다.</p><div className={styles.photoChoices}>{photo.batches.flatMap((b,i)=>b.candidates.filter(c=>c.observation.state==="OBSERVED").map(c=><label key={c.candidate_id}><input type="checkbox" disabled={busy} checked={chosen.includes(c.candidate_id)} onChange={e=>{setChosen(v=>e.target.checked?[...v,c.candidate_id]:v.filter(id=>id!==c.candidate_id));pending.current=null;}}/>사진 {i+1} · {moodLabels[c.observation.dimension]} {c.observation.level}/4</label>))}</div><button className={styles.secondary} onClick={removePhoto} disabled={busy}>사진 분석 결과 삭제</button><p className={styles.small}>서버 원본 보관: 없음 · 선택한 분위기만 여행 기대에 반영합니다.</p></>}
-      </section><div className={`${styles.actions} photo-action-bar`}><button className={`${styles.secondary} button button--secondary`} disabled={busy} onClick={()=>setStep(2)}>이전</button><div className={styles.resultButtons}><button className={`${photo?styles.secondary:styles.primary} button ${photo?"button--secondary":"button--primary"}`} disabled={busy} onClick={()=>recommend(false)}>사진 없이 추천 보기</button>{photo&&<button className={`${styles.primary} button button--primary`} disabled={busy||!chosen.length} onClick={()=>recommend(true)}>선택한 분위기로 추천 보기</button>}</div></div>{busy&&<p role="status" className={styles.spinner}>입력과 근거를 확인하고 있어요.</p>}</PhotoWorkspace></div></>}
+      {photo&&<><p role="status">{candidateIds.length ? "사진에서 확인한 분위기를 모두 추천에 자동으로 반영해요." : "사진에서 분위기를 확인하지 못했어요. 다른 사진을 고르거나 사진 없이 추천을 받아보세요."}</p><button className={styles.secondary} onClick={removePhoto} disabled={busy}>사진 분석 결과 삭제</button><p className={styles.small}>서버 원본 보관: 없음 · 확인한 사진 분위기를 여행 기대에 반영합니다.</p></>}
+      </section><div className={`${styles.actions} photo-action-bar`}><button className={`${styles.secondary} button button--secondary`} disabled={busy} onClick={()=>setStep(2)}>이전</button><div className={styles.resultButtons}><button className={`${photo?styles.secondary:styles.primary} button ${photo?"button--secondary":"button--primary"}`} disabled={busy} onClick={()=>recommend(false)}>사진 없이 추천 보기</button>{photo&&<button className={`${styles.primary} button button--primary`} disabled={busy||!candidateIds.length} onClick={()=>recommend(true)}>사진 분위기로 추천 보기</button>}</div></div>{busy&&<p role="status" className={styles.spinner}>입력과 근거를 확인하고 있어요.</p>}</PhotoWorkspace></div></>}
     </Shell>;
 }
 
@@ -97,9 +102,8 @@ export function ResultReason({detail}: {detail:Detail|undefined}) {
   return <p className={styles.small}>연결에 사용한 항목별 판단과 미확인 사항을 상세 근거에서 확인해 주세요.</p>;
 }
 
-function RecommendationPlace({ item, runId, saved, compared, compareDisabled, onSave, onCompare }: {
-  item: Run["items"][number]; runId: string; saved: boolean; compared: boolean;
-  compareDisabled: boolean; onSave: () => void; onCompare: () => void;
+function RecommendationPlace({ item, runId, saved, onSave }: {
+  item: Run["items"][number]; runId: string; saved: boolean; onSave: () => void;
 }) {
   const [detail, setDetail] = useState<Detail | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -126,13 +130,12 @@ function RecommendationPlace({ item, runId, saved, compared, compareDisabled, on
         <p>이 장소의 사진과 정보를 불러오지 못했어요. 추천 결과는 유지됩니다.</p>
         <button className={styles.secondary} onClick={() => setAttempt(value => value + 1)}>{item.name_ko} 정보 다시 불러오기</button>
       </div>}
-      <Axes values={item.axes} />
+      <Axes values={item.axes} hideUnconfirmed />
       {!error && <ResultReason detail={detail ?? undefined} />}
       {item.warnings.length > 0 && <p className={styles.small}>일부 기대 항목은 미확인입니다. 상세 근거에서 확인해 주세요.</p>}
       <div className={styles.resultButtons}>
-        <button className={styles.secondary} onClick={onSave}>{saved ? "저장 취소" : "장소 저장"}</button>
-        <button className={styles.secondary} disabled={compareDisabled} onClick={onCompare}>{compared ? "비교에서 빼기" : "비교에 담기"}</button>
-        <Link to={href}>사진·장소 정보</Link><Link to={`${href}#evidence`}>상세 근거</Link>
+        <button className={styles.secondary} aria-pressed={saved} onClick={onSave}>장소 {saved ? "저장됨" : "저장"}</button>
+        <Link to={href}>장소 상세 보기</Link><Link to={`${href}#evidence`}>상세 근거</Link>
       </div>
     </div>
   </article>;
@@ -141,12 +144,11 @@ function RecommendationPlace({ item, runId, saved, compared, compareDisabled, on
 export function ResultsPage() {
   const { runId } = useParams();
   const [run, setRun] = useState<Run | null>(null);
-  const [compare, setCompare] = useState<string[]>([]);
   const [saved, setSaved] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const controller = new AbortController();
-    setRun(null); setError(null); setSaved([]); setCompare([]);
+    setRun(null); setError(null); setSaved([]);
     if (!runId) return;
     api<Run>(`/runs/${escapeId(runId)}`, { signal: controller.signal })
       .then(value => { if (!controller.signal.aborted) setRun(value); })
@@ -170,11 +172,7 @@ export function ResultsPage() {
     {run?.state === "EMPTY" && <div className={styles.notice}><h2>지금 조건으로는 충분한 근거를 찾지 못했어요</h2><p>중요한 경험의 근거가 없는 장소를 대신 추천하지 않았습니다. 지역이나 기대를 조정해 주세요.</p><Link to="/trip">여행 기대 수정</Link></div>}
     {run?.state === "LIMITED" && <p className={styles.notice}>확인 가능한 근거를 갖춘 {run.result_count}곳을 찾았습니다. 다섯 곳을 임의로 채우지 않았어요.</p>}
     {run?.items.map(item => <RecommendationPlace key={`${runId}:${item.place_id}`} item={item} runId={runId!}
-      saved={saved.includes(item.place_id)} compared={compare.includes(item.place_id)}
-      compareDisabled={!compare.includes(item.place_id) && compare.length >= 3}
-      onSave={() => save(item.place_id)}
-      onCompare={() => setCompare(value => value.includes(item.place_id) ? value.filter(id => id !== item.place_id) : [...value, item.place_id])} />)}
-    {compare.length > 0 && <div className={styles.tray}><span>{compare.length}곳 비교에 담음</span><Link to={`/trip/results/${runId}/compare?places=${encodeURIComponent(compare.join(","))}`}>장소 비교하기</Link></div>}
+      saved={saved.includes(item.place_id)} onSave={() => save(item.place_id)} />)}
   </Shell>;
 }
 

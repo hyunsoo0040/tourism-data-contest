@@ -15,8 +15,13 @@ for (const width of [1440, 390]) {
     await expect(menu.locator('[aria-current="location"]')).toHaveCount(0);
 
     for (const id of ["type", "flow", "demo"]) {
-      if (width < 920) await header.getByRole("button", { name: "메뉴 열기" }).click();
-      await menu.locator(`a[href="#${id}"]`).click();
+      if (width <= 920) {
+        await expect(menu).toBeHidden();
+        await expect(header.locator(".menu-toggle")).toBeHidden();
+        await page.goto(`/#${id}`);
+      } else {
+        await menu.locator(`a[href="#${id}"]`).click();
+      }
       await expect(page).toHaveURL(new RegExp(`#${id}$`));
       await expect(menu.locator(`a[href="#${id}"]`)).toHaveAttribute("aria-current", "location");
       await expect(menu.locator("a.active")).toHaveCount(1);
@@ -24,9 +29,7 @@ for (const width of [1440, 390]) {
       const headerBox = (await header.boundingBox())!;
       const headingBox = (await page.locator(`section#${id} h2, section#${id} h3`).first().boundingBox())!;
       expect(headingBox.y).toBeGreaterThanOrEqual(headerBox.height);
-      if (width < 920) {
-        await expect(header.getByRole("button", { name: "메뉴 열기" })).toHaveAttribute("aria-expanded", "false");
-      }
+
     }
 
     // Browser history and manual upward scrolling must also update the highlight.

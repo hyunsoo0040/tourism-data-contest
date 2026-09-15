@@ -54,14 +54,10 @@ for (const [name, width, height] of [["desktop",1440,1000],["mobile",390,844]] a
     await page.screenshot({path:path.join(output,`${name}-results.png`),fullPage:true});
     if(process.env.ITDA_CAPTURE_RESULTS_ONLY)return;
     await page.getByRole("button",{name:"장소 저장",exact:true}).first().click();
-    await expect(page.getByRole("button",{name:"저장 취소",exact:true})).toHaveCount(1);
-    await page.getByRole("button",{name:"비교에 담기",exact:true}).first().click();
-    await page.getByRole("button",{name:"비교에 담기",exact:true}).first().click();
-    await page.getByRole("link",{name:"장소 비교하기"}).click();
-    await expect(page.getByRole("heading",{name:"장소의 차이를 나란히"})).toBeVisible();
-    await expect(page.getByRole("link",{name:"장소 살펴보기"})).toHaveCount(2);
-    await page.screenshot({path:path.join(output,`${name}-compare.png`),fullPage:true});
-    await page.getByRole("link",{name:"장소 살펴보기"}).first().click();
+    await expect(page.getByRole("button",{name:"장소 저장됨",exact:true})).toHaveCount(1);
+    await expect(page.getByRole("button",{name:/비교/})).toHaveCount(0);
+    await expect(page.getByRole("link",{name:/비교/})).toHaveCount(0);
+    await page.getByRole("link",{name:"장소 상세 보기",exact:true}).first().click();
     await expect(page.getByRole("heading",{name:"이 점수의 근거"})).toBeVisible();
     await page.locator("details summary").first().click();
     await page.screenshot({path:path.join(output,`${name}-detail.png`),fullPage:true});

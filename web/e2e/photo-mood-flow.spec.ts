@@ -114,7 +114,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     const response = await posted;
     expect(response.status()).toBe(201);
     profile = await response.json(); review = await reviewFor(String(profile!.profile_id), jobId);
-    await expect(page.getByRole("button", { name: "바로 추천 보기", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "추천 장소 보기", exact: true })).toBeVisible();
     const before = await page.locator(".axis-score-list").allTextContents();
     await page.getByRole("button", { name: "사진으로 추천받기" }).click();
     await expect(page).toHaveURL(/\/photo$/);
@@ -126,12 +126,11 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await page.locator('input[type="file"]').setInputFiles({ name: "fixture.png", mimeType: "image/png", buffer: image });
     await page.screenshot({ path: info.outputPath("design-photo-picker-selected.png"), fullPage: true });
     await page.getByRole("button", { name: "사진 1장 분석 시작하기" }).click();
-    await expect(page.getByRole("heading", { name: "사진에서 마음에 든 분위기를 골라 주세요" })).toBeVisible();
-    await expect(page.getByRole("checkbox")).toHaveCount(3);
+    await expect(page.getByRole("heading", { name: "사진 분위기 분석을 완료했어요" })).toBeVisible();
+    await expect(page.getByRole("checkbox")).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
     await page.locator(".photo-review").screenshot({ path: resolve(artifactRoot, `mood-review-${viewport.name}.png`) });
-    if (viewport.name === "mobile") for (const box of await page.getByRole("checkbox").all()) await box.uncheck();
-    await page.getByRole("button", { name: viewport.name === "mobile" ? "사진 분위기 없이 계속" : "선택한 분위기로 계속", exact: true }).click();
+    await page.getByRole("button", { name: "사진 분위기로 계속", exact: true }).click();
     await expect(page.getByRole("button", { name: "사진 취향을 반영해 추천 보기" })).toBeVisible();
     await page.goto("/profile");
     await expect(page.locator(".axis-score-list")).toBeVisible();

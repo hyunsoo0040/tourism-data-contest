@@ -1,6 +1,7 @@
 import { createServer } from "node:http";
 import { randomUUID } from "node:crypto";
 import { candidateHash, canonical, createProfile, createRun, questionnaire, regions } from "./data.mjs";
+import { authenticityMock } from "./authenticity.mjs";
 
 export function mockServer() {
   const sessions = new Map();
@@ -19,11 +20,11 @@ export function mockServer() {
       const session = sessions.get(token);
       const parts = url.pathname.split("/").filter(Boolean).map(decodeURIComponent);
       // No file decoding, image persistence, database, or outbound requests.
-      if (parts.some((part) => ["photo-jobs", "operating-information", "tourism-context", "trip-context"].includes(part))) {
+      if (parts.some((part) => ["photo-jobs", "photos", "operating-information", "tourism-context", "trip-context"].includes(part))) {
         req.resume(); return send(503, { detail: { code: "MOCK_UNAVAILABLE", message: "UI 목업에서는 제공하지 않는 정보입니다." } });
       }
       let body = {};
-      if (req.method === "POST") {
+      if (["POST", "PUT"].includes(req.method)) {
         let text = "";
         for await (const chunk of req) {
           text += chunk;
@@ -41,6 +42,7 @@ export function mockServer() {
       if (req.method === "POST" && url.pathname === "/v1/mock/reset") {
         sessions.delete(token); return send(200, { reset: true });
       }
+      if (authenticityMock({ req, url, parts, body, session, send })) return;
       if (req.method === "GET" && url.pathname === "/v1/questionnaires/current") return send(200, questionnaire);
       if (req.method === "GET" && url.pathname === "/v1/recommendation-regions") return send(200, { candidate_sha256: candidateHash, regions });
       if (req.method === "POST" && ["/v1/preference-profiles", "/v1/recommendation-runs"].includes(url.pathname)) {

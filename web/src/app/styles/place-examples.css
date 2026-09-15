@@ -1,13 +1,34 @@
 /* PUBLIC examples extend the generated upstream layout without changing its source. */
+.up-main #demo .quiz,.up-main #demo .result{padding:24px}
 .up-main #demo .quiz{align-self:stretch}
-.up-main #demo .result{display:flex;flex-direction:column;min-width:0}
-.up-main #demo #recommendations{display:grid;align-content:center;flex:1}
-.up-main #demo .place{grid-template-columns:minmax(160px,.95fr) minmax(0,1fr);align-items:start;margin-top:0}
-.up-main #demo .place h3{font-size:21px;line-height:1.45;margin:10px 0 6px}
-.up-main #demo .place-region{font-size:13px;color:#485366;margin-bottom:10px}
-.up-main #demo .preview-date{font-size:13px;color:#485366;margin:0 0 18px}
-.up-main #demo .place-address{font-size:13px;line-height:1.7;margin-top:12px}
-.up-main #demo .place-address summary{cursor:pointer;min-height:44px;display:flex;align-items:center;text-decoration:underline;text-underline-offset:3px}
-.up-main #demo .place-map{display:inline-flex;align-items:center;min-height:44px;margin-top:4px;font-size:13px;text-decoration:underline;text-underline-offset:3px;color:#185e58}
-.up-main #demo .choice:focus-visible,.up-main #demo summary:focus-visible,.up-main #demo a:focus-visible{outline:3px solid #246fcd;outline-offset:3px}
-@media(max-width:560px){.up-main #demo .place{grid-template-columns:minmax(0,1fr)}}
+.up-main #demo .quiz h3{font-size:24px;line-height:1.3;margin-bottom:12px}
+.up-main #demo .quiz>p{font-size:14px;line-height:1.65}
+.up-main #demo .choice{font-size:14px;line-height:1.5;padding:12px;min-height:48px;margin-top:10px;gap:10px}
+.up-main #demo .test-link{font-size:14px;line-height:1.5;min-height:44px;padding:12px;margin-top:14px;align-items:center}
+.up-main #demo .result{display:grid;min-width:0}
+.up-main #demo .result-preview{grid-area:1/1;display:flex;flex-direction:column;min-width:0}
+.up-main #demo .result-preview[aria-hidden=true]{visibility:hidden;pointer-events:none}
+.up-main #demo .result h2{font-size:28px;line-height:1.3;letter-spacing:-.03em;word-break:keep-all;overflow-wrap:anywhere}
+.up-main #demo .place-list{display:grid;flex:1}
+.up-main #demo .place{grid-template-columns:minmax(140px,.9fr) minmax(0,1fr);align-items:stretch;gap:16px;padding:16px;margin-top:0}
+.up-main #demo .place>figure{display:flex;flex-direction:column}
+.up-main #demo .place>figure>div:first-child{flex-shrink:0}
+.up-main #demo .place>figure>figcaption{margin-top:auto;padding-top:10px}
+.up-main #demo .place-info{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.up-main #demo .place-info .tag{font-size:12px;line-height:1.5;padding:6px 10px}
+.up-main #demo .place h3{font-size:22px;font-weight:900;line-height:1.3;letter-spacing:-.03em;margin:12px 0 8px;word-break:keep-all;overflow-wrap:anywhere}
+.up-main #demo .place-region{font-size:14px;line-height:1.55;color:#485366;margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.up-main #demo .preview-date{font-size:12px;color:#485366;line-height:1.5;margin:4px 0 16px}
+.up-main #demo .place-address{align-self:stretch;margin:16px 0;border-top:1px solid #dce3e8;padding-top:12px;padding-inline-start:5px}
+.up-main #demo .place-address>span{display:block;font-size:12px;font-weight:700;line-height:1.5;color:#485366;margin-bottom:4px}
+.up-main #demo .place-address p{font-size:14px;line-height:1.55;color:#253044;margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.up-main #demo .place-map{display:flex;align-items:center;justify-content:center;align-self:stretch;min-height:44px;margin-top:auto;padding:10px 12px;border:1px solid #185e58;border-radius:10px;background:#185e58;color:#fff;font-size:14px;font-weight:800;line-height:1.5;text-decoration:none;transition:background-color .16s ease}
+.up-main #demo .place-map:hover{background:#124b46}
+.up-main #demo .choice:focus-visible,.up-main #demo a:focus-visible{outline:3px solid #246fcd;outline-offset:3px}
+@media(max-width:560px){
+  .up-main #demo .quiz,.up-main #demo .result{padding:18px}
+  .up-main #demo .quiz h3{font-size:22px}
+  .up-main #demo .result h2{font-size:24px}
+  .up-main #demo .place{grid-template-columns:minmax(0,1fr);padding:14px;gap:16px}
+  .up-main #demo .place h3{font-size:22px}
+}
