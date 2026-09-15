@@ -13,3 +13,7 @@ export function placeIntroduction(detail: Detail) {
 export function placeMapUrl(name: string, address: string) {
   return `https://map.naver.com/p/search/${encodeURIComponent([name, address].filter(Boolean).join(" "))}`;
 }
+
+export function kakaoMapSearchUrl(name: string, address: string) {
+  return `https://map.kakao.com/link/search/${encodeURIComponent([name, address].filter(Boolean).join(" "))}`;
+}

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Detail } from "./api";
-import { placeIntroduction, placeMapUrl } from "./placeMetadata";
+import { kakaoMapSearchUrl, placeIntroduction, placeMapUrl } from "./placeMetadata";
 
 describe("verified place information", () => {
   it("uses the official overview instead of short fee facts or photo analysis", () => {
@@ -15,5 +15,6 @@ describe("verified place information", () => {
   });
   it("encodes the actual place name and address into a map search", () => {
     expect(decodeURIComponent(placeMapUrl("영랑호", "강원특별자치도 속초시"))).toBe("https://map.naver.com/p/search/영랑호 강원특별자치도 속초시");
+    expect(decodeURIComponent(kakaoMapSearchUrl("영랑호", "강원특별자치도 속초시"))).toBe("https://map.kakao.com/link/search/영랑호 강원특별자치도 속초시");
   });
 });

@@ -76,8 +76,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await page.screenshot({ path: info.outputPath("results.png"), fullPage: true });
     for (const card of await cards.all()) expect(await card.evaluate(node => node.scrollWidth <= node.clientWidth + 1)).toBe(true);
     const first = cards.first();
-    await first.getByRole("button", { name: / 저장$/ }).click();
-    await expect(first.getByRole("button", { name: / 저장됨$/ })).toHaveAttribute("aria-pressed", "true");
+    await expect(first.getByRole("link", { name: "지도에서 보기", exact: true })).toHaveAttribute("href", /^https:\/\/map\.kakao\.com\/link\/search\//);
     for (const card of [cards.nth(0), cards.nth(1)]) await card.getByRole("button", { name: / 비교에 추가$/ }).click();
     await page.getByRole("link", { name: "선택한 장소 비교하기" }).click();
     await expect(page).toHaveURL(/\/recommendations\/a-[a-f0-9]{64}\/compare\?/);
@@ -90,11 +89,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await expect(page.getByRole("heading", { name: "장소 소개" })).toBeVisible();
     await page.screenshot({ path: info.outputPath("detail.png"), fullPage: true });
     await page.goto(resultUrl); await expect(cards).toHaveCount(5);
-    await expect(cards.first().getByRole("button", { name: / 저장됨$/ })).toHaveAttribute("aria-pressed", "true");
-    await page.getByRole("link", { name: "저장한 장소", exact: true }).click();
-    await expect(page).toHaveURL(/\/saved$/);
-    await page.reload();
-    await expect(page.locator('a[href*="/recommendations/a-"]')).toHaveCount(1);
+    await expect(cards.first().getByRole("link", { name: "지도에서 보기", exact: true })).toHaveAttribute("href", /^https:\/\/map\.kakao\.com\/link\/search\//);
     await page.goto("/photo");
     await expect(page.getByRole("button", { name: "사진 없이 추천 보기", exact: true })).toBeEnabled();
     await expect(page.getByText(/현재 사진 분석을 사용할 수 없어요/)).toBeVisible();
