@@ -76,6 +76,8 @@ function PhoneTypeCopy({ html }: { html: string }) {
 
 type RecommendationType = keyof typeof RECOMMENDATIONS;
 
+const RECOMMENDATION_TYPES: RecommendationType[] = ["history", "image", "rest"];
+
 const PHONE_TYPES = [
   { type: "history", icon: "原", label: "대상·원형형", description: "문화, 유적, 자연 보존" },
   { type: "image", icon: "像", label: "의미·이미지형", description: "SNS, 분위기, 포토 스팟" },
@@ -209,6 +211,17 @@ export function UpstreamMainPage() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<keyof typeof RECOMMENDATIONS>("rest");
   const rootRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setSelectedType((current) => {
+        const index = RECOMMENDATION_TYPES.indexOf(current);
+        return RECOMMENDATION_TYPES[(index + 1) % RECOMMENDATION_TYPES.length]!;
+      });
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const saved = readUpstreamPreference();
@@ -364,7 +377,7 @@ export function UpstreamMainPage() {
               </div>
               <p className="type-summary">IT-DA는 이러한 차이를 세 가지 여행 경험 유형으로 나누어 살펴봅니다.</p>
               <div className="cards">
-                <article className="card"><div className="icon orange">原</div><h3>대상·원형형</h3><p>오랜 시간 보존되어 온 문화유산과 전통 공간이 지닌 역사적 가치와 고유한 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
+                <article className="card"><div className="icon orange">原</div><h3>대상·원형형</h3><p>관광 대상이 지닌 원형과 고유한 특성, 그 안에 담긴 역사적·문화적 가치를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
                 <article className="card"><div className="icon blue">像</div><h3>의미·이미지형</h3><p>장소가 가진 분위기와 이미지, 미디어와 콘텐츠를 통해 형성된 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
                 <article className="card"><div className="icon green">我</div><h3>자기·몰입형</h3><p>일상에서 벗어나 온전히 자신만의 시간을 보내며 휴식과 몰입의 경험을 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
               </div>
@@ -391,8 +404,8 @@ export function UpstreamMainPage() {
           <section id="demo" className="reveal">
             <div className="wrap demo">
               <div className="quiz">
-                <h3>간단 선택으로 추천 화면 살펴보기</h3>
-                <p>공개 관광지 {examples.place_count.toLocaleString("ko-KR")}곳에서 고른 실제 장소예요. 아래 점수는 장소의 경험 특성이며, 나의 추천 순위는 테스트 후 달라져요.</p>
+                <h3>추천 장소 미리보기</h3>
+                <p>공개 관광지 {examples.place_count.toLocaleString("ko-KR")}곳에서 고른 실제 장소예요.<br/>나의 추천 순위는 테스트 후 달라져요.</p>
                 <button
                   className={selectedType === "history" ? "choice active" : "choice"}
                   type="button"
@@ -400,16 +413,7 @@ export function UpstreamMainPage() {
                   aria-pressed={selectedType === "history"}
                   onClick={() => setSelectedType("history")}
                 >
-                  <i></i><span>오래된 이야기와 전통이 살아있는 공간</span>
-                </button>
-                <button
-                  className={selectedType === "rest" ? "choice active" : "choice"}
-                  type="button"
-                  data-type="rest"
-                  aria-pressed={selectedType === "rest"}
-                  onClick={() => setSelectedType("rest")}
-                >
-                  <i></i><span>조용히 걷고 머물 수 있는 차분한 분위기</span>
+                  <i></i><span>장소 고유의 가치와 원래의 모습을 경험할 수 있는 공간</span>
                 </button>
                 <button
                   className={selectedType === "image" ? "choice active" : "choice"}
@@ -419,6 +423,15 @@ export function UpstreamMainPage() {
                   onClick={() => setSelectedType("image")}
                 >
                   <i></i><span>사진으로 남기고 싶은 감성적인 장소</span>
+                </button>
+                <button
+                  className={selectedType === "rest" ? "choice active" : "choice"}
+                  type="button"
+                  data-type="rest"
+                  aria-pressed={selectedType === "rest"}
+                  onClick={() => setSelectedType("rest")}
+                >
+                  <i></i><span>조용히 걷고 머물 수 있는 차분한 분위기</span>
                 </button>
                 <a className="test-link" href="/start">12문항 취향 테스트로 자세히 보기</a>
               </div>

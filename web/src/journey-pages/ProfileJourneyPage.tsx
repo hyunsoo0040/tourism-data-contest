@@ -283,7 +283,7 @@ export function ProfilePage() {
 
         <div className="result-actions profile-actions profile-primary-action profile-actions--primary" ref={ctaRef}>
           {upstreamContract !== null ? <ProfileStoryButton profile={profile} questionnaire={upstreamContract} /> : null}
-          <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>처음부터 다시</button>
+          <button ref={resetTriggerRef} type="button" className="control" onClick={() => setDialogOpen(true)}>테스트 다시하기</button>
           <ScenarioRecommendationCTA profile={profile} />
         </div>
       </section>

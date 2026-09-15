@@ -1,5 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { beforeEach, describe, expect, it } from "vitest";
+import { act, fireEvent, render, screen } from "@testing-library/react";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { PROFILE_STORAGE_KEY, resetJourneyStorage, STORAGE_RETENTION_MS, writeProfileReference } from "../storage";
 import { UpstreamMainPage } from "./UpstreamMainPage";
@@ -40,5 +40,31 @@ describe("main start link", () => {
     resetJourneyStorage();
     fireEvent(window, new Event("pageshow"));
     expect(screen.getByRole("link", { name: "시작하기" }).getAttribute("href")).toBe("/start");
+  });
+
+  it("rotates the recommendation preview choice every three seconds", () => {
+    vi.useFakeTimers();
+    try {
+      render(<UpstreamMainPage />);
+      const history = document.querySelector('button[data-type="history"]');
+      const rest = document.querySelector('button[data-type="rest"]');
+      const image = document.querySelector('button[data-type="image"]');
+
+      expect([...document.querySelectorAll("button[data-type]")].map((choice) => choice.getAttribute("data-type"))).toEqual([
+        "history", "image", "rest",
+      ]);
+      expect(rest?.getAttribute("aria-pressed")).toBe("true");
+      expect(history?.getAttribute("aria-pressed")).toBe("false");
+      expect(image?.getAttribute("aria-pressed")).toBe("false");
+
+      act(() => vi.advanceTimersByTime(3000));
+      expect(rest?.getAttribute("aria-pressed")).toBe("false");
+      expect(history?.getAttribute("aria-pressed")).toBe("true");
+
+      act(() => vi.advanceTimersByTime(3000));
+      expect(image?.getAttribute("aria-pressed")).toBe("true");
+    } finally {
+      vi.useRealTimers();
+    }
   });
 });

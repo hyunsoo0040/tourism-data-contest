@@ -675,7 +675,7 @@ describe("/profile result, reload, and recovery", () => {
     const router = await renderProfile();
     await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" });
 
-    const trigger = screen.getByRole("button", { name: "처음부터 다시" });
+    const trigger = screen.getByRole("button", { name: "테스트 다시하기" });
     fireEvent.click(trigger);
     fireEvent.keyDown(document, { key: "Escape" });
     expect(screen.queryByRole("dialog")).toBeNull();

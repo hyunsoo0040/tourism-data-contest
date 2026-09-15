@@ -43,7 +43,7 @@ export function ScenarioRecommendationCTA({ profile, withoutPhoto = false }: { p
     <p className="recommendation-region-choice" style={{ flexBasis: "100%" }}>취향에 맞는 볼거리·체험을 추천해요.</p>
     {error && <section className="profile-state" role="alert" style={{ flexBasis: "100%" }}><p>{error}</p><a href="/quiz">답변 확인</a></section>}
     <button type="button" className="button button--primary" disabled={busy} aria-busy={busy} onClick={submit}>
-      {busy ? "추천을 준비하고 있어요…" : photo ? "사진 취향을 반영해 추천 보기" : "바로 추천 보기"}
+      {busy ? "추천을 준비하고 있어요…" : photo ? "사진 취향을 반영해 추천 보기" : "추천 장소 보기"}
     </button>
     {photo && <button type="button" className="control" disabled={busy} onClick={() => {
       try { writeScenarioPhoto(profile.profile_id, null); setPhoto(null); } catch { setError("사진 선택을 해제하지 못했어요. 브라우저 저장 설정을 확인해 주세요."); }
