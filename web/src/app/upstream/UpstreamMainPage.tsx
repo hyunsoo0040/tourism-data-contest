@@ -303,7 +303,7 @@ export function UpstreamMainPage() {
       <div className="up-main" ref={rootRef as React.RefObject<HTMLDivElement>}>
         <header className="site-header">
           <div className="wrap nav">
-            <a href="/" className="logo" aria-label="IT-DA 메인으로 이동">
+            <a href="/" className="logo main-page-logo" aria-label="IT-DA 메인으로 이동">
               <img className="logo-mark" src="/itda-logo-icon.png" alt="" />
               <strong className="logo-wordmark">IT-DA</strong>
             </a>

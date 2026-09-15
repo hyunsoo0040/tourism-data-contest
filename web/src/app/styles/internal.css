@@ -284,7 +284,8 @@ input[type="date"] {
 }
 
 .trip-form legend,
-.date-field > span {
+.date-field > span,
+.date-field > label > span {
   display: block;
   margin-bottom: var(--space-sm);
   font-size: 20px;
@@ -305,6 +306,15 @@ input[type="date"] {
   border-radius: 12px;
   background: var(--surface);
   color: var(--ink);
+}
+
+.date-field-control {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.date-field-control .button {
+  justify-self: start;
 }
 
 .travel-region-fieldset > p {

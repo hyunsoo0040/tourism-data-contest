@@ -189,6 +189,52 @@
   word-break: keep-all;
 }
 
+@media (min-width: 901px) {
+  .up-quiz[data-upstream-surface="profile"] .result-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .profile-authenticity-banner {
+    margin-bottom: 30px;
+    padding: clamp(28px, 3.5vw, 46px);
+    border: 1px solid rgba(226, 110, 58, .2);
+    border-radius: 24px;
+    background: linear-gradient(112deg, #fff9f4 0%, #fff 62%, #f8eee7 100%);
+    box-shadow: 0 14px 32px rgba(80, 55, 37, .08);
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .profile-authenticity-banner .eyebrow {
+    margin-top: 0;
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .profile-authenticity-banner .profile-authenticity-intro {
+    max-width: 900px;
+    margin-top: 10px;
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .character-stage img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+    border: 0;
+    border-radius: 7px;
+    box-shadow: none;
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .character-stage {
+    width: min(100%, 552px);
+    height: 458px;
+    min-height: 458px;
+    padding: 0;
+    overflow: hidden;
+    justify-self: center;
+  }
+}
+
 .up-quiz .profile-support-grid {
   display: grid;
   gap: 18px;
@@ -598,7 +644,7 @@
  * phone preview's miniature descriptions. */
 @media (min-width: 1280px) and (max-width: 1600px) {
   .up-main .nav-menu {
-    font-size: 15px;
+    font-size: 24px;
   }
 
   .up-main .badge,

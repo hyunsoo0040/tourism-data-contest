@@ -70,7 +70,7 @@ export function ScenarioPhotoPage() {
     });
   }
   return <div className="up-root"><div className="up-photo" data-upstream-surface="photo">
-    <header className="topbar"><a className="brand" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a><Link className="back-link" to="/profile">취향 결과로 돌아가기</Link></header>
+    <header className="topbar"><a className="brand main-page-logo" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a><Link className="back-link" to="/profile">취향 결과로 돌아가기</Link></header>
     <main><PhotoWorkspace>
       {loading ? <p role="status">사진에 연결할 취향을 확인하고 있어요.</p> : !profile ? <section className="profile-state"><p>먼저 상황형 테스트를 마치고 취향 결과를 확인해 주세요.</p><Link className="button button--primary" to="/start">취향 테스트 시작</Link><button className="control" onClick={() => setAttempt(value => value + 1)}>다시 확인</button></section> : <>
         <section className="profile-state photo-picker"><h2>사진으로 전하는 취향</h2>

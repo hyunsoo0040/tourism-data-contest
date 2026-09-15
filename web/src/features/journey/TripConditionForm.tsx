@@ -321,10 +321,28 @@ export function TripConditionForm({
             register={register}
             error={errors.visit_time?.message}
           />
-          <label className="date-field">
-            <span>{JOURNEY_COPY.visit.timeLabel}</span>
-            <input type="time" value={exactVisitTime} onChange={(event) => setExactVisitTime(event.target.value)} />
-          </label>
+          <div className="date-field">
+            <label htmlFor="exact-visit-time">
+              <span>{JOURNEY_COPY.visit.timeLabel}</span>
+            </label>
+            <div className="date-field-control">
+              <input
+                id="exact-visit-time"
+                type="time"
+                value={exactVisitTime}
+                onChange={(event) => setExactVisitTime(event.target.value)}
+              />
+              {exactVisitTime ? (
+                <button
+                  type="button"
+                  className="button button--secondary"
+                  onClick={() => setExactVisitTime("")}
+                >
+                  시간 선택 취소
+                </button>
+              ) : null}
+            </div>
+          </div>
         </fieldset>
 
         <ChoiceGroup name="companion" register={register} error={errors.companion?.message} retainedGroup={retainedGroup} />

@@ -281,3 +281,96 @@
   }
 
 }
+
+/* Keep the logo introduced on the main page consistent throughout the journey. */
+.up-root .main-page-logo {
+  gap:4px;
+}
+
+.up-root .main-page-logo .logo-mark,
+.up-root .main-page-logo .brand-mark-image {
+  width:58px;
+  height:58px;
+  display:block;
+  object-fit:contain;
+  flex:0 0 auto;
+  background:none;
+  box-shadow:none;
+  transform:scale(1.215);
+  transform-origin:center;
+}
+
+.up-root .main-page-logo .logo-wordmark,
+.up-root .main-page-logo .brand-wordmark {
+  color:#ff6b35;
+  font-size:1.21em;
+  font-weight:900;
+  letter-spacing:-.04em;
+}
+
+@media (min-width:921px) {
+  .up-root .main-page-logo {
+    flex-direction:column;
+    align-items:center;
+    gap:0;
+    font-size:26px;
+    line-height:1;
+  }
+
+  .up-root .main-page-logo .logo-mark,
+  .up-root .main-page-logo .brand-mark-image {
+    width:68px;
+    height:68px;
+  }
+
+  .up-root .main-page-logo .logo-wordmark,
+  .up-root .main-page-logo .brand-wordmark {
+    font-size:.9em;
+    margin-top:-5px;
+  }
+
+  .up-start .topbar,
+  .up-quiz .topbar,
+  .up-photo .topbar,
+  .up-etc .topbar {
+    height:115px;
+  }
+}
+
+@media (max-width:560px) {
+  .up-root .main-page-logo .logo-mark,
+  .up-root .main-page-logo .brand-mark-image {
+    width:50px;
+    height:50px;
+  }
+}
+
+/* Desktop main header: scale the original expanded presentation down by 25%. */
+@media (min-width:921px) {
+  .up-main .nav {
+    height:86px;
+  }
+
+  .up-main .main-page-logo {
+    font-size:22px;
+  }
+
+  .up-main .main-page-logo .logo-mark {
+    width:55px;
+    height:55px;
+  }
+
+  .up-main .nav-menu {
+    gap:29px;
+    font-size:18px;
+  }
+
+  .up-main .nav-menu a {
+    padding:9px 12px;
+  }
+
+  .up-main .nav-cta {
+    padding:14px 21px;
+    font-size:20px;
+  }
+}

@@ -1,8 +1,13 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { PROFILE_STORAGE_KEY, resetJourneyStorage, STORAGE_RETENTION_MS, writeProfileReference } from "../storage";
 import { UpstreamMainPage } from "./UpstreamMainPage";
+
+const upstreamStyles = readFileSync(resolve(process.cwd(), "src/app/styles/upstream.css"), "utf8");
 
 beforeEach(() => {
   resetJourneyStorage();
@@ -10,6 +15,12 @@ beforeEach(() => {
 });
 
 describe("main start link", () => {
+  it("keeps desktop navigation labels at the main-page size", () => {
+    expect(upstreamStyles).toMatch(
+      /@media \(min-width: 1280px\) and \(max-width: 1600px\) \{\s*\.up-main \.nav-menu \{\s*font-size: 24px;/,
+    );
+  });
+
   it("starts with travel conditions even when a profile is stored", () => {
     writeProfileReference("saved-profile");
     render(<UpstreamMainPage />);

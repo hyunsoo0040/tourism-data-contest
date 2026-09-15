@@ -112,7 +112,7 @@ export function UpstreamStartPage() {
     <div className="up-root">
       <div className="up-start" data-journey-surface="start">
         <header className="topbar">
-          <a className="brand" href="/" aria-label="IT-DA 소개로 이동">
+          <a className="brand main-page-logo" href="/" aria-label="IT-DA 소개로 이동">
             <img className="brand-mark-image" src="/itda-logo-icon.png" alt="" />
             <strong className="brand-wordmark">IT-DA</strong>
           </a>

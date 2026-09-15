@@ -108,6 +108,17 @@ describe("explicit facilities in the trip form", () => {
     expect((screen.getByRole("checkbox", { name: "휠체어 대여" }) as HTMLInputElement).checked).toBe(false);
   });
 
+  it("allows an exact visit time to be cancelled after it is selected", () => {
+    form();
+    const timeInput = screen.getByLabelText("정확한 방문 시간 (선택)") as HTMLInputElement;
+
+    fireEvent.change(timeInput, { target: { value: "14:30" } });
+    fireEvent.click(screen.getByRole("button", { name: "시간 선택 취소" }));
+
+    expect(timeInput.value).toBe("");
+    expect(screen.queryByRole("button", { name: "시간 선택 취소" })).toBeNull();
+  });
+
   it("restores and submits a province choice without changing the sealed questionnaire fields", async () => {
     writeGroundedTripInput({ ...EMPTY, region_code: "11" });
     const onSubmit = form();

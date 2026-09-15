@@ -48,6 +48,12 @@ beforeEach(() => {
 });
 
 describe("resuming a saved test through trip conditions", () => {
+  it("uses the main-page logo treatment", async () => {
+    await renderResume();
+
+    expect(screen.getByRole("link", { name: "IT-DA 소개로 이동" }).classList.contains("main-page-logo")).toBe(true);
+  });
+
   it("uses completed server answers instead of a partial draft and applies new conditions", async () => {
     writeProfileReference(previous.profile_id);
     writeDraft({ ...createEmptyDraft(), answers: { q1: 3 } });

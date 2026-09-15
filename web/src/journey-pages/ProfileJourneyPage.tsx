@@ -28,12 +28,7 @@ function ProfileShell({ children }: { children: ReactNode }) {
     <div className="up-root">
       <div className="up-quiz" data-upstream-surface="profile">
         <header className="topbar">
-          <a className="brand" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
-          <nav>
-            <a href="/#type">유형 보기</a>
-            <a href="/start">다시 테스트</a>
-            <a href="/">홈</a>
-          </nav>
+          <a className="brand main-page-logo" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
         </header>
         <main>{children}</main>
       </div>
@@ -241,15 +236,17 @@ export function ProfilePage() {
   return (
     <ProfileShell>
       <section className="panel result visible profile-result" aria-labelledby="profile-result-heading">
-        <p className="eyebrow">Result</p>
-        <div className="profile-authenticity-intro">
-          <h1 id="profile-result-heading" tabIndex={-1}>여행에서의 진짜다움(진정성)이란?</h1>
-          <p>
-            관광에서 말하는 진짜다움은 단순히 ‘진짜인지 가짜인지’를 판단하는 것이 아닙니다.
-            같은 장소를 방문하더라도 무엇을 중요하게 바라보고 어떤 의미를 부여하느냐에 따라,
-            그 장소에서 느끼는 진짜다움은 사람마다 다를 수 있습니다.
-          </p>
-        </div>
+        <section className="profile-authenticity-banner" aria-labelledby="profile-result-heading">
+          <p className="eyebrow">Result</p>
+          <div className="profile-authenticity-intro">
+            <h1 id="profile-result-heading" tabIndex={-1}>여행에서의 진짜다움(진정성)이란?</h1>
+            <p>
+              관광에서 말하는 진짜다움은 단순히 ‘진짜인지 가짜인지’를 판단하는 것이 아닙니다.
+              같은 장소를 방문하더라도 무엇을 중요하게 바라보고 어떤 의미를 부여하느냐에 따라,
+              그 장소에서 느끼는 진짜다움은 사람마다 다를 수 있습니다.
+            </p>
+          </div>
+        </section>
         <p className="visually-hidden" role="status" aria-live="polite">{announcement}</p>
         {upstreamResult !== null ? (
           <>

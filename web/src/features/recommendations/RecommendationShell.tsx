@@ -5,7 +5,7 @@ export function RecommendationShell({ children }: { children: ReactNode }) {
     <div className="up-root">
       <div className="up-etc" data-upstream-surface="recommendations">
         <header className="topbar">
-          <a className="brand" href="/">
+          <a className="brand main-page-logo" href="/">
             <img className="brand-mark-image" src="/itda-logo-icon.png" alt="" />
             <strong className="brand-wordmark">IT-DA</strong>
           </a>

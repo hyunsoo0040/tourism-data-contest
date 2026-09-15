@@ -189,7 +189,7 @@ export function PhotoPage() {
 function UpstreamPhotoShell({ children }: { children: React.ReactNode }) {
   return <div className="up-root"><div className="up-photo" data-upstream-surface="photo">
     <header className="topbar">
-      <a className="brand" href="/" aria-label="IT-DA 소개로 이동"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
+      <a className="brand main-page-logo" href="/" aria-label="IT-DA 소개로 이동"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
       <a className="back-link" href="/profile">취향 결과로 돌아가기</a>
     </header>
     <main><PhotoWorkspace>{children}</PhotoWorkspace></main>
