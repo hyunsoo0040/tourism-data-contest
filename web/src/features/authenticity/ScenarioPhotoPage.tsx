@@ -70,7 +70,7 @@ export function ScenarioPhotoPage() {
     });
   }
   return <div className="up-root"><div className="up-photo" data-upstream-surface="photo">
-    <header className="topbar"><a className="brand main-page-logo" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a><Link className="back-link" to="/profile">취향 결과로 돌아가기</Link></header>
+    <header className="topbar"><a className="brand main-page-logo" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a></header>
     <main><PhotoWorkspace>
       {loading ? <p role="status">사진에 연결할 취향을 확인하고 있어요.</p> : !profile ? <section className="profile-state"><p>먼저 상황형 테스트를 마치고 취향 결과를 확인해 주세요.</p><Link className="button button--primary" to="/start">취향 테스트 시작</Link><button className="control" onClick={() => setAttempt(value => value + 1)}>다시 확인</button></section> : <>
         <section className="profile-state photo-picker"><h2>사진으로 전하는 취향</h2>
@@ -84,7 +84,7 @@ export function ScenarioPhotoPage() {
             <button className="control" disabled={busy} onClick={() => run(async signal => { await api(`/photos/${escapeId(photo.photo_id)}`, { method: "DELETE", signal }); signal.throwIfAborted(); writeScenarioPhoto(profile.profile_id, null); setPhoto(null); setChosen([]); setUrls([]); })}>사진 분석 결과 삭제</button>
             <p>서버 원본 보관: 없음 · 확정한 사진 분위기는 비교 근거가 있을 때 추천 점수의 20%로 반영해요.</p></>}
         </section>
-        <div className="photo-action-bar"><button className="button button--secondary" disabled={busy} onClick={() => recommend(false)}>사진 없이 추천 보기</button>{photo && <button className="button button--primary" disabled={busy || !chosen.length} onClick={() => recommend(true)}>선택한 분위기로 추천 보기</button>}</div>
+        {photo && <div className="photo-action-bar"><button className="button button--primary" disabled={busy || !chosen.length} onClick={() => recommend(true)}>선택한 분위기로 추천 보기</button></div>}
       </>}
       {busy && (progress ? <RecommendationProgress {...progress} /> : <p role="status">입력과 근거를 확인하고 있어요…</p>)}{error && <p role="alert">{error}</p>}
     </PhotoWorkspace></main>

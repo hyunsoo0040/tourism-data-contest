@@ -36,12 +36,7 @@ export function ThreeAxisProfile({
 
   return (
     <section className="profile-field" aria-labelledby="axis-profile-title">
-      <div className="profile-field__heading">
-        <p className="eyebrow">세 가지 경험</p>
-        <h2 id="axis-profile-title" ref={headingRef} tabIndex={-1}>
-          이번 여행에서 기대하는 시간
-        </h2>
-      </div>
+      
       {display === null ? <p role="status">아직 점수로 표시할 여행 기대가 없어요.</p> : null}
       <div className="axis-score-list">
         {PROFILE_AXIS_ORDER.map((axis) => {

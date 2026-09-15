@@ -19,11 +19,6 @@ export function UpstreamQuizPage() {
       <div className="up-quiz" data-upstream-surface="quiz">
         <header className="topbar">
           <a className="brand main-page-logo" href="/"><img className="brand-mark-image" src="/itda-logo-icon.png" alt="" /><strong className="brand-wordmark">IT-DA</strong></a>
-          <nav>
-            <a href="/#type">유형 보기</a>
-            <a href="/profile">취향 결과</a>
-            <a href="/start">조건 입력</a>
-          </nav>
         </header>
         <main>
           <section className="intro">

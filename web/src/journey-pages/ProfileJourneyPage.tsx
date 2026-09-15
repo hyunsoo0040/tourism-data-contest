@@ -235,18 +235,33 @@ export function ProfilePage() {
 
   return (
     <ProfileShell>
-      <section className="panel result visible profile-result" aria-labelledby="profile-result-heading">
-        <section className="profile-authenticity-banner" aria-labelledby="profile-result-heading">
-          <p className="eyebrow">Result</p>
-          <div className="profile-authenticity-intro">
-            <h1 id="profile-result-heading" tabIndex={-1}>여행에서의 진짜다움(진정성)이란?</h1>
-            <p>
-              관광에서 말하는 진짜다움은 단순히 ‘진짜인지 가짜인지’를 판단하는 것이 아닙니다.
-              같은 장소를 방문하더라도 무엇을 중요하게 바라보고 어떤 의미를 부여하느냐에 따라,
-              그 장소에서 느끼는 진짜다움은 사람마다 다를 수 있습니다.
-            </p>
-          </div>
-        </section>
+      <section className="panel profile-authenticity-banner" aria-labelledby="profile-result-heading">
+        <div className="profile-authenticity-intro">
+          <h1 id="profile-result-heading" tabIndex={-1}>여행에서의 진짜다움(진정성)이란?</h1>
+          <p className="profile-authenticity-mobile-copy">
+            관광에서 말하는 진짜다움은 단순히 ‘진짜인지 가짜인지’를 판단하는 것이 아닙니다.<br />
+            <strong>같은 장소</strong>를 방문하더라도 <strong>무엇을 중요하게 바라보고 어떤 의미를 부여하느냐</strong>에 따라,<br />
+            그 장소에서 느끼는 진짜다움은 사람마다<br />
+            다를 수 있습니다.
+          </p>
+          <p className="profile-authenticity-mobile-source-copy" aria-hidden="true">
+            관광에서 말하는 진짜다움은 단순히 ‘진짜인지 가짜인지’를 판단하는 것이 아닙니다.<br />같은 장소를 방문하더라도 무엇을 중요하게 바라보고 어떤 의미를 부여하느냐에 따라,<br />
+            그 장소에서 느끼는 진짜다움은 사람마다<br />
+            다를 수 있습니다.
+          </p>
+          <p className="profile-authenticity-desktop-copy">
+            관광에서 말하는 진짜다움은 단순히 ‘진짜인지 가짜인지’를 판단하는 것이 아닙니다.<br />
+            <strong>같은 장소</strong>를 방문하더라도 <strong>무엇을 중요하게 바라보고 어떤 의미를 부여하느냐</strong>에 따라, 그 장소에서 느끼는 진짜다움은 사람마다 다를 수 있습니다.
+          </p>
+          <p className="profile-authenticity-desktop-source-copy">
+            관광에서 말하는 진짜다움은 단순히 ‘진짜인지 가짜인지’를 판단하는 것이 아닙니다.<br/>
+            같은 장소를 방문하더라도 무엇을 중요하게 바라보고 어떤 의미를 부여하느냐에 따라,
+            그 장소에서 느끼는 진짜다움은 사람마다 다를 수 있습니다.
+          </p>
+        </div>
+      </section>
+      <section className="panel result visible profile-result" aria-labelledby="profile-results-label">
+        <p id="profile-results-label" className="eyebrow">Result</p>
         <p className="visually-hidden" role="status" aria-live="polite">{announcement}</p>
         {upstreamResult !== null ? (
           <>

@@ -116,7 +116,7 @@ export function UpstreamStartPage() {
             <img className="brand-mark-image" src="/itda-logo-icon.png" alt="" />
             <strong className="brand-wordmark">IT-DA</strong>
           </a>
-          <a className="back-link" href="/">소개로 돌아가기</a>
+          <a className="back-link" href="/">메인으로</a>
         </header>
 
         <main>

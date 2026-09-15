@@ -51,21 +51,21 @@ function readUpstreamPreference(): UpstreamPreference | null {
 const RECOMMENDATIONS = {
   history: {
     title: "역사·전통을 만나는 장소",
-    phoneType: "오래된 이야기와<br>전통이 궁금하다면",
-    phoneDesc: "공식 설명에서 확인한 장소의 역사·전통을 살펴보세요.",
-    axisLabel: "역사·전통", places: examples.examples.history,
+    phoneType: "그곳만이 가진 고유한<br>모습을 직접 만나고 싶다면",
+    phoneDesc: "관광 대상 자체가 지닌 원형과 역사적·문화적 가치를 경험해보세요.",
+    axisLabel: "대상·원형형", places: examples.examples.history,
   },
   image: {
     title: "감성·이미지를 만나는 장소",
-    phoneType: "마음에 남을 풍경과<br>이미지를 찾는다면",
-    phoneDesc: "장소가 담은 의미와 사진에서 보이는 분위기를 함께 살펴보세요.",
-    axisLabel: "감성·이미지", places: examples.examples.image,
+    phoneType: "익숙하게 그려온 그곳의<br>모습을 직접 만나고 싶다면",
+    phoneDesc: "사람들의 인식과 이야기 속에서 형성된 장소의 모습을 경험해보세요.",
+    axisLabel: "의미·이미지형", places: examples.examples.image,
   },
   rest: {
     title: "휴식·몰입을 만나는 장소",
-    phoneType: "걷고 머무는 시간에<br>마음이 끌린다면",
-    phoneDesc: "일상에서 벗어나 머물고 몰입할 수 있는 장소를 살펴보세요.",
-    axisLabel: "휴식·몰입", places: examples.examples.rest,
+    phoneType: "일상의 나에서 벗어나<br>자유롭게 여행하고 싶다면",
+    phoneDesc: "평소의 역할과 틀에서 벗어나 자신만의 방식으로 경험해보세요.",
+    axisLabel: "자기·몰입", places: examples.examples.rest,
   },
 };
 
@@ -79,9 +79,9 @@ type RecommendationType = keyof typeof RECOMMENDATIONS;
 const RECOMMENDATION_TYPES: RecommendationType[] = ["history", "image", "rest"];
 
 const PHONE_TYPES = [
-  { type: "history", icon: "原", label: "대상·원형형", description: "문화, 유적, 자연 보존" },
-  { type: "image", icon: "像", label: "의미·이미지형", description: "SNS, 분위기, 포토 스팟" },
-  { type: "rest", icon: "我", label: "자기·몰입형", description: "산책, 조용함, 감정적 만족" },
+  { type: "history", icon: "原", label: "대상·원형형", description: "원형 · 고유성 · 역사성" },
+  { type: "image", icon: "像", label: "의미·이미지형", description: "이미지 · 기대 · 인식" },
+  { type: "rest", icon: "我", label: "자기·몰입형", description: "자유 · 자기표현 · 몰입" },
 ] as const;
 
 function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
@@ -180,16 +180,6 @@ function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
               <i id="matchBar" style={{ transform: `scaleX(${data.places[0].axis_value / 100})` }}></i>
             </div>
             <p id="matchText">선택한 유형을 가정한 일치도 예시예요. 나의 일치도는 테스트 후 확인할 수 있어요.</p>
-          </div>
-          <div className="phone-preview-controls">
-            {reducedMotion ? <span>위 유형을 눌러 예시를 바꿔보세요</span> : (
-              <button type="button" onClick={() => { setPaused((current) => !current); setFocused(false); }}>
-                <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
-                  {paused ? <path d="M5 2.5v11L13 8Z" /> : <path d="M4 3h3v10H4zm5 0h3v10H9z" />}
-                </svg>
-                자동 전환 {paused ? "재생" : "일시정지"}
-              </button>
-            )}
           </div>
         </div>
       </div>

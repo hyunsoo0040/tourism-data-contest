@@ -184,14 +184,36 @@
 .up-quiz .profile-authenticity-intro p {
   margin: 10px 0 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: inherit;
   line-height: 1.7;
   word-break: keep-all;
 }
 
+.up-quiz .profile-authenticity-banner {
+  margin-bottom: 18px;
+}
+
+.up-quiz .profile-authenticity-banner .profile-authenticity-intro {
+  margin-top: 0;
+}
+
+.up-quiz .profile-authenticity-mobile-copy {
+  display: none;
+}
+
+.up-quiz .profile-authenticity-mobile-source-copy,
+.up-quiz .profile-authenticity-desktop-source-copy {
+  display: none;
+}
+
+.up-quiz .profile-authenticity-intro strong {
+  color: #59677c;
+  font-weight: 650;
+}
+
 @media (min-width: 901px) {
   .up-quiz[data-upstream-surface="profile"] .result-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+    grid-template-columns: minmax(0, 552px) minmax(280px, 1fr);
   }
 
   .up-quiz[data-upstream-surface="profile"] .profile-authenticity-banner {
@@ -203,13 +225,9 @@
     box-shadow: 0 14px 32px rgba(80, 55, 37, .08);
   }
 
-  .up-quiz[data-upstream-surface="profile"] .profile-authenticity-banner .eyebrow {
-    margin-top: 0;
-  }
-
   .up-quiz[data-upstream-surface="profile"] .profile-authenticity-banner .profile-authenticity-intro {
-    max-width: 900px;
-    margin-top: 10px;
+    max-width: none;
+    margin-top: 0;
   }
 
   .up-quiz[data-upstream-surface="profile"] .character-stage img {
@@ -226,12 +244,29 @@
   }
 
   .up-quiz[data-upstream-surface="profile"] .character-stage {
-    width: min(100%, 552px);
+    width: 100%;
     height: 458px;
     min-height: 458px;
     padding: 0;
     overflow: hidden;
-    justify-self: center;
+    justify-self: start;
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .match-card,
+  .up-quiz[data-upstream-surface="profile"] .character-card {
+    text-align: left;
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .match-card {
+    align-self: start;
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .character-card b {
+    margin-left: -2px;
+  }
+
+  .up-quiz[data-upstream-surface="profile"] .character-card span {
+    margin-left: 3px;
   }
 }
 
@@ -285,6 +320,20 @@
 }
 
 @media (max-width: 560px) {
+  .up-quiz .profile-authenticity-intro h1 {
+    font-size: clamp(17px, 5vw, 25px);
+    letter-spacing: -.06em;
+    white-space: nowrap;
+  }
+
+  .up-quiz .profile-authenticity-desktop-copy {
+    display: none;
+  }
+
+  .up-quiz .profile-authenticity-mobile-copy {
+    display: block;
+  }
+
   .up-quiz .profile-result {
     padding: 20px;
   }

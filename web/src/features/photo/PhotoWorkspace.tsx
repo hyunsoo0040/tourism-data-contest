@@ -33,7 +33,6 @@ export function PhotoWorkspace({ children, headingLevel = 1, headingId = "photo-
             <li><span>2</span><div><strong>분위기 확인</strong><p>분석이 제안한 인상 중 마음에 드는 것만 남겨요.</p></div></li>
             <li><span>3</span><div><strong>추천에 더하기</strong><p>직접 확정한 분위기만 장소 추천에 참고해요.</p></div></li>
           </ol>
-          <p className="photo-guide__privacy">사진 입력은 선택 사항이며, 사진 없이도 바로 추천을 이어갈 수 있어요.</p>
         </aside>
       </div>
     </div>
