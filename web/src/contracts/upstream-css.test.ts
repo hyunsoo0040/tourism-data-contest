@@ -1,12 +1,13 @@
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { expect, test } from "vitest";
 
 /**
  * 07-02 scoped upstream CSS is generated deterministically from the immutable
- * originals. Re-running the generator must reproduce the committed files
+ * originals and reviewed overrides. Re-running the generator must reproduce the committed files
  * byte-for-byte, and every emitted selector must stay inside its .up-* scope
  * so upstream presentation cannot leak into the internal UI.
  */
@@ -19,10 +20,15 @@ test("regenerating the scoped upstream CSS is byte-for-byte deterministic", () =
   const before = Object.fromEntries(
     SCOPES.map((scope) => [scope, readFileSync(resolve(cssDir, `${scope}.css`)).toString("utf8")]),
   );
-  execFileSync("python3", ["scripts/namespace_upstream_css.py"], { cwd: repoRoot });
-  for (const scope of SCOPES) {
-    const after = readFileSync(resolve(cssDir, `${scope}.css`)).toString("utf8");
-    expect(after, `${scope}.css must regenerate identically`).toBe(before[scope]);
+  const generated = mkdtempSync(resolve(tmpdir(), "itda-scoped-css-"));
+  try {
+    execFileSync("python3", ["scripts/namespace_upstream_css.py", "--out-dir", generated], { cwd: repoRoot });
+    for (const scope of SCOPES) {
+      const after = readFileSync(resolve(generated, `${scope}.css`)).toString("utf8");
+      expect(after, `${scope}.css must regenerate identically`).toBe(before[scope]);
+    }
+  } finally {
+    rmSync(generated, { recursive: true, force: true });
   }
 });
 

@@ -373,7 +373,7 @@ describe("/quiz canonical twelve-question journey", () => {
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
     expect(
-      await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" }),
+      await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" }),
     ).toBeTruthy();
     const postCalls = fetchMock.mock.calls.filter(([, init]) =>
       init?.method === "POST",
@@ -446,7 +446,7 @@ describe("/quiz canonical twelve-question journey", () => {
     fireEvent.click(screen.getAllByRole("radio")[2]);
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
     expect(await screen.findByText(STORAGE_MESSAGES.unavailable)).toBeTruthy();
   });
 

@@ -1,10 +1,25 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import { StrictMode } from "react";
 import { describe, expect, it } from "vitest";
 import { PlacePhotos, photoUrl } from "./PlacePhotos";
 
 const photos = [1, 2].map(id => ({ url: `http://tong.visitkorea.or.kr/img/${id}.jpg`, attribution_ko: "한국관광공사 · 관광사진", license: "KOGL_TYPE_1" }));
 
 describe("official place photographs", () => {
+  it("reuses prepared image elements when switching gallery photos and detaches them on unmount", () => {
+    const preparedImages = Object.fromEntries(photos.map(photo => {
+      const url = photoUrl(photo.url)!;
+      const image = document.createElement("img"); image.src = url;
+      return [url, image];
+    }));
+    const view = render(<StrictMode><PlacePhotos name="영랑호" photos={photos} preparedImages={preparedImages} /></StrictMode>);
+    const [first, second] = Object.values(preparedImages);
+    expect(screen.getByRole("img")).toBe(first);
+    fireEvent.click(screen.getByRole("button", { name: "영랑호 사진 2 보기" }));
+    expect(screen.getByRole("img")).toBe(second);
+    expect(first!.isConnected).toBe(false);
+    view.unmount(); expect(second!.isConnected).toBe(false);
+  });
   it("displays attributed HTTPS images and switches the selected photograph", () => {
     render(<PlacePhotos name="영랑호" photos={photos} />);
     expect(screen.getByRole("img").getAttribute("src")).toBe("https://tong.visitkorea.or.kr/img/1.jpg");

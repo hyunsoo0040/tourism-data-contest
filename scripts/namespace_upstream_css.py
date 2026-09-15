@@ -2,7 +2,8 @@
 """Deterministic upstream CSS extraction + namespacing (07-02).
 
 Reads the immutable vendored originals under fixtures/upstream-ui/original/,
-extracts the upstream CSS (linked stylesheets or inline <style> blocks), and
+extracts the upstream CSS (linked stylesheets or inline <style> blocks), applies
+the reviewed replacements under fixtures/upstream-ui/overrides/, and
 emits Next-importable scoped stylesheets under web/src/app/upstream-css/.
 
 Every selector is prefixed with a per-page scope class (`.up-<scope>`) so
@@ -16,12 +17,15 @@ and deterministic; tests compare the committed output byte-for-byte.
 """
 from __future__ import annotations
 
+import argparse
+import json
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 ORIGINALS = REPO_ROOT / "fixtures" / "upstream-ui" / "original"
+OVERRIDES = REPO_ROOT / "fixtures" / "upstream-ui" / "overrides"
 OUT_DIR = REPO_ROOT / "web" / "src" / "app" / "upstream-css"
 
 # (scope class, source kind, source path)
@@ -125,12 +129,27 @@ def scope_css(css: str, scope: str) -> str:
     return "\n".join(render(parse(css), scope, 0)) + "\n"
 
 
+def apply_overrides(css: str, scope: str) -> str:
+    path = OVERRIDES / f"{scope}.json"
+    if not path.exists():
+        return css
+    for replacement in json.loads(path.read_text(encoding="utf-8"))["replacements"]:
+        before, after = replacement["before"], replacement["after"]
+        if not before or css.count(before) != 1:
+            raise ValueError(f"{scope}: reviewed CSS replacement no longer has one matching source")
+        css = css.replace(before, after, 1)
+    return css
+
+
 def main() -> int:
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out-dir", type=Path, default=OUT_DIR)
+    out_dir = parser.parse_args().out_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
     for scope, kind, rel_path in SOURCES:
-        css = extract_css(kind, rel_path)
+        css = apply_overrides(extract_css(kind, rel_path), scope)
         scoped = scope_css(css, scope)
-        (OUT_DIR / f"{scope}.css").write_text(scoped, encoding="utf-8")
+        (out_dir / f"{scope}.css").write_text(scoped, encoding="utf-8")
         print(f"{scope}.css  <-  {rel_path}  ({len(scoped)} chars)")
     return 0
 

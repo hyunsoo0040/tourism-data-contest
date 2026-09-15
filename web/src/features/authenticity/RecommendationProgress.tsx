@@ -6,7 +6,7 @@ export type RecommendationProgressState = { stage: RecommendationStage; startedA
 const steps: { stage: RecommendationStage; label: string; message: string }[] = [
   { stage: "PREFERENCES", label: "취향·여행 조건 확인", message: "입력한 취향과 여행 조건을 확인하고 있어요." },
   { stage: "MATCHING", label: "관광지 특성과 선호 비교", message: "관광지 특성과 나의 선호를 비교하고 있어요." },
-  { stage: "READY", label: "추천 결과 준비", message: "추천이 완료되어 결과 화면으로 이동합니다." },
+  { stage: "DETAILS", label: "사진·설명 준비", message: "추천 장소의 사진과 설명을 준비하고 있어요." },
 ];
 
 export function RecommendationProgress({ stage, startedAt }: RecommendationProgressState) {
@@ -18,11 +18,11 @@ export function RecommendationProgress({ stage, startedAt }: RecommendationProgr
     const timer = window.setInterval(tick, 1000);
     return () => window.clearInterval(timer);
   }, [startedAt, stage]);
-  const current = steps.findIndex(step => step.stage === stage);
+  const current = stage === "READY" ? steps.length : steps.findIndex(step => step.stage === stage);
   const elapsed = seconds < 60 ? `${seconds}초` : `${Math.floor(seconds / 60)}분 ${seconds % 60}초`;
   return <section className={styles.progress} aria-label="추천 진행 상황">
     <div className={styles.heading}><strong>추천 진행 상황</strong><span className={styles.elapsed} aria-live="off">{elapsed} 경과</span></div>
-    <p className={styles.message} role="status" aria-live="polite" aria-atomic="true">{steps[current]!.message}</p>
+    <p className={styles.message} role="status" aria-live="polite" aria-atomic="true">{stage === "READY" ? "추천이 완료되어 결과 화면으로 이동합니다." : steps[current]!.message}</p>
     <ol className={styles.steps}>
       {steps.map((step, index) => {
         const done = index < current || stage === "READY";

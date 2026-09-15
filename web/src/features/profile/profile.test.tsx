@@ -240,7 +240,7 @@ describe("/profile result, reload, and recovery", () => {
 
     await renderProfile();
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
     expect(screen.queryByText("대표 유형 점수")).toBeNull();
     expect(document.querySelector(".match-card > b")).toBeNull();
     expect(screen.getByText("무드 위버").tagName).toBe("B");
@@ -277,12 +277,13 @@ describe("/profile result, reload, and recovery", () => {
 
     expect(await screen.findByRole("heading", { name: "사진으로 전하는 취향" })).toBeTruthy();
     expect(router.state.location.pathname).toBe("/photo");
-    expect(screen.queryByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeNull();
+    expect(screen.queryByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeNull();
   });
 
   function scenarioWire(current: PreferenceProfile) {
     const inputs: Record<string, unknown>[] = [];
     const runs: Record<string, unknown>[] = [];
+    const run = { profile_id: "a".repeat(64), intent_sha256: "b".repeat(64), run_sha256: "c".repeat(64), ranking_version: "scenario-axis-bridge-ranking.v1", state: "EMPTY", result_count: 0, items: [] };
     const fetchMock = vi.fn().mockImplementation(async (input: RequestInfo | URL, init?: RequestInit) => {
       const path = String(input);
       if (path === `/v1/preference-profiles/${current.profile_id}`) return jsonResponse(current);
@@ -293,8 +294,9 @@ describe("/profile result, reload, and recovery", () => {
       }
       if (path === "/v1/authenticity/runs" && init?.method === "POST") {
         runs.push(JSON.parse(String(init.body)));
-        return jsonResponse({ profile_id: "a".repeat(64), intent_sha256: "b".repeat(64), run_sha256: "c".repeat(64), ranking_version: "scenario-axis-bridge-ranking.v1" });
+        return jsonResponse(run);
       }
+      if (path === `/v1/authenticity/runs/${run.run_sha256}`) return jsonResponse(run);
       if (path === "/v1/authenticity/saved") return jsonResponse([]);
       return new Promise<Response>(() => undefined);
     });
@@ -302,7 +304,7 @@ describe("/profile result, reload, and recovery", () => {
     return { inputs, runs, fetchMock };
   }
 
-  it("retries a failed scenario run with the same request IDs after explicit retry", async () => {
+  it.each(["creation", "preparation"])("retries a failed scenario %s with the same request IDs after explicit retry", async stage => {
     const current = profile({ profile_id: "profile-retry-scenario" });
     writeProfileReference(current.profile_id);
     const wire = scenarioWire(current), original = wire.fetchMock.getMockImplementation()!;
@@ -310,8 +312,9 @@ describe("/profile result, reload, and recovery", () => {
     wire.fetchMock.mockImplementation(async (path, init) => {
       if (String(path) === "/v1/authenticity/runs" && init?.method === "POST") {
         runBodies.push(JSON.parse(String(init.body)));
-        if (!failed) { failed = true; return jsonResponse({ detail: "일시적인 연결 실패" }, 503); }
+        if (stage === "creation" && !failed) { failed = true; return jsonResponse({ detail: "일시적인 연결 실패" }, 503); }
       }
+      if (stage === "preparation" && String(path) === `/v1/authenticity/runs/${"c".repeat(64)}` && !failed) { failed = true; return jsonResponse({ detail: "일시적인 연결 실패" }, 503); }
       return original(path, init);
     });
     const router = await renderProfile();
@@ -444,7 +447,7 @@ describe("/profile result, reload, and recovery", () => {
 
     await renderProfile();
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
     expect(fetchMock).toHaveBeenCalledWith(
       `/v1/preference-profiles/${maximumId}`,
       expect.any(Object),
@@ -480,7 +483,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(await screen.findByRole("alert")).toHaveProperty("textContent", expect.stringContaining("프로필을 만들지 못했어요"));
     fireEvent.click(screen.getByRole("button", { name: "다시 시도하기" }));
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
     expect(submissions).toHaveLength(2);
     expect(submissions[0]?.request_id).toBe(submissions[1]?.request_id);
     expect(JSON.parse(window.localStorage.getItem(PROFILE_STORAGE_KEY) ?? "null").profile_id).toBe("profile-rebuilt");
@@ -507,7 +510,7 @@ describe("/profile result, reload, and recovery", () => {
     await renderProfile();
     fireEvent.click(await screen.findByRole("button", { name: "프로필 다시 만들기" }));
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
     expect(await screen.findByText(STORAGE_MESSAGES.unavailable)).toBeTruthy();
   });
 
@@ -521,7 +524,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(await screen.findByRole("alert")).toHaveProperty("textContent", expect.stringContaining("프로필 형식을 확인하지 못했어요"));
     expect(screen.queryByRole("meter")).toBeNull();
     fireEvent.click(screen.getByRole("button", { name: "다시 시도하기" }));
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
   });
 
   it("keeps a newer complete draft and offers recovery when the fetched profile echo is stale", async () => {
@@ -586,7 +589,7 @@ describe("/profile result, reload, and recovery", () => {
 
     await renderStrictProfile();
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
     expect(callCount).toBe(2);
     expect(signals[0]?.aborted).toBe(true);
     expect(signals[1]?.aborted).toBe(false);
@@ -629,7 +632,7 @@ describe("/profile result, reload, and recovery", () => {
     await screen.findByRole("button", { name: "바로 추천 보기" });
     expect(screen.queryByRole("button", { name: "답변 수정하기" })).toBeNull();
     expect(screen.queryByRole("button", { name: "여행 조건 수정하기" })).toBeNull();
-    expect(screen.getByRole("button", { name: "사진 추천 페이지 열기" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "사진으로 추천받기" })).toBeTruthy();
     expect(screen.getByRole("button", { name: "처음부터 다시" })).toBeTruthy();
   });
 
@@ -648,7 +651,7 @@ describe("/profile result, reload, and recovery", () => {
     });
     vi.stubGlobal("fetch", fetchMock);
     const router = await renderProfile();
-    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
+    await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" });
     await act(async () => router.navigate("/quiz", { state: { questionOrdinal: 1, editingProfile: true } }));
     await screen.findByText(FRONTEND_QUESTIONNAIRE.questions[0]!.title_ko);
     fireEvent.click(screen.getAllByRole("radio")[1]);
@@ -670,7 +673,7 @@ describe("/profile result, reload, and recovery", () => {
     window.localStorage.setItem("another-app", "keep");
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(jsonResponse(profile())));
     const router = await renderProfile();
-    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
+    await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" });
 
     const trigger = screen.getByRole("button", { name: "처음부터 다시" });
     fireEvent.click(trigger);
@@ -723,7 +726,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
 
     await renderProfile();
 
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
     expect(screen.getAllByRole("meter")).toHaveLength(3);
     expect(screen.queryByText(STORAGE_MESSAGES.invalid)).toBeNull();
   });
@@ -735,7 +738,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
 
     await renderProfile();
 
-    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
+    await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" });
     // No v2 draft is seeded from v1 answers.
     expect(window.localStorage.getItem(DRAFT_STORAGE_KEY)).toBeNull();
   });
@@ -747,7 +750,7 @@ describe("/profile legacy questionnaire-v1 stored profiles", () => {
 
     await renderProfile();
 
-    await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" });
+    await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" });
     expect(screen.queryByText("기대 프로필을 다시 만들었어요")).toBeNull();
     expect(screen.queryByRole("button", { name: "다시 만들기" })).toBeNull();
   });
@@ -831,7 +834,7 @@ describe("/start profile edit mode", () => {
     fireEvent.click(screen.getByRole("button", { name: "수정 내용 반영하기" }));
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
-    expect(await screen.findByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeTruthy();
     expect(await screen.findByText(STORAGE_MESSAGES.unavailable)).toBeTruthy();
   });
 });

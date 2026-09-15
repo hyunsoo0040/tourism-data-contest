@@ -1,0 +1,14 @@
+{
+  "source_commit": "38963ac22201eed4ab890b56472e999874ce3fd5",
+  "description": "Preserve the reviewed ui-mock mobile start button and menu ordering when regenerating scoped CSS, without changing the frozen original fixture.",
+  "replacements": [
+    {
+      "before": ".menu-toggle{display:flex}",
+      "after": ".nav{gap:8px}\n  .nav-cta{order:1;\n    margin-left:auto;}\n  .menu-toggle{order:2}\n  .menu-toggle{display:flex}"
+    },
+    {
+      "before": ".nav-cta{display:none}",
+      "after": ".nav-cta{display:inline-flex;\n    align-items:center;\n    padding:10px 14px;\n    font-size:14px;}"
+    }
+  ]
+}

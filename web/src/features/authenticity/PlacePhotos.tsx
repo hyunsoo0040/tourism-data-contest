@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import styles from "./PlacePhotos.module.css";
 
 export function photoUrl(value?: string): string | null {
@@ -13,16 +13,32 @@ export function photoUrl(value?: string): string | null {
   } catch { return null; }
 }
 
-export function PlacePhotos({ name, photos, loading = false, unavailable = false, size = "card", gallery = true }: {
+// Move the already-decoded image into its frame before paint. Recreating an img
+// would revalidate no-cache photos and reintroduce loading after navigation.
+function PreparedPhoto({ image, alt }: { image: HTMLImageElement; alt: string }) {
+  const host = useRef<HTMLSpanElement>(null);
+  useLayoutEffect(() => {
+    const frame = host.current!;
+    image.className = styles.image!;
+    image.alt = alt;
+    frame.appendChild(image);
+    return () => { if (image.parentNode === frame) frame.removeChild(image); };
+  }, [image, alt]);
+  return <span ref={host} style={{ display: "contents" }} />;
+}
+
+export function PlacePhotos({ name, photos, loading = false, unavailable = false, size = "card", gallery = true, preparedImages, failedUrls = [] }: {
   name: string;
   photos: readonly Readonly<Record<string, string>>[];
   loading?: boolean;
   unavailable?: boolean;
   size?: "card" | "full";
   gallery?: boolean;
+  preparedImages?: Readonly<Record<string, HTMLImageElement>>;
+  failedUrls?: readonly string[];
 }) {
   const [selected, setSelected] = useState<string | null>(null);
-  const [failed, setFailed] = useState<Set<string>>(() => new Set());
+  const [failed, setFailed] = useState<Set<string>>(() => new Set(failedUrls));
   const all = photos.flatMap<Record<string, string>>(photo => {
     const url = photoUrl(photo.url);
     return url ? [{ ...photo, url }] : [];
@@ -34,7 +50,7 @@ export function PlacePhotos({ name, photos, loading = false, unavailable = false
 
   return <figure className={styles.gallery} data-size={size} aria-label={`${name} 사진`}>
     <div className={styles.frame}>
-      {active ? <img className={styles.image} src={active.url}
+      {active ? preparedImages?.[active.url] ? <PreparedPhoto image={preparedImages[active.url]!} alt={`${name}의 공식 관광사진 ${position}`} /> : <img className={styles.image} src={active.url}
         alt={`${name}의 공식 관광사진 ${position}`} loading="lazy" decoding="async"
         onError={() => setFailed(previous => new Set(previous).add(active.url))} />
         : <div className={styles.empty} role={loading ? "status" : undefined}>

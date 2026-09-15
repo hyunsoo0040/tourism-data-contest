@@ -75,7 +75,7 @@ async function createV2Profile(page: Page) {
   }
   await profileResponse;
   await expect(page).toHaveURL(/\/profile$/);
-  await expect(page.getByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeVisible();
 }
 
 test.describe("07-02 upstream main page", () => {

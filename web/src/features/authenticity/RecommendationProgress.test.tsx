@@ -17,6 +17,9 @@ it("keeps the current stage while time passes, announces a long wait, and stops 
   expect(screen.getByText("취향·여행 조건 확인").closest("li")?.getAttribute("data-state")).toBe("done");
   act(() => vi.advanceTimersByTime(45000));
   expect(screen.getByText("1분 1초 경과")).toBeTruthy();
+  view.rerender(<RecommendationProgress stage="DETAILS" startedAt={startedAt} />);
+  expect(screen.getByText("사진·설명 준비").closest("li")?.getAttribute("aria-current")).toBe("step");
+  expect(screen.getByText("관광지 특성과 선호 비교").closest("li")?.getAttribute("data-state")).toBe("done");
   view.rerender(<RecommendationProgress stage="READY" startedAt={startedAt} />);
   expect(screen.queryByText(/아직 응답을 기다리고 있어요/)).toBeNull();
   expect(vi.getTimerCount()).toBe(0);

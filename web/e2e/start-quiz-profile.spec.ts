@@ -101,7 +101,7 @@ async function expectDisplayedScores(page: Page, profile: PreferenceProfile) {
 async function expectInitialProfile(page: Page, profile: PreferenceProfile) {
   await expect(page).toHaveURL(/\/profile$/);
   await expectDisplayedScores(page, profile);
-  await expect(page.getByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeVisible();
   await expect(
     page.getByText(
       "나는 장면 속에 담긴 감정과 오래 머물 수 있는 순간에 끌려요.",

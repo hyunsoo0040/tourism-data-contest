@@ -2,6 +2,7 @@ import type { PreferenceProfile } from "../../api/api";
 import type { components } from "../../contracts/generated/api";
 import { readGroundedTripInput } from "../journey/groundedTrip";
 import { api, currentToken, ensureSession, json, type Intent, type Photo, type Run } from "./api";
+import { prepareScenario } from "./preparedScenario";
 
 export type ScenarioSubmission = components["schemas"]["ScenarioSubmission"];
 export const SCENARIO_PHOTO_KEY = "itda.scenario.confirmed-photo.v1";
@@ -44,7 +45,7 @@ export function scenarioInput(profile: PreferenceProfile, photo: Photo | null): 
 }
 
 let pendingMemory: { fingerprint: string; profileRequest: string; runRequest: string } | null = null;
-export type RecommendationStage = "PREFERENCES" | "MATCHING" | "READY";
+export type RecommendationStage = "PREFERENCES" | "MATCHING" | "DETAILS" | "READY";
 export async function recommendScenario(profile: PreferenceProfile, photo: Photo | null, signal: AbortSignal, onProgress?: (stage: RecommendationStage) => void): Promise<Run> {
   signal.throwIfAborted();
   onProgress?.("PREFERENCES");
@@ -66,6 +67,9 @@ export async function recommendScenario(profile: PreferenceProfile, photo: Photo
   if (run.profile_id !== intent.profile_id || run.intent_sha256 !== intent.intent_sha256 || run.ranking_version !== "scenario-axis-bridge-ranking.v1") {
     throw new Error("현재 답변과 추천 결과의 연결을 확인하지 못했어요. 다시 시도해 주세요.");
   }
+  signal.throwIfAborted();
+  onProgress?.("DETAILS");
+  await prepareScenario(run, intent, signal);
   signal.throwIfAborted();
   pendingMemory = null;
   try { sessionStorage.removeItem(pendingKey); } catch { /* completed request remains idempotent */ }

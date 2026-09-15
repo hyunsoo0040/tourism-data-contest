@@ -46,7 +46,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     }
     await expect(page).toHaveURL(/\/profile$/);
     await expect(page.getByRole("meter")).toHaveCount(3);
-    await expect(page.getByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeVisible();
     expect(posts.filter(path => path === "/v1/authenticity/runs")).toHaveLength(0);
     await page.reload();
     const recommend = page.getByRole("button", { name: "바로 추천 보기", exact: true });

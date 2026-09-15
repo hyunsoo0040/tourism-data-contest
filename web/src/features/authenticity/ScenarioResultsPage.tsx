@@ -6,29 +6,33 @@ import { PlaceInformation } from "./PlaceInformation";
 import { ResultReason } from "./Journey";
 import { api, escapeId, json, type Detail, type Intent, type Run } from "./api";
 import { scenarioResultsPath, scenarioRunId } from "./scenario";
+import { clearPreparedScenario, readPreparedScenario } from "./preparedScenario";
 import { tripChoiceLabel, TRIP_FIELD_LABELS } from "../../content/journey.ko";
 import "./scenario.css";
 
 const AXES = { H: { label: "대상•원형형", color: "history" }, E: { label: "의미•이미지형", color: "emotion" }, R: { label: "자기•몰입형", color: "rest" } };
 const errorMessage = (reason: unknown) => reason instanceof Error ? reason.message : "추천을 불러오지 못했어요. 다시 시도해 주세요.";
 
-function ScenarioPlace({ item, runId, saved, saving, compared, compareFull, onSave, onCompare }: {
+function ScenarioPlace({ item, runId, saved, saving, compared, compareFull, onSave, onCompare, preparedDetail, failedPhotoUrls, preparedImages }: {
   item: Run["items"][number]; runId: string; saved: boolean; saving: boolean; compared: boolean; compareFull: boolean;
   onSave: () => void; onCompare: () => void;
+  preparedDetail?: Detail; failedPhotoUrls?: string[];
+  preparedImages?: Readonly<Record<string, HTMLImageElement>>;
 }) {
-  const [detail, setDetail] = useState<Detail | null>(null), [error, setError] = useState<string | null>(null), [attempt, setAttempt] = useState(0);
+  const [detail, setDetail] = useState<Detail | null>(preparedDetail ?? null), [error, setError] = useState<string | null>(null), [attempt, setAttempt] = useState(0);
   useEffect(() => {
+    if (preparedDetail && attempt === 0) return;
     const controller = new AbortController(); setDetail(null); setError(null);
     api<Detail>(`/runs/${escapeId(runId)}/places/${escapeId(item.place_id)}`, { signal: controller.signal })
       .then(value => { if (!controller.signal.aborted) setDetail(value); })
       .catch(reason => { if (!controller.signal.aborted) setError(errorMessage(reason)); });
     return () => controller.abort();
-  }, [runId, item.place_id, attempt]);
+  }, [runId, item.place_id, attempt, preparedDetail]);
   const href = `${scenarioResultsPath(runId)}/places/${escapeId(item.place_id)}`;
   return <article className="recommendation-card" data-recommendation-card data-scenario-place={item.place_id} data-details-loaded={Boolean(detail)}>
     <header className="recommendation-card__header"><h2>{item.rank}위 {item.name_ko}</h2><strong className="scenario-match">내 선호와 {item.score}% 연결</strong></header>
     <p className="recommendation-location">{item.region_name} · {item.category}</p>
-    <div className="scenario-place-media"><PlacePhotos name={item.name_ko} photos={detail?.photos ?? []} loading={!detail && !error} unavailable={Boolean(error)} />
+    <div className="scenario-place-media"><PlacePhotos name={item.name_ko} photos={detail?.photos ?? []} loading={!detail && !error} unavailable={Boolean(error)} preparedImages={preparedImages} failedUrls={failedPhotoUrls} />
       {detail ? <PlaceInformation detail={detail} /> : error ? <div role="status"><p>이 장소의 사진과 정보를 불러오지 못했어요. 추천 결과는 유지됩니다.</p><button className="control" onClick={() => setAttempt(value => value + 1)}>{item.name_ko} 정보 다시 불러오기</button></div> : <p role="status">장소 정보를 불러오고 있어요.</p>}
     </div>
     <section className="recommendation-axes" aria-label={`${item.name_ko} 장소의 경험 특성`}><h3>장소의 경험 특성</h3>
@@ -51,12 +55,21 @@ function ScenarioPlace({ item, runId, saved, saving, compared, compareFull, onSa
 
 export function ScenarioResultsPage() {
   const params = useParams(); const runId = scenarioRunId(params.runId);
-  const [run, setRun] = useState<Run | null>(null), [profile, setProfile] = useState<Intent | null>(null);
-  const [saved, setSaved] = useState<string[]>([]), [compare, setCompare] = useState<string[]>([]);
-  const [error, setError] = useState<string | null>(null), [actionError, setActionError] = useState<string | null>(null), [attempt, setAttempt] = useState(0);
+  return <ScenarioResults key={runId} runId={runId} />;
+}
+
+function ScenarioResults({ runId }: { runId: string | null }) {
+  const [prepared] = useState(() => readPreparedScenario(runId));
+  const [run, setRun] = useState<Run | null>(prepared?.run ?? null), [profile, setProfile] = useState<Intent | null>(prepared?.profile ?? null);
+  const [saved, setSaved] = useState<string[]>(prepared?.saved ?? []), [compare, setCompare] = useState<string[]>([]);
+  const [error, setError] = useState<string | null>(null), [actionError, setActionError] = useState<string | null>(prepared?.savedError ?? null), [attempt, setAttempt] = useState(0);
   const [saving, setSaving] = useState<string[]>([]);
   const saveRequests = useRef(new Map<string, AbortController>());
   useEffect(() => {
+    if (prepared && attempt === 0) {
+      clearPreparedScenario(prepared);
+      return () => { saveRequests.current.forEach(request => request.abort()); saveRequests.current.clear(); };
+    }
     const controller = new AbortController(); setRun(null); setProfile(null); setError(null); setSaved([]); setCompare([]); setSaving([]);
     if (!runId) { setError("추천 주소를 확인해 주세요."); return; }
     api<Run>(`/runs/${escapeId(runId)}`, { signal: controller.signal }).then(async value => {
@@ -68,7 +81,7 @@ export function ScenarioResultsPage() {
       .then(rows => { if (!controller.signal.aborted) setSaved(rows.filter(row => row.run_sha256 === runId).map(row => row.place_id)); })
       .catch(() => { if (!controller.signal.aborted) setActionError("저장한 장소 목록을 불러오지 못했어요. 다시 불러오면 확인할 수 있어요."); });
     return () => { controller.abort(); saveRequests.current.forEach(request => request.abort()); saveRequests.current.clear(); };
-  }, [runId, attempt]);
+  }, [runId, attempt, prepared]);
   async function save(placeId: string) {
     if (saveRequests.current.has(placeId)) return;
     const controller = new AbortController(); saveRequests.current.set(placeId, controller);
@@ -96,7 +109,7 @@ export function ScenarioResultsPage() {
     </details>}
     {run?.state === "EMPTY" && <section className="profile-state"><h2>이 조건에 맞는 여행지가 아직 충분하지 않아요.</h2><p>지역이나 필수 시설을 조정해 주세요. 근거가 없는 장소로 결과를 채우지 않아요.</p><Link to="/start?mode=edit">여행 조건 수정</Link></section>}
     {run?.state === "LIMITED" && <p role="status">조건과 근거를 확인한 {run.result_count}곳을 찾았어요.</p>}
-    <section id="recommendation-list" className="recommendation-list" aria-label="추천 장소">{run?.items.map(item => <ScenarioPlace key={`${runId}:${item.place_id}`} item={item} runId={runId!} saved={saved.includes(item.place_id)} saving={saving.includes(item.place_id)} compared={compare.includes(item.place_id)} compareFull={compare.length >= 3} onSave={() => save(item.place_id)} onCompare={() => setCompare(value => value.includes(item.place_id) ? value.filter(id => id !== item.place_id) : value.length < 3 ? [...value, item.place_id] : value)} />)}</section>
+    <section id="recommendation-list" className="recommendation-list" aria-label="추천 장소">{run?.items.map(item => <ScenarioPlace key={`${runId}:${item.place_id}`} item={item} runId={runId!} preparedDetail={attempt === 0 ? prepared?.details[item.place_id] : undefined} preparedImages={attempt === 0 ? prepared?.images[item.place_id] : undefined} failedPhotoUrls={prepared?.failedPhotoUrls} saved={saved.includes(item.place_id)} saving={saving.includes(item.place_id)} compared={compare.includes(item.place_id)} compareFull={compare.length >= 3} onSave={() => save(item.place_id)} onCompare={() => setCompare(value => value.includes(item.place_id) ? value.filter(id => id !== item.place_id) : value.length < 3 ? [...value, item.place_id] : value)} />)}</section>
     {compare.length > 0 && <aside className="scenario-compare-tray" aria-label="장소 비교"><span>{compare.length}/3곳 선택</span><Link className="button button--primary" to={`${scenarioResultsPath(runId!)}/compare?places=${encodeURIComponent(compare.join(","))}`}>선택한 장소 비교하기</Link></aside>}
   </article></RecommendationShell>;
 }

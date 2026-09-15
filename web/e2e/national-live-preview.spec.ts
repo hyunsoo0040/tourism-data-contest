@@ -113,7 +113,7 @@ function assertItemSource(item: GroundedItem, candidate: NationalCandidate, regi
 
 async function verifyRun(page: Page, profile: Profile, candidate: NationalCandidate, regionCode: string | null,
   viewportName: string, scope: "region" | "nationwide") {
-  await expect(page.getByRole("heading", { name: "당신이 기대하는 여행의 시간" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "여행에서의 진짜다움(진정성)이란?" })).toBeVisible();
   await expect(page.getByText("취향에 맞는 볼거리·체험을 추천해요.")).toBeVisible();
   await expect(page.getByRole("combobox", { name: "추천 여행 목적" })).toHaveCount(0);
   const createdPromise = page.waitForResponse((response) => response.request().method() === "POST" &&
