@@ -23,7 +23,7 @@ import examples from "../../content/public-place-examples.json";
 import "../styles/place-examples.css";
 import "../styles/phone-preview.css";
 import { PlacePhotos } from "../../features/authenticity/PlacePhotos";
-import { placeMapUrl } from "../../features/authenticity/placeMetadata";
+import { kakaoMapSearchUrl } from "../../features/authenticity/placeMetadata";
 
 const MAIN_NAV_ITEMS = [
   { id: "type", label: "여행 유형" },
@@ -178,7 +178,7 @@ function PhonePreview({ selectedType }: { selectedType: RecommendationType }) {
             <div className="bar" aria-hidden="true">
               <i id="matchBar" style={{ transform: `scaleX(${data.places[0].axis_value / 100})` }}></i>
             </div>
-            <p id="matchText">선택한 유형을 가정한 일치도 예시예요. 나의 일치도는 테스트 후 확인할 수 있어요.</p>
+            <p id="matchText">선택한 유형을 가정한 일치도 예시예요.<br/> 나의 일치도는 테스트 후 확인할 수 있어요.</p>
           </div>
         </div>
       </div>
@@ -327,7 +327,7 @@ export function UpstreamMainPage() {
           <section className="hero reveal visible">
             <div className="wrap hero-grid">
               <div>
-                <div className="badge"><span></span> 전국 관광데이터 기반 개인 맞춤 여행 큐레이션</div>
+                <div className="badge"><span className="badge-dot"></span><span className="badge-copy">전국 관광데이터 기반 개인 맞춤 여행 큐레이션</span></div>
                 <h1>
                   <span className="hero-title-line">가장 나다운 여행과</span>
                   <span className="hero-title-line">
@@ -354,16 +354,16 @@ export function UpstreamMainPage() {
                 </div>
                 <p></p>
               </div>
-              <div className="type-visual" aria-label="어떤 사람은 장소에 담긴 이야기, 분위기와 이미지, 조용히 머무는 시간에 끌립니다">
+              <div className="type-visual" aria-label="어떤 사람은 장소 자체의 고유한 모습, 사회적으로 형성된 장소의 모습, 그곳에서 경험하는 나 자신에 끌립니다">
                 <strong className="type-visual__word type-visual__word--start">어떤 사람은</strong>
                 <div className={`type-visual__reasons type-visual__reasons--${activeTypeReason}`}>
-                  <span className={activeTypeReason === 0 ? "is-active" : undefined}>장소에 담긴 이야기에</span>
-                  <span className={activeTypeReason === 1 ? "is-active" : undefined}>분위기와 이미지에</span>
-                  <span className={activeTypeReason === 2 ? "is-active" : undefined}>또는 조용히 머무는 시간에</span>
+                  <span className={activeTypeReason === 0 ? "is-active" : undefined}>장소 자체의 고유한 모습에</span>
+                  <span className={activeTypeReason === 1 ? "is-active" : undefined}>사회적으로 형성된 장소의 모습에</span>
+                  <span className={activeTypeReason === 2 ? "is-active" : undefined}>그곳에서 경험하는 나 자신에</span>
                 </div>
                 <strong className="type-visual__word type-visual__word--end">끌립니다.</strong>
               </div>
-              <p className="type-summary">IT-DA는 이러한 차이를 세 가지 여행 경험 유형으로 나누어 살펴봅니다.</p>
+              <p className="type-summary">IT-DA는 이러한 여행의 관점 차이를 세 가지 경험 유형으로 살펴봅니다.</p>
               <div className="cards">
                 <article className="card"><div className="icon orange">原</div><h3>대상·원형형</h3><p>관광 대상이 지닌 원형과 고유한 특성, 그 안에 담긴 역사적·문화적 가치를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
                 <article className="card"><div className="icon blue">像</div><h3>의미·이미지형</h3><p>장소가 가진 분위기와 이미지, 미디어와 콘텐츠를 통해 형성된 의미를 중요하게 여기는 여행자를 위한 유형입니다.</p></article>
@@ -440,7 +440,7 @@ export function UpstreamMainPage() {
                           <h3>{place.name}</h3>
                           <p className="place-region">{place.region} · {place.category}</p>
                           <div className="place-address"><span>주소</span><p>{place.address}</p></div>
-                          <a className="place-map" href={placeMapUrl(place.name, place.address)} target="_blank" rel="noreferrer">지도에서 보기</a>
+                          <a className="place-map" href={kakaoMapSearchUrl(place.name, place.address)} target="_blank" rel="noreferrer">지도에서 보기</a>
                         </div>
                       </article>
                     </div>

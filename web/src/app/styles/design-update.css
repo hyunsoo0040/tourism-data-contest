@@ -345,10 +345,10 @@
   }
 }
 
-/* Desktop main header: scale the original expanded presentation down by 25%. */
+/* Desktop main header: keep the expanded presentation compact. */
 @media (min-width:921px) {
   .up-main .nav {
-    height:86px;
+    height:80px;
   }
 
   .up-main .main-page-logo {
@@ -372,5 +372,15 @@
   .up-main .nav-cta {
     padding:14px 21px;
     font-size:20px;
+  }
+
+  /* Shift the preview only; its silhouette and dimensions stay intact. */
+  .up-main .phone {
+    width:min(360px, 92%);
+    transform:translateY(-68px) scale(.93) rotate(3deg);
+  }
+
+  .up-main .blob {
+    transform:translateY(-68px) rotate(-8deg);
   }
 }

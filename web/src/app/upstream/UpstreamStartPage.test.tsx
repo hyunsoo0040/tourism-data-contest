@@ -86,7 +86,7 @@ describe("resuming a saved test through trip conditions", () => {
     fireEvent.click(screen.getByRole("button", { name: "처음부터 시작하기" }));
     fireEvent.click(within(screen.getByRole("dialog")).getByRole("button", { name: "계속 작성하기" }));
     expect(readProfileReference().profile?.profile_id).toBe(previous.profile_id);
-    expect(screen.getByRole("button", { name: "여행 조건 반영하고 프로필 보기" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "여행 조건 그대로 유지" })).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "처음부터 시작하기" }));
     fireEvent.click(screen.getByRole("button", { name: "모두 지우고 새로 시작하기" }));
     await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
@@ -105,7 +105,7 @@ describe("resuming a saved test through trip conditions", () => {
     writeProfileReference(previous.profile_id);
     await renderResume();
     expect(screen.getByRole("button", { name: "처음부터 시작하기" })).toBeTruthy();
-    expect(screen.getByRole("button", { name: "여행 조건 반영하고 프로필 보기" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "여행 조건 그대로 유지" })).toBeTruthy();
   });
 
   it("retains entered conditions after a failed lookup and allows retry", async () => {

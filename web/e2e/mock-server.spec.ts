@@ -51,11 +51,11 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await expect(start).toHaveAttribute("href", "/start");
     await start.click();
     await expect(page).toHaveURL(/\/start$/);
-    await expect(page.getByRole("button", { name: "여행 조건 반영하고 프로필 보기", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "여행 조건 그대로 유지", exact: true })).toBeVisible();
     await page.getByLabel("방문 날짜 (선택)").fill("2099-10-03");
     await page.getByRole("radio", { name: "친구", exact: true }).check();
     const updatedRequest = page.waitForRequest((request) => request.method() === "POST" && new URL(request.url()).pathname === "/v1/preference-profiles");
-    await page.getByRole("button", { name: "여행 조건 반영하고 프로필 보기", exact: true }).click();
+    await page.getByRole("button", { name: "여행 조건 그대로 유지", exact: true }).click();
     const updatedBody = (await updatedRequest).postDataJSON();
     expect(updatedBody.answers).toEqual(previousAnswers);
     expect(updatedBody.trip_conditions).toMatchObject({ visit_date: "2099-10-03", companion: "FRIEND_OR_PARTNER" });

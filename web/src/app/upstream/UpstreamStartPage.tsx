@@ -137,7 +137,7 @@ export function UpstreamStartPage() {
                 onReset={resetTrip}
                 allowRestart={resumeEnabled}
                 onSubmit={(conditions) => void submitTrip(conditions)}
-                primaryLabel={resumeEnabled ? "여행 조건 반영하고 프로필 보기" : JOURNEY_COPY.start.primaryLabel}
+                primaryLabel={resumeEnabled ? "여행 조건 그대로 유지" : JOURNEY_COPY.start.primaryLabel}
                 busy={busy}
                 requestError={requestError}
               />

@@ -15,7 +15,10 @@
 .up-main .phone-preview .type-card.is-active{background:#fff8f0;border-color:#d89b73}
 .up-main .phone-preview .type-card:hover{background:#fff1e8}
 .up-main .phone-preview button:focus-visible{outline:3px solid #246fcd;outline-offset:3px}
-.up-main .phone-preview .match strong{display:block;min-height:1.5em;line-height:1.5}
+.up-main .phone-preview .match{display:grid;grid-template-columns:minmax(0,1fr);align-items:start}
+.up-main .phone-preview .match strong{display:block;width:calc(100% - 5px);min-height:1.5em;margin:0 0 0 5px;padding:0;line-height:1.5}
+.up-main .phone-preview .match .bar{width:calc(100% - 3px);margin:12px 0 0 3px}
+.up-main .phone-preview .match p{width:calc(100% - 6px);margin:10px 0 0 6px;padding:0;text-align:left}
 .up-main .phone-preview .bar i{width:100%;transform-origin:left;transition:transform 300ms cubic-bezier(.16,1,.3,1)}
 .up-main .phone-preview-copy{animation:phone-preview-change 300ms cubic-bezier(.16,1,.3,1)}
 .up-main .phone-preview-controls{display:flex;justify-content:center;min-height:44px;margin-top:6px;font-size:12px;color:#526176}
