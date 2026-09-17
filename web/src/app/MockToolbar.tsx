@@ -25,7 +25,7 @@ export function MockToolbar() {
     finally { setBusy(false); }
   }
   return <aside className={styles.bar} aria-label="UI 목업 설정">
-    <div><strong>UI 목업 · 실제 추천이 아닙니다</strong><span>공개 장소·사진 5곳의 고정 예시 · 답변·지역·시설 조건은 순위에 미반영 · 사진 분석은 미지원 · 프로필에서 추천을 확인하세요</span></div>
+    <div><strong>UI 목업 · 실제 추천이 아닙니다</strong><span>공개 장소·사진 5곳의 고정 예시 · 답변·지역·사진은 순위에 미반영 · 사진 분석은 샘플 응답</span></div>
     <label>추천 상태 <select value={scenario} disabled={busy} onChange={(e) => void change(e.target.value)}>
       <option value="normal">정상 · 장소 예시 5곳</option><option value="empty">추천 부족</option><option value="error">서버 오류</option>
     </select></label>

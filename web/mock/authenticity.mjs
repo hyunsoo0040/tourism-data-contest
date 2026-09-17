@@ -1,11 +1,12 @@
 import { randomUUID } from "node:crypto";
 import fixture from "../src/features/authenticity/__fixtures__/prepared-scenario.json" with { type: "json" };
+import { photoMock, hasConfirmedPhoto } from "./photos.mjs";
 import { canonical, hash } from "./data.mjs";
 
 // Published place snapshots and bundled photos, with fixed preview ranking.
 // This mock never runs analysis or claims to apply the submitted travel filters.
 export const previewInfo = {
-  scope: "PUBLIC", places: fixture.details.length, photo_enabled: false,
+  scope: "PUBLIC", places: fixture.details.length, photo_enabled: true,
   release_sha256: hash({ mock: "published-place-preview-v1" }),
   regions: [
     { code: "11", name: "서울특별시", places: 1 },
@@ -21,7 +22,7 @@ export function authenticityMock({ req, url, parts, body, session, send }) {
   const reply = (status, value) => { send(status, value); return true; };
   const path = parts.slice(2);
   const method = req.method;
-  session.authenticity ??= { token: null, profiles: new Map(), runs: new Map(), saved: new Map() };
+  session.authenticity ??= { token: null, profiles: new Map(), runs: new Map(), saved: new Map(), photos: new Map() };
   const data = session.authenticity;
   if (method === "GET" && path.join("/") === "info") return reply(200, previewInfo);
   if (method === "POST" && path.join("/") === "sessions") {
@@ -29,6 +30,7 @@ export function authenticityMock({ req, url, parts, body, session, send }) {
     return reply(200, { token: data.token, session_id: hash({ mockSession: data.token }), expires_at: new Date(Date.now() + 86400000).toISOString() });
   }
   if (!data.token || req.headers.authorization !== `Bearer ${data.token}`) return reply(401, { detail: "목업 세션이 만료됐어요. 추천 버튼을 다시 눌러 주세요." });
+  if (photoMock({ path, method, body, data, scenario: session.scenario, reply })) return true;
   if (method === "DELETE" && path.join("/") === "session") {
     delete session.authenticity;
     return reply(200, { deleted: true });
@@ -43,7 +45,8 @@ export function authenticityMock({ req, url, parts, body, session, send }) {
     let response;
     if (path[0] === "scenario-profiles") {
       if (body.schema_version !== "scenario-expectation-bridge.v1" || !body.trip_conditions || !body.answers?.q12) return reply(422, { detail: "상황형 답변을 확인해 주세요." });
-      if (body.visual_input_kind !== "NONE") return reply(503, { detail: "목업에서는 사진 분석을 건너뛰어 주세요." });
+      if (!["NONE", "CONFIRMED_PHOTO"].includes(body.visual_input_kind)) return reply(422, { detail: "지원하지 않는 목업 사진 입력입니다." });
+      if (body.visual_input_kind === "CONFIRMED_PHOTO" && !hasConfirmedPhoto(data, body)) return reply(422, { detail: "목업 사진을 다시 선택하고 분위기를 반영해 주세요." });
       const profile = structuredClone(fixture.profile);
       profile.submission = body;
       profile.created_at = new Date().toISOString();

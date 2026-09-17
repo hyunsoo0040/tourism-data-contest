@@ -17,11 +17,9 @@ import { STORAGE_MESSAGES } from "../../app/storage";
 import { ResetDraftDialog } from "../profile/ResetDraftDialog";
 import { localDate } from "./tripDate";
 import {
-  FACILITY_CHOICES,
   readGroundedTripInput,
   resetGroundedTripInput,
   writeGroundedTripInput,
-  type RequiredFacility,
 } from "./groundedTrip";
 import { useTravelRegions } from "../../api/recommendation-regions";
 
@@ -122,7 +120,6 @@ export function TripConditionForm({
   const [groundedDraft] = useState(readGroundedTripInput);
   const travelRegions = useTravelRegions();
   const [regionCode, setRegionCode] = useState(groundedDraft.region_code ?? "");
-  const [requiredFacilities, setRequiredFacilities] = useState<RequiredFacility[]>(groundedDraft.required_facilities);
   const [exactVisitTime, setExactVisitTime] = useState(groundedDraft.visit_time ?? "");
   const [groundedError, setGroundedError] = useState<string | null>(null);
   const recoveryResetRef = useRef<HTMLButtonElement>(null);
@@ -201,7 +198,7 @@ export function TripConditionForm({
       region_code: regionCode || null,
       visit_date: values.visit_date ?? null,
       visit_time: exactVisitTime || null,
-      required_facilities: requiredFacilities,
+      required_facilities: [],
     })) {
       setGroundedError("선택한 추가 여행 조건을 저장하지 못했어요. 방문 시간과 브라우저 저장 설정을 확인해 주세요.");
       return;
@@ -348,24 +345,6 @@ export function TripConditionForm({
         </fieldset>
 
         <ChoiceGroup name="companion" register={register} error={errors.companion?.message} retainedGroup={retainedGroup} />
-        <fieldset className="choice-group" aria-describedby="facility-preferences-help">
-          <legend>{JOURNEY_COPY.facilities.legend}</legend>
-          <p id="facility-preferences-help">{JOURNEY_COPY.facilities.help}</p>
-          <div className="choice-grid">
-            {FACILITY_CHOICES.map((choice) => (
-              <label className="choice-card" key={choice.id}>
-                <input
-                  type="checkbox"
-                  checked={requiredFacilities.includes(choice.id)}
-                  onChange={(event) => setRequiredFacilities((current) => event.target.checked
-                    ? [...current, choice.id]
-                    : current.filter((id) => id !== choice.id))}
-                />
-                <span>{choice.label}</span>
-              </label>
-            ))}
-          </div>
-        </fieldset>
         <ChoiceGroup name="transport" register={register} error={errors.transport?.message} />
         <ChoiceGroup
           name="walking_tolerance"
@@ -383,7 +362,7 @@ export function TripConditionForm({
           error={errors.crowd_avoidance?.message}
         />
 
-        <p className="privacy-note">지역과 필수 시설은 추천 조건으로 적용해요. 날짜·시간·동행·이동·걷기·실내외·혼잡 선호는 방문 계획에 함께 보관하며, 현재 점수나 실시간 방문 가능 여부를 바꾸지는 않아요.</p>
+        <p className="privacy-note">지역은 추천 조건으로 적용해요. 날짜·시간·동행·이동·걷기·실내외·혼잡 선호는 방문 계획에 함께 보관하며, 현재 점수나 실시간 방문 가능 여부를 바꾸지는 않아요.</p>
 
         <div className="start-action-bar">
           {allowRestart ? (
@@ -413,7 +392,6 @@ export function TripConditionForm({
               setGroundedError("추가 여행 조건을 지우지 못했어요. 브라우저 저장 설정을 확인해 주세요.");
               return false;
             }
-            setRequiredFacilities([]);
             setRegionCode("");
             setExactVisitTime("");
             setGroundedError(null);

@@ -3,6 +3,15 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import styles from "./PlacePhotos.module.css";
 
+const licenseNames: Record<string, string> = {
+  KOGL_TYPE_0: "공공누리 제0유형",
+  KOGL_TYPE_1: "공공누리 제1유형 · 출처표시",
+  KOGL_TYPE_2: "공공누리 제2유형 · 출처표시·비상업적 이용",
+  KOGL_TYPE_3: "공공누리 제3유형 · 출처표시·변경금지",
+  KOGL_TYPE_4: "공공누리 제4유형 · 출처표시·비상업적 이용·변경금지",
+};
+const noDerivatives = (license?: string) => ["KOGL_TYPE_3", "KOGL_TYPE_4", "Type3", "Type4"].includes(license ?? "");
+
 export function photoUrl(value?: string): string | null {
   if (!value) return null;
   if (value.startsWith("/tourism/") && !value.includes("..")) return value;
@@ -49,13 +58,15 @@ export function PlacePhotos({ name, photos, loading = false, unavailable = false
   const position = active ? all.findIndex(photo => photo.url === active.url) + 1 : 0;
   const original = photoUrl(active?.original_url ?? active?.url);
   const attribution = active?.attribution_ko || "공식 관광사진";
+  const restricted = active?.license && !["KOGL_TYPE_0", "KOGL_TYPE_1"].includes(active.license);
+  const source = photoUrl(active?.source_url);
   const captionDetails = [
-    captionMode === "full" && (active?.license === "KOGL_TYPE_1" ? "공공누리 제1유형" : active?.license),
+    (captionMode === "full" || restricted) && (licenseNames[active?.license ?? ""] ?? active?.license),
     gallery && all.length > 1 && `${position}/${all.length}`,
   ].filter(Boolean).join(" · ");
 
   return <figure className={styles.gallery} data-size={size} aria-label={`${name} 사진`}>
-    <div className={styles.frame}>
+    <div className={styles.frame} data-preserve-original={noDerivatives(active?.license) || undefined}>
       {active ? preparedImages?.[active.url] ? <PreparedPhoto image={preparedImages[active.url]!} alt={`${name}의 공식 관광사진 ${position}`} /> : <img className={styles.image} src={active.url}
         alt={`${name}의 공식 관광사진 ${position}`} loading="lazy" decoding="async"
         onError={() => setFailed(previous => new Set(previous).add(active.url))} />
@@ -67,15 +78,17 @@ export function PlacePhotos({ name, photos, loading = false, unavailable = false
     {active && <>
       {gallery && available.length > 1 && <div className={styles.thumbnails} aria-label={`${name} 사진 선택`}>
         {available.map(photo => <button key={photo.url} type="button" className={styles.thumbnail}
+          data-preserve-original={noDerivatives(photo.license) || undefined}
           aria-label={`${name} 사진 ${all.findIndex(p => p.url === photo.url) + 1} 보기`}
           aria-pressed={photo.url === active.url} onClick={() => setSelected(photo.url)}>
           <img src={photo.url} alt="" loading="lazy" decoding="async" />
         </button>)}
       </div>}
       <figcaption className={styles.caption}>
-        <span>{captionMode === "source-only" ? attribution.split(" · ")[0] : attribution}</span>
+        <span>{captionMode === "source-only" && !restricted ? attribution.split(" · ")[0] : attribution}</span>
         <span>{captionDetails}
-          {original && <>{captionDetails && " · "}<a href={original} target="_blank" rel="noreferrer">원본 사진</a></>}
+          {source && <>{captionDetails && " · "}<a href={source} target="_blank" rel="noreferrer">출처</a></>}
+          {original && <>{(captionDetails || source) && " · "}<a href={original} target="_blank" rel="noreferrer">원본 사진</a></>}
         </span>
       </figcaption>
     </>}

@@ -74,7 +74,7 @@ describe("separate explicit trip context", () => {
   });
 });
 
-describe("explicit facilities in the trip form", () => {
+describe("trip form without facility filters", () => {
   function form(onSubmit = vi.fn()) {
     render(<TripConditionForm
       defaultValues={{ visit_date: "2099-10-03", visit_time: "DAYTIME", companion: "WITH_SENIORS",
@@ -87,8 +87,7 @@ describe("explicit facilities in the trip form", () => {
 
   it("does not infer facilities from seniors and preserves the existing profile submission shape", async () => {
     const onSubmit = form();
-    expect(screen.getAllByRole("checkbox").every((input) => !(input as HTMLInputElement).checked)).toBe(true);
-    fireEvent.click(screen.getByRole("checkbox", { name: "장애인 화장실" }));
+    expect(screen.queryAllByRole("checkbox")).toHaveLength(0);
     fireEvent.change(screen.getByLabelText("정확한 방문 시간 (선택)"), { target: { value: "14:30" } });
     fireEvent.click(screen.getByRole("button", { name: "취향 테스트 시작하기" }));
     await waitFor(() => expect(onSubmit).toHaveBeenCalledTimes(1));
@@ -96,16 +95,17 @@ describe("explicit facilities in the trip form", () => {
       companion: "WITH_SENIORS", transport: "CAR_OR_TAXI", walking_tolerance: "WITHIN_30_MINUTES",
       indoor_outdoor_preference: "NO_PREFERENCE", crowd_avoidance: "HIGH" });
     expect(readGroundedTripInput()).toEqual({ visit_date: "2099-10-03", visit_time: "14:30",
-      required_facilities: ["accessible_toilet"] });
+      required_facilities: [] });
   });
 
-  it("restores explicit choices without changing them when the companion changes", () => {
-    writeGroundedTripInput({ ...EMPTY, required_facilities: ["stroller_rental"] });
-    form();
-    expect((screen.getByRole("checkbox", { name: "유모차 대여" }) as HTMLInputElement).checked).toBe(true);
-    fireEvent.click(screen.getByRole("radio", { name: "혼자" }));
-    expect((screen.getByRole("checkbox", { name: "유모차 대여" }) as HTMLInputElement).checked).toBe(true);
-    expect((screen.getByRole("checkbox", { name: "휠체어 대여" }) as HTMLInputElement).checked).toBe(false);
+  it("clears previously saved facility filters on submit while retaining region and visit time", async () => {
+    writeGroundedTripInput({ ...EMPTY, region_code: "11", visit_time: "14:30", required_facilities: ["stroller_rental", "accessible_toilet"] });
+    const onSubmit = form();
+    expect(screen.queryByRole("group", { name: "필요한 편의시설 (선택)" })).toBeNull();
+    expect(screen.queryAllByRole("checkbox")).toHaveLength(0);
+    fireEvent.click(screen.getByRole("button", { name: "취향 테스트 시작하기" }));
+    await waitFor(() => expect(onSubmit).toHaveBeenCalledOnce());
+    expect(readGroundedTripInput()).toEqual({ region_code: "11", visit_date: "2099-10-03", visit_time: "14:30", required_facilities: [] });
   });
 
   it("allows an exact visit time to be cancelled after it is selected", () => {
@@ -133,9 +133,8 @@ describe("explicit facilities in the trip form", () => {
     expect(onSubmit.mock.calls[0]?.[0]).not.toHaveProperty("region_code");
   });
 
-  it("keeps the user on the form if an explicit need cannot be stored", async () => {
+  it("keeps the user on the form if travel conditions cannot be stored", async () => {
     const onSubmit = form();
-    fireEvent.click(screen.getByRole("checkbox", { name: "단차 없는 출입구" }));
     const spy = vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => { throw new Error("disabled"); });
     fireEvent.click(screen.getByRole("button", { name: "취향 테스트 시작하기" }));
     await screen.findByRole("alert");

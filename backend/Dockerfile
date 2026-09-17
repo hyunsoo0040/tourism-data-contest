@@ -40,6 +40,7 @@ ENV PATH=/app/backend/.venv/bin:$PATH \
     ITDA_AUTHENTICITY_EXPECTED_PLACES=1984 \
     ITDA_AUTHENTICITY_ALLOW_DEVELOPMENT=0 \
     ITDA_AUTHENTICITY_PHOTO_ENABLED=1
+ENV ITDA_DISPLAY_PHOTO_NONCOMMERCIAL=1
 USER 10001:10001
 EXPOSE 8000
 CMD ["python", "-m", "uvicorn", "itda.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips=*"]

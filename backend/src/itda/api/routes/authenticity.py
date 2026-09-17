@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 from functools import lru_cache
+from pathlib import Path
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, File, Header, HTTPException, Request, UploadFile
@@ -24,6 +25,7 @@ from itda.authenticity.api_contracts import (
     ServiceInfo,
     SessionCreated,
 )
+from itda.authenticity.display_photos import load_display_photos
 from itda.authenticity.intent import (
     QUESTIONNAIRE,
     QUESTIONNAIRE_SHA256,
@@ -51,6 +53,12 @@ def get_service() -> Service:
         Repository(create_database_engine(dsn)),
         allow_development=os.environ.get("ITDA_AUTHENTICITY_ALLOW_DEVELOPMENT") == "1",
         photo_enabled=os.environ.get("ITDA_AUTHENTICITY_PHOTO_ENABLED") == "1",
+        display_photos=load_display_photos(
+            Path(os.environ["ITDA_AUTHENTICITY_RELEASE_DIR"])
+            if os.environ.get("ITDA_AUTHENTICITY_RELEASE_DIR")
+            else None
+        ),
+        noncommercial_photos=os.environ.get("ITDA_DISPLAY_PHOTO_NONCOMMERCIAL") == "1",
     )
 
 

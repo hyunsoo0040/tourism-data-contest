@@ -7,6 +7,7 @@ import re
 from collections.abc import Mapping
 from pathlib import Path
 
+from itda.authenticity.display_photos import load_display_photos
 from itda.authenticity.release import Release, load_release
 from itda.authenticity.repository import Repository, install_release
 from itda.db.session import create_database_engine
@@ -19,6 +20,8 @@ def checked_public_release(environment: Mapping[str, str]) -> tuple[Path, Releas
     if not re.fullmatch(r"[0-9a-f]{64}", expected) or places < 1:
         raise ValueError("AUTHENTICITY_DEPLOYMENT_PIN_REQUIRED")
     release, _ = load_release(directory)
+    # Optional display-only sidecar; never changes the installed analysis release.
+    load_display_photos(directory)
     validation = json.loads((directory / "validation.json").read_text())
     if (
         release.scope != "PUBLIC"

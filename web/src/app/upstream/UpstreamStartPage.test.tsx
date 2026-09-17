@@ -2,7 +2,7 @@ import { act, fireEvent, render, screen, waitFor, within } from "@testing-librar
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import { fetchPreferenceProfile, type PreferenceProfile } from "../../api/api";
+import { ApiRequestError, fetchPreferenceProfile, type PreferenceProfile } from "../../api/api";
 import { createAndStorePreferenceProfile } from "../../features/profile/profileSubmission";
 import { AppShell } from "../AppShell";
 import { createEmptyDraft, readDraft, readProfileReference, resetJourneyStorage, writeDraft, writeProfileReference } from "../storage";
@@ -63,7 +63,7 @@ describe("resuming a saved test through trip conditions", () => {
     writeDraft({ ...createEmptyDraft(), answers: { q1: 3 } });
     const { router } = await renderResume(path);
     expect(router.state.location.pathname).toBe("/start");
-    expect(screen.getByRole("button", { name: "여행 조건 반영하고 프로필 보기" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "여행 조건 그대로 유지" })).toBeTruthy();
     expect(screen.getAllByRole("button", { name: "처음부터 시작하기" })).toHaveLength(1);
     submit();
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
@@ -108,18 +108,26 @@ describe("resuming a saved test through trip conditions", () => {
     expect(screen.getByRole("button", { name: "여행 조건 그대로 유지" })).toBeTruthy();
   });
 
-  it("retains entered conditions after a failed lookup and allows retry", async () => {
-    writeProfileReference(previous.profile_id);
-    vi.mocked(fetchPreferenceProfile).mockRejectedValueOnce(new Error("offline"));
-    const { router } = await renderResume();
-    submit();
-    await screen.findByText(/기존 테스트 결과를 반영하지 못했어요/);
-    expect(router.state.location.pathname).toBe("/start");
-    expect(createAndStorePreferenceProfile).not.toHaveBeenCalled();
-    expect((screen.getByLabelText("방문 날짜 (선택)") as HTMLInputElement).value).toBe("2099-10-03");
-    submit();
-    await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
-  });
+  it.each(["lookup failure", "missing result", "invalid answers", "submission failure"])(
+    "continues with a fresh quiz and keeps trip conditions after %s", async (failure) => {
+      writeProfileReference(previous.profile_id);
+      writeDraft({ ...createEmptyDraft(), answers });
+      if (failure === "lookup failure") vi.mocked(fetchPreferenceProfile).mockRejectedValueOnce(new Error("offline"));
+      if (failure === "missing result") vi.mocked(fetchPreferenceProfile).mockRejectedValueOnce(new ApiRequestError("not found", 404));
+      if (failure === "invalid answers") vi.mocked(fetchPreferenceProfile).mockResolvedValueOnce({ ...previous, answers: {} } as PreferenceProfile);
+      if (failure === "submission failure") vi.mocked(createAndStorePreferenceProfile).mockRejectedValueOnce(new Error("unavailable"));
+      const { router } = await renderResume();
+      submit();
+      await waitFor(() => expect(router.state.location.pathname).toBe("/quiz"));
+      expect(readDraft().draft).toMatchObject({
+        current_route: "/quiz", current_question: 1, answers: {},
+        trip_conditions: { visit_date: "2099-10-03", companion: "FRIEND_OR_PARTNER" },
+      });
+      expect(readDraft().draft?.answers).toEqual({});
+      expect(screen.queryByRole("alert")).toBeNull();
+      if (failure !== "submission failure") expect(createAndStorePreferenceProfile).not.toHaveBeenCalled();
+    },
+  );
 
   it("starts the quiz if the saved reference has disappeared", async () => {
     const { router } = await renderResume();

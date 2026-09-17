@@ -79,10 +79,8 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     });
     await page.goto("/start");
     const facilities = page.getByRole("group", { name: "필요한 편의시설 (선택)" });
-    await expect(facilities.getByRole("checkbox")).toHaveCount(5);
+    await expect(facilities).toHaveCount(0);
     await page.getByRole("radio", { name: "아이 동반", exact: true }).check();
-    expect(await facilities.getByRole("checkbox").evaluateAll((elements) => elements.every((element) => !(element as HTMLInputElement).checked))).toBe(true);
-    await page.getByRole("checkbox", { name: "장애인 화장실", exact: true }).check();
     await page.getByLabel("방문 날짜 (선택)").fill("2026-10-09");
     await page.getByLabel("정확한 방문 시간 (선택)").fill("10:30");
     for (const label of ["해질녘", "도보·대중교통", "1시간 안팎", "상관없어요", "조금 피하고 싶어요"]) {
@@ -108,7 +106,7 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await expect(known.first().getByText("있음", { exact: true })).toBeVisible();
     await expect(known.first().getByText("2026-09-09 기준", { exact: true })).toBeVisible();
     await expect(known.first().getByRole("link", { name: "한국관광공사 무장애 여행 정보" })).toHaveAttribute("href", "https://www.data.go.kr/data/15101897/openapi.do");
-    expect(capturedRequest.value?.grounded_input).toEqual({ visit_date: "2026-10-09", visit_time: "10:30", required_facilities: ["accessible_toilet"] });
+    expect(capturedRequest.value?.grounded_input).toEqual({ visit_date: "2026-10-09", visit_time: "10:30", required_facilities: [] });
     await noHorizontalOverflow(page);
     await page.screenshot({ path: resolve(ARTIFACT_ROOT, `tracer-browser-${viewport.name}.png`), fullPage: true });
     await page.locator("section[data-trip-context-state]").first().screenshot({

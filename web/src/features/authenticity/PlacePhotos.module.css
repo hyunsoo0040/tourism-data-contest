@@ -8,6 +8,8 @@
 .gallery .thumbnail{border:2px solid transparent;background:transparent;padding:2px;cursor:pointer;border-radius:5px;min-height:48px}
 .gallery .thumbnail[aria-pressed=true]{border-color:var(--accent,#18675f)}
 .gallery .thumbnail img{display:block;width:64px;height:48px;object-fit:cover;border-radius:2px}
+.gallery .frame[data-preserve-original=true]{border-radius:0}
+.gallery .frame[data-preserve-original=true] .image,.gallery .thumbnail[data-preserve-original=true] img{object-fit:contain;border-radius:0}
 .caption{display:flex;flex-direction:column;gap:2px;font-size:12px;line-height:1.6;color:var(--ink-muted,#566170);margin-top:10px;overflow-wrap:anywhere}
 .caption a{text-decoration:underline;text-underline-offset:3px;color:inherit}
 .gallery button:focus-visible,.caption a:focus-visible{outline:3px solid var(--focus,#246fcd);outline-offset:3px}

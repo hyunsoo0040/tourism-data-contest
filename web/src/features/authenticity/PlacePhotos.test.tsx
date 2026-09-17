@@ -53,3 +53,23 @@ describe("official place photographs", () => {
     expect(screen.queryAllByRole("button")).toHaveLength(0);
   });
 });
+
+it.each([2, 3, 4])("shows Type%s rights and complete attribution even in compact captions", kind => {
+  const restricted = { ...photos[0]!, license: `KOGL_TYPE_${kind}`, source_url: "https://data.visitkorea.or.kr/page/127841" };
+  const view = render(<PlacePhotos name="백석봉" photos={[restricted, photos[1]!]} captionMode="source-only" />);
+  expect(screen.getByText("한국관광공사 · 관광사진")).toBeTruthy();
+  expect(screen.getByText(new RegExp(`공공누리 제${kind}유형`))).toBeTruthy();
+  expect(screen.getByRole("link", { name: "출처" }).getAttribute("href")).toContain("127841");
+  expect(screen.getByRole("link", { name: "원본 사진" })).toBeTruthy();
+  expect(view.container.querySelector("[data-preserve-original=true]") !== null).toBe(kind >= 3);
+  fireEvent.click(screen.getByRole("button", { name: "백석봉 사진 2 보기" }));
+  expect(screen.queryByText(/변경금지/)).toBeNull();
+});
+
+it("preserves the full frame for a prepared Type3 image", () => {
+  const photo = { ...photos[0]!, license: "KOGL_TYPE_3" };
+  const image = new Image(); image.src = photoUrl(photo.url)!;
+  render(<PlacePhotos name="백석봉" photos={[photo]} preparedImages={{ [image.src]: image }} />);
+  expect(screen.getByRole("img")).toBe(image);
+  expect(image.closest("[data-preserve-original=true]")).toBeTruthy();
+});

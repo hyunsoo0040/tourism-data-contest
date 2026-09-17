@@ -16,6 +16,7 @@ from itda.authenticity.api_contracts import (
 )
 from itda.authenticity.auxiliary import Auxiliary
 from itda.authenticity.contracts import Assessment
+from itda.authenticity.display_photos import DisplayPhotoCatalog
 from itda.authenticity.intent import Intent, IntentSubmission, ScenarioSubmission, build_intent
 from itda.authenticity.photo import PhotoReview
 from itda.authenticity.ranking import rank
@@ -30,10 +31,14 @@ class Service:
         *,
         allow_development: bool = False,
         photo_enabled: bool = False,
+        display_photos: DisplayPhotoCatalog | None = None,
+        noncommercial_photos: bool = False,
     ) -> None:
         self.repository = repository
         self.allow_development = allow_development
         self.photo_enabled = photo_enabled
+        self.display_photos = display_photos
+        self.noncommercial_photos = noncommercial_photos
         self._cache: dict[str, tuple[Release, tuple[Assessment, ...], Auxiliary]] = {}
         self._lock = RLock()
         self._verified_runs: set[tuple[str, str, str]] = set()
@@ -173,13 +178,29 @@ class Service:
                     state=e.state,
                 )
             )
+        # Display metadata is deliberately outside the immutable analysis auxiliary.
+        # Neither rank() nor replay() receives these photographs.
+        photos = (
+            list(
+                self.display_photos.for_place(
+                    stored["release_sha256"], place_id, noncommercial=self.noncommercial_photos
+                )
+            )
+            if self.display_photos
+            else []
+        )
+        known_urls = {p["url"].replace("http://", "https://", 1) for p in photos}
+        for photo in aux.photos.get(place_id, ()):
+            if photo.url.replace("http://", "https://", 1) not in known_urls:
+                photos.append(photo.model_dump())
+                known_urls.add(photo.url.replace("http://", "https://", 1))
         return Detail(
             item=ResultItem.model_validate(item),
             address=assessment.source.place.address,
             axes=assessment.axes,
             facets=assessment.facets,
             evidence=tuple(evidence),
-            photos=tuple(p.model_dump() for p in aux.photos.get(place_id, ())),
+            photos=tuple(photos),
             limitations=(
                 "자료가 뒷받침하는 예상 경험이며 실제 만족도를 측정한 결과가 아닙니다.",
                 "사진은 보이는 분위기만, SNS 수치는 해당 태그의 관측값만 설명합니다.",

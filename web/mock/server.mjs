@@ -19,12 +19,24 @@ export function mockServer() {
       }
       const session = sessions.get(token);
       const parts = url.pathname.split("/").filter(Boolean).map(decodeURIComponent);
+      const photoUpload = req.method === "POST" && url.pathname === "/v1/authenticity/photos";
       // No file decoding, image persistence, database, or outbound requests.
-      if (parts.some((part) => ["photo-jobs", "photos", "operating-information", "tourism-context", "trip-context"].includes(part))) {
+      if (parts.some((part) => ["photo-jobs", "operating-information", "tourism-context", "trip-context"].includes(part))) {
         req.resume(); return send(503, { detail: { code: "MOCK_UNAVAILABLE", message: "UI 목업에서는 제공하지 않는 정보입니다." } });
       }
       let body = {};
-      if (["POST", "PUT"].includes(req.method)) {
+      if (photoUpload) {
+        if (!/^multipart\/form-data;.*boundary=/i.test(req.headers["content-type"] ?? "")) {
+          req.resume(); return send(415, { detail: "사진 파일을 선택해 주세요." });
+        }
+        // Drain bounded multipart bytes without buffering, decoding, or retaining files.
+        let size = 0;
+        for await (const chunk of req) {
+          size += chunk.length;
+          if (size > 32 * 1024 * 1024) { req.resume(); return send(413, { detail: "사진은 최대 3장, 장당 10MB 이하로 선택해 주세요." }); }
+        }
+        if (size === 0) return send(422, { detail: "사진 파일을 선택해 주세요." });
+      } else if (["POST", "PUT"].includes(req.method)) {
         let text = "";
         for await (const chunk of req) {
           text += chunk;

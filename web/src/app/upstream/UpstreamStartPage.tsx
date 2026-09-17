@@ -2,8 +2,9 @@
 
 import { JOURNEY_COPY } from "../../content/journey.ko";
 import { useEffect, useRef, useState } from "react";
-import { ApiRequestError, fetchPreferenceProfile } from "../../api/api";
+import { fetchPreferenceProfile } from "../../api/api";
 import { createAndStorePreferenceProfile } from "../../features/profile/profileSubmission";
+import { prepareProfileNavigation } from "../../features/profile/preparedProfile";
 import { readProfileReference } from "../storage";
 
 import { TripConditionForm } from "../../features/journey/TripConditionForm";
@@ -30,24 +31,23 @@ function formValues(conditions: Partial<TripConditions> | undefined): TripCondit
 
 export function UpstreamStartPage() {
   const navigate = useNavigate();
-  const [resumeEnabled, setResumeEnabled] = useState(false);
+  const [resumeEnabled, setResumeEnabled] = useState(() => readProfileReference().profile !== null);
   const [busy, setBusy] = useState(false);
-  const [requestError, setRequestError] = useState<string | null>(null);
   const activeRequest = useRef<AbortController | null>(null);
   const { state, draft, updateDraft, resetDraft, dismissNotice, reportStorageUnavailable } =
     useJourneyDraft();
   const recovered = state === "recovered";
 
   useEffect(() => {
-    setResumeEnabled(readProfileReference().profile !== null);
     return () => { activeRequest.current?.abort(); activeRequest.current = null; };
   }, []);
 
-  const beginQuiz = (conditions: TripConditions) => {
+  const beginQuiz = (conditions: TripConditions, restartAnswers = false) => {
     updateDraft({
       trip_conditions: conditions,
       current_route: "/quiz",
       current_question: 1,
+      ...(restartAnswers ? { answers: {} } : {}),
     });
     void navigate("/quiz", { state: quizNavigationState(1) });
   };
@@ -63,7 +63,6 @@ export function UpstreamStartPage() {
     activeRequest.current = controller;
     const current = () => activeRequest.current === controller && !controller.signal.aborted;
     setBusy(true);
-    setRequestError(null);
     try {
       // Use the completed server result, not a possibly incomplete local draft.
       const previous = await fetchPreferenceProfile(reference.profile_id, { signal: controller.signal });
@@ -71,7 +70,7 @@ export function UpstreamStartPage() {
       const answers = questionnaireAnswersSchema.safeParse(previous.answers);
       if (!answers.success) {
         setResumeEnabled(false);
-        setRequestError("이전 답변을 현재 테스트에 사용할 수 없어요. 여행 조건은 유지되며, 취향 테스트를 다시 진행해 주세요.");
+        beginQuiz(conditions, true);
         return;
       }
       const result = await createAndStorePreferenceProfile(conditions, answers.data, controller.signal, current);
@@ -79,17 +78,14 @@ export function UpstreamStartPage() {
       updateDraft({ current_route: "/profile", trip_conditions: conditions, answers: answers.data });
       if (result.reference?.state === "memory-fallback") reportStorageUnavailable();
       void navigate("/profile", { state: {
+        preparedProfileKey: prepareProfileNavigation(result.profile),
         announcement: "기존 취향 답변에 이번 여행 조건을 반영했어요.",
         focusProfile: true,
       } });
-    } catch (error) {
+    } catch {
       if (!current()) return;
-      if (error instanceof ApiRequestError && error.status === 404) {
-        setResumeEnabled(false);
-        setRequestError("이전 테스트 결과를 찾지 못했어요. 여행 조건은 유지되며, 취향 테스트를 다시 진행해 주세요.");
-      } else {
-        setRequestError("기존 테스트 결과를 반영하지 못했어요. 입력한 여행 조건을 유지한 채 다시 시도해 주세요.");
-      }
+      setResumeEnabled(false);
+      beginQuiz(conditions, true);
     } finally {
       if (current()) { activeRequest.current = null; setBusy(false); }
     }
@@ -102,7 +98,6 @@ export function UpstreamStartPage() {
       activeRequest.current = null;
       setBusy(false);
       setResumeEnabled(false);
-      setRequestError(null);
     }
     return succeeded;
   };
@@ -139,7 +134,6 @@ export function UpstreamStartPage() {
                 onSubmit={(conditions) => void submitTrip(conditions)}
                 primaryLabel={resumeEnabled ? "여행 조건 그대로 유지" : JOURNEY_COPY.start.primaryLabel}
                 busy={busy}
-                requestError={requestError}
               />
             </div>
           </section>

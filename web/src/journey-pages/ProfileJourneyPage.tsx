@@ -21,6 +21,8 @@ import { PhotoMoodIntro } from "../features/profile/PhotoMoodIntro";
 import { ProfileStoryButton } from "../features/profile/ProfileStoryButton";
 import { createAndStorePreferenceProfile } from "../features/profile/profileSubmission";
 
+import { clearPreparedProfileNavigation, readPreparedProfileNavigation } from "../features/profile/preparedProfile";
+
 type PageState = "loading" | "ready" | "empty" | "recovery" | "api-error" | "invalid";
 
 function ProfileShell({ children }: { children: ReactNode }) {
@@ -41,11 +43,15 @@ export function ProfilePage() {
   const location = useLocation();
   const { draft, updateDraft, resetDraft, reportStorageUnavailable } = useJourneyDraft();
   const navigationState = location.state as {
+    preparedProfileKey?: string;
     announcement?: string;
     focusProfile?: boolean;
   } | null;
-  const [state, setState] = useState<PageState>("loading");
-  const [profile, setProfile] = useState<PreferenceProfile | null>(null);
+  const [preparedProfile] = useState(() => readPreparedProfileNavigation(
+    navigationState?.preparedProfileKey, readProfileReference().profile?.profile_id,
+  ));
+  const [state, setState] = useState<PageState>(preparedProfile ? "ready" : "loading");
+  const [profile, setProfile] = useState<PreferenceProfile | null>(preparedProfile);
   const [upstreamContract, setUpstreamContract] = useState<QuestionnaireDefinition | null>(
     FRONTEND_QUESTIONNAIRE,
   );
@@ -156,6 +162,13 @@ export function ProfilePage() {
       return cancelActiveLoad;
     }
     profileIdRef.current = storedProfile.profile_id;
+    if (preparedProfile?.profile_id === storedProfile.profile_id) {
+      clearPreparedProfileNavigation(preparedProfile);
+      const focusMeter = focusAfterHydrationRef.current;
+      focusAfterHydrationRef.current = false;
+      showProfile(preparedProfile, { focusMeter });
+      return cancelActiveLoad;
+    }
     void loadProfile(storedProfile.profile_id);
     return cancelActiveLoad;
   }, []);
