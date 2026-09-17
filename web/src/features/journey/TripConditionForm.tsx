@@ -376,7 +376,7 @@ export function TripConditionForm({
             </button>
           ) : null}
           <button type="submit" className="button button--primary" disabled={busy} aria-busy={busy || undefined}>
-            {busy ? "프로필 만드는 중…" : primaryLabel}
+            {primaryLabel}
           </button>
         </div>
       </form>

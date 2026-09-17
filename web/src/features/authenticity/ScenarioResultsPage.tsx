@@ -37,7 +37,7 @@ function ScenarioPlace({ item, runId, preparedDetail, failedPhotoUrls, preparedI
     <header className="recommendation-card__header"><h2>{item.rank}위 {item.name_ko}</h2><strong className="scenario-match">내 선호와 {item.score}% 연결</strong></header>
     <p className="recommendation-location">{item.region_name} · {item.category}</p>
     <div className="scenario-place-media"><PlacePhotos name={item.name_ko} photos={detail?.photos ?? []} loading={!detail && !error} unavailable={Boolean(error)} preparedImages={preparedImages} failedUrls={failedPhotoUrls} />
-      {detail ? <PlaceInformation detail={detail} /> : error ? <div role="status"><p>이 장소의 사진과 정보를 불러오지 못했어요. 추천 결과는 유지됩니다.</p><button className="control" onClick={() => setAttempt(value => value + 1)}>{item.name_ko} 정보 다시 불러오기</button></div> : <p role="status">장소 정보를 불러오고 있어요.</p>}
+      {detail ? <PlaceInformation detail={detail} action={<Link className={`button button--secondary ${styles.informationActionLink}`} to={href}>상세 보기</Link>} /> : error ? <div role="status"><p>이 장소의 사진과 정보를 불러오지 못했어요. 추천 결과는 유지됩니다.</p><button className="control" onClick={() => setAttempt(value => value + 1)}>{item.name_ko} 정보 다시 불러오기</button></div> : <p role="status">장소 정보를 불러오고 있어요.</p>}
     </div>
     {visibleAxes.length > 0 && <section className="recommendation-axes" aria-label={`${item.name_ko} 장소의 경험 특성`}><h3>장소의 경험 특성</h3>
       {visibleAxes.map(({ axis, score }) => { const copy = AXES[axis]; return <div className={`recommendation-axis recommendation-axis--${copy.color}`} key={axis}>
@@ -48,7 +48,6 @@ function ScenarioPlace({ item, runId, preparedDetail, failedPhotoUrls, preparedI
     <section className="recommendation-copy-section"><h3>잘 맞는 이유</h3>{detail && <ResultReason detail={detail} />}
     </section>
     <div className="recommendation-card__actions">
-      <Link className="button button--secondary" to={href}>상세 보기</Link>
       <a className="button button--secondary" href={mapUrl} target="_blank" rel="noreferrer">지도에서 보기</a>
     </div>
   </article>;
