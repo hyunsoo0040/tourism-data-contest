@@ -16,6 +16,7 @@ import { SavedSection } from "./SavedSection";
 import { TourismPlacePanel, TourismRegionalPanel, useTourismContext, type TourismState } from "./TourismContext";
 import { RECOMMENDATION_ORDER_DESCRIPTION, SIMILARITY_DESCRIPTION, SimilaritySummary, similarityLabel } from "./PreferenceSimilarity";
 import { travelRegionName, useTravelRegions } from "../../api/recommendation-regions";
+import { PhotoMoodIntro } from "../profile/PhotoMoodIntro";
 
 const AXES = { H: { label: "대상•원형형", className: "recommendation-axis--history" }, E: { label: "의미•이미지형", className: "recommendation-axis--emotion" }, R: { label: "자기•몰입형", className: "recommendation-axis--rest" } };
 const TRAITS: Record<string, string> = { M1: "공간 성격", M2: "방문객 성격", M3: "현장 밀도", M4: "경험 방식", M5: "체류 방식", M6: "시간 의존성" };
@@ -146,7 +147,7 @@ function GroundedCard({ item, results, actions, tourism }: { item: GroundedItem;
 }
 
 export function GroundedResultsView({ results }: { results: GroundedResults }) {
-  const actions = useGroundedActions(results), tourism = useTourismContext(results.run.run_id);
+  const navigate = useNavigate(), actions = useGroundedActions(results), tourism = useTourismContext(results.run.run_id);
   return <RecommendationShell><article className="recommendations-page panel" data-status="success" data-grounded-run={results.run.run_id}>
     <GroundedIntro results={results} title="이번 여행에 맞는 5곳" />
     <SavedSection references={actions.references} onRemove={actions.removeSaved} />
@@ -154,6 +155,7 @@ export function GroundedResultsView({ results }: { results: GroundedResults }) {
     <ol className="recommendation-list" aria-label="추천 5곳" id="recommendation-list">{results.run.items.map((item) => <li key={item.place_id}>
       <GroundedCard item={item} results={results} actions={actions} tourism={tourism.state} />
     </li>)}</ol>
+    <PhotoMoodIntro onOpenPhoto={() => void navigate("/photo")} />
     <GroundedCompareTray results={results} actions={actions} />
   </article></RecommendationShell>;
 }

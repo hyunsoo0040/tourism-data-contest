@@ -34,6 +34,7 @@ import { useTripContext } from "../features/recommendations/useTripContext";
 import { fetchRecommendationEnvelope, type GroundedResults } from "../api/grounded-recommendation";
 import { GroundedResultsView } from "../features/recommendations/GroundedRecommendationViews";
 import { RECOMMENDATION_ORDER_DESCRIPTION, SIMILARITY_DESCRIPTION } from "../features/recommendations/PreferenceSimilarity";
+import { PhotoMoodIntro } from "../features/profile/PhotoMoodIntro";
 
 type PageState =
   | { kind: "loading" }
@@ -289,6 +290,7 @@ export function RecommendationsPage() {
           </li>
         ))}
       </ol>
+      <PhotoMoodIntro onOpenPhoto={() => void navigate("/photo")} />
       <CompareTray
         selectedPlaces={selectedPlaces}
         announcement={compareAnnouncement}

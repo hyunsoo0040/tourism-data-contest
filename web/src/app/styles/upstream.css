@@ -478,8 +478,8 @@
   }
 }
 
-/* Photo mood introduction below the profile actions. */
-.up-quiz .profile-photo-intro {
+/* Photo mood introduction below the profile actions and recommendation list. */
+:is(.up-quiz, .up-etc) .profile-photo-intro {
   margin-top: 28px;
   align-items: center;
   border: 1px solid var(--line);
@@ -495,12 +495,12 @@
   padding: 44px;
 }
 
-.up-quiz .photo-intro-copy {
+:is(.up-quiz, .up-etc) .photo-intro-copy {
   grid-area: copy;
   padding-bottom: 78px;
 }
 
-.up-quiz .photo-intro-copy h2 {
+:is(.up-quiz, .up-etc) .photo-intro-copy h2 {
   margin: 0;
   font-size: clamp(30px, 3.3vw, 44px);
   font-weight: 800;
@@ -508,7 +508,7 @@
   line-height: 1.25;
 }
 
-.up-quiz .photo-intro-copy > p {
+:is(.up-quiz, .up-etc) .photo-intro-copy > p {
   color: #607086;
   line-height: 1.74;
   word-break: keep-all;
@@ -517,37 +517,39 @@
   font-size: 16px;
 }
 
-.up-quiz .photo-intro-copy__desktop-break {
+:is(.up-quiz, .up-etc) .photo-intro-copy__desktop-break {
   display: none;
 }
 
 @media (min-width: 921px) {
-  .up-quiz .photo-intro-copy__desktop-break {
+  :is(.up-quiz, .up-etc) .photo-intro-copy__desktop-break {
     display: block;
   }
 }
 
-.up-quiz .photo-mood-cta {
+:is(.up-quiz, .up-etc) .photo-mood-cta {
   grid-area: copy;
   align-self: end;
   justify-self: start;
   margin: 0;
+  border-color: var(--accent);
+  background: var(--accent);
 }
 
-.up-quiz .photo-mood-preview {
+:is(.up-quiz, .up-etc) .photo-mood-preview {
   grid-area: preview;
   min-width: 0;
   padding-block: 24px 8px;
 }
 
-.up-quiz .photo-mood-scenes {
+:is(.up-quiz, .up-etc) .photo-mood-scenes {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   gap: 10px;
 }
 
-.up-quiz .photo-mood-frame {
+:is(.up-quiz, .up-etc) .photo-mood-frame {
   min-width: 0;
   margin: 0;
   padding: 8px 8px 12px;
@@ -557,14 +559,14 @@
   box-shadow: 0 12px 24px rgba(39, 55, 47, .09);
 }
 
-.up-quiz .photo-mood-scene {
+:is(.up-quiz, .up-etc) .photo-mood-scene {
   position: relative;
   overflow: hidden;
   aspect-ratio: 3 / 4;
   border-radius: 2px;
 }
 
-.up-quiz .photo-mood-frame figcaption {
+:is(.up-quiz, .up-etc) .photo-mood-frame figcaption {
   padding-top: 12px;
   color: #526257;
   text-align: center;
@@ -573,26 +575,26 @@
   white-space: nowrap;
 }
 
-.up-quiz .photo-mood-frame--warm {
+:is(.up-quiz, .up-etc) .photo-mood-frame--warm {
   transform: rotate(-7deg) translateY(9px);
 }
 
-.up-quiz .photo-mood-frame--warm .photo-mood-scene {
+:is(.up-quiz, .up-etc) .photo-mood-frame--warm .photo-mood-scene {
   background: radial-gradient(circle at 65% 30%, #fff2c6 0 11%, transparent 12%),
     linear-gradient(175deg, #e9b38b, #f5d4a7 60%, #be9477 61%, #967858);
 }
 
-.up-quiz .photo-mood-frame--nature {
+:is(.up-quiz, .up-etc) .photo-mood-frame--nature {
   z-index: 1;
   transform: translateY(-14px) rotate(2deg);
 }
 
-.up-quiz .photo-mood-frame--nature .photo-mood-scene {
+:is(.up-quiz, .up-etc) .photo-mood-frame--nature .photo-mood-scene {
   background: linear-gradient(155deg, #dce9e0, #b3cbb9);
 }
 
-.up-quiz .photo-mood-frame--nature .photo-mood-scene::before,
-.up-quiz .photo-mood-frame--nature .photo-mood-scene::after {
+:is(.up-quiz, .up-etc) .photo-mood-frame--nature .photo-mood-scene::before,
+:is(.up-quiz, .up-etc) .photo-mood-frame--nature .photo-mood-scene::after {
   content: "";
   position: absolute;
   width: 160%;
@@ -604,23 +606,23 @@
   transform: rotate(30deg);
 }
 
-.up-quiz .photo-mood-frame--nature .photo-mood-scene::after {
+:is(.up-quiz, .up-etc) .photo-mood-frame--nature .photo-mood-scene::after {
   left: 5%;
   bottom: -40%;
   background: #456f5c;
   transform: rotate(-25deg);
 }
 
-.up-quiz .photo-mood-frame--open {
+:is(.up-quiz, .up-etc) .photo-mood-frame--open {
   transform: rotate(8deg) translateY(12px);
 }
 
-.up-quiz .photo-mood-frame--open .photo-mood-scene {
+:is(.up-quiz, .up-etc) .photo-mood-frame--open .photo-mood-scene {
   background: linear-gradient(#bad4df, #e5ece6 54%, #86b3bd 55%, #61949f 80%, #dcd7bd 81%);
 }
 
 @media (max-width: 920px) {
-  .up-quiz .profile-photo-intro {
+  :is(.up-quiz, .up-etc) .profile-photo-intro {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "copy"
@@ -629,14 +631,14 @@
     padding: 32px;
   }
 
-  .up-quiz .photo-mood-preview {
+  :is(.up-quiz, .up-etc) .photo-mood-preview {
     width: min(100%, 420px);
     justify-self: center;
   }
 }
 
 @media (max-width: 560px) {
-  .up-quiz .profile-photo-intro {
+  :is(.up-quiz, .up-etc) .profile-photo-intro {
     grid-template-areas:
       "copy"
       "preview"
@@ -645,11 +647,11 @@
     padding: 28px 24px;
   }
 
-  .up-quiz .photo-intro-copy {
+  :is(.up-quiz, .up-etc) .photo-intro-copy {
     padding-bottom: 0;
   }
 
-  .up-quiz .photo-mood-cta {
+  :is(.up-quiz, .up-etc) .photo-mood-cta {
     grid-area: cta;
     justify-self: start;
   }
@@ -664,15 +666,15 @@
     grid-row: 1;
   }
 
-  .up-quiz .photo-intro-copy > p {
+  :is(.up-quiz, .up-etc) .photo-intro-copy > p {
     font-size: 14px;
   }
 
-  .up-quiz .photo-mood-frame {
+  :is(.up-quiz, .up-etc) .photo-mood-frame {
     padding: 5px 5px 9px;
   }
 
-  .up-quiz .photo-mood-frame figcaption {
+  :is(.up-quiz, .up-etc) .photo-mood-frame figcaption {
     padding-top: 9px;
     font-size: 11px;
   }
