@@ -9,6 +9,7 @@ import { scenarioResultsPath, scenarioRunId } from "./scenario";
 import { clearPreparedScenario, readPreparedScenario } from "./preparedScenario";
 import { kakaoMapSearchUrl } from "./placeMetadata";
 import "./scenario.css";
+import styles from "./Journey.module.css";
 
 const AXES = { H: { label: "대상•원형형", color: "history" }, E: { label: "의미•이미지형", color: "emotion" }, R: { label: "자기•몰입형", color: "rest" } };
 const errorMessage = (reason: unknown) => reason instanceof Error ? reason.message : "추천을 불러오지 못했어요. 다시 시도해 주세요.";
