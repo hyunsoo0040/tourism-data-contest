@@ -218,7 +218,7 @@
 
   .up-quiz[data-upstream-surface="profile"] .profile-authenticity-banner {
     margin-bottom: 30px;
-    padding: clamp(28px, 3.5vw, 46px);
+    padding: clamp(22px, 2.5vw, 32px);
     border: 1px solid rgba(226, 110, 58, .2);
     border-radius: 24px;
     background: linear-gradient(112deg, #fff9f4 0%, #fff 62%, #f8eee7 100%);
@@ -357,10 +357,53 @@
   align-items: center;
 }
 
+.up-etc[data-upstream-surface="recommendations"] .topbar nav button {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (min-width: 921px) {
+  .up-etc[data-upstream-surface="recommendations"] .topbar nav {
+    gap: 32px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .up-etc[data-upstream-surface="recommendations"] .mobile-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .up-etc[data-upstream-surface="recommendations"] .mobile-tabs button {
+    min-height: 42px;
+    border: 0;
+    border-radius: 12px;
+    color: #4b5563;
+    background: transparent;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+}
+
 .up-etc .recommendations-page,
 .up-etc .recommendation-state {
   width: 100%;
   max-width: 920px;
+}
+
+.up-etc .recommendation-photo-panel {
+  width: 100%;
+  max-width: 920px;
+  margin-inline: auto;
 }
 
 .up-etc .recommendations-intro {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "../../app/react-router-dom";
+import { Link, useNavigate, useParams } from "../../app/react-router-dom";
 import { RecommendationShell } from "../recommendations/RecommendationShell";
 import { PlacePhotos } from "./PlacePhotos";
 import { PlaceInformation } from "./PlaceInformation";
@@ -8,6 +8,7 @@ import { api, escapeId, type Detail, type Run } from "./api";
 import { scenarioResultsPath, scenarioRunId } from "./scenario";
 import { clearPreparedScenario, readPreparedScenario } from "./preparedScenario";
 import { kakaoMapSearchUrl } from "./placeMetadata";
+import { PhotoMoodIntro } from "../profile/PhotoMoodIntro";
 import "./scenario.css";
 import styles from "./Journey.module.css";
 
@@ -60,6 +61,7 @@ export function ScenarioResultsPage() {
 }
 
 function ScenarioResults({ runId }: { runId: string | null }) {
+  const navigate = useNavigate();
   const [prepared] = useState(() => readPreparedScenario(runId));
   const [run, setRun] = useState<Run | null>(prepared?.run ?? null);
   const [error, setError] = useState<string | null>(null), [attempt, setAttempt] = useState(0);
@@ -74,12 +76,16 @@ function ScenarioResults({ runId }: { runId: string | null }) {
   }, [runId, attempt, prepared]);
   return <RecommendationShell><article className="recommendations-page panel" data-status="success">
     <header className="page-intro recommendations-intro"><h1>이번 여행에 맞는 {run?.result_count ?? ""}{run ? "곳" : "장소"}</h1>
-      <p>상황형 답변의 세 가지 경험 비중을 최신 관광지 분석과 비교했어요.</p>
+      <p>당신의 세 가지 경험 비중을 최신 관광지 분석과 비교했어요.</p>
     </header>
     {error && <section role="alert"><p>{error}</p><button className="control" onClick={() => { setAttempt(value => value + 1); }}>다시 불러오기</button></section>}
     {!run && !error && <p role="status">최신 분석으로 추천한 장소를 불러오고 있어요.</p>}
     {run?.state === "EMPTY" && <section className="profile-state"><h2>이 조건에 맞는 여행지가 아직 충분하지 않아요.</h2><p>지역이나 필수 시설을 조정해 주세요. 근거가 없는 장소로 결과를 채우지 않아요.</p><Link to="/start?mode=edit">여행 조건 수정</Link></section>}
     {run?.state === "LIMITED" && <p role="status">조건과 근거를 확인한 {run.result_count}곳을 찾았어요.</p>}
     <section id="recommendation-list" className="recommendation-list" aria-label="추천 장소">{run?.items.map(item => <ScenarioPlace key={`${runId}:${item.place_id}`} item={item} runId={runId!} preparedDetail={attempt === 0 ? prepared?.details[item.place_id] : undefined} preparedImages={attempt === 0 ? prepared?.images[item.place_id] : undefined} failedPhotoUrls={prepared?.failedPhotoUrls} />)}</section>
-  </article></RecommendationShell>;
+  </article>
+  <div className="recommendation-photo-panel">
+    <PhotoMoodIntro onOpenPhoto={() => navigate("/photo")} />
+  </div>
+</RecommendationShell>;
 }

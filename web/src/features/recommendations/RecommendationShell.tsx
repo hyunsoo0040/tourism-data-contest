@@ -1,6 +1,10 @@
 import type { ReactNode } from "react";
 
 export function RecommendationShell({ children }: { children: ReactNode }) {
+  const goBack = () => {
+    if (typeof window !== "undefined") window.history.back();
+  };
+
   return (
     <div className="up-root">
       <div className="up-etc" data-upstream-surface="recommendations">
@@ -10,17 +14,14 @@ export function RecommendationShell({ children }: { children: ReactNode }) {
             <strong className="brand-wordmark">IT-DA</strong>
           </a>
           <nav>
-            <a href="/profile">취향 결과</a>
-            <a href="#recommendation-list">추천 장소</a>
             <a href="/">홈</a>
+            <button type="button" onClick={goBack}>뒤로 가기</button>
           </nav>
         </header>
         <main>{children}</main>
-        <nav className="mobile-tabs" aria-label="모바일 추천 이동">
-          <a href="#recommendation-list">추천</a>
-          <a href="/profile">취향</a>
-          <a href="/start">다시 테스트</a>
+        <nav className="mobile-tabs" aria-label="페이지 이동">
           <a href="/">홈</a>
+          <button type="button" onClick={goBack}>뒤로 가기</button>
         </nav>
       </div>
     </div>

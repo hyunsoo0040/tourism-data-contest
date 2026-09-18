@@ -6,7 +6,7 @@ import { PlacePhotos, photoUrl } from "./PlacePhotos";
 const photos = [1, 2].map(id => ({ url: `http://tong.visitkorea.or.kr/img/${id}.jpg`, attribution_ko: "한국관광공사 · 관광사진", license: "KOGL_TYPE_1" }));
 
 describe("official place photographs", () => {
-  it("reuses prepared image elements when switching gallery photos and detaches them on unmount", () => {
+  it("uses preloaded image sources without mutating React-managed DOM", () => {
     const preparedImages = Object.fromEntries(photos.map(photo => {
       const url = photoUrl(photo.url)!;
       const image = document.createElement("img"); image.src = url;
@@ -14,11 +14,13 @@ describe("official place photographs", () => {
     }));
     const view = render(<StrictMode><PlacePhotos name="영랑호" photos={photos} preparedImages={preparedImages} /></StrictMode>);
     const [first, second] = Object.values(preparedImages);
-    expect(screen.getByRole("img")).toBe(first);
+    expect(screen.getByRole("img")).not.toBe(first);
+    expect(screen.getByRole("img").getAttribute("src")).toBe(first!.src);
     fireEvent.click(screen.getByRole("button", { name: "영랑호 사진 2 보기" }));
-    expect(screen.getByRole("img")).toBe(second);
+    expect(screen.getByRole("img")).not.toBe(second);
+    expect(screen.getByRole("img").getAttribute("src")).toBe(second!.src);
     expect(first!.isConnected).toBe(false);
-    view.unmount(); expect(second!.isConnected).toBe(false);
+    view.unmount(); expect(view.container.querySelector("img")).toBeNull();
   });
   it("displays attributed HTTPS images and switches the selected photograph", () => {
     render(<PlacePhotos name="영랑호" photos={photos} />);
@@ -66,10 +68,11 @@ it.each([2, 3, 4])("shows Type%s rights and complete attribution even in compact
   expect(screen.queryByText(/변경금지/)).toBeNull();
 });
 
-it("preserves the full frame for a prepared Type3 image", () => {
+it("preserves the full frame for a preloaded Type3 image", () => {
   const photo = { ...photos[0]!, license: "KOGL_TYPE_3" };
   const image = new Image(); image.src = photoUrl(photo.url)!;
   render(<PlacePhotos name="백석봉" photos={[photo]} preparedImages={{ [image.src]: image }} />);
-  expect(screen.getByRole("img")).toBe(image);
-  expect(image.closest("[data-preserve-original=true]")).toBeTruthy();
+  expect(screen.getByRole("img")).not.toBe(image);
+  expect(screen.getByRole("img").getAttribute("src")).toBe(image.src);
+  expect(screen.getByRole("img").closest("[data-preserve-original=true]")).toBeTruthy();
 });

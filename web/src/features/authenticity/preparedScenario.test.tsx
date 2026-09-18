@@ -49,6 +49,9 @@ it("waits for every photo to decode, then renders all details on the first paint
   const requests = fetchMock.mock.calls.length;
   const view = results();
   expect(view.container.querySelectorAll("[data-details-loaded=true]")).toHaveLength(5);
+  const photoIntro = view.container.querySelector(".profile-photo-intro");
+  expect(photoIntro).toBeTruthy();
+  expect(view.container.querySelector(".recommendations-page")?.contains(photoIntro)).toBe(false);
   expect(screen.queryByText("최신 분석으로 추천한 장소를 불러오고 있어요.")).toBeNull();
   expect(screen.queryByText("장소 정보를 불러오고 있어요.")).toBeNull();
   expect(screen.getAllByRole("link", { name: "지도에서 보기" })).toHaveLength(5);

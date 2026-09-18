@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./PlacePhotos.module.css";
 
 const licenseNames: Record<string, string> = {
@@ -22,18 +22,10 @@ export function photoUrl(value?: string): string | null {
   } catch { return null; }
 }
 
-// Move the already-decoded image into its frame before paint. Recreating an img
-// would revalidate no-cache photos and reintroduce loading after navigation.
+// Keep the DOM React-owned. The preloaded image still warms the browser cache,
+// while rendering a separate element prevents cleanup conflicts during navigation.
 function PreparedPhoto({ image, alt }: { image: HTMLImageElement; alt: string }) {
-  const host = useRef<HTMLSpanElement>(null);
-  useLayoutEffect(() => {
-    const frame = host.current!;
-    image.className = styles.image!;
-    image.alt = alt;
-    frame.appendChild(image);
-    return () => { if (image.parentNode === frame) frame.removeChild(image); };
-  }, [image, alt]);
-  return <span ref={host} style={{ display: "contents" }} />;
+  return <img className={styles.image} src={image.currentSrc || image.src} alt={alt} decoding="async" />;
 }
 
 export function PlacePhotos({ name, photos, loading = false, unavailable = false, size = "card", gallery = true, captionMode = "full", preparedImages, failedUrls = [] }: {
