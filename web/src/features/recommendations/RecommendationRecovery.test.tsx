@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import type { ComponentType, ReactNode } from "react";
 import { MemoryRouter, Route, Routes, useNavigate } from "react-router-dom";
 import { afterEach, expect, test, vi } from "vitest";
@@ -129,9 +129,9 @@ if (!controlledRedOnly) {
         expect(screen.getByRole("status")).toBeTruthy();
       }
       if (action === null) {
-        expect(screen.queryByRole("button")).toBeNull();
+        expect(within(article!).queryByRole("button")).toBeNull();
       } else {
-        const button = screen.getByRole("button", { name: action });
+        const button = within(article!).getByRole("button", { name: action });
         fireEvent.click(button);
       }
     }

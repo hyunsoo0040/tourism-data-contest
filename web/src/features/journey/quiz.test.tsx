@@ -379,6 +379,10 @@ describe("/quiz canonical twelve-question journey", () => {
       init?.method === "POST",
     );
     expect(postCalls).toHaveLength(1);
+    expect(fetchMock.mock.calls.filter(([input]) =>
+      String(input) === "/v1/preference-profiles/profile-123",
+    )).toHaveLength(0);
+    expect(router.state.location.state).toEqual({ preparedProfileKey: expect.any(String) });
     expect(JSON.parse(String(postCalls[0]?.[1]?.body))).toEqual({
       request_id: expect.any(String),
       trip_conditions: completeTripConditions,

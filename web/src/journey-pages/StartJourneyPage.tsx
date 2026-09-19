@@ -11,6 +11,7 @@ import {
 import { TripConditionForm } from "../features/journey/TripConditionForm";
 import { quizNavigationState } from "../features/journey/quizNavigation";
 import { createAndStorePreferenceProfile } from "../features/profile/profileSubmission";
+import { prepareProfileNavigation } from "../features/profile/preparedProfile";
 
 function formValues(conditions: Partial<TripConditions> | undefined): TripConditionFormValues {
   return {
@@ -55,6 +56,7 @@ export function StartPage() {
       if (result.reference?.state === "memory-fallback") reportStorageUnavailable();
       void navigate("/profile", {
         state: {
+          preparedProfileKey: prepareProfileNavigation(result.profile),
           announcement: "수정한 답변으로 기대 프로필을 다시 만들었어요.",
           focusProfile: true,
         },

@@ -682,7 +682,7 @@ describe("/profile result, reload, and recovery", () => {
     expect(screen.getByRole("button", { name: "테스트 다시하기" })).toBeTruthy();
   });
 
-  it("announces answer recalculation and focuses the three-axis heading after refetch", async () => {
+  it("announces answer recalculation and focuses the three-axis heading without refetching", async () => {
     writeDraft({ ...createEmptyDraft(), current_route: "/profile", trip_conditions: tripConditions, answers });
     writeProfileReference("profile-current");
     let latestProfile = profile();
@@ -708,6 +708,9 @@ describe("/profile result, reload, and recovery", () => {
 
     await waitFor(() => expect(router.state.location.pathname).toBe("/profile"));
     expect(await screen.findByText("수정한 답변으로 기대 프로필을 다시 만들었어요.")).toBeTruthy();
+    expect(fetchMock.mock.calls.filter(([input]) =>
+      String(input) === "/v1/preference-profiles/profile-answer-edited",
+    )).toHaveLength(0);
     await waitFor(() =>
       expect(document.activeElement?.textContent).toBe("이번 여행에서 기대하는 시간"),
     );

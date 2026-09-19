@@ -38,7 +38,9 @@ for (const width of [1440, 390]) test(`saved test resumes without showing quiz a
   await page.getByRole("button", { name: "여행 조건 그대로 유지", exact: true }).click();
   await expect.poll(() => submitting).toBe(true);
   await expect(page).toHaveURL(/\/start$/);
-  await expect(page.getByRole("button", { name: "프로필 만드는 중…", exact: true })).toBeDisabled();
+  const submit = page.getByRole("button", { name: "여행 조건 그대로 유지", exact: true });
+  await expect(submit).toBeDisabled();
+  await expect(submit).toHaveAttribute("aria-busy", "true");
   releaseSubmission();
   await expect(page.getByRole("button", { name: "추천 장소 보기", exact: true })).toBeVisible();
   const seen = await page.evaluate(() => (window as unknown as { resumeScreens: string[] }).resumeScreens);

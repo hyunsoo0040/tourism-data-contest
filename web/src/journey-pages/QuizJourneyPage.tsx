@@ -12,6 +12,7 @@ import { QuestionCard } from "../features/journey/QuestionCard";
 import { FRONTEND_QUESTIONNAIRE } from "../content/questionnaire";
 import { QuizProgress } from "../features/journey/QuizProgress";
 import { createAndStorePreferenceProfile } from "../features/profile/profileSubmission";
+import { prepareProfileNavigation } from "../features/profile/preparedProfile";
 import {
   legacyQuizOrdinal,
   quizNavigationState,
@@ -191,17 +192,15 @@ function QuizContent({ questionnaire }: { questionnaire: QuestionnaireDefinition
       if (!isCurrentSubmission()) return;
       updateDraft({ current_route: "/profile", current_question: ordinal, answers });
       if (result.reference?.state === "memory-fallback") reportStorageUnavailable();
-      void navigate(
-        "/profile",
-        editingProfile
-          ? {
-              state: {
-                announcement: "수정한 답변으로 기대 프로필을 다시 만들었어요.",
-                focusProfile: true,
-              },
-            }
-          : undefined,
-      );
+      void navigate("/profile", {
+        state: {
+          preparedProfileKey: prepareProfileNavigation(result.profile),
+          ...(editingProfile ? {
+            announcement: "수정한 답변으로 기대 프로필을 다시 만들었어요.",
+            focusProfile: true,
+          } : {}),
+        },
+      });
     } catch (error) {
       if (!isCurrentSubmission()) return;
       if (error instanceof QuestionnaireContractError) {

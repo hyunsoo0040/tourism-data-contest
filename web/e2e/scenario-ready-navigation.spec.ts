@@ -5,7 +5,7 @@ import fixture from "../src/features/authenticity/__fixtures__/prepared-scenario
 // Controlled transport delays; fixed test answers and published place fixtures.
 // No production sessions or model calls.
 for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: "mobile", width: 390, height: 844 }]) {
-  test(`prepares every result before leaving profile (${viewport.name})`, async ({ page }, info) => {
+  test(`prepares result data and renders React-owned photos after leaving profile (${viewport.name})`, async ({ page }, info) => {
     await page.setViewportSize(viewport);
     await page.addInitScript(profile => {
       if (!localStorage.getItem("itda.phase1.profile.v1")) localStorage.setItem("itda.phase1.profile.v1", JSON.stringify({
@@ -67,16 +67,37 @@ for (const viewport of [{ name: "desktop", width: 1440, height: 1000 }, { name: 
     await expect(page).toHaveURL(new RegExp(`/recommendations/a-${fixture.run.run_sha256}$`));
     await expect(page.locator("[data-details-loaded=true]")).toHaveCount(5);
     const firstResult = await page.evaluate(() => (window as unknown as { firstResult: unknown }).firstResult);
-    expect(firstResult).toEqual({ cards: 5, details: 5, loading: false, photos: [true, true, true, true, true] });
+    expect(firstResult).toMatchObject({ cards: 5, details: 5, loading: false });
+    // React creates its own image nodes from preloaded sources. Their async decode
+    // can finish after the first DOM commit; reusing detached DOM is no longer required.
+    await expect.poll(() => page.locator("[data-scenario-place] figure img").evaluateAll(images =>
+      images.length === 5 && images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0),
+    )).toBe(true);
+    const photoPanel = page.locator(".recommendation-photo-panel");
+    await expect(photoPanel.getByRole("button", { name: "사진으로 추천받기" })).toBeVisible();
+    await expect(page.locator(".recommendations-page .profile-photo-intro")).toHaveCount(0);
     expect(requests).toHaveLength(countBeforeNavigation);
     expect(requests.every(request => request.onProfile)).toBe(true);
     await page.screenshot({ path: info.outputPath("ready-results.png"), fullPage: true });
+    await photoPanel.scrollIntoViewIfNeeded();
+    await photoPanel.screenshot({ path: info.outputPath("photo-panel.png") });
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
     await info.attach("first-result-and-requests", { body: JSON.stringify({ firstResult, requests }), contentType: "application/json" });
     // A fresh document has no handoff: the canonical URL must still restore via API.
     await page.reload();
     await expect(page.locator("[data-details-loaded=true]")).toHaveCount(5);
     expect(requests.length).toBeGreaterThan(countBeforeNavigation);
+    const navigation = page.locator(viewport.name === "mobile" ? ".mobile-tabs" : ".topbar nav");
+    await expect(navigation.getByRole("link", { name: "홈", exact: true })).toHaveAttribute("href", "/");
+    await navigation.getByRole("button", { name: "뒤로 가기" }).click();
+    await expect(page).toHaveURL(/\/profile$/);
+    await expect(page.getByRole("button", { name: "추천 장소 보기", exact: true })).toBeVisible();
+    await page.goForward();
+    await expect(page.locator("[data-details-loaded=true]")).toHaveCount(5);
+    await page.getByRole("button", { name: "사진으로 추천받기" }).click();
+    await expect(page).toHaveURL(/\/photo$/);
+    await page.goBack();
+    await expect(page.locator("[data-details-loaded=true]")).toHaveCount(5);
     expect(errors).toEqual([]);
   });
 }
