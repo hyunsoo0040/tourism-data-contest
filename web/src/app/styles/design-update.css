@@ -97,6 +97,20 @@
   }
 }
 
+/* Give the mobile home surface the same warm atmosphere as desktop. */
+@media (max-width:560px) {
+  .up-main {
+    background:
+      radial-gradient(circle 22rem at 8% 9rem, rgba(255,107,53,.13), transparent 72%),
+      radial-gradient(circle 18rem at 100% 30rem, rgba(255,159,92,.08), transparent 76%),
+      #fffaf7;
+  }
+
+  .up-main .site-header {
+    background:rgba(255,250,247,.92);
+  }
+}
+
 /* Keep the type-card icon backgrounds aligned with the character palettes. */
 .up-main .icon.orange { background:#fff1e8; }
 .up-main .icon.blue { background:#ffebf1; }
@@ -335,6 +349,24 @@
   .up-etc .topbar {
     height:115px;
   }
+
+  .up-etc[data-upstream-surface="recommendations"] .topbar {
+    height:88px;
+    padding-bottom:8px;
+  }
+
+  .up-etc[data-upstream-surface="recommendations"] .main-page-logo {
+    font-size:22px;
+  }
+
+  .up-etc[data-upstream-surface="recommendations"] .main-page-logo .brand-mark-image {
+    width:55px;
+    height:55px;
+  }
+
+  .up-etc[data-upstream-surface="recommendations"] .topbar nav {
+    transform:translateY(2px);
+  }
 }
 
 @media (max-width:560px) {
@@ -348,7 +380,8 @@
 /* Desktop main header: keep the expanded presentation compact. */
 @media (min-width:921px) {
   .up-main .nav {
-    height:80px;
+    height:88px;
+    padding-bottom:8px;
   }
 
   .up-main .main-page-logo {
